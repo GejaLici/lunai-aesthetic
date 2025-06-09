@@ -4,32 +4,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 82.7%; /* Medium Grey #D3D3D3 */
-    --foreground: 0 0% 17.3%; /* Charcoal Grey #2C2C2C */
+    --background: 210 20% 95%; /* Very light, cool gray-blue */
+    --foreground: 210 15% 25%; /* Dark, cool gray-blue */
 
-    --card: 0 0% 97.3%; /* Pure White #F8F8F8 */
-    --card-foreground: 0 0% 17.3%; /* Charcoal Grey #2C2C2C */
+    --card: 210 30% 98%; /* Almost white, cool tint */
+    --card-foreground: 210 15% 25%; /* Dark, cool gray-blue */
 
-    --popover: 0 0% 97.3%; /* Pure White #F8F8F8 */
-    --popover-foreground: 0 0% 17.3%; /* Charcoal Grey #2C2C2C */
+    --popover: 210 30% 98%; /* Almost white, cool tint */
+    --popover-foreground: 210 15% 25%; /* Dark, cool gray-blue */
 
-    --primary: 221 79% 57.1%; /* Royal Blue #4169E1 */
-    --primary-foreground: 0 0% 97.3%; /* Pure White #F8F8F8 */
+    --primary: 221 79% 57.1%; /* Royal Blue (existing cool tone) */
+    --primary-foreground: 0 0% 97.3%; /* Pure White */
 
-    --secondary: 0 0% 65%; /* Darker Grey for secondary elements */
-    --secondary-foreground: 0 0% 97.3%; /* Pure White #F8F8F8 */
+    --secondary: 210 15% 75%; /* Medium cool gray */
+    --secondary-foreground: 0 0% 97.3%; /* Pure White */
 
-    --muted: 0 0% 75%; /* Muted Grey */
-    --muted-foreground: 0 0% 30%; /* Darker Charcoal for muted text */
+    --muted: 210 15% 85%; /* Light cool gray */
+    --muted-foreground: 210 10% 45%; /* Medium-dark cool gray */
 
-    --accent: 30 59.5% 50%; /* Bronze #CD7F32 */
-    --accent-foreground: 0 0% 97.3%; /* Pure White #F8F8F8 for text on bronze */
+    --accent: 190 70% 50%; /* Cool, vibrant teal/cyan */
+    --accent-foreground: 0 0% 97.3%; /* Pure White */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 70%; /* Grey border */
-    --input: 0 0% 97.3%; /* Pure White for input background */
+    --border: 210 15% 80%; /* Cool gray border */
+    --input: 210 30% 98%; /* Cool off-white for input background */
     --ring: 221 79% 57.1%; /* Royal Blue for focus ring */
 
     --radius: 0.5rem;
@@ -64,7 +64,7 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%; /* Consider a dark mode bronze if needed */
+    --accent: 0 0% 14.9%; /* Consider a dark mode accent if needed */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;

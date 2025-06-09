@@ -33,7 +33,7 @@ export default function HomePage() {
           Your browser does not support the video tag.
         </video>
         {/* Optional: Dark overlay for better text readability over video. Uncomment if needed. */}
-        <div className="absolute inset-0 bg-black/30 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
 
         {/* Content (ensure it's on top of the video and overlay) */}
         <div className="container mx-auto px-4 relative z-20">
