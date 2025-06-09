@@ -40,7 +40,7 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn">
             Zenith Aesthetics
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-primary-foreground mb-8 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Reaching the Pinnacle of Beauty and Confidence
           </p>
           <div className="space-x-4 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
