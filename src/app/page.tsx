@@ -20,7 +20,7 @@ export default function HomePage() {
              (e.g., place it in the `public/videos` directory and use `/videos/your-video-name.mp4`)
              or a URL to a remotely hosted video.
           3. Ensure your video is optimized for web playback.
-          4. If text is hard to read over the video, uncomment the overlay div below the video tag. (DONE)
+          4. If text is hard to read over the video, uncomment the overlay div below the video tag.
         */}
         <video
           autoPlay
@@ -33,14 +33,14 @@ export default function HomePage() {
           Your browser does not support the video tag.
         </video>
         {/* Optional: Dark overlay for better text readability over video. Uncomment if needed. */}
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        {/* <div className="absolute inset-0 bg-black/50 z-10"></div> */}
 
         {/* Content (ensure it's on top of the video and overlay) */}
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn">
             Zenith Aesthetics
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground mb-8 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Reaching the Pinnacle of Beauty and Confidence
           </p>
           <div className="space-x-4 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
