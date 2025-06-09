@@ -26,14 +26,16 @@ export function SiteHeader() {
           <LogoIcon className="h-8 w-8 text-accent" />
           <span className="font-headline text-2xl font-bold text-foreground">Zenith Aesthetics</span>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary hover:underline underline-offset-4",
-                pathname === link.href ? "text-primary font-semibold" : "text-foreground/70"
+                "px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ease-in-out", // Base styles for all links
+                pathname === link.href
+                  ? "bg-primary/10 text-primary font-semibold" // Active state
+                  : "text-foreground/70 hover:bg-primary/5 hover:text-primary" // Inactive state with hover
               )}
             >
               {link.label}
@@ -49,8 +51,8 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <nav className="grid gap-4 text-base font-medium mt-6">
-                <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
+              <nav className="grid gap-2 text-base font-medium mt-6">
+                <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
                   <LogoIcon className="h-8 w-8 text-accent" />
                   <span className="font-headline font-semibold text-lg">Zenith Aesthetics</span>
                 </Link>
@@ -59,8 +61,10 @@ export function SiteHeader() {
                     key={link.href}
                     href={link.href}
                      className={cn(
-                      "block px-3 py-2 rounded-md transition-colors hover:text-primary hover:bg-accent/10",
-                      pathname === link.href ? "text-primary bg-accent/5 font-semibold" : "text-foreground/80"
+                      "block px-3 py-2 rounded-md transition-colors",
+                      pathname === link.href 
+                        ? "text-primary bg-primary/10 font-semibold" 
+                        : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                     )}
                   >
                     {link.label}
