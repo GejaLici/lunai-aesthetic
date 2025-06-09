@@ -13,16 +13,15 @@ export default function HomePage() {
     <div className="space-y-24"> {/* Increased spacing */}
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex flex-col justify-center items-center text-center py-16 bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-lg shadow-xl overflow-hidden">
-        {/* 
+        {/*
           Video Background:
-          1. Uncomment the <video> tag below.
-          2. Replace "/videos/hero-background.mp4" with the actual path to your video file 
+          1. Uncomment the <video> tag below. (DONE)
+          2. Replace "/videos/hero-background.mp4" with the actual path to your video file
              (e.g., place it in the `public/videos` directory and use `/videos/your-video-name.mp4`)
              or a URL to a remotely hosted video.
           3. Ensure your video is optimized for web playback.
-          4. If text is hard to read over the video, uncomment the overlay div below the video tag.
+          4. If text is hard to read over the video, uncomment the overlay div below the video tag. (DONE)
         */}
-        {/*
         <video
           autoPlay
           loop
@@ -33,9 +32,8 @@ export default function HomePage() {
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        */}
         {/* Optional: Dark overlay for better text readability over video. Uncomment if needed. */}
-        {/* <div className="absolute inset-0 bg-black/30 z-10"></div> */}
+        <div className="absolute inset-0 bg-black/30 z-10"></div>
 
         {/* Content (ensure it's on top of the video and overlay) */}
         <div className="container mx-auto px-4 relative z-20">
