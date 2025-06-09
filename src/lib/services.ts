@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 import { Smile, Aperture, PersonStanding, HeartHandshake, Eye, Ruler } from 'lucide-react';
 
@@ -21,45 +22,45 @@ const commonDescription = "Discover personalized treatments designed to enhance 
 
 export const serviceData: ServiceCategory[] = [
   {
-    id: "fytyra",
-    title: "FYTYRA (Face)",
+    id: "face",
+    title: "FACE",
     icon: Smile,
     services: [
-      { id: "operacioni-hundes", name: "Operacioni i hundës", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose surgery" },
-      { id: "rimodelimi-hundes", name: "Rimodelimi i hundës", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose reshaping" },
-      { id: "rimodelimi-vesheve", name: "Rimodelimi i veshëve", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "ear reshaping" },
-      { id: "mbjellja-flokeve", name: "Mbjellja e flokëve", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair transplant" },
-      { id: "mbjellja-mjekres", name: "Mbjellja e mjekrës", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "beard transplant" },
-      { id: "mbjellja-vetullave", name: "Mbjellja e vetullave", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyebrow transplant" },
-      { id: "lifting-vetullave", name: "Lifting i vetullave", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "brow lift" },
-      { id: "blefaroplastika", name: "Blefaroplastika", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyelid surgery" },
-      { id: "lifting-fytyres", name: "Lifting i fytyrës", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "face lift" },
-      { id: "rimodelimi-mjekres", name: "Rimodelimi i mjekrës", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chin reshaping" },
+      { id: "rhinoplasty", name: "Nose Surgery (Rhinoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose surgery" },
+      { id: "nose-reshaping", name: "Nose Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose reshaping" },
+      { id: "otoplasty", name: "Ear Reshaping (Otoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "ear reshaping" },
+      { id: "hair-transplant", name: "Hair Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair transplant" },
+      { id: "beard-transplant", name: "Beard Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "beard transplant" },
+      { id: "eyebrow-transplant", name: "Eyebrow Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyebrow transplant" },
+      { id: "brow-lift", name: "Brow Lift", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "brow lift" },
+      { id: "blepharoplasty", name: "Eyelid Surgery (Blepharoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyelid surgery" },
+      { id: "face-lift", name: "Face Lift (Rhytidectomy)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "face lift" },
+      { id: "chin-reshaping", name: "Chin Reshaping (Genioplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chin reshaping" },
     ],
   },
   {
-    id: "gjoksi",
-    title: "GJOKSI (Breasts – Femra)",
+    id: "breasts",
+    title: "BREASTS (Female)",
     icon: HeartHandshake, 
     services: [
-      { id: "zmadhimi-gjoksit", name: "Zmadhimi i gjoksit", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast augmentation" },
-      { id: "lifting-gjoksit", name: "Lifting i gjoksit", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast lift" },
-      { id: "zvogelimi-gjoksit", name: "Zvogëlimi i gjoksit", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reduction" },
-      { id: "rikonstruktrimi-gjoksit", name: "Rikonstuktrimi i gjoksit", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reconstruction" },
+      { id: "breast-augmentation", name: "Breast Augmentation", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast augmentation" },
+      { id: "breast-lift", name: "Breast Lift (Mastopexy)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast lift" },
+      { id: "breast-reduction", name: "Breast Reduction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reduction" },
+      { id: "breast-reconstruction", name: "Breast Reconstruction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reconstruction" },
     ],
   },
   {
-    id: "trupi",
-    title: "TRUPI (Body)",
+    id: "body",
+    title: "BODY",
     icon: PersonStanding,
     services: [
-      { id: "lifting-kraheve", name: "Lifting i krahëve", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "arm lift" },
-      { id: "rimodelimi-barkut", name: "Rimodelimi i barkut", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tummy tuck" },
-      { id: "liposculptura", name: "Liposculptura", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "liposculpture body" },
-      { id: "rimodelimi-vitheve-bbl", name: "Rimodelimi i vitheve BBL", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "buttock augmentation" },
-      { id: "labioplastika", name: "Labioplastika", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "labiaplasty procedure" },
-      { id: "lifting-kofsheve", name: "Lifting i kofshëve", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "thigh lift" },
-      { id: "gjinekomastia", name: "Gjinekomastia", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "gynecomastia surgery" },
+      { id: "arm-lift", name: "Arm Lift (Brachioplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "arm lift" },
+      { id: "tummy-tuck", name: "Tummy Tuck (Abdominoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tummy tuck" },
+      { id: "liposculpture", name: "Liposculpture", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "liposculpture body" },
+      { id: "bbl", name: "Buttock Augmentation (BBL)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "buttock augmentation" },
+      { id: "labiaplasty", name: "Labiaplasty", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "labiaplasty procedure" },
+      { id: "thigh-lift", name: "Thigh Lift", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "thigh lift" },
+      { id: "gynecomastia", name: "Gynecomastia (Male Breast Reduction)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "gynecomastia surgery" },
     ],
   },
 ];
@@ -67,3 +68,4 @@ export const serviceData: ServiceCategory[] = [
 export const allServices: ServiceItem[] = serviceData.reduce((acc, category) => {
   return acc.concat(category.services);
 }, [] as ServiceItem[]);
+
