@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="space-y-24"> {/* Increased spacing */}
       {/* Hero Section */}
-      <section className="min-h-[75vh] flex flex-col justify-center items-center text-center py-16 bg-primary/5 rounded-lg shadow-xl">
+      <section className="min-h-[75vh] flex flex-col justify-center items-center text-center py-16 bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-lg shadow-xl">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn">
             Zenith Aesthetics
