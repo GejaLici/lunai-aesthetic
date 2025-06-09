@@ -1,8 +1,9 @@
+
 'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Mountain } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { LogoIcon } from '@/components/icons/logo-icon';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -19,10 +20,10 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-md">
+      <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Zenith Aesthetics Home">
-          <LogoIcon className="h-10 w-10 text-accent" />
+          <LogoIcon className="h-8 w-8 text-accent" />
           <span className="font-headline text-2xl font-bold text-foreground">Zenith Aesthetics</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
@@ -31,8 +32,8 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === link.href ? "text-primary" : "text-foreground/70"
+                "text-sm font-medium transition-colors hover:text-primary hover:underline underline-offset-4",
+                pathname === link.href ? "text-primary font-semibold" : "text-foreground/70"
               )}
             >
               {link.label}
@@ -48,18 +49,18 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <nav className="grid gap-6 text-lg font-medium mt-8">
+              <nav className="grid gap-4 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                   <LogoIcon className="h-8 w-8 text-accent" />
-                  <span className="font-headline">Zenith Aesthetics</span>
+                  <span className="font-headline font-semibold text-lg">Zenith Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                      className={cn(
-                      "transition-colors hover:text-primary",
-                      pathname === link.href ? "text-primary" : "text-muted-foreground"
+                      "block px-3 py-2 rounded-md transition-colors hover:text-primary hover:bg-accent/10",
+                      pathname === link.href ? "text-primary bg-accent/5 font-semibold" : "text-foreground/80"
                     )}
                   >
                     {link.label}
