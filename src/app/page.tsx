@@ -1,17 +1,18 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { serviceData } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { Cpu, Leaf, UsersRound } from "lucide-react";
 
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-24"> {/* Increased spacing */}
       {/* Hero Section */}
-      <section className="text-center py-16 bg-card rounded-lg shadow-xl">
+      <section className="min-h-[75vh] flex flex-col justify-center items-center text-center py-16 bg-primary/5 rounded-lg shadow-xl">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn">
             Zenith Aesthetics
@@ -32,27 +33,74 @@ export default function HomePage() {
 
       {/* About Us Snippet */}
       <section className="container mx-auto px-4 py-12">
-        <Card className="shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-headline text-primary">Welcome to Zenith Aesthetics</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-foreground/90 space-y-4">
-            <p>
-              At Zenith Aesthetics, we believe that everyone deserves to feel confident and beautiful in their own skin. Our state-of-the-art clinic offers a comprehensive range of aesthetic treatments, delivered by experienced professionals dedicated to achieving exceptional, natural-looking results.
-            </p>
-            <p>
-              We combine artistry with the latest medical advancements to provide personalized care tailored to your unique needs and aspirations. Your journey to enhanced beauty and self-assurance begins here.
-            </p>
-            <div className="flex items-center space-x-2 text-accent">
-              <CheckCircle className="h-6 w-6" />
-              <span>Expert Care & Personalized Treatments</span>
+        <Card className="shadow-lg overflow-hidden"> {/* Added overflow-hidden for image rounding */}
+          <div className="grid md:grid-cols-2 items-center">
+            <div className="p-6 md:p-8">
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-3xl font-headline text-primary">Welcome to Zenith Aesthetics</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0 text-lg text-foreground/90 space-y-4">
+                <p>
+                  At Zenith Aesthetics, we believe that everyone deserves to feel confident and beautiful in their own skin. Our state-of-the-art clinic offers a comprehensive range of aesthetic treatments, delivered by experienced professionals dedicated to achieving exceptional, natural-looking results.
+                </p>
+                <p>
+                  We combine artistry with the latest medical advancements to provide personalized care tailored to your unique needs and aspirations. Your journey to enhanced beauty and self-assurance begins here.
+                </p>
+              </CardContent>
             </div>
-            <div className="flex items-center space-x-2 text-accent">
-              <CheckCircle className="h-6 w-6" />
-              <span>State-of-the-Art Technology</span>
+            <div className="relative h-64 md:h-full w-full">
+              <Image
+                src="https://placehold.co/600x450.png"
+                alt="Welcoming clinic interior"
+                layout="fill"
+                objectFit="cover"
+                data-ai-hint="clinic interior"
+              />
             </div>
-          </CardContent>
+          </div>
         </Card>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+          Why Choose Zenith Aesthetics?
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="items-center text-center">
+              <UsersRound className="h-12 w-12 text-accent mb-4" />
+              <CardTitle className="font-headline text-2xl text-foreground">Expert & Personalized Care</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-foreground/80">
+                Our highly skilled professionals provide tailored treatments, focusing on your unique goals to ensure the best possible outcomes.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="items-center text-center">
+              <Cpu className="h-12 w-12 text-accent mb-4" />
+              <CardTitle className="font-headline text-2xl text-foreground">State-of-the-Art Technology</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-foreground/80">
+                We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe and effective results.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="items-center text-center">
+              <Leaf className="h-12 w-12 text-accent mb-4" />
+              <CardTitle className="font-headline text-2xl text-foreground">Commitment to Natural Results</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-foreground/80">
+                Our philosophy centers on enhancing your natural beauty, aiming for subtle yet significant improvements that look authentic.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </section>
 
       {/* Featured Services Section */}
@@ -81,13 +129,13 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action for Consultation */}
-      <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
+      <section className="py-16 bg-accent text-accent-foreground rounded-lg shadow-xl">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-headline font-bold mb-6">Ready for a Transformation?</h2>
           <p className="text-xl mb-8">
             Our AI-powered virtual consultant can help guide you towards the perfect treatment.
           </p>
-          <Button asChild size="lg" variant="outline" className="bg-primary-foreground text-primary border-primary-foreground hover:bg-primary-foreground/90">
+          <Button asChild size="lg" variant="outline" className="bg-accent-foreground text-accent border-accent-foreground hover:bg-accent-foreground/90 hover:text-accent">
             <Link href="/consultation">Start Your Virtual Consultation</Link>
           </Button>
         </div>
