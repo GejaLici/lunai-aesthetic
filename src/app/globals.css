@@ -5,49 +5,49 @@
 
 @layer base {
   :root {
-    --background: 20 5% 5%; /* Very dark, slightly warm brown/charcoal */
-    --foreground: 30 30% 90%; /* Warm off-white/very light beige */
+    --background: 220 10% 20%; /* Dark Cool Gray-Blue */
+    --foreground: 220 20% 95%; /* Very Light Cool Gray (Off-White) */
 
-    --card: 20 5% 10%; /* Slightly lighter warm dark brown/charcoal */
-    --card-foreground: 30 30% 90%; /* Warm off-white */
+    --card: 220 10% 25%; /* Slightly Lighter Dark Cool Gray-Blue */
+    --card-foreground: 220 20% 95%; /* Very Light Cool Gray */
 
-    --popover: 20 5% 8%; /* Similar to card, slightly different for depth */
-    --popover-foreground: 30 30% 90%; /* Warm off-white */
+    --popover: 220 10% 15%; /* Darker Cool Gray-Blue for popovers */
+    --popover-foreground: 220 20% 95%; /* Very Light Cool Gray */
 
-    --primary: 210 80% 55%; /* Deep, Saturated Blue */
+    --primary: 210 80% 55%; /* Deep, Saturated Blue (Kept from previous) */
     --primary-foreground: 0 0% 98%; /* Almost white, high contrast */
 
-    --secondary: 30 10% 30%; /* Desaturated warm mid-gray/brown */
-    --secondary-foreground: 30 20% 95%; /* Light warm gray/off-white */
+    --secondary: 220 10% 40%; /* Mid Cool Gray-Blue */
+    --secondary-foreground: 220 15% 90%; /* Light Cool Gray */
 
-    --muted: 30 8% 20%; /* Darker desaturated warm gray/brown */
-    --muted-foreground: 30 15% 70%; /* Lighter warm gray */
+    --muted: 220 8% 30%; /* Darker Desaturated Cool Gray-Blue */
+    --muted-foreground: 220 10% 65%; /* Mid-Light Cool Gray */
 
-    --accent: 40 80% 55%; /* Warm Gold/Amber */
+    --accent: 40 80% 55%; /* Warm Gold/Amber (Kept for now, can be changed) */
     --accent-foreground: 20 10% 10%; /* Dark brown/black for text on gold */
 
     --destructive: 0 70% 50%; /* Clear red */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 10% 25%; /* Subtle warm dark gray border */
-    --input: 30 10% 15%; /* Dark warm input background */
-    --ring: 40 80% 55%; /* Accent gold for focus rings */
+    --border: 220 10% 35%; /* Subtle Cool Gray Border */
+    --input: 220 10% 28%; /* Cool Gray Input Background */
+    --ring: 210 80% 55%; /* Primary blue for focus rings, consistent with primary */
 
     --radius: 0.5rem;
 
-    --chart-1: 30 80% 60%; /* Warm Orange */
-    --chart-2: 50 70% 55%; /* Warm Yellow-Gold */
-    --chart-3: 15 60% 50%; /* Warm Brownish-Red */
-    --chart-4: 40 75% 65%; /* Lighter Gold */
-    --chart-5: 25 70% 60%; /* Warm Sienna */
+    --chart-1: 210 70% 60%; /* Cool Blue */
+    --chart-2: 190 70% 55%; /* Cool Cyan/Teal */
+    --chart-3: 230 60% 65%; /* Cool Indigo/Purple */
+    --chart-4: 200 75% 65%; /* Lighter Cool Blue */
+    --chart-5: 220 65% 50%; /* Desaturated Cool Blue */
 
-    --sidebar-background: 20 5% 8%;
-    --sidebar-foreground: 30 30% 90%;
-    --sidebar-primary: 40 80% 55%; /* Gold accent as primary in sidebar */
+    --sidebar-background: 220 10% 18%; /* Darker cool gray for sidebar */
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 40 80% 55%; /* Gold accent as primary in sidebar (can be changed) */
     --sidebar-primary-foreground: 20 10% 10%;
-    --sidebar-accent: 20 5% 15%; /* Lighter dark warm for hover */
-    --sidebar-accent-foreground: 30 30% 95%;
-    --sidebar-border: 30 10% 20%;
+    --sidebar-accent: 220 10% 30%; /* Lighter cool gray for hover */
+    --sidebar-accent-foreground: 220 20% 95%;
+    --sidebar-border: 220 10% 28%;
     --sidebar-ring: 40 80% 55%;
   }
 
@@ -114,3 +114,4 @@
 .smooth-scroll {
   scroll-behavior: smooth;
 }
+
