@@ -32,8 +32,8 @@ export default function HomePage() {
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* Dusty white overlay */}
-        <div className="absolute inset-0 bg-white/50 z-10"></div>
+        {/* Cool gray overlay */}
+        <div className="absolute inset-0 bg-slate-600/50 z-10"></div>
 
         {/* Content (ensure it's on top of the video and overlay) */}
         <div className="container mx-auto px-4 relative z-20">
