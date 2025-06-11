@@ -25,7 +25,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Zenith Aesthetics Home">
           <LogoIcon className="h-8 w-8 text-accent" />
-          <span className="font-headline text-2xl font-bold text-foreground">Zenith Aesthetics</span>
+          <span className="font-headline text-lg md:text-2xl font-bold text-foreground">Zenith Aesthetics</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-1">
           {navLinks.map((link) => (
