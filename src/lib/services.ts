@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { Smile, Aperture, PersonStanding, HeartHandshake, Eye, Ruler, Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby } from 'lucide-react';
+import { Smile, Aperture, PersonStanding, HeartHandshake, Eye, Ruler, Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, Activity } from 'lucide-react';
 
 export type ServiceItem = {
   id: string;
@@ -10,6 +10,7 @@ export type ServiceItem = {
   imageAfter: string;
   dataAiHint: string;
   serviceType?: 'operation' | 'treatment';
+  dentalSubCategoryTitle?: string; // New field for dental sub-categories
 };
 
 export type ServiceCategory = {
@@ -87,63 +88,34 @@ export const serviceData: ServiceCategory[] = [
     ],
   },
   {
-    id: "dental-aesthetics",
-    title: "DENTISTRY - AESTHETICS",
-    icon: Sparkles,
+    id: "dentistry",
+    title: "DENTISTRY",
+    icon: Sparkles, // Using Sparkles as the main icon for Dentistry
     services: [
-      { id: "teeth-whitening", name: "Teeth Whitening", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "teeth whitening", serviceType: "treatment" },
-      { id: "composite-veneers", name: "Composite Veneers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "composite veneers", serviceType: "treatment" },
-      { id: "emax-veneers", name: "E-Max Veneers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "emax veneers", serviceType: "treatment" },
-    ],
-  },
-  {
-    id: "dental-prosthetics",
-    title: "DENTISTRY - PROSTHETICS",
-    icon: Construction,
-    services: [
-      { id: "dental-crowns", name: "Crowns", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental crowns", serviceType: "treatment" },
-      { id: "dental-bridges", name: "Dental Bridges", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental bridges", serviceType: "treatment" },
-      { id: "dentures", name: "Dentures", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dentures", serviceType: "treatment" },
-    ],
-  },
-  {
-    id: "dental-orthodontics",
-    title: "DENTISTRY - ORTHODONTICS",
-    icon: AlignCenter,
-    services: [
-      { id: "invisalign", name: "Invisalign", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "invisalign", serviceType: "treatment" },
-      { id: "fixed-braces", name: "Fixed Braces", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "fixed braces", serviceType: "treatment" },
-      { id: "removable-appliances", name: "Removable Appliances", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "removable ortho", serviceType: "treatment" },
-    ],
-  },
-  {
-    id: "dental-therapy",
-    title: "DENTISTRY - THERAPY",
-    icon: ClipboardCheck,
-    services: [
-      { id: "tartar-cleaning", name: "Tartar Cleaning", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "teeth cleaning", serviceType: "treatment" },
-      { id: "tooth-fillings", name: "Tooth Fillings", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth fillings", serviceType: "treatment" },
-      { id: "infected-teeth-treatment", name: "Infected Teeth Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "root canal", serviceType: "treatment" },
-    ],
-  },
-  {
-    id: "dental-surgery",
-    title: "DENTISTRY - SURGERY",
-    icon: Scissors,
-    services: [
-      { id: "tooth-extraction", name: "Tooth Extraction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth extraction", serviceType: "operation" },
-      { id: "dental-implants", name: "Dental Implants", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental implants", serviceType: "operation" },
-      { id: "apical-resection", name: "Apical Resection", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "apical resection", serviceType: "operation" },
-    ],
-  },
-  {
-    id: "dental-pedodontics",
-    title: "DENTISTRY - PEDODONTICS (CHILDREN'S DENTISTRY)",
-    icon: Baby,
-    services: [
-      { id: "milk-teeth-treatment", name: "Milk Teeth Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "childrens dentistry", serviceType: "treatment" },
-      { id: "tooth-fluoridation", name: "Tooth Fluoridation", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth fluoridation", serviceType: "treatment" },
-      { id: "tooth-sealants", name: "Tooth Sealants", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth sealants", serviceType: "treatment" },
+      // AESTHETICS
+      { id: "teeth-whitening", name: "Teeth Whitening", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "teeth whitening", serviceType: "treatment", dentalSubCategoryTitle: "AESTHETICS" },
+      { id: "composite-veneers", name: "Composite Veneers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "composite veneers", serviceType: "treatment", dentalSubCategoryTitle: "AESTHETICS" },
+      { id: "emax-veneers", name: "E-Max Veneers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "emax veneers", serviceType: "treatment", dentalSubCategoryTitle: "AESTHETICS" },
+      // PROSTHETICS
+      { id: "dental-crowns", name: "Crowns", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental crowns", serviceType: "treatment", dentalSubCategoryTitle: "PROSTHETICS" },
+      { id: "dental-bridges", name: "Dental Bridges", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental bridges", serviceType: "treatment", dentalSubCategoryTitle: "PROSTHETICS" },
+      { id: "dentures", name: "Dentures", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dentures", serviceType: "treatment", dentalSubCategoryTitle: "PROSTHETICS" },
+      // ORTHODONTICS
+      { id: "invisalign", name: "Invisalign", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "invisalign", serviceType: "treatment", dentalSubCategoryTitle: "ORTHODONTICS" },
+      { id: "fixed-braces", name: "Fixed Braces", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "fixed braces", serviceType: "treatment", dentalSubCategoryTitle: "ORTHODONTICS" },
+      { id: "removable-appliances", name: "Removable Appliances", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "removable ortho", serviceType: "treatment", dentalSubCategoryTitle: "ORTHODONTICS" },
+      // THERAPY
+      { id: "tartar-cleaning", name: "Tartar Cleaning", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "teeth cleaning", serviceType: "treatment", dentalSubCategoryTitle: "THERAPY" },
+      { id: "tooth-fillings", name: "Tooth Fillings", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth fillings", serviceType: "treatment", dentalSubCategoryTitle: "THERAPY" },
+      { id: "infected-teeth-treatment", name: "Infected Teeth Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "root canal", serviceType: "treatment", dentalSubCategoryTitle: "THERAPY" },
+      // SURGERY
+      { id: "tooth-extraction", name: "Tooth Extraction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth extraction", serviceType: "operation", dentalSubCategoryTitle: "SURGERY" },
+      { id: "dental-implants", name: "Dental Implants", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental implants", serviceType: "operation", dentalSubCategoryTitle: "SURGERY" },
+      { id: "apical-resection", name: "Apical Resection", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "apical resection", serviceType: "operation", dentalSubCategoryTitle: "SURGERY" },
+      // PEDODONTICS (CHILDREN'S DENTISTRY)
+      { id: "milk-teeth-treatment", name: "Milk Teeth Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "childrens dentistry", serviceType: "treatment", dentalSubCategoryTitle: "PEDODONTICS (CHILDREN'S DENTISTRY)" },
+      { id: "tooth-fluoridation", name: "Tooth Fluoridation", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth fluoridation", serviceType: "treatment", dentalSubCategoryTitle: "PEDODONTICS (CHILDREN'S DENTISTRY)" },
+      { id: "tooth-sealants", name: "Tooth Sealants", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth sealants", serviceType: "treatment", dentalSubCategoryTitle: "PEDODONTICS (CHILDREN'S DENTISTRY)" },
     ],
   },
 ];
@@ -151,3 +123,5 @@ export const serviceData: ServiceCategory[] = [
 export const allServices: ServiceItem[] = serviceData.reduce((acc, category) => {
   return acc.concat(category.services);
 }, [] as ServiceItem[]);
+
+    
