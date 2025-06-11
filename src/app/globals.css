@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 210 20% 95%; /* Very light, cool gray-blue */
-    --foreground: 210 15% 25%; /* Dark, cool gray-blue */
+    --background: 220 20% 10%; /* Deep, dark cool blue/charcoal */
+    --foreground: 220 10% 85%; /* Light cool gray for text */
 
-    --card: 210 30% 98%; /* Almost white, cool tint */
-    --card-foreground: 210 15% 25%; /* Dark, cool gray-blue */
+    --card: 220 20% 15%; /* Slightly lighter dark blue/charcoal for cards */
+    --card-foreground: 220 10% 85%; /* Same as main foreground */
 
-    --popover: 210 30% 98%; /* Almost white, cool tint */
-    --popover-foreground: 210 15% 25%; /* Dark, cool gray-blue */
+    --popover: 220 20% 15%; /* Popover background */
+    --popover-foreground: 220 10% 85%; /* Popover text */
 
-    --primary: 221 79% 57.1%; /* Royal Blue (existing cool tone) */
-    --primary-foreground: 0 0% 97.3%; /* Pure White */
+    --primary: 221 79% 60%; /* Vibrant Royal Blue - pops on dark */
+    --primary-foreground: 0 0% 98%; /* Almost white, high contrast for text on primary */
 
-    --secondary: 210 15% 75%; /* Medium cool gray */
-    --secondary-foreground: 0 0% 97.3%; /* Pure White */
+    --secondary: 220 15% 40%; /* Medium-dark cool gray */
+    --secondary-foreground: 0 0% 98%; /* Almost white for text on secondary */
 
-    --muted: 210 15% 85%; /* Light cool gray */
-    --muted-foreground: 210 10% 45%; /* Medium-dark cool gray */
+    --muted: 220 15% 25%; /* Darker cool gray for muted elements */
+    --muted-foreground: 220 10% 65%; /* Lighter gray for muted text */
 
-    --accent: 190 70% 50%; /* Cool, vibrant teal/cyan */
-    --accent-foreground: 0 0% 97.3%; /* Pure White */
+    --accent: 190 70% 55%; /* Vibrant Teal/Cyan - pops as accent */
+    --accent-foreground: 0 0% 98%; /* Almost white for text on accent areas */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 50%; /* Clear red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Text on destructive elements */
 
-    --border: 210 15% 80%; /* Cool gray border */
-    --input: 210 30% 98%; /* Cool off-white for input background */
-    --ring: 221 79% 57.1%; /* Royal Blue for focus ring */
+    --border: 220 15% 30%; /* Subtle dark gray border */
+    --input: 220 20% 20%; /* Dark input background */
+    --ring: 221 79% 60%; /* Primary color for focus rings */
 
     --radius: 0.5rem;
 
@@ -40,18 +40,21 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 220 10% 85%;
+    --sidebar-primary: 221 79% 60%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 20% 25%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 15% 30%;
+    --sidebar-ring: 221 79% 60%;
   }
 
   .dark {
-    /* Keeping dark mode defaults, but main theme is light based on proposal */
+    /* This is the alternative dark theme, currently very stark.
+       You might want to align this more with the new default dark theme 
+       or define a light theme here if the default is dark.
+    */
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -64,7 +67,7 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%; /* Consider a dark mode accent if needed */
+    --accent: 0 0% 14.9%; 
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
