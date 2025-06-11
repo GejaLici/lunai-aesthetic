@@ -1,3 +1,4 @@
+
 import { allServices } from '@/lib/services';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
@@ -29,9 +30,8 @@ export default function GalleryPage() {
                     <Image
                       src={service.imageBefore}
                       alt={`Before image for ${service.name}`}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-300 hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
                       data-ai-hint={`${service.dataAiHint} before`}
                     />
                   </div>
@@ -42,9 +42,8 @@ export default function GalleryPage() {
                     <Image
                       src={service.imageAfter}
                       alt={`After image for ${service.name}`}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-300 hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
                       data-ai-hint={`${service.dataAiHint} after`}
                     />
                   </div>

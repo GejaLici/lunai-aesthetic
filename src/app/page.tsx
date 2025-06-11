@@ -75,8 +75,8 @@ export default function HomePage() {
               <Image
                 src="https://placehold.co/600x450.png"
                 alt="Welcoming clinic interior"
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
                 data-ai-hint="clinic interior"
               />
             </div>

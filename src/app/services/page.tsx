@@ -1,3 +1,4 @@
+
 import { serviceData } from '@/lib/services';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
@@ -31,8 +32,8 @@ export default function ServicesPage() {
                     <Image
                       src={service.imageBefore} // Using 'before' image as a representative
                       alt={`Image for ${service.name}`}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      className="object-cover"
                       data-ai-hint={service.dataAiHint}
                     />
                   </div>
