@@ -20,8 +20,8 @@ const subCategoryIcons: Record<string, LucideIcon | undefined> = {
 
 export default function ServicesPage() {
   return (
-    <div className="space-y-12">
-      <section className="text-center py-8">
+    <div className="space-y-8">
+      <section className="text-center py-8 pb-8 border-b border-border/30">
         <h1 className="text-5xl font-headline font-bold text-primary">Our Services</h1>
         <p className="text-xl text-foreground/80 mt-4">
           Explore our comprehensive range of aesthetic treatments tailored to your needs.
@@ -42,8 +42,8 @@ export default function ServicesPage() {
           });
 
           return (
-            <section key={category.id} id={category.id} className="scroll-mt-20">
-              <div className="flex items-center mb-6">
+            <section key={category.id} id={category.id} className="scroll-mt-20 py-6 border-b border-border/30 last:border-b-0">
+              <div className="flex items-center pb-4 mb-6 border-b border-border/20">
                 {category.icon && <category.icon className="h-10 w-10 text-accent mr-4 flex-shrink-0" />}
                 <h2 className="text-3xl font-headline font-semibold text-foreground">{category.title}</h2>
               </div>
@@ -54,8 +54,8 @@ export default function ServicesPage() {
                 const SubCategoryIcon = subCategoryIcons[subCategoryTitle];
 
                 return (
-                  <div key={subCategoryTitle} className="mb-10 pl-4 border-l-2 border-primary/20"> {/* Indent subcategories */}
-                    <div className="flex items-center mb-4 mt-2"> {/* Added mt-2 for spacing from border */}
+                  <div key={subCategoryTitle} className="mb-8 pl-4 border-l-2 border-primary/20">
+                    <div className="flex items-center p-3 mb-4 rounded-md bg-secondary/20 shadow-sm">
                          {SubCategoryIcon && <SubCategoryIcon className="h-8 w-8 text-primary/80 mr-3 flex-shrink-0" />}
                          <h3 className="text-2xl font-headline text-primary/90">{subCategoryTitle}</h3>
                     </div>
@@ -168,8 +168,8 @@ export default function ServicesPage() {
           const unclassified = category.services.filter(s => !s.serviceType); 
 
           return (
-            <section key={category.id} id={category.id} className="scroll-mt-20">
-              <div className="flex items-center mb-6">
+            <section key={category.id} id={category.id} className="scroll-mt-20 py-6 border-b border-border/30 last:border-b-0">
+              <div className="flex items-center pb-4 mb-6 border-b border-border/20">
                 {category.icon && <category.icon className="h-10 w-10 text-accent mr-4 flex-shrink-0" />}
                 <h2 className="text-3xl font-headline font-semibold text-foreground">{category.title}</h2>
               </div>
@@ -282,5 +282,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
-    
