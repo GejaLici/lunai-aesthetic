@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { Smile, Aperture, PersonStanding, HeartHandshake, Eye, Ruler } from 'lucide-react';
+import { Smile, Aperture, PersonStanding, HeartHandshake, Eye, Ruler, Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby } from 'lucide-react';
 
 export type ServiceItem = {
   id: string;
@@ -9,6 +9,7 @@ export type ServiceItem = {
   imageBefore: string;
   imageAfter: string;
   dataAiHint: string;
+  serviceType?: 'operation' | 'treatment';
 };
 
 export type ServiceCategory = {
@@ -26,32 +27,32 @@ export const serviceData: ServiceCategory[] = [
     title: "FACE",
     icon: Smile,
     services: [
-      { id: "rhinoplasty", name: "Nose Surgery (Rhinoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose surgery" },
-      { id: "nose-reshaping", name: "Nose Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose reshaping" },
-      { id: "otoplasty", name: "Ear Reshaping (Otoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "ear reshaping" },
-      { id: "hair-transplant", name: "Hair Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair transplant" },
-      { id: "beard-transplant", name: "Beard Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "beard transplant" },
-      { id: "eyebrow-transplant", name: "Eyebrow Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyebrow transplant" },
-      { id: "brow-lift", name: "Brow Lift", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "brow lift" },
-      { id: "blepharoplasty", name: "Eyelid Surgery (Blepharoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyelid surgery" },
-      { id: "face-lift", name: "Face Lift (Rhytidectomy)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "face lift" },
-      { id: "chin-reshaping-genioplasty", name: "Chin Reshaping (Genioplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chin reshaping" },
-      { id: "lip-reshaping", name: "Lip Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "lip reshaping" },
-      { id: "xanthelasma-plasma-arc", name: "Xanthelasma, Plasma Arc", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "xanthelasma treatment" },
-      { id: "multivitamin-treatment", name: "Multivitamin Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "facial treatment" },
-      { id: "eyelids-plasma-arc", name: "Eyelids, Plasma Arc", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyelid plasma" },
-      { id: "cheekbone-reshaping", name: "Cheekbone Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "cheekbone contour" },
-      { id: "microdermabrasion", name: "Microdermabrasion", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin exfoliation" },
-      { id: "jawline-contouring", name: "Jawline Contouring", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "jawline definition" },
-      { id: "wrinkle-fillers", name: "Wrinkle Fillers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dermal fillers" },
-      { id: "prp-face", name: "PRP for the Face", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "facial rejuvenation" },
-      { id: "dark-circles-eyes", name: "Dark Circles Under the Eyes", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eye treatment" },
-      { id: "prp-hair", name: "PRP for Hair", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair restoration" },
-      { id: "white-peeling", name: "White Peeling", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chemical peel" },
-      { id: "microneedling", name: "Microneedling", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin needling" },
-      { id: "radiofrequency", name: "Radiofrequency", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin tightening" },
-      { id: "sulcus-filling", name: "Sulcus Filling (Deep Wrinkle Filling)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "wrinkle treatment" },
-      { id: "chin-reshaping", name: "Chin Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chin augmentation" },
+      { id: "rhinoplasty", name: "Nose Surgery (Rhinoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose surgery", serviceType: "operation" },
+      { id: "nose-reshaping", name: "Nose Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "nose reshaping", serviceType: "treatment" },
+      { id: "otoplasty", name: "Ear Reshaping (Otoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "ear reshaping", serviceType: "operation" },
+      { id: "hair-transplant", name: "Hair Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair transplant", serviceType: "operation" },
+      { id: "beard-transplant", name: "Beard Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "beard transplant", serviceType: "operation" },
+      { id: "eyebrow-transplant", name: "Eyebrow Transplant", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyebrow transplant", serviceType: "operation" },
+      { id: "brow-lift", name: "Brow Lift", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "brow lift", serviceType: "operation" },
+      { id: "blepharoplasty", name: "Eyelid Surgery (Blepharoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyelid surgery", serviceType: "operation" },
+      { id: "face-lift", name: "Face Lift (Rhytidectomy)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "face lift", serviceType: "operation" },
+      { id: "chin-reshaping-genioplasty", name: "Chin Reshaping (Genioplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chin reshaping", serviceType: "operation" },
+      { id: "lip-reshaping", name: "Lip Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "lip reshaping", serviceType: "treatment" },
+      { id: "xanthelasma-plasma-arc", name: "Xanthelasma, Plasma Arc", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "xanthelasma treatment", serviceType: "treatment" },
+      { id: "multivitamin-treatment", name: "Multivitamin Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "facial treatment", serviceType: "treatment" },
+      { id: "eyelids-plasma-arc", name: "Eyelids, Plasma Arc", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eyelid plasma", serviceType: "treatment" },
+      { id: "cheekbone-reshaping", name: "Cheekbone Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "cheekbone contour", serviceType: "treatment" },
+      { id: "microdermabrasion", name: "Microdermabrasion", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin exfoliation", serviceType: "treatment" },
+      { id: "jawline-contouring", name: "Jawline Contouring", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "jawline definition", serviceType: "treatment" },
+      { id: "wrinkle-fillers", name: "Wrinkle Fillers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dermal fillers", serviceType: "treatment" },
+      { id: "prp-face", name: "PRP for the Face", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "facial rejuvenation", serviceType: "treatment" },
+      { id: "dark-circles-eyes", name: "Dark Circles Under the Eyes", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "eye treatment", serviceType: "treatment" },
+      { id: "prp-hair", name: "PRP for Hair", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair restoration", serviceType: "treatment" },
+      { id: "white-peeling", name: "White Peeling", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chemical peel", serviceType: "treatment" },
+      { id: "microneedling", name: "Microneedling", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin needling", serviceType: "treatment" },
+      { id: "radiofrequency", name: "Radiofrequency", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin tightening", serviceType: "treatment" },
+      { id: "sulcus-filling", name: "Sulcus Filling (Deep Wrinkle Filling)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "wrinkle treatment", serviceType: "treatment" },
+      { id: "chin-reshaping", name: "Chin Reshaping", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "chin augmentation", serviceType: "treatment" },
     ],
   },
   {
@@ -59,10 +60,10 @@ export const serviceData: ServiceCategory[] = [
     title: "BREASTS (Female)",
     icon: HeartHandshake,
     services: [
-      { id: "breast-augmentation", name: "Breast Augmentation", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast augmentation" },
-      { id: "breast-lift", name: "Breast Lift (Mastopexy)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast lift" },
-      { id: "breast-reduction", name: "Breast Reduction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reduction" },
-      { id: "breast-reconstruction", name: "Breast Reconstruction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reconstruction" },
+      { id: "breast-augmentation", name: "Breast Augmentation", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast augmentation", serviceType: "operation" },
+      { id: "breast-lift", name: "Breast Lift (Mastopexy)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast lift", serviceType: "operation" },
+      { id: "breast-reduction", name: "Breast Reduction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reduction", serviceType: "operation" },
+      { id: "breast-reconstruction", name: "Breast Reconstruction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "breast reconstruction", serviceType: "operation" },
     ],
   },
   {
@@ -70,19 +71,79 @@ export const serviceData: ServiceCategory[] = [
     title: "BODY",
     icon: PersonStanding,
     services: [
-      { id: "arm-lift", name: "Arm Lift (Brachioplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "arm lift" },
-      { id: "tummy-tuck", name: "Tummy Tuck (Abdominoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tummy tuck" },
-      { id: "liposculpture", name: "Liposculpture", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "liposculpture body" },
-      { id: "bbl", name: "Buttock Augmentation (BBL)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "buttock augmentation" },
-      { id: "labiaplasty", name: "Labiaplasty", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "labiaplasty procedure" },
-      { id: "thigh-lift", name: "Thigh Lift", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "thigh lift" },
-      { id: "gynecomastia", name: "Gynecomastia (Male Breast Reduction)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "gynecomastia surgery" },
-      { id: "cellulite-treatment", name: "Cellulite Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "cellulite reduction" },
-      { id: "plasma-arc-body", name: "Plasma Arc (Body)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin tightening" },
-      { id: "carboxytherapy", name: "Carboxytherapy", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "stretch marks" },
-      { id: "sclerotherapy", name: "Sclerotherapy", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "vein treatment" },
-      { id: "lipolysis", name: "Lipolysis", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "fat reduction" },
-      { id: "laser-hair-removal", name: "Laser Hair Removal", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair removal" },
+      { id: "arm-lift", name: "Arm Lift (Brachioplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "arm lift", serviceType: "operation" },
+      { id: "tummy-tuck", name: "Tummy Tuck (Abdominoplasty)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tummy tuck", serviceType: "operation" },
+      { id: "liposculpture", name: "Liposculpture", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "liposculpture body", serviceType: "operation" },
+      { id: "bbl", name: "Buttock Augmentation (BBL)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "buttock augmentation", serviceType: "operation" },
+      { id: "labiaplasty", name: "Labiaplasty", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "labiaplasty procedure", serviceType: "operation" },
+      { id: "thigh-lift", name: "Thigh Lift", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "thigh lift", serviceType: "operation" },
+      { id: "gynecomastia", name: "Gynecomastia (Male Breast Reduction)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "gynecomastia surgery", serviceType: "operation" },
+      { id: "cellulite-treatment", name: "Cellulite Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "cellulite reduction", serviceType: "treatment" },
+      { id: "plasma-arc-body", name: "Plasma Arc (Body)", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "skin tightening", serviceType: "treatment" },
+      { id: "carboxytherapy", name: "Carboxytherapy", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "stretch marks", serviceType: "treatment" },
+      { id: "sclerotherapy", name: "Sclerotherapy", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "vein treatment", serviceType: "treatment" },
+      { id: "lipolysis", name: "Lipolysis", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "fat reduction", serviceType: "treatment" },
+      { id: "laser-hair-removal", name: "Laser Hair Removal", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "hair removal", serviceType: "treatment" },
+    ],
+  },
+  {
+    id: "dental-aesthetics",
+    title: "DENTISTRY - AESTHETICS",
+    icon: Sparkles,
+    services: [
+      { id: "teeth-whitening", name: "Teeth Whitening", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "teeth whitening", serviceType: "treatment" },
+      { id: "composite-veneers", name: "Composite Veneers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "composite veneers", serviceType: "treatment" },
+      { id: "emax-veneers", name: "E-Max Veneers", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "emax veneers", serviceType: "treatment" },
+    ],
+  },
+  {
+    id: "dental-prosthetics",
+    title: "DENTISTRY - PROSTHETICS",
+    icon: Construction,
+    services: [
+      { id: "dental-crowns", name: "Crowns", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental crowns", serviceType: "treatment" },
+      { id: "dental-bridges", name: "Dental Bridges", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental bridges", serviceType: "treatment" },
+      { id: "dentures", name: "Dentures", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dentures", serviceType: "treatment" },
+    ],
+  },
+  {
+    id: "dental-orthodontics",
+    title: "DENTISTRY - ORTHODONTICS",
+    icon: AlignCenter,
+    services: [
+      { id: "invisalign", name: "Invisalign", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "invisalign", serviceType: "treatment" },
+      { id: "fixed-braces", name: "Fixed Braces", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "fixed braces", serviceType: "treatment" },
+      { id: "removable-appliances", name: "Removable Appliances", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "removable ortho", serviceType: "treatment" },
+    ],
+  },
+  {
+    id: "dental-therapy",
+    title: "DENTISTRY - THERAPY",
+    icon: ClipboardCheck,
+    services: [
+      { id: "tartar-cleaning", name: "Tartar Cleaning", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "teeth cleaning", serviceType: "treatment" },
+      { id: "tooth-fillings", name: "Tooth Fillings", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth fillings", serviceType: "treatment" },
+      { id: "infected-teeth-treatment", name: "Infected Teeth Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "root canal", serviceType: "treatment" },
+    ],
+  },
+  {
+    id: "dental-surgery",
+    title: "DENTISTRY - SURGERY",
+    icon: Scissors,
+    services: [
+      { id: "tooth-extraction", name: "Tooth Extraction", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth extraction", serviceType: "operation" },
+      { id: "dental-implants", name: "Dental Implants", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "dental implants", serviceType: "operation" },
+      { id: "apical-resection", name: "Apical Resection", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "apical resection", serviceType: "operation" },
+    ],
+  },
+  {
+    id: "dental-pedodontics",
+    title: "DENTISTRY - PEDODONTICS (CHILDREN'S DENTISTRY)",
+    icon: Baby,
+    services: [
+      { id: "milk-teeth-treatment", name: "Milk Teeth Treatment", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "childrens dentistry", serviceType: "treatment" },
+      { id: "tooth-fluoridation", name: "Tooth Fluoridation", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth fluoridation", serviceType: "treatment" },
+      { id: "tooth-sealants", name: "Tooth Sealants", description: commonDescription, imageBefore: "https://placehold.co/600x400.png", imageAfter: "https://placehold.co/600x400.png", dataAiHint: "tooth sealants", serviceType: "treatment" },
     ],
   },
 ];
@@ -90,4 +151,3 @@ export const serviceData: ServiceCategory[] = [
 export const allServices: ServiceItem[] = serviceData.reduce((acc, category) => {
   return acc.concat(category.services);
 }, [] as ServiceItem[]);
-
