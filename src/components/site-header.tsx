@@ -25,7 +25,12 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Zenith Aesthetics Home">
           <LogoIcon className="h-8 w-8 text-accent" />
-          <span className="font-headline text-lg md:text-2xl font-bold text-foreground">Zenith Aesthetics</span>
+          <span
+            className="font-headline text-lg md:text-2xl font-bold text-foreground"
+            suppressHydrationWarning // Add this to suppress the specific hydration warning
+          >
+            Zenith Aesthetics
+          </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-1">
           {navLinks.map((link) => (
@@ -63,8 +68,8 @@ export function SiteHeader() {
                     href={link.href}
                      className={cn(
                       "block px-3 py-2 rounded-md transition-colors",
-                      pathname === link.href 
-                        ? "text-primary bg-primary/10 font-semibold" 
+                      pathname === link.href
+                        ? "text-primary bg-primary/10 font-semibold"
                         : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                     )}
                   >
