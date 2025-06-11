@@ -143,7 +143,7 @@ export default function HomePage() {
                   {category.services.slice(0, 2).map(s => s.name).join(', ')} and more...
                 </CardDescription>
                 <Button asChild variant="link" className="text-accent p-0">
-                  <Link href={`/services#${category.id}`}>Learn More &rarr;</Link>
+                  <Link href={`/services#${category.id}`} scroll={true}>Learn More &rarr;</Link>
                 </Button>
               </CardContent>
             </Card>
