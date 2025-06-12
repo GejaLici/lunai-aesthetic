@@ -9,9 +9,9 @@ export function SiteFooter() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Zenith Aesthetics Home">
+            <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Zenviora Aesthetics Home">
               <LogoIcon className="h-10 w-10 text-accent" />
-              <span className="font-headline text-xl font-bold">Zenith Aesthetics</span>
+              <span className="font-headline text-xl font-bold">Zenviora Aesthetics</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Reaching the pinnacle of beauty and confidence.
@@ -50,7 +50,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Zenith Aesthetics. All rights reserved. Website by Firebase Studio.
+          &copy; {new Date().getFullYear()} Zenviora Aesthetics. All rights reserved. Website by Firebase Studio.
         </div>
       </div>
     </footer>

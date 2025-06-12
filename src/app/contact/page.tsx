@@ -35,7 +35,7 @@ export default function ContactPage() {
               <MapPin className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Address</h3>
-                <p>Zenith Aesthetics</p>
+                <p>Zenviora Aesthetics</p>
                 <p>123 Beauty Avenue, Suite 400</p>
                 <p>Aesthetics City, AC 54321</p>
                 <p className="text-sm text-muted-foreground mt-1">(Interactive map placeholder: A map will be displayed here in a future update.)</p>
@@ -52,7 +52,7 @@ export default function ContactPage() {
               <Mail className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p>contact@zenithaesthetics.com</p>
+                <p>contact@zenvioraaesthetics.com</p> {/* Also updated email domain assuming it would change */}
               </div>
             </div>
             <div>

@@ -5,7 +5,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Zenith Aesthetics',
+  title: 'Zenviora Aesthetics',
   description: 'Reaching the Pinnacle of Beauty and Confidence.',
 };
 

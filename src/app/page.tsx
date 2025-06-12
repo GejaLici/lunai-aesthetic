@@ -38,7 +38,7 @@ export default function HomePage() {
         {/* Content (ensure it's on top of the video and overlay) */}
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn">
-            Zenith Aesthetics
+            Zenviora Aesthetics
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Reaching the Pinnacle of Beauty and Confidence
@@ -60,11 +60,11 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 items-center">
             <div className="p-6 md:p-8">
               <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-3xl font-headline text-primary">Welcome to Zenith Aesthetics</CardTitle>
+                <CardTitle className="text-3xl font-headline text-primary">Welcome to Zenviora Aesthetics</CardTitle>
               </CardHeader>
               <CardContent className="p-0 text-lg text-foreground/90 space-y-4">
                 <p>
-                  At Zenith Aesthetics, we believe that everyone deserves to feel confident and beautiful in their own skin. Our state-of-the-art clinic offers a comprehensive range of aesthetic treatments, delivered by experienced professionals dedicated to achieving exceptional, natural-looking results.
+                  At Zenviora Aesthetics, we believe that everyone deserves to feel confident and beautiful in their own skin. Our state-of-the-art clinic offers a comprehensive range of aesthetic treatments, delivered by experienced professionals dedicated to achieving exceptional, natural-looking results.
                 </p>
                 <p>
                   We combine artistry with the latest medical advancements to provide personalized care tailored to your unique needs and aspirations. Your journey to enhanced beauty and self-assurance begins here.
@@ -87,7 +87,7 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Why Choose Zenith Aesthetics?
+          Why Choose Zenviora Aesthetics?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
