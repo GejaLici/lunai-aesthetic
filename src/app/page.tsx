@@ -1,4 +1,7 @@
 
+"use client"; // Add this if not already present, for useState and useEffect
+
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { serviceData } from "@/lib/services";
@@ -8,32 +11,32 @@ import { Cpu, Leaf, UsersRound } from "lucide-react";
 
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div className="space-y-24"> {/* Increased spacing */}
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex flex-col justify-center items-center text-center py-16 bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-lg shadow-xl overflow-hidden">
-        {/*
-          Video Background:
-          1. Uncomment the <video> tag below. (DONE)
-          2. Replace "/videos/hero-background.mp4" with the actual path to your video file
-             (e.g., place it in the `public/videos` directory and use `/videos/your-video-name.mp4`)
-             or a URL to a remotely hosted video.
-          3. Ensure your video is optimized for web playback.
-          4. If text is hard to read over the video, uncomment the overlay div below the video tag.
-        */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-0 w-full h-full object-cover"
-        >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {/* Cool gray overlay */}
-        <div className="absolute inset-0 bg-slate-600/50 z-10"></div>
+        {isClient && (
+          <>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute z-0 w-full h-full object-cover"
+            >
+              <source src="/videos/hero-background.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {/* Cool gray overlay */}
+            <div className="absolute inset-0 bg-slate-600/50 z-10"></div>
+          </>
+        )}
 
         {/* Content (ensure it's on top of the video and overlay) */}
         <div className="container mx-auto px-4 relative z-20">
