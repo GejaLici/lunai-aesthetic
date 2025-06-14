@@ -105,6 +105,9 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
       },
+      maxWidth: {
+        '5xl': '70rem',
+      }
     },
   },
   plugins: [require('tailwindcss-animate')],
