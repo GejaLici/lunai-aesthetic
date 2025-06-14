@@ -136,17 +136,21 @@ export default function HomePage() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {featuredServiceCategories.map((category, index) => (
-            <Card key={category.id} className="shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
-              <CardHeader>
-                {category.icon && <category.icon className="h-12 w-12 text-accent mb-4" />}
+            <Card 
+              key={category.id} 
+              className="flex flex-col bg-card shadow-lg hover:shadow-primary/30 transition-all duration-300 ease-out transform hover:-translate-y-2 rounded-xl overflow-hidden border border-transparent hover:border-accent/50 animate-fadeIn"
+              style={{ animationDelay: `${0.2 * index}s` }}
+            >
+              <CardHeader className="p-6 items-center text-center">
+                {category.icon && <category.icon className="h-16 w-16 text-accent mb-6" />}
                 <CardTitle className="font-headline text-2xl text-foreground">{category.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-foreground/80 mb-6">
+              <CardContent className="p-6 pt-0 flex flex-col flex-grow">
+                <CardDescription className="text-foreground/80 mb-6 text-sm text-center flex-grow">
                   {category.services.slice(0, 2).map(s => s.name).join(', ')} and more...
                 </CardDescription>
-                <Button asChild variant="link" className="text-accent p-0">
-                  <Link href={`/services#${category.id}`} scroll={true}>Learn More &rarr;</Link>
+                <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200">
+                  <Link href={`/services#${category.id}`} scroll={true}>Explore Treatments</Link>
                 </Button>
               </CardContent>
             </Card>
