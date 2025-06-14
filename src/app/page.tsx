@@ -83,6 +83,27 @@ export default function HomePage() {
     },
   ];
 
+  const whyChooseUsData = [
+    {
+      icon: UsersRound,
+      title: "Expert & Personalized Care",
+      description: "Our highly skilled professionals provide tailored treatments, focusing on your unique goals to ensure the best possible outcomes.",
+      moreInfo: "This includes a thorough consultation process, ongoing support, and a commitment to your satisfaction and well-being at every step."
+    },
+    {
+      icon: Cpu,
+      title: "State-of-the-Art Technology",
+      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe and effective results.",
+      moreInfo: "Our investment in technology means you benefit from procedures that are not only advanced but also prioritize your comfort and safety."
+    },
+    {
+      icon: Leaf,
+      title: "Commitment to Natural Results",
+      description: "Our philosophy centers on enhancing your natural beauty, aiming for subtle yet significant improvements that look authentic.",
+      moreInfo: "We work with you to create a personalized plan that respects your individuality, ensuring results that feel like the best version of yourself."
+    },
+  ];
+
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -180,7 +201,7 @@ export default function HomePage() {
       </section>
 
       {/* Patient Transformations Section - Carousel */}
-      <section className="container mx-auto px-4 pb-16">
+      <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness the Transformations
         </h2>
@@ -246,49 +267,34 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="container mx-auto px-4 pb-16">
+      <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Why Choose Zenviora Aesthetics?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-            <CardHeader className="items-center text-center">
-              <UsersRound className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="font-headline text-2xl text-foreground">Expert & Personalized Care</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-foreground/80">
-                Our highly skilled professionals provide tailored treatments, focusing on your unique goals to ensure the best possible outcomes.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-            <CardHeader className="items-center text-center">
-              <Cpu className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="font-headline text-2xl text-foreground">State-of-the-Art Technology</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-foreground/80">
-                We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe and effective results.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-            <CardHeader className="items-center text-center">
-              <Leaf className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="font-headline text-2xl text-foreground">Commitment to Natural Results</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-foreground/80">
-                Our philosophy centers on enhancing your natural beauty, aiming for subtle yet significant improvements that look authentic.
-              </p>
-            </CardContent>
-          </Card>
+          {whyChooseUsData.map((item, index) => (
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card group animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
+              <CardHeader className="items-center text-center">
+                <item.icon className="h-12 w-12 text-accent mb-4" />
+                <CardTitle className="font-headline text-2xl text-foreground">{item.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-foreground/80">
+                  {item.description}
+                </p>
+                <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out mt-4">
+                  <p className="text-foreground/70 text-sm">
+                    {item.moreInfo}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
       {/* Client Testimonials Section */}
-      <section className="container mx-auto px-4 pb-16">
+      <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Hear From Our Clients
         </h2>
