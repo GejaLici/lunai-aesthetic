@@ -129,48 +129,6 @@ export default function HomePage() {
         </Card>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Why Choose Zenviora Aesthetics?
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-            <CardHeader className="items-center text-center">
-              <UsersRound className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="font-headline text-2xl text-foreground">Expert & Personalized Care</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-foreground/80">
-                Our highly skilled professionals provide tailored treatments, focusing on your unique goals to ensure the best possible outcomes.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-            <CardHeader className="items-center text-center">
-              <Cpu className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="font-headline text-2xl text-foreground">State-of-the-Art Technology</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-foreground/80">
-                We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe and effective results.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-            <CardHeader className="items-center text-center">
-              <Leaf className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="font-headline text-2xl text-foreground">Commitment to Natural Results</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-foreground/80">
-                Our philosophy centers on enhancing your natural beauty, aiming for subtle yet significant improvements that look authentic.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Featured Services Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
@@ -243,6 +201,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+          Why Choose Zenviora Aesthetics?
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+            <CardHeader className="items-center text-center">
+              <UsersRound className="h-12 w-12 text-accent mb-4" />
+              <CardTitle className="font-headline text-2xl text-foreground">Expert & Personalized Care</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-foreground/80">
+                Our highly skilled professionals provide tailored treatments, focusing on your unique goals to ensure the best possible outcomes.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+            <CardHeader className="items-center text-center">
+              <Cpu className="h-12 w-12 text-accent mb-4" />
+              <CardTitle className="font-headline text-2xl text-foreground">State-of-the-Art Technology</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-foreground/80">
+                We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe and effective results.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+            <CardHeader className="items-center text-center">
+              <Leaf className="h-12 w-12 text-accent mb-4" />
+              <CardTitle className="font-headline text-2xl text-foreground">Commitment to Natural Results</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-foreground/80">
+                Our philosophy centers on enhancing your natural beauty, aiming for subtle yet significant improvements that look authentic.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Client Testimonials Section */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
@@ -287,4 +287,3 @@ export default function HomePage() {
     </div>
   );
 }
-
