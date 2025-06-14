@@ -84,7 +84,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="space-y-24">
+    <div className="space-y-16">
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex flex-col justify-center items-center text-center py-16 bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-lg shadow-xl overflow-hidden">
         {isClient && (
