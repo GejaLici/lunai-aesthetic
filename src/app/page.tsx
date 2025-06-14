@@ -13,7 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { serviceData } from "@/lib/services";
+import { serviceData, allServices } from "@/lib/services"; // Import allServices
 import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
@@ -21,7 +21,7 @@ import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
   const [isClient, setIsClient] = useState(false);
-  const autoplayPluginRef = React.useRef<any>(null);
+  const autoplayPluginRef = React.useRef<ReturnType<typeof Autoplay> | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -30,45 +30,16 @@ export default function HomePage() {
     }
   }, []);
 
-
-  const transformations = [
-    {
-      id: "t1",
-      treatment: "Facial Rejuvenation",
-      description: "Achieved a youthful glow and reduced fine lines with our signature facial treatment.",
-      beforeImageUrl: "https://placehold.co/300x300.png",
-      afterImageUrl: "https://placehold.co/300x300.png",
-      beforeHint: "woman tired skin",
-      afterHint: "woman glowing skin",
-    },
-    {
-      id: "t2",
-      treatment: "Body Contouring",
-      description: "Significant improvement in body shape and confidence after our advanced contouring procedure.",
-      beforeImageUrl: "https://placehold.co/300x300.png",
-      afterImageUrl: "https://placehold.co/300x300.png",
-      beforeHint: "body shape before",
-      afterHint: "body shape after",
-    },
-    {
-      id: "t3",
-      treatment: "Smile Makeover",
-      description: "A complete smile transformation, enhancing both aesthetics and function.",
-      beforeImageUrl: "https://placehold.co/300x300.png",
-      afterImageUrl: "https://placehold.co/300x300.png",
-      beforeHint: "teeth before smile",
-      afterHint: "teeth after smile",
-    },
-    {
-      id: "t4",
-      treatment: "Advanced Skin Tightening",
-      description: "Non-surgical skin tightening for a firmer, more youthful appearance.",
-      beforeImageUrl: "https://placehold.co/300x300.png",
-      afterImageUrl: "https://placehold.co/300x300.png",
-      beforeHint: "skin loose",
-      afterHint: "skin firm",
-    }
-  ];
+  // Use data from allServices for the carousel
+  const transformations = allServices.slice(0, 4).map(service => ({
+    id: service.id,
+    treatment: service.name,
+    description: `See the remarkable before and after results for ${service.name.toLowerCase()}.`,
+    beforeImageUrl: service.imageBefore,
+    afterImageUrl: service.imageAfter,
+    beforeHint: `${service.dataAiHint} before`,
+    afterHint: `${service.dataAiHint} after`,
+  }));
   
   const placeholderTestimonials = [
     {
@@ -200,7 +171,7 @@ export default function HomePage() {
                   {category.services.slice(0, 2).map(s => s.name).join(', ')} and more...
                 </CardDescription>
                 <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200" scroll={true}>
-                  <Link href={`/services#${category.id}`}>Explore Treatments</Link>
+                  <Link href={`/services#${category.id}`}>Explore Treatments <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardContent>
             </Card>
@@ -251,7 +222,7 @@ export default function HomePage() {
                       </CardContent>
                       <CardFooter>
                          <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                            <Link href="/gallery">View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                            <Link href={`/gallery#${transform.id}`}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                           </Button>
                       </CardFooter>
                     </Card>
@@ -345,4 +316,3 @@ export default function HomePage() {
     </div>
   );
 }
-
