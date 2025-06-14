@@ -1,7 +1,7 @@
 
 "use client"
 
-import *อนุมัติ React from "react"
+import * as React from "react" // Fixed: Corrected React import
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"

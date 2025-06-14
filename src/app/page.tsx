@@ -1,7 +1,7 @@
 
 "use client";
 
-import * as React from 'react'; // Import React for useRef
+import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -21,10 +21,17 @@ import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
   const [isClient, setIsClient] = useState(false);
+  const autoplayPluginRef = React.useRef<any>(null); // For storing the Autoplay plugin instance
 
   useEffect(() => {
     setIsClient(true);
-  }, []);
+    // Initialize the Autoplay plugin only on the client side
+    // and only if it hasn't been initialized yet.
+    if (typeof window !== 'undefined' && !autoplayPluginRef.current) {
+        autoplayPluginRef.current = Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true });
+    }
+  }, []); // Empty dependency array ensures this runs once on mount on client.
+
 
   const transformations = [
     {
@@ -57,10 +64,6 @@ export default function HomePage() {
     }
   ];
   
-  const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
-  );
-
   const placeholderTestimonials = [
     {
       id: "1",
@@ -183,54 +186,60 @@ export default function HomePage() {
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness the Transformations
         </h2>
-        <Carousel
-          plugins={[autoplayPlugin.current]}
-          className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
-          onMouseEnter={autoplayPlugin.current.stop}
-          onMouseLeave={autoplayPlugin.current.play}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-        >
-          <CarouselContent className="-ml-1">
-            {transformations.map((transform, index) => (
-              <CarouselItem key={transform.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
-                    <CardHeader>
-                      <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        <div>
-                          <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
-                          <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                            <Image src="https://placehold.co/300x300.png" alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
+        {isClient ? (
+          <Carousel
+            plugins={autoplayPluginRef.current ? [autoplayPluginRef.current] : []}
+            className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
+            onMouseEnter={() => autoplayPluginRef.current?.stop()}
+            onMouseLeave={() => autoplayPluginRef.current?.play()}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-1">
+              {transformations.map((transform, index) => (
+                <CarouselItem key={transform.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                    <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
+                      <CardHeader>
+                        <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <div className="grid grid-cols-2 gap-4 mb-4">
+                          <div>
+                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
+                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                              <Image src="https://placehold.co/300x300.png" alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
+                            </div>
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
+                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                              <Image src="https://placehold.co/300x300.png" alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
+                            </div>
                           </div>
                         </div>
-                        <div>
-                          <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
-                          <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                            <Image src="https://placehold.co/300x300.png" alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-sm text-foreground/80">{transform.description}</p>
-                    </CardContent>
-                    <CardFooter>
-                       <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                          <Link href="/gallery">View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
-                        </Button>
-                    </CardFooter>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="ml-[-10px] sm:ml-[-20px] md:ml-[-30px]" />
-          <CarouselNext className="mr-[-10px] sm:mr-[-20px] md:mr-[-30px]" />
-        </Carousel>
+                        <p className="text-sm text-foreground/80">{transform.description}</p>
+                      </CardContent>
+                      <CardFooter>
+                         <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
+                            <Link href="/gallery">View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                          </Button>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="ml-[-10px] sm:ml-[-20px] md:ml-[-30px]" />
+            <CarouselNext className="mr-[-10px] sm:mr-[-20px] md:mr-[-30px]" />
+          </Carousel>
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-muted-foreground">Loading transformations gallery...</p>
+          </div>
+        )}
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/gallery">Explore Full Gallery</Link>
