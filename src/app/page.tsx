@@ -21,16 +21,14 @@ import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
   const [isClient, setIsClient] = useState(false);
-  const autoplayPluginRef = React.useRef<any>(null); // For storing the Autoplay plugin instance
+  const autoplayPluginRef = React.useRef<any>(null);
 
   useEffect(() => {
     setIsClient(true);
-    // Initialize the Autoplay plugin only on the client side
-    // and only if it hasn't been initialized yet.
     if (typeof window !== 'undefined' && !autoplayPluginRef.current) {
         autoplayPluginRef.current = Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true });
     }
-  }, []); // Empty dependency array ensures this runs once on mount on client.
+  }, []);
 
 
   const transformations = [
@@ -123,7 +121,7 @@ export default function HomePage() {
       </section>
 
       {/* About Us Snippet */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-4 pb-12">
         <Card className="shadow-lg overflow-hidden bg-card">
           <div className="grid md:grid-cols-2 items-center">
             <div className="p-6 md:p-8">
@@ -153,7 +151,7 @@ export default function HomePage() {
       </section>
       
       {/* Featured Services Section */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Our Premier Services
         </h2>
@@ -182,7 +180,7 @@ export default function HomePage() {
       </section>
 
       {/* Patient Transformations Section - Carousel */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 pb-16">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness the Transformations
         </h2>
@@ -248,7 +246,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 pb-16">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Why Choose Zenviora Aesthetics?
         </h2>
@@ -290,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* Client Testimonials Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 pb-16">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Hear From Our Clients
         </h2>
