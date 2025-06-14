@@ -25,7 +25,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setIsClient(true);
-    if (typeof window !== 'undefined' && !autoplayPluginRef.current) {
+    if (typeof window !== 'undefined' && !autoplayPluginRef.current && typeof Autoplay === 'function') {
         autoplayPluginRef.current = Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true });
     }
   }, []);
@@ -36,6 +36,8 @@ export default function HomePage() {
       id: "t1",
       treatment: "Facial Rejuvenation",
       description: "Achieved a youthful glow and reduced fine lines with our signature facial treatment.",
+      beforeImageUrl: "https://placehold.co/300x300.png",
+      afterImageUrl: "https://placehold.co/300x300.png",
       beforeHint: "woman tired skin",
       afterHint: "woman glowing skin",
     },
@@ -43,6 +45,8 @@ export default function HomePage() {
       id: "t2",
       treatment: "Body Contouring",
       description: "Significant improvement in body shape and confidence after our advanced contouring procedure.",
+      beforeImageUrl: "https://placehold.co/300x300.png",
+      afterImageUrl: "https://placehold.co/300x300.png",
       beforeHint: "body shape before",
       afterHint: "body shape after",
     },
@@ -50,6 +54,8 @@ export default function HomePage() {
       id: "t3",
       treatment: "Smile Makeover",
       description: "A complete smile transformation, enhancing both aesthetics and function.",
+      beforeImageUrl: "https://placehold.co/300x300.png",
+      afterImageUrl: "https://placehold.co/300x300.png",
       beforeHint: "teeth before smile",
       afterHint: "teeth after smile",
     },
@@ -57,6 +63,8 @@ export default function HomePage() {
       id: "t4",
       treatment: "Advanced Skin Tightening",
       description: "Non-surgical skin tightening for a firmer, more youthful appearance.",
+      beforeImageUrl: "https://placehold.co/300x300.png",
+      afterImageUrl: "https://placehold.co/300x300.png",
       beforeHint: "skin loose",
       afterHint: "skin firm",
     }
@@ -160,7 +168,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full">
               <Image
-                src="https://placehold.co/600x450.png"
+                src="/images/prp-hair2.png"
                 alt="Welcoming clinic interior"
                 fill
                 className="object-cover"
@@ -229,13 +237,13 @@ export default function HomePage() {
                           <div>
                             <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
                             <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src="https://placehold.co/300x300.png" alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
+                              <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
                             </div>
                           </div>
                           <div>
                             <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
                             <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src="https://placehold.co/300x300.png" alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
+                              <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
                             </div>
                           </div>
                         </div>
@@ -337,3 +345,4 @@ export default function HomePage() {
     </div>
   );
 }
+
