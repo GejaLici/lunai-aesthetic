@@ -12,8 +12,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { serviceData, allServices } from "@/lib/services"; // Import allServices
+// Removed Autoplay import
+import { serviceData, allServices } from "@/lib/services"; 
 import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
@@ -21,17 +21,15 @@ import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
   const [isClient, setIsClient] = useState(false);
-  const autoplayPluginRef = React.useRef<ReturnType<typeof Autoplay> | null>(null);
+  // Removed autoplayPluginRef
 
   useEffect(() => {
     setIsClient(true);
-    if (typeof window !== 'undefined' && !autoplayPluginRef.current && typeof Autoplay === 'function') {
-        autoplayPluginRef.current = Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true });
-    }
+    // Removed autoplay plugin initialization logic
   }, []);
 
-  // Use data from allServices for the carousel
-  const transformations = allServices.slice(0, 4).map(service => ({
+  // Use data from allServices for the carousel, increased to 6 items
+  const transformations = allServices.slice(0, 6).map(service => ({
     id: service.id,
     treatment: service.name,
     description: `See the remarkable before and after results for ${service.name.toLowerCase()}.`,
@@ -186,10 +184,9 @@ export default function HomePage() {
         </h2>
         {isClient ? (
           <Carousel
-            plugins={autoplayPluginRef.current ? [autoplayPluginRef.current] : []}
+            // Removed plugins prop
             className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
-            onMouseEnter={() => autoplayPluginRef.current?.stop()}
-            onMouseLeave={() => autoplayPluginRef.current?.play()}
+            // Removed onMouseEnter and onMouseLeave
             opts={{
               align: "start",
               loop: true,
