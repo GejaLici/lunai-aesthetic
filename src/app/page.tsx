@@ -1,9 +1,18 @@
 
 "use client";
 
+import * as React from 'react'; // Import React for useRef
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { serviceData } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,27 +25,6 @@ export default function HomePage() {
   useEffect(() => {
     setIsClient(true);
   }, []);
-
-  const placeholderTestimonials = [
-    {
-      id: "1",
-      quote: "My experience at Zenviora Aesthetics was phenomenal. The results exceeded my expectations, and the staff were incredibly professional and caring.",
-      name: "Jessica M.",
-      stars: 5,
-    },
-    {
-      id: "2",
-      quote: "I was nervous about my procedure, but the team at Zenviora made me feel completely at ease. I'm thrilled with my new look!",
-      name: "David K.",
-      stars: 5,
-    },
-    {
-      id: "3",
-      quote: "From consultation to post-treatment, every step was handled with expertise. I highly recommend Zenviora Aesthetics for anyone considering aesthetic treatments.",
-      name: "Sarah L.",
-      stars: 5,
-    },
-  ];
 
   const transformations = [
     {
@@ -59,7 +47,39 @@ export default function HomePage() {
       description: "A complete smile transformation, enhancing both aesthetics and function.",
       beforeHint: "teeth before smile",
       afterHint: "teeth after smile",
+    },
+    {
+      id: "t4",
+      treatment: "Advanced Skin Tightening",
+      description: "Non-surgical skin tightening for a firmer, more youthful appearance.",
+      beforeHint: "skin loose",
+      afterHint: "skin firm",
     }
+  ];
+  
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
+
+  const placeholderTestimonials = [
+    {
+      id: "1",
+      quote: "My experience at Zenviora Aesthetics was phenomenal. The results exceeded my expectations, and the staff were incredibly professional and caring.",
+      name: "Jessica M.",
+      stars: 5,
+    },
+    {
+      id: "2",
+      quote: "I was nervous about my procedure, but the team at Zenviora made me feel completely at ease. I'm thrilled with my new look!",
+      name: "David K.",
+      stars: 5,
+    },
+    {
+      id: "3",
+      quote: "From consultation to post-treatment, every step was handled with expertise. I highly recommend Zenviora Aesthetics for anyone considering aesthetic treatments.",
+      name: "Sarah L.",
+      stars: 5,
+    },
   ];
 
   return (
@@ -128,7 +148,7 @@ export default function HomePage() {
           </div>
         </Card>
       </section>
-
+      
       {/* Featured Services Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
@@ -158,42 +178,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Patient Transformations Section */}
+      {/* Patient Transformations Section - Carousel */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness the Transformations
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {transformations.map((transform, index) => (
-            <Card key={transform.id} className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
-              <CardHeader>
-                <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
-                    <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                      <Image src="https://placehold.co/300x300.png" alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
-                    <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                      <Image src="https://placehold.co/300x300.png" alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
-                    </div>
-                  </div>
+        <Carousel
+          plugins={[autoplayPlugin.current]}
+          className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
+          onMouseEnter={autoplayPlugin.current.stop}
+          onMouseLeave={autoplayPlugin.current.play}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-1">
+            {transformations.map((transform, index) => (
+              <CarouselItem key={transform.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                <div className="p-1 h-full">
+                  <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
+                    <CardHeader>
+                      <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
+                          <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                            <Image src="https://placehold.co/300x300.png" alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
+                          </div>
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
+                          <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                            <Image src="https://placehold.co/300x300.png" alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-sm text-foreground/80">{transform.description}</p>
+                    </CardContent>
+                    <CardFooter>
+                       <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
+                          <Link href="/gallery">View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                        </Button>
+                    </CardFooter>
+                  </Card>
                 </div>
-                <p className="text-sm text-foreground/80">{transform.description}</p>
-              </CardContent>
-              <CardFooter>
-                 <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                    <Link href="/gallery">View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
-                  </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="ml-[-10px] sm:ml-[-20px] md:ml-[-30px]" />
+          <CarouselNext className="mr-[-10px] sm:mr-[-20px] md:mr-[-30px]" />
+        </Carousel>
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/gallery">Explore Full Gallery</Link>
