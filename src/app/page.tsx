@@ -3,32 +3,32 @@
 
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-// Removed Autoplay import
 import { serviceData, allServices } from "@/lib/services"; 
 import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
 
+const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), { 
+  ssr: false, 
+  loading: () => <div className="text-center py-8"><p className="text-muted-foreground">Loading transformations gallery...</p></div> 
+});
+const DynamicCarouselContent = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselContent), { ssr: false });
+const DynamicCarouselItem = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselItem), { ssr: false });
+const DynamicCarouselPrevious = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselPrevious), { ssr: false });
+const DynamicCarouselNext = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselNext), { ssr: false });
+
+
 export default function HomePage() {
   const featuredServiceCategories = serviceData.slice(0, 3);
   const [isClient, setIsClient] = useState(false);
-  // Removed autoplayPluginRef
 
   useEffect(() => {
     setIsClient(true);
-    // Removed autoplay plugin initialization logic
   }, []);
 
-  // Use data from allServices for the carousel, increased to 6 items
   const transformations = allServices.slice(0, 6).map(service => ({
     id: service.id,
     treatment: service.name,
@@ -137,8 +137,8 @@ export default function HomePage() {
             </div>
             <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full">
               <Image
-                src="/images/prp-hair2.png"
-                alt="Welcoming clinic interior"
+                src="/images/about-us.jpeg"
+                alt="Nice looking women after treatments"
                 fill
                 className="object-cover"
                 data-ai-hint="clinic interior"
@@ -182,59 +182,51 @@ export default function HomePage() {
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness the Transformations
         </h2>
-        {isClient ? (
-          <Carousel
-            // Removed plugins prop
-            className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
-            // Removed onMouseEnter and onMouseLeave
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <CarouselContent className="-ml-1">
-              {transformations.map((transform, index) => (
-                <CarouselItem key={transform.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
-                      <CardHeader>
-                        <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow">
-                        <div className="grid grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
-                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
-                            </div>
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
-                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
-                            </div>
+        <DynamicCarousel
+          className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <DynamicCarouselContent className="-ml-1">
+            {transformations.map((transform, index) => (
+              <DynamicCarouselItem key={transform.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                <div className="p-1 h-full">
+                  <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
+                    <CardHeader>
+                      <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
+                          <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                            <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
                           </div>
                         </div>
-                        <p className="text-sm text-foreground/80">{transform.description}</p>
-                      </CardContent>
-                      <CardFooter>
-                         <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                            <Link href={`/gallery#${transform.id}`}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
-                          </Button>
-                      </CardFooter>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="ml-[-10px] sm:ml-[-20px] md:ml-[-30px]" />
-            <CarouselNext className="mr-[-10px] sm:mr-[-20px] md:mr-[-30px]" />
-          </Carousel>
-        ) : (
-          <div className="text-center py-8">
-            <p className="text-muted-foreground">Loading transformations gallery...</p>
-          </div>
-        )}
+                        <div>
+                          <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
+                          <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                            <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-sm text-foreground/80">{transform.description}</p>
+                    </CardContent>
+                    <CardFooter>
+                       <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
+                          <Link href={`/gallery#${transform.id}`}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                        </Button>
+                    </CardFooter>
+                  </Card>
+                </div>
+              </DynamicCarouselItem>
+            ))}
+          </DynamicCarouselContent>
+          <DynamicCarouselPrevious className="ml-[-10px] sm:ml-[-20px] md:ml-[-30px]" />
+          <DynamicCarouselNext className="mr-[-10px] sm:mr-[-20px] md:mr-[-30px]" />
+        </DynamicCarousel>
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/gallery">Explore Full Gallery</Link>
