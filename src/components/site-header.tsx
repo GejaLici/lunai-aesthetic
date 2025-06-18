@@ -26,10 +26,10 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center gap-2" aria-label="Zenviora Aesthetics Home">
           <LogoIcon className="h-8 w-8 text-accent" />
           <span
-            className="font-headline text-lg md:text-2xl font-bold text-foreground"
-            suppressHydrationWarning // Add this to suppress the specific hydration warning
+            className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
+            suppressHydrationWarning
           >
-            Zenviora Aesthetics
+            Zenviora<br className="block md:hidden" />Aesthetics
           </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-1">
@@ -38,10 +38,10 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className={cn(
-                "px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ease-in-out", // Base styles for all links
+                "px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ease-in-out", 
                 pathname === link.href
-                  ? "bg-primary/10 text-primary font-semibold" // Active state
-                  : "text-foreground/70 hover:bg-primary/5 hover:text-primary" // Inactive state with hover
+                  ? "bg-primary/10 text-primary font-semibold" 
+                  : "text-foreground/70 hover:bg-primary/5 hover:text-primary" 
               )}
             >
               {link.label}
@@ -60,7 +60,7 @@ export function SiteHeader() {
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
                   <LogoIcon className="h-8 w-8 text-accent" />
-                  <span className="font-headline font-semibold text-lg">Zenviora Aesthetics</span>
+                  <span className="font-headline font-semibold text-lg">Zenviora<br />Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link
