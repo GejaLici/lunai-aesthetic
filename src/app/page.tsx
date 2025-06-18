@@ -97,11 +97,11 @@ export default function HomePage() {
               <source src="/videos/hero-background.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="absolute inset-0 bg-slate-600/50 z-10"></div>
+            <div className="absolute inset-0 bg-black/60 z-10"></div>
           </>
         )}
         <div className="container mx-auto px-4 relative z-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
             Zenviora Aesthetics
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
@@ -157,7 +157,7 @@ export default function HomePage() {
           {featuredServiceCategories.map((category, index) => (
             <Card
               key={category.id}
-              className="flex flex-col bg-card shadow-lg hover:shadow-primary/30 transition-all duration-300 ease-out transform hover:-translate-y-2 rounded-xl overflow-hidden border border-transparent hover:border-accent/50 animate-fadeIn"
+              className="flex flex-col bg-card shadow-lg hover:shadow-primary/30 transition-all duration-300 ease-out transform hover:-translate-y-2 rounded-xl overflow-hidden border border-transparent hover:border-accent animate-fadeIn"
               style={{ animationDelay: `${0.2 * index}s` }}
             >
               <CardHeader className="p-6 items-center text-center">
@@ -307,3 +307,4 @@ export default function HomePage() {
     </div>
   );
 }
+
