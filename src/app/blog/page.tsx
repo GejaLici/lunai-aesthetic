@@ -5,8 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Newspaper } from 'lucide-react';
 
-// Placeholder blog post data
-const placeholderPosts = [
+// Placeholder blog post data - Exported for use on homepage
+export const placeholderPosts = [
   {
     id: "1",
     title: "The Future of Non-Invasive Treatments",
