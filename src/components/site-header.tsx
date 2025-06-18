@@ -24,7 +24,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-md">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Zenviora Aesthetics Home">
-          <LogoIcon className="h-8 w-8 text-accent" />
+          <LogoIcon className="h-10 w-10 md:h-8 md:w-8 text-accent" />
           <span
             className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
             suppressHydrationWarning
@@ -59,7 +59,7 @@ export function SiteHeader() {
             <SheetContent side="right">
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
-                  <LogoIcon className="h-8 w-8 text-accent" />
+                  <LogoIcon className="h-10 w-10 text-accent" />
                   <span className="font-headline font-semibold text-lg">Zenviora<br />Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
