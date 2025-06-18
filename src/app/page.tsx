@@ -92,6 +92,7 @@ export default function HomePage() {
         {isClient && (
           <>
             <video
+              key="hero-video"
               autoPlay
               loop
               muted
@@ -280,7 +281,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/images/clinic.png"
               alt="Luxurious and welcoming clinic reception area"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -289,7 +290,7 @@ export default function HomePage() {
           </div>
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/images/clinic2.png"
               alt="Modern, clean, and advanced treatment room"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
