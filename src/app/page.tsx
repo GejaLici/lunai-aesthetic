@@ -126,7 +126,7 @@ export default function HomePage() {
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-3xl font-headline text-primary">Welcome to Zenviora Aesthetics</CardTitle>
               </CardHeader>
-              <CardContent className="p-0 text-lg text-foreground/90 space-y-4">
+              <CardContent className="p-0 text-lg text-card-foreground/90 space-y-4">
                 <p>
                   At Zenviora Aesthetics, we believe that everyone deserves to feel confident and beautiful in their own skin. Our state-of-the-art clinic offers a comprehensive range of aesthetic treatments, delivered by experienced professionals dedicated to achieving exceptional, natural-looking results.
                 </p>
@@ -140,7 +140,7 @@ export default function HomePage() {
                 src="/images/about-us.jpeg"
                 alt="Nice looking women after treatments"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-300 hover:scale-105"
                 data-ai-hint="clinic interior"
               />
             </div>
@@ -162,10 +162,10 @@ export default function HomePage() {
             >
               <CardHeader className="p-6 items-center text-center">
                 {category.icon && <category.icon className="h-16 w-16 text-accent mb-6" />}
-                <CardTitle className="font-headline text-2xl text-foreground">{category.title}</CardTitle>
+                <CardTitle className="font-headline text-2xl text-card-foreground">{category.title}</CardTitle>
               </CardHeader>
               <CardContent className="p-6 pt-0 flex flex-col flex-grow">
-                <CardDescription className="text-foreground/80 mb-6 text-sm text-center flex-grow">
+                <CardDescription className="text-card-foreground/80 mb-6 text-sm text-center flex-grow">
                   {category.services.slice(0, 2).map(s => s.name).join(', ')} and more...
                 </CardDescription>
                 <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200" scroll={true}>
@@ -196,7 +196,7 @@ export default function HomePage() {
                     <div className="p-1 h-full">
                     <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
                         <CardHeader>
-                        <CardTitle className="font-headline text-xl text-foreground">{transform.treatment}</CardTitle>
+                        <CardTitle className="font-headline text-xl text-card-foreground">{transform.treatment}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow">
                         <div className="grid grid-cols-2 gap-4 mb-4">
@@ -213,7 +213,7 @@ export default function HomePage() {
                             </div>
                             </div>
                         </div>
-                        <p className="text-sm text-foreground/80">{transform.description}</p>
+                        <p className="text-sm text-card-foreground/80">{transform.description}</p>
                         </CardContent>
                         <CardFooter>
                            <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
@@ -246,14 +246,14 @@ export default function HomePage() {
             <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card group animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
               <CardHeader className="items-center text-center">
                 <item.icon className="h-12 w-12 text-accent mb-4" />
-                <CardTitle className="font-headline text-2xl text-foreground">{item.title}</CardTitle>
+                <CardTitle className="font-headline text-2xl text-card-foreground">{item.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-foreground/80">
+                <p className="text-card-foreground/80">
                   {item.description}
                 </p>
                 <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out mt-4">
-                  <p className="text-foreground/70 text-sm">
+                  <p className="text-card-foreground/70 text-sm">
                     {item.moreInfo}
                   </p>
                 </div>
@@ -282,10 +282,10 @@ export default function HomePage() {
                 </div>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-foreground/90 italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="text-card-foreground/90 italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
               </CardContent>
               <CardFooter>
-                <p className="font-semibold text-foreground/80">- {testimonial.name}</p>
+                <p className="font-semibold text-card-foreground/80">- {testimonial.name}</p>
               </CardFooter>
             </Card>
           ))}
@@ -293,7 +293,7 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action for Consultation */}
-      <section className="py-16 bg-gradient-to-r from-primary via-primary/90 to-blue-700 text-primary-foreground rounded-lg shadow-xl">
+      <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-headline font-bold mb-6">Ready for a Transformation?</h2>
           <p className="text-xl mb-8">
