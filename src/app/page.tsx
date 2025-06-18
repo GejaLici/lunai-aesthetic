@@ -184,15 +184,15 @@ export default function HomePage() {
         </h2>
         {isClient && (
             <DynamicCarousel
-            className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
+            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
             opts={{
                 align: "start",
                 loop: true,
             }}
             >
-            <DynamicCarouselContent className="-ml-1">
+            <DynamicCarouselContent className="sm:-ml-1">
                 {transformations.map((transform, index) => (
-                <DynamicCarouselItem key={transform.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                <DynamicCarouselItem key={transform.id} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
                     <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
                         <CardHeader>
@@ -225,8 +225,8 @@ export default function HomePage() {
                 </DynamicCarouselItem>
                 ))}
             </DynamicCarouselContent>
-            <DynamicCarouselPrevious className="ml-[-10px] sm:ml-[-20px] md:ml-[-30px]" />
-            <DynamicCarouselNext className="mr-[-10px] sm:mr-[-20px] md:mr-[-30px]" />
+            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
+            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
             </DynamicCarousel>
         )}
         <div className="text-center mt-12">
@@ -307,3 +307,4 @@ export default function HomePage() {
     </div>
   );
 }
+
