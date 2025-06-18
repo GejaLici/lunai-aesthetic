@@ -107,7 +107,7 @@ export default function HomePage() {
           <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
             Reaching the Pinnacle of Beauty and Confidence
           </p>
-          <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
+          <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
               <Link href="/services">Explore Our Services</Link>
             </Button>
@@ -307,4 +307,3 @@ export default function HomePage() {
     </div>
   );
 }
-
