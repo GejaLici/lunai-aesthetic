@@ -6,14 +6,14 @@ import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { serviceData, allServices } from "@/lib/services"; 
+import { serviceData, allServices } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight } from "lucide-react";
 
-const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), { 
-  ssr: false, 
-  loading: () => <div className="text-center py-8"><p className="text-muted-foreground">Loading transformations gallery...</p></div> 
+const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
+  ssr: false,
+  loading: () => <div className="text-center py-8"><p className="text-muted-foreground">Loading transformations gallery...</p></div>
 });
 const DynamicCarouselContent = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselContent), { ssr: false });
 const DynamicCarouselItem = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselItem), { ssr: false });
@@ -38,7 +38,7 @@ export default function HomePage() {
     beforeHint: `${service.dataAiHint} before`,
     afterHint: `${service.dataAiHint} after`,
   }));
-  
+
   const placeholderTestimonials = [
     {
       id: "1",
@@ -147,7 +147,7 @@ export default function HomePage() {
           </div>
         </Card>
       </section>
-      
+
       {/* Featured Services Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
@@ -183,51 +183,51 @@ export default function HomePage() {
           Witness the Transformations
         </h2>
         {isClient && (
-            <DynamicCarousel
+          <DynamicCarousel
             className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
             opts={{
-                align: "start",
-                loop: true,
+              align: "start",
+              loop: true,
             }}
-            >
+          >
             <DynamicCarouselContent className="sm:-ml-1">
-                {transformations.map((transform, index) => (
+              {transformations.map((transform, index) => (
                 <DynamicCarouselItem key={transform.id} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 h-full">
+                  <div className="p-1 h-full">
                     <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
-                        <CardHeader>
+                      <CardHeader>
                         <CardTitle className="font-headline text-xl text-card-foreground">{transform.treatment}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
+                      </CardHeader>
+                      <CardContent className="flex-grow">
                         <div className="grid grid-cols-2 gap-4 mb-4">
-                            <div>
+                          <div>
                             <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
                             <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                                <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
+                              <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
                             </div>
-                            </div>
-                            <div>
+                          </div>
+                          <div>
                             <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
                             <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                                <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
+                              <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
                             </div>
-                            </div>
+                          </div>
                         </div>
                         <p className="text-sm text-card-foreground/80">{transform.description}</p>
-                        </CardContent>
-                        <CardFooter>
-                           <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                              <Link href={`/gallery#${transform.id}`}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
-                            </Button>
-                        </CardFooter>
+                      </CardContent>
+                      <CardFooter>
+                        <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
+                          <Link href={`/gallery#${transform.id}`}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                        </Button>
+                      </CardFooter>
                     </Card>
-                    </div>
+                  </div>
                 </DynamicCarouselItem>
-                ))}
+              ))}
             </DynamicCarouselContent>
             <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
             <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
-            </DynamicCarousel>
+          </DynamicCarousel>
         )}
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -260,6 +260,38 @@ export default function HomePage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Step Inside Zenviora Aesthetics Section */}
+      <section className="container mx-auto px-4 pb-12">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+          Step Inside Zenviora Aesthetics
+        </h2>
+        <div className="text-center mb-10 max-w-3xl mx-auto animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg text-foreground/80">
+            Experience a sanctuary of calm and sophistication, where advanced technology meets unparalleled care. Our clinic is meticulously designed with your comfort, privacy, and well-being as our utmost priorities, ensuring a serene and welcoming atmosphere for every visit.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
+            <Image
+              src="https://placehold.co/600x400.png"
+              alt="Luxurious and welcoming clinic reception area"
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              data-ai-hint="clinic reception"
+            />
+          </div>
+          <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
+            <Image
+              src="https://placehold.co/600x400.png"
+              alt="Modern, clean, and advanced treatment room"
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              data-ai-hint="treatment room"
+            />
+          </div>
         </div>
       </section>
 
@@ -307,4 +339,3 @@ export default function HomePage() {
     </div>
   );
 }
-
