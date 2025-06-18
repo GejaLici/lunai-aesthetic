@@ -75,11 +75,11 @@ export default function BlogPage() {
       </section>
 
       <section className="py-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
           {placeholderPosts.map((post) => (
-            <Card key={post.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+            <Card key={post.id} className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
               <CardHeader className="p-0">
-                <div className="relative w-full h-48 rounded-t-lg overflow-hidden">
+                <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
                   <Image
                     src={post.imageUrl}
                     alt={post.title}
