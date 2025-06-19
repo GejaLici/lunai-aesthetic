@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
-import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper, Sparkles as DentistryIcon } from "lucide-react"; // Renamed Sparkles to avoid conflict
+import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper, Sparkles as DentistryIcon } from "lucide-react"; 
 import { placeholderPosts as blogPostsData } from "@/app/blog/page.tsx";
 
 const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
@@ -69,20 +69,20 @@ export default function HomePage() {
   const whyChooseUsData = [
     {
       icon: UsersRound,
-      title: "Expert & Personalized Care",
+      title: "Expert & Personalized Aesthetic Care",
       description: "Our highly skilled professionals provide tailored aesthetic treatments, focusing on your unique goals to ensure exceptional, natural-looking outcomes and your utmost satisfaction.",
       moreInfo: "This includes a comprehensive consultation, advanced treatment planning, ongoing support, and a steadfast commitment to your well-being at every stage of your aesthetic journey."
     },
     {
       icon: Cpu,
-      title: "State-of-the-Art Technology",
-      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe, effective, and minimally invasive results.",
+      title: "Advanced State-of-the-Art Technology",
+      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe, effective, and minimally invasive results with precision.",
       moreInfo: "Our investment in leading technology ensures you benefit from procedures that are not only advanced but also prioritize your comfort, safety, and achieve superior results."
     },
     {
       icon: Leaf,
-      title: "Commitment to Natural Results",
-      description: "Our core philosophy centers on enhancing your inherent beauty, aiming for subtle yet significant improvements that look authentic and feel like you.",
+      title: "Commitment to Natural, Enhancing Results",
+      description: "Our core philosophy centers on enhancing your inherent beauty, aiming for subtle yet significant improvements that look authentic and feel like your best self.",
       moreInfo: "We collaborate with you to create a bespoke treatment plan that respects your individuality, ensuring results that reflect the best version of yourself, naturally."
     },
   ];
@@ -246,7 +246,7 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Second Patient Transformations Section - Carousel */}
+      {/* Second Patient Transformations Section - Carousel with new design */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Explore More Success Stories
@@ -261,34 +261,35 @@ export default function HomePage() {
           >
             <DynamicCarouselContent className="sm:-ml-1">
               {transformations.map((transform, index) => (
-                <DynamicCarouselItem key={`second-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3"> {/* Added unique key prefix */}
-                  <div className="p-1 h-full">
-                    <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
-                      <CardHeader>
-                        <CardTitle className="font-headline text-xl text-card-foreground">{transform.treatment}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow">
-                        <div className="grid grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
-                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
-                            </div>
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
-                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-sm text-card-foreground/80">{transform.description}</p>
-                      </CardContent>
-                      <CardFooter>
-                        <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                          <Link href={`/gallery#${transform.id}`}>View More Examples <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                <DynamicCarouselItem key={`second-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1"> {/* Removed h-full to allow card to dictate height */}
+                    <Card 
+                      className="relative shadow-lg rounded-xl overflow-hidden group animate-fadeIn h-[400px] md:h-[450px]" 
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <Image
+                        src={transform.afterImageUrl}
+                        alt={`Showcasing results for ${transform.treatment}`}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        data-ai-hint={transform.afterHint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div> {/* Gradient Overlay for readability */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <h3 className="font-headline text-xl font-semibold mb-2">{transform.treatment}</h3>
+                        {/* Optional: A very short description could go here if needed 
+                        <p className="text-sm mb-3 text-white/90">{transform.description.substring(0, 50)}...</p> 
+                        */}
+                        <Button
+                          asChild
+                          variant="link"
+                          className="text-accent p-0 hover:text-accent/80 font-semibold text-sm"
+                        >
+                          <Link href={`/gallery#${transform.id}`}>
+                            View Details <ArrowRight className="ml-1 h-4 w-4" />
+                          </Link>
                         </Button>
-                      </CardFooter>
+                      </div>
                     </Card>
                   </div>
                 </DynamicCarouselItem>
