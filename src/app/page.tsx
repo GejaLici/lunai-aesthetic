@@ -115,7 +115,7 @@ export default function HomePage() {
             Zenviora Aesthetics: Premier Solutions for Lasting Beauty & Confidence
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-            Experience transformative aesthetic and dental treatments with our expert team. Begin your journey to enhanced well-being today.
+            Experience transformative aesthetic and dental treatments with our expert team. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
@@ -239,14 +239,9 @@ export default function HomePage() {
             <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
           </DynamicCarousel>
         )}
-        <div className="text-center mt-12">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/gallery">Explore Our Full Gallery</Link>
-          </Button>
-        </div>
       </section>
       
-      {/* Second Patient Transformations Section - Carousel (New Distinct Design) */}
+      {/* Second Patient Transformations Section - Carousel (Image as Background Design) */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Explore More Success Stories
@@ -261,7 +256,7 @@ export default function HomePage() {
           >
             <DynamicCarouselContent className="sm:-ml-1">
               {transformations.map((transform, index) => ( 
-                <DynamicCarouselItem key={`second-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
+                <DynamicCarouselItem key={`second-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                      <Card 
                       className="relative flex flex-col h-72 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
@@ -296,12 +291,77 @@ export default function HomePage() {
             <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
           </DynamicCarousel>
         )}
+      </section>
+
+      {/* Third Patient Transformations Section - Carousel (Split Card Design) */}
+      <section className="container mx-auto px-4 pb-12">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+          Client Journeys Visualized
+        </h2>
+        {isClient && (
+          <DynamicCarousel
+            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto" // Adjusted max-width for potentially wider cards
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <DynamicCarouselContent className="sm:-ml-1">
+              {transformations.map((transform, index) => ( 
+                <DynamicCarouselItem key={`third-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 xl:basis-1/2"> {/* Adjusted basis for potentially wider cards */}
+                  <div className="p-1 h-full">
+                     <Card 
+                      className="flex flex-col md:flex-row h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.02] animate-fadeIn"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <div className="relative w-full md:w-2/5 h-56 md:h-auto min-h-[200px] md:min-h-full">
+                        <Image
+                          src={transform.afterImageUrl} 
+                          alt={`Transformation: ${transform.treatment}`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={transform.afterHint}
+                        />
+                      </div>
+                      <div className="w-full md:w-3/5 p-4 flex flex-col justify-between">
+                        <div>
+                          <CardHeader className="p-0 mb-2">
+                            <CardTitle className="font-headline text-lg text-primary">{transform.treatment}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="p-0">
+                            <p className="text-sm text-card-foreground/80">
+                              {transform.description.substring(0, 80)}{transform.description.length > 80 ? "..." : ""}
+                            </p>
+                          </CardContent>
+                        </div>
+                        <CardFooter className="p-0 mt-3">
+                          <Button
+                            asChild
+                            variant="link"
+                            className="text-accent p-0 hover:text-accent/80 font-semibold text-sm self-start"
+                          >
+                            <Link href={`/gallery#${transform.id}`}>
+                              View Full Story <ArrowRight className="ml-1 h-3 w-3" />
+                            </Link>
+                          </Button>
+                        </CardFooter>
+                      </div>
+                    </Card>
+                  </div>
+                </DynamicCarouselItem>
+              ))}
+            </DynamicCarouselContent>
+            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
+            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
+          </DynamicCarousel>
+        )}
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/gallery">Discover All Transformations</Link>
           </Button>
         </div>
       </section>
+
 
       {/* Why Choose Us Section */}
       <section className="container mx-auto px-4 pb-12">
@@ -448,3 +508,4 @@ export default function HomePage() {
     </div>
   );
 }
+
