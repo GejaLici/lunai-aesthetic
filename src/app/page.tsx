@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { serviceData, allServices } from "@/lib/services";
+import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
@@ -23,7 +23,12 @@ const DynamicCarouselNext = dynamic(() => import('@/components/ui/carousel').the
 
 
 export default function HomePage() {
-  const featuredServiceCategories = serviceData.slice(0, 3);
+  const faceCategory = serviceData.find(category => category.id === 'face');
+  const bodyCategory = serviceData.find(category => category.id === 'body');
+  const dentistryCategory = serviceData.find(category => category.id === 'dentistry');
+
+  const featuredServiceCategories = [faceCategory, bodyCategory, dentistryCategory].filter(Boolean) as ServiceCategory[];
+  
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
