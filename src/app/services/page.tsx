@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import type { LucideIcon } from 'lucide-react';
-import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby } from 'lucide-react'; // Import icons for dental subcategories
+import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, ArrowRight } from 'lucide-react'; // Import icons for dental subcategories
 
 // Helper map for dental subcategory icons
 const subCategoryIcons: Record<string, LucideIcon | undefined> = {
@@ -84,8 +84,8 @@ export default function ServicesPage() {
                                 <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
                                   {service.description}
                                 </CardDescription>
-                                <Button asChild variant="link" className="text-accent p-0 mt-auto self-start">
-                                  <Link href={`/gallery#${service.id}`}>View Gallery &rarr;</Link>
+                                <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
+                                  <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                                 </Button>
                               </CardContent>
                             </Card>
@@ -118,8 +118,8 @@ export default function ServicesPage() {
                                 <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
                                   {service.description}
                                 </CardDescription>
-                                <Button asChild variant="link" className="text-accent p-0 mt-auto self-start">
-                                  <Link href={`/gallery#${service.id}`}>View Gallery &rarr;</Link>
+                                <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
+                                  <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                                 </Button>
                               </CardContent>
                             </Card>
@@ -148,8 +148,8 @@ export default function ServicesPage() {
                                 <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
                                     {service.description}
                                 </CardDescription>
-                                <Button asChild variant="link" className="text-accent p-0 mt-auto self-start">
-                                    <Link href={`/gallery#${service.id}`}>View Gallery &rarr;</Link>
+                                <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
+                                    <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                                 </Button>
                                 </CardContent>
                             </Card>
@@ -198,8 +198,8 @@ export default function ServicesPage() {
                           <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
                             {service.description}
                           </CardDescription>
-                          <Button asChild variant="link" className="text-accent p-0 mt-auto self-start">
-                            <Link href={`/gallery#${service.id}`}>View Gallery &rarr;</Link>
+                          <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
+                            <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                           </Button>
                         </CardContent>
                       </Card>
@@ -232,8 +232,8 @@ export default function ServicesPage() {
                           <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
                             {service.description}
                           </CardDescription>
-                          <Button asChild variant="link" className="text-accent p-0 mt-auto self-start">
-                            <Link href={`/gallery#${service.id}`}>View Gallery &rarr;</Link>
+                          <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
+                            <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                           </Button>
                         </CardContent>
                       </Card>
@@ -266,8 +266,8 @@ export default function ServicesPage() {
                           <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
                               {service.description}
                           </CardDescription>
-                          <Button asChild variant="link" className="text-accent p-0 mt-auto self-start">
-                              <Link href={`/gallery#${service.id}`}>View Gallery &rarr;</Link>
+                          <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
+                              <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
                           </Button>
                           </CardContent>
                       </Card>
