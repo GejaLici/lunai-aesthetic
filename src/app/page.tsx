@@ -38,7 +38,7 @@ export default function HomePage() {
   const transformations = allServices.slice(0, 6).map(service => ({
     id: service.id,
     treatment: service.name,
-    description: service.description, // Keep full description for potential use, truncate in JSX
+    description: service.description, 
     beforeImageUrl: service.imageBefore,
     afterImageUrl: service.imageAfter,
     beforeHint: `${service.dataAiHint} before`,
@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Patient Transformations Section - Carousel (New Unified Design) */}
+      {/* Patient Transformations Section - Carousel (First Design) */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness Transformative Results
@@ -246,7 +246,7 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Second Patient Transformations Section - Carousel (New Unified Design) */}
+      {/* Second Patient Transformations Section - Carousel (New Distinct Design) */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Explore More Success Stories
@@ -260,39 +260,33 @@ export default function HomePage() {
             }}
           >
             <DynamicCarouselContent className="sm:-ml-1">
-              {transformations.map((transform, index) => ( // Using same data for example, can be different
+              {transformations.map((transform, index) => ( 
                 <DynamicCarouselItem key={`second-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                      <Card 
-                      className="flex flex-col h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.03] animate-fadeIn"
+                      className="relative flex flex-col h-72 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
                       style={{ animationDelay: `${0.1 * index}s` }}
                     >
-                      <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg">
-                        <Image
-                          src={transform.afterImageUrl} // Using after image for consistency
-                          alt={`Showcasing results for ${transform.treatment}`}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={transform.afterHint}
-                        />
-                      </div>
-                      <CardContent className="p-4 flex-grow flex flex-col">
-                        <h3 className="text-lg font-headline text-primary mb-2">{transform.treatment}</h3>
-                         <p className="text-sm text-card-foreground/80 mb-3 flex-grow">
-                          {transform.description.substring(0, 100)}{transform.description.length > 100 ? "..." : ""}
-                        </p>
-                      </CardContent>
-                      <CardFooter className="p-4 pt-0">
+                      <Image
+                        src={transform.afterImageUrl} 
+                        alt={`Showcasing results for ${transform.treatment}`}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        data-ai-hint={transform.afterHint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                      <div className="relative mt-auto p-4 z-10">
+                        <h3 className="text-lg font-headline text-white mb-1">{transform.treatment}</h3>
                         <Button
                           asChild
                           variant="link"
-                          className="text-accent p-0 hover:text-accent/80 ml-auto font-semibold"
+                          className="text-accent-foreground p-0 hover:text-accent-foreground/80 font-semibold text-sm"
                         >
                           <Link href={`/gallery#${transform.id}`}>
-                            View Result <ArrowRight className="ml-1 h-4 w-4" />
+                            View Result <ArrowRight className="ml-1 h-3 w-3" />
                           </Link>
                         </Button>
-                      </CardFooter>
+                      </div>
                     </Card>
                   </div>
                 </DynamicCarouselItem>
@@ -454,4 +448,3 @@ export default function HomePage() {
     </div>
   );
 }
-
