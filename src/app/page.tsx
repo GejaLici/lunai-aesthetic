@@ -186,8 +186,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      {/* Patient Transformations Section - Carousel (First Design) */}
+      
+      {/* Patient Transformations Section - Carousel (Image as Background Design - Chosen Design) */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness Transformative Results
@@ -201,62 +201,8 @@ export default function HomePage() {
             }}
           >
             <DynamicCarouselContent className="sm:-ml-1">
-              {transformations.map((transform, index) => (
-                <DynamicCarouselItem key={transform.id} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card 
-                      className="flex flex-col h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.03] animate-fadeIn"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg">
-                        <Image
-                          src={transform.afterImageUrl}
-                          alt={`Result of ${transform.treatment}`}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={transform.afterHint}
-                        />
-                      </div>
-                      <CardContent className="p-4 flex-grow flex flex-col">
-                        <h3 className="text-lg font-headline text-primary mb-2">{transform.treatment}</h3>
-                        <p className="text-sm text-card-foreground/80 mb-3 flex-grow">
-                          {transform.description.substring(0, 100)}{transform.description.length > 100 ? "..." : ""}
-                        </p>
-                      </CardContent>
-                      <CardFooter className="p-4 pt-0">
-                        <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto font-semibold">
-                          <Link href={`/gallery#${transform.id}`}>
-                            View Result <ArrowRight className="ml-1 h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </CardFooter>
-                    </Card>
-                  </div>
-                </DynamicCarouselItem>
-              ))}
-            </DynamicCarouselContent>
-            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
-            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
-          </DynamicCarousel>
-        )}
-      </section>
-      
-      {/* Second Patient Transformations Section - Carousel (Image as Background Design) */}
-      <section className="container mx-auto px-4 pb-12">
-        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Explore More Success Stories
-        </h2>
-        {isClient && (
-          <DynamicCarousel
-            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <DynamicCarouselContent className="sm:-ml-1">
               {transformations.map((transform, index) => ( 
-                <DynamicCarouselItem key={`second-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
+                <DynamicCarouselItem key={`chosen-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                      <Card 
                       className="relative flex flex-col h-72 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
@@ -291,129 +237,11 @@ export default function HomePage() {
             <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
           </DynamicCarousel>
         )}
-      </section>
-
-      {/* Third Patient Transformations Section - Carousel (Split Card Design) */}
-      <section className="container mx-auto px-4 pb-12">
-        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Client Journeys Visualized
-        </h2>
-        {isClient && (
-          <DynamicCarousel
-            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto" 
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <DynamicCarouselContent className="sm:-ml-1">
-              {transformations.map((transform, index) => ( 
-                <DynamicCarouselItem key={`third-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 xl:basis-1/2"> 
-                  <div className="p-1 h-full">
-                     <Card 
-                      className="flex flex-col md:flex-row h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.02] animate-fadeIn"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <div className="relative w-full md:w-2/5 h-56 md:h-auto min-h-[200px] md:min-h-full">
-                        <Image
-                          src={transform.afterImageUrl} 
-                          alt={`Transformation: ${transform.treatment}`}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={transform.afterHint}
-                        />
-                      </div>
-                      <div className="w-full md:w-3/5 p-4 flex flex-col justify-between">
-                        <div>
-                          <CardHeader className="p-0 mb-2">
-                            <CardTitle className="font-headline text-lg text-primary">{transform.treatment}</CardTitle>
-                          </CardHeader>
-                          <CardContent className="p-0">
-                            <p className="text-sm text-card-foreground/80">
-                              {transform.description.substring(0, 80)}{transform.description.length > 80 ? "..." : ""}
-                            </p>
-                          </CardContent>
-                        </div>
-                        <CardFooter className="p-0 mt-3">
-                          <Button
-                            asChild
-                            variant="link"
-                            className="text-accent p-0 hover:text-accent/80 font-semibold text-sm self-start"
-                          >
-                            <Link href={`/gallery#${transform.id}`}>
-                              View Full Story <ArrowRight className="ml-1 h-3 w-3" />
-                            </Link>
-                          </Button>
-                        </CardFooter>
-                      </div>
-                    </Card>
-                  </div>
-                </DynamicCarouselItem>
-              ))}
-            </DynamicCarouselContent>
-            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
-            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
-          </DynamicCarousel>
-        )}
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/gallery">Discover All Transformations</Link>
           </Button>
         </div>
-      </section>
-
-      {/* Fourth Patient Transformations Section - Carousel (Square Image Design) */}
-      <section className="container mx-auto px-4 pb-12">
-        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          More Inspiring Changes
-        </h2>
-        {isClient && (
-          <DynamicCarousel
-            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <DynamicCarouselContent className="sm:-ml-1">
-              {transformations.map((transform, index) => (
-                <DynamicCarouselItem key={`fourth-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card
-                      className="flex flex-col h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.03] animate-fadeIn"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <div className="relative w-full aspect-square rounded-t-lg overflow-hidden">
-                        <Image
-                          src={transform.afterImageUrl}
-                          alt={`Image of ${transform.treatment} result`}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={transform.afterHint}
-                        />
-                      </div>
-                      <CardContent className="p-4 flex-grow flex flex-col">
-                        <CardTitle className="text-lg font-headline text-primary mb-2">{transform.treatment}</CardTitle>
-                        <CardDescription className="text-sm text-card-foreground/80 mb-3 flex-grow">
-                          {transform.description.substring(0, 120)}{transform.description.length > 120 ? "..." : ""}
-                        </CardDescription>
-                      </CardContent>
-                      <CardFooter className="p-4 pt-0">
-                        <Button asChild variant="secondary" className="w-full">
-                          <Link href={`/gallery#${transform.id}`}>
-                            View Full Transformation <ArrowRight className="ml-2 h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </CardFooter>
-                    </Card>
-                  </div>
-                </DynamicCarouselItem>
-              ))}
-            </DynamicCarouselContent>
-            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
-            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
-          </DynamicCarousel>
-        )}
       </section>
 
 
