@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
-import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper, Sparkles as DentistryIcon } from "lucide-react"; 
+import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
 import { placeholderPosts as blogPostsData } from "@/app/blog/page.tsx";
 
 const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
@@ -38,7 +38,7 @@ export default function HomePage() {
   const transformations = allServices.slice(0, 6).map(service => ({
     id: service.id,
     treatment: service.name,
-    description: `See the remarkable before and after results for ${service.name.toLowerCase()}.`,
+    description: service.description, // Keep full description for potential use, truncate in JSX
     beforeImageUrl: service.imageBefore,
     afterImageUrl: service.imageAfter,
     beforeHint: `${service.dataAiHint} before`,
@@ -138,10 +138,10 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="p-0 text-lg text-card-foreground/90 space-y-4">
                 <p>
-                  At Zenviora Aesthetics, we firmly believe that everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic and dental treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
+                  At Zenviora Aesthetics, we believe everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic and dental treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
                 </p>
                 <p>
-                  We seamlessly integrate medical artistry with the latest technological advancements to provide personalized care that aligns with your unique aesthetic aspirations. Your transformative journey to enhanced beauty and self-assurance starts here.
+                  We seamlessly integrate medical artistry with the latest technological advancements to provide personalized care that aligns with your unique aesthetic aspirations. Your journey to enhanced beauty and self-assurance starts here.
                 </p>
               </CardContent>
             </div>
@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Patient Transformations Section - Carousel */}
+      {/* Patient Transformations Section - Carousel (New Unified Design) */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness Transformative Results
@@ -204,30 +204,30 @@ export default function HomePage() {
               {transformations.map((transform, index) => (
                 <DynamicCarouselItem key={transform.id} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
-                    <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
-                      <CardHeader>
-                        <CardTitle className="font-headline text-xl text-card-foreground">{transform.treatment}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow">
-                        <div className="grid grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
-                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
-                            </div>
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
-                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
-                              <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-sm text-card-foreground/80">{transform.description}</p>
+                    <Card 
+                      className="flex flex-col h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.03] animate-fadeIn"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg">
+                        <Image
+                          src={transform.afterImageUrl}
+                          alt={`Result of ${transform.treatment}`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={transform.afterHint}
+                        />
+                      </div>
+                      <CardContent className="p-4 flex-grow flex flex-col">
+                        <h3 className="text-lg font-headline text-primary mb-2">{transform.treatment}</h3>
+                        <p className="text-sm text-card-foreground/80 mb-3 flex-grow">
+                          {transform.description.substring(0, 100)}{transform.description.length > 100 ? "..." : ""}
+                        </p>
                       </CardContent>
-                      <CardFooter>
-                        <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                          <Link href={`/gallery#${transform.id}`}>View More Examples <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                      <CardFooter className="p-4 pt-0">
+                        <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto font-semibold">
+                          <Link href={`/gallery#${transform.id}`}>
+                            View Result <ArrowRight className="ml-1 h-4 w-4" />
+                          </Link>
                         </Button>
                       </CardFooter>
                     </Card>
@@ -246,7 +246,7 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Second Patient Transformations Section - Carousel with new design */}
+      {/* Second Patient Transformations Section - Carousel (New Unified Design) */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Explore More Success Stories
@@ -260,36 +260,39 @@ export default function HomePage() {
             }}
           >
             <DynamicCarouselContent className="sm:-ml-1">
-              {transformations.map((transform, index) => (
+              {transformations.map((transform, index) => ( // Using same data for example, can be different
                 <DynamicCarouselItem key={`second-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1"> {/* Removed h-full to allow card to dictate height */}
-                    <Card 
-                      className="relative shadow-lg rounded-xl overflow-hidden group animate-fadeIn h-[400px] md:h-[450px]" 
+                  <div className="p-1 h-full">
+                     <Card 
+                      className="flex flex-col h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.03] animate-fadeIn"
                       style={{ animationDelay: `${0.1 * index}s` }}
                     >
-                      <Image
-                        src={transform.afterImageUrl}
-                        alt={`Showcasing results for ${transform.treatment}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={transform.afterHint}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div> {/* Gradient Overlay for readability */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <h3 className="font-headline text-xl font-semibold mb-2">{transform.treatment}</h3>
-                        {/* Optional: A very short description could go here if needed 
-                        <p className="text-sm mb-3 text-white/90">{transform.description.substring(0, 50)}...</p> 
-                        */}
+                      <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-lg">
+                        <Image
+                          src={transform.afterImageUrl} // Using after image for consistency
+                          alt={`Showcasing results for ${transform.treatment}`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={transform.afterHint}
+                        />
+                      </div>
+                      <CardContent className="p-4 flex-grow flex flex-col">
+                        <h3 className="text-lg font-headline text-primary mb-2">{transform.treatment}</h3>
+                         <p className="text-sm text-card-foreground/80 mb-3 flex-grow">
+                          {transform.description.substring(0, 100)}{transform.description.length > 100 ? "..." : ""}
+                        </p>
+                      </CardContent>
+                      <CardFooter className="p-4 pt-0">
                         <Button
                           asChild
                           variant="link"
-                          className="text-accent p-0 hover:text-accent/80 font-semibold text-sm"
+                          className="text-accent p-0 hover:text-accent/80 ml-auto font-semibold"
                         >
                           <Link href={`/gallery#${transform.id}`}>
-                            View Details <ArrowRight className="ml-1 h-4 w-4" />
+                            View Result <ArrowRight className="ml-1 h-4 w-4" />
                           </Link>
                         </Button>
-                      </div>
+                      </CardFooter>
                     </Card>
                   </div>
                 </DynamicCarouselItem>
