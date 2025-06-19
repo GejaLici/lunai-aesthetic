@@ -9,8 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
-import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
-import { placeholderPosts as blogPostsData } from "@/app/blog/page.tsx"; // Import blog data
+import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper, Sparkles as DentistryIcon } from "lucide-react"; // Renamed Sparkles to avoid conflict
+import { placeholderPosts as blogPostsData } from "@/app/blog/page.tsx";
 
 const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
   ssr: false,
@@ -70,20 +70,20 @@ export default function HomePage() {
     {
       icon: UsersRound,
       title: "Expert & Personalized Care",
-      description: "Our highly skilled professionals provide tailored treatments, focusing on your unique goals to ensure the best possible outcomes.",
-      moreInfo: "This includes a thorough consultation process, ongoing support, and a commitment to your satisfaction and well-being at every step."
+      description: "Our highly skilled professionals provide tailored aesthetic treatments, focusing on your unique goals to ensure exceptional, natural-looking outcomes and your utmost satisfaction.",
+      moreInfo: "This includes a comprehensive consultation, advanced treatment planning, ongoing support, and a steadfast commitment to your well-being at every stage of your aesthetic journey."
     },
     {
       icon: Cpu,
       title: "State-of-the-Art Technology",
-      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe and effective results.",
-      moreInfo: "Our investment in technology means you benefit from procedures that are not only advanced but also prioritize your comfort and safety."
+      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe, effective, and minimally invasive results.",
+      moreInfo: "Our investment in leading technology ensures you benefit from procedures that are not only advanced but also prioritize your comfort, safety, and achieve superior results."
     },
     {
       icon: Leaf,
       title: "Commitment to Natural Results",
-      description: "Our philosophy centers on enhancing your natural beauty, aiming for subtle yet significant improvements that look authentic.",
-      moreInfo: "We work with you to create a personalized plan that respects your individuality, ensuring results that feel like the best version of yourself."
+      description: "Our core philosophy centers on enhancing your inherent beauty, aiming for subtle yet significant improvements that look authentic and feel like you.",
+      moreInfo: "We collaborate with you to create a bespoke treatment plan that respects your individuality, ensuring results that reflect the best version of yourself, naturally."
     },
   ];
 
@@ -112,17 +112,17 @@ export default function HomePage() {
         )}
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-            Zenviora Aesthetics
+            Zenviora Aesthetics: Premier Solutions for Lasting Beauty
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-            Reaching the Pinnacle of Beauty and Confidence
+            Experience transformative results with our expert team and state-of-the-art aesthetic treatments. Begin your journey to enhanced confidence today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
-              <Link href="/services">Explore Our Services</Link>
+              <Link href="/services">Explore Our Expert Services</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground w-full sm:w-auto">
-              <Link href="/consultation">Virtual Consultation</Link>
+              <Link href="/consultation">AI-Powered Virtual Consultation</Link>
             </Button>
           </div>
         </div>
@@ -138,17 +138,17 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="p-0 text-lg text-card-foreground/90 space-y-4">
                 <p>
-                  At Zenviora Aesthetics, we believe that everyone deserves to feel confident and beautiful in their own skin. Our state-of-the-art clinic offers a comprehensive range of aesthetic treatments, delivered by experienced professionals dedicated to achieving exceptional, natural-looking results.
+                  At Zenviora Aesthetics, we firmly believe that everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
                 </p>
                 <p>
-                  We combine artistry with the latest medical advancements to provide personalized care tailored to your unique needs and aspirations. Your journey to enhanced beauty and self-assurance begins here.
+                  We seamlessly integrate medical artistry with the latest technological advancements to provide personalized care that aligns with your unique aesthetic aspirations. Your transformative journey to enhanced beauty and self-assurance starts here.
                 </p>
               </CardContent>
             </div>
             <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full transition-transform duration-300 hover:scale-105">
               <Image
                 src="/images/about-us.jpeg"
-                alt="Nice looking women after treatments"
+                alt="Welcoming and professional clinic interior at Zenviora Aesthetics"
                 fill
                 className="object-cover"
                 data-ai-hint="clinic interior"
@@ -161,7 +161,7 @@ export default function HomePage() {
       {/* Featured Services Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Our Premier Services
+          Our Premier Aesthetic Services
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {featuredServiceCategories.map((category, index) => (
@@ -176,10 +176,10 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="p-6 pt-0 flex flex-col flex-grow">
                 <CardDescription className="text-card-foreground/80 mb-6 text-sm text-center flex-grow">
-                  {category.services.slice(0, 2).map(s => s.name).join(', ')} and more...
+                  {category.services.slice(0, 2).map(s => s.name).join(', ')} and more specialized treatments...
                 </CardDescription>
                 <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200" scroll={true}>
-                  <Link href={`/services#${category.id}`}>Explore Treatments <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link href={`/services#${category.id}`}>Explore {category.title} Treatments <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardContent>
             </Card>
@@ -190,7 +190,7 @@ export default function HomePage() {
       {/* Patient Transformations Section - Carousel */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Witness the Transformations
+          Witness Transformative Results
         </h2>
         {isClient && (
           <DynamicCarousel
@@ -227,7 +227,7 @@ export default function HomePage() {
                       </CardContent>
                       <CardFooter>
                         <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
-                          <Link href={`/gallery#${transform.id}`}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                          <Link href={`/gallery#${transform.id}`}>View More Examples <ArrowRight className="ml-1 h-4 w-4" /></Link>
                         </Button>
                       </CardFooter>
                     </Card>
@@ -241,7 +241,7 @@ export default function HomePage() {
         )}
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/gallery">Explore Full Gallery</Link>
+            <Link href="/gallery">Explore Our Full Gallery</Link>
           </Button>
         </div>
       </section>
@@ -249,7 +249,7 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Why Choose Zenviora Aesthetics?
+          Why Entrust Zenviora Aesthetics?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {whyChooseUsData.map((item, index) => (
@@ -276,18 +276,18 @@ export default function HomePage() {
       {/* Step Inside Zenviora Aesthetics Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-          Step Inside Zenviora Aesthetics
+          Experience the Zenviora Difference
         </h2>
         <div className="text-center mb-10 max-w-3xl mx-auto animate-fadeIn" style={{ animationDelay: '0.2s' }}>
           <p className="text-lg text-foreground/80">
-            Experience a sanctuary of calm and sophistication, where advanced technology meets unparalleled care. Our clinic is meticulously designed with your comfort, privacy, and well-being as our utmost priorities, ensuring a serene and welcoming atmosphere for every visit.
+            Step into a sanctuary of calm and sophistication, where advanced aesthetic technology meets unparalleled patient care. Our clinic is meticulously designed with your comfort, privacy, and well-being as our foremost priorities, ensuring a serene and welcoming atmosphere for every visit.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
             <Image
               src="/images/clinic.png"
-              alt="Luxurious and welcoming clinic reception area"
+              alt="Luxurious and welcoming clinic reception area at Zenviora Aesthetics"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="clinic reception"
@@ -296,7 +296,7 @@ export default function HomePage() {
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
             <Image
               src="/images/clinic2.png"
-              alt="Modern, clean, and advanced treatment room"
+              alt="Modern, clean, and advanced treatment room at Zenviora Aesthetics"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="treatment room"
@@ -308,7 +308,7 @@ export default function HomePage() {
       {/* Client Testimonials Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Hear From Our Clients
+          Valued Client Experiences
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {placeholderTestimonials.map((testimonial, index) => (
@@ -338,7 +338,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary flex items-center justify-center">
           <Newspaper className="h-10 w-10 text-accent mr-3" />
-          From Our Blog
+          Expert Insights from Our Blog
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestBlogPosts.map((post, index) => (
@@ -363,7 +363,7 @@ export default function HomePage() {
               </CardContent>
               <CardFooter>
                 <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80">
-                  <Link href={post.slug}>Read More <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                  <Link href={post.slug}>Read Full Article <ArrowRight className="ml-1 h-4 w-4" /></Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -371,7 +371,7 @@ export default function HomePage() {
         </div>
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/blog">View All Blog Posts</Link>
+            <Link href="/blog">Explore All Zenviora Blog Posts</Link>
           </Button>
         </div>
       </section>
@@ -379,12 +379,12 @@ export default function HomePage() {
       {/* Call to Action for Consultation */}
       <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-headline font-bold mb-6">Ready for a Transformation?</h2>
+          <h2 className="text-4xl font-headline font-bold mb-6">Ready to Discover Your Best Self?</h2>
           <p className="text-xl mb-8">
-            Our AI-powered virtual consultant can help guide you towards the perfect treatment.
+            Our advanced AI-powered virtual consultant is ready to guide you towards your ideal aesthetic treatment.
           </p>
           <Button asChild size="lg" variant="outline" className="bg-primary-foreground text-primary border-primary-foreground hover:bg-primary-foreground/90 hover:text-primary">
-            <Link href="/consultation">Start Your Virtual Consultation</Link>
+            <Link href="/consultation">Begin Your Expert Virtual Consultation</Link>
           </Button>
         </div>
       </section>

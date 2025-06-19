@@ -11,34 +11,34 @@ import { ArrowLeft, CalendarCheck2, HelpCircle, FileText, Users, Activity } from
 // Helper to generate generic FAQs
 const generateFaqs = (serviceName: string) => [
   {
-    question: `What is ${serviceName}?`,
-    answer: `${serviceName} is a procedure designed to address specific aesthetic concerns. Our team will provide a detailed explanation during your consultation.`,
+    question: `What is involved in the ${serviceName} procedure?`,
+    answer: `${serviceName} is a specialized procedure designed to address specific aesthetic concerns. Our expert team will provide a detailed explanation of the process, techniques used, and expected outcomes during your personal consultation.`,
   },
   {
-    question: `Who is a good candidate for ${serviceName}?`,
-    answer: `Ideal candidates are generally in good health and have realistic expectations. A personal consultation is necessary to determine if ${serviceName} is right for you.`,
+    question: `Who is an ideal candidate for ${serviceName}?`,
+    answer: `Ideal candidates for ${serviceName} are typically in good general health and have realistic expectations about the results. A comprehensive consultation with our specialists is necessary to determine if ${serviceName} is the most suitable and safe option for your individual needs and goals.`,
   },
   {
-    question: 'What is the recovery process like?',
-    answer: 'Recovery times vary depending on the individual and the specifics of the procedure. We will provide detailed post-treatment care instructions.',
+    question: 'What does the typical recovery process entail after this service?',
+    answer: 'Recovery times and experiences vary depending on the individual and the specifics of the ${serviceName} procedure. We will provide you with detailed post-treatment care instructions and support to ensure a smooth and comfortable recovery.',
   },
   {
-    question: `How long do the results of ${serviceName} last?`,
-    answer: 'The longevity of results can depend on various factors, including the type of treatment, lifestyle, and individual aging processes. This will be discussed during your consultation.',
+    question: `How long can I expect the results of ${serviceName} to last?`,
+    answer: 'The longevity of results from ${serviceName} can depend on various factors, including the type of treatment, your lifestyle, skin type, and individual aging processes. This will be thoroughly discussed during your consultation to set clear expectations.',
   },
   {
-    question: 'Are there any risks associated with this service?',
-    answer: 'As with any medical or aesthetic procedure, there are potential risks. Our specialists will thoroughly discuss these with you before you decide to proceed.',
+    question: 'Are there any potential risks or side effects associated with this service?',
+    answer: 'As with any medical or aesthetic procedure, there are potential risks and side effects. Our specialists will comprehensively discuss these with you before you decide to proceed, ensuring you are fully informed and comfortable with your treatment plan.',
   }
 ];
 
 // Define icons for FAQ section
 const faqIcons: Record<string, React.ElementType> = {
-  "What is": FileText,
-  "Who is": Users,
-  "What is the recovery": Activity,
-  "How long do": CalendarCheck2,
-  "Are there any risks": HelpCircle,
+  "What is involved": FileText,
+  "Who is an ideal candidate": Users,
+  "What does the typical recovery": Activity,
+  "How long can I expect": CalendarCheck2,
+  "Are there any potential risks": HelpCircle,
 };
 
 export async function generateStaticParams() {
@@ -62,7 +62,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
         <Button variant="outline" asChild>
           <Link href="/services" className="inline-flex items-center text-accent hover:text-accent/80">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to All Services
+            Return to All Expert Services
           </Link>
         </Button>
       </div>
@@ -72,7 +72,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
           <div className="relative w-full h-80 md:h-[500px]">
             <Image
               src={service.imageBefore} 
-              alt={`Image for ${service.name}`}
+              alt={`Illustrative image for ${service.name} at Zenviora Aesthetics`}
               fill
               className="object-cover"
               data-ai-hint={service.dataAiHint}
@@ -94,13 +94,13 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mb-12">
             <Link href="/consultation">
               <CalendarCheck2 className="mr-2 h-5 w-5" />
-              Book a Consultation
+              Book Your Consultation for {service.name}
             </Link>
           </Button>
 
           <section className="mt-8 pt-8 border-t">
             <h2 className="text-3xl font-headline font-semibold text-primary mb-6">
-              Frequently Asked Questions
+              Your Questions Answered: {service.name}
             </h2>
             {faqs.length > 0 ? (
               <Accordion type="single" collapsible className="w-full">
@@ -115,14 +115,14 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
                         </span>
                       </AccordionTrigger>
                       <AccordionContent className="pt-2 pb-4 text-base text-foreground/80 pl-8">
-                        {faq.answer}
+                        {faq.answer.replace(/\$\{serviceName\}/g, service.name)}
                       </AccordionContent>
                     </AccordionItem>
                   );
                 })}
               </Accordion>
             ) : (
-              <p className="text-muted-foreground">No FAQs available for this service yet.</p>
+              <p className="text-muted-foreground">Detailed FAQs for this service are coming soon. Please contact us for any immediate questions.</p>
             )}
           </section>
         </CardContent>

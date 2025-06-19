@@ -9,12 +9,12 @@ import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, Ar
 
 // Helper map for dental subcategory icons
 const subCategoryIcons: Record<string, LucideIcon | undefined> = {
-  "AESTHETICS": Sparkles,
-  "PROSTHETICS": Construction,
+  "AESTHETIC DENTISTRY": Sparkles, // Updated for clarity
+  "PROSTHODONTICS": Construction, // Updated for clarity
   "ORTHODONTICS": AlignCenter,
-  "THERAPY": ClipboardCheck,
-  "SURGERY": Scissors,
-  "PEDODONTICS (CHILDREN'S DENTISTRY)": Baby,
+  "GENERAL & RESTORATIVE DENTISTRY": ClipboardCheck, // Updated for clarity
+  "ORAL SURGERY": Scissors, // Updated for clarity
+  "PEDIATRIC DENTISTRY (PEDODONTICS)": Baby, // Updated for clarity
 };
 
 const MAX_DESC_LENGTH = 120;
@@ -24,7 +24,9 @@ function getShortDescription(description: string): string {
     return description;
   }
   const truncated = description.substring(0, MAX_DESC_LENGTH);
-  return truncated.substring(0, Math.min(truncated.length, truncated.lastIndexOf(" "))) + "...";
+  // Ensure we don't cut in the middle of a word for the short description
+  const lastSpace = truncated.lastIndexOf(" ");
+  return (lastSpace > 0 ? truncated.substring(0, lastSpace) : truncated) + "...";
 }
 
 
@@ -32,9 +34,9 @@ export default function ServicesPage() {
   return (
     <div className="space-y-8">
       <section className="text-center py-8 pb-8 border-b border-border/30">
-        <h1 className="text-5xl font-headline font-bold text-primary">Our Services</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Zenviora Aesthetics</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Explore our comprehensive range of aesthetic treatments tailored to your needs.
+          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty.
         </p>
       </section>
 
@@ -43,12 +45,18 @@ export default function ServicesPage() {
           // Special handling for DENTISTRY category
           const dentalServicesBySubCategory: Record<string, ServiceItem[]> = {};
           category.services.forEach(service => {
-            if (service.dentalSubCategoryTitle) {
-              if (!dentalServicesBySubCategory[service.dentalSubCategoryTitle]) {
-                dentalServicesBySubCategory[service.dentalSubCategoryTitle] = [];
-              }
-              dentalServicesBySubCategory[service.dentalSubCategoryTitle].push(service);
+            // Use more descriptive titles for subcategories if available
+            const subCategoryKey = service.dentalSubCategoryTitle === "AESTHETICS" ? "AESTHETIC DENTISTRY" :
+                                   service.dentalSubCategoryTitle === "PROSTHETICS" ? "PROSTHODONTICS" :
+                                   service.dentalSubCategoryTitle === "THERAPY" ? "GENERAL & RESTORATIVE DENTISTRY" :
+                                   service.dentalSubCategoryTitle === "SURGERY" ? "ORAL SURGERY" :
+                                   service.dentalSubCategoryTitle === "PEDODONTICS (CHILDREN'S DENTISTRY)" ? "PEDIATRIC DENTISTRY (PEDODONTICS)" :
+                                   service.dentalSubCategoryTitle || "General Dentistry";
+            
+            if (!dentalServicesBySubCategory[subCategoryKey]) {
+              dentalServicesBySubCategory[subCategoryKey] = [];
             }
+            dentalServicesBySubCategory[subCategoryKey].push(service);
           });
 
           return (
@@ -73,7 +81,7 @@ export default function ServicesPage() {
                     {operations.length > 0 && (
                       <>
                         {(treatments.length > 0) && (
-                          <h4 className="text-xl font-headline text-foreground/70 mb-3 ml-4">Operations</h4>
+                          <h4 className="text-xl font-headline text-foreground/70 mb-3 ml-4">Surgical Procedures</h4>
                         )}
                          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                           {operations.map((service) => (
@@ -85,7 +93,7 @@ export default function ServicesPage() {
                                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-4">
                                   <Image
                                     src={service.imageBefore}
-                                    alt={`Image for ${service.name}`}
+                                    alt={`Image illustrating ${service.name}`}
                                     fill
                                     className="object-cover"
                                     data-ai-hint={service.dataAiHint}
@@ -107,7 +115,7 @@ export default function ServicesPage() {
                     {treatments.length > 0 && (
                       <>
                         {(operations.length > 0) && (
-                          <h4 className="text-xl font-headline text-foreground/70 mb-3 ml-4">Treatments</h4>
+                          <h4 className="text-xl font-headline text-foreground/70 mb-3 ml-4">Non-Surgical Treatments</h4>
                         )}
                          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                           {treatments.map((service) => (
@@ -119,7 +127,7 @@ export default function ServicesPage() {
                                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-4">
                                   <Image
                                     src={service.imageBefore}
-                                    alt={`Image for ${service.name}`}
+                                    alt={`Image illustrating ${service.name}`}
                                     fill
                                     className="object-cover"
                                     data-ai-hint={service.dataAiHint}
@@ -149,7 +157,7 @@ export default function ServicesPage() {
                                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-4">
                                     <Image
                                     src={service.imageBefore}
-                                    alt={`Image for ${service.name}`}
+                                    alt={`Image illustrating ${service.name}`}
                                     fill
                                     className="object-cover"
                                     data-ai-hint={service.dataAiHint}
@@ -187,7 +195,7 @@ export default function ServicesPage() {
               {operations.length > 0 && (
                 <>
                   {(treatments.length > 0 || unclassified.length > 0) && (
-                    <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Operations</h3>
+                    <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Surgical Procedures</h3>
                   )}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     {operations.map((service) => (
@@ -199,7 +207,7 @@ export default function ServicesPage() {
                           <div className="relative w-full h-48 rounded-md overflow-hidden mb-4">
                             <Image
                               src={service.imageBefore}
-                              alt={`Image for ${service.name}`}
+                              alt={`Image illustrating ${service.name}`}
                               fill
                               className="object-cover"
                               data-ai-hint={service.dataAiHint}
@@ -221,7 +229,7 @@ export default function ServicesPage() {
               {treatments.length > 0 && (
                 <>
                   {(operations.length > 0 || unclassified.length > 0) && (
-                    <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Treatments</h3>
+                    <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Non-Surgical Treatments</h3>
                   )}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     {treatments.map((service) => (
@@ -233,7 +241,7 @@ export default function ServicesPage() {
                           <div className="relative w-full h-48 rounded-md overflow-hidden mb-4">
                             <Image
                               src={service.imageBefore}
-                              alt={`Image for ${service.name}`}
+                              alt={`Image illustrating ${service.name}`}
                               fill
                               className="object-cover"
                               data-ai-hint={service.dataAiHint}
@@ -255,7 +263,7 @@ export default function ServicesPage() {
               {unclassified.length > 0 && (
                    <>
                    { (operations.length > 0 || treatments.length > 0) && (
-                      <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Other Services</h3>
+                      <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Other Specialized Services</h3>
                    )}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {unclassified.map((service) => (
@@ -267,7 +275,7 @@ export default function ServicesPage() {
                           <div className="relative w-full h-48 rounded-md overflow-hidden mb-4">
                               <Image
                               src={service.imageBefore}
-                              alt={`Image for ${service.name}`}
+                              alt={`Image illustrating ${service.name}`}
                               fill
                               className="object-cover"
                               data-ai-hint={service.dataAiHint}
