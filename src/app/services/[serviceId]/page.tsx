@@ -69,18 +69,18 @@ export default function ServiceDetailPage({ params }: { params: { serviceId: str
 
       <Card className="shadow-xl overflow-hidden">
         <CardHeader className="p-0">
-          <div className="relative w-full h-72 md:h-96">
+          <div className="relative w-full h-80 md:h-[500px]">
             <Image
-              src={service.imageBefore} // As requested, using imageBefore as the main image
+              src={service.imageBefore} 
               alt={`Image for ${service.name}`}
               fill
               className="object-cover"
               data-ai-hint={service.dataAiHint}
-              priority // Prioritize loading of this main image
+              priority 
             />
              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
              <div className="absolute bottom-0 left-0 p-6 md:p-8">
-                <CardTitle className="font-headline text-3xl md:text-4xl text-white shadow-strong">
+                <CardTitle className="font-headline text-3xl md:text-4xl text-white">
                  {service.name}
                 </CardTitle>
              </div>
