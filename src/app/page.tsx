@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Patient Transformations Section - Carousel (Image as Background Design - Chosen Design) */}
+      {/* Patient Transformations Section - Chosen Design */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
           Witness Transformative Results
@@ -205,7 +205,7 @@ export default function HomePage() {
                 <DynamicCarouselItem key={`chosen-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                      <Card 
-                      className="relative flex flex-col h-72 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
+                      className="relative flex flex-col h-80 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
                       style={{ animationDelay: `${0.1 * index}s` }}
                     >
                       <Image
