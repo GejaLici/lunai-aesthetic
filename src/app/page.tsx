@@ -300,7 +300,7 @@ export default function HomePage() {
         </h2>
         {isClient && (
           <DynamicCarousel
-            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto" // Adjusted max-width for potentially wider cards
+            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto" 
             opts={{
               align: "start",
               loop: true,
@@ -308,7 +308,7 @@ export default function HomePage() {
           >
             <DynamicCarouselContent className="sm:-ml-1">
               {transformations.map((transform, index) => ( 
-                <DynamicCarouselItem key={`third-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 xl:basis-1/2"> {/* Adjusted basis for potentially wider cards */}
+                <DynamicCarouselItem key={`third-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 xl:basis-1/2"> 
                   <div className="p-1 h-full">
                      <Card 
                       className="flex flex-col md:flex-row h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.02] animate-fadeIn"
@@ -360,6 +360,60 @@ export default function HomePage() {
             <Link href="/gallery">Discover All Transformations</Link>
           </Button>
         </div>
+      </section>
+
+      {/* Fourth Patient Transformations Section - Carousel (Square Image Design) */}
+      <section className="container mx-auto px-4 pb-12">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+          More Inspiring Changes
+        </h2>
+        {isClient && (
+          <DynamicCarousel
+            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <DynamicCarouselContent className="sm:-ml-1">
+              {transformations.map((transform, index) => (
+                <DynamicCarouselItem key={`fourth-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                    <Card
+                      className="flex flex-col h-full bg-card shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:scale-[1.03] animate-fadeIn"
+                      style={{ animationDelay: `${0.1 * index}s` }}
+                    >
+                      <div className="relative w-full aspect-square rounded-t-lg overflow-hidden">
+                        <Image
+                          src={transform.afterImageUrl}
+                          alt={`Image of ${transform.treatment} result`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={transform.afterHint}
+                        />
+                      </div>
+                      <CardContent className="p-4 flex-grow flex flex-col">
+                        <CardTitle className="text-lg font-headline text-primary mb-2">{transform.treatment}</CardTitle>
+                        <CardDescription className="text-sm text-card-foreground/80 mb-3 flex-grow">
+                          {transform.description.substring(0, 120)}{transform.description.length > 120 ? "..." : ""}
+                        </CardDescription>
+                      </CardContent>
+                      <CardFooter className="p-4 pt-0">
+                        <Button asChild variant="secondary" className="w-full">
+                          <Link href={`/gallery#${transform.id}`}>
+                            View Full Transformation <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </DynamicCarouselItem>
+              ))}
+            </DynamicCarouselContent>
+            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
+            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
+          </DynamicCarousel>
+        )}
       </section>
 
 
