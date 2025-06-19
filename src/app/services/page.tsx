@@ -17,6 +17,16 @@ const subCategoryIcons: Record<string, LucideIcon | undefined> = {
   "PEDODONTICS (CHILDREN'S DENTISTRY)": Baby,
 };
 
+const MAX_DESC_LENGTH = 120;
+
+function getShortDescription(description: string): string {
+  if (description.length <= MAX_DESC_LENGTH) {
+    return description;
+  }
+  const truncated = description.substring(0, MAX_DESC_LENGTH);
+  return truncated.substring(0, Math.min(truncated.length, truncated.lastIndexOf(" "))) + "...";
+}
+
 
 export default function ServicesPage() {
   return (
@@ -82,7 +92,7 @@ export default function ServicesPage() {
                                   />
                                 </div>
                                 <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
-                                  {service.description}
+                                  {getShortDescription(service.description)}
                                 </CardDescription>
                                 <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
                                   <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
@@ -116,7 +126,7 @@ export default function ServicesPage() {
                                   />
                                 </div>
                                 <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
-                                  {service.description}
+                                  {getShortDescription(service.description)}
                                 </CardDescription>
                                 <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
                                   <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
@@ -146,7 +156,7 @@ export default function ServicesPage() {
                                     />
                                 </div>
                                 <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
-                                    {service.description}
+                                    {getShortDescription(service.description)}
                                 </CardDescription>
                                 <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
                                     <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
@@ -196,7 +206,7 @@ export default function ServicesPage() {
                             />
                           </div>
                           <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
-                            {service.description}
+                            {getShortDescription(service.description)}
                           </CardDescription>
                           <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
                             <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
@@ -230,7 +240,7 @@ export default function ServicesPage() {
                             />
                           </div>
                           <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
-                            {service.description}
+                            {getShortDescription(service.description)}
                           </CardDescription>
                           <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
                             <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
@@ -264,7 +274,7 @@ export default function ServicesPage() {
                               />
                           </div>
                           <CardDescription className="text-foreground/80 mb-4 text-sm flex-grow">
-                              {service.description}
+                              {getShortDescription(service.description)}
                           </CardDescription>
                           <Button asChild variant="link" className="text-accent p-0 mt-auto self-start hover:text-accent/80">
                               <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link>
