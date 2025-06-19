@@ -112,10 +112,10 @@ export default function HomePage() {
         )}
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-            Zenviora Aesthetics: Premier Solutions for Lasting Beauty
+            Zenviora Aesthetics: Premier Solutions for Lasting Beauty & Confidence
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-            Experience transformative results with our expert team and state-of-the-art aesthetic treatments. Begin your journey to enhanced confidence today.
+            Experience transformative aesthetic and dental treatments with our expert team. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
@@ -138,7 +138,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="p-0 text-lg text-card-foreground/90 space-y-4">
                 <p>
-                  At Zenviora Aesthetics, we firmly believe that everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
+                  At Zenviora Aesthetics, we firmly believe that everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic and dental treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
                 </p>
                 <p>
                   We seamlessly integrate medical artistry with the latest technological advancements to provide personalized care that aligns with your unique aesthetic aspirations. Your transformative journey to enhanced beauty and self-assurance starts here.
@@ -161,7 +161,7 @@ export default function HomePage() {
       {/* Featured Services Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Our Premier Aesthetic Services
+          Our Premier Aesthetic & Dental Services
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {featuredServiceCategories.map((category, index) => (
@@ -242,6 +242,65 @@ export default function HomePage() {
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/gallery">Explore Our Full Gallery</Link>
+          </Button>
+        </div>
+      </section>
+      
+      {/* Second Patient Transformations Section - Carousel */}
+      <section className="container mx-auto px-4 pb-12">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+          Explore More Success Stories
+        </h2>
+        {isClient && (
+          <DynamicCarousel
+            className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <DynamicCarouselContent className="sm:-ml-1">
+              {transformations.map((transform, index) => (
+                <DynamicCarouselItem key={`second-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3"> {/* Added unique key prefix */}
+                  <div className="p-1 h-full">
+                    <Card className="bg-card shadow-lg rounded-xl overflow-hidden animate-fadeIn h-full flex flex-col" style={{ animationDelay: `${0.1 * index}s` }}>
+                      <CardHeader>
+                        <CardTitle className="font-headline text-xl text-card-foreground">{transform.treatment}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <div className="grid grid-cols-2 gap-4 mb-4">
+                          <div>
+                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">Before</p>
+                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                              <Image src={transform.beforeImageUrl} alt={`Before ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.beforeHint} />
+                            </div>
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-center text-muted-foreground mb-1">After</p>
+                            <div className="relative aspect-square w-full rounded-md overflow-hidden">
+                              <Image src={transform.afterImageUrl} alt={`After ${transform.treatment}`} fill className="object-cover" data-ai-hint={transform.afterHint} />
+                            </div>
+                          </div>
+                        </div>
+                        <p className="text-sm text-card-foreground/80">{transform.description}</p>
+                      </CardContent>
+                      <CardFooter>
+                        <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 ml-auto">
+                          <Link href={`/gallery#${transform.id}`}>View More Examples <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </DynamicCarouselItem>
+              ))}
+            </DynamicCarouselContent>
+            <DynamicCarouselPrevious className="left-2 sm:-left-[10px] md:-left-[20px] lg:-left-[30px]" />
+            <DynamicCarouselNext className="right-2 sm:-right-[10px] md:-right-[20px] lg:-right-[30px]" />
+          </DynamicCarousel>
+        )}
+        <div className="text-center mt-12">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Link href="/gallery">Discover All Transformations</Link>
           </Button>
         </div>
       </section>
@@ -381,7 +440,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-headline font-bold mb-6">Ready to Discover Your Best Self?</h2>
           <p className="text-xl mb-8">
-            Our advanced AI-powered virtual consultant is ready to guide you towards your ideal aesthetic treatment.
+            Our advanced AI-powered virtual consultant is ready to guide you towards your ideal aesthetic or dental treatment.
           </p>
           <Button asChild size="lg" variant="outline" className="bg-primary-foreground text-primary border-primary-foreground hover:bg-primary-foreground/90 hover:text-primary">
             <Link href="/consultation">Begin Your Expert Virtual Consultation</Link>
@@ -391,3 +450,4 @@ export default function HomePage() {
     </div>
   );
 }
+
