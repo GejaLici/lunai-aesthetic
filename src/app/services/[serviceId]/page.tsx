@@ -23,7 +23,7 @@ const generateFaqs = (serviceName: string) => [
     answer: 'Recovery times vary depending on the individual and the specifics of the procedure. We will provide detailed post-treatment care instructions.',
   },
   {
-    question: 'How long do the results of ${serviceName} last?',
+    question: `How long do the results of ${serviceName} last?`,
     answer: 'The longevity of results can depend on various factors, including the type of treatment, lifestyle, and individual aging processes. This will be discussed during your consultation.',
   },
   {
@@ -47,7 +47,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ServiceDetailPage({ params }: { params: { serviceId: string } }) {
+export default async function ServiceDetailPage({ params }: { params: { serviceId: string } }) {
   const service = allServices.find(s => s.id === params.serviceId);
 
   if (!service) {
@@ -87,7 +87,7 @@ export default function ServiceDetailPage({ params }: { params: { serviceId: str
           </div>
         </CardHeader>
         <CardContent className="p-6 md:p-8">
-          <CardDescription className="text-lg text-foreground/90 mb-6 leading-relaxed">
+          <CardDescription className="text-lg text-foreground/90 mb-6 leading-relaxed whitespace-pre-line">
             {service.description}
           </CardDescription>
 
