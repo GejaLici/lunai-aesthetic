@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -10,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
+import { saveContactMessage, type ContactFormData } from "./actions"; // Import the server action
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -18,7 +20,7 @@ const contactFormSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message cannot exceed 500 characters."),
 });
 
-type ContactFormData = z.infer<typeof contactFormSchema>;
+// Type ContactFormData is now imported from actions.ts
 
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -36,15 +38,33 @@ export function ContactForm() {
 
   const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
     setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log("Contact form submitted:", data);
     
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We will get back to you shortly.",
-    });
-    form.reset();
+    const result = await saveContactMessage(data);
+
+    if (result.success) {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We will get back to you shortly.",
+      });
+      form.reset();
+    } else {
+      // Handle server-side validation errors or other errors
+      let description = result.message || "An unexpected error occurred.";
+      if (result.errors) {
+        // Construct a more detailed error message from validation errors
+        // For simplicity, we'll just show the first error for each field
+        const errorMessages = Object.values(result.errors).map(errArray => errArray?.[0]).filter(Boolean);
+        if (errorMessages.length > 0) {
+          description = errorMessages.join(' ');
+        }
+      }
+      toast({
+        title: "Error Sending Message",
+        description: description,
+        variant: "destructive",
+      });
+    }
+    
     setIsLoading(false);
   };
 
