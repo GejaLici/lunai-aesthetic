@@ -8,10 +8,10 @@ interface LogoIconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export const LogoIcon: React.FC<LogoIconProps> = ({ className, ...props }) => (
   <img
-    src="/images/lunai-logo.png"
+    src="https://placehold.co/150x50.png"
     alt="Lunai Aesthetics Logo"
-    width={40}
-    height={40}
+    width={150}
+    height={50}
     className={cn(className)} // Apply className using cn utility
     {...props} // Spread other props
   />
