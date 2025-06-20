@@ -5,8 +5,8 @@ import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Zenviora Aesthetics - Expert Aesthetic Treatments',
-  description: 'Zenviora Aesthetics offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
+  title: 'Lunai Aesthetics - Expert Aesthetic Treatments',
+  description: 'Lunai Aesthetics offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
 };
 
 export default function RootLayout({

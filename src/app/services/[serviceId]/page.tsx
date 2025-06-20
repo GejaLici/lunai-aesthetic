@@ -62,7 +62,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
         <Button variant="outline" asChild>
           <Link href="/services" className="inline-flex items-center text-accent hover:text-accent/80">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Return to All Expert Services
+            Return to All Expert Services at Lunai
           </Link>
         </Button>
       </div>
@@ -72,7 +72,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
           <div className="relative w-full h-80 md:h-[500px]">
             <Image
               src={service.imageBefore} 
-              alt={`Illustrative image for ${service.name} at Zenviora Aesthetics`}
+              alt={`Illustrative image for ${service.name} at Lunai Aesthetics`}
               fill
               className="object-cover"
               data-ai-hint={service.dataAiHint}
@@ -100,7 +100,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
 
           <section className="mt-8 pt-8 border-t">
             <h2 className="text-3xl font-headline font-semibold text-primary mb-6">
-              Your Questions Answered: {service.name}
+              Frequently Asked Questions: {service.name}
             </h2>
             {faqs.length > 0 ? (
               <Accordion type="single" collapsible className="w-full">

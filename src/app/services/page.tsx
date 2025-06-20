@@ -9,12 +9,12 @@ import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, Ar
 
 // Helper map for dental subcategory icons
 const subCategoryIcons: Record<string, LucideIcon | undefined> = {
-  "AESTHETIC DENTISTRY": Sparkles, // Updated for clarity
-  "PROSTHODONTICS": Construction, // Updated for clarity
+  "AESTHETIC DENTISTRY": Sparkles,
+  "PROSTHODONTICS": Construction,
   "ORTHODONTICS": AlignCenter,
-  "GENERAL & RESTORATIVE DENTISTRY": ClipboardCheck, // Updated for clarity
-  "ORAL SURGERY": Scissors, // Updated for clarity
-  "PEDIATRIC DENTISTRY (PEDODONTICS)": Baby, // Updated for clarity
+  "GENERAL & RESTORATIVE DENTISTRY": ClipboardCheck,
+  "ORAL SURGERY": Scissors,
+  "PEDIATRIC DENTISTRY (PEDODONTICS)": Baby,
 };
 
 const MAX_DESC_LENGTH = 120;
@@ -34,9 +34,9 @@ export default function ServicesPage() {
   return (
     <div className="space-y-8">
       <section className="text-center py-8 pb-8 border-b border-border/30">
-        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Zenviora Aesthetics</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Lunai Aesthetics</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty.
+          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty at Lunai Aesthetics.
         </p>
       </section>
 
