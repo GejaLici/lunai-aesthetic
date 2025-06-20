@@ -29,7 +29,7 @@ export function SiteHeader() {
             className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
             suppressHydrationWarning
           >
-            Lunai<br className="block md:hidden" />Aesthetics
+            Lunai <br className="block md:hidden" />Aesthetics
           </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-1">
