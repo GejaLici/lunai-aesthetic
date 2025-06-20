@@ -8,7 +8,7 @@ interface LogoIconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export const LogoIcon: React.FC<LogoIconProps> = ({ className, ...props }) => (
   <img
-    src="/z-logo1.png"
+    src="/images/z-logo1.jpg"
     alt="Lunai Aesthetics Logo"
     width={150}
     height={50}
