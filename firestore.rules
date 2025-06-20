@@ -3,12 +3,35 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // WARNING: These rules are insecure and allow read/write access to everyone.
-    // You MUST update these rules to properly secure your data before deploying to production.
-    // Example: Restrict access to authenticated users: allow read, write: if request.auth != null;
-    // Learn more: https://firebase.google.com/docs/firestore/security/get-started
+    // By default, deny all reads and writes to all documents.
+    // This is a secure default. You should explicitly grant access
+    // to specific collections/documents as needed.
     match /{document=**} {
-      allow read, write: if true; // Replace "if true" with your security logic
+      allow read, write: if false;
     }
+
+    // Example: Allow authenticated users to read and write their own user document.
+    // Assumes you have a 'users' collection where each document ID is the user's UID.
+    // match /users/{userId} {
+    //   allow read, update, delete: if request.auth != null && request.auth.uid == userId;
+    //   allow create: if request.auth != null; // Allows any authenticated user to create their own user document
+    // }
+
+    // Example: Allow public read access to a 'posts' collection,
+    // but only authenticated users can create, update, or delete posts.
+    // match /posts/{postId} {
+    //   allow read: if true;
+    //   allow create, update, delete: if request.auth != null;
+    //   // For more fine-grained control, you might check if the user is the author:
+    //   // allow update, delete: if request.auth != null && request.auth.uid == resource.data.authorId;
+    // }
+
+    // Example: Allow authenticated users to create documents in a 'submissions' collection.
+    // Further rules would be needed for read/update/delete, e.g., only by the creator or an admin.
+    // match /submissions/{submissionId} {
+    //   allow create: if request.auth != null;
+    //   // Example: allow creator to read/update/delete their own submission
+    //   // allow read, update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    // }
   }
 }
