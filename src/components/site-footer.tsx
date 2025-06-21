@@ -10,7 +10,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Lunai Aesthetics Home">
-              <LogoIcon className="h-10 w-10 text-accent" />
+              <LogoIcon className="h-10 w-auto" />
               <span className="font-headline text-xl font-bold">Lunai Aesthetics</span>
             </Link>
             <p className="text-sm text-muted-foreground">
