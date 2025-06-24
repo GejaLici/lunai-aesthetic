@@ -1,6 +1,7 @@
+
 'use client';
 
-import { Link } from 'next-intl/navigation';
+import { Link } from 'next-intl/link';
 import { useTranslations } from 'next-intl';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { LogoIcon } from '@/components/icons/logo-icon';

@@ -1,7 +1,7 @@
 
 import { allServices, type ServiceItem } from '@/lib/services';
 import Image from 'next/image';
-import { Link } from 'next-intl/navigation';
+import { Link } from 'next-intl/link';
 import { notFound } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

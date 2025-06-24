@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
-import { Link } from "next-intl/navigation";
+import { Link } from "next-intl/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
 import { placeholderPosts as blogPostsData } from "@/lib/blog-posts";

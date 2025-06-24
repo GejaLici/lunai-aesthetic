@@ -2,7 +2,7 @@
 import { serviceData, type ServiceItem } from '@/lib/services';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
-import { Link } from 'next-intl/navigation';
+import { Link } from 'next-intl/link';
 import { Button } from '@/components/ui/button';
 import type { LucideIcon } from 'lucide-react';
 import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, ArrowRight } from 'lucide-react';
