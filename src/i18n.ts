@@ -1,25 +1,73 @@
 
-import {notFound} from 'next/navigation';
 import {getRequestConfig} from 'next-intl/server';
  
-// Can be imported from a shared config
-const locales = ['en', 'it', 'sq'];
- 
-export default getRequestConfig(async ({locale}) => {
-  // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
- 
-  let messages;
-  try {
-    // The path needs to go up one level from `src` to the root `messages` directory.
-    messages = (await import(`../messages/${locale}.json`)).default;
-  } catch (error) {
-    // This will now catch if the file doesn't exist for a valid locale
-    // and show a 404 page, which is better than crashing the server.
-    notFound();
+// All messages are now inlined
+const messages = {
+  en: {
+    "SiteHeader": {
+      "home": "Home",
+      "services": "Services",
+      "gallery": "Gallery",
+      "consultation": "Virtual Consultation",
+      "blog": "Blog",
+      "contact": "Contact Us"
+    },
+    "LanguageSwitcher": {
+      "label": "Change language",
+      "en": "English",
+      "it": "Italiano",
+      "sq": "Shqip"
+    },
+    "SiteFooter": {
+      "quickLinks": "Quick Links",
+      "followUs": "Follow Us",
+      "tagline": "Crafting beauty, inspired by light."
+    }
+  },
+  it: {
+    "SiteHeader": {
+      "home": "Home",
+      "services": "Servizi",
+      "gallery": "Galleria",
+      "consultation": "Consulenza Virtuale",
+      "blog": "Blog",
+      "contact": "Contattaci"
+    },
+    "LanguageSwitcher": {
+      "label": "Cambia lingua",
+      "en": "Inglese",
+      "it": "Italiano",
+      "sq": "Albanese"
+    },
+    "SiteFooter": {
+      "quickLinks": "Link Rapidi",
+      "followUs": "Seguici",
+      "tagline": "Creando bellezza, ispirata dalla luce."
+    }
+  },
+  sq: {
+    "SiteHeader": {
+      "home": "Kryefaqja",
+      "services": "Shërbimet",
+      "gallery": "Galeria",
+      "consultation": "Konsultim Virtual",
+      "blog": "Blogu",
+      "contact": "Na Kontaktoni"
+    },
+    "LanguageSwitcher": {
+      "label": "Ndrysho gjuhën",
+      "en": "Anglisht",
+      "it": "Italisht",
+      "sq": "Shqip"
+    },
+    "SiteFooter": {
+      "quickLinks": "Lidhje të Shpejta",
+      "followUs": "Na Ndiqni",
+      "tagline": "Duke krijuar bukuri, e frymëzuar nga drita."
+    }
   }
+};
  
-  return {
-    messages
-  };
-});
+export default getRequestConfig(({locale}) => ({
+  messages: messages[locale as keyof typeof messages]
+}));
