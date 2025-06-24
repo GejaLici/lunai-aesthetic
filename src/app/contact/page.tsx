@@ -6,9 +6,9 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">
-        <h1 className="text-5xl font-headline font-bold text-primary">Contact Lunai Aesthetics</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Contact Zenith Aesthetics</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          We're here to answer your questions and help you schedule your appointment at Lunai Aesthetics.
+          We're here to answer your questions and help you schedule your appointment at Zenith Aesthetics.
         </p>
       </section>
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
               <MapPin className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Address</h3>
-                <p>Lunai Aesthetics</p>
+                <p>Zenith Aesthetics</p>
                 <p>123 Beauty Avenue, Suite 400</p>
                 <p>Aesthetics City, AC 54321</p>
                 <p className="text-sm text-muted-foreground mt-1">(Interactive map placeholder: A map will be displayed here in a future update.)</p>
@@ -52,7 +52,7 @@ export default function ContactPage() {
               <Mail className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p>contact@lunaiaesthetics.com</p>
+                <p>contact@zenithaesthetics.com</p>
               </div>
             </div>
             <div>
