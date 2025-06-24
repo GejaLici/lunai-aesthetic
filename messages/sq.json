@@ -13,5 +13,10 @@
     "en": "Anglisht",
     "it": "Italisht",
     "sq": "Shqip"
+  },
+  "SiteFooter": {
+    "quickLinks": "Lidhje të Shpejta",
+    "followUs": "Na Ndiqni",
+    "tagline": "Duke krijuar bukuri, e frymëzuar nga drita."
   }
 }

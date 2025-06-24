@@ -13,5 +13,10 @@
     "en": "Inglese",
     "it": "Italiano",
     "sq": "Albanese"
+  },
+  "SiteFooter": {
+    "quickLinks": "Link Rapidi",
+    "followUs": "Seguici",
+    "tagline": "Creando bellezza, ispirata dalla luce."
   }
 }

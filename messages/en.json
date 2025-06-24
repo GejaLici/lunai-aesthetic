@@ -13,5 +13,10 @@
     "en": "English",
     "it": "Italiano",
     "sq": "Shqip"
+  },
+  "SiteFooter": {
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "tagline": "Crafting beauty, inspired by light."
   }
 }
