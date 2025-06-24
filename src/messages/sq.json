@@ -1,0 +1,22 @@
+
+{
+  "SiteHeader": {
+    "home": "Kryefaqja",
+    "services": "Shërbimet",
+    "gallery": "Galeria",
+    "consultation": "Konsultim Virtual",
+    "blog": "Blogu",
+    "contact": "Na Kontaktoni"
+  },
+  "LanguageSwitcher": {
+    "label": "Ndrysho gjuhën",
+    "en": "Anglisht",
+    "it": "Italisht",
+    "sq": "Shqip"
+  },
+  "SiteFooter": {
+    "quickLinks": "Lidhje të Shpejta",
+    "followUs": "Na Ndiqni",
+    "tagline": "Duke krijuar bukuri, e frymëzuar nga drita."
+  }
+}

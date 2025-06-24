@@ -1,0 +1,22 @@
+
+{
+  "SiteHeader": {
+    "home": "Home",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "consultation": "Consulenza Virtuale",
+    "blog": "Blog",
+    "contact": "Contattaci"
+  },
+  "LanguageSwitcher": {
+    "label": "Cambia lingua",
+    "en": "Inglese",
+    "it": "Italiano",
+    "sq": "Albanese"
+  },
+  "SiteFooter": {
+    "quickLinks": "Link Rapidi",
+    "followUs": "Seguici",
+    "tagline": "Creando bellezza, ispirata dalla luce."
+  }
+}
