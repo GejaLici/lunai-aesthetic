@@ -1,10 +1,15 @@
 
+import {notFound} from 'next/navigation';
 import {getRequestConfig} from 'next-intl/server';
  
+// Can be imported from a shared config
+const locales = ['en', 'it', 'sq'];
+ 
 export default getRequestConfig(async ({locale}) => {
-  // The middleware is responsible for validating the locale, so this is the
-  // simplest and most robust way to configure the message loading.
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+ 
   return {
-    messages: (await import(`../messages/${locale}.json`)).default
+    messages: (await import(`./messages/${locale}.json`)).default
   };
 });
