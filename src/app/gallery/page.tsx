@@ -1,7 +1,7 @@
 
-import { redirect } from 'next/navigation';
+import { redirect } from 'next-intl/navigation';
 
 // This component is a placeholder to redirect to the default locale.
 export default function GalleryRedirectPage() {
-  redirect('/en/gallery');
+  redirect('/gallery');
 }

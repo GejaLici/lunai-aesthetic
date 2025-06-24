@@ -37,7 +37,7 @@ export function SiteHeader() {
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
                   <LogoIcon className="h-10 w-auto" />
-                  <span className="font-headline font-semibold text-lg">Lunai<br />Aesthetics</span>
+                  <span className="font-headline font-semibold text-lg">Zenith<br />Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link
@@ -59,13 +59,13 @@ export function SiteHeader() {
         </div>
         
         <div className="flex items-center justify-start flex-1 md:flex-none">
-            <Link href="/" className="flex items-center gap-2" aria-label="Lunai Aesthetics Home">
+            <Link href="/" className="flex items-center gap-2" aria-label="Zenith Aesthetics Home">
               <LogoIcon className="h-10 w-auto" />
               <span
                 className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
                 suppressHydrationWarning
               >
-                Lunai <br className="block md:hidden" /> Aesthetics
+                Zenith <br className="block md:hidden" /> Aesthetics
               </span>
             </Link>
         </div>

@@ -5,15 +5,19 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from "@/components/ui/toaster";
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {getMessages, unstable_setRequestLocale} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lunai Aesthetics - Expert Aesthetic Treatments',
-    template: '%s | Lunai Aesthetics',
+    default: 'Zenith Aesthetics - Expert Aesthetic Treatments',
+    template: '%s | Zenith Aesthetics',
   },
-  description: 'Lunai Aesthetics offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
+  description: 'Zenith Aesthetics offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
 };
+
+export function generateStaticParams() {
+  return [{locale: 'en'}, {locale: 'it'}, {locale: 'sq'}];
+}
 
 export default async function RootLayout({
   children,
@@ -22,7 +26,8 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: {locale: string};
 }) {
-  const messages = await getMessages({locale});
+  unstable_setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
     <html lang={locale} className="smooth-scroll">

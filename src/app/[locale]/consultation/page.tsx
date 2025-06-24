@@ -2,8 +2,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ConsultationForm } from "@/app/consultation/consultation-form";
 import { Lightbulb } from "lucide-react";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function ConsultationPage() {
+export default function ConsultationPage({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   return (
     <div className="max-w-2xl mx-auto">
       <section className="text-center py-8">

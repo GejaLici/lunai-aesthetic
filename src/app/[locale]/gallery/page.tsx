@@ -2,14 +2,16 @@
 import { allServices } from '@/lib/services';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function GalleryPage() {
+export default function GalleryPage({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   return (
     <div className="space-y-12">
       <section className="text-center py-8">
-        <h1 className="text-5xl font-headline font-bold text-primary">Visual Gallery at Lunai Aesthetics</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Visual Gallery at Zenith Aesthetics</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Witness the transformative results achieved at Lunai Aesthetics.
+          Witness the transformative results achieved at Zenith Aesthetics.
         </p>
         <p className="text-sm text-muted-foreground mt-2">
           (Patient confidentiality and consent are paramount. Images are illustrative placeholders.)

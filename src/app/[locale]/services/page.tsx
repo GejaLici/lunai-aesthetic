@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { Link } from 'next-intl/navigation';
 import { Button } from '@/components/ui/button';
 import type { LucideIcon } from 'lucide-react';
-import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, ArrowRight } from 'lucide-react'; // Import icons for dental subcategories
+import { Sparkles, Construction, AlignCenter, ClipboardCheck, Scissors, Baby, ArrowRight } from 'lucide-react';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 // Helper map for dental subcategory icons
 const subCategoryIcons: Record<string, LucideIcon | undefined> = {
@@ -30,13 +31,14 @@ function getShortDescription(description: string): string {
 }
 
 
-export default function ServicesPage() {
+export default function ServicesPage({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   return (
     <div className="space-y-8">
       <section className="text-center py-8 pb-8 border-b border-border/30">
-        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Lunai Aesthetics</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Zenith Aesthetics</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty at Lunai Aesthetics.
+          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty at Zenith Aesthetics.
         </p>
       </section>
 

@@ -5,8 +5,10 @@ import Image from 'next/image';
 import { Link } from 'next-intl/navigation';
 import { Newspaper } from 'lucide-react';
 import { placeholderPosts } from "@/lib/blog-posts";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function BlogPage() {
+export default function BlogPage({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   const featuredPost = placeholderPosts[0];
   const regularPosts = placeholderPosts.slice(1);
 
@@ -14,9 +16,9 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">
         <Newspaper className="h-16 w-16 text-accent mx-auto mb-4" />
-        <h1 className="text-5xl font-headline font-bold text-primary">Lunai Aesthetics Blog</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Zenith Aesthetics Blog</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Insights, tips, and news on aesthetic treatments and wellness from Lunai Aesthetics.
+          Insights, tips, and news on aesthetic treatments and wellness from Zenith Aesthetics.
         </p>
       </section>
 

@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { ArrowLeft, CalendarCheck2, HelpCircle, FileText, Users, Activity } from 'lucide-react';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 // Helper to generate generic FAQs
 const generateFaqs = (serviceName: string) => [
@@ -47,7 +48,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ServiceDetailPage({ params }: { params: { serviceId: string } }) {
+export default async function ServiceDetailPage({ params }: { params: { serviceId: string; locale: string } }) {
+  unstable_setRequestLocale(params.locale);
   const service = allServices.find(s => s.id === params.serviceId);
 
   if (!service) {
@@ -62,7 +64,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
         <Button variant="outline" asChild>
           <Link href="/services" className="inline-flex items-center text-accent hover:text-accent/80">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Return to All Expert Services at Lunai
+            Return to All Expert Services at Zenith
           </Link>
         </Button>
       </div>
@@ -72,7 +74,7 @@ export default async function ServiceDetailPage({ params }: { params: { serviceI
           <div className="relative w-full h-80 md:h-[500px]">
             <Image
               src={service.imageBefore} 
-              alt={`Illustrative image for ${service.name} at Lunai Aesthetics`}
+              alt={`Illustrative image for ${service.name} at Zenith Aesthetics`}
               fill
               className="object-cover"
               data-ai-hint={service.dataAiHint}
