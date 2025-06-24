@@ -1,11 +1,10 @@
 
 'use client';
-import Link from 'next-intl/link';
+import { Link, usePathname } from 'next-intl/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { LogoIcon } from '@/components/icons/logo-icon';
-import { usePathname } from 'next-intl/client';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './language-switcher';
@@ -37,7 +36,7 @@ export function SiteHeader() {
             <SheetContent side="left">
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
-                  <LogoIcon className="h-10 w-auto text-accent" />
+                  <LogoIcon className="h-10 w-auto" />
                   <span className="font-headline font-semibold text-lg">Lunai<br />Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
@@ -61,7 +60,7 @@ export function SiteHeader() {
         
         <div className="flex items-center justify-start flex-1 md:flex-none">
             <Link href="/" className="flex items-center gap-2" aria-label="Lunai Aesthetics Home">
-              <LogoIcon className="h-10 w-auto text-accent" />
+              <LogoIcon className="h-10 w-auto" />
               <span
                 className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
                 suppressHydrationWarning

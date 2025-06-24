@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
-import { saveContactMessage, type ContactFormData } from "./actions"; // Import the server action
+import { saveContactMessage, type ContactFormData } from "@/app/contact/actions"; // Import the server action
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),

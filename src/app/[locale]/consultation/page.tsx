@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ConsultationForm } from "./consultation-form";
+import { ConsultationForm } from "@/app/consultation/consultation-form";
 import { Lightbulb } from "lucide-react";
 
 export default function ConsultationPage() {

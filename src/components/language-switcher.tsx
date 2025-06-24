@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Languages } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { usePathname, useRouter } from 'next-intl/client';
+import { usePathname, useRouter } from 'next-intl/navigation';
 import { useTransition } from 'react';
 
 export default function LanguageSwitcher() {

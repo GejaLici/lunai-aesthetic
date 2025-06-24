@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ContactForm } from "./contact-form";
+import { ContactForm } from "@/app/contact/contact-form";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactPage() {
