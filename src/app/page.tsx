@@ -48,19 +48,19 @@ export default function HomePage() {
   const placeholderTestimonials = [
     {
       id: "1",
-      quote: "My experience at Zenith Aesthetics was phenomenal. The results exceeded my expectations, and the staff were incredibly professional and caring.",
+      quote: "My experience at Lunai Aesthetics was phenomenal. The results exceeded my expectations, and the staff were incredibly professional and caring.",
       name: "Jessica M.",
       stars: 5,
     },
     {
       id: "2",
-      quote: "I was nervous about my procedure, but the team at Zenith Aesthetics made me feel completely at ease. I'm thrilled with my new look!",
+      quote: "I was nervous about my procedure, but the team at Lunai Aesthetics made me feel completely at ease. I'm thrilled with my new look!",
       name: "David K.",
       stars: 5,
     },
     {
       id: "3",
-      quote: "From consultation to post-treatment, every step was handled with expertise. I highly recommend Zenith Aesthetics for anyone considering aesthetic treatments.",
+      quote: "From consultation to post-treatment, every step was handled with expertise. I highly recommend Lunai Aesthetics for anyone considering aesthetic treatments.",
       name: "Sarah L.",
       stars: 5,
     },
@@ -71,18 +71,18 @@ export default function HomePage() {
       icon: UsersRound,
       title: "Expert & Personalized Aesthetic Care",
       description: "Our highly skilled professionals provide tailored aesthetic treatments, focusing on your unique goals to ensure exceptional, natural-looking outcomes and your utmost satisfaction.",
-      moreInfo: "This includes a comprehensive consultation, advanced treatment planning, ongoing support, and a steadfast commitment to your well-being at every stage of your aesthetic journey at Zenith Aesthetics."
+      moreInfo: "This includes a comprehensive consultation, advanced treatment planning, ongoing support, and a steadfast commitment to your well-being at every stage of your aesthetic journey at Lunai Aesthetics."
     },
     {
       icon: Cpu,
       title: "Advanced State-of-the-Art Technology",
-      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe, effective, and minimally invasive results with precision at Zenith Aesthetics.",
+      description: "We utilize the latest advancements and cutting-edge equipment in aesthetic medicine to deliver safe, effective, and minimally invasive results with precision at Lunai Aesthetics.",
       moreInfo: "Our investment in leading technology ensures you benefit from procedures that are not only advanced but also prioritize your comfort, safety, and achieve superior results."
     },
     {
       icon: Leaf,
       title: "Commitment to Natural, Enhancing Results",
-      description: "Our core philosophy at Zenith Aesthetics centers on enhancing your inherent beauty, aiming for subtle yet significant improvements that look authentic and feel like your best self.",
+      description: "Our core philosophy at Lunai Aesthetics centers on enhancing your inherent beauty, aiming for subtle yet significant improvements that look authentic and feel like your best self.",
       moreInfo: "We collaborate with you to create a bespoke treatment plan that respects your individuality, ensuring results that reflect the best version of yourself, naturally."
     },
   ];
@@ -112,10 +112,10 @@ export default function HomePage() {
         )}
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-            Zenith Aesthetics: Premier Solutions for Lasting Beauty & Confidence
+            Lunai Aesthetics: Premier Solutions for Lasting Beauty & Confidence
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-            Experience transformative aesthetic and dental treatments with our expert team at Zenith Aesthetics. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
+            Experience transformative aesthetic and dental treatments with our expert team at Lunai Aesthetics. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
@@ -134,21 +134,21 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 items-center">
             <div className="p-6 md:p-8">
               <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-3xl font-headline text-primary">Welcome to Zenith Aesthetics</CardTitle>
+                <CardTitle className="text-3xl font-headline text-primary">Welcome to Lunai Aesthetics</CardTitle>
               </CardHeader>
               <CardContent className="p-0 text-lg text-card-foreground/90 space-y-4">
                 <p>
-                  At Zenith Aesthetics, we believe everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic and dental treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
+                  At Lunai Aesthetics, we believe everyone deserves to feel confident and radiant. Our state-of-the-art clinic offers a comprehensive suite of advanced aesthetic and dental treatments, delivered by highly experienced professionals dedicated to achieving exceptional, natural-looking results tailored to you.
                 </p>
                 <p>
-                  We seamlessly integrate medical artistry with the latest technological advancements to provide personalized care that aligns with your unique aesthetic aspirations. Your journey to enhanced beauty and self-assurance starts here at Zenith Aesthetics.
+                  We seamlessly integrate medical artistry with the latest technological advancements to provide personalized care that aligns with your unique aesthetic aspirations. Your journey to enhanced beauty and self-assurance starts here at Lunai Aesthetics.
                 </p>
               </CardContent>
             </div>
             <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full transition-transform duration-300 hover:scale-105">
               <Image
                 src="/images/about-us.jpeg"
-                alt="Welcoming and professional clinic interior at Zenith Aesthetics"
+                alt="Welcoming and professional clinic interior at Lunai Aesthetics"
                 fill
                 className="object-cover"
                 data-ai-hint="clinic interior"
@@ -161,7 +161,7 @@ export default function HomePage() {
       {/* Featured Services Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Our Premier Aesthetic & Dental Services at Zenith
+          Our Premier Aesthetic & Dental Services at Lunai
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {featuredServiceCategories.map((category, index) => (
@@ -190,7 +190,7 @@ export default function HomePage() {
       {/* Patient Transformations Section - Chosen Design */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Witness Transformative Results at Zenith Aesthetics
+          Witness Transformative Results at Lunai Aesthetics
         </h2>
         {isClient && (
           <DynamicCarousel
@@ -210,7 +210,7 @@ export default function HomePage() {
                     >
                       <Image
                         src={transform.afterImageUrl} 
-                        alt={`Showcasing results for ${transform.treatment} at Zenith Aesthetics`}
+                        alt={`Showcasing results for ${transform.treatment} at Lunai Aesthetics`}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-110"
                         data-ai-hint={transform.afterHint}
@@ -248,7 +248,7 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Why Entrust Zenith Aesthetics?
+          Why Entrust Lunai Aesthetics?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {whyChooseUsData.map((item, index) => (
@@ -272,21 +272,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Step Inside Zenith Aesthetics Section */}
+      {/* Step Inside Lunai Aesthetics Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-          Experience the Zenith Difference
+          Experience the Lunai Difference
         </h2>
         <div className="text-center mb-10 max-w-3xl mx-auto animate-fadeIn" style={{ animationDelay: '0.2s' }}>
           <p className="text-lg text-foreground/80">
-            Step into a sanctuary of calm and sophistication at Zenith Aesthetics, where advanced aesthetic technology meets unparalleled patient care. Our clinic is meticulously designed with your comfort, privacy, and well-being as our foremost priorities, ensuring a serene and welcoming atmosphere for every visit.
+            Step into a sanctuary of calm and sophistication at Lunai Aesthetics, where advanced aesthetic technology meets unparalleled patient care. Our clinic is meticulously designed with your comfort, privacy, and well-being as our foremost priorities, ensuring a serene and welcoming atmosphere for every visit.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
             <Image
               src="/images/clinic.png"
-              alt="Luxurious and welcoming clinic reception area at Zenith Aesthetics"
+              alt="Luxurious and welcoming clinic reception area at Lunai Aesthetics"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="clinic reception"
@@ -295,7 +295,7 @@ export default function HomePage() {
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
             <Image
               src="/images/clinic2.png"
-              alt="Modern, clean, and advanced treatment room at Zenith Aesthetics"
+              alt="Modern, clean, and advanced treatment room at Lunai Aesthetics"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="treatment room"
@@ -307,7 +307,7 @@ export default function HomePage() {
       {/* Client Testimonials Section */}
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-          Valued Client Experiences at Zenith
+          Valued Client Experiences at Lunai
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {placeholderTestimonials.map((testimonial, index) => (
@@ -337,7 +337,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 pb-12">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary flex items-center justify-center">
           <Newspaper className="h-10 w-10 text-accent mr-3" />
-          Expert Insights from Our Zenith Blog
+          Expert Insights from Our Lunai Blog
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestBlogPosts.map((post, index) => (
@@ -370,7 +370,7 @@ export default function HomePage() {
         </div>
         <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/blog">Explore All Zenith Aesthetics Blog Posts</Link>
+            <Link href="/blog">Explore All Lunai Aesthetics Blog Posts</Link>
           </Button>
         </div>
       </section>
@@ -378,9 +378,9 @@ export default function HomePage() {
       {/* Call to Action for Consultation */}
       <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-headline font-bold mb-6">Ready to Discover Your Best Self with Zenith?</h2>
+          <h2 className="text-4xl font-headline font-bold mb-6">Ready to Discover Your Best Self with Lunai?</h2>
           <p className="text-xl mb-8">
-            Our advanced AI-powered virtual consultant is ready to guide you towards your ideal aesthetic or dental treatment at Zenith Aesthetics.
+            Our advanced AI-powered virtual consultant is ready to guide you towards your ideal aesthetic or dental treatment at Lunai Aesthetics.
           </p>
           <Button asChild size="lg" variant="outline" className="bg-primary-foreground text-primary border-primary-foreground hover:bg-primary-foreground/90 hover:text-primary">
             <Link href="/consultation">Begin Your Expert Virtual Consultation</Link>

@@ -71,9 +71,9 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">
         <Newspaper className="h-16 w-16 text-accent mx-auto mb-4" />
-        <h1 className="text-5xl font-headline font-bold text-primary">Zenith Aesthetics Blog</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Lunai Aesthetics Blog</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Insights, tips, and news on aesthetic treatments and wellness from Zenith Aesthetics.
+          Insights, tips, and news on aesthetic treatments and wellness from Lunai Aesthetics.
         </p>
       </section>
 

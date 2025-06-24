@@ -6,10 +6,10 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Zenith Aesthetics - Expert Aesthetic Treatments',
-    template: '%s | Zenith Aesthetics',
+    default: 'Lunai Aesthetics - Expert Aesthetic Treatments',
+    template: '%s | Lunai Aesthetics',
   },
-  description: 'Zenith Aesthetics offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
+  description: 'Lunai Aesthetics offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
 };
 
 export default function RootLayout({

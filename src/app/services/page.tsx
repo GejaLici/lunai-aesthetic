@@ -34,9 +34,9 @@ export default function ServicesPage() {
   return (
     <div className="space-y-8">
       <section className="text-center py-8 pb-8 border-b border-border/30">
-        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Zenith Aesthetics</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">Comprehensive Aesthetic Services at Lunai Aesthetics</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty at Zenith Aesthetics.
+          Explore our extensive range of advanced aesthetic treatments, from facial rejuvenation and body contouring to specialized dental aesthetics, all meticulously tailored to meet your unique goals and enhance your natural beauty at Lunai Aesthetics.
         </p>
       </section>
 

@@ -23,13 +23,13 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-md">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" aria-label="Zenith Aesthetics Home">
+        <Link href="/" className="flex items-center gap-2" aria-label="Lunai Aesthetics Home">
           <LogoIcon className="h-10 w-auto text-accent" />
           <span
             className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
             suppressHydrationWarning
           >
-            Zenith <br className="block md:hidden" /> Aesthetics
+            Lunai <br className="block md:hidden" /> Aesthetics
           </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-1">
@@ -60,7 +60,7 @@ export function SiteHeader() {
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
                   <LogoIcon className="h-10 w-auto text-accent" />
-                  <span className="font-headline font-semibold text-lg">Zenith<br />Aesthetics</span>
+                  <span className="font-headline font-semibold text-lg">Lunai<br />Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link

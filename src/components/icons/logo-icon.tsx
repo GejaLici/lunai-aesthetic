@@ -13,10 +13,10 @@ export const LogoIcon: React.FC<LogoIconProps> = ({ className, ...props }) => (
       className={cn(className)}
       {...props}
     >
-      <title>Zenith Aesthetics</title>
-      <path d="M20,5 L40,5 L20,45 L40,45" stroke="hsl(var(--accent))" strokeWidth="4" fill="none" />
+      <title>Lunai Aesthetics</title>
+      <path d="M20,5 L20,45 L40,45" stroke="hsl(var(--accent))" strokeWidth="4" fill="none" />
       <text x="50" y="35" fontFamily="Rubik, sans-serif" fontSize="24" fontWeight="bold" fill="hsl(var(--foreground))">
-        Zenith
+        Lunai
       </text>
     </svg>
 );
