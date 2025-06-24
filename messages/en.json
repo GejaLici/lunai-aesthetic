@@ -1,0 +1,17 @@
+
+{
+  "SiteHeader": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "consultation": "Virtual Consultation",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+  "LanguageSwitcher": {
+    "label": "Change language",
+    "en": "English",
+    "it": "Italiano",
+    "sq": "Shqip"
+  }
+}
