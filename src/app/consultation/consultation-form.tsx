@@ -41,7 +41,6 @@ export function ConsultationForm() {
       const response = await virtualConsultation({ concerns: data.concerns });
       setResult(response);
     } catch (error) {
-      console.error("Virtual consultation error:", error);
       toast({
         title: "Error",
         description: "Failed to get consultation. Please try again.",

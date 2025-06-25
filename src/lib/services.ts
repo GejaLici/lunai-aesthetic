@@ -627,5 +627,3 @@ export const serviceData: ServiceCategory[] = [
 export const allServices: ServiceItem[] = serviceData.reduce((acc, category) => {
   return acc.concat(category.services);
 }, [] as ServiceItem[]);
-
-    

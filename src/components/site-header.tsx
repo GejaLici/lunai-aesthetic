@@ -1,27 +1,24 @@
 
 'use client';
-import { Link } from 'next-intl/link';
-import { usePathname } from 'next-intl/navigation';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { LogoIcon } from '@/components/icons/logo-icon';
 import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
-import LanguageSwitcher from './language-switcher';
 
 const navLinks = [
-  { href: '/', labelKey: 'home' },
-  { href: '/services', labelKey: 'services' },
-  { href: '/gallery', labelKey: 'gallery' },
-  { href: '/consultation', labelKey: 'consultation' },
-  { href: '/blog', labelKey: 'blog' },
-  { href: '/contact', labelKey: 'contact' },
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/consultation', label: 'Virtual Consultation' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact Us' },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const t = useTranslations('SiteHeader');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-md">
@@ -51,7 +48,7 @@ export function SiteHeader() {
                         : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                     )}
                   >
-                    {t(link.labelKey)}
+                    {link.label}
                   </Link>
                 ))}
               </nav>
@@ -83,13 +80,13 @@ export function SiteHeader() {
                   : "text-foreground/70 hover:bg-primary/5 hover:text-primary" 
               )}
             >
-              {t(link.labelKey)}
+              {link.label}
             </Link>
           ))}
         </nav>
         
         <div className="flex items-center justify-end flex-1 md:flex-none">
-            <LanguageSwitcher />
+            {/* Language Switcher was here */}
         </div>
       </div>
     </header>

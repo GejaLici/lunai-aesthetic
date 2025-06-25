@@ -1,5 +1,6 @@
 
 import {getRequestConfig} from 'next-intl/server';
+import {notFound} from 'next/navigation';
  
 // All messages are now inlined
 const messages = {
@@ -67,7 +68,15 @@ const messages = {
     }
   }
 };
+
+const locales = ['en', 'it', 'sq'];
  
-export default getRequestConfig(({locale}) => ({
-  messages: messages[locale as keyof typeof messages]
-}));
+export default getRequestConfig(async ({locale}) => {
+  if (!locales.includes(locale)) {
+    notFound();
+  }
+
+  return {
+    messages: messages[locale as keyof typeof messages]
+  };
+});
