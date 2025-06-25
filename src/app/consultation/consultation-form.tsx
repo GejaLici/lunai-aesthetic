@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -6,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { virtualConsultation, type VirtualConsultationOutput } from "@/ai/flows/virtual-consultation";
 import { Loader2, Sparkles } from "lucide-react";
@@ -15,8 +16,8 @@ import { useToast } from "@/hooks/use-toast";
 const FormSchema = z.object({
   concerns: z.string().min(20, {
     message: "Please describe your concerns in at least 20 characters.",
-  }).max(1000, {
-    message: "Your description should not exceed 1000 characters.",
+  }).max(2000, {
+    message: "Your description should not exceed 2000 characters.",
   }),
 });
 
@@ -41,9 +42,10 @@ export function ConsultationForm() {
       const response = await virtualConsultation({ concerns: data.concerns });
       setResult(response);
     } catch (error) {
+      console.error(error);
       toast({
         title: "Error",
-        description: "Failed to get consultation. Please try again.",
+        description: "Failed to get suggestions. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -60,11 +62,11 @@ export function ConsultationForm() {
             name="concerns"
             render={({ field }) => (
               <FormItem>
-                <FormLabel htmlFor="concerns" className="text-lg">Describe your concerns and preferences</FormLabel>
+                <FormLabel htmlFor="concerns" className="text-lg">Describe your aesthetic concerns and goals</FormLabel>
                 <FormControl>
                   <Textarea
                     id="concerns"
-                    placeholder="e.g., I'm concerned about fine lines around my eyes and a lack of volume in my cheeks. I prefer non-surgical options if possible..."
+                    placeholder="e.g., I'm concerned about fine lines around my eyes and a loss of volume in my cheeks..."
                     className="min-h-[150px] text-base"
                     {...field}
                   />
@@ -73,16 +75,16 @@ export function ConsultationForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" disabled={isLoading} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button type="submit" disabled={isLoading} className="w-full">
             {isLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Getting Suggestions...
+                Analyzing...
               </>
             ) : (
               <>
                 <Sparkles className="mr-2 h-4 w-4" />
-                Get Personalized Suggestions
+                Get AI-Powered Suggestions
               </>
             )}
           </Button>
@@ -90,11 +92,11 @@ export function ConsultationForm() {
       </Form>
 
       {result && (
-        <Card className="mt-8 bg-background/50 shadow-md">
+        <Card className="mt-8 bg-secondary/50 shadow-md">
           <CardHeader>
             <CardTitle className="font-headline text-xl text-accent flex items-center">
               <Sparkles className="mr-2 h-5 w-5" />
-              Your Personalized Suggestions
+              Initial Thoughts & Potential Directions
             </CardTitle>
           </CardHeader>
           <CardContent>

@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
-import { LogoIcon } from '@/components/icons/logo-icon';
+import { Menu, Stethoscope } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -14,14 +13,14 @@ const navLinks = [
   { href: '/gallery', label: 'Gallery' },
   { href: '/consultation', label: 'Virtual Consultation' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-md">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center">
         <div className="md:hidden">
           <Sheet>
@@ -31,11 +30,11 @@ export function SiteHeader() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
+            <SheetContent side="left" className="bg-background">
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
-                  <LogoIcon className="h-10 w-auto" />
-                  <span className="font-headline font-semibold text-lg">Zenith<br />Aesthetics</span>
+                  <Stethoscope className="h-8 w-8 text-primary" />
+                  <span className="font-headline font-bold text-xl">Zenith Aesthetics</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link
@@ -58,12 +57,9 @@ export function SiteHeader() {
         
         <div className="flex items-center justify-start flex-1 md:flex-none">
             <Link href="/" className="flex items-center gap-2" aria-label="Zenith Aesthetics Home">
-              <LogoIcon className="h-10 w-auto" />
-              <span
-                className="font-headline text-base md:text-2xl font-bold text-foreground leading-snug"
-                suppressHydrationWarning
-              >
-                Zenith <br className="block md:hidden" /> Aesthetics
+              <Stethoscope className="h-8 w-8 text-primary" />
+              <span className="font-headline text-2xl font-bold text-foreground hidden sm:inline">
+                Zenith Aesthetics
               </span>
             </Link>
         </div>
@@ -75,7 +71,7 @@ export function SiteHeader() {
               href={link.href}
               className={cn(
                 "px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ease-in-out", 
-                pathname === link.href
+                (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href)))
                   ? "bg-primary/10 text-primary font-semibold" 
                   : "text-foreground/70 hover:bg-primary/5 hover:text-primary" 
               )}
@@ -86,7 +82,9 @@ export function SiteHeader() {
         </nav>
         
         <div className="flex items-center justify-end flex-1 md:flex-none">
-            {/* Language Switcher was here */}
+             <Button asChild>
+                <Link href="/contact">Book Now</Link>
+            </Button>
         </div>
       </div>
     </header>

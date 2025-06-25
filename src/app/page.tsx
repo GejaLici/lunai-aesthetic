@@ -21,7 +21,6 @@ const DynamicCarouselItem = dynamic(() => import('@/components/ui/carousel').the
 const DynamicCarouselPrevious = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselPrevious), { ssr: false });
 const DynamicCarouselNext = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselNext), { ssr: false });
 
-
 export default function HomePage() {
   const faceCategory = serviceData.find(category => category.id === 'face');
   const bodyCategory = serviceData.find(category => category.id === 'body');
@@ -93,28 +92,21 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-lg shadow-xl overflow-hidden">
-        {isClient && (
-          <>
-            <video
-              key="hero-video"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute z-0 w-full h-full object-cover"
-            >
-              <source src="/videos/hero-background.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 bg-black/60 z-10"></div>
-          </>
-        )}
+      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-gradient-to-br from-primary/10 via-background to-background rounded-lg shadow-xl overflow-hidden">
+        <Image
+          src="https://placehold.co/1920x1080.png"
+          alt="Serene and modern aesthetic clinic background"
+          fill
+          priority
+          className="object-cover z-0 opacity-20"
+          data-ai-hint="serene modern"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
             Zenith Aesthetics: Premier Solutions for Lasting Beauty & Confidence
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
             Experience transformative aesthetic and dental treatments with our expert team at Zenith Aesthetics. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
@@ -147,7 +139,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full transition-transform duration-300 hover:scale-105">
               <Image
-                src="/images/about-us.jpeg"
+                src="https://placehold.co/800x600.png"
                 alt="Welcoming and professional clinic interior at Zenith Aesthetics"
                 fill
                 className="object-cover"
@@ -221,7 +213,7 @@ export default function HomePage() {
                         <Button
                           asChild
                           variant="link"
-                          className="text-accent-foreground p-0 hover:text-accent-foreground/80 font-semibold text-sm"
+                          className="text-white p-0 hover:text-white/80 font-semibold text-sm"
                         >
                           <Link href={`/gallery#${transform.id}`}>
                             View Result <ArrowRight className="ml-1 h-3 w-3" />
@@ -285,7 +277,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
             <Image
-              src="/images/clinic.png"
+              src="https://placehold.co/800x600.png"
               alt="Luxurious and welcoming clinic reception area at Zenith Aesthetics"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -294,7 +286,7 @@ export default function HomePage() {
           </div>
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
             <Image
-              src="/images/clinic2.png"
+              src="https://placehold.co/800x600.png"
               alt="Modern, clean, and advanced treatment room at Zenith Aesthetics"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -315,10 +307,10 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex">
                   {[...Array(testimonial.stars)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-accent fill-accent" />
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
                   ))}
                   {[...Array(5 - testimonial.stars)].map((_, i) => (
-                    <Star key={`empty-${i}`} className="h-5 w-5 text-accent" />
+                    <Star key={`empty-${i}`} className="h-5 w-5 text-yellow-400" />
                   ))}
                 </div>
               </CardHeader>

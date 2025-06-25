@@ -47,7 +47,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ServiceDetailPage({ params }: { params: { serviceId: string } }) {
+export default async function ServiceDetailPage({ params }: { params: { serviceId: string; } }) {
   const service = allServices.find(s => s.id === params.serviceId);
 
   if (!service) {

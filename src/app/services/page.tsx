@@ -45,14 +45,7 @@ export default function ServicesPage() {
           // Special handling for DENTISTRY category
           const dentalServicesBySubCategory: Record<string, ServiceItem[]> = {};
           category.services.forEach(service => {
-            // Use more descriptive titles for subcategories if available
-            const subCategoryKey = service.dentalSubCategoryTitle === "AESTHETICS" ? "AESTHETIC DENTISTRY" :
-                                   service.dentalSubCategoryTitle === "PROSTHETICS" ? "PROSTHODONTICS" :
-                                   service.dentalSubCategoryTitle === "THERAPY" ? "GENERAL & RESTORATIVE DENTISTRY" :
-                                   service.dentalSubCategoryTitle === "SURGERY" ? "ORAL SURGERY" :
-                                   service.dentalSubCategoryTitle === "PEDODONTICS (CHILDREN'S DENTISTRY)" ? "PEDIATRIC DENTISTRY (PEDODONTICS)" :
-                                   service.dentalSubCategoryTitle || "General Dentistry";
-            
+            const subCategoryKey = service.dentalSubCategoryTitle || "General Dentistry";
             if (!dentalServicesBySubCategory[subCategoryKey]) {
               dentalServicesBySubCategory[subCategoryKey] = [];
             }
@@ -73,9 +66,9 @@ export default function ServicesPage() {
 
                 return (
                   <div key={subCategoryTitle} className="mb-8 pl-4 border-l-2 border-primary/20">
-                    <div className="flex items-center p-3 mb-4 rounded-md bg-secondary/20 shadow-sm">
-                         {SubCategoryIcon && <SubCategoryIcon className="h-8 w-8 text-primary/80 mr-3 flex-shrink-0" />}
-                         <h3 className="text-2xl font-headline text-primary/90">{subCategoryTitle}</h3>
+                    <div className="flex items-center p-3 mb-4 rounded-md bg-secondary shadow-sm">
+                         {SubCategoryIcon && <SubCategoryIcon className="h-8 w-8 text-primary mr-3 flex-shrink-0" />}
+                         <h3 className="text-2xl font-headline text-primary">{subCategoryTitle}</h3>
                     </div>
 
                     {operations.length > 0 && (
@@ -195,7 +188,7 @@ export default function ServicesPage() {
               {operations.length > 0 && (
                 <>
                   {(treatments.length > 0 || unclassified.length > 0) && (
-                    <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Surgical Procedures</h3>
+                    <h3 className="text-2xl font-headline text-primary mb-4 ml-2">Surgical Procedures</h3>
                   )}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     {operations.map((service) => (
@@ -229,7 +222,7 @@ export default function ServicesPage() {
               {treatments.length > 0 && (
                 <>
                   {(operations.length > 0 || unclassified.length > 0) && (
-                    <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Non-Surgical Treatments</h3>
+                    <h3 className="text-2xl font-headline text-primary mb-4 ml-2">Non-Surgical Treatments</h3>
                   )}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     {treatments.map((service) => (
@@ -263,7 +256,7 @@ export default function ServicesPage() {
               {unclassified.length > 0 && (
                    <>
                    { (operations.length > 0 || treatments.length > 0) && (
-                      <h3 className="text-2xl font-headline text-primary/80 mb-4 ml-2">Other Specialized Services</h3>
+                      <h3 className="text-2xl font-headline text-primary mb-4 ml-2">Other Specialized Services</h3>
                    )}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {unclassified.map((service) => (

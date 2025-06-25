@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
-import { saveContactMessage, type ContactFormData } from "@/app/contact/actions"; // Import the server action
+import { saveContactMessage, type ContactFormData } from "@/app/contact/actions";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -19,8 +19,6 @@ const contactFormSchema = z.object({
   phone: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message cannot exceed 500 characters."),
 });
-
-// Type ContactFormData is now imported from actions.ts
 
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -48,11 +46,8 @@ export function ContactForm() {
       });
       form.reset();
     } else {
-      // Handle server-side validation errors or other errors
       let description = result.message || "An unexpected error occurred.";
       if (result.errors) {
-        // Construct a more detailed error message from validation errors
-        // For simplicity, we'll just show the first error for each field
         const errorMessages = Object.values(result.errors).map(errArray => errArray?.[0]).filter(Boolean);
         if (errorMessages.length > 0) {
           description = errorMessages.join(' ');
@@ -128,7 +123,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isLoading} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+        <Button type="submit" disabled={isLoading} className="w-full">
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />

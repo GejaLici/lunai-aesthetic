@@ -2,8 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
-import { LogoIcon } from '@/components/icons/logo-icon';
+import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
 
 export function SiteFooter() {
 
@@ -13,11 +12,11 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Zenith Aesthetics Home">
-              <LogoIcon className="h-10 w-auto" />
+               <Stethoscope className="h-8 w-8 text-primary" />
               <span className="font-headline text-xl font-bold">Zenith Aesthetics</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Crafting beauty, inspired by light.
+              Crafting beauty, inspired by science.
             </p>
           </div>
           <div>
@@ -25,7 +24,7 @@ export function SiteFooter() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="/gallery" className="hover:text-primary transition-colors">Gallery</Link></li>
-              <li><Link href="/consultation" className="hover:text-primary transition-colors">Virtual Consultation</Link></li>
+              <li><Link href="/consultation" className="hover:text-primary transition-colors">Consultation</Link></li>
               <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
             </ul>
@@ -33,23 +32,20 @@ export function SiteFooter() {
           <div>
             <h3 className="font-headline text-lg font-semibold mb-3">Follow Us</h3>
             <div className="flex space-x-4">
-              <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-accent transition-colors">
-                <Facebook size={24} />
-              </Link>
-              <Link href="#" aria-label="Instagram" className="text-muted-foreground hover:text-accent transition-colors">
-                <Instagram size={24} />
-              </Link>
               <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-accent transition-colors">
                 <Twitter size={24} />
+              </Link>
+              <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-accent transition-colors">
+                <Linkedin size={24} />
+              </Link>
+              <Link href="#" aria-label="GitHub" className="text-muted-foreground hover:text-accent transition-colors">
+                <Github size={24} />
               </Link>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
               Zenith Aesthetics<br />
-              123 Beauty Ave, Suite 400<br />
+              123 Beauty Avenue, Suite 400<br />
               Aesthetics City, AC 54321
-            </p>
-            <p className="text-sm text-muted-foreground mt-2">
-              (123) 456-7890
             </p>
           </div>
         </div>

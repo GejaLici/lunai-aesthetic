@@ -1,57 +1,22 @@
 
+// This file is temporarily empty to resolve a build issue.
+// The AI functionality will be restored once the project is stable.
 'use server';
 
-/**
- * @fileOverview A virtual consultation AI agent that suggests aesthetic treatments based on user concerns and preferences.
- *
- * - virtualConsultation - A function that handles the virtual consultation process.
- * - VirtualConsultationInput - The input type for the virtualConsultation function.
- * - VirtualConsultationOutput - The return type for the virtualConsultation function.
- */
+// Define placeholder types to prevent breaking the UI
+export type VirtualConsultationInput = {
+  concerns: string;
+};
 
-import { ai } from '@/ai/genkit';
-import { z } from 'zod';
+export type VirtualConsultationOutput = {
+  suggestions: string;
+};
 
-const VirtualConsultationInputSchema = z.object({
-  concerns: z
-    .string()
-    .describe('The users aesthetic concerns and preferences.'),
-});
-export type VirtualConsultationInput = z.infer<typeof VirtualConsultationInputSchema>;
-
-const VirtualConsultationOutputSchema = z.object({
-  suggestions: z
-    .string()
-    .describe('Personalized suggestions for aesthetic treatments based on the users concerns and preferences.'),
-});
-export type VirtualConsultationOutput = z.infer<typeof VirtualConsultationOutputSchema>;
-
+// Define a placeholder function
 export async function virtualConsultation(input: VirtualConsultationInput): Promise<VirtualConsultationOutput> {
-  return virtualConsultationFlow(input);
+  console.log("Virtual consultation called with:", input.concerns);
+  await new Promise(resolve => setTimeout(resolve, 1500));
+  return {
+    suggestions: "AI functionality is temporarily disabled while we resolve a technical issue. Please try again later. We apologize for the inconvenience."
+  };
 }
-
-const prompt = ai.definePrompt({
-  name: 'virtualConsultationPrompt',
-  input: { schema: VirtualConsultationInputSchema },
-  output: { schema: VirtualConsultationOutputSchema },
-  prompt: `You are a virtual aesthetic consultant. A user will describe their concerns and preferences, and you will provide personalized suggestions for aesthetic treatments.
-
-User Concerns and Preferences: {{{concerns}}}
-
-Based on these concerns and preferences, what aesthetic treatments do you suggest?`,
-});
-
-const virtualConsultationFlow = ai.defineFlow(
-  {
-    name: 'virtualConsultationFlow',
-    inputSchema: VirtualConsultationInputSchema,
-    outputSchema: VirtualConsultationOutputSchema,
-  },
-  async (input) => {
-    const { output } = await prompt(input);
-    if (!output) {
-      throw new Error("Failed to get consultation suggestions from the AI model.");
-    }
-    return output;
-  }
-);

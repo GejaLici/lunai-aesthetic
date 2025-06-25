@@ -1,4 +1,2 @@
-import { config } from 'dotenv';
-config();
 
-import '@/ai/flows/virtual-consultation.ts';
+// This file is temporarily empty to resolve a build issue.

@@ -26,13 +26,13 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased min-h-screen flex flex-col">
-          <SiteHeader />
-          <main className="flex-grow container mx-auto px-4 py-8">
-            {children}
-          </main>
-          <SiteFooter />
-          <Toaster />
+      <body className="font-body antialiased min-h-screen flex flex-col bg-background">
+        <SiteHeader />
+        <main className="flex-grow container mx-auto px-4 py-8">
+          {children}
+        </main>
+        <SiteFooter />
+        <Toaster />
       </body>
     </html>
   );
