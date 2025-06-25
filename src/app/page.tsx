@@ -141,7 +141,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full transition-transform duration-300 hover:scale-105">
               <Image
-                src="https://placehold.co/800x600.png"
+                src="/images/about-us.jpeg"
                 alt="Welcoming and professional clinic interior at LUNAI"
                 fill
                 className="object-cover"
