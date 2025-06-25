@@ -100,7 +100,7 @@ export default function HomePage() {
           playsInline
           className="absolute z-0 w-full h-full object-cover opacity-20"
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-wavy-futuristic-surface-4414-large.mp4" type="video/mp4" />
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
