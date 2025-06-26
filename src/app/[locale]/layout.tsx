@@ -2,6 +2,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
+import { Toaster } from '@/components/ui/toaster';
 
 export default async function LocaleLayout({
   children,
@@ -19,6 +20,7 @@ export default async function LocaleLayout({
         {children}
       </main>
       <SiteFooter />
+      <Toaster />
     </NextIntlClientProvider>
   );
 }
