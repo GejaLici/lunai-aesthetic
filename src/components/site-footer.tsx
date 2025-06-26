@@ -1,10 +1,13 @@
 
 'use client';
 
-import Link from 'next/link';
+import {Link} from 'next-intl';
 import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function SiteFooter() {
+  const t = useTranslations('SiteFooter');
+  const navT = useTranslations('SiteHeader');
 
   return (
     <footer className="border-t border-border/40 bg-card text-card-foreground">
@@ -16,21 +19,21 @@ export function SiteFooter() {
               <span className="font-headline text-xl font-bold">LUNAI</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Crafting beauty, inspired by science.
+              {t('tagline')}
             </p>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-3">Quick Links</h3>
+            <h3 className="font-headline text-lg font-semibold mb-3">{t('quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/gallery" className="hover:text-primary transition-colors">Gallery</Link></li>
-              <li><Link href="/consultation" className="hover:text-primary transition-colors">Consultation</Link></li>
-              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">{navT('services')}</Link></li>
+              <li><Link href="/gallery" className="hover:text-primary transition-colors">{navT('gallery')}</Link></li>
+              <li><Link href="/consultation" className="hover:text-primary transition-colors">{navT('consultation')}</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">{navT('blog')}</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">{navT('contact')}</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-3">Follow Us</h3>
+            <h3 className="font-headline text-lg font-semibold mb-3">{t('followUs')}</h3>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-accent transition-colors">
                 <Twitter size={24} />
@@ -50,7 +53,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} LUNAI. All rights reserved. Website by Firebase Studio.
+          &copy; {t('copyright', {year: new Date().getFullYear()})}
         </div>
       </div>
     </footer>
