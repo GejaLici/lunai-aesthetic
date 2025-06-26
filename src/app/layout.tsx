@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { defaultLocale } from '@/i18n';
 
 export const metadata: Metadata = {
   title: {
@@ -12,13 +13,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params: {locale}
 }: {
   children: React.ReactNode;
-  params: {locale: string};
 }) {
   return (
-    <html lang={locale} className="smooth-scroll">
+    <html lang={defaultLocale} className="smooth-scroll">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

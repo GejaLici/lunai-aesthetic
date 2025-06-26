@@ -1,7 +1,7 @@
 
 'use client';
 
-import {Link} from 'next-intl';
+import {Link} from 'next-intl/navigation';
 import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 

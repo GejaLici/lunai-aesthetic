@@ -1,6 +1,5 @@
-
 'use client';
-import {Link, usePathname} from 'next-intl';
+import { Link, usePathname } from 'next-intl/navigation';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
