@@ -98,7 +98,7 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          className="absolute z-0 w-full h-full object-cover opacity-25"
+          className="absolute z-0 w-full h-full object-cover opacity-45"
         >
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -196,7 +196,7 @@ export default function HomePage() {
           >
             <DynamicCarouselContent className="sm:-ml-1">
               {transformations.map((transform, index) => ( 
-                <DynamicCarouselItem key={`chosen-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/3">
+                <DynamicCarouselItem key={`chosen-carousel-${transform.id}`} className="sm:pl-1 md:basis-1/2 lg:basis-1/2">
                   <div className="p-1 h-full">
                      <Card 
                       className="relative flex flex-col h-96 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
