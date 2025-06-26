@@ -98,12 +98,12 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          className="absolute z-0 w-full h-full object-cover opacity-20"
+          className="absolute z-0 w-full h-full object-cover opacity-25"
         >
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-40% z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background to-20% z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
             LUNAI: Premier Solutions for Lasting Beauty & Confidence
