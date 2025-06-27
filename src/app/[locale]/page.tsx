@@ -92,8 +92,8 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <div className="container mx-auto px-4">
-        <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
+      <div className="container mx-auto px-4 mt-8">
+        <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
           <video
             autoPlay
             loop
