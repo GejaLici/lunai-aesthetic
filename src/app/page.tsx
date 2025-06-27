@@ -92,23 +92,21 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-0 w-full h-full object-cover opacity-45"
-        >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20"></div>
-        <div className="container mx-auto px-4 relative z-20">
+      <section className="relative min-h-[70vh] flex items-center justify-center text-center py-20 px-4 rounded-lg overflow-hidden">
+        <Image
+          src="https://placehold.co/1600x900.png"
+          alt="Abstract background representing beauty and technology"
+          fill
+          className="object-cover -z-10"
+          data-ai-hint="abstract background"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50 -z-10" />
+        <div className="relative z-10 container mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
             LUNAI: Premier Solutions for Lasting Beauty & Confidence
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-neutral-200 mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-neutral-200 max-w-4xl mx-auto mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
             Experience transformative aesthetic and dental treatments with our expert team at LUNAI. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
