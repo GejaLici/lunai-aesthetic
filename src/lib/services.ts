@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { Stethoscope, Bot, Activity, Syringe, Tooth, HeartPulse } from 'lucide-react';
+import { Stethoscope, Activity, Smile } from 'lucide-react';
 
 export type ServiceItem = {
   id: string;
@@ -43,7 +43,7 @@ export const serviceData: ServiceCategory[] = [
   {
     id: 'dentistry',
     title: 'Aesthetic Dentistry',
-    icon: Tooth,
+    icon: Smile,
     services: [
       { id: 'teeth-whitening', name: 'Teeth Whitening', description: 'Brighten your smile with our professional in-office or take-home teeth whitening solutions.', imageBefore: 'https://placehold.co/400x400.png', imageAfter: 'https://placehold.co/400x400.png', dataAiHint: 'smile teeth', serviceType: 'treatment', dentalSubCategoryTitle: 'AESTHETIC DENTISTRY' },
       { id: 'veneers', name: 'Porcelain Veneers', description: 'Custom-made thin shells of porcelain to cover the front surface of teeth, correcting chips, stains, or gaps.', imageBefore: 'https://placehold.co/400x400.png', imageAfter: 'https://placehold.co/400x400.png', dataAiHint: 'perfect smile', serviceType: 'treatment', dentalSubCategoryTitle: 'AESTHETIC DENTISTRY' },

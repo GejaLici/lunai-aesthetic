@@ -1,3 +1,4 @@
+
 import createMiddleware from 'next-intl/middleware';
  
 export default createMiddleware({
@@ -10,5 +11,6 @@ export default createMiddleware({
  
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(sq|it|en)/:path*']
+  // and exclude paths that should not be localized
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|videos).*)']
 };
