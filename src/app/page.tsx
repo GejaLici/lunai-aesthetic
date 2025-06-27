@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from 'react';
@@ -91,7 +92,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-gradient-to-br from-primary/10 via-background to-background rounded-lg shadow-xl overflow-hidden">
+      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
         <video
           autoPlay
           loop
@@ -102,19 +103,19 @@ export default function HomePage() {
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-20% z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
             LUNAI: Premier Solutions for Lasting Beauty & Confidence
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-neutral-200 mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
             Experience transformative aesthetic and dental treatments with our expert team at LUNAI. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
               <Link href="/services">Explore Our Expert Services</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="bg-transparent border-neutral-200 text-neutral-200 hover:bg-neutral-200 hover:text-primary w-full sm:w-auto">
               <Link href="/consultation">AI-Powered Virtual Consultation</Link>
             </Button>
           </div>
