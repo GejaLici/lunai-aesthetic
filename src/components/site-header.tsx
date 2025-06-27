@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Stethoscope } from 'lucide-react';
@@ -20,8 +20,12 @@ export function SiteHeader() {
 
   const bookNowLabel = 'Book Now';
 
-  // The pathname from usePathname in next-intl includes the locale, so we can use it directly.
+  // The pathname now includes the locale, e.g., /en/services
+  // We need to check if the current path starts with the link's path
   const adjustedPathname = pathname;
+  
+  // A special check for the homepage to avoid it matching all other routes
+  const isHomePage = (href: string) => href === '/' && adjustedPathname.endsWith(href);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -40,20 +44,24 @@ export function SiteHeader() {
                   <Stethoscope className="h-8 w-8 text-primary" />
                   <span className="font-headline font-bold text-xl">LUNAI</span>
                 </Link>
-                {navLinks.map((link) => (
+                {navLinks.map((link) => {
+                  const isActive = link.href === '/' 
+                    ? adjustedPathname.endsWith(link.href) || adjustedPathname.endsWith('/en') 
+                    : adjustedPathname.startsWith(`/en${link.href}`);
+                  return (
                   <Link
                     key={link.href}
                     href={link.href}
                      className={cn(
                       "block px-3 py-2 rounded-md transition-colors",
-                      adjustedPathname === link.href
+                       isActive
                         ? "text-primary bg-primary/10 font-semibold"
                         : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                     )}
                   >
                     {link.label}
                   </Link>
-                ))}
+                )})}
               </nav>
             </SheetContent>
           </Sheet>
@@ -69,20 +77,24 @@ export function SiteHeader() {
         </div>
 
         <nav className="hidden md:flex items-center gap-1 mx-auto">
-          {navLinks.map((link) => (
+          {navLinks.map((link) => {
+            const isActive = link.href === '/' 
+              ? adjustedPathname.endsWith(link.href) || adjustedPathname.endsWith('/en')
+              : adjustedPathname.startsWith(`/en${link.href}`);
+            return (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
                 "px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ease-in-out", 
-                (adjustedPathname === link.href || (link.href !== '/' && adjustedPathname.startsWith(link.href)))
+                isActive
                   ? "bg-primary/10 text-primary font-semibold" 
                   : "text-foreground/70 hover:bg-primary/5 hover:text-primary" 
               )}
             >
               {link.label}
             </Link>
-          ))}
+          )})}
         </nav>
         
         <div className="flex items-center justify-end flex-1 md:flex-none">

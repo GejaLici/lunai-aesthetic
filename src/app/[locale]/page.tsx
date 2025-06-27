@@ -7,11 +7,10 @@ import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
-import { Link } from "@/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
 import { placeholderPosts as blogPostsData } from "@/lib/blog-posts";
-import { useTranslations } from 'next-intl';
 
 const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
   ssr: false,
@@ -23,7 +22,6 @@ const DynamicCarouselPrevious = dynamic(() => import('@/components/ui/carousel')
 const DynamicCarouselNext = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselNext), { ssr: false });
 
 export default function HomePage() {
-  const t = useTranslations('HomePage');
   const faceCategory = serviceData.find(category => category.id === 'face');
   const bodyCategory = serviceData.find(category => category.id === 'body');
   const dentistryCategory = serviceData.find(category => category.id === 'dentistry');
@@ -108,7 +106,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20"></div>
         <div className="container mx-auto px-4 relative z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-            {t('title')}
+            LUNAI: Premier Solutions for Lasting Beauty & Confidence
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-neutral-200 mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
             Experience transformative aesthetic and dental treatments with our expert team at LUNAI. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
