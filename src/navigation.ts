@@ -1,7 +1,3 @@
-import {createLocalizedPathnamesNavigation} from 'next-intl/navigation';
- 
-export const locales = ['en', 'es', 'fr', 'it', 'sq'] as const;
-export const localePrefix = 'always'; // Default
- 
-export const {Link, redirect, usePathname, useRouter} =
-  createLocalizedPathnamesNavigation({locales, localePrefix});
+// This file is intentionally blank.
+// The navigation configuration is located in the project root (navigation.ts)
+// to align with Next.js conventions and resolve build issues.

@@ -1,13 +1,3 @@
-import createMiddleware from 'next-intl/middleware';
-import {locales, localePrefix} from './navigation';
- 
-export default createMiddleware({
-  defaultLocale: 'en',
-  locales,
-  localePrefix
-});
- 
-export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(en|es|fr|it|sq)/:path*']
-};
+// This file is intentionally blank.
+// The middleware is located in the project root (middleware.ts)
+// to align with Next.js conventions and resolve build issues.
