@@ -1,6 +1,6 @@
 'use client';
-import { Link, usePathname } from 'next-intl/navigation';
-import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Stethoscope } from 'lucide-react';
@@ -8,16 +8,17 @@ import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const t = useTranslations('SiteHeader');
-
+  
   const navLinks = [
-    { href: '/', label: t('home') },
-    { href: '/services', label: t('services') },
-    { href: '/gallery', label: t('gallery') },
-    { href: '/consultation', label: t('consultation') },
-    { href: '/blog', label: t('blog') },
-    { href: '/contact', label: t('contact') },
+    { href: '/', label: 'Home' },
+    { href: '/services', label: 'Services' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/consultation', label: 'Virtual Consultation' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contact', label: 'Contact' },
   ];
+
+  const bookNowLabel = 'Book Now';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -83,7 +84,7 @@ export function SiteHeader() {
         
         <div className="flex items-center justify-end flex-1 md:flex-none">
              <Button asChild>
-                <Link href="/contact">{t('bookNow')}</Link>
+                <Link href="/contact">{bookNowLabel}</Link>
             </Button>
         </div>
       </div>
