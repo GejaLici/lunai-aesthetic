@@ -1,6 +1,6 @@
 'use client';
-import { usePathname, Link } from '@/navigation';
-import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Stethoscope } from 'lucide-react';
@@ -8,18 +8,20 @@ import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const t = useTranslations('SiteHeader');
   
   const navLinks = [
-    { href: '/', label: t('home') },
-    { href: '/services', label: t('services') },
-    { href: '/gallery', label: t('gallery') },
-    { href: '/consultation', label: t('consultation') },
-    { href: '/blog', label: t('blog') },
-    { href: '/contact', label: t('contact') },
+    { href: '/', label: 'Home' },
+    { href: '/services', label: 'Services' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/consultation', label: 'Virtual Consultation' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contact', label: 'Contact' },
   ];
 
-  const bookNowLabel = t('bookNow');
+  const bookNowLabel = 'Book Now';
+
+  // Adjust pathname to work without locale
+  const adjustedPathname = pathname.startsWith('/en') ? pathname.substring(3) || '/' : pathname;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -44,7 +46,7 @@ export function SiteHeader() {
                     href={link.href}
                      className={cn(
                       "block px-3 py-2 rounded-md transition-colors",
-                      pathname === link.href
+                      adjustedPathname === link.href
                         ? "text-primary bg-primary/10 font-semibold"
                         : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                     )}
@@ -73,7 +75,7 @@ export function SiteHeader() {
               href={link.href}
               className={cn(
                 "px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 ease-in-out", 
-                (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href)))
+                (adjustedPathname === link.href || (link.href !== '/' && adjustedPathname.startsWith(link.href)))
                   ? "bg-primary/10 text-primary font-semibold" 
                   : "text-foreground/70 hover:bg-primary/5 hover:text-primary" 
               )}
