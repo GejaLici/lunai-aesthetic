@@ -1,0 +1,24 @@
+
+{
+  "SiteHeader": {
+    "home": "Kryefaqja",
+    "services": "Shërbimet",
+    "gallery": "Galeria",
+    "consultation": "Konsultim Virtual",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "bookNow": "Rezervo Tani"
+  },
+  "HomePage": {
+    "heroTitle": "LUNAI: Zgjidhje Premium për Bukuri dhe Vetëbesim të Qëndrueshëm",
+    "heroSubtitle": "Përjetoni trajtime estetike dhe dentare transformuese me ekipin tonë të ekspertëve në LUNAI. Zbuloni trajtime të personalizuara të dizajnuara për të rritur bukurinë tuaj natyrore dhe për të forcuar vetëbesimin tuaj. Ekspertët tanë përdorin teknikat më të fundit për rezultate optimale. Filloni sot udhëtimin tuaj drejt një mirëqenieje të përmirësuar.",
+    "exploreServices": "Eksploroni Shërbimet Tona Eksperte",
+    "aiConsultation": "Konsultim Virtual i Mundësuar nga AI"
+  },
+  "SiteFooter": {
+    "tagline": "Krijimi i bukurisë, i frymëzuar nga shkenca.",
+    "quickLinks": "Linqe të Shpejta",
+    "followUs": "Na Ndiqni",
+    "copyright": "© {year} LUNAI. Të gjitha të drejtat e rezervuara. Uebsajt nga Firebase Studio."
+  }
+}

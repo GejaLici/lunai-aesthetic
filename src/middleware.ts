@@ -1,12 +1,14 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-
-// This is a placeholder middleware to prevent a build error.
-// The matcher is configured to not match any paths, so it will not run.
-export function middleware(request: NextRequest) {
-  return NextResponse.next();
-}
-
+import createMiddleware from 'next-intl/middleware';
+ 
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ['en', 'sq', 'it'],
+ 
+  // Used when no locale matches
+  defaultLocale: 'en'
+});
+ 
 export const config = {
-  matcher: ['/this-path-does-not-exist'],
+  // Match only internationalized pathnames
+  matcher: ['/', '/(sq|it|en)/:path*']
 };

@@ -1,15 +1,19 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
 
 export function SiteFooter() {
+  const t = useTranslations('SiteHeader');
+  const tFooter = useTranslations('SiteFooter');
+
   const navLinks = [
-      { href: "/services", label: "Services" },
-      { href: "/gallery", label: "Gallery" },
-      { href: "/consultation", label: "Virtual Consultation" },
-      { href: "/blog", label: "Blog" },
-      { href: "/contact", label: "Contact" },
+      { href: "/services", label: t("services") },
+      { href: "/gallery", label: t("gallery") },
+      { href: "/consultation", label: t("consultation") },
+      { href: "/blog", label: t("blog") },
+      { href: "/contact", label: t("contact") },
   ];
 
   return (
@@ -22,11 +26,11 @@ export function SiteFooter() {
               <span className="font-headline text-xl font-bold">LUNAI</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Crafting beauty, inspired by science.
+              {tFooter('tagline')}
             </p>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-3">Quick Links</h3>
+            <h3 className="font-headline text-lg font-semibold mb-3">{tFooter('quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
               {navLinks.map(link => (
                 <li key={link.href}><Link href={link.href} className="hover:text-primary transition-colors">{link.label}</Link></li>
@@ -34,7 +38,7 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-3">Follow Us</h3>
+            <h3 className="font-headline text-lg font-semibold mb-3">{tFooter('followUs')}</h3>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-accent transition-colors">
                 <Twitter size={24} />
@@ -54,7 +58,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} LUNAI. All rights reserved. Website by Firebase Studio.
+          {tFooter('copyright', {year: new Date().getFullYear()})}
         </div>
       </div>
     </footer>
