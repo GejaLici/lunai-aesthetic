@@ -1,2 +1,13 @@
-// This file is intentionally left empty.
-// The next-intl configuration has been moved to the root `i18n.ts` file to resolve a build issue.
+import {getRequestConfig} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+ 
+const locales = ['en', 'sq', 'it'];
+ 
+export default getRequestConfig(async ({locale}) => {
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+ 
+  return {
+    messages: (await import(`../messages/${locale}.json`)).default
+  };
+});
