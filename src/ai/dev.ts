@@ -1,2 +1,14 @@
+import {genkit} from 'genkit';
+import {googleAI} from '@genkit-ai/googleai';
+import {firebase} from '@genkit-ai/firebase';
 
-// This file is temporarily empty to resolve a build issue.
+// Import flows to be discoverable by the dev UI
+import './flows/virtual-consultation';
+
+export default genkit({
+  plugins: [googleAI(), firebase()],
+  logSinks: [],
+  enableTracingAndMetrics: true,
+  flowStateStore: 'firebase',
+  traceStore: 'firebase',
+});

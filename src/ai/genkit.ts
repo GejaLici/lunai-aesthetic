@@ -1,2 +1,11 @@
+import {genkit} from 'genkit';
+import {googleAI} from '@genkit-ai/googleai';
+import {firebase} from '@genkit-ai/firebase';
 
-// This file is temporarily empty to resolve a build issue.
+export const ai = genkit({
+  plugins: [googleAI(), firebase()],
+  logSinks: [],
+  enableTracingAndMetrics: true,
+  flowStateStore: 'firebase',
+  traceStore: 'firebase',
+});
