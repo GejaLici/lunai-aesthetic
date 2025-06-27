@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export function SiteFooter() {
   const navLinks = [
@@ -11,6 +12,12 @@ export function SiteFooter() {
       { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
   ];
+
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
     <footer className="border-t border-border/40 bg-card text-card-foreground">
@@ -54,7 +61,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} LUNAI. All rights reserved. Website by Firebase Studio.
+          © {isClient && <span>{new Date().getFullYear()}</span>} LUNAI. All rights reserved. Website by Firebase Studio.
         </div>
       </div>
     </footer>
