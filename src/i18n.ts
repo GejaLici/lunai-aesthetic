@@ -1,3 +1,3 @@
 // This file is intentionally blank.
-// The i18n configuration is located in the project root (i18n.ts)
-// to align with Next.js conventions and resolve build issues.
+// The i18n configuration has been moved to the project's root directory
+// to resolve build issues. See /i18n.ts.

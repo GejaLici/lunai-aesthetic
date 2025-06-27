@@ -1,3 +1,3 @@
 // This file is intentionally blank.
-// The middleware is located in the project root (middleware.ts)
-// to align with Next.js conventions and resolve build issues.
+// The middleware has been moved to the project's root directory
+// to resolve build issues. See /middleware.ts.
