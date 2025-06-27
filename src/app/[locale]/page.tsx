@@ -92,7 +92,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
+      <section className="relative min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden m-8">
         <video
           autoPlay
           loop
@@ -105,10 +105,10 @@ export default function HomePage() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20"></div>
         <div className="container mx-auto px-4 relative z-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn max-w-3xl mx-auto" style={{ animationDelay: '0.1s' }}>
             LUNAI: Premier Solutions for Lasting Beauty & Confidence
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-neutral-200 mb-8 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-neutral-200 mb-8 animate-fadeIn max-w-2xl mx-auto" style={{ animationDelay: '0.3s' }}>
             Experience transformative aesthetic and dental treatments with our expert team at LUNAI. Discover personalized treatments designed to enhance your natural beauty and boost your confidence. Our experts use the latest techniques for optimal results. Begin your journey to enhanced well-being today.
           </p>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
