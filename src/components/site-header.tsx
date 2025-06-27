@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Stethoscope } from 'lucide-react';
@@ -20,8 +20,8 @@ export function SiteHeader() {
 
   const bookNowLabel = 'Book Now';
 
-  // Adjust pathname to work without locale
-  const adjustedPathname = pathname.startsWith('/en') ? pathname.substring(3) || '/' : pathname;
+  // The pathname from usePathname in next-intl includes the locale, so we can use it directly.
+  const adjustedPathname = pathname;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">

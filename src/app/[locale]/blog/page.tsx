@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { Newspaper } from 'lucide-react';
 import { placeholderPosts } from "@/lib/blog-posts";
 

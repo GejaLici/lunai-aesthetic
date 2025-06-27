@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
 
 export function SiteFooter() {
