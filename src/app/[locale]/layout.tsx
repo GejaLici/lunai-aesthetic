@@ -4,7 +4,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import '../globals.css';
-import {NextIntlClientProvider, createTranslator} from 'next-intl';
+import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default async function LocaleLayout({
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased min-h-screen flex flex-col bg-background">
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <SiteHeader />
             <main className="flex-grow">
               {children}

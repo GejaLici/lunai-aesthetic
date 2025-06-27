@@ -1,2 +1,2 @@
 // This file is intentionally blank.
-// Internationalization has been removed.
+// Internationalization is configured in src/navigation.ts

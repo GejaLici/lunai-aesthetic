@@ -6,7 +6,6 @@ export const localePrefix = 'always'; // Default
 // The `pathnames` object holds pairs of internal
 // and external paths, separated by locale.
 export const pathnames = {
-  // All pages have the same pathnames in all languages
   '/': '/',
   '/blog': '/blog',
   '/consultation': '/consultation',
