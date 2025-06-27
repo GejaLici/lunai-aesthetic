@@ -14,12 +14,14 @@ export const metadata: Metadata = {
 };
 
 export default function LocaleLayout({
-  children
+  children,
+  params: {locale}
 }: {
   children: React.ReactNode;
+  params: {locale: string};
 }) {
   return (
-    <html lang="en" className="smooth-scroll">
+    <html lang={locale} className="smooth-scroll">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
