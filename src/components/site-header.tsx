@@ -20,13 +20,6 @@ export function SiteHeader() {
 
   const bookNowLabel = 'Book Now';
 
-  // The pathname now includes the locale, e.g., /en/services
-  // We need to check if the current path starts with the link's path
-  const adjustedPathname = pathname;
-  
-  // A special check for the homepage to avoid it matching all other routes
-  const isHomePage = (href: string) => href === '/' && adjustedPathname.endsWith(href);
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center">
@@ -45,9 +38,7 @@ export function SiteHeader() {
                   <span className="font-headline font-bold text-xl">LUNAI</span>
                 </Link>
                 {navLinks.map((link) => {
-                  const isActive = link.href === '/' 
-                    ? adjustedPathname.endsWith(link.href) || adjustedPathname.endsWith('/en') 
-                    : adjustedPathname.startsWith(`/en${link.href}`);
+                  const isActive = (pathname === link.href) || (link.href !== '/' && pathname.startsWith(link.href));
                   return (
                   <Link
                     key={link.href}
@@ -78,9 +69,7 @@ export function SiteHeader() {
 
         <nav className="hidden md:flex items-center gap-1 mx-auto">
           {navLinks.map((link) => {
-            const isActive = link.href === '/' 
-              ? adjustedPathname.endsWith(link.href) || adjustedPathname.endsWith('/en')
-              : adjustedPathname.startsWith(`/en${link.href}`);
+            const isActive = (pathname === link.href) || (link.href !== '/' && pathname.startsWith(link.href));
             return (
             <Link
               key={link.href}
