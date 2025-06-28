@@ -1,3 +1,14 @@
-// This file re-exports the configuration from the /src directory.
-// It is required for the Next.js build process to find the i18n configuration.
-export { default } from './src/i18n';
+import {getRequestConfig} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+
+// A list of all locales that are supported
+const locales = ['en', 'es', 'it', 'fr', 'sq'];
+
+export default getRequestConfig(async ({locale}) => {
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+
+  return {
+    messages: (await import(`./messages/${locale}.json`)).default
+  };
+});
