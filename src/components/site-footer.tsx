@@ -1,8 +1,10 @@
+
 'use client';
 
 import Link from 'next/link';
-import { Github, Linkedin, Twitter, Stethoscope } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import { useTranslations } from '@/hooks/use-translations';
+import Image from 'next/image';
 
 export function SiteFooter() {
   const t = useTranslations('SiteFooter');
@@ -22,7 +24,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="LUNAI Home">
-               <Stethoscope className="h-8 w-8 text-primary" />
+               <Image src="/images/logo.png" alt="LUNAI Logo" width={32} height={32} />
               <span className="font-headline text-xl font-bold">LUNAI</span>
             </Link>
             <p className="text-sm text-muted-foreground">

@@ -1,12 +1,14 @@
+
 'use client';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Stethoscope } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslations } from '@/hooks/use-translations';
 import { LanguageSwitcher } from './language-switcher';
+import Image from 'next/image';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -37,7 +39,7 @@ export function SiteHeader() {
             <SheetContent side="left" className="bg-background">
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
-                  <Stethoscope className="h-8 w-8 text-primary" />
+                  <Image src="/images/logo.png" alt="LUNAI Logo" width={32} height={32} />
                   <span className="font-headline font-bold text-xl">LUNAI</span>
                 </Link>
                 {navLinks.map((link) => {
@@ -63,7 +65,7 @@ export function SiteHeader() {
         
         <div className="flex items-center justify-start flex-1 md:flex-none">
             <Link href="/" className="flex items-center gap-2" aria-label="LUNAI Home">
-              <Stethoscope className="h-8 w-8 text-primary" />
+              <Image src="/images/logo.png" alt="LUNAI Logo" width={32} height={32} />
               <span className="font-headline text-2xl font-bold text-foreground hidden sm:inline">
                 LUNAI
               </span>
