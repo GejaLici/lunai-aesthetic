@@ -208,17 +208,592 @@
   "services": {
     "categories": {
       "face": {
-        "title": "Esthétique Faciale"
+        "title": "Esthétique du Visage"
       },
       "body": {
-        "title": "Modelage du Corps"
+        "title": "Silhouette"
       },
       "dentistry": {
         "title": "Dentisterie"
       }
     },
-    "items": {},
-    "blogPosts": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Remodelage du Nez (Rhinoplastie)",
+        "description": [
+          "La rhinoplastie, communément appelée « chirurgie du nez », est une procédure chirurgicale sophistiquée conçue pour améliorer l'apparence esthétique du nez et corriger les problèmes de respiration fonctionnels. Que vous soyez préoccupé par une bosse dorsale, un pont large ou tordu, une pointe indéfinie ou la taille des narines, la rhinoplastie peut mieux harmoniser votre nez avec vos autres traits du visage. Chez LUNAI, nous traitons également les défauts structurels, tels qu'une déviation de la cloison nasale, pour améliorer le flux d'air et la qualité de vie globale.",
+          "Notre philosophie chez LUNAI est axée sur la création de résultats à la fois beaux et exceptionnellement naturels. Nos chirurgiens plasticiens certifiés allient précision technique et sens artistique pour sculpter un nez qui complète la structure unique de votre visage. Lors de votre consultation complète, nous utilisons une technologie d'imagerie avancée pour simuler les résultats potentiels, nous assurant ainsi d'être en phase avec votre vision. Nous croyons en une approche collaborative, en adaptant chaque aspect de la procédure à vos objectifs et à votre anatomie spécifiques.",
+          "Les candidats idéaux pour la rhinoplastie sont des personnes en bonne santé générale, non-fumeuses et ayant des attentes réalistes quant au résultat. Si vous estimez que votre nez est disproportionné par rapport à votre visage, ou si vous avez des difficultés à respirer, vous pourriez être un candidat parfait. La procédure peut être réalisée une fois la croissance du visage terminée, généralement vers le milieu ou la fin de l'adolescence.",
+          "L'intervention est réalisée sous anesthésie générale et la récupération implique généralement une semaine d'interruption d'activité avec une attelle. Bien que le gonflement initial diminue en quelques semaines, les résultats finaux et affinés de votre rhinoplastie continueront d'apparaître au cours d'une année. Notre équipe dévouée fournit des soins et un soutien postopératoires complets pour garantir une récupération aussi douce et confortable que possible."
+        ]
+      },
+      "otoplasty": {
+        "name": "Remodelage des Oreilles (Otoplastie)",
+        "description": [
+          "L'otoplastie, ou chirurgie de remodelage des oreilles, est une procédure conçue pour corriger la taille, la forme ou la position des oreilles. Elle est le plus souvent pratiquée pour traiter les oreilles proéminentes qui dépassent trop de la tête, mais peut également corriger des oreilles trop grandes, des oreilles resserrées (« oreille en anse ») ou une insatisfaction à l'égard d'une intervention chirurgicale antérieure. Cette procédure peut avoir un impact profond sur la confiance en soi, tant pour les adultes que pour les enfants.",
+          "Chez LUNAI, nos chirurgiens qualifiés abordent l'otoplastie en mettant l'accent sur la création de contours d'apparence naturelle qui apportent équilibre et proportion au visage. Pour les enfants, la procédure peut être effectuée après l'âge de cinq ans, lorsque les oreilles ont atteint la majeure partie de leur taille adulte. Pour les adultes, il n'y a pas de limite d'âge supérieure. Nous veillons à placer les incisions discrètement dans les plis naturels derrière l'oreille pour minimiser les cicatrices visibles.",
+          "L'intervention consiste à sculpter le cartilage de l'oreille pour créer une forme plus désirable et à le fixer plus près de la tête avec des sutures internes et permanentes. La procédure est généralement réalisée en ambulatoire sous anesthésie locale avec sédation ou anesthésie générale, selon l'âge du patient и la complexité de l'intervention.",
+          "La récupération après une otoplastie est relativement rapide. Un pansement protecteur est porté pendant quelques jours, suivi d'un bandeau de soutien porté la nuit pendant plusieurs semaines pour protéger les oreilles pendant leur guérison. La plupart des patients peuvent reprendre le travail ou l'école en une semaine, avec une confiance renouvelée dans leur apparence."
+        ]
+      },
+      "blepharoplasty": {
+        "name": "Blépharoplastie (Chirurgie des Paupières)",
+        "description": [
+          "La blépharoplastie, ou chirurgie des paupières, est une procédure transformatrice qui rajeunit l'apparence des yeux en traitant la peau relâchée, l'excès de graisse et les ridules. Elle peut être pratiquée sur les paupières supérieures, inférieures ou les deux, corrigeant efficacement des problèmes tels que les paupières supérieures tombantes qui peuvent altérer la vision et les poches sous les yeux qui créent un regard constamment fatigué.",
+          "Nos chirurgiens experts réalisent la blépharoplastie avec une précision méticuleuse pour restaurer une apparence plus lumineuse, plus alerte et plus jeune. Pour la chirurgie de la paupière supérieure, une incision est dissimulée dans le pli naturel de la paupière. Pour la chirurgie de la paupière inférieure, l'incision peut souvent être pratiquée à l'intérieur de la paupière inférieure (approche transconjonctivale), ne laissant aucune cicatrice visible, ou juste en dessous de la ligne des cils. L'excès de peau et de graisse est enlevé ou repositionné pour créer un contour lisse et rafraîchi.",
+          "Les bons candidats pour la chirurgie des paupières sont des personnes en bonne santé qui sont gênées par les signes du vieillissement autour de leurs yeux. La procédure peut améliorer considérablement l'apparence et peut même améliorer la vision dans les cas où la peau relâchée de la paupière supérieure obstrue le champ de vision.",
+          "La récupération implique un certain gonflement et des ecchymoses, qui disparaissent généralement en 10 à 14 jours. Les résultats sont durables, vous aidant à paraître plus reposé et dynamique pendant des années. Notre équipe chez LUNAI veille à ce que vous soyez à l'aise et bien informé tout au long du processus."
+        ]
+      },
+      "facelift": {
+        "name": "Lifting du Visage",
+        "description": [
+          "Un lifting du visage, ou rhytidectomie, est la norme d'excellence pour traiter de manière exhaustive les signes importants du vieillissement du visage. Cette procédure chirurgicale cible les rides profondes, les bajoues, le relâchement cutané du milieu et du bas du visage, et la peau lâche du cou (« cou de dindon »). Elle offre un résultat plus spectaculaire et plus durable que les alternatives non chirurgicales en s'attaquant aux structures sous-jacentes du visage.",
+          "Chez LUNAI, notre approche du lifting du visage est de fournir des résultats transformateurs mais d'apparence entièrement naturelle. Nous évitons l'aspect « tiré » en nous concentrant sur les tissus faciaux plus profonds, en resserrant la couche musculaire sous-jacente (le SMAS) et en repositionnant les coussinets graisseux du visage avant de redraper la peau. Les incisions sont astucieusement placées à l'intérieur de la ligne des cheveux et dans les contours naturels autour de l'oreille pour être pratiquement imperceptibles une fois guéries.",
+          "Les candidats idéaux pour un lifting du visage ont généralement entre 40 et 70 ans, sont en bonne santé et souhaitent traiter un vieillissement facial modéré à sévère. Un lifting du visage peut être associé à d'autres procédures comme un lifting des sourcils, une blépharoplastie ou un greffage de graisse pour un rajeunissement complet du visage.",
+          "La récupération après un lifting du visage implique environ deux semaines d'inactivité initiale. Bien que vous constatiez une amélioration significative immédiatement, les résultats finaux continueront à s'affiner sur plusieurs mois à mesure que le gonflement se résorbera complètement. Un lifting du visage bien réalisé chez LUNAI peut vous faire paraître des années plus jeune, en restaurant un contour plus ferme et plus jeune qui semble entièrement le vôtre."
+        ]
+      },
+      "chin-reshaping": {
+        "name": "Remodelage du Menton",
+        "description": [
+          "La chirurgie de remodelage du menton, connue sous le nom de génioplastie ou mentoplastie, est une procédure conçue pour améliorer les proportions du visage en modifiant la taille et la forme du menton. Un menton bien défini est la pierre angulaire d'un profil facial attrayant pour les hommes comme pour les femmes. Cette chirurgie peut corriger un menton en retrait (microgénie), un menton saillant ou un menton asymétrique, en l'harmonisant avec le nez, le front et les autres traits du visage.",
+          "Nos chirurgiens chez LUNAI proposent deux techniques principales pour l'augmentation du menton : l'utilisation d'un implant de menton sur mesure ou une génioplastie par glissement, qui consiste à déplacer chirurgicalement l'os du menton lui-même. La réduction du menton est également possible en sculptant soigneusement l'os. La procédure est adaptée à votre anatomie et à vos objectifs esthétiques uniques, discutés en détail lors de votre consultation.",
+          "Le remodelage du menton peut avoir un effet puissant sur l'équilibre général du visage. Il peut renforcer une mâchoire, faire paraître un nez proéminent plus petit et donner un contour de cou plus jeune. Les candidats doivent être en bonne santé et avoir terminé leur croissance faciale.",
+          "L'intervention est souvent pratiquée par une petite incision à l'intérieur de la bouche ou discrètement sous le menton. La récupération prend généralement environ une à deux semaines, la plupart du gonflement se résorbant le premier mois. Le résultat est une amélioration permanente de votre profil et de votre harmonie faciale."
+        ]
+      },
+      "brow-lift": {
+        "name": "Lifting des Sourcils",
+        "description": [
+          "Un lifting des sourcils, également connu sous le nom de lifting frontal, est une procédure chirurgicale qui revitalise la partie supérieure du visage en corrigeant un front lourd et affaissé et en réduisant les rides horizontales profondes du front. Avec l'âge, le sourcil peut descendre, créant une apparence fatiguée, en colère ou triste et contribuant à l'affaissement des paupières supérieures. Un lifting des sourcils relève les sourcils pour leur donner une position plus alerte et plus jeune.",
+          "Chez LUNAI, nous utilisons des techniques endoscopiques modernes et peu invasives pour le lifting des sourcils chaque fois que possible. Cela implique de petites incisions cachées dans la ligne des cheveux, à travers lesquelles nous pouvons soulever et repositionner les tissus du front. Cette approche minimise les cicatrices et raccourcit le temps de récupération par rapport aux méthodes traditionnelles. Le résultat est un front plus lisse et un contour des yeux plus ouvert et rafraîchi.",
+          "Un lifting des sourcils est une excellente option pour les personnes ayant des sourcils bas ou affaissés, des sillons profonds sur le front ou des rides du lion entre les sourcils. Il est souvent pratiqué en conjonction avec un lifting du visage ou une chirurgie des paupières pour un rajeunissement plus complet de la partie supérieure du visage.",
+          "Le temps d'arrêt est généralement d'environ une semaine, les ecchymoses et le gonflement étant les effets secondaires les plus courants. Un lifting des sourcils donne des résultats durables, vous aidant à paraître naturellement rafraîchi et plus accessible pendant de nombreuses années."
+        ]
+      },
+      "hair-transplant": {
+        "name": "Greffe de Cheveux",
+        "description": [
+          "La perte de cheveux peut être une expérience pénible pour les hommes comme pour les femmes. Chez LUNAI, nous offrons une solution permanente et d'apparence naturelle avec notre chirurgie avancée de greffe de cheveux. Cette procédure consiste à prélever des follicules pileux sains et génétiquement résistants d'une zone donneuse (généralement l'arrière du cuir chevelu) et à les implanter méticuleusement dans les zones chauves ou clairsemées.",
+          "Nous sommes spécialisés dans la technique d'Extraction d'Unités Folliculaires (FUE), une méthode de pointe qui consiste à extraire les unités folliculaires individuellement. Cette approche évite la cicatrice linéaire associée aux méthodes plus anciennes et permet une récupération plus rapide et plus confortable. Notre équipe expérimentée utilise une précision artistique pour placer chaque greffon à l'angle et à la densité corrects afin d'imiter les schémas de croissance naturels des cheveux.",
+          "La greffe de cheveux est une solution viable pour la calvitie masculine et féminine, ainsi que pour restaurer les cheveux dans les zones cicatricielles. Les candidats doivent avoir une quantité suffisante de cheveux donneurs sains pour atteindre la densité souhaitée.",
+          "Les cheveux greffés tomberont dans les premières semaines, ce qui est une partie normale du processus. Des cheveux neufs et permanents commenceront à pousser dans 3-4 mois, les résultats finaux et complets étant visibles après environ 12-18 mois. Retrouvez une chevelure complète et votre confiance avec une greffe de cheveux LUNAI."
+        ]
+      },
+      "beard-transplant": {
+        "name": "Greffe de Barbe",
+        "description": [
+          "Une barbe pleine et bien définie est un symbole de masculinité et de style pour de nombreux hommes. Pour ceux qui ont du mal avec une pilosité faciale clairsemée, fine ou inexistante, une greffe de barbe offre une solution permanente. Cette procédure spécialisée vous permet d'obtenir le style de barbe exact que vous désirez, d'une barbe complète à un bouc ou des favoris raffinés.",
+          "Le processus est similaire à une greffe de cheveux pour le cuir chevelu. Nous utilisons la technique FUE (Extraction d'Unités Folliculaires) pour prélever des follicules pileux individuels à l'arrière de votre tête. Ces follicules sont ensuite méticuleusement implantés dans la zone de la barbe, en portant une attention particulière à l'angle et à la direction de la croissance pour garantir un résultat d'apparence totalement naturelle.",
+          "Une greffe de barbe est idéale pour les hommes qui ont des zones clairsemées d'origine génétique, des cicatrices qui empêchent la croissance des poils, ou qui souhaitent simplement améliorer la densité et la forme de leur barbe existante. C'est une procédure hautement personnalisée, adaptée à vos traits du visage et au résultat souhaité.",
+          "Après la greffe, les nouveaux poils tomberont avant de commencer à repousser de façon permanente après 3-4 mois. Le résultat final est une barbe naturelle et dense que vous pouvez raser, tailler et coiffer comme n'importe quel autre poil facial."
+        ]
+      },
+      "eyebrow-transplant": {
+        "name": "Greffe de Sourcils",
+        "description": [
+          "Les sourcils sont une caractéristique essentielle qui encadre le visage et exprime les émotions. Si vous avez des sourcils fins, clairsemés ou inexistants en raison de la génétique, d'une épilation excessive ou de conditions médicales, une greffe de sourcils peut les restaurer de façon permanente. Cette procédure crée des sourcils plus fournis et magnifiquement dessinés qui semblent entièrement naturels.",
+          "En utilisant la technique FUE précise, nos spécialistes prélèvent des follicules pileux uniques du cuir chevelu (généralement derrière les oreilles où les cheveux sont plus fins). Chaque follicule est ensuite soigneusement implanté un par un dans la zone du sourcil, en suivant la direction et l'angulation naturelles de la croissance des poils de sourcils. Cette précision artistique est la clé pour obtenir un résultat réaliste et esthétiquement agréable.",
+          "Une greffe de sourcils est une procédure délicate qui requiert un haut degré de compétence et de talent artistique. C'est une excellente solution pour quiconque souhaite obtenir des sourcils fournis et définis de façon permanente sans les tracas quotidiens du maquillage.",
+          "Comme pour les autres greffes de cheveux, les poils greffés tomberont avant de repousser au cours des mois suivants. Le résultat est un sourcil vivant et en croissance que vous pouvez entretenir et modeler à votre guise, encadrant parfaitement vos yeux et rehaussant les traits de votre visage."
+        ]
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Remodelage du Nez (Non chirurgical)",
+        "description": [
+          "Une rhinoplastie non chirurgicale, souvent appelée « remodelage liquide du nez » ou « remodelage du nez en 15 minutes », est une alternative non invasive remarquable à la chirurgie traditionnelle. Cette procédure utilise des produits de comblement dermique à base d'acide hyaluronique injectés avec précision pour remodeler et affiner instantanément le nez. C'est une excellente option pour apporter des changements subtils mais percutants sans temps d'arrêt.",
+          "Chez LUNAI, nos injecteurs experts peuvent utiliser avec maîtrise les produits de comblement pour lisser les bosses sur l'arête nasale, relever une pointe de nez tombante, améliorer la symétrie nasale et créer un profil global plus affiné. La procédure est rapide, prend généralement moins de 30 minutes, avec un inconfort minimal.",
+          "Les candidats idéaux sont ceux qui recherchent des ajustements mineurs à modérés de l'apparence de leur nez. C'est un moyen parfait de « tester » une nouvelle forme de nez avant de s'engager dans une intervention chirurgicale ou pour ceux qui veulent éviter une procédure chirurgicale. Elle n'est pas adaptée pour réduire la taille du nez.",
+          "Les résultats sont immédiats et peuvent durer de 9 à 18 mois, selon le type de produit de comblement utilisé et le métabolisme de l'individu. Il n'y a pratiquement pas de temps de récupération, ce qui vous permet de reprendre vos activités quotidiennes immédiatement avec un profil nouvellement amélioré."
+        ]
+      },
+      "dark-circles-treatment": {
+        "name": "Traitement des Cernes",
+        "description": [
+          "Les cernes sous les yeux peuvent vous donner l'air fatigué, stressé ou plus âgé que vous ne l'êtes. Chez LUNAI, nous proposons une approche multidimensionnelle du traitement des cernes, car nous comprenons que la cause est souvent complexe, résultant d'une perte de volume, d'une hyperpigmentation, d'une peau fine ou d'une combinaison de facteurs.",
+          "Notre traitement le plus efficace pour les cernes causés par la perte de volume est l'utilisation de produits de comblement des creux lacrymaux. En injectant soigneusement un produit de comblement à base d'acide hyaluronique lisse dans la zone creuse sous les yeux, nous pouvons repulper la peau, réduire l'effet d'ombre et créer une transition harmonieuse entre la joue et la paupière inférieure. Cela illumine immédiatement la zone et donne une apparence plus reposée.",
+          "Pour les cernes causés par la pigmentation, nous pouvons recommander une série de peelings chimiques doux ou des thérapies cutanées avancées pour éclaircir la peau et améliorer sa qualité. Le microneedling peut également être efficace pour épaissir la peau et stimuler le collagène afin de rendre les vaisseaux sanguins sous-jacents moins visibles.",
+          "Lors de votre consultation, nous effectuerons une évaluation approfondie pour déterminer la cause principale de vos cernes et créer un plan de traitement personnalisé. Notre objectif est de fournir une solution sûre et efficace qui redonne luminosité et vitalité à la zone sous vos yeux."
+        ]
+      },
+      "eyelids-plasma-arc": {
+        "name": "Paupières (Arc Plasma)",
+        "description": [
+          "Obtenez un lifting des yeux non chirurgical avec notre traitement innovant à l'Arc Plasma. Cette technologie révolutionnaire offre une alternative très efficace à la blépharoplastie traditionnelle pour les personnes présentant un relâchement cutané léger à modéré autour des yeux. Elle est particulièrement efficace pour retendre la peau lâche de la paupière supérieure et réduire l'apparence des « pattes d'oie » et des ridules.",
+          "Le traitement utilise un appareil spécialisé pour créer un minuscule arc électrique d'énergie plasma. Lorsque cet arc touche la surface de la peau, il provoque la sublimation du tissu ciblé, c'est-à-dire sa transformation directe de solide en gaz. Ce processus crée un motif de minuscules croûtes de carbone et déclenche une contraction et un resserrement immédiats des fibres de la peau.",
+          "À mesure que la peau guérit de ce traitement contrôlé, la réponse de guérison naturelle du corps est activée, entraînant la production de nouveau collagène et d'élastine au cours des semaines et des mois suivants. Il en résulte une peau plus ferme, plus tendue et plus lisse autour des yeux.",
+          "La procédure est réalisée avec une crème anesthésiante topique pour le confort. Les croûtes de carbone tomberont naturellement en 5 à 7 jours, révélant une peau neuve et rajeunie. Les résultats sont durables et peuvent rafraîchir considérablement votre apparence, rendant vos yeux plus ouverts et plus jeunes."
+        ]
+      },
+      "jawline-contouring": {
+        "name": "Contourage de la Mâchoire",
+        "description": [
+          "Une mâchoire nette et définie est une caractéristique clé d'un visage jeune et attrayant. Notre traitement non chirurgical de Contourage de la Mâchoire utilise des produits de comblement dermique placés stratégiquement pour sculpter et améliorer l'angle de la mandibule, créant un profil plus fort et plus ciselé pour les hommes comme pour les femmes.",
+          "Cette procédure est idéale pour corriger une mâchoire faible ou sous-développée, améliorer la symétrie du visage, réduire l'apparence des bajoues et créer une séparation plus nette entre la mâchoire et le cou. Nos injecteurs experts utilisent des produits de comblement à base d'acide hyaluronique haute densité qui imitent la sensation de l'os pour construire structure et définition.",
+          "Le traitement est hautement personnalisé en fonction de votre anatomie faciale et de vos objectifs esthétiques. Pour les hommes, l'objectif est souvent de créer une mâchoire plus large et plus anguleuse. Pour les femmes, l'accent est généralement mis sur la création d'une ligne gracieuse mais définie qui met en valeur la féminité. La procédure est rapide, avec un inconfort minimal et aucun temps d'arrêt.",
+          "Les résultats sont visibles immédiatement et durent généralement de 12 à 24 mois. Le contourage de la mâchoire peut améliorer considérablement votre profil, renforcer votre confiance en vous et restaurer une apparence plus jeune et plus puissante en une seule séance."
+        ]
+      },
+      "lip-reshaping": {
+        "name": "Remodelage des Lèvres",
+        "description": [
+          "Perfectionnez votre bouche avec nos services personnalisés de remodelage et d'augmentation des lèvres. Plus que simplement ajouter du volume, nos injecteurs experts utilisent des produits de comblement à base d'acide hyaluronique de première qualité comme un outil artistique pour rehausser votre beauté naturelle. Nous nous concentrons sur la création de résultats magnifiques et équilibrés, parfaitement proportionnés à votre visage.",
+          "Nos traitements de comblement des lèvres peuvent être utilisés pour atteindre une variété d'objectifs : ajouter un volume subtil ou significatif, définir le bord vermillon (le contour des lèvres), améliorer l'arc de Cupidon, corriger l'asymétrie entre la lèvre supérieure et inférieure, et lisser les rides verticales des lèvres (rides du fumeur).",
+          "Chez LUNAI, nous privilégions une apparence et une sensation naturelles. Nous travaillons avec vous pour comprendre le résultat souhaité et sélectionner le produit de comblement et la technique appropriés pour l'atteindre. La procédure est réalisée à l'aide d'un anesthésique topique pour votre confort et dure généralement environ 30 minutes.",
+          "Les résultats sont immédiats, bien qu'il puisse y avoir un léger gonflement initial. Vous pourrez profiter de vos lèvres magnifiquement rehaussées pendant 6 à 12 mois. Que vous souhaitiez une amélioration subtile ou un look plus glamour, notre traitement de remodelage des lèvres peut vous aider à obtenir le sourire parfait."
+        ]
+      },
+      "microdermabrasion": {
+        "name": "Microdermabrasion",
+        "description": [
+          "Révélez un teint plus lumineux et plus lisse avec la Microdermabrasion. Ce traitement populaire et non invasif est une forme d'exfoliation mécanique qui élimine en douceur la couche la plus externe de cellules mortes de la peau, décongestionne les pores et rafraîchit instantanément l'apparence de votre peau.",
+          "La procédure utilise une baguette à pointe de diamant pour abraser doucement la surface de la peau tandis qu'une aspiration sous vide élimine les cellules exfoliées. Ce processus aide à améliorer l'apparence des dommages causés par le soleil, des rides et ridules, des taches de vieillesse, des cicatrices d'acné et d'autres problèmes de peau. C'est une procédure parfaite à faire pendant la pause déjeuner car elle ne nécessite aucun temps d'arrêt.",
+          "La microdermabrasion convient à presque tous les types et couleurs de peau. Elle améliore l'absorption et l'efficacité de vos produits de soin de la peau et peut être réalisée comme un traitement autonome ou dans le cadre d'un plan complet de santé de la peau. Pour des résultats optimaux, une série de traitements est souvent recommandée.",
+          "Après une séance, votre peau sera plus douce et paraîtra plus radieuse. C'est un excellent moyen de maintenir une peau saine et d'obtenir un éclat constant et vibrant."
+        ]
+      },
+      "microneedling": {
+        "name": "Microneedling",
+        "description": [
+          "Rajeunissez votre peau de l'intérieur avec le Microneedling, également connu sous le nom de thérapie d'induction de collagène. Ce traitement avancé utilise un appareil doté de fines aiguilles stériles pour créer des milliers de micro-lésions contrôlées dans la peau. Ce processus déclenche la cascade de guérison naturelle du corps, entraînant une augmentation significative de la production de collagène et d'élastine.",
+          "Le microneedling est un traitement très efficace pour un large éventail de problèmes de peau. Il peut améliorer considérablement la texture de la peau, réduire l'apparence des cicatrices d'acné et des cicatrices chirurgicales, minimiser la taille des pores, diminuer les rides et ridules, et améliorer l'apparence des vergetures.",
+          "Chez LUNAI, nous pouvons améliorer les résultats du microneedling en le combinant avec l'application de sérums puissants ou même de votre propre Plasma Riche en Plaquettes (PRP). Les micro-canaux créés par les aiguilles permettent une pénétration plus profonde et une plus grande efficacité de ces traitements topiques.",
+          "Une crème anesthésiante topique est appliquée avant la procédure pour assurer le confort. La peau apparaîtra rouge, semblable à un coup de soleil, pendant 24 à 48 heures après le traitement. Une série de 3 à 6 traitements est généralement recommandée pour des résultats optimaux et durables, révélant une peau plus lisse, plus ferme et d'apparence plus jeune."
+        ]
+      },
+      "multivitamin-treatment": {
+        "name": "Traitement Multivitaminé",
+        "description": [
+          "Infusez votre peau de vie avec notre Traitement Multivitaminé profondément nourrissant. Ce soin du visage puissant est conçu pour délivrer un cocktail de vitamines, d'antioxydants et de minéraux essentiels directement dans la peau, aidant à combattre les signes du vieillissement prématuré et les dommages causés par les agressions environnementales.",
+          "Ce traitement personnalisé s'attaque à une variété de problèmes de peau, notamment le teint terne, la déshydratation et le teint inégal. Il comprend généralement un nettoyage en profondeur, une exfoliation et l'application d'un sérum ou d'un masque puissant riche en vitamines comme A, C et E, connues pour leurs propriétés réparatrices et protectrices.",
+          "Le Traitement Multivitaminé aide à booster l'éclat de la peau, à améliorer les niveaux d'hydratation, à stimuler la production de collagène pour une fermeté accrue et à restaurer un teint sain et éclatant. C'est une excellente thérapie pour les peaux fatiguées, stressées ou vieillissantes.",
+          "Adapté à tous les types de peau, ce soin du visage relaxant et réparateur laissera votre peau douce, souple et éclatante de santé. C'est un traitement mensuel parfait pour maintenir la vitalité de la peau et la protéger des rigueurs de la vie quotidienne."
+        ]
+      },
+      "prp-for-hair": {
+        "name": "PRP pour les Cheveux",
+        "description": [
+          "Combattez l'amincissement des cheveux et stimulez une nouvelle croissance en utilisant la puissance de votre propre corps avec le Plasma Riche en Plaquettes (PRP) pour les Cheveux. Ce traitement de pointe, non chirurgical, est une option naturelle et efficace pour les personnes souffrant de perte ou d'amincissement des cheveux.",
+          "La procédure commence par un simple prélèvement sanguin de votre bras. Le sang est ensuite placé dans une centrifugeuse pour séparer et concentrer les plaquettes et les facteurs de croissance, créant ainsi le PRP. Ce plasma doré est ensuite méticuleusement injecté dans les zones du cuir chevelu où les cheveux s'amincissent.",
+          "La forte concentration de facteurs de croissance dans le PRP agit pour nourrir les follicules pileux, augmenter l'apport sanguin au cuir chevelu, stimuler la phase de croissance du cycle pilaire (phase anagène) et augmenter l'épaisseur et la densité des tiges de cheveux existantes.",
+          "Le PRP pour les cheveux est une procédure sûre et peu invasive, sans temps d'arrêt. Pour des résultats optimaux, nous recommandons une série initiale de 3 à 4 traitements espacés d'un mois, suivis de traitements d'entretien tous les 6 à 12 mois. C'est une excellente thérapie autonome ou peut être utilisée pour améliorer les résultats d'une greffe de cheveux."
+        ]
+      },
+      "prp-for-face": {
+        "name": "PRP pour le Visage",
+        "description": [
+          "Exploitez l'incroyable pouvoir de guérison et de régénération de votre propre corps avec un traitement PRP pour le visage, célèbre sous le nom de « Vampire Facial ». Cette thérapie avancée utilise votre propre plasma riche en plaquettes pour rajeunir considérablement votre peau, favorisant un éclat jeune et radieux.",
+          "Le traitement commence par le prélèvement d'une petite quantité de votre sang, qui est ensuite centrifugé pour concentrer les plaquettes curatives et les facteurs de croissance. Ce PRP est ensuite appliqué sur votre visage, généralement en conjonction avec le microneedling. Le microneedling crée des milliers de micro-canaux, permettant au PRP de pénétrer profondément dans le derme où il peut agir le plus efficacement.",
+          "Une fois dans la peau, les facteurs de croissance du PRP déclenchent une puissante cascade régénérative, stimulant la production de nouveau collagène et d'élastine, améliorant le flux sanguin et créant de nouvelles cellules cutanées saines. Il en résulte une amélioration du teint et de la texture de la peau, une réduction des rides et ridules, une diminution de la taille des pores et une atténuation de l'apparence des cicatrices d'acné.",
+          "Le PRP pour le visage est un moyen sûr, naturel et très efficace d'obtenir un rajeunissement complet du visage avec un temps d'arrêt minimal. Une série de traitements est généralement recommandée pour obtenir les résultats les plus significatifs et les plus durables."
+        ]
+      },
+      "radiofrequency-treatment": {
+        "name": "Traitement par Radiofréquence",
+        "description": [
+          "Resserrez et raffermissez la peau relâchée du visage, du cou et du corps sans chirurgie grâce à notre traitement avancé par radiofréquence (RF). Cette technologie confortable et non invasive est une excellente solution pour les personnes cherchant à traiter le relâchement cutané, les ridules et les rides sans aucun temps d'arrêt.",
+          "La technologie RF fonctionne en chauffant doucement les couches profondes de votre peau (le derme). Ce chauffage contrôlé a un double effet : il provoque la contraction et le resserrement des fibres de collagène existantes, offrant un effet raffermissant immédiat. Plus important encore, il stimule les fibroblastes de la peau à produire du nouveau collagène et de l'élastine au fil du temps.",
+          "Ce processus progressif de remodelage du collagène conduit à une peau progressivement plus ferme, plus lisse et d'apparence plus jeune. Le traitement est confortable, souvent décrit comme une sensation de massage aux pierres chaudes. Il peut être utilisé pour resserrer la peau des bajoues, du cou, de la zone des sourcils, de l'abdomen et des bras.",
+          "Pour des résultats optimaux, une série de traitements hebdomadaires ou bihebdomadaires est recommandée. La radiofréquence est un moyen sûr et efficace d'obtenir un lifting subtil et un raffermissement notable, vous aidant à maintenir une apparence jeune."
+        ]
+      },
+      "sulcus-filling": {
+        "name": "Comblement des Sillons (Comblement des Rides Profondes)",
+        "description": [
+          "Effacez les rides profondes et les plis du visage avec notre traitement expert de comblement des sillons. En vieillissant, nous perdons du volume facial, ce qui entraîne la formation de rides proéminentes, telles que les sillons nasogéniens (rides du sourire allant du nez à la bouche) et les rides de la marionnette (rides allant des coins de la bouche jusqu'au menton).",
+          "Ce traitement utilise des produits de comblement dermique à base d'acide hyaluronique de première qualité pour cibler spécifiquement ces sillons profonds. En injectant soigneusement le produit de comblement directement dans et sous la ride, nous pouvons instantanément rajouter le volume perdu, soulevant la peau et lissant le pli.",
+          "Nos injecteurs qualifiés ont une profonde compréhension de l'anatomie et du vieillissement du visage, ce qui leur permet de restaurer un contour plus lisse et plus jeune à votre visage tout en conservant une apparence totalement naturelle. L'objectif n'est pas de « figer » votre visage, mais d'adoucir les ombres et de restaurer les douces courbes d'un visage jeune.",
+          "La procédure est rapide, avec un inconfort minimal et aucun temps d'arrêt. Les résultats sont immédiats et peuvent durer plus d'un an, offrant un rafraîchissement significatif mais subtil à votre apparence générale."
+        ]
+      },
+      "white-peeling": {
+        "name": "Peeling Blanc",
+        "description": [
+          "Obtenez un teint plus lumineux, plus uniforme et plus éclatant avec notre traitement spécialisé de Peeling Blanc. Ce peeling chimique avancé est spécifiquement formulé pour cibler diverses formes d'hyperpigmentation, notamment les taches de soleil, les taches de vieillesse, l'hyperpigmentation post-inflammatoire due à l'acné et le mélasma.",
+          "Le peeling contient un mélange d'agents éclaircissants puissants mais sûrs qui agissent pour inhiber la production de mélanine et éliminer en douceur les cellules décolorées existantes de la surface de la peau. Ce processus accélère le renouvellement cellulaire, révélant une peau plus claire et plus radieuse en dessous.",
+          "Notre traitement de Peeling Blanc est un choix parfait pour restaurer la clarté de la peau et s'attaquer à la pigmentation tenace qui ne répond pas aux crèmes topiques seules. Une série de peelings est souvent recommandée pour une amélioration la plus spectaculaire et la plus durable du teint.",
+          "Lors de votre consultation, nos experts en soins de la peau évalueront votre peau pour s'assurer que ce peeling est le bon choix pour vous et créeront un plan de traitement personnalisé, y compris les soins post-peeling pour protéger vos résultats."
+        ]
+      },
+      "wrinkle-fillers": {
+        "name": "Produits de Comblement des Rides",
+        "description": [
+          "Lissez les signes du vieillissement et restaurez le volume de jeunesse avec nos produits de comblement des rides administrés par des experts. Chez LUNAI, nous utilisons une gamme de produits de comblement dermique à base d'acide hyaluronique de haute qualité, approuvés par la FDA, pour adoucir instantanément les ridules, combler les rides profondes et reconstituer le volume perdu sur le visage.",
+          "Nos injecteurs qualifiés peuvent cibler diverses zones de préoccupation, notamment les pattes d'oie autour des yeux, les rides horizontales du front, les rides glabellaires (les « 11 » entre les sourcils) et les rides autour de la bouche. Le produit de comblement est injecté sous la peau pour la repulper de l'intérieur, effaçant efficacement la ride.",
+          "L'art d'utiliser les produits de comblement réside dans une technique précise qui garantit des résultats d'apparence naturelle. Notre objectif est de rafraîchir votre apparence, pas de la changer. Nous nous concentrons sur des améliorations subtiles qui vous laissent une apparence reposée et rajeunie.",
+          "La procédure est rapide, avec des résultats visibles immédiatement. Selon le produit de comblement utilisé et la zone traitée, les résultats peuvent durer de 6 à 18 mois. C'est l'un des traitements non chirurgicaux les plus populaires et les plus efficaces pour remonter le temps."
+        ]
+      },
+      "xanthelasma-treatment": {
+        "name": "Traitement du Xanthélasma (Arc Plasma)",
+        "description": [
+          "Le xanthélasma est une plaque jaunâtre et plate de dépôts de cholestérol qui apparaît sur ou autour des paupières. Bien qu'ils soient médicalement inoffensifs, ils peuvent être une préoccupation esthétique. Notre traitement non chirurgical à l'Arc Plasma offre une méthode sûre, précise et très efficace pour les éliminer sans incisions ni points de suture.",
+          "L'appareil à Arc Plasma utilise l'énergie du plasma pour sublimer le tissu ciblé couche par couche. Cela permet à nos praticiens de retirer méticuleusement les dépôts de xanthélasma sans endommager la peau saine environnante de la zone délicate des paupières.",
+          "Cette procédure est une alternative supérieure à l'excision chirurgicale traditionnelle, qui peut laisser des cicatrices, ou aux peelings chimiques, qui peuvent manquer de précision. Le traitement est effectué avec un anesthésique topique et a un temps d'arrêt minimal.",
+          "Après la procédure, de petites croûtes de carbone se forment sur la zone traitée, qui tombent en une semaine pour révéler une peau neuve et claire. Cette méthode avancée donne d'excellents résultats cosmétiques avec un très faible risque de récidive."
+        ]
+      },
+      "breast-augmentation": {
+        "name": "Augmentation Mammaire",
+        "description": [
+          "L'augmentation mammaire est l'une des procédures de chirurgie esthétique les plus populaires, conçue pour augmenter la taille des seins, améliorer la symétrie et rehausser les proportions générales du corps. Chez LUNAI, nous vous aidons à obtenir les belles courbes naturelles que vous désirez, en renforçant votre confiance et en vous aidant à vous sentir plus à l'aise dans vos vêtements.",
+          "Nous offrons une gamme d'options, y compris des implants en silicone et en solution saline de formes, tailles et profils variés. Nous proposons également une augmentation mammaire par transfert de graisse pour celles qui recherchent une augmentation de taille modeste en utilisant leur propre graisse corporelle. Nos chirurgiens certifiés vous guideront à travers les choix lors de votre consultation, vous aidant à sélectionner la meilleure option pour atteindre vos objectifs esthétiques et compléter votre morphologie.",
+          "La procédure consiste à placer l'implant soit derrière le tissu mammaire, soit sous le muscle pectoral par une incision discrète. Notre objectif est de créer un résultat à la fois beau et proportionné, en veillant à ce que votre nouvelle silhouette soit naturelle et vous convienne.",
+          "La récupération implique généralement quelques jours de repos, avec un retour à la plupart des activités non pénibles en une semaine ou deux. Les résultats sont immédiats et durables, offrant un regain de confiance en soi significatif."
+        ]
+      },
+      "breast-lift": {
+        "name": "Lifting des Seins",
+        "description": [
+          "Un lifting des seins, ou mastopexie, est une procédure chirurgicale conçue pour restaurer un profil de sein jeune et plus ferme en corrigeant l'affaissement et en améliorant la forme. Les effets de la gravité, de la grossesse, des fluctuations de poids et du vieillissement peuvent faire perdre aux seins leur fermeté et les faire tomber. Un lifting des seins remonte les seins à une position plus élevée sur la poitrine, créant un contour plus ferme et plus jeune.",
+          "Pendant la procédure, nos chirurgiens enlèvent l'excès de peau et remodèlent habilement le tissu mammaire interne pour créer un monticule mammaire plus élevé et plus galbé. Le mamelon et l'aréole sont également repositionnés plus haut sur le sein. Si la perte de volume est également une préoccupation, un lifting des seins peut être combiné avec des implants (une augmentation-mastopexie) pour restaurer à la fois le lifting et la plénitude.",
+          "Les candidates idéales sont les femmes qui sont satisfaites de la taille de leurs seins mais qui souhaitent corriger l'affaissement. La procédure est hautement personnalisée, les modèles d'incision étant choisis pour répondre au mieux au degré d'affaissement et atteindre le résultat esthétique souhaité.",
+          "La récupération implique environ une à deux semaines d'inactivité. Les résultats d'un lifting des seins sont durables, offrant une silhouette plus jeune et plus confiante pour les années à venir."
+        ]
+      },
+      "breast-reduction": {
+        "name": "Réduction Mammaire",
+        "description": [
+          "Pour de nombreuses femmes, des seins trop volumineux (macromastie) peuvent causer une détresse physique et émotionnelle importante. La chirurgie de réduction mammaire, ou mammoplastie de réduction, est une procédure qui change la vie et qui enlève l'excès de graisse mammaire, de tissu glandulaire et de peau pour obtenir une taille de sein plus en proportion avec votre corps.",
+          "Cette procédure n'est pas seulement esthétique ; elle procure un soulagement fonctionnel profond. En réduisant le poids des seins, elle peut soulager les malaises physiques chroniques tels que les douleurs au dos, au cou et aux épaules, l'irritation de la peau sous les seins et les sillons profonds et douloureux des bretelles de soutien-gorge. Elle permet également aux femmes de participer plus confortablement à des activités physiques et de trouver des vêtements qui leur vont bien.",
+          "Nos chirurgiens compatissants utilisent des techniques avancées pour créer des seins plus petits, plus légers et plus galbés tout en préservant la sensation et en assurant une cicatrisation la plus discrète possible. L'aréole est également réduite en taille et repositionnée à une hauteur plus jeune.",
+          "La réduction mammaire a l'un des taux de satisfaction des patientes les plus élevés de toutes les procédures de chirurgie plastique. La récupération implique généralement quelques semaines d'inactivité, mais le soulagement des symptômes physiques est souvent ressenti immédiatement."
+        ]
+      },
+      "breast-reconstruction": {
+        "name": "Reconstruction Mammaire",
+        "description": [
+          "Perdre un sein suite à une mastectomie peut être une partie profondément émotionnelle du parcours contre le cancer. La reconstruction mammaire est une série de procédures conçues pour restaurer la forme, l'apparence et la taille du sein, aidant une femme à se sentir à nouveau entière et à aller de l'avant avec confiance.",
+          "Chez LUNAI, nos chirurgiens compatissants et qualifiés offrent une gamme d'options avancées de reconstruction mammaire. La reconstruction peut être effectuée en même temps que la mastectomie (reconstruction immédiate) ou à une date ultérieure (reconstruction différée).",
+          "Les deux approches principales sont la reconstruction par implant et la reconstruction autologue (ou « lambeau »), qui utilise votre propre tissu corporel de l'abdomen, du dos ou des cuisses pour créer un nouveau monticule mammaire. La meilleure option dépend de votre type de corps, de votre plan de traitement contre le cancer et de vos préférences personnelles. Nous travaillerons en étroite collaboration avec vous et votre équipe d'oncologie pour créer un plan chirurgical sûr et efficace.",
+          "La reconstruction mammaire est un parcours très personnel, et notre objectif est de vous soutenir à chaque étape. Nous visons à créer un résultat qui non seulement semble naturel, mais qui aide également à restaurer votre sentiment d'identité et de féminité après un cancer du sein."
+        ]
+      },
+      "arm-lift": {
+        "name": "Lifting des Bras",
+        "description": [
+          "Un lifting des bras, ou brachioplastie, est une procédure chirurgicale qui remodèle la partie supérieure des bras en enlevant la peau lâche et affaissée et l'excès de graisse. Cette condition, souvent appelée « ailes de chauve-souris », peut résulter d'une perte de poids importante, du vieillissement ou de la génétique et ne répond souvent pas au régime alimentaire et à l'exercice.",
+          "Cette procédure crée un contour de bras plus lisse, plus ferme et plus tonique, vous permettant de porter des hauts et des robes sans manches avec une confiance renouvelée. Pendant l'intervention, une incision est généralement pratiquée à l'intérieur ou à l'arrière du bras, de l'aisselle au coude. Par cette incision, notre chirurgien enlève l'excès de peau et de graisse et resserre les tissus de soutien sous-jacents.",
+          "La liposuccion peut être utilisée en conjonction avec un lifting des bras pour obtenir le meilleur contour possible. Les candidats idéaux sont des personnes qui ont un poids stable et qui sont gênées par l'apparence de la peau lâche sur le haut de leurs bras.",
+          "La récupération implique le port de vêtements de compression et la limitation des activités intenses pendant plusieurs semaines. Bien qu'il y ait une cicatrice, nos chirurgiens veillent à la placer le plus discrètement possible. Les résultats sont une forme de bras considérablement améliorée et plus jeune."
+        ]
+      },
+      "tummy-tuck": {
+        "name": "Abdominoplastie (Plastie Abdominale)",
+        "description": [
+          "Une abdominoplastie est la norme d'or pour créer un profil abdominal plus plat, plus ferme et plus lisse. C'est une procédure transformatrice qui traite des problèmes que le régime alimentaire et l'exercice seuls не peuvent pas résoudre, tels que la peau lâche et excédentaire après une grossesse ou une perte de poids importante, et les muscles abdominaux affaiblis ou séparés (diastasis des grands droits).",
+          "Lors d'une abdominoplastie complète, notre chirurgien pratique une incision horizontale dans le bas de l'abdomen, d'une hanche à l'autre. La peau abdominale est soulevée, les muscles sous-jacents sont réparés et resserrés, et l'excès de peau et de graisse est enlevé. La peau restante est ensuite redrapée pour un contour plus tendu et plus lisse, et le nombril est repositionné.",
+          "Nous proposons également une mini-abdominoplastie pour les patientes dont les préoccupations se situent principalement en dessous du nombril. Cette option moins étendue implique une incision plus courte et une récupération plus rapide.",
+          "Une abdominoplastie apporte une amélioration spectaculaire et durable à la section médiane, aidant les patientes à retrouver leur silhouette d'avant la grossesse ou à célébrer la dernière étape de leur parcours de perte de poids. La récupération nécessite généralement deux à trois semaines d'arrêt."
+        ]
+      },
+      "liposculpture": {
+        "name": "Liposculpture",
+        "description": [
+          "La liposculpture est une forme plus avancée et artistique de la liposuccion. Alors que la liposuccion traditionnelle se concentre sur l'élimination de grands volumes de graisse, la liposculpture est une question de précision et de détail. Elle consiste à éliminer les dépôts de graisse localisés et tenaces pour sculpter et définir soigneusement les contours naturels du corps et révéler la définition musculaire sous-jacente.",
+          "Cette technique est idéale pour les personnes qui sont déjà proches de leur poids corporel idéal mais qui ont du mal avec des poches de graisse persistantes qui masquent leur physique. Les zones de traitement courantes comprennent l'abdomen, les poignées d'amour, les cuisses, le dos et les bras. Elle peut être utilisée pour créer l'apparence d'abdominaux « tablettes de chocolat » (gravure abdominale) ou pour définir la taille.",
+          "Chez LUNAI, nos chirurgiens utilisent des technologies de liposuccion de pointe pour éliminer en douceur la graisse tout en minimisant les traumatismes aux tissus environnants. Cela permet une récupération plus douce et des résultats plus affinés et haute définition.",
+          "La liposculpture s'adresse aux patients qui cherchent à obtenir l'aspect final et ciselé pour lequel ils ont travaillé par le régime et le fitness, mais qu'ils n'ont pas pu atteindre. C'est l'art du remodelage corporel, perfectionné."
+        ]
+      },
+      "brazilian-butt-lift": {
+        "name": "Lifting Brésilien des Fesses (BBL)",
+        "description": [
+          "Le lifting brésilien des fesses (BBL) est une procédure très populaire et transformatrice qui améliore la taille et la forme des fesses en utilisant votre propre graisse naturelle. C'est une chirurgie de remodelage corporel deux-en-un qui crée un profil fessier plus galbé et relevé et une silhouette en sablier plus définie.",
+          "La procédure commence par une liposuccion pour prélever l'excès de graisse d'autres zones du corps où elle est indésirable, comme l'abdomen, les poignées d'amour ou les cuisses. Cela a l'avantage supplémentaire d'amincir et de remodeler les sites donneurs. La graisse prélevée est ensuite purifiée et méticuleusement injectée en plusieurs couches dans les fesses pour augmenter le volume, améliorer la forme et créer une apparence liftée.",
+          "Un BBL est une excellente option pour celles qui désirent un postérieur plus plein mais veulent éviter les implants. Parce qu'il utilise votre propre graisse, les résultats ont un aspect et une sensation totalement naturels. Nos chirurgiens sont des experts dans le placement artistique de la graisse pour créer des résultats magnifiques, proportionnés et durables.",
+          "La récupération nécessite d'éviter toute pression directe sur les fesses pendant plusieurs semaines pour assurer la survie optimale des cellules graisseuses transférées. Le résultat final est un contour du bas du corps amélioré de façon permanente et plus voluptueux."
+        ]
+      },
+      "labiaplasty": {
+        "name": "Labiaplastie",
+        "description": [
+          "La labiaplastie est une procédure chirurgicale intime conçue pour améliorer le confort et l'apparence des lèvres. De nombreuses femmes ressentent une gêne physique due à des petites lèvres hypertrophiées ou allongées, ce qui peut provoquer des frottements, des irritations et des douleurs pendant l'exercice, les rapports sexuels ou le port de vêtements serrés. La labiaplastie peut apporter un soulagement significatif de ces symptômes.",
+          "La procédure est également réalisée pour des raisons esthétiques, pour réduire la taille ou corriger l'asymétrie des petites ou grandes lèvres, créant une apparence plus nette et plus esthétique. Cela peut entraîner une augmentation significative de la confiance en soi et du confort dans son propre corps.",
+          "Nos chirurgiens compatissants réalisent la labiaplastie avec la plus grande discrétion et sensibilité. En utilisant des techniques précises, ils coupent soigneusement l'excès de tissu et remodèlent les lèvres pour obtenir le résultat souhaité par la patiente tout en préservant la sensibilité.",
+          "La procédure est généralement réalisée en ambulatoire et a une récupération relativement simple, la plupart des patientes reprenant leurs activités normales en quelques semaines. C'est une chirurgie sûre et efficace qui peut grandement améliorer la qualité de vie d'une femme."
+        ]
+      },
+      "thigh-lift": {
+        "name": "Lifting des Cuisses",
+        "description": [
+          "Un lifting des cuisses, ou cruroplastie, est une procédure de remodelage corporel qui traite la peau lâche et affaissée et l'excès de graisse sur l'intérieur et/ou l'extérieur des cuisses. Cette condition est un résultat courant d'une perte de poids massive, du vieillissement ou de la génétique et peut causer à la fois une insatisfaction esthétique et des problèmes physiques comme des frottements et des irritations.",
+          "Un lifting des cuisses crée un contour de cuisse plus ferme, plus lisse et plus jeune. Pendant la procédure, une incision est pratiquée, généralement dans le pli de l'aine s'étendant vers le bas de l'intérieur de la cuisse, à travers laquelle l'excès de peau et de graisse est retiré. La peau restante est ensuite redrapée et resserrée, ce qui entraîne une forme de jambe considérablement améliorée.",
+          "Les candidats idéaux sont à un poids stable et s'engagent à maintenir un mode de vie sain, car les futures fluctuations de poids peuvent compromettre les résultats. La procédure aide les vêtements à mieux s'ajuster et peut améliorer considérablement la confiance en soi.",
+          "La récupération implique le port de vêtements de compression et l'évitement d'activités intenses pendant environ 4 à 6 semaines. Bien qu'une cicatrice soit présente, nos chirurgiens la placent aussi discrètement que possible. Le résultat final est des jambes magnifiquement galbées que vous serez fier de montrer."
+        ]
+      },
+      "gynecomastia": {
+        "name": "Gynécomastie (Réduction Mammaire Masculine)",
+        "description": [
+          "La gynécomastie est une affection courante caractérisée par le développement excessif du tissu mammaire chez les hommes, entraînant l'apparition de « seins masculins ». Elle peut être causée par des déséquilibres hormonaux, la génétique ou certains médicaments et peut être une source importante de gêne. La chirurgie de réduction mammaire masculine est une procédure très efficace pour corriger ce problème.",
+          "La chirurgie vise à restaurer un contour de poitrine plus plat, plus ferme et plus masculin. La technique spécifique utilisée dépend de la cause de la gynécomastie. Si elle est principalement due à un excès de tissu adipeux, la liposuccion seule peut être suffisante. Si un excès de tissu glandulaire en est la cause, ce tissu sera excisé chirurgicalement par une petite incision autour de l'aréole.",
+          "Dans de nombreux cas, une combinaison de liposuccion et d'excision est utilisée pour obtenir le meilleur résultat possible. Nos chirurgiens effectueront une évaluation approfondie pour créer un plan chirurgical personnalisé pour vous.",
+          "La récupération est relativement rapide, la plupart des hommes reprenant le travail en une semaine. Les résultats sont permanents et peuvent avoir un impact profond sur l'estime de soi, permettant aux hommes de se sentir à l'aise et en confiance torse nu ou en portant des vêtements ajustés."
+        ]
+      },
+      "carboxytherapy": {
+        "name": "Carboxythérapie",
+        "description": [
+          "La carboxythérapie est un traitement non chirurgical innovant et polyvalent qui implique l'injection thérapeutique de dioxyde de carbone (CO2) de qualité médicale dans le tissu sous-cutané. Cette procédure sûre et peu invasive exploite un processus naturel du corps pour rajeunir la peau et améliorer son apparence.",
+          "Lorsque le CO2 est injecté, le corps l'interprète comme un déficit en oxygène et réagit en augmentant le flux sanguin et les facteurs de croissance dans la zone traitée. Cette augmentation d'oxygène et de nutriments stimule la circulation, favorise le drainage lymphatique et promeut la production de nouveau collagène.",
+          "Chez LUNAI, nous utilisons la carboxythérapie pour traiter efficacement une série de problèmes. Elle est très efficace pour diminuer l'apparence de la cellulite, estomper les vergetures en reconstruisant le réseau de collagène, et améliorer la laxité et la texture de la peau du corps. Elle peut également être utilisée pour traiter les cernes en améliorant la circulation.",
+          "Le traitement est rapide, avec un inconfort minimal et aucun temps d'arrêt. Une série de séances est généralement nécessaire pour obtenir des résultats optimaux et durables pour une peau plus lisse et d'apparence plus saine."
+        ]
+      },
+      "cellulite-treatment": {
+        "name": "Traitement de la Cellulite",
+        "description": [
+          "La cellulite, l'aspect capitonné, en « peau d'orange » de la peau, touche la grande majorité des femmes, quelle que soit leur taille ou leur poids. Elle est causée par des dépôts de graisse qui poussent à travers les bandes de tissu conjonctif (septums) sous la peau. Chez LUNAI, nous proposons un programme complet de traitement de la cellulite qui cible les causes structurelles de la cellulite pour une apparence visiblement plus lisse.",
+          "Nous comprenons qu'une seule modalité ne suffit souvent pas. Notre approche personnalisée peut combiner plusieurs technologies avancées et non invasives pour obtenir les meilleurs résultats. Celles-ci peuvent inclure la radiofréquence pour chauffer et resserrer la peau, la thérapie par ondes acoustiques pour briser les bandes fibreuses, et la carboxythérapie pour améliorer la circulation.",
+          "Notre plan de traitement vise à décomposer les dépôts de graisse tenaces, à libérer les septums fibreux qui provoquent les capitons, à améliorer le drainage lymphatique pour réduire la rétention d'eau, et à stimuler la production de collagène pour améliorer l'élasticité et l'épaisseur de la peau.",
+          "Bien qu'il n'existe pas de remède permanent contre la cellulite, nos programmes personnalisés peuvent apporter une amélioration significative et durable de la texture de la peau, vous aidant à vous sentir plus en confiance dans votre propre peau."
+        ]
+      },
+      "laser-hair-removal": {
+        "name": "Épilation au Laser",
+        "description": [
+          "Profitez de la liberté d'une peau douce et soyeuse, sans poils, grâce à nos services avancés d'épilation au laser. C'est l'un des traitements cosmétiques non invasifs les plus populaires, offrant une solution à long terme aux poils indésirables sur pratiquement n'importe quelle partie du visage ou du corps. Dites adieu au cycle sans fin du rasage, de l'épilation à la cire et à la pince.",
+          "Nous utilisons une technologie laser de pointe qui est sûre et efficace pour un large éventail de types de peau. Le laser fonctionne en émettant un faisceau de lumière concentré qui est absorbé par le pigment (mélanine) du follicule pileux. Cette énergie lumineuse se convertit en chaleur, ce qui endommage le follicule et inhibe sa capacité à repousser.",
+          "Parce que le laser cible les poils dans leur phase de croissance active, une série de traitements (généralement 6 à 8 séances) est nécessaire pour atteindre tous les poils dans leur cycle de croissance et obtenir une réduction permanente des poils.",
+          "Nos techniciennes expérimentées veillent à ce que le traitement soit aussi confortable et efficace que possible. Les zones de traitement courantes comprennent les jambes, les aisselles, le maillot, le dos, la poitrine et le visage. Commencez dès aujourd'hui votre voyage vers une peau lisse sans effort."
+        ]
+      },
+      "lipolysis": {
+        "name": "Lipolyse",
+        "description": [
+          "Faites fondre les poches de graisse tenaces et localisées sans chirurgie grâce à la lipolyse injectable. Il s'agit d'une solution de remodelage corporel ciblée et non invasive, parfaite pour traiter les petites zones de graisse résistantes au régime et à l'exercice.",
+          "Le traitement consiste à injecter une solution spécialement formulée, contenant souvent de l'acide désoxycholique, directement dans le dépôt de graisse. Cette substance agit pour briser la membrane cellulaire des cellules graisseuses. Une fois détruites, ces cellules sont naturellement traitées et éliminées de façon permanente par le système lymphatique du corps.",
+          "La lipolyse injectable est très efficace pour traiter des zones comme le double menton (graisse sous-mentonnière), le bourrelet du soutien-gorge, les petites poches sur l'abdomen et l'intérieur des cuisses. Ce n'est pas une solution de perte de poids, mais plutôt un outil pour affiner et remodeler des zones spécifiques.",
+          "Une série de 2 à 4 traitements est généralement nécessaire pour des résultats optimaux. Il peut y avoir un certain gonflement et une certaine sensibilité dans la zone traitée pendant quelques jours, mais il n'y a pas de temps d'arrêt significatif. Le résultat est une réduction permanente de la graisse dans la zone traitée et un contour amélioré."
+        ]
+      },
+      "plasma-arc-skin": {
+        "name": "Arc Plasma (Traitements Cutanés)",
+        "description": [
+          "L'Arc Plasma est une technologie polyvalente et innovante qui permet une large gamme de traitements cutanés non chirurgicaux sur le corps. Il offre un moyen précis et efficace de rajeunir et de réparer la peau en exploitant la puissance de l'énergie plasma.",
+          "Cette technologie est exceptionnelle pour le resserrement cutané non chirurgical, ce qui en fait une excellente option pour traiter la peau lâche de l'abdomen (surtout après la grossesse), du cou et des genoux. Elle peut également être utilisée pour la révision des cicatrices, améliorant considérablement la texture et l'apparence des cicatrices chirurgicales, des cicatrices d'acné et des vergetures.",
+          "De plus, l'Arc Plasma est une méthode sûre et efficace pour éliminer les lésions cutanées bénignes telles que les acrochordons, les grains de beauté et les verrues. L'appareil sublime le tissu ciblé sans causer de dommages thermiques à la zone environnante, ce qui entraîne une cicatrisation minimale et une guérison rapide.",
+          "Le traitement favorise la guérison naturelle et la régénération de la peau, ce qui donne une surface cutanée plus claire, plus lisse et plus tendue. C'est un outil puissant pour traiter de multiples problèmes de peau sur le corps sans avoir recours à une chirurgie invasive."
+        ]
+      },
+      "sclerotherapy": {
+        "name": "Sclérothérapie (Traitement des Varicosités)",
+        "description": [
+          "Obtenez des jambes claires et magnifiques et retrouvez votre confiance avec la Sclérothérapie. C'est la procédure médicale de référence pour éliminer les varicosités inesthétiques et les petites varices sur les jambes. C'est un traitement sûr, efficace et peu invasif qui a fait ses preuves depuis des décennies.",
+          "La procédure consiste à injecter une solution spéciale, appelée sclérosant, directement dans les veines ciblées. Cette solution irrite la paroi de la veine, la faisant gonfler, s'affaisser et se coller. Au fil du temps, la veine traitée se transforme en tissu cicatriciel et disparaît de la vue à mesure qu'elle est naturellement absorbée par le corps.",
+          "Une seule séance peut comporter plusieurs injections, en fonction du nombre de veines traitées. La procédure est rapide, avec un inconfort minimal. Il n'y a pas de temps d'arrêt, et les patients sont encouragés à marcher immédiatement après pour favoriser la circulation.",
+          "Plusieurs séances peuvent être nécessaires pour atteindre le niveau de disparition souhaité. Avec la sclérothérapie chez LUNAI, vous pouvez restaurer efficacement une apparence uniforme à vos jambes et vous sentir à l'aise de porter à nouveau des shorts et des jupes."
+        ]
+      },
+      "composite-veneers": {
+        "name": "Facettes en Composite",
+        "description": [
+          "Transformez votre sourire à un prix abordable et en une seule visite avec les facettes en composite. Cette procédure dentaire esthétique, également connue sous le nom de collage dentaire, est un excellent moyen de corriger une variété d'imperfections mineures. Nos dentistes qualifiés appliquent avec maîtrise une résine composite de la couleur de la dent directement sur la surface de la dent pour en améliorer l'apparence.",
+          "Les facettes en composite sont idéales pour dissimuler les éclats, combler les petits espaces entre les dents, couvrir les taches et la décoloration, et même corriger l'apparence de dents légèrement de travers ou mal formées. C'est une procédure conservatrice qui ne nécessite généralement qu'un retrait minimal, voire nul, de la structure naturelle de la dent.",
+          "Le processus est à la fois un art et une science. Nos dentistes sélectionnent soigneusement une teinte de résine qui correspond à vos dents naturelles, puis la sculptent et la polissent de manière experte pour créer un résultat magnifique et homogène. L'ensemble de la procédure est généralement terminé en un seul rendez-vous.",
+          "Bien qu'elles ne soient pas aussi durables ou résistantes aux taches que les facettes en porcelaine, les facettes en composite sont un moyen rentable et moins invasif d'obtenir une transformation de sourire époustouflante et un regain de confiance significatif."
+        ],
+        "dentalSubCategoryTitle": "ESTHÉTIQUE"
+      },
+      "emax-veneers": {
+        "name": "Facettes E-Max",
+        "description": [
+          "Obtenez un sourire impeccable, radieux et incroyablement durable avec les facettes E-Max. Considérées comme le summum de la dentisterie esthétique, les facettes E-Max sont fabriquées à partir d'une vitrocéramique de disilicate de lithium à haute résistance. Ce matériau est réputé pour sa ténacité, sa durabilité et sa qualité translucide étonnante qui imite parfaitement l'apparence de l'émail dentaire naturel.",
+          "Les facettes E-Max sont des coques ultra-minces sur mesure qui sont collées à la surface avant de vos dents. Elles sont la solution idéale pour créer une transformation complète du sourire, capable de corriger des problèmes tels que des taches sévères, des éclats, des fissures, des espaces et un désalignement important.",
+          "Le processus se déroule en deux visites. Lors de la première, nous préparons les dents, prenons des empreintes précises et vous posons des facettes temporaires. Les empreintes sont envoyées à un laboratoire dentaire de maître où vos facettes sur mesure sont fabriquées. Lors de la deuxième visite, nous collons définitivement les facettes finales sur vos dents.",
+          "Avec leur beauté exceptionnelle et leur résistance aux taches, les facettes E-Max offrent un sourire durable de calibre de célébrité qui sera spectaculaire pendant de nombreuses années."
+        ],
+        "dentalSubCategoryTitle": "ESTHÉTIQUE"
+      },
+      "teeth-whitening": {
+        "name": "Blanchiment des Dents",
+        "description": [
+          "Éclaircissez considérablement votre sourire et renforcez votre confiance avec nos services professionnels de blanchiment des dents. Avec le temps, les dents peuvent se tacher et jaunir à cause du café, du thé, du vin rouge, du tabagisme et du processus naturel de vieillissement. Le blanchiment professionnel est le moyen le plus sûr et le plus efficace d'éliminer ces taches et de révéler un sourire d'une blancheur éclatante.",
+          "Chez LUNAI, nous proposons deux options pratiques et puissantes. Notre traitement de blanchiment en cabinet offre les résultats les plus spectaculaires en une seule visite, éclaircissant souvent les dents de plusieurs teintes en environ une heure. C'est le choix parfait pour ceux qui veulent des résultats immédiats pour un événement spécial.",
+          "Nous fournissons également des kits de blanchiment personnalisés à domicile. Nous prenons des empreintes de vos dents pour créer des gouttières sur mesure qui garantissent que le gel de blanchiment de force professionnelle est appliqué de manière uniforme et sûre. Vous pouvez ensuite blanchir vos dents dans le confort de votre foyer sur une période d'une à deux semaines.",
+          "Nos deux solutions de blanchiment sont sans danger pour votre émail et offrent des résultats bien supérieurs aux produits en vente libre. Laissez-nous vous aider à obtenir le sourire éblouissant et blanc que vous avez toujours voulu."
+        ],
+        "dentalSubCategoryTitle": "ESTHÉTIQUE"
+      },
+      "crowns": {
+        "name": "Couronnes",
+        "description": [
+          "Une couronne dentaire, souvent appelée « capsule », est une restauration sur mesure qui recouvre complètement la partie visible d'une dent. C'est un moyen très efficace de protéger et de restaurer une dent qui a été considérablement affaiblie par une carie, une fracture, une grosse obturation ou un traitement de canal.",
+          "Les couronnes ont de multiples objectifs : elles restaurent la taille, la forme et la force d'origine d'une dent, et elles améliorent son apparence esthétique. Chez LUNAI, nos couronnes sont fabriquées à partir de matériaux de haute qualité et durables tels que la porcelaine, la zircone ou la porcelaine fusionnée au métal, conçues pour se fondre parfaitement avec vos dents naturelles.",
+          "Le processus implique généralement deux rendez-vous. Lors de la première visite, la dent est préparée, une empreinte est prise pour le laboratoire et une couronne temporaire est placée. Lors de la deuxième visite, la couronne permanente fabriquée sur mesure est vérifiée pour un ajustement parfait, puis cimentée en place.",
+          "Une couronne bien faite peut protéger une dent compromise de dommages supplémentaires et fournir une restauration belle et fonctionnelle qui peut durer de nombreuses années avec des soins appropriés."
+        ],
+        "dentalSubCategoryTitle": "PROTHÈSES"
+      },
+      "dental-bridges": {
+        "name": "Ponts Dentaires",
+        "description": [
+          "Un pont dentaire est un appareil prothétique fixe conçu pour littéralement « combler le vide » créé par une ou plusieurs dents manquantes. C'est une solution excellente et fiable pour restaurer votre sourire, votre capacité à mâcher correctement et l'intégrité globale de votre occlusion.",
+          "Un pont traditionnel se compose d'une ou plusieurs dents artificielles (appelées pontiques) qui sont maintenues en place par des couronnes dentaires cimentées sur les dents naturelles de chaque côté de l'espace (appelées dents piliers). Cela crée une restauration solide et non amovible.",
+          "En comblant l'espace d'une dent manquante, un pont dentaire empêche les dents restantes de se déplacer, ce qui peut entraîner des problèmes d'occlusion et de mâchoire. Il aide également à maintenir la forme naturelle de votre visage et à répartir uniformément les forces de votre occlusion.",
+          "Nos ponts sont fabriqués sur mesure à partir de matériaux de haute qualité pour correspondre à la couleur et à la forme de vos dents naturelles, garantissant un résultat à la fois fonctionnel et esthétique."
+        ],
+        "dentalSubCategoryTitle": "PROTHÈSES"
+      },
+      "dentures": {
+        "name": "Prothèses Dentaires",
+        "description": [
+          "Retrouvez un sourire complet et confiant et une pleine fonction de mastication avec nos prothèses modernes et confortables. Les prothèses sont des appareils amovibles qui remplacent les dents manquantes et les tissus environnants. Chez LUNAI, nous nous concentrons sur la fourniture de prothèses qui non seulement ont l'air naturelles, mais qui offrent également un ajustement sûr et confortable.",
+          "Nous proposons plusieurs types de prothèses pour répondre à vos besoins. Les prothèses complètes (ou totales) sont utilisées lorsque toutes les dents d'une arcade sont manquantes. Les prothèses partielles sont utilisées lorsqu'il reste des dents naturelles, et elles sont maintenues en place par des crochets qui se fixent aux dents existantes.",
+          "Pour une stabilité accrue, nous proposons également des prothèses sur implants. Ces prothèses s'enclenchent sur des implants dentaires qui ont été placés chirurgicalement dans l'os de la mâchoire, offrant un ajustement beaucoup plus sûr et stable qui élimine le glissement et améliore la puissance de mastication.",
+          "Notre équipe prend un soin méticuleux dans la conception et la fabrication de vos prothèses sur mesure, en veillant à ce qu'elles restaurent votre structure faciale, soutiennent vos lèvres et vos joues, et vous permettent de manger, de parler et de sourire avec une confiance renouvelée."
+        ],
+        "dentalSubCategoryTitle": "PROTHÈSES"
+      },
+      "fixed-braces": {
+        "name": "Appareils Dentaires Fixes",
+        "description": [
+          "Obtenez un sourire parfaitement droit et une occlusion saine et fonctionnelle avec les appareils dentaires fixes traditionnels. Ce traitement orthodontique éprouvé est très efficace pour corriger un large éventail de problèmes complexes, notamment un encombrement sévère, un espacement et des malocclusions telles que les supraclusions, les sous-occlusions et les occlusions croisées.",
+          "Les appareils fixes se composent de boîtiers qui sont collés à l'avant de chaque dent et d'un arc qui les relie. En effectuant des ajustements périodiques du fil, notre orthodontiste peut appliquer une pression douce et constante pour guider progressivement vos dents vers leur alignement idéal.",
+          "Chez LUNAI, nos appareils modernes sont plus confortables et esthétiques que jamais. Nous proposons des appareils métalliques traditionnels ainsi que des appareils en céramique transparente, qui sont moins visibles et un choix populaire pour les adultes et les adolescents soucieux de leur apparence.",
+          "Les appareils fixes restent l'un des moyens les plus fiables et les plus précis d'obtenir un sourire magnifique, sain et stable pour les patients de tous âges."
+        ],
+        "dentalSubCategoryTitle": "ORTHODONTIE"
+      },
+      "invisalign": {
+        "name": "Invisalign",
+        "description": [
+          "Redressez vos dents discrètement et confortablement avec les gouttières transparentes Invisalign. Ce système orthodontique révolutionnaire utilise une série de gouttières en plastique sur mesure et pratiquement invisibles pour déplacer progressivement et en douceur vos dents vers leur position souhaitée, sans avoir besoin de boîtiers ou de fils métalliques.",
+          "Le processus Invisalign commence par un scan numérique 3D de vos dents, à partir duquel un plan de traitement précis est créé. Vous pourrez voir une représentation virtuelle de votre parcours de traitement et le résultat final avant même de commencer. Vous porterez chaque jeu de gouttières pendant environ 1 à 2 semaines avant de passer au jeu suivant de la série.",
+          "Un avantage clé d'Invisalign est que les gouttières sont amovibles. Cela signifie que vous pouvez les retirer pour manger, boire, vous brosser les dents et passer le fil dentaire, ce qui permet une meilleure hygiène bucco-dentaire et aucune restriction alimentaire pendant le traitement.",
+          "Invisalign est un choix populaire et très efficace pour les adultes et les adolescents qui cherchent à corriger un encombrement, un espacement et des problèmes d'occlusion légers à modérés sans l'apparence des appareils traditionnels."
+        ],
+        "dentalSubCategoryTitle": "ORTHODONTIE"
+      },
+      "removable-appliances": {
+        "name": "Appareils Amovibles",
+        "description": [
+          "Les appareils orthodontiques amovibles jouent un rôle crucial tant dans le traitement actif que dans la phase de contention de l'orthodontie. Ces appareils sur mesure sont conçus pour être mis et retirés de la bouche par le patient et servent à diverses fins.",
+          "Les appareils actifs, tels que les plaques d'expansion ou les aligneurs à ressort, peuvent être utilisés pour obtenir des mouvements dentaires spécifiques et limités, souvent chez les jeunes patients lors d'un traitement interceptif précoce. Ils peuvent aider à élargir l'arcade dentaire ou à corriger des désalignements mineurs.",
+          "Le type d'appareil amovible le plus courant est le contenteur. Une fois votre traitement par appareil dentaire ou Invisalign terminé, un contenteur est essentiel pour maintenir votre sourire nouvellement redressé. Il maintient les dents dans leurs nouvelles positions pendant que l'os et les ligaments environnants se stabilisent, les empêchant de revenir à leurs anciennes positions.",
+          "Chez LUNAI, nous fournissons différents types d'appareils amovibles durables et confortables, ajustés sur mesure pour garantir qu'ils sont efficaces et faciles à porter comme prescrit."
+        ],
+        "dentalSubCategoryTitle": "ORTHODONTIE"
+      },
+      "infected-teeth-treatment": {
+        "name": "Traitement des Dents Infectées (Canal Radiculaire)",
+        "description": [
+          "Sauvez une dent gravement infectée ou enflammée de l'extraction avec notre traitement doux et efficace des dents infectées, plus communément appelé thérapie du canal radiculaire. Cette procédure cruciale est nécessaire lorsque le tissu mou à l'intérieur de la dent, appelé pulpe, s'infecte en raison d'une carie profonde, de procédures dentaires répétées ou d'une fissure dans la dent.",
+          "S'il n'est pas traité, une pulpe infectée peut provoquer une douleur intense, un abcès et finalement la perte de la dent. La thérapie du canal radiculaire consiste à retirer soigneusement la pulpe infectée ou enflammée de l'intérieur de la dent et de ses canaux radiculaires.",
+          "Une fois la pulpe retirée, l'intérieur de la dent est méticuleusement nettoyé, désinfecté, puis rempli et scellé avec un matériau semblable à du caoutchouc appelé gutta-percha. La procédure est réalisée sous anesthésie locale et n'est généralement pas plus inconfortable que de se faire faire une obturation normale.",
+          "Après un traitement de canal, la dent n'est plus vitale, mais elle est toujours fonctionnelle. Il est généralement recommandé de placer une couronne sur la dent pour la protéger de la fracture et la restaurer à sa pleine fonction. Cette thérapie est un outil essentiel pour soulager la douleur dentaire et préserver vos dents naturelles."
+        ],
+        "dentalSubCategoryTitle": "THÉRAPIE"
+      },
+      "tartar-cleaning": {
+        "name": "Détartrage",
+        "description": [
+          "Maintenez une santé bucco-dentaire optimale et prévenez les maladies dentaires avec un nettoyage professionnel du tartre, également connu sous le nom de détartrage et polissage. C'est une partie fondamentale des soins dentaires préventifs et est essentiel pour garder vos dents et vos gencives saines toute votre vie.",
+          "Même avec un excellent brossage et l'utilisation du fil dentaire à la maison, la plaque peut s'accumuler et durcir en une substance appelée tartre. Le tartre ne peut pas être enlevé avec une brosse à dents ordinaire et fournit une surface rugueuse pour que encore plus de plaque s'accumule, conduisant à des caries et à des maladies des gencives (gingivite).",
+          "Lors d'un nettoyage professionnel, nos hygiénistes dentaires qualifiés utilisent des outils spécialisés, tels que des détartreurs à ultrasons, pour éliminer en douceur et efficacement le tartre et la plaque au-dessus et au-dessous de la ligne des gencives. Après le détartrage, les dents sont polies pour éliminer les taches de surface et créer une surface lisse qui aide à prévenir l'accumulation future de plaque.",
+          "Des détartrages réguliers, généralement recommandés tous les six mois, sont votre meilleure défense contre les problèmes dentaires et sont la clé pour maintenir un sourire frais, sain et magnifique."
+        ],
+        "dentalSubCategoryTitle": "THÉRAPIE"
+      },
+      "tooth-fillings": {
+        "name": "Plombages Dentaires",
+        "description": [
+          "Un plombage dentaire est l'une des procédures dentaires les plus courantes, utilisée pour restaurer une dent endommagée par la carie. Lorsqu'une carie se forme, un plombage empêche la carie de progresser davantage et restaure la force, la fonction et la forme de la dent.",
+          "Chez LUNAI, nous utilisons exclusivement de la résine composite moderne de la couleur de la dent pour nos plombages. Contrairement aux anciens plombages en amalgame d'argent, les plombages en composite sont sans mercure et se lient directement à la dent, ce qui offre un meilleur soutien et nécessite moins de retrait de la structure saine de la dent.",
+          "La procédure consiste à retirer la partie cariée de la dent, à nettoyer la zone affectée, puis à combler la cavité avec le matériau composite en couches. Une lumière spéciale est utilisée pour durcir chaque couche, et le plombage est ensuite façonné et poli pour correspondre au contour de la dent et assurer une occlusion correcte.",
+          "Parce que les plombages en composite peuvent être assortis à la teinte exacte de vos dents naturelles, ils offrent un résultat durable et esthétiquement agréable qui est pratiquement invisible dans votre sourire."
+        ],
+        "dentalSubCategoryTitle": "THÉRAPIE"
+      },
+      "apical-resection": {
+        "name": "Résection Apicale",
+        "description": [
+          "Une résection apicale, également connue sous le nom d'apicoectomie ou de chirurgie de l'extrémité de la racine, est une procédure chirurgicale spécialisée pratiquée pour traiter une infection ou une inflammation persistante à l'extrémité (apex) de la racine d'une dent. Cette procédure est généralement recommandée lorsqu'un traitement de canal standard n'a pas réussi à résoudre le problème ou n'est pas possible.",
+          "Lors d'une apicoectomie, notre chirurgien-dentiste pratique une petite incision dans le tissu gingival pour exposer l'os sous-jacent et l'extrémité de la racine. Le tissu infecté autour de la racine est retiré, ainsi que l'extrémité même de la racine. Une petite obturation est ensuite placée à l'extrémité de la racine pour sceller le canal et prévenir la réinfection.",
+          "Cette procédure microchirurgicale est réalisée sous anesthésie locale avec une grande précision. C'est un outil essentiel pour sauver une dent qui devrait autrement être extraite, lui permettant de fonctionner pendant de nombreuses années encore.",
+          "La résection apicale est un traitement de dernier recours qui peut résoudre efficacement une infection chronique et préserver la structure naturelle de votre dent lorsque d'autres options ne sont pas viables."
+        ],
+        "dentalSubCategoryTitle": "CHIRURGIE"
+      },
+      "dental-implants": {
+        "name": "Implants Dentaires",
+        "description": [
+          "Remplacez définitivement les dents manquantes et redonnez à votre sourire toute sa splendeur avec les implants dentaires. Largement considérés comme la norme d'excellence en matière de remplacement de dents, les implants dentaires offrent une solution solide, stable et durable qui ressemble, se sent et fonctionne comme une dent naturelle.",
+          "Un implant est un petit poteau en titane biocompatible qui est placé chirurgicalement dans l'os de la mâchoire, où il agit comme une nouvelle racine pour la dent manquante. Au cours de quelques mois, l'implant fusionne avec l'os de la mâchoire dans un processus appelé ostéointégration, créant une base incroyablement solide.",
+          "Une fois intégré, une pièce de connexion appelée pilier est fixée à l'implant, et une couronne sur mesure est placée dessus. Le résultat final est un remplacement sans soudure et permanent qui ne glisse pas et ne clique pas comme les prothèses et ne nécessite pas de modifier les dents saines adjacentes comme un pont.",
+          "Les implants dentaires peuvent être utilisés pour remplacer une seule dent, plusieurs dents, ou même pour soutenir une arcade complète de prothèses. Ils aident à préserver la santé de l'os de la mâchoire et à maintenir votre structure faciale, ce qui en fait l'option de remplacement de dents la plus avancée et la plus bénéfique disponible."
+        ],
+        "dentalSubCategoryTitle": "CHIRURGIE"
+      },
+      "tooth-extraction": {
+        "name": "Extraction Dentaire",
+        "description": [
+          "Bien que notre objectif principal soit toujours de sauver une dent naturelle, une extraction dentaire est parfois la ligne de conduite nécessaire pour protéger votre santé bucco-dentaire globale. Chez LUNAI, nous effectuons les extractions dentaires avec le plus grand soin et la plus grande douceur, en veillant à ce que votre confort soit notre priorité absolue tout au long de la procédure.",
+          "Une extraction peut être nécessaire pour plusieurs raisons : une dent peut être trop gravement cariée ou endommagée pour être réparée ; une maladie des gencives avancée peut avoir détruit l'os de soutien ; une dent peut être incluse (comme beaucoup de dents de sagesse) ; ou des dents peuvent devoir être enlevées pour créer de l'espace pour un traitement orthodontique.",
+          "Nous proposons des extractions simples pour les dents visibles dans la bouche et des extractions chirurgicales pour les dents cassées sous la ligne des gencives ou incluses. La procédure est réalisée sous anesthésie locale pour engourdir complètement la zone.",
+          "Notre équipe fournit des instructions post-opératoires détaillées pour assurer une récupération rapide et en douceur. Nous pouvons également discuter d'excellentes options de remplacement de dents, telles que des implants dentaires ou des ponts, pour restaurer votre sourire après la guérison."
+        ],
+        "dentalSubCategoryTitle": "CHIRURGIE"
+      },
+      "milk-teeth-treatment": {
+        "name": "Traitement des Dents de Lait",
+        "description": [
+          "Établir une base positive pour une vie de bonne santé bucco-dentaire commence par d'excellents soins pour les dents primaires (de lait). Nos services de pédodontie chez LUNAI se concentrent sur la fourniture de soins dentaires doux, compatissants et amusants pour les enfants dans un environnement accueillant.",
+          "La santé des dents de lait est cruciale. Elles jouent un rôle vital dans une bonne mastication et nutrition, le développement de la parole et, plus important encore, elles maintiennent l'espace pour que les dents permanentes puissent pousser dans leurs positions correctes. La carie non traitée dans les dents de lait peut entraîner des douleurs, des infections et des problèmes avec les dents d'adulte en développement.",
+          "Nos traitements pour les dents de lait comprennent des nettoyages doux, des obturations de la couleur de la dent pour les caries, une thérapie pulpaire (pulpotomie) pour sauver une dent infectée, et des couronnes en acier inoxydable ou esthétiques pour protéger une dent affaiblie. Nous nous efforçons de faire de chaque visite une expérience positive pour prévenir l'anxiété dentaire.",
+          "Notre équipe est dédiée à l'éducation des enfants et des parents sur les techniques d'hygiène bucco-dentaire appropriées pour assurer un sourire sain pour les années à venir."
+        ],
+        "dentalSubCategoryTitle": "PÉDODONTIE (Dentisterie Pédiatrique)"
+      },
+      "tooth-fluoridation": {
+        "name": "Fluoration des Dents",
+        "description": [
+          "Renforcez les dents de votre enfant et donnez-lui une défense puissante contre les caries avec la fluoration professionnelle des dents. Le fluor est un minéral naturel qui a prouvé qu'il rend l'émail des dents plus résistant aux attaques acides des bactéries de la plaque et des sucres qui causent la carie dentaire.",
+          "Un traitement au fluor professionnel fournit une concentration de fluor beaucoup plus élevée que celle que l'on trouve dans le dentifrice ou l'eau. Le traitement est rapide, indolore et sûr. Il consiste à appliquer un gel, une mousse ou un vernis au fluor directement sur les dents après un nettoyage.",
+          "Cette simple mesure préventive peut réduire considérablement le risque que votre enfant développe des caries, en particulier sur les surfaces de mastication de ses molaires, qui sont les plus sujettes à la carie. C'est une pierre angulaire de la dentisterie préventive pédiatrique.",
+          "Nous recommandons des traitements au fluor dans le cadre des rendez-vous de contrôle et de nettoyage réguliers de votre enfant pour aider à garder son sourire sain et fort."
+        ],
+        "dentalSubCategoryTitle": "PÉDODONTIE (Dentisterie Pédiatrique)"
+      },
+      "tooth-sealants": {
+        "name": "Scellants Dentaires",
+        "description": [
+          "Protégez le sourire de votre enfant des caries avec les scellants dentaires. Il s'agit d'un traitement préventif simple mais très efficace qui offre un bouclier protecteur pour les dents du fond (molaires et prémolaires), où la plupart des caries de l'enfance se produisent.",
+          "Les surfaces de mastication de ces dents du fond ont des puits et des fissures naturels qui sont difficiles à nettoyer avec une brosse à dents. Les particules de nourriture et les bactéries peuvent se coincer dans ces rainures, ce qui entraîne des caries. Un scellant est une fine couche de plastique qui est peinte sur ces surfaces de mastication, « scellant » efficacement la plaque et la nourriture.",
+          "Le processus d'application est rapide et indolore. La dent est nettoyée et séchée, et le matériau de scellement liquide est appliqué. Il durcit en quelques secondes, souvent à l'aide d'une lumière de durcissement spéciale. Il n'y a ni forage ni inconfort.",
+          "Les scellants peuvent fournir une protection pendant de nombreuses années et sont un élément clé de la prévention de la carie dentaire chez les enfants et les adolescents, contribuant à assurer une vie de dents saines."
+        ],
+        "dentalSubCategoryTitle": "PÉDODONTIE (Dentisterie Pédiatrique)"
+      }
+    }
+  },
+  "blogPosts": {
+    "1": {
+      "title": "Le Guide Ultime des Soins de la Peau pour un Éclat Durable",
+      "excerpt": "Découvrez des conseils d'experts sur la création d'une routine de soins de la peau qui combat le vieillissement, améliore l'éclat et maintient votre peau saine et belle."
+    },
+    "2": {
+      "title": "Botox vs. Produits de Comblement : Quel est le Bon Choix pour Vous ?",
+      "excerpt": "Une analyse complète de deux de nos traitements les plus populaires. Comprenez les différences et découvrez ce qui convient le mieux à vos objectifs esthétiques."
+    },
+    "3": {
+      "title": "La Voie de la Guérison : À Quoi s'Attendre Après Votre Procédure",
+      "excerpt": "Les soins post-traitement sont cruciaux pour des résultats optimaux. Découvrez le processus de récupération pour nos procédures clés et comment assurer un parcours en douceur."
+    },
+    "4": {
+      "title": "Un Sourire plus Éclatant : Les Avantages du Blanchiment Professionnel des Dents",
+      "excerpt": "Découvrez comment le blanchiment professionnel des dents peut améliorer considérablement votre sourire et renforcer votre confiance, et ce que la procédure implique."
+    },
+    "5": {
+      "title": "Le Remodelage Corporel Non Invasif : Une Révolution en Esthétique",
+      "excerpt": "Découvrez les dernières technologies non chirurgicales qui peuvent vous aider à atteindre la forme corporelle souhaitée sans le temps d'arrêt de la chirurgie."
+    },
+    "6": {
+      "title": "Maintenir Vos Résultats : Conseils de Style de Vie pour une Beauté à Long Terme",
+      "excerpt": "Votre parcours esthétique ne se termine pas lorsque vous quittez notre clinique. Découvrez des conseils sur l'alimentation, l'exercice et le mode de vie pour prolonger et améliorer vos résultats."
+    }
   }
 }
 

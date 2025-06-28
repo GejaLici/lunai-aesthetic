@@ -217,8 +217,583 @@
         "title": "Stomatologji"
       }
     },
-    "items": {},
-    "blogPosts": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Riformimi i Hundës (Rinoplastika)",
+        "description": [
+          "Rinoplastika, e njohur zakonisht si \"operacioni i hundës\", është një procedurë kirurgjikale e sofistikuar e krijuar për të përmirësuar pamjen estetike të hundës dhe për të korrigjuar problemet funksionale të frymëmarrjes. Pavarësisht nëse jeni të shqetësuar për një gungë dorsale, një urë të gjerë ose të shtrembër, një majë të padefinuar ose madhësinë e vrimave të hundës, rinoplastika mund ta sjellë hundën tuaj në harmoni më të mirë me tiparet e tjera të fytyrës. Në LUNAI, ne gjithashtu adresojmë defektet strukturore, siç është një septum i devijuar, për të përmirësuar rrjedhën e ajrit dhe cilësinë e përgjithshme të jetës.",
+          "Filozofia jonë në LUNAI përqendrohet në krijimin e rezultateve që janë sa të bukura aq edhe jashtëzakonisht natyrale. Kirurgët tanë plastikë të certifikuar kombinojnë saktësinë teknike me një sy artistik për të skalitur një hundë që plotëson strukturën tuaj unike të fytyrës. Gjatë konsultës suaj gjithëpërfshirëse, ne përdorim teknologji të avancuar imazherike për të simuluar rezultatet e mundshme, duke u siguruar që të përputhemi me vizionin tuaj. Ne besojmë në një qasje bashkëpunuese, duke përshtatur çdo aspekt të procedurës me qëllimet dhe anatominë tuaj specifike.",
+          "Kandidatët idealë për rinoplastikë janë individë që janë në shëndet të mirë të përgjithshëm, janë jo-duhanpirës dhe kanë pritshmëri realiste për rezultatin. Nëse mendoni se hunda juaj është disproporcionale me fytyrën tuaj, ose nëse keni vështirësi në frymëmarrje, ju mund të jeni një kandidat i përsosur. Procedura mund të kryhet pasi të ketë përfunduar rritja e fytyrës, zakonisht rreth mesit deri në fund të adoleshencës.",
+          "Operacioni kryhet nën anestezi të përgjithshme dhe rikuperimi zakonisht përfshin një javë pushim me një allçi. Ndërsa ënjtja fillestare zvogëlohet brenda pak javësh, rezultatet përfundimtare dhe të rafinuara të rinoplastikës suaj do të vazhdojnë të shfaqen gjatë një viti. Ekipi ynë i përkushtuar ofron kujdes dhe mbështetje gjithëpërfshirëse pas operacionit për të siguruar që rikuperimi juaj të jetë sa më i qetë dhe komod që të jetë e mundur."
+        ]
+      },
+      "otoplasty": {
+        "name": "Riformimi i Veshëve (Otoplastika)",
+        "description": [
+          "Otoplastika, ose kirurgjia e riformimit të veshëve, është një procedurë e krijuar për të korrigjuar madhësinë, formën ose pozicionin e veshëve. Ajo kryhet më së shpeshti për të trajtuar veshët e spikatur që dalin shumë nga koka, por gjithashtu mund të korrigjojë veshët tepër të mëdhenj, veshët e ngushtuar (\"veshi lakër\") ose pakënaqësinë me një operacion të mëparshëm. Kjo procedurë mund të ketë një ndikim të thellë në vetëbesimin si për të rriturit ashtu edhe për fëmijët.",
+          "Në LUNAI, kirurgët tanë të aftë i qasen otoplastikës me një fokus në krijimin e kontureve me pamje natyrale që sjellin ekuilibër dhe proporcion në fytyrë. Për fëmijët, procedura mund të kryhet pas moshës pesë vjeç, kur veshët kanë arritur pjesën më të madhe të madhësisë së tyre të rritur. Për të rriturit, nuk ka kufi të sipërm moshe. Ne kujdesemi të vendosim prerjet në mënyrë diskrete në palosjet natyrale pas veshit për të minimizuar shenjat e dukshme.",
+          "Operacioni përfshin skalitjen e kërcit të veshit për të krijuar një formë më të dëshirueshme dhe fiksimin e tij më afër kokës me sutura të brendshme, të përhershme. Procedura zakonisht kryhet në baza ambulatore nën anestezi lokale me qetësim ose anestezi të përgjithshme, në varësi të moshës së pacientit dhe kompleksitetit të operacionit.",
+          "Rikuperimi nga otoplastika është relativisht i shpejtë. Një fashë mbrojtëse mbahet për disa ditë, e ndjekur nga një shirit mbështetës që mbahet natën për disa javë për të mbrojtur veshët ndërsa shërohen. Shumica e pacientëve mund të kthehen në punë ose shkollë brenda një jave, duke ndjerë një besim të ripërtërirë në pamjen e tyre."
+        ]
+      },
+      "blepharoplasty": {
+        "name": "Blefaroplastika (Kirurgjia e Qepallave)",
+        "description": [
+          "Blefaroplastika, ose kirurgjia e qepallave, është një procedurë transformuese që rinovon pamjen e syve duke adresuar lëkurën e varur, yndyrën e tepërt dhe linjat e holla. Mund të kryhet në qepallat e sipërme, të poshtme, ose të dyja, duke korrigjuar në mënyrë efektive çështje si qepallat e sipërme të rëna që mund të dëmtojnë shikimin dhe qeskat nën sy që krijojnë një pamje të përhershme të lodhur.",
+          "Kirurgët tanë ekspertë kryejnë blefaroplastikën me saktësi të përpiktë për të rivendosur një pamje më të ndritshme, më vigjilente dhe rinore. Për kirurgjinë e qepallës së sipërme, një prerje fshihet brenda palosjes natyrale të qepallës. Për kirurgjinë e qepallës së poshtme, prerja shpesh mund të bëhet brenda qepallës së poshtme (qasja transkonjuktivale), duke mos lënë asnjë shenjë të dukshme, ose pak poshtë vijës së qerpikëve. Lëkura dhe yndyra e tepërt hiqen ose ripozicionohen për të krijuar një kontur të lëmuar dhe të freskët.",
+          "Kandidatët e mirë për kirurgjinë e qepallave janë individë të shëndetshëm që shqetësohen nga shenjat e plakjes rreth syve të tyre. Procedura mund të përmirësojë në mënyrë dramatike pamjen e dikujt dhe madje mund të përmirësojë shikimin në rastet kur lëkura e varur e qepallës së sipërme pengon fushën e shikimit.",
+          "Rikuperimi përfshin disa ënjtje dhe mavijosje, të cilat zakonisht zhduken brenda 10 deri në 14 ditë. Rezultatet janë afatgjata, duke ju ndihmuar të dukeni më të pushuar dhe vibrant për vite me rradhë. Ekipi ynë në LUNAI siguron që ju të jeni të rehatshëm dhe të mirinformuar gjatë gjithë procesit."
+        ]
+      },
+      "facelift": {
+        "name": "Lifting Fytyre",
+        "description": [
+          "Një lifting fytyre, ose ritidektomi, është standardi i artë për adresimin gjithëpërfshirës të shenjave të rëndësishme të plakjes së fytyrës. Kjo procedurë kirurgjikale synon rrudhat e thella, lëkurën e varur në pjesën e mesme dhe të poshtme të fytyrës, dhe lëkurën e lirshme në qafë (\"qafa e gjelit të detit\"). Ajo ofron një rezultat më dramatik dhe afatgjatë se alternativat jo-kirurgjikale duke adresuar strukturat themelore të fytyrës.",
+          "Në LUNAI, qasja jonë ndaj liftingut të fytyrës është të ofrojmë rezultate transformuese por me pamje krejtësisht natyrale. Ne shmangim pamjen \"e tërhequr\" duke u përqendruar në indet më të thella të fytyrës, duke shtrënguar shtresën muskulore themelore (SMAS) dhe duke ripozicionuar jastëkët e yndyrës së fytyrës përpara se të rivendosim lëkurën. Prerjet vendosen me mjeshtëri brenda vijës së flokëve dhe kontureve natyrale rreth veshit për të qenë praktikisht të padukshme pasi të shërohen.",
+          "Kandidatët idealë për një lifting fytyre janë zakonisht në moshën 40 deri në 70 vjeç, janë në shëndet të mirë dhe dëshirojnë të adresojnë plakjen e fytyrës nga mesatare në të rëndë. Një lifting fytyre mund të kombinohet me procedura të tjera si lifting i vetullave, blefaroplastikë ose transplantim yndyre për një rinovim të plotë të fytyrës.",
+          "Rikuperimi nga një lifting fytyre përfshin rreth dy javë pushim fillestar. Ndërsa do të shihni një përmirësim të ndjeshëm menjëherë, rezultatet përfundimtare do të vazhdojnë të përmirësohen gjatë disa muajve ndërsa ënjtja zhduket plotësisht. Një lifting fytyre i kryer mirë në LUNAI mund t'ju heqë vite nga pamja juaj, duke rivendosur një kontur më të fortë dhe më rinor që duket tërësisht i juaji."
+        ]
+      },
+      "chin-reshaping": {
+        "name": "Riformimi i Mjekrës",
+        "description": [
+          "Kirurgjia e riformimit të mjekrës, e njohur si genioplastikë ose mentoplastikë, është një procedurë e krijuar për të përmirësuar proporcionet e fytyrës duke ndryshuar madhësinë dhe formën e mjekrës. Një mjekër e mirë-përcaktuar është një gur themeli i një profili tërheqës të fytyrës si për burrat ashtu edhe për gratë. Kjo kirurgji mund të korrigjojë një mjekër të tërhequr (mikrogjeni), një mjekër të dalë ose një mjekër asimetrike, duke e sjellë atë në harmoni me hundën, ballin dhe tiparet e tjera të fytyrës.",
+          "Kirurgët tanë në LUNAI ofrojnë dy teknika kryesore për zmadhimin e mjekrës: përdorimin e një implanti mjekre të përshtatur ose një genioplastikë rrëshqitëse, e cila përfshin lëvizjen kirurgjikale të vetë kockës së mjekrës. Reduktimi i mjekrës është gjithashtu i mundur duke skalitur me kujdes kockën. Procedura përshtatet me anatominë tuaj unike dhe qëllimet estetike, të diskutuara në detaje gjatë konsultës suaj.",
+          "Riformimi i mjekrës mund të ketë një efekt të fuqishëm në ekuilibrin e përgjithshëm të fytyrës. Mund të forcojë një nofull, të bëjë një hundë të spikatur të duket më e vogël dhe të ofrojë një kontur më rinor të qafës. Kandidatët duhet të jenë në shëndet të mirë dhe të kenë përfunduar rritjen e tyre të fytyrës.",
+          "Operacioni shpesh kryhet përmes një prerje të vogël brenda gojës ose në mënyrë diskrete nën mjekër. Rikuperimi zakonisht zgjat rreth një deri në dy javë, me pjesën më të madhe të ënjtjes që zhduket në muajin e parë. Rezultati është një përmirësim i përhershëm në profilin dhe harmoninë tuaj të fytyrës."
+        ]
+      },
+      "brow-lift": {
+        "name": "Lifting i Vetullave",
+        "description": [
+          "Një lifting i vetullave, i njohur gjithashtu si lifting i ballit, është një procedurë kirurgjikale që rivitalizon pjesën e sipërme të fytyrës duke korrigjuar një vetull të rëndë, të varur dhe duke reduktuar linjat e thella horizontale të ballit. Ndërsa plakemi, vetulla mund të bjerë, duke krijuar një pamje të lodhur, të zemëruar ose të trishtuar dhe duke kontribuar në mbulimin e qepallave të sipërme. Një lifting i vetullave i ngre ato në një pozicion më vigjilent dhe rinor.",
+          "Në LUNAI, ne përdorim teknika moderne, minimalisht invazive endoskopike për liftingun e vetullave sa herë që është e mundur. Kjo përfshin prerje të vogla të fshehura brenda vijës së flokëve, përmes të cilave ne mund të ngremë dhe ripozicionojmë indet e ballit. Kjo qasje minimizon shenjat dhe shkurton kohën e rikuperimit në krahasim me metodat tradicionale. Rezultati është një ballë më i lëmuar dhe një zonë sysh më e hapur dhe e freskët.",
+          "Një lifting i vetullave është një opsion i shkëlqyer për individët me vetulla të ulëta ose të varura, brazda të thella në ballë ose vija të vrenjtura midis vetullave. Shpesh kryhet në kombinim me një lifting fytyre ose kirurgji të qepallave për një rinovim më të plotë të pjesës së sipërme të fytyrës.",
+          "Koha e pushimit është zakonisht rreth një javë, me mavijosje dhe ënjtje si efektet anësore më të zakonshme. Një lifting i vetullave ofron rezultate afatgjata, duke ju ndihmuar të dukeni natyralisht të freskët dhe më të afrueshëm për shumë vite."
+        ]
+      },
+      "hair-transplant": {
+        "name": "Transplantim Flokësh",
+        "description": [
+          "Rënia e flokëve mund të jetë një përvojë shqetësuese si për burrat ashtu edhe për gratë. Në LUNAI, ne ofrojmë një zgjidhje të përhershme dhe me pamje natyrale me kirurgjinë tonë të avancuar të transplantimit të flokëve. Kjo procedurë përfshin marrjen e folikulave të shëndetshme, gjenetikisht rezistente të flokëve nga një zonë donatore (zakonisht pjesa e pasme e kokës) dhe implantimin e tyre me përpikëri në zonat me tullacësi ose rrallim.",
+          "Ne specializohemi në teknikën e Ekstraktimit të Njësive Folikulare (FUE), një metodë moderne që përfshin nxjerrjen e njësive folikulare individuale një nga një. Kjo qasje shmang shenjën lineare të lidhur me metodat më të vjetra dhe lejon një rikuperim më të shpejtë dhe më të rehatshëm. Ekipi ynë me përvojë përdor saktësi artistike për të vendosur çdo graft në këndin dhe dendësinë e duhur për të imituar modelet natyrale të rritjes së flokëve.",
+          "Transplantimi i flokëve është një zgjidhje e vlefshme për tullacësinë e modelit mashkullor dhe femëror, si dhe për rivendosjen e flokëve në zonat me shenja. Kandidatët duhet të kenë një furnizim të mjaftueshëm të flokëve donatorë të shëndetshëm për të arritur dendësinë e dëshiruar.",
+          "Flokët e transplantuar do të bien në javët e para, gjë që është një pjesë normale e procesit. Flokët e rinj dhe të përhershëm do të fillojnë të rriten në 3-4 muaj, me rezultatet përfundimtare dhe të plota të dukshme pas rreth 12-18 muajsh. Rifitoni një kokë plot flokë dhe besimin tuaj me një transplantim flokësh LUNAI."
+        ]
+      },
+      "beard-transplant": {
+        "name": "Transplantim Mjekre",
+        "description": [
+          "Një mjekër e plotë dhe e mirë-përcaktuar është një simbol i mashkullorësisë dhe stilit për shumë burra. Për ata që luftojnë me qime faciale me arna, të holla ose inekzistente, një transplantim mjekre ofron një zgjidhje të përhershme. Kjo procedurë e specializuar ju lejon të arrini stilin e saktë të mjekrës që dëshironi, nga një mjekër e plotë te një cjap ose mustaqe të rafinuara.",
+          "Procesi është i ngjashëm me një transplantim flokësh për kokën. Ne përdorim teknikën FUE (Ekstraktimi i Njësive Folikulare) për të marrë folikula individuale të flokëve nga pjesa e pasme e kokës suaj. Këto folikula më pas implantohen me përpikëri në zonën e mjekrës, duke i kushtuar vëmendje të madhe këndit dhe drejtimit të rritjes për të siguruar një rezultat me pamje krejtësisht natyrale.",
+          "Një transplantim mjekre është ideal për burrat që kanë arna gjenetike, shenja që parandalojnë rritjen e qimeve, ose që thjesht dëshirojnë të përmirësojnë dendësinë dhe formën e mjekrës së tyre ekzistuese. Është një procedurë shumë e personalizuar e përshtatur me tiparet tuaja të fytyrës dhe rezultatin e dëshiruar.",
+          "Pas transplantimit, qimet e reja do të bien përpara se të fillojnë të rriten përsëri përgjithmonë pas 3-4 muajsh. Rezultati përfundimtar është një mjekër natyrale, e dendur që mund ta rruani, ta shkurtoni dhe ta stiloni si çdo qime tjetër faciale."
+        ]
+      },
+      "eyebrow-transplant": {
+        "name": "Transplantim Vetullash",
+        "description": [
+          "Vetullat janë një tipar kritik që kornizon fytyrën dhe përcjell shprehje. Nëse keni vetulla të holla, të rralla ose inekzistente për shkak të gjenetikës, heqjes së tepërt ose kushteve mjekësore, një transplantim vetullash mund t'i rikthejë ato përgjithmonë. Kjo procedurë krijon vetulla më të plota, me formë të bukur që duken tërësisht natyrale.",
+          "Duke përdorur teknikën e saktë FUE, specialistët tanë marrin folikula të vetme të flokëve nga lëkura e kokës (zakonisht nga pas veshëve ku flokët janë më të hollë). Çdo folikul më pas implantohet me kujdes një nga një në zonën e vetullës, duke ndjekur drejtimin natyror dhe këndin e rritjes së qimeve të vetullës. Kjo saktësi artistike është çelësi për arritjen e një rezultati realist dhe estetikisht të këndshëm.",
+          "Një transplantim vetullash është një procedurë delikate që kërkon një shkallë të lartë aftësie dhe mjeshtërie. Është një zgjidhje e shkëlqyer për këdo që dëshiron të arrijë vetulla të plota dhe të përcaktuara përgjithmonë pa mundimin e përditshëm të makijazhit.",
+          "Ngjashëm me transplantimet e tjera të flokëve, qimet e transplantuara do të bien përpara se të rriten përsëri gjatë muajve të ardhshëm. Rezultati është një vetull e gjallë, në rritje që mund ta rregulloni dhe ta formoni si të dëshironi, duke kornizuar në mënyrë të përsosur sytë tuaj dhe duke përmirësuar tiparet tuaja të fytyrës."
+        ]
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Riformimi i Hundës (Jo-kirurgjikal)",
+        "description": [
+          "Një rinoplastikë jo-kirurgjikale, shpesh e quajtur \"rinoplastikë e lëngshme\" ose \"rinoplastikë 15-minutëshe\", është një alternativë e jashtëzakonshme jo-invazive ndaj kirurgjisë tradicionale. Kjo procedurë përdor mbushës dermalë me bazë acidi hialuronik të injektuar me saktësi për të riformuar dhe përmirësuar menjëherë hundën. Është një opsion i shkëlqyer për të bërë ndryshime delikate por me ndikim pa kohë rikuperimi.",
+          "Në LUNAI, injektorët tanë ekspertë mund të përdorin me mjeshtëri mbushësit për të lëmuar gungat në urën e hundës, për të ngritur një majë hunde të varur, për të përmirësuar simetrinë e hundës dhe për të krijuar një profil të përgjithshëm më të rafinuar. Procedura është e shpejtë, zakonisht zgjat më pak se 30 minuta, me siklet minimal.",
+          "Kandidatët idealë janë ata që kërkojnë rregullime të vogla deri në mesatare në pamjen e hundës së tyre. Është një mënyrë e përsosur për të \"provuar\" një formë të re hunde përpara se të angazhoheni në kirurgji ose për ata që duan të shmangin një procedurë kirurgjikale tërësisht. Nuk është i përshtatshëm për zvogëlimin e madhësisë së hundës.",
+          "Rezultatet janë të menjëhershme dhe mund të zgjasin nga 9 deri në 18 muaj, në varësi të llojit të mbushësit të përdorur dhe metabolizmit të individit. Praktikisht nuk ka kohë rikuperimi, duke ju lejuar të ktheheni në aktivitetet tuaja të përditshme menjëherë me një profil të ri të përmirësuar."
+        ]
+      },
+      "dark-circles-treatment": {
+        "name": "Trajtimi i Rrathëve të Zinj",
+        "description": [
+          "Rrathët e zinj nën sy mund t'ju bëjnë të dukeni të lodhur, të stresuar ose më të vjetër se sa jeni. Në LUNAI, ne ofrojmë një qasje të shumëanshme për trajtimin e rrathëve të zinj, sepse e kuptojmë se shkaku është shpesh kompleks, që buron nga humbja e vëllimit, hiperpigmentimi, lëkura e hollë ose një kombinim faktorësh.",
+          "Trajtimi ynë më efektiv për rrathët e zinj të shkaktuar nga humbja e vëllimit është përdorimi i mbushësve të kanalit të lotit. Duke injektuar me kujdes një mbushës të lëmuar me acid hialuronik në zonën e zbrazët nën sy, ne mund të mbushim lëkurën, të zvogëlojmë efektin e hijes dhe të krijojmë një tranzicion të pandërprerë midis faqes dhe qepallës së poshtme. Kjo ndriçon menjëherë zonën dhe jep një pamje më të pushuar.",
+          "Për rrathët e zinj të shkaktuar nga pigmentimi, ne mund të rekomandojmë një kurs peeling-u kimik të butë ose terapi të avancuara të lëkurës për të zbardhur lëkurën dhe për të përmirësuar cilësinë e saj. Microneedling-u gjithashtu mund të jetë efektiv në trashjen e lëkurës dhe nxitjen e kolagjenit për t'i bërë enët e gjakut themelore më pak të dukshme.",
+          "Gjatë konsultës suaj, ne do të kryejmë një vlerësim të plotë për të përcaktuar shkakun kryesor të rrathëve tuaj të zinj dhe për të krijuar një plan trajtimi të personalizuar. Qëllimi ynë është të ofrojmë një zgjidhje të sigurt dhe efektive që rikthen shkëlqimin dhe vitalitetin në zonën tuaj nën sy."
+        ]
+      },
+      "eyelids-plasma-arc": {
+        "name": "Qepallat (Harku Plazma)",
+        "description": [
+          "Arrini një lifting sysh jo-kirurgjikal me trajtimin tonë inovativ me Hark Plazma. Kjo teknologji revolucionare ofron një alternativë shumë efektive ndaj blefaroplastikës tradicionale për individët me laksitet të lëkurës së lehtë deri në mesatare rreth syve. Është veçanërisht efektive për shtrëngimin e lëkurës së lirshme të qepallës së sipërme dhe zvogëlimin e shfaqjes së \"këmbëve të sorrës\" dhe linjave të holla.",
+          "Trajtimi përdor një pajisje të specializuar për të krijuar një hark të vogël elektrik të energjisë plazma. Kur ky hark prek sipërfaqen e lëkurës, ai bën që indi i synuar të sublimohet—të kalojë direkt nga gjendja e ngurtë në gaz. Ky proces krijon një model krustash të vogla karboni dhe shkakton një kontraktim dhe shtrëngim të menjëhershëm të fibrave të lëkurës.",
+          "Ndërsa lëkura shërohet nga ky trajtim i kontrolluar, përgjigja natyrale e shërimit të trupit aktivizohet, duke çuar në prodhimin e kolagjenit dhe elastinës së re gjatë javëve dhe muajve në vijim. Kjo rezulton në lëkurë më të fortë, më të shtrënguar dhe më të lëmuar rreth syve.",
+          "Procedura kryhet me krem anestetik lokal për rehati. Krustat e karbonit do të bien natyrshëm brenda 5-7 ditësh, duke zbuluar lëkurë të re, të rinovuar poshtë. Rezultatet janë afatgjata dhe mund të freskojnë ndjeshëm pamjen tuaj, duke i bërë sytë tuaj të duken më të hapur dhe rinorë."
+        ]
+      },
+      "jawline-contouring": {
+        "name": "Konturimi i Nofullës",
+        "description": [
+          "Një nofull e mprehtë dhe e përcaktuar është një tipar kyç i një fytyre rinore dhe tërheqëse. Trajtimi ynë jo-kirurgjikal i Konturimit të Nofullës përdor mbushës dermalë të vendosur strategjikisht për të skalitur dhe përmirësuar këndin e mandibulës, duke krijuar një profil më të fortë dhe më të gdhendur si për burrat ashtu edhe për gratë.",
+          "Kjo procedurë është ideale për korrigjimin e një nofulle të dobët ose të pazhvilluar, përmirësimin e simetrisë së fytyrës, zvogëlimin e shfaqjes së faqeve të varura dhe krijimin e një ndarjeje më të qartë midis nofullës dhe qafës. Injektorët tanë ekspertë përdorin mbushës me acid hialuronik me densitet të lartë që imitojnë ndjesinë e kockës për të ndërtuar strukturë dhe definicion.",
+          "Trajtimi është shumë i personalizuar për anatominë tuaj të fytyrës dhe qëllimet estetike. Për burrat, qëllimi shpesh është të krijojnë një nofull më të gjerë dhe më këndore. Për gratë, fokusi zakonisht është në krijimin e një vije të hijshme por të përcaktuar që rrit feminitetin. Procedura është e shpejtë, me siklet minimal dhe pa kohë rikuperimi.",
+          "Rezultatet janë të dukshme menjëherë dhe zakonisht zgjasin nga 12 deri në 24 muaj. Konturimi i nofullës mund të përmirësojë në mënyrë dramatike profilin tuaj, të rrisë besimin tuaj dhe të rivendosë një pamje më rinore dhe të fuqishme në një seancë të vetme."
+        ]
+      },
+      "lip-reshaping": {
+        "name": "Riformimi i Buzëve",
+        "description": [
+          "Përsosni buzëqeshjen tuaj me shërbimet tona të personalizuara të Riformimit dhe zmadhimit të buzëve. Më shumë se thjesht shtimi i vëllimit, injektorët tanë ekspertë përdorin mbushës premium me acid hialuronik si një mjet artistik për të rritur bukurinë tuaj natyrale. Ne përqendrohemi në krijimin e rezultateve të bukura, të ekuilibruara që janë në proporcion të përsosur me fytyrën tuaj.",
+          "Trajtimet tona të mbushjes së buzëve mund të përdoren për të arritur një sërë qëllimesh: të shtoni vëllim delikat ose të konsiderueshëm, të përcaktoni kufirin vermilion (buzën e buzëve), të përmirësoni Harkun e Kupidit, të korrigjoni asimetrinë midis buzës së sipërme dhe të poshtme, dhe të lëmoni linjat vertikale të buzëve (rrudhat e duhanpirësit).",
+          "Në LUNAI, ne i japim përparësi një pamjeje dhe ndjesie natyrale. Ne punojmë me ju për të kuptuar rezultatin tuaj të dëshiruar dhe për të zgjedhur mbushësin dhe teknikën e duhur për ta arritur atë. Procedura kryhet duke përdorur një anestetik lokal për rehatinë tuaj dhe zakonisht zgjat rreth 30 minuta.",
+          "Rezultatet janë të menjëhershme, megjithëse mund të ketë pak ënjtje fillestare. Buzët përfundimtare, të përmirësuara bukur, mund të shijohen për 6 deri në 12 muaj. Pavarësisht nëse dëshironi një përmirësim delikat apo një pamje më magjepsëse, trajtimi ynë i riformimit të buzëve mund t'ju ndihmojë të arrini buzëqeshjen e përsosur."
+        ]
+      },
+      "microdermabrasion": {
+        "name": "Mikrodermabrazioni",
+        "description": [
+          "Zbuloni një çehre më të ndritshme dhe më të lëmuar me Mikrodermabrazionin. Ky trajtim popullor dhe jo-invaziv është një formë e eksfolimit mekanik që largon butësisht shtresën më të jashtme të qelizave të vdekura të lëkurës, duke zhbllokuar poret dhe duke freskuar menjëherë pamjen e lëkurës suaj.",
+          "Procedura përdor një shkop me majë diamanti për të gërryer butësisht sipërfaqen e lëkurës ndërsa një thithje vakumi pastron qelizat e eksfoliuara. Ky proces ndihmon në përmirësimin e pamjes së dëmtimeve nga dielli, linjave të holla dhe rrudhave, njollave të moshës, shenjave të akneve dhe problemeve të tjera të lëkurës. Është një procedurë e përsosur \"për drekë\" pasi nuk kërkon kohë rikuperimi.",
+          "Mikrodermabrazioni është i përshtatshëm për pothuajse të gjitha llojet dhe ngjyrat e lëkurës. Ai rrit përthithjen dhe efikasitetin e produkteve tuaja të kujdesit të lëkurës dhe mund të kryhet si një trajtim i pavarur ose si pjesë e një plani gjithëpërfshirës të shëndetit të lëkurës. Për rezultate optimale, shpesh rekomandohet një seri trajtimesh.",
+          "Pas një seance, lëkura juaj do të ndjehet më e butë dhe do të duket më rrezatuese. Është një mënyrë e shkëlqyer për të ruajtur një lëkurë të shëndetshme dhe për të arritur një shkëlqim të qëndrueshëm dhe vibrant."
+        ]
+      },
+      "microneedling": {
+        "name": "Microneedling",
+        "description": [
+          "Rinovoni lëkurën tuaj nga brenda me Microneedling, i njohur gjithashtu si terapi e induksionit të kolagjenit. Ky trajtim i avancuar përdor një pajisje me gjilpëra të holla dhe sterile për të krijuar mijëra mikro-dëmtime të kontrolluara në lëkurë. Ky proces nxit kaskadën natyrale të shërimit të plagëve të trupit, duke rezultuar në një rritje të ndjeshme të prodhimit të kolagjenit dhe elastinës.",
+          "Microneedling është një trajtim shumë efektiv për një gamë të gjerë problemesh të lëkurës. Mund të përmirësojë në mënyrë dramatike teksturën e lëkurës, të zvogëlojë pamjen e shenjave të akneve dhe shenjave kirurgjikale, të minimizojë madhësinë e poreve, të zvogëlojë linjat e holla dhe rrudhat, dhe të përmirësojë pamjen e strijave.",
+          "Në LUNAI, ne mund të përmirësojmë rezultatet e microneedling-ut duke e kombinuar atë me aplikimin e serumeve të fuqishme apo edhe Plazmës suaj të Pasur me Trombocite (PRP). Mikro-kanalet e krijuara nga gjilpërat lejojnë një depërtim më të thellë dhe efikasitet më të madh të këtyre trajtimeve topike.",
+          "Një krem mpirës lokal aplikohet para procedurës për të siguruar rehati. Lëkura do të duket e kuqe, e ngjashme me një djegie nga dielli, për 24-48 orë pas trajtimit. Zakonisht rekomandohet një seri prej 3-6 trajtimesh për rezultate optimale dhe afatgjata, duke zbuluar një lëkurë më të lëmuar, më të fortë dhe me pamje më rinore."
+        ]
+      },
+      "multivitamin-treatment": {
+        "name": "Trajtim Multivitaminë",
+        "description": [
+          "Infuzoni lëkurën tuaj me jetë me Trajtimin tonë Multivitaminë thellësisht ushqyes. Ky trajtim i fuqishëm i fytyrës është krijuar për të ofruar një koktej të vitaminave, antioksidantëve dhe mineraleve thelbësore direkt në lëkurë, duke ndihmuar në luftimin e shenjave të plakjes së parakohshme dhe dëmtimit nga streset mjedisore.",
+          "Ky trajtim i personalizuar adreson një sërë problemesh të lëkurës, duke përfshirë zbehjen, dehidratimin dhe tonin e pabarabartë të lëkurës. Zakonisht përfshin një pastrim të thellë, eksfolim dhe aplikimin e një serumi ose maske të fuqishme të pasur me vitamina si A, C dhe E, të cilat njihen për vetitë e tyre restauruese dhe mbrojtëse.",
+          "Trajtimi Multivitaminë ndihmon në rritjen e shkëlqimit të lëkurës, përmirësimin e niveleve të hidratimit, stimulimin e prodhimit të kolagjenit për rritjen e qëndrueshmërisë dhe rivendosjen e një çehreje të shëndetshme dhe vibrante. Është një terapi e shkëlqyer për lëkurën e lodhur, të stresuar ose të plakur.",
+          "I përshtatshëm për të gjitha llojet e lëkurës, ky trajtim relaksues dhe restaurues i fytyrës do ta lërë lëkurën tuaj të ndjehet e butë, elastike dhe me shkëlqim shëndeti. Është një trajtim i përsosur mujor për të ruajtur vitalitetin e lëkurës dhe për ta mbrojtur atë nga vështirësitë e jetës së përditshme."
+        ]
+      },
+      "prp-for-hair": {
+        "name": "PRP për Flokët",
+        "description": [
+          "Luftoni rrallimin e flokëve dhe stimuloni rritjen e re duke përdorur fuqinë e trupit tuaj me Plazmën e Pasur me Trombocite (PRP) për Flokët. Ky trajtim modern, jo-kirurgjikal është një opsion natyral dhe efektiv për individët që përjetojnë rënie ose rrallim të flokëve.",
+          "Procedura fillon me një marrje të thjeshtë gjaku nga krahu juaj. Gjaku më pas vendoset në një centrifugë për të ndarë dhe përqendruar trombocitet dhe faktorët e rritjes, duke krijuar PRP-në. Kjo plazmë e artë më pas injektohet me përpikëri në zonat e kokës ku flokët janë duke u rralluar.",
+          "Përqendrimi i lartë i faktorëve të rritjes në PRP vepron për të ushqyer folikulat e flokëve, për të rritur furnizimin me gjak në lëkurën e kokës, për të stimuluar fazën e rritjes së ciklit të flokëve (faza anagjene) dhe për të rritur trashësinë dhe dendësinë e fijeve ekzistuese të flokëve.",
+          "PRP për Flokët është një procedurë e sigurt dhe minimalisht invazive pa kohë rikuperimi. Për rezultate optimale, ne rekomandojmë një seri fillestare prej 3-4 trajtimesh të ndara një muaj larg, të ndjekura nga trajtime mirëmbajtjeje çdo 6-12 muaj. Është një terapi e shkëlqyer e pavarur ose mund të përdoret për të përmirësuar rezultatet e kirurgjisë së transplantimit të flokëve."
+        ]
+      },
+      "prp-for-face": {
+        "name": "PRP për Fytyrën",
+        "description": [
+          "Përdorni fuqinë e jashtëzakonshme shëruese dhe rigjeneruese të trupit tuaj me një trajtim PRP për Fytyrën, i njohur si \"Facial Vampir\". Kjo terapi e avancuar përdor plazmën tuaj të pasur me trombocite për të rinovuar në mënyrë dramatike lëkurën tuaj, duke promovuar një shkëlqim rinor dhe rrezatues.",
+          "Trajtimi fillon duke marrë një sasi të vogël të gjakut tuaj, i cili më pas centrifugohet për të përqendruar trombocitet shëruese dhe faktorët e rritjes. Kjo PRP më pas aplikohet në fytyrën tuaj, zakonisht në kombinim me microneedling. Microneedling-u krijon mijëra mikro-kanale, duke lejuar PRP-në të depërtojë thellë në dermë ku mund të veprojë më efektivisht.",
+          "Pasi të jetë në lëkurë, faktorët e rritjes në PRP nxisin një kaskadë të fuqishme rigjeneruese, duke stimuluar prodhimin e ri të kolagjenit dhe elastinës, duke përmirësuar qarkullimin e gjakut dhe duke krijuar qeliza të reja dhe të shëndetshme të lëkurës. Kjo rezulton në ton dhe teksturë të përmirësuar të lëkurës, linja të holla dhe rrudha të reduktuara, madhësi më të vogël të poreve dhe një ulje në pamjen e shenjave të akneve.",
+          "PRP për Fytyrën është një mënyrë e sigurt, natyrale dhe shumë efektive për të arritur një rinovim gjithëpërfshirës të fytyrës me kohë minimale rikuperimi. Zakonisht rekomandohet një seri trajtimesh për rezultatet më të rëndësishme dhe afatgjata."
+        ]
+      },
+      "radiofrequency-treatment": {
+        "name": "Trajtim me Radiofrekuencë",
+        "description": [
+          "Shtrëngoni dhe forconi lëkurën e varur në fytyrë, qafë dhe trup pa kirurgji duke përdorur Trajtimin tonë të avancuar me Radiofrekuencë (RF). Kjo teknologji e rehatshme dhe jo-invazive është një zgjidhje e shkëlqyer për individët që kërkojnë të adresojnë laksitetin e lëkurës, linjat e holla dhe rrudhat pa asnjë kohë rikuperimi.",
+          "Teknologjia RF funksionon duke ngrohur butësisht shtresat më të thella të lëkurës suaj (dermën). Kjo ngrohje e kontrolluar ka një efekt të dyfishtë: bën që fijet ekzistuese të kolagjenit të kontraktohen dhe të shtrëngohen, duke ofruar një efekt të menjëhershëm forcues. Më e rëndësishmja, ajo stimulon fibroblastet e lëkurës për të prodhuar kolagjen dhe elastinë të re me kalimin e kohës.",
+          "Ky proces gradual i rimodelimit të kolagjenit çon në lëkurë progresivisht më të fortë, më të lëmuar dhe me pamje më rinore. Trajtimi është i rehatshëm, shpesh i përshkruar si një ndjesi masazhi me gurë të ngrohtë. Mund të përdoret për të shtrënguar lëkurën në nofull, qafë, zonën e vetullave, bark dhe krahë.",
+          "Për rezultate optimale, rekomandohet një seri trajtimesh javore ose dyjavore. Radiofrekuenca është një mënyrë e sigurt dhe efektive për të arritur një lifting delikat dhe një forcim të dukshëm, duke ju ndihmuar të ruani një pamje rinore."
+        ]
+      },
+      "sulcus-filling": {
+        "name": "Mbushja e Rrudhave të Thella (Sulcus Filling)",
+        "description": [
+          "Zhdukni rrudhat e thella dhe palosjet e fytyrës me trajtimin tonë ekspert të Mbushjes së Rrudhave. Ndërsa plakemi, ne humbasim vëllimin e fytyrës, gjë që çon në formimin e linjave të spikatura, siç janë palosjet nazolabiale (linjat e buzëqeshjes që shkojnë nga hunda te goja) dhe linjat e marionetës (linjat që shkojnë nga këndet e gojës poshtë në mjekër).",
+          "Ky trajtim përdor mbushës dermalë me bazë acidi hialuronik premium për të synuar specifikisht këto brazda të thella. Duke injektuar me kujdes mbushësin direkt në dhe nën rrudhë, ne mund të shtojmë menjëherë vëllimin e humbur, duke ngritur lëkurën dhe duke lëmuar palosjen.",
+          "Injektorët tanë të aftë kanë një kuptim të thellë të anatomisë së fytyrës dhe plakjes, duke u lejuar atyre të rivendosin një kontur më të lëmuar dhe më rinor në fytyrën tuaj duke ruajtur një pamje krejtësisht natyrale. Qëllimi nuk është të \"ngrijmë\" fytyrën tuaj, por të zbusim hijet dhe të rivendosim kthesat e buta të një fytyre rinore.",
+          "Procedura është e shpejtë, me siklet minimal dhe pa kohë rikuperimi. Rezultatet janë të menjëhershme dhe mund të zgjasin për më shumë se një vit, duke ofruar një freskim të rëndësishëm por delikat në pamjen tuaj të përgjithshme."
+        ]
+      },
+      "white-peeling": {
+        "name": "Peeling i Bardhë",
+        "description": [
+          "Arrini një ton lëkure më të ndritshëm, më të njëtrajtshëm dhe më të shkëlqyeshëm me trajtimin tonë të specializuar të Peeling-ut të Bardhë. Ky peeling kimik i avancuar është formuluar posaçërisht për të synuar forma të ndryshme të hiperpigmentimit, duke përfshirë njollat e diellit, njollat e moshës, hiperpigmentimin post-inflamator nga aknet dhe melazmën.",
+          "Peeling-u përmban një përzierje agjentësh zbardhues të fuqishëm por të sigurt që veprojnë për të penguar prodhimin e melaninës dhe për të larguar butësisht qelizat ekzistuese të dekoloruara nga sipërfaqja e lëkurës. Ky proces përshpejton qarkullimin e qelizave, duke zbuluar lëkurën më të pastër dhe më rrezatuese poshtë.",
+          "Trajtimi ynë i Peeling-ut të Bardhë është një zgjedhje e përsosur për rivendosjen e qartësisë së lëkurës dhe trajtimin e pigmentimit kokëfortë që nuk i përgjigjet vetëm kremrave lokalë. Shpesh rekomandohet një seri peeling-ësh për përmirësimin më dramatik dhe afatgjatë të tonit të lëkurës.",
+          "Gjatë konsultës suaj, ekspertët tanë të kujdesit të lëkurës do të vlerësojnë lëkurën tuaj për të siguruar që ky peeling është zgjedhja e duhur për ju dhe do të krijojnë një plan trajtimi të personalizuar, duke përfshirë kujdesin pas peeling-ut për të mbrojtur rezultatet tuaja."
+        ]
+      },
+      "wrinkle-fillers": {
+        "name": "Mbushës të Rrudhave",
+        "description": [
+          "Lëmoni shenjat e plakjes dhe rivendosni vëllimin rinor me Mbushësit tanë të Rrudhave të administruar me mjeshtëri. Në LUNAI, ne përdorim një gamë të gjerë mbushësish dermalë me acid hialuronik të cilësisë së lartë, të miratuar nga FDA, për të zbutur menjëherë linjat e holla, për të mbushur rrudhat e thella dhe për të rimbushur vëllimin e humbur në të gjithë fytyrën.",
+          "Injektorët tanë të aftë mund të synojnë zona të ndryshme shqetësuese, duke përfshirë këmbët e sorrës rreth syve, linjat horizontale të ballit, linjat glabellare (\"11-at\" midis vetullave) dhe linjat rreth gojës. Mbushësi injektohet nën lëkurë për ta mbushur atë nga brenda, duke fshirë në mënyrë efektive linjën ose rrudhën.",
+          "Arti i përdorimit të mbushësve qëndron në një teknikë të saktë që siguron rezultate me pamje natyrale. Qëllimi ynë është të freskojmë pamjen tuaj, jo ta ndryshojmë atë. Ne përqendrohemi në përmirësime delikate që ju lënë të dukeni të pushuar mirë dhe të rinovuar.",
+          "Procedura është e shpejtë, me rezultate të dukshme menjëherë. Në varësi të mbushësit të përdorur dhe zonës së trajtuar, rezultatet mund të zgjasin nga 6 deri në 18 muaj. Është një nga trajtimet jo-kirurgjikale më të njohura dhe efektive për të kthyer kohën pas."
+        ]
+      },
+      "xanthelasma-treatment": {
+        "name": "Trajtimi i Xanthelasma-s (Harku Plazma)",
+        "description": [
+          "Xanthelasma janë pllaka të sheshta, të verdha të depozitave të kolesterolit që shfaqen në ose rreth qepallave. Ndërsa ato janë të padëmshme nga pikëpamja mjekësore, ato mund të jenë një shqetësim kozmetik. Trajtimi ynë jo-kirurgjikal me Hark Plazma ofron një metodë të sigurt, të saktë dhe shumë efektive për heqjen e tyre pa prerje ose qepje.",
+          "Pajisja me Hark Plazma përdor energjinë e plazmës për të sublimuar indin e synuar shtresë pas shtrese. Kjo u lejon praktikuesve tanë të heqin me përpikëri depozitat e xanthelasma-s pa dëmtuar lëkurën e shëndetshme përreth të zonës delikate të qepallave.",
+          "Kjo procedurë është një alternativë superiore ndaj heqjes kirurgjikale tradicionale, e cila mund të lërë shenja, ose peeling-ëve kimikë, të cilët mund të mungojnë në saktësi. Trajtimi kryhet me një anestetik lokal dhe ka kohë minimale rikuperimi.",
+          "Pas procedurës, formohen krusta të vogla karboni mbi zonën e trajtuar, të cilat bien brenda një jave për të zbuluar lëkurë të re dhe të pastër. Kjo metodë e avancuar rezulton në rezultate të shkëlqyera kozmetike me një rrezik shumë të ulët të përsëritjes."
+        ]
+      },
+      "breast-augmentation": {
+        "name": "Zmadhimi i Gjoksit",
+        "description": [
+          "Zmadhimi i gjoksit është një nga procedurat më të njohura të kirurgjisë kozmetike, e krijuar për të rritur madhësinë e gjoksit, për të përmirësuar simetrinë dhe për të rritur proporcionet e përgjithshme të trupit. Në LUNAI, ne ju ndihmojmë të arrini format e bukura, me pamje natyrale që dëshironi, duke rritur besimin tuaj dhe duke ju ndihmuar të ndiheni më rehat me veshjet.",
+          "Ne ofrojmë një gamë opsionesh, duke përfshirë implantet e silikonit dhe solucionit fiziologjik në forma, madhësi dhe profile të ndryshme. Ne gjithashtu ofrojmë zmadhimin e gjoksit me transferim dhjami për ato që kërkojnë një rritje modeste të madhësisë duke përdorur dhjamin e tyre trupor. Kirurgët tanë të certifikuar do t'ju udhëzojnë përmes zgjedhjeve gjatë konsultës suaj, duke ju ndihmuar të zgjidhni opsionin më të mirë për të përmbushur qëllimet tuaja estetike dhe për të plotësuar kornizën tuaj trupore.",
+          "Procedura përfshin vendosjen e implantit ose pas indit të gjirit ose nën muskulin e gjoksit përmes një prerjeje diskrete. Fokusi ynë është në krijimin e një rezultati që është sa i bukur aq edhe proporcional, duke u siguruar që silueta juaj e re të duket natyrale dhe të ndihet e duhura për ju.",
+          "Rikuperimi zakonisht përfshin disa ditë pushim, me një kthim në shumicën e aktiviteteve jo të lodhshme brenda një ose dy javësh. Rezultatet janë të menjëhershme dhe afatgjata, duke ofruar një rritje të ndjeshme të vetëvlerësimit."
+        ]
+      },
+      "breast-lift": {
+        "name": "Ngritja e Gjoksit",
+        "description": [
+          "Një ngritje gjoksi, ose mastopeksi, është një procedurë kirurgjikale e krijuar për të rivendosur një profil gjoksi rinor dhe më të ngritur duke korrigjuar varjen dhe duke përmirësuar formën. Efektet e gravitetit, shtatzënisë, luhatjeve të peshës dhe plakjes mund të bëjnë që gjinjtë të humbasin qëndrueshmërinë e tyre dhe të varen. Një ngritje gjoksi i ngre gjinjtë në një pozicion më të lartë në gjoks, duke krijuar një kontur më të fortë dhe më rinor.",
+          "Gjatë procedurës, kirurgët tanë heqin lëkurën e tepërt dhe riformojnë me mjeshtëri indin e brendshëm të gjirit për të krijuar një masë gjoksi më të ngritur dhe me formë. Thithi dhe areola gjithashtu ripozicionohen më lart në gji. Nëse humbja e vëllimit është gjithashtu një shqetësim, një ngritje gjoksi mund të kombinohet me implante (një mastopeksi-zmadhim) për të rivendosur si ngritjen ashtu edhe plotësinë.",
+          "Kandidatet ideale janë gratë që janë të kënaqura me madhësinë e gjinjve të tyre por dëshirojnë të korrigjojnë varjen. Procedura është shumë e personalizuar, me modelet e prerjeve të zgjedhura për të adresuar më së miri shkallën e varjes dhe për të arritur rezultatin e dëshiruar estetik.",
+          "Rikuperimi përfshin rreth një deri në dy javë pushim. Rezultatet e një ngritjeje gjoksi janë afatgjata, duke ofruar një siluetë më rinore dhe të sigurt për vite me rradhë."
+        ]
+      },
+      "breast-reduction": {
+        "name": "Zvogëlimi i Gjoksit",
+        "description": [
+          "Për shumë gra, gjinjtë tepër të mëdhenj (makromastia) mund të shkaktojnë shqetësime të konsiderueshme fizike dhe emocionale. Kirurgjia e zvogëlimit të gjoksit, ose mamoplastika reduktuese, është një procedurë që ndryshon jetën dhe që heq yndyrën e tepërt të gjirit, indin gjëndror dhe lëkurën për të arritur një madhësi gjoksi që është më në proporcion me trupin tuaj.",
+          "Kjo procedurë nuk është vetëm kozmetike; ajo ofron lehtësim të thellë funksional. Duke zvogëluar peshën e gjinjve, ajo mund të lehtësojë shqetësimet fizike kronike si dhimbjet e shpinës, qafës dhe shpatullave, irritimin e lëkurës nën gjinj dhe brazdat e thella dhe të dhimbshme të sytjenave. Ajo gjithashtu u lejon grave të marrin pjesë më rehatshëm në aktivitete fizike dhe të gjejnë veshje që u përshtaten siç duhet.",
+          "Kirurgët tanë të dhembshur përdorin teknika të avancuara për të krijuar gjinj më të vegjël, më të lehtë dhe me formë më të mirë, duke ruajtur ndjeshmërinë dhe duke siguruar shenjat më diskrete të mundshme. Areola gjithashtu zvogëlohet në madhësi dhe ripozicionohet në një lartësi më rinore.",
+          "Zvogëlimi i gjoksit ka një nga normat më të larta të kënaqësisë së pacientit nga çdo procedurë e kirurgjisë plastike. Rikuperimi zakonisht përfshin disa javë pushim, por lehtësimi nga simptomat fizike shpesh ndihet menjëherë."
+        ]
+      },
+      "breast-reconstruction": {
+        "name": "Rindërtimi i Gjoksit",
+        "description": [
+          "Humbja e një gjiri nga mastektomia mund të jetë një pjesë thellësisht emocionale e udhëtimit të kancerit. Rindërtimi i gjirit është një seri procedurash të krijuara për të rivendosur formën, pamjen dhe madhësinë e gjirit, duke ndihmuar një grua të ndihet përsëri e plotë dhe të ecë përpara me besim.",
+          "Në LUNAI, kirurgët tanë të dhembshur dhe të aftë ofrojnë një gamë opsionesh të avancuara të rindërtimit të gjirit. Rindërtimi mund të kryhet në të njëjtën kohë me mastektominë (rindërtim i menjëhershëm) ose në një datë të mëvonshme (rindërtim i vonuar).",
+          "Dy qasjet kryesore janë rindërtimi me bazë implanti dhe rindërtimi autolog (ose \"flap\"), i cili përdor indin tuaj trupor nga barku, shpina ose kofshët për të krijuar një masë të re gjiri. Opsioni më i mirë varet nga lloji i trupit tuaj, plani i trajtimit të kancerit dhe preferenca personale. Ne do të punojmë ngushtë me ju dhe ekipin tuaj të onkologjisë për të krijuar një plan kirurgjikal të sigurt dhe efektiv.",
+          "Rindërtimi i gjirit është një udhëtim shumë personal, dhe qëllimi ynë është t'ju mbështesim në çdo hap të rrugës. Ne synojmë të krijojmë një rezultat që jo vetëm duket natyral, por gjithashtu ndihmon në rivendosjen e ndjenjës suaj të vetes dhe feminitetit pas kancerit të gjirit."
+        ]
+      },
+      "arm-lift": {
+        "name": "Lifting i Krahëve",
+        "description": [
+          "Një lifting i krahëve, ose brakioplastikë, është një procedurë kirurgjikale që riformon krahët e sipërm duke hequr lëkurën e lirshme, të varur dhe yndyrën e tepërt. Kjo gjendje, shpesh e quajtur \"krahë lakuriqi\", mund të rezultojë nga humbja e konsiderueshme e peshës, plakja ose gjenetika dhe shpesh nuk i përgjigjet dietës dhe ushtrimeve.",
+          "Kjo procedurë krijon një kontur krahu më të lëmuar, më të fortë dhe më të tonifikuar, duke ju lejuar të vishni bluza dhe fustane pa mëngë me besim të ripërtërirë. Gjatë operacionit, zakonisht bëhet një prerje në anën e brendshme ose të pasme të krahut, nga sqetulla deri në bërryl. Përmes kësaj prerjeje, kirurgu ynë heq lëkurën dhe yndyrën e tepërt dhe shtrëngon indet mbështetëse themelore.",
+          "Liposuksioni mund të përdoret në kombinim me një lifting të krahëve për të arritur konturin më të mirë të mundshëm. Kandidatët idealë janë individë që janë në një peshë të qëndrueshme dhe shqetësohen nga pamja e lëkurës së lirshme në krahët e tyre të sipërm.",
+          "Rikuperimi përfshin veshjen e veshjeve kompresive dhe kufizimin e aktivitetit të rëndë për disa javë. Ndërsa do të ketë një shenjë, kirurgët tanë kujdesen shumë për ta vendosur atë sa më diskrete që të jetë e mundur. Rezultatet janë një formë krahu dramatikisht e përmirësuar dhe më rinore."
+        ]
+      },
+      "tummy-tuck": {
+        "name": "Abdominoplastika",
+        "description": [
+          "Një abdominoplastikë është standardi i artë për krijimin e një profili abdominal më të sheshtë, më të fortë dhe më të lëmuar. Është një procedurë transformuese që adreson çështje që dieta dhe ushtrimet vetëm nuk mund t'i rregullojnë, si lëkura e lirshme, e tepërt pas shtatzënisë ose humbjes së konsiderueshme të peshës, dhe muskujt abdominalë të dobësuar ose të ndarë (diastasis recti).",
+          "Gjatë një abdominoplastike të plotë, kirurgu ynë bën një prerje horizontale poshtë në bark, nga kofsha në kofshë. Lëkura e barkut ngrihet, muskujt themelorë riparohen dhe shtrëngohen, dhe lëkura dhe yndyra e tepërt hiqen. Lëkura e mbetur më pas rivendoset për një kontur më të shtrënguar dhe më të lëmuar, dhe kërthiza ripozicionohet.",
+          "Ne gjithashtu ofrojmë një mini abdominoplastikë për pacientët, shqetësimet e të cilëve janë kryesisht të vendosura poshtë kërthizës. Ky opsion më pak i gjerë përfshin një prerje më të shkurtër dhe një rikuperim më të shpejtë.",
+          "Një abdominoplastikë ofron një përmirësim dramatik dhe afatgjatë në pjesën e mesme, duke ndihmuar pacientët të rifitojnë figurën e tyre para shtatzënisë ose të festojnë hapin e fundit në udhëtimin e tyre të humbjes së peshës. Rikuperimi zakonisht kërkon dy deri në tre javë pushim."
+        ]
+      },
+      "liposculpture": {
+        "name": "Liposkulptura",
+        "description": [
+          "Liposkulptura është një formë më e avancuar dhe artistike e liposuksionit. Ndërsa liposuksioni tradicional përqendrohet në heqjen e vëllimeve të mëdha të yndyrës, liposkulptura ka të bëjë me saktësinë dhe detajet. Ajo përfshin heqjen e depozitave të yndyrës të lokalizuara dhe kokëforta për të skalitur dhe përcaktuar me kujdes konturet natyrale të trupit dhe për të zbuluar definicionin muskulor themelor.",
+          "Kjo teknikë është ideale për individët që janë tashmë afër peshës së tyre trupore ideale por luftojnë me xhepa të vazhdueshëm yndyre që errësojnë fizikun e tyre. Zonat e zakonshme të trajtimit përfshijnë barkun, anët e belit, kofshët, shpinën dhe krahët. Mund të përdoret për të krijuar pamjen e muskujve \"gjashtë-paketësh\" të barkut (gdhendje abdominale) ose për të përcaktuar vijën e belit.",
+          "Në LUNAI, kirurgët tanë përdorin teknologji moderne të liposuksionit për të hequr butësisht yndyrën duke minimizuar traumën në indet përreth. Kjo lejon një rikuperim më të qetë dhe rezultate më të rafinuara dhe me definicion të lartë.",
+          "Liposkulptura është për pacientët që kërkojnë të arrijnë pamjen përfundimtare dhe të gdhendur për të cilën kanë punuar përmes dietës dhe fitnesit, por nuk kanë qenë në gjendje ta arrijnë. Është arti i konturimit të trupit, i përsosur."
+        ]
+      },
+      "brazilian-butt-lift": {
+        "name": "Lifting Brazilian i Vitheve (BBL)",
+        "description": [
+          "Liftingu Brazilian i Vitheve (BBL) është një procedurë shumë e njohur dhe transformuese që përmirëson madhësinë dhe formën e vitheve duke përdorur yndyrën tuaj natyrale. Është një operacion dy-në-një i konturimit të trupit që krijon një profil vithesh më të lakuar, më të ngritur dhe një siluetë më të përcaktuar në formë ore rëre.",
+          "Procedura fillon me liposuksion për të marrë yndyrën e tepërt nga zona të tjera të trupit ku ajo është e padëshiruar, si barku, anët e belit ose kofshët. Kjo ka përfitimin shtesë të hollimit dhe konturimit të zonave donatore. Yndyra e marrë më pas pastrohet dhe injektohet me përpikëri në shtresa të shumta në vithe për të rritur vëllimin, për të përmirësuar formën dhe për të krijuar një pamje të ngritur.",
+          "Një BBL është një opsion i shkëlqyer për ata që dëshirojnë një pjesë të pasme më të plotë por duan të shmangin implantet. Për shkak se përdor yndyrën tuaj, rezultatet duken dhe ndihen krejtësisht natyrale. Kirurgët tanë janë ekspertë në vendosjen artistike të yndyrës për të krijuar rezultate të bukura, proporcionale dhe afatgjata.",
+          "Rikuperimi kërkon shmangien e presionit të drejtpërdrejtë në vithe për disa javë për të siguruar mbijetesën optimale të qelizave yndyrore të transferuara. Rezultati përfundimtar është një kontur i poshtëm i trupit i përmirësuar përgjithmonë dhe më voluptuoz."
+        ]
+      },
+      "labiaplasty": {
+        "name": "Labiaplastika",
+        "description": [
+          "Labiaplastika është një procedurë kirurgjikale intime e krijuar për të përmirësuar rehatinë dhe pamjen e labiave. Shumë gra përjetojnë siklet fizik nga labia minora të zmadhuara ose të zgjatura, të cilat mund të shkaktojnë fërkime, irritim dhe dhimbje gjatë ushtrimeve, marrëdhënieve seksuale ose kur veshin rroba të ngushta. Labiaplastika mund të ofrojë lehtësim të konsiderueshëm nga këto simptoma.",
+          "Procedura kryhet gjithashtu për arsye kozmetike, për të zvogëluar madhësinë ose për të korrigjuar asimetrinë e labia minora ose majora, duke krijuar një pamje më të rregullt dhe më estetike. Kjo mund të çojë në një rritje të ndjeshme të vetëbesimit dhe rehatisë në trupin e dikujt.",
+          "Kirurgët tanë të dhembshur kryejnë labiaplastikën me diskrecionin dhe ndjeshmërinë më të madhe. Duke përdorur teknika të sakta, ata presin me kujdes indin e tepërt dhe riformojnë labiat për të arritur rezultatin e dëshiruar të pacientes duke ruajtur ndjeshmërinë.",
+          "Procedura zakonisht kryhet në baza ambulatore dhe ka një rikuperim relativisht të drejtpërdrejtë, me shumicën e pacientëve që kthehen në aktivitetet normale brenda disa javësh. Është një kirurgji e sigurt dhe efektive që mund të përmirësojë shumë cilësinë e jetës së një gruaje."
+        ]
+      },
+      "thigh-lift": {
+        "name": "Lifting i Kofshëve",
+        "description": [
+          "Një lifting i kofshëve, ose thighplasty, është një procedurë e konturimit të trupit që adreson lëkurën e lirshme, të varur dhe yndyrën e tepërt në kofshët e brendshme dhe/ose të jashtme. Kjo gjendje është një rezultat i zakonshëm i humbjes masive të peshës, plakjes ose gjenetikës dhe mund të shkaktojë si pakënaqësi kozmetike ashtu edhe probleme fizike si fërkimi dhe irritimi.",
+          "Një lifting i kofshëve krijon një kontur kofshe më të fortë, më të lëmuar dhe më rinor. Gjatë procedurës, bëhet një prerje, zakonisht në palosjen e ijëve duke u shtrirë poshtë kofshës së brendshme, përmes së cilës hiqet lëkura dhe yndyra e tepërt. Lëkura e mbetur më pas rivendoset dhe shtrëngohet, duke rezultuar në një formë këmbësh të përmirësuar ndjeshëm.",
+          "Kandidatët idealë janë në një peshë të qëndrueshme dhe janë të përkushtuar për të ruajtur një mënyrë jetese të shëndetshme, pasi luhatjet e ardhshme të peshës mund të komprometojnë rezultatet. Procedura ndihmon që rrobat të përshtaten më mirë dhe mund të përmirësojë në mënyrë dramatike vetëbesimin.",
+          "Rikuperimi përfshin veshjen e veshjeve kompresive dhe shmangien e aktivitetit të rëndë për rreth 4-6 javë. Ndërsa një shenjë do të jetë e pranishme, kirurgët tanë e vendosin atë sa më diskrete që të jetë e mundur. Rezultati përfundimtar është këmbë të konturuara bukur që do të jeni krenarë t'i tregoni."
+        ]
+      },
+      "gynecomastia": {
+        "name": "Gjinekomastia (Zvogëlimi i Gjoksit te Meshkujt)",
+        "description": [
+          "Gjinekomastia është një gjendje e zakonshme e karakterizuar nga zhvillimi i tepërt i indit të gjirit te meshkujt, duke rezultuar në pamjen e \"gjinjve mashkullorë\". Mund të shkaktohet nga çekuilibret hormonale, gjenetika ose medikamente të caktuara dhe mund të jetë një burim i rëndësishëm i vetëdijes. Kirurgjia e zvogëlimit të gjirit mashkullor është një procedurë shumë efektive për të korrigjuar këtë problem.",
+          "Operacioni synon të rivendosë një kontur gjoksi më të sheshtë, më të fortë dhe më mashkullor. Teknika specifike e përdorur varet nga shkaku i gjinekomastisë. Nëse ajo është kryesisht për shkak të indit të tepërt yndyror, liposuksioni vetëm mund të jetë i mjaftueshëm. Nëse shkaku është indi i tepërt gjëndror, ky ind do të hiqet kirurgjikalisht përmes një prerjeje të vogël rreth areolës.",
+          "Në shumë raste, përdoret një kombinim i liposuksionit dhe heqjes për të arritur rezultatin më të mirë të mundshëm. Kirurgët tanë do të kryejnë një vlerësim të plotë për të krijuar një plan kirurgjikal të personalizuar për ju.",
+          "Rikuperimi është relativisht i shpejtë, me shumicën e meshkujve që kthehen në punë brenda një jave. Rezultatet janë të përhershme dhe mund të kenë një ndikim të thellë në vetëvlerësim, duke u lejuar meshkujve të ndihen rehat dhe të sigurt duke dalë pa këmishë ose duke veshur rroba të ngushta."
+        ]
+      },
+      "carboxytherapy": {
+        "name": "Karboksiterapia",
+        "description": [
+          "Karboksiterapia është një trajtim inovativ dhe i gjithanshëm jo-kirurgjikal që përfshin injektimin terapeutik të gazit të dioksidit të karbonit (CO2) të shkallës mjekësore në indin nënlëkuror. Kjo procedurë e sigurt dhe minimalisht invazive shfrytëzon një proces natyral në trup për të rinovuar lëkurën dhe për të përmirësuar pamjen e saj.",
+          "Kur injektohet CO2, trupi e interpreton atë si një deficit oksigjeni dhe përgjigjet duke rritur rrjedhën e gjakut dhe faktorët e rritjes në zonën e trajtuar. Kjo rritje e oksigjenit dhe lëndëve ushqyese stimulon qarkullimin, inkurajon drenazhin limfatik dhe promovon prodhimin e kolagjenit të ri.",
+          "Në LUNAI, ne përdorim karboksiterapinë për të trajtuar në mënyrë efektive një sërë shqetësimesh. Ajo është shumë efektive në zvogëlimin e pamjes së celulitit, zbehjen e strijave duke rindërtuar rrjetin e kolagjenit, dhe përmirësimin e laksitetit dhe teksturës së lëkurës në trup. Ajo gjithashtu mund të përdoret për të trajtuar rrathët e zinj nën sy duke përmirësuar qarkullimin.",
+          "Trajtimi është i shpejtë, me siklet minimal dhe pa kohë rikuperimi. Zakonisht kërkohet një seri seancash për të arritur rezultate optimale dhe afatgjata për një lëkurë më të lëmuar dhe me pamje më të shëndetshme."
+        ]
+      },
+      "cellulite-treatment": {
+        "name": "Trajtimi i Celulitit",
+        "description": [
+          "Celuliti, pamja me gropëza, \"lëvozhgë portokalli\" e lëkurës, prek shumicën dërrmuese të grave, pavarësisht nga madhësia apo pesha e tyre. Ai shkaktohet nga depozitat e yndyrës që shtyjnë përmes brezave të indit lidhor (septat) nën lëkurë. Në LUNAI, ne ofrojmë një program gjithëpërfshirës të trajtimit të celulitit që synon shkaqet strukturore të celulitit për një pamje dukshëm më të lëmuar.",
+          "Ne e kuptojmë se një modalitet i vetëm shpesh nuk mjafton. Qasja jonë e personalizuar mund të kombinojë disa teknologji të avancuara, jo-invazive për të arritur rezultatet më të mira. Këto mund të përfshijnë radiofrekuencën për të ngrohur dhe shtrënguar lëkurën, terapinë me valë akustike për të thyer brezat fibrozë dhe karboksiterapinë për të përmirësuar qarkullimin.",
+          "Plani ynë i trajtimit synon të shpërbëjë depozitat kokëforta të yndyrës, të lirojë septat fibrozë që shkaktojnë gropëzat, të përmirësojë drenazhin limfatik për të zvogëluar mbajtjen e lëngjeve dhe të stimulojë prodhimin e kolagjenit për të përmirësuar elasticitetin dhe trashësinë e lëkurës.",
+          "Ndërsa nuk ka një kurë të përhershme për celulitin, programet tona të personalizuara mund të ofrojnë një përmirësim të ndjeshëm dhe të qëndrueshëm në teksturën e lëkurës, duke ju ndihmuar të ndiheni më të sigurt në lëkurën tuaj."
+        ]
+      },
+      "laser-hair-removal": {
+        "name": "Heqja e Qimeve me Laser",
+        "description": [
+          "Shijoni lirinë e lëkurës së lëmuar si mëndafsh dhe pa qime me shërbimet tona të avancuara të Heqjes së Qimeve me Laser. Ky është një nga trajtimet kozmetike jo-invazive më të njohura, që ofron një zgjidhje afatgjatë për qimet e padëshiruara pothuajse në çdo pjesë të fytyrës ose trupit. Thuajini lamtumirë ciklit të pafund të rruajtjes, depilimit me dyllë dhe piskatores.",
+          "Ne përdorim teknologji lazer moderne që është e sigurt dhe efektive për një gamë të gjerë tipash lëkure. Lazeri funksionon duke emetuar një rreze të përqendruar drite që absorbohet nga pigmenti (melanina) në folikulin e flokut. Kjo energji drite shndërrohet në nxehtësi, e cila dëmton folikulin dhe pengon aftësinë e tij për të rritur përsëri qime.",
+          "Për shkak se lazeri synon qimet në fazën e tyre aktive të rritjes, kërkohet një seri trajtimesh (zakonisht 6-8 seanca) për të kapur të gjitha qimet në ciklin e tyre të rritjes dhe për të arritur një reduktim të përhershëm të qimeve.",
+          "Teknikët tanë me përvojë sigurojnë që trajtimi të jetë sa më i rehatshëm dhe efektiv që të jetë e mundur. Zonat e zakonshme të trajtimit përfshijnë këmbët, sqetullat, zonën e bikinit, shpinën, gjoksin dhe fytyrën. Filloni udhëtimin tuaj drejt lëkurës së lëmuar pa mundim sot."
+        ]
+      },
+      "lipolysis": {
+        "name": "Lipoliza",
+        "description": [
+          "Shkrini xhepat kokëfortë dhe të lokalizuar të yndyrës pa kirurgji me Lipolizën injektuese. Kjo është një zgjidhje e synuar, jo-invazive e konturimit të trupit, e përsosur për adresimin e zonave të vogla të yndyrës që janë rezistente ndaj dietës dhe ushtrimeve.",
+          "Trajtimi përfshin injektimin e një solucioni të formuluar posaçërisht, shpesh që përmban acid deoksikolik, direkt në depozitën e yndyrës. Kjo substancë vepron për të shpërbërë membranën qelizore të qelizave yndyrore. Pasi të shkatërrohen, këto qeliza përpunohen natyrshëm dhe eliminohen përgjithmonë nga sistemi limfatik i trupit.",
+          "Lipoliza injektuese është shumë efektive për trajtimin e zonave si gusha (yndyra submentale), dhjami anash sytjenave, xhepat e vegjël në bark dhe kofshët e brendshme. Nuk është një zgjidhje për humbjen e peshës, por më tepër një mjet për rafinimin dhe konturimin e zonave specifike.",
+          "Zakonisht nevojitet një seri prej 2-4 trajtimesh për rezultate optimale. Mund të ketë pak ënjtje dhe ndjeshmëri në zonën e trajtuar për disa ditë, por nuk ka kohë të konsiderueshme rikuperimi. Rezultati është një reduktim i përhershëm i yndyrës në zonën e trajtuar dhe një kontur i përmirësuar."
+        ]
+      },
+      "plasma-arc-skin": {
+        "name": "Harku Plazma (Trajtime të Lëkurës)",
+        "description": [
+          "Harku Plazma është një teknologji e gjithanshme dhe inovative që lejon një gamë të gjerë trajtimesh jo-kirurgjikale të lëkurës në trup. Ajo ofron një mënyrë të saktë dhe efektive për të rinovuar dhe riparuar lëkurën duke shfrytëzuar fuqinë e energjisë plazma.",
+          "Kjo teknologji është e jashtëzakonshme për shtrëngimin jo-kirurgjikal të lëkurës, duke e bërë atë një opsion të shkëlqyer për trajtimin e lëkurës së lirshme në bark (veçanërisht pas shtatzënisë), qafë dhe gjunjë. Ajo gjithashtu mund të përdoret për rishikimin e shenjave, duke përmirësuar ndjeshëm teksturën dhe pamjen e shenjave kirurgjikale, shenjave të akneve dhe strijave.",
+          "Përveç kësaj, Harku Plazma është një metodë e sigurt dhe efektive për heqjen e lezioneve beninje të lëkurës si nishanet e lëkurës, nishanet dhe lythat. Pajisja sublimon indin e synuar pa shkaktuar dëme termike në zonën përreth, duke çuar në shenja minimale dhe shërim të shpejtë.",
+          "Trajtimi promovon shërimin natyral dhe rigjenerimin e lëkurës, duke rezultuar në një sipërfaqe lëkure më të pastër, më të lëmuar dhe më të shtrënguar. Është një mjet i fuqishëm për adresimin e problemeve të shumta të lëkurës në trup pa nevojën për kirurgji invazive."
+        ]
+      },
+      "sclerotherapy": {
+        "name": "Skleroterapia (Trajtimi i Venave Merimangë)",
+        "description": [
+          "Arrini këmbë të pastra, të bukura dhe rivendosni besimin tuaj me Skleroterapinë. Kjo është procedura mjekësore standarde e artë për eliminimin e venave të shëmtuara merimangë dhe venave të vogla me variçe në këmbë. Është një trajtim i sigurt, efektiv dhe minimalisht invaziv që është besuar për dekada.",
+          "Procedura përfshin injektimin e një solucioni të veçantë, të quajtur sklerozant, direkt në venat e synuara. Ky solucion irriton veshjen e venës, duke bërë që ajo të fryhet, të shembet dhe të ngjitet së bashku. Me kalimin e kohës, vena e trajtuar shndërrohet në ind mbresë dhe zbehet nga pamja ndërsa absorbohet natyrshëm nga trupi.",
+          "Një seancë e vetme mund të përfshijë injeksione të shumta, në varësi të numrit të venave që trajtohen. Procedura është e shpejtë, me siklet minimal. Nuk ka kohë rikuperimi, dhe pacientët inkurajohen të ecin menjëherë pas për të promovuar qarkullimin.",
+          "Mund të nevojiten seanca të shumta për të arritur nivelin e dëshiruar të pastrimit. Me skleroterapinë në LUNAI, ju mund të rivendosni në mënyrë efektive një pamje me ton të njëtrajtshëm në këmbët tuaja dhe të ndiheni rehat duke veshur sërish pantallona të shkurtra dhe funde."
+        ]
+      },
+      "composite-veneers": {
+        "name": "Faseta Kompoziti",
+        "description": [
+          "Transformoni buzëqeshjen tuaj me çmim të përballueshëm dhe në një vizitë të vetme me Fasetat Kompozit. Kjo procedurë dentare kozmetike, e njohur gjithashtu si bonding dentar, është një mënyrë e shkëlqyer për të korrigjuar një sërë papërsosmërish të vogla. Stomatologët tanë të aftë aplikojnë me mjeshtëri një rrëshirë kompozite me ngjyrë dhëmbi direkt në sipërfaqen e dhëmbit për të përmirësuar pamjen e tij.",
+          "Fasetat kompozit janë ideale për të fshehur ciflosjet, për të mbyllur hapësirat e vogla midis dhëmbëve, për të mbuluar njollat dhe dekolorimet, dhe madje edhe për të korrigjuar pamjen e dhëmbëve pak të shtrembër ose me formë të parregullt. Është një procedurë konservatore që zakonisht kërkon heqje minimale ose aspak të strukturës natyrale të dhëmbit.",
+          "Procesi është sa art aq edhe shkencë. Stomatologët tanë zgjedhin me kujdes një nuancë rrëshire që përputhet me dhëmbët tuaj natyralë dhe më pas e skalitin dhe e lustrojnë me mjeshtëri për të krijuar një rezultat të bukur dhe pa probleme. E gjithë procedura zakonisht përfundon në vetëm një takim.",
+          "Ndërsa nuk janë aq të qëndrueshme ose rezistente ndaj njollave sa fasetat e porcelanit, fasetat kompozit janë një mënyrë me kosto efektive dhe më pak invazive për të arritur një transformim mahnitës të buzëqeshjes dhe një rritje të ndjeshme të besimit."
+        ],
+        "dentalSubCategoryTitle": "ESTETIKË"
+      },
+      "emax-veneers": {
+        "name": "Faseta E-Max",
+        "description": [
+          "Arrini një buzëqeshje të përsosur, rrezatuese dhe jashtëzakonisht të qëndrueshme me Fasetat E-Max. Të konsideruara si kulmi i stomatologjisë kozmetike, fasetat E-Max janë krijuar nga një qelq-qeramikë disilikati litiumi me forcë të lartë. Ky material është i njohur për qëndrueshmërinë, durueshmërinë e tij superiore dhe cilësinë e tij mahnitëse, të tejdukshme që imiton në mënyrë të përsosur pamjen e smaltit natyror të dhëmbëve.",
+          "Fasetat E-Max janë guaska ultra të holla të bëra me porosi që ngjiten në sipërfaqen e përparme të dhëmbëve tuaj. Ato janë zgjidhja ideale për të krijuar një transformim të plotë të buzëqeshjes, të afta për të korrigjuar çështje si njollosja e rëndë, ciflosjet, plasaritjet, hapësirat dhe mos-rreshtimi i konsiderueshëm.",
+          "Procesi përfshin dy vizita. Në të parën, ne përgatisim dhëmbët, marrim masa të sakta dhe ju vendosim faseta të përkohshme. Masat dërgohen në një laborator master dentar ku prodhohen fasetat tuaja të personalizuara. Në vizitën e dytë, ne ngjisim përgjithmonë fasetat përfundimtare në dhëmbët tuaj.",
+          "Me bukurinë e tyre të jashtëzakonshme dhe rezistencën ndaj njollosjes, fasetat E-Max ofrojnë një buzëqeshje afatgjatë të kalibrit të yjeve që do të duket spektakolare për shumë vite."
+        ],
+        "dentalSubCategoryTitle": "ESTETIKË"
+      },
+      "teeth-whitening": {
+        "name": "Zbardhimi i Dhëmbëve",
+        "description": [
+          "Ndriçoni në mënyrë dramatike buzëqeshjen tuaj dhe rrisni besimin tuaj me shërbimet tona profesionale të Zbardhimit të Dhëmbëve. Me kalimin e kohës, dhëmbët mund të njollosen dhe të zverdhen nga kafeja, çaji, vera e kuqe, duhani dhe procesi natyror i plakjes. Zbardhimi profesional është mënyra më e sigurt dhe më efektive për të hequr këto njolla dhe për të zbuluar një buzëqeshje të bardhë shkëlqyese.",
+          "Në LUNAI, ne ofrojmë dy opsione të përshtatshme dhe të fuqishme. Trajtimi ynë i zbardhimit në zyrë ofron rezultatet më dramatike në një vizitë të vetme, shpesh duke zbardhur dhëmbët me disa nuanca në rreth një orë. Është zgjedhja e përsosur për ata që duan rezultate të menjëhershme për një ngjarje të veçantë.",
+          "Ne gjithashtu ofrojmë komplete zbardhimi të personalizuara për në shtëpi. Ne marrim masat e dhëmbëve tuaj për të krijuar forma të përshtatura që sigurojnë që xheli zbardhues i fuqisë profesionale të aplikohet në mënyrë të barabartë dhe të sigurt. Më pas mund t'i zbardhni dhëmbët tuaj në komoditetin e shtëpisë suaj për një periudhë prej një deri në dy javë.",
+          "Të dyja zgjidhjet tona të zbardhimit janë të sigurta për smaltin tuaj dhe ofrojnë rezultate shumë më superiore se produktet pa recetë. Na lejoni t'ju ndihmojmë të arrini buzëqeshjen verbuese dhe të bardhë që keni dëshiruar gjithmonë."
+        ],
+        "dentalSubCategoryTitle": "ESTETIKË"
+      },
+      "crowns": {
+        "name": "Kurora",
+        "description": [
+          "Një kurorë dentare, shpesh e quajtur \"këllëf\", është një restaurim i bërë me porosi që vesh plotësisht pjesën e dukshme të një dhëmbi. Është një mënyrë shumë efektive për të mbrojtur dhe restauruar një dhëmb që është dobësuar ndjeshëm nga kariesi, fraktura, një mbushje e madhe ose një trajtim i kanalit të rrënjës.",
+          "Kurorat shërbejnë për qëllime të shumta: ato rivendosin madhësinë, formën dhe forcën origjinale të një dhëmbi dhe përmirësojnë pamjen e tij estetike. Në LUNAI, kurorat tona janë krijuar nga materiale të cilësisë së lartë dhe të qëndrueshme si porcelani, zirkoni ose porcelani i shkrirë me metal, të dizajnuara për t'u përzier pa probleme me dhëmbët tuaj natyralë.",
+          "Procesi zakonisht përfshin dy takime. Gjatë vizitës së parë, dhëmbi përgatitet, merret një masë për laboratorin dhe vendoset një kurorë e përkohshme. Në vizitën e dytë, kurora e përhershme e prodhuar me porosi kontrollohet për një përshtatje të përsosur dhe më pas çimentohet në vend.",
+          "Një kurorë e bërë mirë mund të mbrojë një dhëmb të komprometuar nga dëmtimet e mëtejshme dhe të ofrojë një restaurim të bukur dhe funksional që mund të zgjasë për shumë vite me kujdesin e duhur."
+        ],
+        "dentalSubCategoryTitle": "PROTETIKË"
+      },
+      "dental-bridges": {
+        "name": "Ura Dentare",
+        "description": [
+          "Një urë dentare është një pajisje protetike fikse e krijuar për të \"kapërcyer hendekun\" e krijuar nga një ose më shumë dhëmbë që mungojnë. Është një zgjidhje e shkëlqyer dhe e besueshme për të rivendosur buzëqeshjen tuaj, aftësinë tuaj për të përtypur siç duhet dhe integritetin e përgjithshëm të kafshimit tuaj.",
+          "Një urë tradicionale përbëhet nga një ose më shumë dhëmbë artificialë (të quajtur pontikë) që mbahen në vend nga kurora dentare të çimentuara në dhëmbët natyralë në të dy anët e hapësirës (të quajtur dhëmbë mbështetës). Kjo krijon një restaurim të fortë dhe të pa-lëvizshëm.",
+          "Duke mbushur hapësirën e një dhëmbi që mungon, një urë dentare parandalon dhëmbët e mbetur të zhvendosen nga pozicioni, gjë që mund të çojë në probleme të kafshimit dhe të nofullës. Ajo gjithashtu ndihmon në ruajtjen e formës natyrale të fytyrës suaj dhe në shpërndarjen e barabartë të forcave në kafshimin tuaj.",
+          "Urat tona janë bërë me porosi nga materiale të cilësisë së lartë për t'u përputhur me ngjyrën dhe formën e dhëmbëve tuaj natyralë, duke siguruar një rezultat që është sa funksional aq edhe estetikisht i këndshëm."
+        ],
+        "dentalSubCategoryTitle": "PROTETIKË"
+      },
+      "dentures": {
+        "name": "Proteza Dentare",
+        "description": [
+          "Rifitoni një buzëqeshje të plotë, të sigurt dhe funksion të plotë përtypjeje me protezat tona moderne dhe të rehatshme. Protezat janë pajisje të lëvizshme që zëvendësojnë dhëmbët që mungojnë dhe indet përreth. Në LUNAI, ne përqendrohemi në ofrimin e protezave që jo vetëm duken natyrale, por gjithashtu ofrojnë një përshtatje të sigurt dhe të rehatshme.",
+          "Ne ofrojmë disa lloje protezash për të përmbushur nevojat tuaja. Protezat e plota (ose totale) përdoren kur mungojnë të gjithë dhëmbët në një hark. Protezat e pjesshme përdoren kur mbeten disa dhëmbë natyralë dhe mbahen në vend nga kapëse që ngjiten në dhëmbët ekzistues.",
+          "Për stabilitet të shtuar, ne ofrojmë gjithashtu proteza të mbështetura nga implante. Këto proteza kapen në implantet dentare që janë vendosur kirurgjikalisht në kockën e nofullës, duke ofruar një përshtatje shumë më të sigurt dhe të qëndrueshme që eliminon rrëshqitjen dhe përmirëson fuqinë e përtypjes.",
+          "Ekipi ynë kujdeset me përpikëri në projektimin dhe fabrikimin e protezave tuaja të personalizuara, duke u siguruar që ato të rivendosin strukturën tuaj të fytyrës, të mbështesin buzët dhe faqet tuaja dhe t'ju lejojnë të hani, të flisni dhe të buzëqeshni me besim të ripërtërirë."
+        ],
+        "dentalSubCategoryTitle": "PROTETIKË"
+      },
+      "fixed-braces": {
+        "name": "Aparate Fikse",
+        "description": [
+          "Arrini një buzëqeshje të drejtë të përsosur dhe një kafshim të shëndetshëm dhe funksional me aparatet fikse tradicionale. Ky trajtim ortodontik i provuar me kohë është shumë efektiv për korrigjimin e një game të gjerë çështjesh komplekse, duke përfshirë grumbullimin e rëndë, hapësirat dhe mos-përputhjet e kafshimit si mbylljet e thella, të kryqëzuara dhe të hapura.",
+          "Aparatet fikse përbëhen nga kllapa që ngjiten në pjesën e përparme të çdo dhëmbi dhe një hark teli që i lidh ato. Duke bërë rregullime periodike në tel, ortodonti ynë mund të aplikojë një presion të butë dhe të vazhdueshëm për të udhëhequr gradualisht dhëmbët tuaj në rreshtimin e tyre ideal.",
+          "Në LUNAI, aparatet tona moderne janë më të rehatshme dhe estetikisht më të pëlqyeshme se kurrë më parë. Ne ofrojmë aparate metalike tradicionale si dhe aparate qeramike të qarta, të cilat janë më pak të dukshme dhe një zgjedhje popullore për të rriturit dhe adoleshentët e ndërgjegjshëm për pamjen.",
+          "Aparatet fikse mbeten një nga mënyrat më të besueshme dhe më të sakta për të arritur një buzëqeshje të bukur, të shëndetshme dhe të qëndrueshme për pacientët e të gjitha moshave."
+        ],
+        "dentalSubCategoryTitle": "ORTODONCI"
+      },
+      "invisalign": {
+        "name": "Invisalign",
+        "description": [
+          "Drejtoni dhëmbët tuaj në mënyrë diskrete dhe të rehatshme me alignerët e qartë Invisalign. Ky sistem revolucionar ortodontik përdor një seri tabakash plastike të bëra me porosi dhe praktikisht të padukshme për të zhvendosur gradualisht dhe butësisht dhëmbët tuaj në pozicionin e tyre të dëshiruar, pa nevojën për kllapa ose tela metalikë.",
+          "Procesi i Invisalign fillon me një skanim dixhital 3D të dhëmbëve tuaj, nga i cili krijohet një plan i saktë trajtimi. Ju do të jeni në gjendje të shihni një paraqitje virtuale të udhëtimit tuaj të trajtimit dhe rezultatin përfundimtar edhe para se të filloni. Ju do të mbani çdo set alignerësh për rreth 1-2 javë përpara se të kaloni në setin tjetër në seri.",
+          "Një avantazh kyç i Invisalign është se alignerët janë të lëvizshëm. Kjo do të thotë që ju mund t'i hiqni për të ngrënë, pirë, larë dhëmbët dhe përdorur fillin dentar, duke lejuar një higjienë më të mirë orale dhe pa kufizime dietike gjatë trajtimit.",
+          "Invisalign është një zgjedhje popullore dhe shumë efektive për të rriturit dhe adoleshentët që kërkojnë të korrigjojnë grumbullimin e lehtë deri në mesatar, hapësirat dhe problemet e kafshimit pa pamjen e aparateve tradicionale."
+        ],
+        "dentalSubCategoryTitle": "ORTODONCI"
+      },
+      "removable-appliances": {
+        "name": "Aparate të Lëvizshme",
+        "description": [
+          "Aparatet ortodontike të lëvizshme luajnë një rol vendimtar si në trajtimin aktiv ashtu edhe në fazën e mbajtjes së ortodoncisë. Këto pajisje të bëra me porosi janë krijuar për t'u futur dhe hequr nga goja nga pacienti dhe shërbejnë për një sërë qëllimesh.",
+          "Aparatet aktive, si pllakat e zgjerimit ose alignerët me susta, mund të përdoren për të arritur lëvizje specifike dhe të kufizuara të dhëmbëve, shpesh te pacientët më të rinj gjatë trajtimit të hershëm interceptiv. Ato mund të ndihmojnë në zgjerimin e harkut dentar ose në korrigjimin e mos-përputhjeve të vogla.",
+          "Lloji më i zakonshëm i aparatit të lëvizshëm është mbajtësi (retainer). Pasi të përfundojë trajtimi juaj me aparate ose Invisalign, një mbajtës është thelbësor për ruajtjen e buzëqeshjes suaj të sapo-drejtuar. Ai mban dhëmbët në pozicionet e tyre të reja ndërsa kocka dhe ligamentet përreth stabilizohen, duke i parandaluar ata të kthehen në pozicionet e tyre të vjetra.",
+          "Në LUNAI, ne ofrojmë lloje të ndryshme aparatesh të lëvizshme të qëndrueshme dhe të rehatshme, të përshtatura me porosi për të siguruar që ato të jenë efektive dhe të lehta për t'u mbajtur siç është përshkruar."
+        ],
+        "dentalSubCategoryTitle": "ORTODONCI"
+      },
+      "infected-teeth-treatment": {
+        "name": "Trajtimi i Dhëmbëve të Infektuar (Kanali i Rrënjës)",
+        "description": [
+          "Shpëtoni një dhëmb të infektuar ose të përflakur rëndë nga nxjerrja me Trajtimin tonë të butë dhe efektiv të Dhëmbëve të Infektuar, më i njohur si terapi e kanalit të rrënjës. Kjo procedurë vendimtare është e nevojshme kur indi i butë brenda dhëmbit, i quajtur pulpë, infektohet për shkak të kariesit të thellë, procedurave të përsëritura dentare ose një plasaritjeje në dhëmb.",
+          "Nëse lihet pa u trajtuar, një pulpë e infektuar mund të shkaktojë dhimbje të forta, një absces dhe përfundimisht humbjen e dhëmbit. Terapia e kanalit të rrënjës përfshin heqjen me kujdes të pulpës së infektuar ose të përflakur nga brenda dhëmbit dhe kanaleve të tij të rrënjës.",
+          "Pasi të hiqet pulpa, brendësia e dhëmbit pastrohet, dezinfektohet me përpikëri dhe më pas mbushet dhe vuloset me një material të ngjashëm me gomën të quajtur gutta-percha. Procedura kryhet nën anestezi lokale dhe zakonisht nuk është më e pakëndshme se marrja e një mbushjeje të rregullt.",
+          "Pas një trajtimi të kanalit të rrënjës, dhëmbi nuk është më vital, por është ende funksional. Zakonisht rekomandohet të vendoset një kurorë në dhëmb për ta mbrojtur atë nga fraktura dhe për ta restauruar në funksion të plotë. Kjo terapi është një mjet vital për lehtësimin e dhimbjes dentare dhe ruajtjen e dhëmbëve tuaj natyralë."
+        ],
+        "dentalSubCategoryTitle": "TERAPI"
+      },
+      "tartar-cleaning": {
+        "name": "Pastrimi i Gurëzave",
+        "description": [
+          "Ruani shëndetin oral optimal dhe parandaloni sëmundjet dentare me një Pastrim profesional të Gurëzave, i njohur gjithashtu si pastrim me ultratinguj dhe lustrim. Kjo është një pjesë themelore e kujdesit parandalues dentar dhe është thelbësore për të mbajtur dhëmbët dhe mishrat tuaj të shëndetshëm për gjithë jetën.",
+          "Edhe me larje të shkëlqyer dhe përdorim të fillit dentar në shtëpi, pllaka mund të grumbullohet dhe të ngurtësohet në një substancë të quajtur calculus, ose gurëza. Gurëzat nuk mund të hiqen me një furçë dhëmbësh të rregullt dhe ofrojnë një sipërfaqe të ashpër për grumbullimin e edhe më shumë pllake, duke çuar në karies dhe sëmundje të mishrave të dhëmbëve (gingivit).",
+          "Gjatë një pastrimi profesional, higjienistët tanë të aftë dentarë përdorin mjete të specializuara, si pastruesit ultrasonikë, për të hequr butësisht dhe efektivisht gurëzat dhe pllakën nga sipër dhe poshtë vijës së mishrave të dhëmbëve. Pas pastrimit, dhëmbët lustrohen për të hequr njollat sipërfaqësore dhe për të krijuar një sipërfaqe të lëmuar që ndihmon në parandalimin e grumbullimit të ardhshëm të pllakës.",
+          "Pastrimet e rregullta të gurëzave, zakonisht të rekomanduara çdo gjashtë muaj, janë mbrojtja juaj më e mirë kundër problemeve dentare dhe janë çelësi për të ruajtur një buzëqeshje të freskët, të shëndetshme dhe të bukur."
+        ],
+        "dentalSubCategoryTitle": "TERAPI"
+      },
+      "tooth-fillings": {
+        "name": "Mbushjet e Dhëmbëve",
+        "description": [
+          "Një mbushje dhëmbi është një nga procedurat më të zakonshme dentare, e përdorur për të restauruar një dhëmb që është dëmtuar nga kariesi. Kur formohet një zgavër, një mbushje ndalon përparimin e mëtejshëm të kariesit dhe rivendos forcën, funksionin dhe formën e dhëmbit.",
+          "Në LUNAI, ne përdorim ekskluzivisht rrëshirë kompozite moderne me ngjyrë dhëmbi për mbushjet tona. Ndryshe nga mbushjet e vjetra të amalgamës së argjendit, mbushjet kompozite janë pa merkur dhe lidhen direkt me dhëmbin, gjë që ofron mbështetje më të mirë dhe kërkon më pak heqje të strukturës së shëndetshme të dhëmbit.",
+          "Procedura përfshin heqjen e pjesës së prishur të dhëmbit, pastrimin e zonës së prekur dhe më pas mbushjen e zgavrës me materialin kompozit në shtresa. Përdoret një dritë speciale për të forcuar çdo shtresë, dhe mbushja më pas modelohet dhe lustrohet për t'u përputhur me konturin e dhëmbit dhe për të siguruar një kafshim të duhur.",
+          "Për shkak se mbushjet kompozite mund të përputhen me nuancën e saktë të dhëmbëve tuaj natyralë, ato ofrojnë një rezultat të qëndrueshëm dhe estetikisht të këndshëm që është praktikisht i padukshëm në buzëqeshjen tuaj."
+        ],
+        "dentalSubCategoryTitle": "TERAPI"
+      },
+      "apical-resection": {
+        "name": "Rezeksioni Apikal",
+        "description": [
+          "Një rezeksion apikal, i njohur gjithashtu si apikoektomi ose kirurgji e majës së rrënjës, është një procedurë kirurgjikale e specializuar e kryer për të trajtuar një infeksion ose inflamacion të vazhdueshëm në majën (apeksin) e rrënjës së një dhëmbi. Kjo procedurë zakonisht rekomandohet kur një trajtim standard i kanalit të rrënjës ka dështuar të zgjidhë problemin ose nuk është i mundur.",
+          "Gjatë një apikoektomie, kirurgu ynë dentar bën një prerje të vogël në indin e mishrave të dhëmbëve për të ekspozuar kockën themelore dhe majën e rrënjës. Indi i infektuar rreth rrënjës hiqet, së bashku me vetë fundin e rrënjës. Më pas vendoset një mbushje e vogël në fund të rrënjës për të vulosur kanalin dhe për të parandaluar ri-infektimin.",
+          "Kjo procedurë mikrokirurgjikale kryhet nën anestezi lokale me saktësi të madhe. Është një mjet vital për të shpëtuar një dhëmb që përndryshe do të duhej të nxirrej, duke e lejuar atë të funksionojë për shumë vite të tjera.",
+          "Rezeksioni apikal është një trajtim i fundit që mund të zgjidhë efektivisht infeksionin kronik dhe të ruajë strukturën tuaj natyrale të dhëmbit kur opsionet e tjera nuk janë të mundshme."
+        ],
+        "dentalSubCategoryTitle": "KIRURGJI"
+      },
+      "dental-implants": {
+        "name": "Implantet Dentare",
+        "description": [
+          "Zëvendësoni përgjithmonë dhëmbët që mungojnë dhe rivendosni buzëqeshjen tuaj në lavdinë e saj të plotë me Implantet Dentare. Të konsideruara gjerësisht si standardi i artë në zëvendësimin e dhëmbëve, implantet dentare ofrojnë një zgjidhje të fortë, të qëndrueshme dhe afatgjatë që duket, ndihet dhe funksionon tamam si një dhëmb natyral.",
+          "Një implant është një shtyllë e vogël, biokompatibile prej titani që vendoset kirurgjikalisht në kockën e nofullës, ku vepron si një rrënjë e re për dhëmbin që mungon. Gjatë një periudhe prej disa muajsh, implanti shkrihet me kockën e nofullës në një proces të quajtur osteointegrim, duke krijuar një themel jashtëzakonisht të fortë.",
+          "Pasi të integrohet, një pjesë lidhëse e quajtur abutment bashkohet me implantin dhe një kurorë e bërë me porosi vendoset sipër. Rezultati përfundimtar është një zëvendësim pa probleme dhe i përhershëm që nuk rrëshqet ose klikon si protezat dhe nuk kërkon ndryshimin e dhëmbëve të shëndetshëm fqinjë si një urë.",
+          "Implantet dentare mund të përdoren për të zëvendësuar një dhëmb të vetëm, dhëmbë të shumtë, apo edhe për të mbështetur një hark të plotë protezash. Ato ndihmojnë në ruajtjen e shëndetit të kockës së nofullës dhe në ruajtjen e strukturës suaj të fytyrës, duke i bërë ato opsionin më të avancuar dhe më të dobishëm të zëvendësimit të dhëmbëve në dispozicion."
+        ],
+        "dentalSubCategoryTitle": "KIRURGJI"
+      },
+      "tooth-extraction": {
+        "name": "Heqja e Dhëmbit",
+        "description": [
+          "Ndërsa qëllimi ynë parësor është gjithmonë të shpëtojmë një dhëmb natyral, ndonjëherë një heqje dhëmbi është kursi i nevojshëm i veprimit për të mbrojtur shëndetin tuaj të përgjithshëm oral. Në LUNAI, ne kryejmë heqjet e dhëmbëve me kujdesin dhe butësinë më të madhe, duke u siguruar që rehatia juaj të jetë prioriteti ynë kryesor gjatë gjithë procedurës.",
+          "Një heqje mund të jetë e nevojshme për disa arsye: një dhëmb mund të jetë tepër i prishur ose i dëmtuar për t'u riparuar; sëmundja e avancuar e mishrave të dhëmbëve mund të ketë shkatërruar kockën mbështetëse; një dhëmb mund të jetë i impaktuar (si shumë dhëmbë pjekurie); ose dhëmbët mund të kenë nevojë të hiqen për të krijuar hapësirë për trajtimin ortodontik.",
+          "Ne ofrojmë si heqje të thjeshta për dhëmbët që janë të dukshëm në gojë ashtu edhe heqje kirurgjikale për dhëmbët që janë thyer poshtë vijës së mishrave të dhëmbëve ose të impaktuar. Procedura kryhet nën anestezi lokale për të mpirë plotësisht zonën.",
+          "Ekipi ynë ofron udhëzime të detajuara pas operacionit për të siguruar një rikuperim të qetë dhe të shpejtë. Ne gjithashtu mund të diskutojmë opsione të shkëlqyera të zëvendësimit të dhëmbëve, si implantet dentare ose urat, për të rivendosur buzëqeshjen tuaj pas shërimit."
+        ],
+        "dentalSubCategoryTitle": "KIRURGJI"
+      },
+      "milk-teeth-treatment": {
+        "name": "Trajtimi i Dhëmbëve të Qumështit",
+        "description": [
+          "Vendosja e një themeli pozitiv për një jetë të tërë shëndeti të mirë oral fillon me kujdes të shkëlqyer për dhëmbët parësorë (të qumështit). Shërbimet tona pedodontike në LUNAI përqendrohen në ofrimin e kujdesit dentar të butë, të dhembshur dhe argëtues për fëmijët në një mjedis mikpritës.",
+          "Shëndeti i dhëmbëve të qumështit është vendimtar. Ata luajnë një rol jetik në përtypjen dhe ushqimin e duhur, zhvillimin e të folurit dhe, më e rëndësishmja, ata mbajnë hapësirë për dhëmbët e përhershëm që të dalin në pozicionet e tyre të sakta. Kariesi i patrajtuar në dhëmbët e qumështit mund të çojë në dhimbje, infeksion dhe probleme me dhëmbët e rritur në zhvillim.",
+          "Trajtimet tona të dhëmbëve të qumështit përfshijnë pastrime të buta, mbushje me ngjyrë dhëmbi për karies, terapi të pulpës (pulpotomi) për të shpëtuar një dhëmb të infektuar, dhe kurora prej çeliku inox ose estetike për të mbrojtur një dhëmb të dobësuar. Ne përpiqemi ta bëjmë çdo vizitë një përvojë pozitive për të parandaluar ankthin dentar.",
+          "Ekipi ynë është i përkushtuar për të edukuar si fëmijët ashtu edhe prindërit mbi teknikat e duhura të higjienës orale për të siguruar një buzëqeshje të shëndetshme për vitet që vijnë."
+        ],
+        "dentalSubCategoryTitle": "PEDODONCI (Stomatologji për Fëmijë)"
+      },
+      "tooth-fluoridation": {
+        "name": "Fluorizimi i Dhëmbëve",
+        "description": [
+          "Forconi dhëmbët e fëmijës suaj dhe jepuni atyre një mbrojtje të fuqishme kundër kariesit me Fluorizimin profesional të Dhëmbëve. Fluori është një mineral natyral që është provuar se e bën smaltin e dhëmbëve më rezistent ndaj sulmeve acide nga bakteret e pllakës dhe sheqernat që shkaktojnë prishjen e dhëmbëve.",
+          "Një trajtim profesional me fluor siguron një përqendrim shumë më të lartë të fluorit sesa ai që gjendet në pastën e dhëmbëve ose në ujë. Trajtimi është i shpejtë, pa dhimbje dhe i sigurt. Ai përfshin aplikimin e një xheli, shkume ose verniku me fluor direkt në dhëmbë pas një pastrimi.",
+          "Kjo masë e thjeshtë parandaluese mund të zvogëlojë ndjeshëm rrezikun që fëmija juaj të zhvillojë karies, veçanërisht në sipërfaqet përtypëse të molarëve të tyre, të cilat janë më të prirura ndaj prishjes. Është një gur themeli i stomatologjisë parandaluese pediatrike.",
+          "Ne rekomandojmë trajtime me fluor si pjesë e takimeve të rregullta të kontrollit dhe pastrimit të fëmijës suaj për të ndihmuar në mbajtjen e buzëqeshjes së tyre të shëndetshme dhe të fortë."
+        ],
+        "dentalSubCategoryTitle": "PEDODONCI (Stomatologji për Fëmijë)"
+      },
+      "tooth-sealants": {
+        "name": "Silantët e Dhëmbëve",
+        "description": [
+          "Mbroni buzëqeshjen e fëmijës suaj nga kariesi me Silantët Dentarë. Ky është një trajtim parandalues i thjeshtë por shumë efektiv që ofron një mburojë mbrojtëse për dhëmbët e pasmë (molarët dhe premolarët), ku ndodhin shumica e karieseve të fëmijërisë.",
+          "Sipërfaqet përtypëse të këtyre dhëmbëve të pasmë kanë gropa dhe çarje natyrale që janë të vështira për t'u pastruar me një furçë dhëmbësh. Grimcat e ushqimit dhe bakteret mund të bllokohen në këto brazda, duke çuar në prishje. Një silant është një veshje e hollë, plastike që lyhet në këto sipërfaqe përtypëse, duke \"vulosur\" në mënyrë efektive pllakën dhe ushqimin.",
+          "Procesi i aplikimit është i shpejtë dhe pa dhimbje. Dhëmbi pastrohet dhe thahet, dhe materiali i lëngshëm i silantit lyhet. Ai ngurtësohet në sekonda, shpesh me ndihmën e një drite speciale polimerizuese. Nuk ka shpim ose siklet të përfshirë.",
+          "Silantët mund të ofrojnë mbrojtje për shumë vite dhe janë një pjesë kyçe e parandalimit të prishjes së dhëmbëve te fëmijët dhe adoleshentët, duke ndihmuar në sigurimin e një jete me dhëmbë të shëndetshëm."
+        ],
+        "dentalSubCategoryTitle": "PEDODONCI (Stomatologji për Fëmijë)"
+      }
+    }
+  },
+  "blogPosts": {
+    "1": {
+      "title": "Udhëzuesi Përfundimtar për Kujdesin e Lëkurës për një Shkëlqim të Qëndrueshëm",
+      "excerpt": "Zbuloni këshilla ekspertësh për ndërtimin e një rutine të kujdesit të lëkurës që lufton plakjen, rrit shkëlqimin dhe e mban lëkurën tuaj të shëndetshme dhe të bukur."
+    },
+    "2": {
+      "title": "Botox vs. Mbushësit: Cila është Zgjedhja e Duhur për Ju?",
+      "excerpt": "Një analizë gjithëpërfshirëse e dy prej trajtimeve tona më të njohura. Kuptoni ndryshimet dhe zbuloni se cila është më e mira për qëllimet tuaja estetike."
+    },
+    "3": {
+      "title": "Rruga drejt Rikuperimit: Çfarë të Presësh Pas Procedurës Tënde",
+      "excerpt": "Kujdesi pas trajtimit është vendimtar për rezultate optimale. Mësoni për procesin e rikuperimit për procedurat tona kyçe dhe si të siguroni një udhëtim të qetë."
+    },
+    "4": {
+      "title": "Një Buzëqeshje më e Ndritshme: Përfitimet e Zbardhimit Profesional të Dhëmbëve",
+      "excerpt": "Eksploroni se si zbardhimi profesional i dhëmbëve mund të përmirësojë në mënyrë dramatike buzëqeshjen tuaj dhe të rrisë besimin tuaj, dhe çfarë përfshin procedura."
+    },
+    "5": {
+      "title": "Konturimi Jo-Invaziv i Trupit: Një Revolucion në Estetikë",
+      "excerpt": "Mësoni për teknologjitë më të fundit jo-kirurgjikale që mund t'ju ndihmojnë të arrini formën e dëshiruar të trupit pa kohën e rikuperimit të operacionit."
+    },
+    "6": {
+      "title": "Ruajtja e Rezultateve Tuaja: Këshilla për Stilin e Jetës për Bukuri Afatgjatë",
+      "excerpt": "Udhëtimi juaj estetik nuk përfundon kur largoheni nga klinika jonë. Zbuloni këshilla për dietën, ushtrimet dhe stilin e jetës për të zgjatur dhe përmirësuar rezultatet tuaja."
+    }
   }
 }
 
