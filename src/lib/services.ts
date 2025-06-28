@@ -36,8 +36,8 @@ export const serviceData: ServiceCategory[] = [
           'Ideal candidates for rhinoplasty are individuals who are in good general health, are non-smokers, and have realistic expectations about the outcome. If you feel your nose is disproportionate to your face, or if you experience difficulty breathing, you may be a perfect candidate. The procedure can be performed once facial growth is complete, typically around the mid-to-late teenage years.',
           'The surgery is performed under general anesthesia, and recovery typically involves a week of downtime with a splint. While initial swelling subsides within a few weeks, the final, refined results of your rhinoplasty will continue to emerge over the course of a year. Our dedicated team provides comprehensive post-operative care and support to ensure your recovery is as smooth and comfortable as possible.'
         ], 
-        imageBefore: '/images/rhinoplasty-before.png', 
-        imageAfter: '/images/rhinoplasty-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman nose', 
         serviceType: 'operation' 
       },
@@ -50,8 +50,8 @@ export const serviceData: ServiceCategory[] = [
           'The surgery involves sculpting the cartilage of the ear to create a more desirable shape and pinning it back closer to the head with internal, permanent sutures. The procedure is typically performed on an outpatient basis under local anesthesia with sedation or general anesthesia, depending on the patient\'s age and the complexity of the surgery.',
           'Recovery from otoplasty is relatively quick. A protective dressing is worn for a few days, followed by a supportive headband worn at night for several weeks to protect the ears as they heal. Most patients can return to work or school within one week, feeling renewed confidence in their appearance.'
         ], 
-        imageBefore: '/images/otoplasty-before.png', 
-        imageAfter: '/images/otoplasty-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman ear', 
         serviceType: 'operation' 
       },
@@ -64,8 +64,8 @@ export const serviceData: ServiceCategory[] = [
           'Good candidates for eyelid surgery are healthy individuals who are bothered by the signs of aging around their eyes. The procedure can dramatically improve one\'s appearance and may even improve vision in cases where sagging upper eyelid skin obstructs the field of view.',
           'Recovery involves some swelling and bruising, which typically subsides within 10 to 14 days. The results are long-lasting, helping you look more rested and vibrant for years to come. Our team at LUNAI ensures you are comfortable and well-informed throughout the entire process.'
         ], 
-        imageBefore: '/images/blepharoplasty-before.png', 
-        imageAfter: '/images/blepharoplasty-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman eyes', 
         serviceType: 'operation' 
       },
@@ -78,8 +78,8 @@ export const serviceData: ServiceCategory[] = [
           'Ideal candidates for a facelift are typically in their 40s to 70s, are in good health, and wish to address moderate to severe facial aging. A facelift can be combined with other procedures like a brow lift, blepharoplasty, or fat grafting for a complete facial rejuvenation.',
           'Recovery from a facelift involves about two weeks of initial downtime. While you will see a significant improvement right away, the final results will continue to refine over several months as swelling completely resolves. A well-performed facelift at LUNAI can take years off your appearance, restoring a firmer, more youthful contour that looks entirely your own.'
         ], 
-        imageBefore: '/images/facelift-before.png', 
-        imageAfter: '/images/facelift-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman profile', 
         serviceType: 'operation' 
       },
@@ -92,8 +92,8 @@ export const serviceData: ServiceCategory[] = [
           'Chin reshaping can have a powerful effect on the overall facial balance. It can strengthen a jawline, make a prominent nose appear smaller, and provide a more youthful neck contour. Candidates should be in good health and have finished their facial growth.',
           'The surgery is often performed through a small incision inside the mouth or discreetly under the chin. Recovery typically takes about one to two weeks, with most swelling resolving in the first month. The result is a permanent improvement in your facial profile and harmony.'
         ], 
-        imageBefore: '/images/chin-reshaping-before.png', 
-        imageAfter: '/images/chin-reshaping-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman chin', 
         serviceType: 'operation' 
       },
@@ -106,8 +106,8 @@ export const serviceData: ServiceCategory[] = [
           'A brow lift is an excellent option for individuals with low or sagging brows, deep forehead furrows, or frown lines between the eyebrows. It is often performed in conjunction with a facelift or eyelid surgery for a more complete rejuvenation of the upper face.',
           'Downtime is typically about one week, with bruising and swelling being the most common side effects. A brow lift provides long-lasting results, helping you look naturally refreshed and more approachable for many years.'
         ], 
-        imageBefore: '/images/brow-lift-before.png', 
-        imageAfter: '/images/brow-lift-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman forehead', 
         serviceType: 'operation' 
       },
@@ -120,8 +120,8 @@ export const serviceData: ServiceCategory[] = [
           'Hair transplantation is a viable solution for male and female pattern baldness, as well as for restoring hair to areas with scarring. Candidates should have a sufficient supply of healthy donor hair to achieve their desired density.',
           'The transplanted hair will shed in the first few weeks, which is a normal part of the process. New, permanent hair will begin to grow in 3-4 months, with the final, full results visible after about 12-18 months. Reclaim a full head of hair and your confidence with a LUNAI hair transplant.'
         ], 
-        imageBefore: '/images/hair-transplant-before.png', 
-        imageAfter: '/images/hair-transplant-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'man hair', 
         serviceType: 'operation' 
       },
@@ -134,8 +134,8 @@ export const serviceData: ServiceCategory[] = [
           'A beard transplant is ideal for men who have genetic patchiness, scarring that prevents hair growth, or who simply wish to enhance the density and shape of their existing beard. It\'s a highly personalized procedure tailored to your facial features and desired outcome.',
           'After the transplant, the new hairs will fall out before beginning to regrow permanently after 3-4 months. The final result is a natural, dense beard that you can shave, trim, and style just like any other facial hair.'
         ], 
-        imageBefore: '/images/beard-transplant-before.png', 
-        imageAfter: '/images/beard-transplant-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'man beard', 
         serviceType: 'operation' 
       },
@@ -148,8 +148,8 @@ export const serviceData: ServiceCategory[] = [
           'An eyebrow transplant is a delicate procedure that requires a high degree of skill and artistry. It is an excellent solution for anyone wanting to achieve permanently full and defined brows without the daily hassle of makeup.',
           'Similar to other hair transplants, the transplanted hairs will shed before regrowing over the next several months. The result is a living, growing brow that you can groom and shape as you wish, perfectly framing your eyes and enhancing your facial features.'
         ], 
-        imageBefore: '/images/eyebrow-transplant-before.png', 
-        imageAfter: '/images/eyebrow-transplant-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman eyebrow', 
         serviceType: 'operation' 
       },
@@ -163,8 +163,8 @@ export const serviceData: ServiceCategory[] = [
           'Ideal candidates are those looking for minor to moderate adjustments to their nose\'s appearance. It\'s a perfect way to "try out" a new nose shape before committing to surgery or for those who want to avoid a surgical procedure altogether. It is not suitable for reducing the size of the nose.',
           'The results are immediate and can last from 9 to 18 months, depending on the type of filler used and the individual\'s metabolism. There is virtually no recovery time, allowing you to return to your daily activities right away with a newly enhanced profile.'
         ], 
-        imageBefore: '/images/non-surgical-rhinoplasty-before.png', 
-        imageAfter: '/images/non-surgical-rhinoplasty-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman nose', 
         serviceType: 'treatment' 
       },
@@ -177,8 +177,8 @@ export const serviceData: ServiceCategory[] = [
           'For dark circles caused by pigmentation, we may recommend a course of gentle chemical peels or advanced skin therapies to lighten the skin and improve its quality. Microneedling can also be effective in thickening the skin and boosting collagen to make underlying blood vessels less visible.',
           'During your consultation, we will perform a thorough assessment to determine the primary cause of your dark circles and create a personalized treatment plan. Our goal is to provide a safe, effective solution that restores brightness and vitality to your under-eye area.'
         ], 
-        imageBefore: '/images/dark-circles-treatment-before.png', 
-        imageAfter: '/images/dark-circles-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman eyes', 
         serviceType: 'treatment' 
       },
@@ -191,8 +191,8 @@ export const serviceData: ServiceCategory[] = [
           'As the skin heals from this controlled treatment, the body’s natural healing response is activated, leading to the production of new collagen and elastin over the following weeks and months. This results in firmer, tighter, and smoother skin around the eyes.',
           'The procedure is performed with topical anesthetic cream for comfort. The carbon crusts will fall off naturally within 5-7 days, revealing new, rejuvenated skin underneath. The results are long-lasting and can significantly refresh your appearance, making your eyes look more open and youthful.'
         ], 
-        imageBefore: '/images/eyelids-plasma-arc-before.png', 
-        imageAfter: '/images/eyelids-plasma-arc-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'eyelid treatment', 
         serviceType: 'treatment' 
       },
@@ -205,8 +205,8 @@ export const serviceData: ServiceCategory[] = [
           'The treatment is highly customized to your facial anatomy and aesthetic goals. For men, the goal is often to create a wider, more angular jaw. For women, the focus is typically on creating a graceful but defined line that enhances femininity. The procedure is quick, with minimal discomfort and no downtime.',
           'Results are visible immediately and typically last for 12 to 24 months. Jawline contouring can dramatically improve your profile, boost your confidence, and restore a more youthful and powerful look in a single session.'
         ], 
-        imageBefore: '/images/jawline-contouring-before.png', 
-        imageAfter: '/images/jawline-contouring-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman jawline', 
         serviceType: 'treatment' 
       },
@@ -219,8 +219,8 @@ export const serviceData: ServiceCategory[] = [
           'At LUNAI, we prioritize a natural look and feel. We work with you to understand your desired outcome and select the appropriate filler and technique to achieve it. The procedure is performed using a topical anesthetic for your comfort and typically takes about 30 minutes.',
           'Results are immediate, though there may be some initial swelling. The final, beautifully enhanced lips can be enjoyed for 6 to 12 months. Whether you want a subtle enhancement or a more glamorous look, our lip reshaping treatment can help you achieve the perfect smile.'
         ], 
-        imageBefore: '/images/lip-reshaping-before.png', 
-        imageAfter: '/images/lip-reshaping-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman lips', 
         serviceType: 'treatment' 
       },
@@ -233,8 +233,8 @@ export const serviceData: ServiceCategory[] = [
           'Microdermabrasion is suitable for almost all skin types and colors. It enhances the absorption and efficacy of your skincare products and can be performed as a standalone treatment or as part of a comprehensive skin health plan. For optimal results, a series of treatments is often recommended.',
           'After a session, your skin will feel softer and look more radiant. It is an excellent way to maintain healthy skin and achieve a consistent, vibrant glow.'
         ], 
-        imageBefore: '/images/microdermabrasion-before.png', 
-        imageAfter: '/images/microdermabrasion-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'facial treatment', 
         serviceType: 'treatment' 
       },
@@ -247,8 +247,8 @@ export const serviceData: ServiceCategory[] = [
           'At LUNAI, we can enhance the results of microneedling by combining it with the application of potent serums or even your own Platelet-Rich Plasma (PRP). The micro-channels created by the needles allow for deeper penetration and greater efficacy of these topical treatments.',
           'A topical numbing cream is applied before the procedure to ensure comfort. The skin will appear red, similar to a sunburn, for 24-48 hours post-treatment. A series of 3-6 treatments is typically recommended for optimal, long-lasting results, revealing smoother, firmer, and more youthful-looking skin.'
         ], 
-        imageBefore: '/images/microneedling-before.png', 
-        imageAfter: '/images/microneedling-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'skin texture', 
         serviceType: 'treatment' 
       },
@@ -261,8 +261,8 @@ export const serviceData: ServiceCategory[] = [
           'The Multivitamin Treatment helps to boost skin radiance, improve hydration levels, stimulate collagen production for increased firmness, and restore a healthy, vibrant complexion. It is an excellent therapy for tired, stressed, or aging skin.',
           'Suitable for all skin types, this relaxing and restorative facial will leave your skin feeling soft, supple, and glowing with health. It is a perfect monthly treatment to maintain skin vitality and protect it from the rigors of daily life.'
         ], 
-        imageBefore: '/images/multivitamin-treatment-before.png', 
-        imageAfter: '/images/multivitamin-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'glowing skin', 
         serviceType: 'treatment' 
       },
@@ -275,8 +275,8 @@ export const serviceData: ServiceCategory[] = [
           'The high concentration of growth factors in PRP works to nourish hair follicles, increase blood supply to the scalp, stimulate the growth phase of the hair cycle (anagen phase), and increase the thickness and density of existing hair shafts.',
           'PRP for Hair is a safe and minimally invasive procedure with no downtime. For optimal results, we recommend an initial series of 3-4 treatments spaced one month apart, followed by maintenance treatments every 6-12 months. It is an excellent standalone therapy or can be used to enhance the results of hair transplant surgery.'
         ], 
-        imageBefore: '/images/prp-for-hair-before.png', 
-        imageAfter: '/images/prp-for-hair-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'hair treatment', 
         serviceType: 'treatment' 
       },
@@ -289,8 +289,8 @@ export const serviceData: ServiceCategory[] = [
           'Once in the skin, the growth factors in the PRP trigger a powerful regenerative cascade, stimulating new collagen and elastin production, improving blood flow, and creating new, healthy skin cells. This results in improved skin tone and texture, reduced fine lines and wrinkles, smaller pore size, and a decrease in the appearance of acne scars.',
           'PRP for the Face is a safe, natural, and highly effective way to achieve comprehensive facial rejuvenation with minimal downtime. A series of treatments is typically recommended for the most significant and lasting results.'
         ], 
-        imageBefore: '/images/prp-for-face-before.png', 
-        imageAfter: '/images/prp-for-face-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'facial plasma', 
         serviceType: 'treatment' 
       },
@@ -303,8 +303,8 @@ export const serviceData: ServiceCategory[] = [
           'This gradual process of collagen remodeling leads to progressively firmer, smoother, and more youthful-looking skin. The treatment is comfortable, often described as feeling like a warm stone massage. It can be used to tighten skin on the jowls, neck, brow area, abdomen, and arms.',
           'For optimal results, a series of weekly or bi-weekly treatments is recommended. Radiofrequency is a safe and effective way to achieve a subtle lift and noticeable firming, helping you to maintain a youthful appearance.'
         ], 
-        imageBefore: '/images/radiofrequency-treatment-before.png', 
-        imageAfter: '/images/radiofrequency-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'skin tightening', 
         serviceType: 'treatment' 
       },
@@ -317,8 +317,8 @@ export const serviceData: ServiceCategory[] = [
           'Our skilled injectors have a deep understanding of facial anatomy and aging, allowing them to restore a smoother, more youthful contour to your face while maintaining a completely natural appearance. The goal is not to "freeze" your face, but to soften shadows and restore the gentle curves of a youthful face.',
           'The procedure is quick, with minimal discomfort and no downtime. The results are immediate and can last for over a year, providing a significant yet subtle refreshment to your overall look.'
         ], 
-        imageBefore: '/images/sulcus-filling-before.png', 
-        imageAfter: '/images/sulcus-filling-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'wrinkle treatment', 
         serviceType: 'treatment' 
       },
@@ -331,8 +331,8 @@ export const serviceData: ServiceCategory[] = [
           'Our White Peeling treatment is a perfect choice for restoring skin clarity and tackling stubborn pigmentation that doesn\'t respond to topical creams alone. A series of peels is often recommended for the most dramatic and lasting improvement in skin tone.',
           'During your consultation, our skincare experts will assess your skin to ensure this peel is the right choice for you and will create a customized treatment plan, including post-peel care to protect your results.'
         ], 
-        imageBefore: '/images/white-peeling-before.png', 
-        imageAfter: '/images/white-peeling-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'skin peel', 
         serviceType: 'treatment' 
       },
@@ -345,8 +345,8 @@ export const serviceData: ServiceCategory[] = [
           'The art of using fillers lies in a precise technique that ensures natural-looking results. Our goal is to refresh your appearance, not change it. We focus on subtle enhancements that leave you looking well-rested and rejuvenated.',
           'The procedure is quick, with results visible immediately. Depending on the filler used and the area treated, results can last from 6 to 18 months. It is one of the most popular and effective non-surgical treatments for turning back the clock.'
         ], 
-        imageBefore: '/images/wrinkle-fillers-before.png', 
-        imageAfter: '/images/wrinkle-fillers-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman face', 
         serviceType: 'treatment' 
       },
@@ -359,8 +359,8 @@ export const serviceData: ServiceCategory[] = [
           'This procedure is a superior alternative to traditional surgical excision, which can leave scars, or chemical peels, which can lack precision. The treatment is performed with a topical anesthetic and has minimal downtime.',
           'Following the procedure, small carbon crusts form over the treated area, which fall off within a week to reveal new, clear skin. This advanced method results in excellent cosmetic outcomes with a very low risk of recurrence.'
         ], 
-        imageBefore: '/images/xanthelasma-treatment-before.png', 
-        imageAfter: '/images/xanthelasma-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'eyelid spots', 
         serviceType: 'treatment' 
       },
@@ -381,8 +381,8 @@ export const serviceData: ServiceCategory[] = [
           'The procedure involves placing the implant either behind the breast tissue or beneath the chest muscle through a discreet incision. Our focus is on creating a result that is both beautiful and proportional, ensuring your new silhouette looks natural and feels right for you.',
           'Recovery typically involves a few days of rest, with a return to most non-strenuous activities within a week or two. The results are immediate and long-lasting, providing a significant boost to self-esteem.'
         ], 
-        imageBefore: '/images/breast-augmentation-before.png', 
-        imageAfter: '/images/breast-augmentation-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman torso', 
         serviceType: 'operation' 
       },
@@ -395,8 +395,8 @@ export const serviceData: ServiceCategory[] = [
           'Ideal candidates are women who are happy with their breast size but wish to correct sagging. The procedure is highly personalized, with incision patterns chosen to best address the degree of sagging and achieve the desired aesthetic outcome.',
           'Recovery involves about one to two weeks of downtime. The results of a breast lift are long-lasting, providing a more youthful and confident silhouette for years to come.'
         ], 
-        imageBefore: '/images/breast-lift-before.png', 
-        imageAfter: '/images/breast-lift-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman chest', 
         serviceType: 'operation' 
       },
@@ -409,8 +409,8 @@ export const serviceData: ServiceCategory[] = [
           'Our compassionate surgeons use advanced techniques to create smaller, lighter, and shapelier breasts while preserving sensation and ensuring the most discreet scarring possible. The areola is also reduced in size and repositioned to a more youthful height.',
           'Breast reduction has one of the highest patient satisfaction rates of any plastic surgery procedure. Recovery typically involves a couple of weeks of downtime, but the relief from physical symptoms is often felt immediately.'
         ], 
-        imageBefore: '/images/breast-reduction-before.png', 
-        imageAfter: '/images/breast-reduction-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman back', 
         serviceType: 'operation' 
       },
@@ -423,8 +423,8 @@ export const serviceData: ServiceCategory[] = [
           'The two main approaches are implant-based reconstruction and autologous (or "flap") reconstruction, which uses your own body tissue from the abdomen, back, or thighs to create a new breast mound. The best option depends on your body type, cancer treatment plan, and personal preference. We will work closely with you and your oncology team to create a safe and effective surgical plan.',
           'Breast reconstruction is a highly personal journey, and our goal is to support you every step of the way. We aim to create a result that not only looks natural but also helps restore your sense of self and femininity after breast cancer.'
         ], 
-        imageBefore: '/images/breast-reconstruction-before.png', 
-        imageAfter: '/images/breast-reconstruction-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman surgery', 
         serviceType: 'operation' 
       },
@@ -437,8 +437,8 @@ export const serviceData: ServiceCategory[] = [
           'Liposuction may be used in conjunction with an arm lift to achieve the best possible contour. Ideal candidates are individuals who are at a stable weight and are bothered by the appearance of loose skin on their upper arms.',
           'Recovery involves wearing compression garments and limiting strenuous activity for several weeks. While there will be a scar, our surgeons take great care to place it as discreetly as possible. The results are a dramatically improved and more youthful arm shape.'
         ], 
-        imageBefore: '/images/arm-lift-before.png', 
-        imageAfter: '/images/arm-lift-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman arm', 
         serviceType: 'operation' 
       },
@@ -451,8 +451,8 @@ export const serviceData: ServiceCategory[] = [
           'We also offer a mini tummy tuck for patients whose concerns are primarily located below the navel. This less extensive option involves a shorter incision and a quicker recovery.',
           'A tummy tuck provides a dramatic and long-lasting improvement to the midsection, helping patients regain their pre-pregnancy figure or celebrate the final step in their weight loss journey. Recovery typically requires two to three weeks of downtime.'
         ], 
-        imageBefore: '/images/tummy-tuck-before.png', 
-        imageAfter: '/images/tummy-tuck-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman abdomen', 
         serviceType: 'operation' 
       },
@@ -465,8 +465,8 @@ export const serviceData: ServiceCategory[] = [
           'At LUNAI, our surgeons use state-of-the-art liposuction technologies to gently remove fat while minimizing trauma to surrounding tissues. This allows for a smoother recovery and more refined, high-definition results.',
           'Liposculpture is for patients seeking to achieve the final, chiseled look that they have worked for through diet and fitness but have been unable to attain. It is the art of body contouring, perfected.'
         ], 
-        imageBefore: '/images/liposculpture-before.png', 
-        imageAfter: '/images/liposculpture-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman body', 
         serviceType: 'operation' 
       },
@@ -479,8 +479,8 @@ export const serviceData: ServiceCategory[] = [
           'A BBL is an excellent option for those who desire a fuller posterior but want to avoid implants. Because it uses your own fat, the results look and feel completely natural. Our surgeons are experts in the artistic placement of fat to create beautiful, proportional, and long-lasting results.',
           'Recovery requires avoiding direct pressure on the buttocks for several weeks to ensure the optimal survival of the transferred fat cells. The final result is a permanently enhanced and more voluptuous lower body contour.'
         ], 
-        imageBefore: '/images/brazilian-butt-lift-before.png', 
-        imageAfter: '/images/brazilian-butt-lift-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman buttocks', 
         serviceType: 'operation' 
       },
@@ -493,8 +493,8 @@ export const serviceData: ServiceCategory[] = [
           'Our compassionate surgeons perform labiaplasty with the utmost discretion and sensitivity. Using precise techniques, they carefully trim the excess tissue and reshape the labia to achieve the patient\'s desired outcome while preserving sensation.',
           'The procedure is typically performed on an outpatient basis and has a relatively straightforward recovery, with most patients returning to normal activities within a couple of weeks. It is a safe and effective surgery that can greatly improve a woman\'s quality of life.'
         ], 
-        imageBefore: '/images/labiaplasty-before.png', 
-        imageAfter: '/images/labiaplasty-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'intimate surgery', 
         serviceType: 'operation' 
       },
@@ -507,8 +507,8 @@ export const serviceData: ServiceCategory[] = [
           'Ideal candidates are at a stable weight and are committed to maintaining a healthy lifestyle, as future weight fluctuations can compromise the results. The procedure helps clothes fit better and can dramatically improve self-confidence.',
           'Recovery involves wearing compression garments and avoiding strenuous activity for about 4-6 weeks. While a scar will be present, our surgeons place it as discreetly as possible. The final result is beautifully contoured legs that you will be proud to show off.'
         ], 
-        imageBefore: '/images/thigh-lift-before.png', 
-        imageAfter: '/images/thigh-lift-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman legs', 
         serviceType: 'operation' 
       },
@@ -521,8 +521,8 @@ export const serviceData: ServiceCategory[] = [
           'In many cases, a combination of liposuction and excision is used to achieve the best possible result. Our surgeons will perform a thorough evaluation to create a personalized surgical plan for you.',
           'Recovery is relatively quick, with most men returning to work within a week. The results are permanent and can have a profound impact on self-esteem, allowing men to feel comfortable and confident going shirtless or wearing fitted clothing.'
         ], 
-        imageBefore: '/images/gynecomastia-before.png', 
-        imageAfter: '/images/gynecomastia-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'man chest', 
         serviceType: 'operation' 
       },
@@ -536,8 +536,8 @@ export const serviceData: ServiceCategory[] = [
           'At LUNAI, we use carboxytherapy to effectively treat a range of concerns. It is highly effective in diminishing the appearance of cellulite, fading stretch marks by rebuilding the collagen network, and improving skin laxity and texture on the body. It can also be used to treat dark under-eye circles by improving circulation.',
           'The treatment is quick, with minimal discomfort and no downtime. A series of sessions is typically required to achieve optimal, long-lasting results for smoother, healthier-looking skin.'
         ], 
-        imageBefore: '/images/carboxytherapy-before.png', 
-        imageAfter: '/images/carboxytherapy-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'skin therapy', 
         serviceType: 'treatment' 
       },
@@ -550,8 +550,8 @@ export const serviceData: ServiceCategory[] = [
           'Our treatment plan aims to break down stubborn fat deposits, release the fibrous septa that cause dimpling, improve lymphatic drainage to reduce fluid retention, and stimulate collagen production to improve skin elasticity and thickness.',
           'While there is no permanent cure for cellulite, our customized programs can provide a significant and lasting improvement in skin texture, helping you feel more confident in your own skin.'
         ], 
-        imageBefore: '/images/cellulite-treatment-before.png', 
-        imageAfter: '/images/cellulite-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'woman thigh', 
         serviceType: 'treatment' 
       },
@@ -564,8 +564,8 @@ export const serviceData: ServiceCategory[] = [
           'Because the laser targets hair in its active growth phase, a series of treatments (typically 6-8 sessions) is required to capture all hairs in their growth cycle and achieve a permanent reduction in hair.',
           'Our experienced technicians ensure the treatment is as comfortable and effective as possible. Common treatment areas include the legs, underarms, bikini line, back, chest, and face. Start your journey to effortlessly smooth skin today.'
         ], 
-        imageBefore: '/images/laser-hair-removal-before.png', 
-        imageAfter: '/images/laser-hair-removal-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'smooth skin', 
         serviceType: 'treatment' 
       },
@@ -578,8 +578,8 @@ export const serviceData: ServiceCategory[] = [
           'Injectable lipolysis is highly effective for treating areas like a double chin (submental fat), bra bulge, small pockets on the abdomen, and inner thighs. It is not a weight loss solution, but rather a tool for refining and contouring specific areas.',
           'A series of 2-4 treatments is typically needed for optimal results. There may be some swelling and tenderness in the treated area for a few days, but there is no significant downtime. The result is a permanent reduction of fat in the treated area and an improved contour.'
         ], 
-        imageBefore: '/images/lipolysis-before.png', 
-        imageAfter: '/images/lipolysis-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'body contouring', 
         serviceType: 'treatment' 
       },
@@ -592,8 +592,8 @@ export const serviceData: ServiceCategory[] = [
           'Additionally, Plasma Arc is a safe and effective method for removing benign skin lesions such as skin tags, moles, and warts. The device sublimates the targeted tissue without causing thermal damage to the surrounding area, leading to minimal scarring and rapid healing.',
           'The treatment promotes natural healing and skin regeneration, resulting in a clearer, smoother, and tighter skin surface. It is a powerful tool for addressing multiple skin concerns on the body without the need for invasive surgery.'
         ], 
-        imageBefore: '/images/plasma-arc-skin-before.png', 
-        imageAfter: '/images/plasma-arc-skin-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'skin rejuvenation', 
         serviceType: 'treatment' 
       },
@@ -606,8 +606,8 @@ export const serviceData: ServiceCategory[] = [
           'A single session may involve multiple injections, depending on the number of veins being treated. The procedure is quick, with minimal discomfort. There is no downtime, and patients are encouraged to walk immediately after to promote circulation.',
           'Multiple sessions may be needed to achieve the desired level of clearance. With sclerotherapy at LUNAI, you can effectively restore an even-toned appearance to your legs and feel comfortable wearing shorts and skirts again.'
         ], 
-        imageBefore: '/images/sclerotherapy-before.png', 
-        imageAfter: '/images/sclerotherapy-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'leg veins', 
         serviceType: 'treatment' 
       },
@@ -628,8 +628,8 @@ export const serviceData: ServiceCategory[] = [
           'The process is both an art and a science. Our dentists carefully select a shade of resin that matches your natural teeth and then expertly sculpt and polish it to create a seamless, beautiful result. The entire procedure is usually completed in just one appointment.',
           'While not as durable or stain-resistant as porcelain veneers, composite veneers are a cost-effective and less invasive way to achieve a stunning smile makeover and a significant boost in confidence.'
         ], 
-        imageBefore: '/images/composite-veneers-before.png', 
-        imageAfter: '/images/composite-veneers-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'smile teeth', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'AESTHETICS' 
@@ -643,8 +643,8 @@ export const serviceData: ServiceCategory[] = [
           'The process involves two visits. In the first, we prepare the teeth, take precise impressions, and fit you with temporary veneers. The impressions are sent to a master dental laboratory where your bespoke veneers are fabricated. In the second visit, we permanently bond the final veneers to your teeth.',
           'With their exceptional beauty and resistance to staining, E-Max veneers provide a long-lasting, celebrity-caliber smile that will look spectacular for many years to come.'
         ], 
-        imageBefore: '/images/emax-veneers-before.png', 
-        imageAfter: '/images/emax-veneers-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'perfect smile', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'AESTHETICS' 
@@ -658,8 +658,8 @@ export const serviceData: ServiceCategory[] = [
           'We also provide custom take-home whitening kits. We take impressions of your teeth to create custom-fitted trays that ensure the professional-strength whitening gel is applied evenly and safely. You can then whiten your teeth in the comfort of your own home over a period of one to two weeks.',
           'Both of our whitening solutions are safe for your enamel and provide results far superior to over-the-counter products. Let us help you achieve the dazzling, white smile you\'ve always wanted.'
         ], 
-        imageBefore: '/images/teeth-whitening-before.png', 
-        imageAfter: '/images/teeth-whitening-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'white teeth', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'AESTHETICS' 
@@ -674,8 +674,8 @@ export const serviceData: ServiceCategory[] = [
           'The process typically involves two appointments. During the first visit, the tooth is prepared, an impression is taken for the lab, and a temporary crown is placed. At the second visit, the permanent, custom-fabricated crown is checked for a perfect fit and then cemented into place.',
           'A well-made crown can protect a compromised tooth from further damage and provide a beautiful, functional restoration that can last for many years with proper care.'
         ], 
-        imageBefore: '/images/crowns-before.png', 
-        imageAfter: '/images/crowns-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental crown', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'PROSTHETICS' 
@@ -689,8 +689,8 @@ export const serviceData: ServiceCategory[] = [
           'By filling the space of a missing tooth, a dental bridge prevents the remaining teeth from drifting out of position, which can lead to bite problems and jaw issues. It also helps to maintain the natural shape of your face and distribute the forces in your bite evenly.',
           'Our bridges are custom-made from high-quality materials to match the color and shape of your natural teeth, ensuring a result that is both functional and aesthetically pleasing.'
         ], 
-        imageBefore: '/images/dental-bridges-before.png', 
-        imageAfter: '/images/dental-bridges-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental bridge', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'PROSTHETICS' 
@@ -704,8 +704,8 @@ export const serviceData: ServiceCategory[] = [
           'For enhanced stability, we also offer implant-supported dentures. These dentures snap onto dental implants that have been surgically placed in the jawbone, providing a much more secure and stable fit that eliminates slipping and improves chewing power.',
           'Our team takes meticulous care in the design and fabrication of your custom dentures, ensuring they restore your facial structure, support your lips and cheeks, and allow you to eat, speak, and smile with renewed confidence.'
         ], 
-        imageBefore: '/images/dentures-before.png', 
-        imageAfter: '/images/dentures-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'denture smile', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'PROSTHETICS' 
@@ -720,8 +720,8 @@ export const serviceData: ServiceCategory[] = [
           'At LUNAI, our modern braces are more comfortable and aesthetically pleasing than ever before. We offer traditional metal braces as well as clear ceramic braces, which are less noticeable and a popular choice for adults and appearance-conscious teens.',
           'Fixed braces remain one of the most reliable and precise ways to achieve a beautiful, healthy, and stable smile for patients of all ages.'
         ], 
-        imageBefore: '/images/fixed-braces-before.png', 
-        imageAfter: '/images/fixed-braces-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'teeth braces', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'ORTHODONTICS' 
@@ -735,8 +735,8 @@ export const serviceData: ServiceCategory[] = [
           'A key advantage of Invisalign is that the aligners are removable. This means you can take them out to eat, drink, brush, and floss, allowing for better oral hygiene and no dietary restrictions during treatment.',
           'Invisalign is a popular and highly effective choice for adults and teens seeking to correct mild to moderate crowding, spacing, and bite issues without the look of traditional braces.'
         ], 
-        imageBefore: '/images/invisalign-before.png', 
-        imageAfter: '/images/invisalign-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'clear aligner', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'ORTHODONTICS' 
@@ -750,8 +750,8 @@ export const serviceData: ServiceCategory[] = [
           'The most common type of removable appliance is the retainer. After your braces or Invisalign treatment is complete, a retainer is essential for maintaining your newly straightened smile. It holds the teeth in their new positions while the surrounding bone and ligaments stabilize, preventing them from relapsing to their old positions.',
           'At LUNAI, we provide various types of durable and comfortable removable appliances, custom-fitted to ensure they are effective and easy to wear as prescribed.'
         ], 
-        imageBefore: '/images/removable-appliances-before.png', 
-        imageAfter: '/images/removable-appliances-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental retainer', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'ORTHODONTICS' 
@@ -766,8 +766,8 @@ export const serviceData: ServiceCategory[] = [
           'Once the pulp is removed, the inside of the tooth is meticulously cleaned, disinfected, and then filled and sealed with a rubber-like material called gutta-percha. The procedure is performed under local anesthesia and is typically no more uncomfortable than getting a regular filling.',
           'After a root canal, the tooth is no longer vital, but it is still functional. It is usually recommended to place a crown on the tooth to protect it from fracture and restore it to full function. This therapy is a vital tool for relieving dental pain and preserving your natural teeth.'
         ], 
-        imageBefore: '/images/infected-teeth-treatment-before.png', 
-        imageAfter: '/images/infected-teeth-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental xray', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'THERAPY' 
@@ -781,8 +781,8 @@ export const serviceData: ServiceCategory[] = [
           'During a professional cleaning, our skilled dental hygienists use specialized tools, such as ultrasonic scalers, to gently and effectively remove tartar and plaque from above and below the gumline. After scaling, the teeth are polished to remove surface stains and create a smooth surface that helps prevent future plaque buildup.',
           'Regular tartar cleanings, typically recommended every six months, are your best defense against dental problems and are key to maintaining a fresh, healthy, and beautiful smile.'
         ], 
-        imageBefore: '/images/tartar-cleaning-before.png', 
-        imageAfter: '/images/tartar-cleaning-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental cleaning', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'THERAPY' 
@@ -796,8 +796,8 @@ export const serviceData: ServiceCategory[] = [
           'The procedure involves removing the decayed portion of the tooth, cleaning the affected area, and then filling the cavity with the composite material in layers. A special light is used to harden each layer, and the filling is then shaped and polished to match the contour of the tooth and ensure a proper bite.',
           'Because composite fillings can be matched to the exact shade of your natural teeth, they provide a durable and aesthetically pleasing result that is virtually invisible in your smile.'
         ], 
-        imageBefore: '/images/tooth-fillings-before.png', 
-        imageAfter: '/images/tooth-fillings-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'tooth filling', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'THERAPY' 
@@ -812,8 +812,8 @@ export const serviceData: ServiceCategory[] = [
           'This microsurgical procedure is performed under local anesthesia with great precision. It is a vital tool for saving a tooth that would otherwise need to be extracted, allowing it to function for many more years.',
           'Apical resection is a last-resort treatment that can effectively resolve chronic infection and preserve your natural tooth structure when other options are not viable.'
         ], 
-        imageBefore: '/images/apical-resection-before.png', 
-        imageAfter: '/images/apical-resection-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental surgery', 
         serviceType: 'operation', 
         dentalSubCategoryTitle: 'SURGERY' 
@@ -827,8 +827,8 @@ export const serviceData: ServiceCategory[] = [
           'Once integrated, a connector piece called an abutment is attached to the implant, and a custom-made crown is placed on top. The final result is a seamless, permanent replacement that doesn\'t slip or click like dentures and doesn\'t require altering adjacent healthy teeth like a bridge.',
           'Dental implants can be used to replace a single tooth, multiple teeth, or even to support a full arch of dentures. They help to preserve jawbone health and maintain your facial structure, making them the most advanced and beneficial tooth replacement option available.'
         ], 
-        imageBefore: '/images/dental-implants-before.png', 
-        imageAfter: '/images/dental-implants-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'dental implant', 
         serviceType: 'operation', 
         dentalSubCategoryTitle: 'SURGERY' 
@@ -842,8 +842,8 @@ export const serviceData: ServiceCategory[] = [
           'We offer both simple extractions for teeth that are visible in the mouth and surgical extractions for teeth that are broken below the gum line or impacted. The procedure is performed under local anesthesia to completely numb the area.',
           'Our team provides detailed post-operative instructions to ensure a smooth and speedy recovery. We can also discuss excellent tooth replacement options, such as dental implants or bridges, to restore your smile after healing.'
         ], 
-        imageBefore: '/images/tooth-extraction-before.png', 
-        imageAfter: '/images/tooth-extraction-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'tooth extraction', 
         serviceType: 'operation', 
         dentalSubCategoryTitle: 'SURGERY' 
@@ -858,8 +858,8 @@ export const serviceData: ServiceCategory[] = [
           'Our milk teeth treatments include gentle cleanings, tooth-colored fillings for cavities, pulp therapy (pulpotomy) to save an infected tooth, and stainless steel or aesthetic crowns to protect a weakened tooth. We strive to make every visit a positive experience to prevent dental anxiety.',
           'Our team is dedicated to educating both children and parents on proper oral hygiene techniques to ensure a healthy smile for years to come.'
         ], 
-        imageBefore: '/images/milk-teeth-treatment-before.png', 
-        imageAfter: '/images/milk-teeth-treatment-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'child smile', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' 
@@ -873,8 +873,8 @@ export const serviceData: ServiceCategory[] = [
           'This simple preventive measure can significantly reduce the risk of your child developing cavities, especially on the chewing surfaces of their molars, which are most prone to decay. It is a cornerstone of pediatric preventive dentistry.',
           'We recommend fluoride treatments as part of your child\'s regular check-up and cleaning appointments to help keep their smile healthy and strong.'
         ], 
-        imageBefore: '/images/tooth-fluoridation-before.png', 
-        imageAfter: '/images/tooth-fluoridation-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'child dentist', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' 
@@ -888,8 +888,8 @@ export const serviceData: ServiceCategory[] = [
           'The application process is quick and painless. The tooth is cleaned and dried, and the liquid sealant material is painted on. It hardens in seconds, often with the help of a special curing light. There is no drilling or discomfort involved.',
           'Sealants can provide protection for many years and are a key part of preventing tooth decay in children and teenagers, helping to ensure a lifetime of healthy teeth.'
         ], 
-        imageBefore: '/images/tooth-sealants-before.png', 
-        imageAfter: '/images/tooth-sealants-after.png', 
+        imageBefore: 'https://placehold.co/600x400.png', 
+        imageAfter: 'https://placehold.co/600x400.png', 
         dataAiHint: 'healthy teeth', 
         serviceType: 'treatment', 
         dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' 
@@ -901,5 +901,7 @@ export const serviceData: ServiceCategory[] = [
 export const allServices: ServiceItem[] = serviceData.reduce((acc, category) => {
   return acc.concat(category.services);
 }, [] as ServiceItem[]);
+
+    
 
     
