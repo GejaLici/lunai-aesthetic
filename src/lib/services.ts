@@ -654,7 +654,7 @@ export const serviceData: ServiceCategory[] = [
         name: 'Teeth Whitening', 
         description: [
           'Dramatically brighten your smile and boost your confidence with our professional Teeth Whitening services. Over time, teeth can become stained and yellowed from coffee, tea, red wine, smoking, and the natural aging process. Professional whitening is the safest and most effective way to lift these stains and reveal a brilliantly white smile.',
-          'At LUNAI, we offer two convenient and powerful options. Our in-office whitening treatment provides the most dramatic results in a single visit, often lightening teeth by several shades in about an hour. It is the perfect choice for those who want immediate results for a special event.',
+          'At LUNAI, we offer two convenient and powerful options. Our in-office whitening treatment provides the most dramatic results in a single visit, often lightening teeth by several shades in about an hour. It is the perfect choice for those who want to immediate results for a special event.',
           'We also provide custom take-home whitening kits. We take impressions of your teeth to create custom-fitted trays that ensure the professional-strength whitening gel is applied evenly and safely. You can then whiten your teeth in the comfort of your own home over a period of one to two weeks.',
           'Both of our whitening solutions are safe for your enamel and provide results far superior to over-the-counter products. Let us help you achieve the dazzling, white smile you\'ve always wanted.'
         ], 
