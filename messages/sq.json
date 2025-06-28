@@ -1,3 +1,4 @@
+
 {
   "SiteHeader": {
     "home": "Kreu",
@@ -135,7 +136,7 @@
       },
       "validation": {
         "minLength": "Ju lutemi përshkruani shqetësimet tuaja në të paktën 20 karaktere.",
-        "maxLength": "Përshkrimi juaj не duhet të kalojë 2000 karaktere."
+        "maxLength": "Përshkrimi juaj nuk duhet të kalojë 2000 karaktere."
       },
       "toast": {
         "error": {
@@ -220,3 +221,5 @@
     "blogPosts": {}
   }
 }
+
+    

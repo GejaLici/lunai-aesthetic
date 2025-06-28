@@ -1,3 +1,4 @@
+
 {
   "SiteHeader": {
     "home": "Accueil",
@@ -58,7 +59,7 @@
     },
     "experience": {
       "title": "Découvrez la Différence LUNAI",
-      "description": "Entrez dans un sanctuaire de calme et de sophistication chez LUNAI, où la technologie esthétique avancée rencontre des soins aux patients inégalés. Notre clinique est méticuleusement conçue avec votre confort, votre vie privée et votre bien-être comme nos priorités absolues, garantissant une atmosphère sereine et accueillante à chaque visite.",
+      "description": "Entrez dans un sanctuaire de calme et de sophistication chez LUNAI, où la technologie esthétique avancée rencontre des soins aux patients inégalés. Notre clinique est méticuleusement conçue avec votre confort, votre vie privée et votre bien-être como nos priorités absolues, garantissant une atmosphère sereine et accueillante à chaque visite.",
       "image1Alt": "Zone de réception de la clinique luxueuse et accueillante chez LUNAI",
       "image2Alt": "Salle de traitement moderne, propre et avancée chez LUNAI"
     },
@@ -220,3 +221,5 @@
     "blogPosts": {}
   }
 }
+
+    
