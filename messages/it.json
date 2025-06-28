@@ -217,8 +217,583 @@
         "title": "Odontoiatria"
       }
     },
-    "items": {},
-    "blogPosts": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Rimodellamento del Naso (Rinoplastica)",
+        "description": [
+          "La rinoplastica, comunemente nota come \"intervento al naso\", è una sofisticata procedura chirurgica progettata per migliorare l'aspetto estetico del naso e correggere problemi di respirazione funzionali. Che si tratti di una gobba dorsale, un ponte largo o storto, una punta indefinita o la dimensione delle narici, la rinoplastica può portare il naso in maggiore armonia con le altre caratteristiche del viso. Presso LUNAI, affrontiamo anche difetti strutturali, come un setto deviato, per migliorare il flusso d'aria e la qualità generale della vita.",
+          "La nostra filosofia presso LUNAI si concentra sulla creazione di risultati che siano sia belli che eccezionalmente naturali. I nostri chirurghi plastici certificati combinano la precisione tecnica con un occhio artistico per scolpire un naso che si integri con la tua struttura facciale unica. Durante la tua consulenza completa, utilizziamo una tecnologia di imaging avanzata per simulare i potenziali risultati, assicurandoci di essere in linea con la tua visione. Crediamo in un approccio collaborativo, adattando ogni aspetto della procedura ai tuoi obiettivi e alla tua anatomia specifici.",
+          "I candidati ideali per la rinoplastica sono individui in buona salute generale, non fumatori e con aspettative realistiche riguardo al risultato. Se ritieni che il tuo naso sia sproporzionato rispetto al tuo viso, o se hai difficoltà a respirare, potresti essere un candidato perfetto. La procedura può essere eseguita una volta completata la crescita facciale, tipicamente verso la metà-fine dell'adolescenza.",
+          "L'intervento viene eseguito in anestesia generale e il recupero comporta tipicamente una settimana di inattività con un tutore. Sebbene il gonfiore iniziale si attenui in poche settimane, i risultati finali e definiti della tua rinoplastica continueranno ad emergere nel corso di un anno. Il nostro team dedicato fornisce un'assistenza e un supporto post-operatorio completi per garantire che il tuo recupero sia il più agevole e confortevole possibile."
+        ]
+      },
+      "otoplasty": {
+        "name": "Rimodellamento delle Orecchie (Otoplastica)",
+        "description": [
+          "L'otoplastica, o chirurgia di rimodellamento delle orecchie, è una procedura progettata per correggere le dimensioni, la forma o la posizione delle orecchie. Viene eseguita più comunemente per trattare le orecchie prominenti che sporgono troppo dalla testa, ma può anche correggere orecchie troppo grandi, orecchie a coppa (\"orecchio a sventola\") o insoddisfazione per un intervento precedente. Questa procedura può avere un impatto profondo sulla fiducia in sé stessi sia negli adulti che nei bambini.",
+          "Presso LUNAI, i nostri abili chirurghi approcciano l'otoplastica con l'obiettivo di creare contorni dall'aspetto naturale che portino equilibrio e proporzione al viso. Nei bambini, la procedura può essere eseguita dopo i cinque anni, quando le orecchie hanno raggiunto la maggior parte della loro dimensione adulta. Per gli adulti, non c'è un limite di età superiore. Ci prendiamo cura di posizionare le incisioni in modo discreto nelle pieghe naturali dietro l'orecchio per minimizzare le cicatrici visibili.",
+          "L'intervento comporta la scultura della cartilagine dell'orecchio per creare una forma più desiderabile e fissarla più vicino alla testa con suture interne e permanenti. La procedura viene generalmente eseguita in regime ambulatoriale con anestesia locale con sedazione o anestesia generale, a seconda dell'età del paziente e della complessità dell'intervento.",
+          "Il recupero dall'otoplastica è relativamente rapido. Si indossa una medicazione protettiva per alcuni giorni, seguita da una fascia di supporto indossata di notte per diverse settimane per proteggere le orecchie mentre guariscono. La maggior parte dei pazienti può tornare al lavoro o a scuola entro una settimana, sentendo una rinnovata fiducia nel proprio aspetto."
+        ]
+      },
+      "blepharoplasty": {
+        "name": "Blefaroplastica (Chirurgia delle Palpebre)",
+        "description": [
+          "La blefaroplastica, o chirurgia delle palpebre, è una procedura trasformativa che ringiovanisce l'aspetto degli occhi affrontando la pelle cadente, il grasso in eccesso и le linee sottili. Può essere eseguita sulle palpebre superiori, inferiori o entrambe, correggendo efficacemente problemi come le palpebre superiori cadenti che possono compromettere la vista e le borse sotto gli occhi che creano uno sguardo perennemente stanco.",
+          "I nostri chirurghi esperti eseguono la blefaroplastica con meticolosa precisione per ripristinare un aspetto più luminoso, vigile e giovanile. Per la chirurgia della palpebra superiore, un'incisione viene nascosta nella piega naturale della palpebra. Per la chirurgia della palpebra inferiore, l'incisione può spesso essere praticata all'interno della palpebra inferiore (approccio transcongiuntivale), senza lasciare cicatrici visibili, o appena sotto la linea delle ciglia. La pelle e il grasso in eccesso vengono rimossi o riposizionati per creare un contorno liscio e rinfrescato.",
+          "I buoni candidati per la chirurgia delle palpebre sono individui sani che sono infastiditi dai segni dell'invecchiamento intorno ai loro occhi. La procedura può migliorare drasticamente il proprio aspetto e può persino migliorare la vista nei casi in cui la pelle cadente della palpebra superiore ostruisce il campo visivo.",
+          "Il recupero comporta un certo gonfiore e lividi, che in genere si attenuano entro 10-14 giorni. I risultati sono duraturi e ti aiutano ad apparire più riposato e vibrante per anni. Il nostro team di LUNAI si assicura che tu sia a tuo agio e ben informato durante l'intero processo."
+        ]
+      },
+      "facelift": {
+        "name": "Lifting Facciale",
+        "description": [
+          "Un lifting facciale, o ritidectomia, è lo standard di riferimento per affrontare in modo completo i segni significativi dell'invecchiamento del viso. Questa procedura chirurgica mira a rughe profonde, guance cadenti, pelle flaccida nella parte medio-bassa del viso e pelle lassa sul collo (\"collo di tacchino\"). Fornisce un risultato più drammatico e duraturo rispetto alle alternative non chirurgiche, affrontando le strutture sottostanti del viso.",
+          "Presso LUNAI, il nostro approccio al lifting facciale è quello di fornire risultati trasformativi ma dall'aspetto completamente naturale. Evitiamo l'aspetto \"tirato\" concentrandoci sui tessuti facciali più profondi, stringendo lo strato muscolare sottostante (lo SMAS) e riposizionando i cuscinetti di grasso facciale prima di ridistendere la pelle. Le incisioni sono posizionate ad arte all'interno dell'attaccatura dei capelli e nei contorni naturali intorno all'orecchio per essere praticamente impercettibili una volta guarite.",
+          "I candidati ideali per un lifting facciale hanno in genere tra i 40 e i 70 anni, sono in buona salute e desiderano affrontare un invecchiamento facciale da moderato a grave. Un lifting facciale può essere combinato con altre procedure come un lifting delle sopracciglia, una blefaroplastica o un trapianto di grasso per un ringiovanimento facciale completo.",
+          "Il recupero da un lifting facciale comporta circa due settimane di inattività iniziale. Sebbene vedrai un miglioramento significativo da subito, i risultati finali continueranno a definirsi per diversi mesi man mano che il gonfiore si risolve completamente. Un lifting facciale ben eseguito presso LUNAI può togliere anni al tuo aspetto, ripristinando un contorno più sodo e giovanile che sembra interamente tuo."
+        ]
+      },
+      "chin-reshaping": {
+        "name": "Rimodellamento del Mento",
+        "description": [
+          "La chirurgia di rimodellamento del mento, nota come genioplastica o mentoplastica, è una procedura progettata per migliorare le proporzioni del viso alterando le dimensioni e la forma del mento. Un mento ben definito è una pietra miliare di un profilo facciale attraente sia per gli uomini che per le donne. Questa chirurgia può correggere un mento sfuggente (microgenia), un mento sporgente o un mento asimmetrico, portandolo in armonia con il naso, la fronte e le altre caratteristiche facciali.",
+          "I nostri chirurghi presso LUNAI offrono due tecniche principali per l'aumento del mento: l'uso di un impianto mentoniero su misura o una genioplastica scorrevole, che comporta lo spostamento chirurgico dell'osso del mento stesso. La riduzione del mento è anche possibile scolpendo attentamente l'osso. La procedura è personalizzata in base alla tua anatomia e ai tuoi obiettivi estetici, discussi in dettaglio durante la tua consultazione.",
+          "Il rimodellamento del mento può avere un potente effetto sull'equilibrio facciale generale. Può rafforzare la linea della mascella, far sembrare un naso prominente più piccolo e fornire un contorno del collo più giovanile. I candidati dovrebbero essere in buona salute e aver terminato la loro crescita facciale.",
+          "L'intervento viene spesso eseguito attraverso una piccola incisione all'interno della bocca o discretamente sotto il mento. Il recupero richiede in genere da una a due settimane, con la maggior parte del gonfiore che si risolve nel primo mese. Il risultato è un miglioramento permanente del tuo profilo e della tua armonia facciale."
+        ]
+      },
+      "brow-lift": {
+        "name": "Lifting delle Sopracciglia",
+        "description": [
+          "Un lifting delle sopracciglia, noto anche come lifting della fronte, è una procedura chirurgica che rivitalizza la parte superiore del viso correggendo un sopracciglio pesante e cadente e riducendo le profonde linee orizzontali della fronte. Con l'avanzare dell'età, il sopracciglio può scendere, creando un aspetto stanco, arrabbiato o triste e contribuendo a coprire le palpebre superiori. Un lifting delle sopracciglia le solleva in una posizione più vigile e giovanile.",
+          "Presso LUNAI, utilizziamo moderne tecniche endoscopiche minimamente invasive per il lifting delle sopracciglia, quando possibile. Ciò comporta piccole incisioni nascoste all'interno dell'attaccatura dei capelli, attraverso le quali possiamo sollevare e riposizionare i tessuti della fronte. Questo approccio minimizza le cicatrici e riduce i tempi di recupero rispetto ai metodi tradizionali. Il risultato è una fronte più liscia e un'area degli occhi più aperta e rinfrescata.",
+          "Un lifting delle sopracciglia è un'opzione eccellente per le persone con sopracciglia basse o cadenti, solchi profondi sulla fronte o linee di espressione tra le sopracciglia. Viene spesso eseguito in combinazione con un lifting facciale o una chirurgia delle palpebre per un ringiovanimento più completo della parte superiore del viso.",
+          "Il tempo di inattività è in genere di circa una settimana, con lividi e gonfiore come effetti collaterali più comuni. Un lifting delle sopracciglia fornisce risultati duraturi, aiutandoti a sembrare naturalmente rinfrescato e più accessibile per molti anni."
+        ]
+      },
+      "hair-transplant": {
+        "name": "Trapianto di Capelli",
+        "description": [
+          "La perdita di capelli può essere un'esperienza angosciante sia per gli uomini che per le donne. Presso LUNAI, offriamo una soluzione permanente e dall'aspetto naturale con la nostra chirurgia avanzata di trapianto di capelli. Questa procedura comporta la raccolta di follicoli piliferi sani e geneticamente resistenti da un'area donatrice (tipicamente la parte posteriore del cuoio capelluto) e la loro meticolosa implantazione in aree calve o diradate.",
+          "Siamo specializzati nella tecnica di Estrazione di Unità Follicolari (FUE), un metodo all'avanguardia che comporta l'estrazione di singole unità follicolari una per una. Questo approccio evita la cicatrice lineare associata ai metodi più vecchi e consente un recupero più rapido e confortevole. Il nostro team esperto utilizza una precisione artistica per posizionare ogni innesto con l'angolo e la densità corretti per imitare i modelli naturali di crescita dei capelli.",
+          "Il trapianto di capelli è una soluzione praticabile per la calvizie maschile e femminile, nonché per ripristinare i capelli in aree con cicatrici. I candidati dovrebbero avere una fornitura sufficiente di capelli donatori sani per raggiungere la densità desiderata.",
+          "I capelli trapiantati cadranno nelle prime settimane, il che è una parte normale del processo. I capelli nuovi e permanenti inizieranno a crescere in 3-4 mesi, con i risultati finali e completi visibili dopo circa 12-18 mesi. Riacquista una testa piena di capelli e la tua fiducia con un trapianto di capelli LUNAI."
+        ]
+      },
+      "beard-transplant": {
+        "name": "Trapianto di Barba",
+        "description": [
+          "Una barba folta e ben definita è un simbolo di mascolinità e stile per molti uomini. Per coloro che lottano con peli facciali a chiazze, sottili o inesistenti, un trapianto di barba offre una soluzione permanente. Questa procedura specializzata ti consente di ottenere l'esatto stile di barba che desideri, da una barba completa a un pizzetto o basette raffinate.",
+          "Il processo è simile a un trapianto di capelli per il cuoio capelluto. Utilizziamo la tecnica FUE (Estrazione di Unità Follicolari) per raccogliere singoli follicoli piliferi dalla parte posteriore della testa. Questi follicoli vengono quindi meticolosamente impiantati nell'area della barba, prestando molta attenzione all'angolo e alla direzione di crescita per garantire un risultato dall'aspetto completamente naturale.",
+          "Un trapianto di barba è ideale per gli uomini che hanno chiazze genetiche, cicatrici che impediscono la crescita dei peli o che semplicemente desiderano migliorare la densità e la forma della loro barba esistente. È una procedura altamente personalizzata su misura per le tue caratteristiche facciali e il risultato desiderato.",
+          "Dopo il trapianto, i nuovi peli cadranno prima di iniziare a ricrescere permanentemente dopo 3-4 mesi. Il risultato finale è una barba naturale e folta che puoi radere, tagliare e acconciare proprio come qualsiasi altro pelo facciale."
+        ]
+      },
+      "eyebrow-transplant": {
+        "name": "Trapianto di Sopracciglia",
+        "description": [
+          "Le sopracciglia sono una caratteristica fondamentale che incornicia il viso e trasmette espressione. Se hai sopracciglia sottili, rade o inesistenti a causa della genetica, di un'eccessiva depilazione o di condizioni mediche, un trapianto di sopracciglia può ripristinarle permanentemente. Questa procedura crea sopracciglia più piene e dalla forma meravigliosa che sembrano del tutto naturali.",
+          "Utilizzando la precisa tecnica FUE, i nostri specialisti raccolgono singoli follicoli piliferi dal cuoio capelluto (solitamente da dietro le orecchie dove i capelli sono più fini). Ogni follicolo viene quindi impiantato con cura uno per uno nell'area del sopracciglio, seguendo la direzione naturale e l'angolazione della crescita dei peli delle sopracciglia. Questa precisione artistica è la chiave per ottenere un risultato realistico ed esteticamente gradevole.",
+          "Un trapianto di sopracciglia è una procedura delicata che richiede un alto grado di abilità e arte. È una soluzione eccellente per chiunque desideri ottenere sopracciglia permanentemente piene e definite senza il fastidio quotidiano del trucco.",
+          "Similmente ad altri trapianti di capelli, i peli trapiantati cadranno prima di ricrescere nei mesi successivi. Il risultato è un sopracciglio vivo e in crescita che puoi curare e modellare come desideri, incorniciando perfettamente i tuoi occhi e valorizzando le tue caratteristiche facciali."
+        ]
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Rimodellamento del Naso (Non chirurgico)",
+        "description": [
+          "Una rinoplastica non chirurgica, spesso chiamata \"rinofiller\" o \"intervento al naso di 15 minuti\", è una notevole alternativa non invasiva alla chirurgia tradizionale. Questa procedura utilizza filler dermici a base di acido ialuronico iniettati con precisione per rimodellare e affinare istantaneamente il naso. È un'opzione eccellente per apportare modifiche sottili ma di grande impatto senza tempi di inattività.",
+          "Presso LUNAI, i nostri esperti iniettori possono utilizzare magistralmente i filler per appianare protuberanze e gobbe sul ponte nasale, sollevare una punta nasale cadente, migliorare la simmetria nasale e creare un profilo complessivo più raffinato. La procedura è rapida, richiede in genere meno di 30 minuti, con un disagio minimo.",
+          "I candidati ideali sono coloro che cercano aggiustamenti da minori a moderati all'aspetto del loro naso. È un modo perfetto per \"provare\" una nuova forma del naso prima di impegnarsi in un intervento chirurgico o per coloro che vogliono evitare del tutto una procedura chirurgica. Non è adatto per ridurre le dimensioni del naso.",
+          "I risultati sono immediati e possono durare da 9 a 18 mesi, a seconda del tipo di filler utilizzato e del metabolismo dell'individuo. Non c'è praticamente nessun tempo di recupero, permettendoti di tornare immediatamente alle tue attività quotidiane con un profilo appena migliorato."
+        ]
+      },
+      "dark-circles-treatment": {
+        "name": "Trattamento Occhiaie",
+        "description": [
+          "Le occhiaie scure sotto gli occhi possono farti sembrare stanco, stressato o più vecchio di quanto tu sia. Presso LUNAI, offriamo un approccio poliedrico al trattamento delle occhiaie, perché comprendiamo che la causa è spesso complessa, derivante da perdita di volume, iperpigmentazione, pelle sottile o una combinazione di fattori.",
+          "Il nostro trattamento più efficace per le occhiaie causate dalla perdita di volume è l'uso di filler per il solco lacrimale. Iniettando con cura un filler di acido ialuronico liscio nell'area cava sotto gli occhi, possiamo rimpolpare la pelle, ridurre l'effetto ombra e creare una transizione senza soluzione di continuità tra la guancia e la palpebra inferiore. Questo illumina immediatamente l'area e dona un aspetto più riposato.",
+          "Per le occhiaie causate dalla pigmentazione, potremmo raccomandare un ciclo di peeling chimici delicati o terapie cutanee avanzate per schiarire la pelle e migliorarne la qualità. Il microneedling può anche essere efficace per ispessire la pelle e aumentare il collagene per rendere meno visibili i vasi sanguigni sottostanti.",
+          "Durante la tua consulenza, eseguiremo una valutazione approfondita per determinare la causa principale delle tue occhiaie e creare un piano di trattamento personalizzato. Il nostro obiettivo è fornire una soluzione sicura ed efficace che ripristini luminosità e vitalità alla tua zona sotto gli occhi."
+        ]
+      },
+      "eyelids-plasma-arc": {
+        "name": "Palpebre (Arco al Plasma)",
+        "description": [
+          "Ottieni un lifting non chirurgico degli occhi con il nostro innovativo trattamento con Arco al Plasma. Questa tecnologia rivoluzionaria offre un'alternativa altamente efficace alla blefaroplastica tradizionale per individui con lassità cutanea da lieve a moderata intorno agli occhi. È particolarmente efficace per rassodare la pelle lassa della palpebra superiore e ridurre l'aspetto delle \"zampe di gallina\" e delle linee sottili.",
+          "Il trattamento utilizza un dispositivo specializzato per creare un minuscolo arco elettrico di energia al plasma. Quando questo arco tocca la superficie della pelle, provoca la sublimazione del tessuto bersaglio, ovvero la sua trasformazione diretta da solido a gas. Questo processo crea un modello di minuscole croste di carbonio e innesca una contrazione e un rassodamento immediato delle fibre cutanee.",
+          "Mentre la pelle guarisce da questo trattamento controllato, si attiva la risposta di guarigione naturale del corpo, che porta alla produzione di nuovo collagene ed elastina nelle settimane e nei mesi successivi. Ciò si traduce in una pelle più soda, tesa e liscia intorno agli occhi.",
+          "La procedura viene eseguita con una crema anestetica topica per il massimo comfort. Le croste di carbonio cadranno naturalmente entro 5-7 giorni, rivelando una pelle nuova e ringiovanita. I risultati sono duraturi e possono rinfrescare in modo significativo il tuo aspetto, rendendo i tuoi occhi più aperti e giovanili."
+        ]
+      },
+      "jawline-contouring": {
+        "name": "Contouring della Mascella",
+        "description": [
+          "Una linea della mascella affilata e definita è una caratteristica chiave di un viso giovane e attraente. Il nostro trattamento non chirurgico di Contouring della Mascella utilizza filler dermici posizionati strategicamente per scolpire e migliorare l'angolo della mandibola, creando un profilo più forte e cesellato sia per gli uomini che per le donne.",
+          "Questa procedura è ideale per correggere una linea della mascella debole o sottosviluppata, migliorare la simmetria facciale, ridurre l'aspetto delle guance cadenti e creare una separazione più netta tra la mascella e il collo. I nostri esperti iniettori utilizzano filler di acido ialuronico ad alta densità che imitano la sensazione dell'osso per costruire struttura e definizione.",
+          "Il trattamento è altamente personalizzato in base alla tua anatomia facciale e ai tuoi obiettivi estetici. Per gli uomini, l'obiettivo è spesso quello di creare una mascella più ampia e angolare. Per le donne, l'attenzione è tipicamente sulla creazione di una linea aggraziata ma definita che esalta la femminilità. La procedura è rapida, con un disagio minimo e nessun tempo di inattività.",
+          "I risultati sono visibili immediatamente e durano in genere da 12 a 24 mesi. Il contouring della mascella può migliorare notevolmente il tuo profilo, aumentare la tua fiducia e ripristinare un aspetto più giovane e potente in una singola sessione."
+        ]
+      },
+      "lip-reshaping": {
+        "name": "Rimodellamento Labbra",
+        "description": [
+          "Perfeziona il tuo sorriso con i nostri servizi personalizzati di rimodellamento e aumento delle labbra. Più che aggiungere semplicemente volume, i nostri esperti iniettori utilizzano filler di acido ialuronico di prima qualità come strumento artistico per esaltare la tua bellezza naturale. Ci concentriamo sulla creazione di risultati belli ed equilibrati che siano perfettamente proporzionati al tuo viso.",
+          "I nostri trattamenti di filler per le labbra possono essere utilizzati per raggiungere una varietà di obiettivi: aggiungere volume sottile o significativo, definire il bordo vermiglio (il contorno delle labbra), migliorare l'arco di Cupido, correggere l'asimmetria tra il labbro superiore e inferiore e levigare le linee verticali delle labbra (rughe del fumatore).",
+          "Presso LUNAI, diamo la priorità a un aspetto e una sensazione naturali. Lavoriamo con te per capire il risultato desiderato e selezionare il filler e la tecnica appropriati per raggiungerlo. La procedura viene eseguita utilizzando un anestetico topico per il tuo comfort e in genere dura circa 30 minuti.",
+          "I risultati sono immediati, anche se potrebbe esserci un po' di gonfiore iniziale. Le labbra finali, splendidamente migliorate, possono essere godute per 6-12 mesi. Che tu desideri un miglioramento sottile o un look più glamour, il nostro trattamento di rimodellamento delle labbra può aiutarti a ottenere il sorriso perfetto."
+        ]
+      },
+      "microdermabrasion": {
+        "name": "Microdermoabrasione",
+        "description": [
+          "Rivela una carnagione più luminosa e liscia con la Microdermoabrasione. Questo trattamento popolare e non invasivo è una forma di esfoliazione meccanica che rimuove delicatamente lo strato più esterno di cellule morte della pelle, sbloccando i pori e rinfrescando istantaneamente l'aspetto della tua pelle.",
+          "La procedura utilizza una bacchetta con punta di diamante per abradere delicatamente la superficie della pelle mentre un'aspirazione a vuoto rimuove le cellule esfoliate. Questo processo aiuta a migliorare l'aspetto dei danni solari, delle linee sottili e delle rughe, delle macchie dell'età, delle cicatrici da acne e di altri problemi della pelle. È una procedura perfetta da \"pausa pranzo\" poiché non richiede tempi di inattività.",
+          "La microdermoabrasione è adatta a quasi tutti i tipi e colori di pelle. Migliora l'assorbimento e l'efficacia dei tuoi prodotti per la cura della pelle e può essere eseguita come trattamento autonomo o come parte di un piano completo per la salute della pelle. Per risultati ottimali, si consiglia spesso una serie di trattamenti.",
+          "Dopo una sessione, la tua pelle si sentirà più morbida e apparirà più radiosa. È un ottimo modo per mantenere una pelle sana e ottenere un colorito costante e vibrante."
+        ]
+      },
+      "microneedling": {
+        "name": "Microneedling",
+        "description": [
+          "Ringiovanisci la tua pelle dall'interno con il Microneedling, noto anche come terapia di induzione del collagene. Questo trattamento avanzato utilizza un dispositivo con aghi sottili e sterili per creare migliaia di micro-lesioni controllate nella pelle. Questo processo innesca la cascata di guarigione naturale del corpo, con un conseguente aumento significativo della produzione di collagene ed elastina.",
+          "Il microneedling è un trattamento altamente efficace per una vasta gamma di problemi della pelle. Può migliorare notevolmente la texture della pelle, ridurre l'aspetto delle cicatrici da acne e delle cicatrici chirurgiche, minimizzare la dimensione dei pori, diminuire le linee sottili e le rughe e migliorare l'aspetto delle smagliature.",
+          "Presso LUNAI, possiamo migliorare i risultati del microneedling combinandolo con l'applicazione di sieri potenti o persino del tuo Plasma Ricco di Piastrine (PRP). I micro-canali creati dagli aghi consentono una penetrazione più profonda e una maggiore efficacia di questi trattamenti topici.",
+          "Prima della procedura viene applicata una crema anestetica topica per garantire il comfort. La pelle apparirà arrossata, simile a una scottatura solare, per 24-48 ore dopo il trattamento. In genere si consiglia una serie di 3-6 trattamenti per risultati ottimali e duraturi, che rivelano una pelle più liscia, soda e dall'aspetto più giovane."
+        ]
+      },
+      "multivitamin-treatment": {
+        "name": "Trattamento Multivitaminico",
+        "description": [
+          "Infondi la tua pelle di vita con il nostro trattamento multivitaminico profondamente nutriente. Questo potente trattamento viso è progettato per fornire un cocktail di vitamine essenziali, antiossidanti e minerali direttamente nella pelle, aiutando a combattere i segni dell'invecchiamento precoce e i danni causati dagli stress ambientali.",
+          "Questo trattamento personalizzato affronta una varietà di problemi della pelle, tra cui opacità, disidratazione e tono della pelle non uniforme. In genere comporta una pulizia profonda, un'esfoliazione e l'applicazione di un siero o di una maschera potente ricca di vitamine come la A, la C e la E, note per le loro proprietà riparatrici и protettive.",
+          "Il Trattamento Multivitaminico aiuta ad aumentare la luminosità della pelle, a migliorare i livelli di idratazione, a stimolare la produzione di collagene per una maggiore compattezza e a ripristinare un colorito sano e vibrante. È una terapia eccellente per la pelle stanca, stressata o invecchiata.",
+          "Adatto a tutti i tipi di pelle, questo trattamento viso rilassante e riparatore lascerà la tua pelle morbida, elastica e luminosa di salute. È un trattamento mensile perfetto per mantenere la vitalità della pelle e proteggerla dai rigori della vita quotidiana."
+        ]
+      },
+      "prp-for-hair": {
+        "name": "PRP per Capelli",
+        "description": [
+          "Combatti il diradamento dei capelli e stimola la nuova crescita usando il potere del tuo stesso corpo con il Plasma Ricco di Piastrine (PRP) per Capelli. Questo trattamento all'avanguardia e non chirurgico è un'opzione naturale ed efficace per le persone che soffrono di perdita o diradamento dei capelli.",
+          "La procedura inizia con un semplice prelievo di sangue dal braccio. Il sangue viene quindi posto in una centrifuga per separare e concentrare le piastrine e i fattori di crescita, creando il PRP. Questo plasma dorato viene quindi meticolosamente iniettato nelle aree del cuoio capelluto dove i capelli si stanno diradando.",
+          "L'alta concentrazione di fattori di crescita nel PRP agisce per nutrire i follicoli piliferi, aumentare l'afflusso di sangue al cuoio capelluto, stimolare la fase di crescita del ciclo del capello (fase anagen) e aumentare lo spessore e la densità dei fusti dei capelli esistenti.",
+          "Il PRP per capelli è una procedura sicura e minimamente invasiva senza tempi di inattività. Per risultati ottimali, raccomandiamo una serie iniziale di 3-4 trattamenti distanziati di un mese, seguiti da trattamenti di mantenimento ogni 6-12 mesi. È un'eccellente terapia autonoma o può essere utilizzata per migliorare i risultati della chirurgia di trapianto di capelli."
+        ]
+      },
+      "prp-for-face": {
+        "name": "PRP per il Viso",
+        "description": [
+          "Sfrutta l'incredibile potere curativo e rigenerativo del tuo corpo con un trattamento PRP per il Viso, famoso come il \"Vampire Facial\". Questa terapia avanzata utilizza il tuo plasma ricco di piastrine per ringiovanire drasticamente la tua pelle, promuovendo un colorito giovane e radioso.",
+          "Il trattamento inizia prelevando una piccola quantità del tuo sangue, che viene poi centrifugato per concentrare le piastrine curative e i fattori di crescita. Questo PRP viene quindi applicato sul viso, tipicamente in combinazione con il microneedling. Il microneedling crea migliaia di micro-canali, permettendo al PRP di penetrare in profondità nel derma dove può agire più efficacemente.",
+          "Una volta nella pelle, i fattori di crescita nel PRP innescano una potente cascata rigenerativa, stimolando la produzione di nuovo collagene ed elastina, migliorando il flusso sanguigno e creando nuove cellule cutanee sane. Ciò si traduce in un miglioramento del tono e della texture della pelle, una riduzione delle linee sottili e delle rughe, pori più piccoli e una diminuzione dell'aspetto delle cicatrici da acne.",
+          "Il PRP per il Viso è un modo sicuro, naturale ed altamente efficace per ottenere un ringiovanimento facciale completo con tempi di inattività minimi. Si raccomanda tipicamente una serie di trattamenti per ottenere i risultati più significativi e duraturi."
+        ]
+      },
+      "radiofrequency-treatment": {
+        "name": "Trattamento con Radiofrequenza",
+        "description": [
+          "Rassoda e tonifica la pelle cadente di viso, collo e corpo senza chirurgia utilizzando il nostro avanzato Trattamento con Radiofrequenza (RF). Questa tecnologia confortevole e non invasiva è una soluzione eccellente per le persone che cercano di affrontare la lassità cutanea, le linee sottili e le rughe senza alcun tempo di inattività.",
+          "La tecnologia RF funziona riscaldando delicatamente gli strati più profondi della pelle (il derma). Questo riscaldamento controllato ha un duplice effetto: provoca la contrazione e il rassodamento delle fibre di collagene esistenti, fornendo un effetto rassodante immediato. Ancora più importante, stimola i fibroblasti della pelle a produrre nuovo collagene ed elastina nel tempo.",
+          "Questo processo graduale di rimodellamento del collagene porta a una pelle progressivamente più soda, liscia e dall'aspetto più giovane. Il trattamento è confortevole, spesso descritto come una sensazione di massaggio con pietre calde. Può essere utilizzato per rassodare la pelle delle guance, del collo, della zona delle sopracciglia, dell'addome e delle braccia.",
+          "Per risultati ottimali, si raccomanda una serie di trattamenti settimanali o bisettimanali. La radiofrequenza è un modo sicuro ed efficace per ottenere un sollevamento sottile e un rassodamento evidente, aiutandoti a mantenere un aspetto giovane."
+        ]
+      },
+      "sulcus-filling": {
+        "name": "Riempimento dei Solchi (Riempimento Rughe Profonde)",
+        "description": [
+          "Cancella le rughe profonde e le pieghe del viso con il nostro esperto trattamento di Riempimento dei Solchi. Con l'avanzare dell'età, perdiamo volume facciale, il che porta alla formazione di linee prominenti, come i solchi naso-labiali (le linee del sorriso che vanno dal naso alla bocca) e le linee della marionetta (linee che vanno dagli angoli della bocca fino al mento).",
+          "Questo trattamento utilizza filler dermici a base di acido ialuronico di prima qualità per colpire specificamente questi solchi profondi. Iniettando attentamente il filler direttamente all'interno e sotto la ruga, possiamo aggiungere istantaneamente il volume perso, sollevando la pelle e levigando la piega.",
+          "I nostri abili iniettori hanno una profonda comprensione dell'anatomia facciale e dell'invecchiamento, il che consente loro di ripristinare un contorno più liscio e giovanile al tuo viso, mantenendo un aspetto completamente naturale. L'obiettivo non è \"congelare\" il viso, ma ammorbidire le ombre e ripristinare le curve delicate di un viso giovane.",
+          "La procedura è rapida, con un disagio minimo e nessun tempo di inattività. I risultati sono immediati e possono durare per oltre un anno, fornendo un rinfrescamento significativo ma sottile al tuo aspetto generale."
+        ]
+      },
+      "white-peeling": {
+        "name": "Peeling Bianco",
+        "description": [
+          "Ottieni un tono della pelle più luminoso, uniforme e luminoso con il nostro trattamento specializzato di Peeling Bianco. Questo peeling chimico avanzato è specificamente formulato per colpire varie forme di iperpigmentazione, tra cui macchie solari, macchie senili, iperpigmentazione post-infiammatoria da acne e melasma.",
+          "Il peeling contiene una miscela di agenti schiarenti potenti ma sicuri che agiscono per inibire la produzione di melanina e rimuovere delicatamente le cellule scolorite esistenti dalla superficie della pelle. Questo processo accelera il turnover cellulare, rivelando la pelle più chiara e radiosa sottostante.",
+          "Il nostro trattamento di Peeling Bianco è una scelta perfetta per ripristinare la chiarezza della pelle e affrontare la pigmentazione ostinata che non risponde alle sole creme topiche. Si consiglia spesso una serie di peeling per il miglioramento più drastico e duraturo del tono della pelle.",
+          "Durante la tua consulenza, i nostri esperti di cura della pelle valuteranno la tua pelle per assicurarsi che questo peeling sia la scelta giusta per te e creeranno un piano di trattamento personalizzato, compresa la cura post-peeling per proteggere i tuoi risultati."
+        ]
+      },
+      "wrinkle-fillers": {
+        "name": "Filler per Rughe",
+        "description": [
+          "Leviga i segni dell'invecchiamento e ripristina il volume giovanile con i nostri Filler per Rughe somministrati da esperti. Presso LUNAI, utilizziamo una gamma di filler dermici a base di acido ialuronico di alta qualità e approvati dalla FDA per ammorbidire istantaneamente le linee sottili, riempire le rughe profonde e reintegrare il volume perso su tutto il viso.",
+          "I nostri abili iniettori possono mirare a varie aree di preoccupazione, tra cui le zampe di gallina intorno agli occhi, le linee orizzontali della fronte, le linee glabellari (le \"undici\" tra le sopracciglia) e le linee intorno alla bocca. Il filler viene iniettato sotto la pelle per rimpolparla dall'interno, cancellando efficacemente la linea o la ruga.",
+          "L'arte di usare i filler risiede in una tecnica precisa che garantisce risultati dall'aspetto naturale. Il nostro obiettivo è rinfrescare il tuo aspetto, non cambiarlo. Ci concentriamo su miglioramenti sottili che ti lasciano un aspetto riposato e ringiovanito.",
+          "La procedura è rapida, con risultati visibili immediatamente. A seconda del filler utilizzato e dell'area trattata, i risultati possono durare da 6 a 18 mesi. È uno dei trattamenti non chirurgici più popolari ed efficaci per tornare indietro nel tempo."
+        ]
+      },
+      "xanthelasma-treatment": {
+        "name": "Trattamento Xantelasma (Arco al Plasma)",
+        "description": [
+          "Gli xantelasmi sono placche giallastre e piatte di depositi di colesterolo che compaiono sopra o intorno alle palpebre. Sebbene siano medicalmente innocui, possono essere una preoccupazione estetica. Il nostro trattamento non chirurgico con Arco al Plasma offre un metodo sicuro, preciso ed altamente efficace per rimuoverli senza incisioni o punti di sutura.",
+          "Il dispositivo Arco al Plasma utilizza l'energia del plasma per sublimare il tessuto bersaglio strato per strato. Ciò consente ai nostri professionisti di rimuovere meticolosamente i depositi di xantelasma senza danneggiare la pelle sana circostante della delicata area palpebrale.",
+          "Questa procedura è un'alternativa superiore all'escissione chirurgica tradizionale, che può lasciare cicatrici, o ai peeling chimici, che possono mancare di precisione. Il trattamento viene eseguito con un anestetico topico e ha tempi di inattività minimi.",
+          "Dopo la procedura, si formano piccole croste di carbonio sull'area trattata, che cadono entro una settimana per rivelare una pelle nuova e pulita. Questo metodo avanzato si traduce in eccellenti risultati estetici con un rischio molto basso di recidiva."
+        ]
+      },
+      "breast-augmentation": {
+        "name": "Mastoplastica Additiva",
+        "description": [
+          "La mastoplastica additiva è una delle procedure di chirurgia estetica più popolari, progettata per aumentare le dimensioni del seno, migliorare la simmetria e valorizzare le proporzioni generali del corpo. Presso LUNAI, ti aiutiamo a ottenere le curve belle e dall'aspetto naturale che desideri, aumentando la tua fiducia e aiutandoti a sentirti più a tuo agio con i vestiti.",
+          "Offriamo una gamma di opzioni, inclusi impianti in silicone e soluzione salina in varie forme, dimensioni e profili. Offriamo anche la mastoplastica additiva con trasferimento di grasso per coloro che cercano un modesto aumento di dimensioni utilizzando il proprio grasso corporeo. I nostri chirurghi certificati ti guideranno attraverso le scelte durante la tua consulenza, aiutandoti a selezionare l'opzione migliore per soddisfare i tuoi obiettivi estetici e completare la tua corporatura.",
+          "La procedura prevede il posizionamento dell'impianto dietro il tessuto mammario или sotto il muscolo pettorale attraverso un'incisione discreta. Il nostro obiettivo è creare un risultato che sia sia bello che proporzionato, assicurando che la tua nuova silhouette appaia naturale e sia giusta per te.",
+          "Il recupero comporta in genere alcuni giorni di riposo, con un ritorno alla maggior parte delle attività non faticose entro una o due settimane. I risultati sono immediati e duraturi, fornendo una spinta significativa all'autostima."
+        ]
+      },
+      "breast-lift": {
+        "name": "Mastopessi (Lifting del Seno)",
+        "description": [
+          "Una mastopessi, o lifting del seno, è una procedura chirurgica progettata per ripristinare un profilo del seno giovane e più sodo, correggendo il rilassamento e migliorando la forma. Gli effetti della gravità, della gravidanza, delle fluttuazioni di peso e dell'invecchiamento possono far perdere compattezza e far cadere il seno. Una mastopessi solleva il seno in una posizione più alta sul torace, creando un contorno più sodo e giovanile.",
+          "Durante la procedura, i nostri chirurghi rimuovono la pelle in eccesso e rimodellano abilmente il tessuto mammario interno per creare un contorno del seno più elevato e formoso. Anche il capezzolo e l'areola vengono riposizionati più in alto sul seno. Se anche la perdita di volume è una preoccupazione, una mastopessi può essere combinata con impianti (una mastopessi additiva) per ripristinare sia il sollevamento che la pienezza.",
+          "Le candidate ideali sono le donne che sono soddisfatte delle dimensioni del loro seno ma desiderano correggere il rilassamento. La procedura è altamente personalizzata, con modelli di incisione scelti per affrontare al meglio il grado di rilassamento e ottenere il risultato estetico desiderato.",
+          "Il recupero comporta circa una o due settimane di inattività. I risultati di una mastopessi sono duraturi, fornendo una silhouette più giovane e sicura per gli anni a venire."
+        ]
+      },
+      "breast-reduction": {
+        "name": "Mastoplastica Riduttiva",
+        "description": [
+          "Per molte donne, un seno eccessivamente grande (macromastia) può causare un notevole disagio fisico ed emotivo. La chirurgia di riduzione del seno, o mastoplastica riduttiva, è una procedura che cambia la vita e che rimuove il grasso mammario, il tessuto ghiandolare e la pelle in eccesso per ottenere una dimensione del seno più proporzionata al proprio corpo.",
+          "Questa procedura non è solo estetica; fornisce un profondo sollievo funzionale. Riducendo il peso del seno, può alleviare disturbi fisici cronici come mal di schiena, collo e spalle, irritazione della pelle sotto il seno e solchi profondi e dolorosi delle spalline del reggiseno. Permette anche alle donne di partecipare più comodamente alle attività fisiche e di trovare vestiti che si adattino correttamente.",
+          "I nostri chirurghi compassionevoli utilizzano tecniche avanzate per creare seni più piccoli, più leggeri e più formosi, preservando la sensibilità e garantendo la cicatrizzazione più discreta possibile. Anche l'areola viene ridotta di dimensioni e riposizionata a un'altezza più giovanile.",
+          "La riduzione del seno ha uno dei più alti tassi di soddisfazione del paziente di qualsiasi procedura di chirurgia plastica. Il recupero comporta in genere un paio di settimane di inattività, ma il sollievo dai sintomi fisici si avverte spesso immediatamente."
+        ]
+      },
+      "breast-reconstruction": {
+        "name": "Ricostruzione Mammaria",
+        "description": [
+          "Perdere un seno a causa di una mastectomia può essere una parte profondamente emotiva del percorso contro il cancro. La ricostruzione mammaria è una serie di procedure progettate per ripristinare la forma, l'aspetto e le dimensioni del seno, aiutando una donna a sentirsi di nuovo completa e ad andare avanti con fiducia.",
+          "Presso LUNAI, i nostri chirurghi compassionevoli e qualificati offrono una gamma di opzioni avanzate di ricostruzione mammaria. La ricostruzione può essere eseguita contemporaneamente alla mastectomia (ricostruzione immediata) o in un secondo momento (ricostruzione ritardata).",
+          "I due approcci principali sono la ricostruzione basata su impianti e la ricostruzione autologa (o \"lembo\"), che utilizza il tessuto del proprio corpo dall'addome, dalla schiena o dalle cosce per creare un nuovo contorno mammario. L'opzione migliore dipende dal tipo di corpo, dal piano di trattamento del cancro e dalle preferenze personali. Lavoreremo a stretto contatto con te e il tuo team di oncologia per creare un piano chirurgico sicuro ed efficace.",
+          "La ricostruzione mammaria è un percorso molto personale e il nostro obiettivo è supportarti in ogni fase del percorso. Miriamo a creare un risultato che non solo sembri naturale, ma che aiuti anche a ripristinare il tuo senso di sé e la tua femminilità dopo il cancro al seno."
+        ]
+      },
+      "arm-lift": {
+        "name": "Lifting delle Braccia",
+        "description": [
+          "Un lifting delle braccia, o brachioplastica, è una procedura chirurgica che rimodella la parte superiore delle braccia rimuovendo la pelle lassa e cadente e il grasso in eccesso. Questa condizione, spesso definita \"ali di pipistrello\", può derivare da una significativa perdita di peso, dall'invecchiamento o dalla genetica e spesso non risponde a dieta ed esercizio fisico.",
+          "Questa procedura crea un contorno del braccio più liscio, sodo e tonico, permettendoti di indossare top e abiti senza maniche con rinnovata fiducia. Durante l'intervento, viene tipicamente praticata un'incisione all'interno o sul retro del braccio, dall'ascella al gomito. Attraverso questa incisione, il nostro chirurgo rimuove la pelle e il grasso in eccesso e stringe i tessuti di supporto sottostanti.",
+          "La liposuzione può essere utilizzata in combinazione con un lifting delle braccia per ottenere il miglior contorno possibile. I candidati ideali sono individui con un peso stabile che sono infastiditi dall'aspetto della pelle lassa sulla parte superiore delle braccia.",
+          "Il recupero comporta l'uso di indumenti compressivi e la limitazione dell'attività faticosa per diverse settimane. Sebbene ci sarà una cicatrice, i nostri chirurghi si prendono molta cura di posizionarla nel modo più discreto possibile. I risultati sono una forma del braccio notevolmente migliorata e più giovanile."
+        ]
+      },
+      "tummy-tuck": {
+        "name": "Addominoplastica",
+        "description": [
+          "Un'addominoplastica, o \"tummy tuck\", è lo standard di riferimento per creare un profilo addominale più piatto, sodo e liscio. È una procedura trasformativa che affronta problemi che la dieta e l'esercizio da soli non possono risolvere, come la pelle lassa e in eccesso dopo la gravidanza o una significativa perdita di peso, e i muscoli addominali indeboliti o separati (diastasi dei retti).",
+          "Durante un'addominoplastica completa, il nostro chirurgo pratica un'incisione orizzontale nella parte bassa dell'addome, da fianco a fianco. La pelle addominale viene sollevata, i muscoli sottostanti vengono riparati e tesi e la pelle e il grasso in eccesso vengono rimossi. La pelle rimanente viene quindi ridistesa per un contorno più teso e liscio e l'ombelico viene riposizionato.",
+          "Offriamo anche una mini addominoplastica per i pazienti le cui preoccupazioni si trovano principalmente sotto l'ombelico. Questa opzione meno estesa comporta un'incisione più corta e un recupero più rapido.",
+          "Un'addominoplastica fornisce un miglioramento notevole e duraturo della sezione centrale, aiutando i pazienti a recuperare la loro figura pre-gravidanza o a celebrare il passo finale nel loro percorso di perdita di peso. Il recupero richiede in genere da due a tre settimane di inattività."
+        ]
+      },
+      "liposculpture": {
+        "name": "Liposcultura",
+        "description": [
+          "La liposcultura è una forma più avanzata e artistica di liposuzione. Mentre la liposuzione tradizionale si concentra sulla rimozione di grandi volumi di grasso, la liposcultura riguarda la precisione e il dettaglio. Comporta la rimozione di depositi di grasso localizzati e ostinati per scolpire e definire attentamente i contorni naturali del corpo e rivelare la definizione muscolare sottostante.",
+          "Questa tecnica è ideale per gli individui che sono già vicini al loro peso corporeo ideale ma lottano con sacche di grasso persistenti che oscurano il loro fisico. Le aree di trattamento comuni includono addome, fianchi, cosce, schiena e braccia. Può essere utilizzata per creare l'aspetto di addominali \"a tartaruga\" (incisione addominale) o per definire la vita.",
+          "Presso LUNAI, i nostri chirurghi utilizzano tecnologie di liposuzione all'avanguardia per rimuovere delicatamente il grasso riducendo al minimo il trauma ai tessuti circostanti. Ciò consente un recupero più agevole e risultati più raffinati e ad alta definizione.",
+          "La liposcultura è per i pazienti che cercano di ottenere l'aspetto finale e cesellato per cui hanno lavorato attraverso la dieta e il fitness ma non sono stati in grado di raggiungere. È l'arte del modellamento del corpo, perfezionata."
+        ]
+      },
+      "brazilian-butt-lift": {
+        "name": "Lifting Brasiliano dei Glutei (BBL)",
+        "description": [
+          "Il lifting brasiliano dei glutei (BBL) è una procedura molto popolare e trasformativa che migliora le dimensioni e la forma dei glutei utilizzando il tuo grasso naturale. È un intervento di modellamento del corpo due in uno che crea un profilo dei glutei più sinuoso e sollevato e una silhouette a clessidra più definita.",
+          "La procedura inizia con la liposuzione per raccogliere il grasso in eccesso da altre aree del corpo in cui non è desiderato, come l'addome, i fianchi o le cosce. Ciò ha il vantaggio aggiuntivo di snellire e modellare le aree donatrici. Il grasso raccolto viene quindi purificato e meticolosamente iniettato in più strati nei glutei per aumentare il volume, migliorare la forma e creare un aspetto sollevato.",
+          "Un BBL è un'opzione eccellente per coloro che desiderano un posteriore più pieno ma vogliono evitare gli impianti. Poiché utilizza il tuo grasso, i risultati appaiono e si sentono completamente naturali. I nostri chirurghi sono esperti nel posizionamento artistico del grasso per creare risultati belli, proporzionati e duraturi.",
+          "Il recupero richiede di evitare la pressione diretta sui glutei per diverse settimane per garantire la sopravvivenza ottimale delle cellule di grasso trasferite. Il risultato finale è un contorno del corpo inferiore permanentemente migliorato e più voluttuoso."
+        ]
+      },
+      "labiaplasty": {
+        "name": "Labioplastica",
+        "description": [
+          "La labioplastica è una procedura chirurgica intima progettata per migliorare il comfort e l'aspetto delle labbra. Molte donne sperimentano disagio fisico a causa di piccole labbra ingrossate o allungate, che possono causare sfregamenti, irritazioni e dolore durante l'esercizio fisico, i rapporti sessuali o quando si indossano abiti attillati. La labioplastica può fornire un notevole sollievo da questi sintomi.",
+          "La procedura viene eseguita anche per motivi estetici, per ridurre le dimensioni o correggere l'asimmetria delle piccole o grandi labbra, creando un aspetto più ordinato ed esteticamente gradevole. Ciò può portare a un notevole aumento della fiducia in sé stessi e del comfort nel proprio corpo.",
+          "I nostri chirurghi compassionevoli eseguono la labioplastica con la massima discrezione e sensibilità. Utilizzando tecniche precise, tagliano attentamente il tessuto in eccesso e rimodellano le labbra per ottenere il risultato desiderato dalla paziente, preservando la sensibilità.",
+          "La procedura viene generalmente eseguita in regime ambulatoriale e ha un recupero relativamente semplice, con la maggior parte delle pazienti che torna alle normali attività entro un paio di settimane. È un intervento chirurgico sicuro ed efficace che può migliorare notevolmente la qualità della vita di una donna."
+        ]
+      },
+      "thigh-lift": {
+        "name": "Lifting delle Cosce",
+        "description": [
+          "Un lifting delle cosce, o plastica delle cosce, è una procedura di modellamento del corpo che affronta la pelle lassa e cadente e il grasso in eccesso sulla parte interna e/o esterna delle cosce. Questa condizione è un risultato comune di una massiccia perdita di peso, dell'invecchiamento o della genetica e può causare sia insoddisfazione estetica che problemi fisici come sfregamenti e irritazioni.",
+          "Un lifting delle cosce crea un contorno delle cosce più sodo, liscio e giovanile. Durante la procedura, viene praticata un'incisione, tipicamente nella piega inguinale che si estende lungo la parte interna della coscia, attraverso la quale vengono rimossi pelle e grasso in eccesso. La pelle rimanente viene quindi ridistesa e tesa, risultando in una forma della gamba notevolmente migliorata.",
+          "I candidati ideali hanno un peso stabile e si impegnano a mantenere uno stile di vita sano, poiché le future fluttuazioni di peso possono compromettere i risultati. La procedura aiuta i vestiti a calzare meglio e può migliorare notevolmente la fiducia in sé stessi.",
+          "Il recupero comporta l'uso di indumenti compressivi e l'evitamento di attività faticose per circa 4-6 settimane. Sebbene sarà presente una cicatrice, i nostri chirurghi la posizionano nel modo più discreto possibile. Il risultato finale sono gambe splendidamente modellate di cui sarai orgoglioso di mostrare."
+        ]
+      },
+      "gynecomastia": {
+        "name": "Ginecomastia (Riduzione del Seno Maschile)",
+        "description": [
+          "La ginecomastia è una condizione comune caratterizzata dallo sviluppo eccessivo del tessuto mammario negli uomini, che si traduce nell'aspetto di \"seni maschili\". Può essere causata da squilibri ormonali, genetica o alcuni farmaci e può essere una fonte significativa di imbarazzo. La chirurgia di riduzione del seno maschile è una procedura altamente efficace per correggere questo problema.",
+          "La chirurgia mira a ripristinare un contorno del torace più piatto, sodo e maschile. La tecnica specifica utilizzata dipende dalla causa della ginecomastia. Se è dovuta principalmente a un eccesso di tessuto adiposo, la liposuzione da sola può essere sufficiente. Se la causa è un eccesso di tessuto ghiandolare, questo tessuto verrà asportato chirurgicamente attraverso una piccola incisione intorno all'areola.",
+          "In molti casi, viene utilizzata una combinazione di liposuzione ed escissione per ottenere il miglior risultato possibile. I nostri chirurghi eseguiranno una valutazione approfondita per creare un piano chirurgico personalizzato per te.",
+          "Il recupero è relativamente rapido, con la maggior parte degli uomini che torna al lavoro entro una settimana. I risultati sono permanenti e possono avere un profondo impatto sull'autostima, consentendo agli uomini di sentirsi a proprio agio e sicuri a torso nudo o indossando abiti attillati."
+        ]
+      },
+      "carboxytherapy": {
+        "name": "Carbossiterapia",
+        "description": [
+          "La carbossiterapia è un trattamento non chirurgico innovativo e versatile che prevede l'iniezione terapeutica di anidride carbonica (CO2) di grado medicale nel tessuto sottocutaneo. Questa procedura sicura e minimamente invasiva sfrutta un processo naturale del corpo per ringiovanire la pelle e migliorarne l'aspetto.",
+          "Quando viene iniettata la CO2, il corpo la interpreta come un deficit di ossigeno e risponde aumentando il flusso sanguigno e i fattori di crescita nell'area trattata. Questo afflusso di ossigeno e nutrienti stimola la circolazione, incoraggia il drenaggio linfatico e promuove la produzione di nuovo collagene.",
+          "Presso LUNAI, utilizziamo la carbossiterapia per trattare efficacemente una serie di problemi. È molto efficace nel diminuire l'aspetto della cellulite, attenuare le smagliature ricostruendo la rete di collagene e migliorare la lassità e la texture della pelle del corpo. Può anche essere utilizzata per trattare le occhiaie migliorando la circolazione.",
+          "Il trattamento è rapido, con un disagio minimo e nessun tempo di inattività. Di solito è necessaria una serie di sessioni per ottenere risultati ottimali e duraturi per una pelle più liscia e dall'aspetto più sano."
+        ]
+      },
+      "cellulite-treatment": {
+        "name": "Trattamento della Cellulite",
+        "description": [
+          "La cellulite, l'aspetto a \"buccia d'arancia\" della pelle, colpisce la stragrande maggioranza delle donne, indipendentemente dalla loro taglia o peso. È causata da depositi di grasso che spingono attraverso le bande di tessuto connettivo (setti) sotto la pelle. Presso LUNAI, offriamo un programma completo di trattamento della cellulite che si rivolge alle cause strutturali della cellulite per un aspetto visibilmente più liscio.",
+          "Comprendiamo che una singola modalità spesso non è sufficiente. Il nostro approccio personalizzato può combinare diverse tecnologie avanzate e non invasive per ottenere i migliori risultati. Queste possono includere la radiofrequenza per riscaldare e rassodare la pelle, la terapia con onde acustiche per rompere le bande fibrose e la carbossiterapia per migliorare la circolazione.",
+          "Il nostro piano di trattamento mira a disgregare i depositi di grasso ostinati, rilasciare i setti fibrosi che causano gli inestetismi, migliorare il drenaggio linfatico per ridurre la ritenzione di liquidi e stimolare la produzione di collagene per migliorare l'elasticità e lo spessore della pelle.",
+          "Sebbene non esista una cura permanente per la cellulite, i nostri programmi personalizzati possono fornire un miglioramento significativo e duraturo della texture della pelle, aiutandoti a sentirti più sicura nella tua pelle."
+        ]
+      },
+      "laser-hair-removal": {
+        "name": "Depilazione Laser",
+        "description": [
+          "Goditi la libertà di una pelle liscia come la seta e senza peli con i nostri avanzati servizi di depilazione laser. Questo è uno dei trattamenti cosmetici non invasivi più popolari, che offre una soluzione a lungo termine ai peli superflui praticamente su qualsiasi parte del viso o del corpo. Dì addio al ciclo infinito di rasatura, ceretta e pinzette.",
+          "Utilizziamo una tecnologia laser all'avanguardia che è sicura ed efficace per una vasta gamma di tipi di pelle. Il laser funziona emettendo un raggio di luce concentrato che viene assorbito dal pigmento (melanina) nel follicolo pilifero. Questa energia luminosa si converte in calore, che danneggia il follicolo e ne inibisce la capacità di ricrescere.",
+          "Poiché il laser colpisce i peli nella loro fase di crescita attiva, è necessaria una serie di trattamenti (tipicamente 6-8 sessioni) per catturare tutti i peli nel loro ciclo di crescita e ottenere una riduzione permanente dei peli.",
+          "I nostri tecnici esperti assicurano che il trattamento sia il più confortevole ed efficace possibile. Le aree di trattamento comuni includono gambe, ascelle, inguine, schiena, petto e viso. Inizia oggi il tuo viaggio verso una pelle liscia senza sforzo."
+        ]
+      },
+      "lipolysis": {
+        "name": "Lipolisi",
+        "description": [
+          "Sciogli gli accumuli di grasso localizzati e ostinati senza intervento chirurgico con la Lipolisi iniettabile. Si tratta di una soluzione di modellamento corporeo mirata e non invasiva, perfetta per trattare piccole aree di grasso resistenti a dieta ed esercizio fisico.",
+          "Il trattamento prevede l'iniezione di una soluzione appositamente formulata, spesso contenente acido desossicolico, direttamente nel deposito di grasso. Questa sostanza agisce per rompere la membrana cellulare delle cellule adipose. Una volta distrutte, queste cellule vengono elaborate naturalmente ed eliminate permanentemente dal sistema linfatico del corpo.",
+          "La lipolisi iniettabile è molto efficace per trattare aree come il doppio mento (grasso sottomentoniero), il rigonfiamento del reggiseno, piccoli accumuli sull'addome e l'interno coscia. Non è una soluzione per la perdita di peso, ma piuttosto uno strumento per affinare e modellare aree specifiche.",
+          "In genere sono necessarie da 2 a 4 sedute di trattamento per ottenere risultati ottimali. Potrebbe esserci un po' di gonfiore e sensibilità nell'area trattata per alcuni giorni, ma non ci sono tempi di inattività significativi. Il risultato è una riduzione permanente del grasso nell'area trattata e un contorno migliorato."
+        ]
+      },
+      "plasma-arc-skin": {
+        "name": "Arco al Plasma (Trattamenti per la Pelle)",
+        "description": [
+          "L'Arco al Plasma è una tecnologia versatile e innovativa che consente una vasta gamma di trattamenti cutanei non chirurgici sul corpo. Offre un modo preciso ed efficace per ringiovanire e riparare la pelle sfruttando la potenza dell'energia del plasma.",
+          "Questa tecnologia è eccezionale per il rassodamento cutaneo non chirurgico, rendendola un'opzione eccellente per il trattamento della pelle lassa sull'addome (specialmente dopo la gravidanza), sul collo e sulle ginocchia. Può anche essere utilizzata per la revisione delle cicatrici, migliorando significativamente la texture e l'aspetto di cicatrici chirurgiche, cicatrici da acne e smagliature.",
+          "Inoltre, l'Arco al Plasma è un metodo sicuro ed efficace per rimuovere lesioni cutanee benigne come fibromi penduli, nei e verruche. Il dispositivo sublima il tessuto bersaglio senza causare danni termici all'area circostante, portando a cicatrici minime e a una guarigione rapida.",
+          "Il trattamento promuove la guarigione naturale e la rigenerazione della pelle, con conseguente una superficie cutanea più chiara, liscia e tesa. È uno strumento potente per affrontare molteplici problemi della pelle sul corpo senza la necessità di un intervento chirurgico invasivo."
+        ]
+      },
+      "sclerotherapy": {
+        "name": "Scleroterapia (Trattamento delle Teleangectasie)",
+        "description": [
+          "Ottieni gambe chiare e belle e riacquista la tua fiducia con la Scleroterapia. Questo è il gold standard medico per eliminare le antiestetiche teleangectasie (capillari a ragnatela) e le piccole vene varicose sulle gambe. È un trattamento sicuro, efficace e minimamente invasivo, affidabile da decenni.",
+          "La procedura prevede l'iniezione di una soluzione speciale, chiamata sclerosante, direttamente nelle vene bersaglio. Questa soluzione irrita il rivestimento della vena, facendola gonfiare, collassare e aderire. Nel tempo, la vena trattata si trasforma in tessuto cicatriziale e svanisce dalla vista man mano che viene assorbita naturalmente dal corpo.",
+          "Una singola sessione può comportare più iniezioni, a seconda del numero di vene da trattare. La procedura è rapida, con un disagio minimo. Non ci sono tempi di inattività e i pazienti sono incoraggiati a camminare subito dopo per favorire la circolazione.",
+          "Potrebbero essere necessarie più sessioni per raggiungere il livello di schiarimento desiderato. Con la scleroterapia presso LUNAI, puoi ripristinare efficacemente un aspetto uniforme alle tue gambe e sentirti a tuo agio indossando di nuovo pantaloncini e gonne."
+        ]
+      },
+      "composite-veneers": {
+        "name": "Faccette in Composito",
+        "description": [
+          "Trasforma il tuo sorriso in modo economico e in una sola visita con le Faccette in Composito. Questa procedura odontoiatrica estetica, nota anche come bonding dentale, è un modo eccellente per correggere una varietà di imperfezioni minori. I nostri abili dentisti applicano magistralmente una resina composita del colore del dente direttamente sulla superficie del dente per migliorarne l'aspetto.",
+          "Le faccette in composito sono ideali per nascondere scheggiature, chiudere piccoli spazi tra i denti, coprire macchie e scolorimenti e persino correggere l'aspetto di denti leggermente storti o malformati. È una procedura conservativa che richiede in genere una rimozione minima o nulla della struttura naturale del dente.",
+          "Il processo è sia un'arte che una scienza. I nostri dentisti selezionano attentamente una tonalità di resina che corrisponda ai tuoi denti naturali e poi la scolpiscono e la lucidano sapientemente per creare un risultato bello e senza soluzione di continuità. L'intera procedura viene solitamente completata in un solo appuntamento.",
+          "Sebbene non siano durevoli o resistenti alle macchie come le faccette in porcellana, le faccette in composito sono un modo conveniente e meno invasivo per ottenere un sorriso mozzafiato e un notevole aumento di fiducia."
+        ],
+        "dentalSubCategoryTitle": "ESTETICA"
+      },
+      "emax-veneers": {
+        "name": "Faccette E-Max",
+        "description": [
+          "Ottieni un sorriso impeccabile, radioso e incredibilmente duraturo con le Faccette E-Max. Considerate l'apice dell'odontoiatria estetica, le faccette E-Max sono realizzate in vetroceramica al disilicato di litio ad alta resistenza. Questo materiale è rinomato per la sua superiore tenacità, durata e per la sua straordinaria qualità traslucida che imita perfettamente l'aspetto dello smalto naturale dei denti.",
+          "Le faccette E-Max sono gusci ultrasottili su misura che vengono incollati sulla superficie anteriore dei denti. Sono la soluzione ideale per creare una trasformazione completa del sorriso, in grado di correggere problemi come macchie gravi, scheggiature, crepe, spazi e disallineamenti significativi.",
+          "Il processo prevede due visite. Nella prima, prepariamo i denti, prendiamo impronte precise e ti applichiamo faccette provvisorie. Le impronte vengono inviate a un laboratorio odontotecnico maestro dove vengono fabbricate le tue faccette su misura. Nella seconda visita, incolliamo permanentemente le faccette finali ai tuoi denti.",
+          "Con la loro eccezionale bellezza e resistenza alle macchie, le faccette E-Max offrono un sorriso duraturo da celebrità che apparirà spettacolare per molti anni a venire."
+        ],
+        "dentalSubCategoryTitle": "ESTETICA"
+      },
+      "teeth-whitening": {
+        "name": "Sbiancamento Dentale",
+        "description": [
+          "Illumina drasticamente il tuo sorriso e aumenta la tua fiducia con i nostri servizi professionali di Sbiancamento Dentale. Nel tempo, i denti possono macchiarsi e ingiallirsi a causa di caffè, tè, vino rosso, fumo e del naturale processo di invecchiamento. Lo sbiancamento professionale è il modo più sicuro ed efficace per rimuovere queste macchie e rivelare un sorriso brillantemente bianco.",
+          "Presso LUNAI, offriamo due opzioni convenienti e potenti. Il nostro trattamento di sbiancamento in studio fornisce i risultati più evidenti in una sola visita, spesso schiarendo i denti di diverse tonalità in circa un'ora. È la scelta perfetta per chi desidera risultati immediati per un evento speciale.",
+          "Forniamo anche kit di sbiancamento personalizzati da portare a casa. Prendiamo le impronte dei tuoi denti per creare mascherine su misura che assicurano che il gel sbiancante di forza professionale venga applicato in modo uniforme e sicuro. Puoi quindi sbiancare i tuoi denti nel comfort di casa tua per un periodo da una a due settimane.",
+          "Entrambe le nostre soluzioni di sbiancamento sono sicure per il tuo smalto e forniscono risultati di gran lunga superiori ai prodotti da banco. Lascia che ti aiutiamo a ottenere il sorriso smagliante e bianco che hai sempre desiderato."
+        ],
+        "dentalSubCategoryTitle": "ESTETICA"
+      },
+      "crowns": {
+        "name": "Corone",
+        "description": [
+          "Una corona dentale, spesso chiamata \"capsula\", è una ricostruzione su misura che ricopre completamente la porzione visibile di un dente. È un modo molto efficace per proteggere e ripristinare un dente che è stato significativamente indebolito da carie, frattura, una grande otturazione o una cura canalare.",
+          "Le corone servono a molteplici scopi: ripristinano le dimensioni, la forma e la forza originali di un dente e ne migliorano l'aspetto estetico. Presso LUNAI, le nostre corone sono realizzate con materiali durevoli e di alta qualità come porcellana, zirconia o porcellana fusa su metallo, progettate per integrarsi perfettamente con i tuoi denti naturali.",
+          "Il processo di solito prevede due appuntamenti. Durante la prima visita, il dente viene preparato, viene presa un'impronta per il laboratorio e viene posizionata una corona provvisoria. Alla seconda visita, la corona permanente fabbricata su misura viene controllata per una perfetta aderenza e quindi cementata in posizione.",
+          "Una corona ben fatta può proteggere un dente compromesso da ulteriori danni e fornire una ricostruzione bella e funzionale che può durare per molti anni con la cura adeguata."
+        ],
+        "dentalSubCategoryTitle": "PROTESI"
+      },
+      "dental-bridges": {
+        "name": "Ponti Dentali",
+        "description": [
+          "Un ponte dentale è un dispositivo protesico fisso progettato per letteralmente \"colmare il divario\" creato da uno o più denti mancanti. È una soluzione eccellente e affidabile per ripristinare il tuo sorriso, la tua capacità di masticare correttamente e l'integrità generale del tuo morso.",
+          "Un ponte tradizionale è costituito da uno o più denti artificiali (chiamati pontici) che sono tenuti in posizione da corone dentali cementate sui denti naturali su entrambi i lati del divario (chiamati denti pilastro). Questo crea una ricostruzione forte и non rimovibile.",
+          "Riempiendo lo spazio di un dente mancante, un ponte dentale impedisce ai denti rimanenti di spostarsi, il che può portare a problemi di morso e di mascella. Aiuta anche a mantenere la forma naturale del viso e a distribuire uniformemente le forze del morso.",
+          "I nostri ponti sono realizzati su misura con materiali di alta qualità per abbinarsi al colore e alla forma dei tuoi denti naturali, garantendo un risultato che è sia funzionale che esteticamente gradevole."
+        ],
+        "dentalSubCategoryTitle": "PROTESI"
+      },
+      "dentures": {
+        "name": "Protesi Dentarie",
+        "description": [
+          "Riacquista un sorriso completo e sicuro e una piena funzione masticatoria con le nostre protesi moderne e confortevoli. Le protesi sono apparecchi rimovibili che sostituiscono i denti mancanti e i tessuti circostanti. Presso LUNAI, ci concentriamo sulla fornitura di protesi che non solo sembrano naturali, ma offrono anche una vestibilità sicura e confortevole.",
+          "Offriamo diversi tipi di protesi per soddisfare le tue esigenze. Le protesi complete (o totali) vengono utilizzate quando mancano tutti i denti di un'arcata. Le protesi parziali vengono utilizzate quando rimangono alcuni denti naturali e sono tenute in posizione da ganci che si attaccano ai denti esistenti.",
+          "Per una maggiore stabilità, offriamo anche protesi supportate da impianti. Queste protesi si agganciano a impianti dentali che sono stati inseriti chirurgicamente nell'osso mascellare, fornendo una vestibilità molto più sicura e stabile che elimina lo scivolamento e migliora la potenza di masticazione.",
+          "Il nostro team si prende meticolosamente cura della progettazione e della fabbricazione delle tue protesi personalizzate, assicurando che ripristinino la tua struttura facciale, supportino le tue labbra e guance e ti permettano di mangiare, parlare e sorridere con rinnovata fiducia."
+        ],
+        "dentalSubCategoryTitle": "PROTESI"
+      },
+      "fixed-braces": {
+        "name": "Apparecchi Fissi",
+        "description": [
+          "Ottieni un sorriso perfettamente dritto e un morso sano e funzionale con gli apparecchi fissi tradizionali. Questo trattamento ortodontico collaudato nel tempo è molto efficace per correggere una vasta gamma di problemi complessi, tra cui affollamento grave, spaziatura e disallineamenti del morso come overbite, underbite e crossbite.",
+          "Gli apparecchi fissi sono costituiti da brackets che vengono incollati sulla parte anteriore di ogni dente e un filo ad arco che li collega. Effettuando regolazioni periodiche al filo, il nostro ortodontista può applicare una pressione delicata e costante per guidare gradualmente i denti nel loro allineamento ideale.",
+          "Presso LUNAI, i nostri apparecchi moderni sono più comodi ed esteticamente gradevoli che mai. Offriamo apparecchi metallici tradizionali così come apparecchi in ceramica trasparente, che sono meno evidenti e una scelta popolare per adulti e adolescenti attenti all'aspetto.",
+          "Gli apparecchi fissi rimangono uno dei modi più affidabili e precisi per ottenere un sorriso bello, sano e stabile per pazienti di tutte le età."
+        ],
+        "dentalSubCategoryTitle": "ORTODONZIA"
+      },
+      "invisalign": {
+        "name": "Invisalign",
+        "description": [
+          "Raddrizza i tuoi denti in modo discreto e confortevole con gli allineatori trasparenti Invisalign. Questo rivoluzionario sistema ortodontico utilizza una serie di mascherine in plastica su misura e praticamente invisibili per spostare gradualmente e delicatamente i tuoi denti nella loro posizione desiderata, senza la necessità di brackets o fili metallici.",
+          "Il processo Invisalign inizia con una scansione digitale 3D dei tuoi denti, da cui viene creato un piano di trattamento preciso. Sarai in grado di vedere una rappresentazione virtuale del tuo percorso di trattamento e il risultato finale prima ancora di iniziare. Indosserai ogni set di allineatori per circa 1-2 settimane prima di passare al set successivo della serie.",
+          "Un vantaggio chiave di Invisalign è che gli allineatori sono rimovibili. Ciò significa che puoi toglierli per mangiare, bere, spazzolare e passare il filo interdentale, consentendo una migliore igiene orale e nessuna restrizione dietetica durante il trattamento.",
+          "Invisalign è una scelta popolare ed altamente efficace per adulti e adolescenti che cercano di correggere affollamenti, spaziature e problemi di morso da lievi a moderati senza l'aspetto degli apparecchi tradizionali."
+        ],
+        "dentalSubCategoryTitle": "ORTODONZIA"
+      },
+      "removable-appliances": {
+        "name": "Apparecchi Rimovibili",
+        "description": [
+          "Gli apparecchi ortodontici rimovibili svolgono un ruolo cruciale sia nel trattamento attivo che nella fase di contenzione dell'ortodonzia. Questi dispositivi su misura sono progettati per essere inseriti e rimossi dalla bocca dal paziente e servono a una varietà di scopi.",
+          "Gli apparecchi attivi, come le placche di espansione o gli allineatori a molla, possono essere utilizzati per ottenere movimenti dentali specifici e limitati, spesso in pazienti più giovani durante il trattamento intercettivo precoce. Possono aiutare ad allargare l'arcata dentale o a correggere lievi disallineamenti.",
+          "Il tipo più comune di apparecchio rimovibile è il retainer. Dopo aver completato il trattamento con apparecchi ortodontici o Invisalign, un retainer è essenziale per mantenere il tuo sorriso appena raddrizzato. Mantiene i denti nelle loro nuove posizioni mentre l'osso e i legamenti circostanti si stabilizzano, impedendo loro di tornare alle loro vecchie posizioni.",
+          "Presso LUNAI, forniamo vari tipi di apparecchi rimovibili resistenti e confortevoli, realizzati su misura per garantire che siano efficaci e facili da indossare come prescritto."
+        ],
+        "dentalSubCategoryTitle": "ORTODONZIA"
+      },
+      "infected-teeth-treatment": {
+        "name": "Trattamento di Denti Infetti (Cura Canalare)",
+        "description": [
+          "Salva un dente gravemente infetto o infiammato dall'estrazione con il nostro trattamento delicato ed efficace per i denti infetti, più comunemente noto come terapia canalare. Questa procedura cruciale è necessaria quando il tessuto molle all'interno del dente, chiamato polpa, si infetta a causa di carie profonda, procedure dentali ripetute o una crepa nel dente.",
+          "Se non trattata, una polpa infetta può causare forte dolore, un ascesso e infine la perdita del dente. La terapia canalare comporta la rimozione accurata della polpa infetta o infiammata dall'interno del dente e dei suoi canali radicolari.",
+          "Una volta rimossa la polpa, l'interno del dente viene meticolosamente pulito, disinfettato e quindi riempito e sigillato con un materiale simile alla gomma chiamato guttaperca. La procedura viene eseguita in anestesia locale e in genere non è più scomoda di un'otturazione normale.",
+          "Dopo una cura canalare, il dente non è più vitale, ma è ancora funzionale. Di solito si consiglia di posizionare una corona sul dente per proteggerlo dalla frattura e ripristinarlo alla piena funzione. Questa terapia è uno strumento vitale per alleviare il dolore dentale e preservare i tuoi denti naturali."
+        ],
+        "dentalSubCategoryTitle": "TERAPIA"
+      },
+      "tartar-cleaning": {
+        "name": "Pulizia del Tartaro",
+        "description": [
+          "Mantieni un'ottima salute orale e previeni le malattie dentali con una pulizia professionale del tartaro, nota anche come detartrasi e lucidatura. Questa è una parte fondamentale della cura dentale preventiva ed è essenziale per mantenere sani i tuoi denti e le tue gengive per tutta la vita.",
+          "Anche con un'eccellente spazzolatura e uso del filo interdentale a casa, la placca può accumularsi e indurirsi in una sostanza chiamata tartaro. Il tartaro non può essere rimosso con un normale spazzolino da denti e fornisce una superficie ruvida per l'accumulo di ancora più placca, portando a carie e malattie gengivali (gengivite).",
+          "Durante una pulizia professionale, i nostri abili igienisti dentali utilizzano strumenti specializzati, come gli ablatori a ultrasuoni, per rimuovere delicatamente ed efficacemente tartaro e placca sopra e sotto il bordo gengivale. Dopo la detartrasi, i denti vengono lucidati per rimuovere le macchie superficiali e creare una superficie liscia che aiuta a prevenire la futura formazione di placca.",
+          "Le pulizie regolari del tartaro, tipicamente raccomandate ogni sei mesi, sono la tua migliore difesa contro i problemi dentali e sono la chiave per mantenere un sorriso fresco, sano e bello."
+        ],
+        "dentalSubCategoryTitle": "TERAPIA"
+      },
+      "tooth-fillings": {
+        "name": "Otturazioni Dentali",
+        "description": [
+          "Un'otturazione dentale è una delle procedure odontoiatriche più comuni, utilizzata per restaurare un dente danneggiato dalla carie. Quando si forma una carie, un'otturazione impedisce alla carie di progredire ulteriormente e ripristina la forza, la funzione e la forma del dente.",
+          "Presso LUNAI, utilizziamo esclusivamente resina composita moderna del colore del dente per le nostre otturazioni. A differenza delle vecchie otturazioni in amalgama d'argento, le otturazioni in composito sono prive di mercurio e si legano direttamente al dente, il che fornisce un migliore supporto e richiede una minore rimozione della struttura sana del dente.",
+          "La procedura prevede la rimozione della porzione cariata del dente, la pulizia dell'area interessata e quindi il riempimento della cavità con il materiale composito a strati. Una luce speciale viene utilizzata per indurire ogni strato, e l'otturazione viene quindi modellata e lucidata per adattarsi al contorno del dente e garantire un morso corretto.",
+          "Poiché le otturazioni in composito possono essere abbinate alla tonalità esatta dei tuoi denti naturali, forniscono un risultato duraturo ed esteticamente gradevole che è praticamente invisibile nel tuo sorriso."
+        ],
+        "dentalSubCategoryTitle": "TERAPIA"
+      },
+      "apical-resection": {
+        "name": "Apicectomia",
+        "description": [
+          "Una resezione apicale, nota anche come apicectomia o chirurgia dell'apice radicolare, è una procedura chirurgica specializzata eseguita per trattare un'infezione o un'infiammazione persistente all'estremità (apice) della radice di un dente. Questa procedura è tipicamente raccomandata quando un trattamento canalare standard non è riuscito a risolvere il problema o non è possibile.",
+          "Durante un'apicectomia, il nostro chirurgo dentale pratica una piccola incisione nel tessuto gengivale per esporre l'osso sottostante e la punta della radice. Il tessuto infetto intorno alla radice viene rimosso, insieme all'estremità stessa della radice. Viene quindi posizionata una piccola otturazione all'estremità della radice per sigillare il canale e prevenire la reinfezione.",
+          "Questa procedura microchirurgica viene eseguita in anestesia locale con grande precisione. È uno strumento vitale per salvare un dente che altrimenti dovrebbe essere estratto, permettendogli di funzionare per molti altri anni.",
+          "L'apicectomia è un trattamento di ultima istanza che può risolvere efficacemente un'infezione cronica e preservare la struttura naturale del dente quando altre opzioni non sono praticabili."
+        ],
+        "dentalSubCategoryTitle": "CHIRURGIA"
+      },
+      "dental-implants": {
+        "name": "Impianti Dentali",
+        "description": [
+          "Sostituisci permanentemente i denti mancanti e ripristina il tuo sorriso al suo pieno splendore con gli Impianti Dentali. Ampiamente considerati lo standard di riferimento nella sostituzione dei denti, gli impianti dentali forniscono una soluzione forte, stabile e duratura che appare, si sente e funziona proprio come un dente naturale.",
+          "Un impianto è un piccolo perno in titanio biocompatibile che viene inserito chirurgicamente nell'osso mascellare, dove funge da nuova radice per il dente mancante. Nel corso di alcuni mesi, l'impianto si fonde con l'osso mascellare in un processo chiamato osteointegrazione, creando una base incredibilmente forte.",
+          "Una volta integrato, un pezzo di collegamento chiamato abutment viene attaccato all'impianto e una corona su misura viene posizionata sopra. Il risultato finale è una sostituzione perfetta e permanente che non scivola o fa clic come le protesi e non richiede di alterare i denti sani adiacenti come un ponte.",
+          "Gli impianti dentali possono essere utilizzati per sostituire un singolo dente, più denti o anche per supportare un'intera arcata di protesi. Aiutano a preservare la salute dell'osso mascellare e a mantenere la struttura facciale, rendendoli l'opzione di sostituzione dei denti più avanzata e vantaggiosa disponibile."
+        ],
+        "dentalSubCategoryTitle": "CHIRURGIA"
+      },
+      "tooth-extraction": {
+        "name": "Estrazione Dentale",
+        "description": [
+          "Sebbene il nostro obiettivo primario sia sempre quello di salvare un dente naturale, a volte un'estrazione dentale è la linea d'azione necessaria per proteggere la tua salute orale generale. Presso LUNAI, eseguiamo le estrazioni dentali con la massima cura e delicatezza, assicurando che il tuo comfort sia la nostra massima priorità durante tutta la procedura.",
+          "Un'estrazione può essere necessaria per diversi motivi: un dente può essere troppo gravemente cariato o danneggiato per essere riparato; una malattia gengivale avanzata può aver distrutto l'osso di supporto; un dente può essere incluso (come molti denti del giudizio); o potrebbe essere necessario rimuovere i denti per creare spazio per il trattamento ortodontico.",
+          "Offriamo sia estrazioni semplici per denti visibili in bocca sia estrazioni chirurgiche per denti rotti sotto la linea gengivale o inclusi. La procedura viene eseguita in anestesia locale per intorpidire completamente l'area.",
+          "Il nostro team fornisce istruzioni post-operatorie dettagliate per garantire un recupero rapido e senza intoppi. Possiamo anche discutere eccellenti opzioni di sostituzione dei denti, come impianti dentali o ponti, per ripristinare il tuo sorriso dopo la guarigione."
+        ],
+        "dentalSubCategoryTitle": "CHIRURGIA"
+      },
+      "milk-teeth-treatment": {
+        "name": "Trattamento dei Denti da Latte",
+        "description": [
+          "Stabilire una base positiva per una vita di buona salute orale inizia con un'eccellente cura dei denti primari (da latte). I nostri servizi di pedodonzia presso LUNAI si concentrano sulla fornitura di cure dentali delicate, compassionevoli e divertenti per i bambini in un ambiente accogliente.",
+          "La salute dei denti da latte è cruciale. Svolgono un ruolo vitale nella corretta masticazione e nutrizione, nello sviluppo del linguaggio e, cosa più importante, mantengono lo spazio per l'eruzione dei denti permanenti nelle loro posizioni corrette. La carie non trattata nei denti da latte può portare a dolore, infezioni e problemi con i denti permanenti in via di sviluppo.",
+          "I nostri trattamenti per i denti da latte includono pulizie delicate, otturazioni color dente per le carie, terapia pulpare (pulpotomia) per salvare un dente infetto e corone in acciaio inossidabile o estetiche per proteggere un dente indebolito. Ci sforziamo di rendere ogni visita un'esperienza positiva per prevenire l'ansia dentale.",
+          "Il nostro team è dedicato a educare sia i bambini che i genitori sulle corrette tecniche di igiene orale per garantire un sorriso sano per gli anni a venire."
+        ],
+        "dentalSubCategoryTitle": "PEDODONZIA (Odontoiatria Pediatrica)"
+      },
+      "tooth-fluoridation": {
+        "name": "Fluorizzazione dei Denti",
+        "description": [
+          "Rafforza i denti di tuo figlio e dagli una potente difesa contro la carie con la fluorizzazione professionale dei denti. Il fluoro è un minerale naturale che ha dimostrato di rendere lo smalto dei denti più resistente agli attacchi acidi dei batteri della placca e degli zuccheri che causano la carie.",
+          "Un trattamento professionale al fluoro fornisce una concentrazione di fluoro molto più elevata di quella che si trova nel dentifricio o nell'acqua. Il trattamento è rapido, indolore e sicuro. Comporta l'applicazione di un gel, schiuma o vernice al fluoro direttamente sui denti dopo una pulizia.",
+          "Questa semplice misura preventiva può ridurre significativamente il rischio che tuo figlio sviluppi carie, specialmente sulle superfici masticatorie dei molari, che sono le più soggette a carie. È una pietra miliare dell'odontoiatria preventiva pediatrica.",
+          "Raccomandiamo trattamenti al fluoro come parte degli appuntamenti regolari di controllo e pulizia di tuo figlio per aiutare a mantenere il suo sorriso sano e forte."
+        ],
+        "dentalSubCategoryTitle": "PEDODONZIA (Odontoiatria Pediatrica)"
+      },
+      "tooth-sealants": {
+        "name": "Sigillanti Dentali",
+        "description": [
+          "Proteggi il sorriso di tuo figlio dalla carie con i Sigillanti Dentali. Si tratta di un trattamento preventivo semplice ma molto efficace che fornisce uno scudo protettivo per i denti posteriori (molari e premolari), dove si verificano la maggior parte delle carie infantili.",
+          "Le superfici masticatorie di questi denti posteriori hanno solchi e fessure naturali che sono difficili da pulire con uno spazzolino da denti. Le particelle di cibo e i batteri possono rimanere intrappolati in questi solchi, portando alla carie. Un sigillante è un sottile rivestimento di plastica che viene applicato su queste superfici masticatorie, \"sigillando\" efficacemente la placca e il cibo.",
+          "Il processo di applicazione è rapido e indolore. Il dente viene pulito e asciugato e il materiale sigillante liquido viene applicato. Si indurisce in pochi secondi, spesso con l'aiuto di una speciale luce polimerizzante. Non comporta alcuna perforazione o disagio.",
+          "I sigillanti possono fornire protezione per molti anni e sono una parte fondamentale della prevenzione della carie nei bambini e negli adolescenti, contribuendo a garantire una vita di denti sani."
+        ],
+        "dentalSubCategoryTitle": "PEDODONZIA (Odontoiatria Pediatrica)"
+      }
+    }
+  },
+  "blogPosts": {
+    "1": {
+      "title": "La Guida Definitiva alla Cura della Pelle per un Bagliore Duraturo",
+      "excerpt": "Scopri i consigli degli esperti su come costruire una routine di cura della pelle che combatte l'invecchiamento, migliora la luminosità e mantiene la pelle sana e bella."
+    },
+    "2": {
+      "title": "Botox vs. Filler: Qual è la Scelta Giusta per Te?",
+      "excerpt": "Un'analisi completa di due dei nostri trattamenti più popolari. Comprendi le differenze e scopri qual è il migliore per i tuoi obiettivi estetici."
+    },
+    "3": {
+      "title": "La Strada verso il Recupero: Cosa Aspettarsi Dopo la Procedura",
+      "excerpt": "La cura post-trattamento è fondamentale per risultati ottimali. Scopri il processo di recupero per le nostre procedure chiave e come garantire un percorso senza intoppi."
+    },
+    "4": {
+      "title": "Un Sorriso più Luminoso: I Benefici dello Sbiancamento Dentale Professionale",
+      "excerpt": "Esplora come lo sbiancamento dentale professionale può migliorare drasticamente il tuo sorriso e aumentare la tua fiducia, e in cosa consiste la procedura."
+    },
+    "5": {
+      "title": "Modellamento del Corpo Non Invasivo: Una Rivoluzione nell'Estetica",
+      "excerpt": "Scopri le ultime tecnologie non chirurgiche che possono aiutarti a raggiungere la forma del corpo desiderata senza i tempi di inattività della chirurgia."
+    },
+    "6": {
+      "title": "Mantenere i Risultati: Consigli sullo Stile di Vita per una Bellezza a Lungo Termine",
+      "excerpt": "Il tuo percorso estetico non finisce quando lasci la nostra clinica. Scopri consigli su dieta, esercizio fisico e stile di vita per prolungare e migliorare i tuoi risultati."
+    }
   }
 }
 
