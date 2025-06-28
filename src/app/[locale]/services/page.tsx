@@ -45,7 +45,7 @@ export default function ServicesPage() {
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <CardDescription className="text-foreground/90">
-                      {service.description}
+                      {Array.isArray(service.description) ? service.description[0] : service.description}
                     </CardDescription>
                   </CardContent>
                   <CardFooter>

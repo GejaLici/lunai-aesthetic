@@ -5,7 +5,7 @@ import { Stethoscope, Activity, Smile } from 'lucide-react';
 export type ServiceItem = {
   id: string;
   name: string;
-  description: string;
+  description: string[];
   imageBefore: string;
   imageAfter: string;
   dataAiHint: string;
@@ -27,31 +27,343 @@ export const serviceData: ServiceCategory[] = [
     icon: Stethoscope,
     services: [
       // Surgical
-      { id: 'rhinoplasty', name: 'Nose Reshaping (Rhinoplasty)', description: 'Achieve facial harmony and improve your breathing with our expert Rhinoplasty (Nose Reshaping) surgery. Our board-certified surgeons specialize in both cosmetic and functional nose jobs, meticulously sculpting the nose to complement your facial features while addressing structural issues. Whether you\'re looking to refine the nasal tip, remove a dorsal hump, or correct a deviated septum, our personalized approach ensures natural-looking, beautiful results.', imageBefore: '/images/rhinoplasty-before.png', imageAfter: '/images/rhinoplasty-after.png', dataAiHint: 'woman nose', serviceType: 'operation' },
-      { id: 'otoplasty', name: 'Ear Reshaping (Otoplasty)', description: 'Feel more confident with Otoplasty, or ear reshaping surgery, designed to correct prominent or misshapen ears. This procedure is ideal for both adults and children, setting protruding ears closer to the head or reducing the size of large ears. Our skilled surgeons create natural-looking contours, bringing balance to your facial features and enhancing your self-esteem.', imageBefore: '/images/otoplasty-before.png', imageAfter: '/images/otoplasty-after.png', dataAiHint: 'woman ear', serviceType: 'operation' },
-      { id: 'blepharoplasty', name: 'Blepharoplasty (Eyelid Surgery)', description: 'Refresh and rejuvenate your appearance with Blepharoplasty, or eyelid surgery. This procedure targets sagging upper eyelids and puffy under-eye bags by removing excess skin and fat. The result is a brighter, more alert, and youthful look, smoothing away tired expressions and restoring a vibrant appearance to the most expressive area of your face.', imageBefore: '/images/blepharoplasty-before.png', imageAfter: '/images/blepharoplasty-after.png', dataAiHint: 'woman eyes', serviceType: 'operation' },
-      { id: 'facelift', name: 'Facelift', description: 'Turn back the clock with a comprehensive Facelift at LUNAI. Our surgical facelift procedure addresses deep wrinkles, jowls, and sagging skin in the mid-to-lower face and neck. By tightening underlying muscles and repositioning facial tissues, we deliver transformative yet natural-looking results, restoring a firmer, more youthful contour to your profile.', imageBefore: '/images/facelift-before.png', imageAfter: '/images/facelift-after.png', dataAiHint: 'woman profile', serviceType: 'operation' },
-      { id: 'chin-reshaping', name: 'Chin Reshaping', description: 'Define your profile and achieve superior facial balance with Chin Reshaping surgery (Genioplasty). Whether you desire augmentation to correct a recessed chin or reduction for a more prominent one, our surgeons customize the procedure to create a result that is in perfect proportion with your other facial features, enhancing your overall harmony.', imageBefore: '/images/chin-reshaping-before.png', imageAfter: '/images/chin-reshaping-after.png', dataAiHint: 'woman chin', serviceType: 'operation' },
-      { id: 'brow-lift', name: 'Brow Lift', description: 'Elevate your look with a Brow Lift, a surgical procedure designed to correct a heavy, sagging brow and reduce deep forehead lines. By raising the eyebrows to a more youthful position, this procedure opens up the eye area, creating a refreshed, alert, and more pleasant appearance while smoothing the forehead.', imageBefore: '/images/brow-lift-before.png', imageAfter: '/images/brow-lift-after.png', dataAiHint: 'woman forehead', serviceType: 'operation' },
-      { id: 'hair-transplant', name: 'Hair Transplant', description: 'Reclaim a full head of hair with our advanced Hair Transplant surgery. Using state-of-the-art techniques like FUE (Follicular Unit Extraction), we harvest healthy hair follicles and meticulously implant them in balding or thinning areas. This procedure provides a permanent, natural-looking solution to hair loss for both men and women.', imageBefore: '/images/hair-transplant-before.png', imageAfter: '/images/hair-transplant-after.png', dataAiHint: 'man hair', serviceType: 'operation' },
-      { id: 'beard-transplant', name: 'Beard Transplant', description: 'Achieve the full, well-defined beard you\'ve always wanted with a Beard Transplant. This specialized procedure uses your own hair follicles, typically from the scalp, and transplants them to the face to create a denser, more uniform beard. It\'s the ideal solution for patchy or thin facial hair.', imageBefore: '/images/beard-transplant-before.png', imageAfter: '/images/beard-transplant-after.png', dataAiHint: 'man beard', serviceType: 'operation' },
-      { id: 'eyebrow-transplant', name: 'Eyebrow Transplant', description: 'Frame your face perfectly with an Eyebrow Transplant. Ideal for those with naturally thin brows or hair loss due to over-plucking or medical conditions, this procedure meticulously places individual hair follicles to create fuller, beautifully shaped eyebrows that look completely natural.', imageBefore: '/images/eyebrow-transplant-before.png', imageAfter: '/images/eyebrow-transplant-after.png', dataAiHint: 'woman eyebrow', serviceType: 'operation' },
+      { 
+        id: 'rhinoplasty', 
+        name: 'Nose Reshaping (Rhinoplasty)', 
+        description: [
+          'Rhinoplasty, commonly known as a "nose job," is a sophisticated surgical procedure designed to improve the aesthetic appearance of the nose and correct functional breathing issues. Whether you are concerned about a dorsal hump, a wide or crooked bridge, an undefined tip, or nostril size, rhinoplasty can bring your nose into better harmony with your other facial features. At LUNAI, we also address structural defects, such as a deviated septum, to enhance airflow and overall quality of life.',
+          'Our philosophy at LUNAI centers on creating results that are both beautiful and exceptionally natural. Our board-certified plastic surgeons combine technical precision with an artistic eye to sculpt a nose that complements your unique facial structure. During your comprehensive consultation, we use advanced imaging technology to simulate potential outcomes, ensuring we align with your vision. We believe in a collaborative approach, tailoring every aspect of the procedure to your specific goals and anatomy.',
+          'Ideal candidates for rhinoplasty are individuals who are in good general health, are non-smokers, and have realistic expectations about the outcome. If you feel your nose is disproportionate to your face, or if you experience difficulty breathing, you may be a perfect candidate. The procedure can be performed once facial growth is complete, typically around the mid-to-late teenage years.',
+          'The surgery is performed under general anesthesia, and recovery typically involves a week of downtime with a splint. While initial swelling subsides within a few weeks, the final, refined results of your rhinoplasty will continue to emerge over the course of a year. Our dedicated team provides comprehensive post-operative care and support to ensure your recovery is as smooth and comfortable as possible.'
+        ], 
+        imageBefore: '/images/rhinoplasty-before.png', 
+        imageAfter: '/images/rhinoplasty-after.png', 
+        dataAiHint: 'woman nose', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'otoplasty', 
+        name: 'Ear Reshaping (Otoplasty)', 
+        description: [
+          'Otoplasty, or ear reshaping surgery, is a procedure designed to correct the size, shape, or position of the ears. It is most commonly performed to address prominent ears that stick out too far from the head, but can also correct overly large ears, constricted ears ("lop ear"), or dissatisfaction with a previous surgery. This procedure can have a profound impact on self-confidence for both adults and children.',
+          'At LUNAI, our skilled surgeons approach otoplasty with a focus on creating natural-looking contours that bring balance and proportion to the face. For children, the procedure can be performed after the age of five, when the ears have reached most of their adult size. For adults, there is no upper age limit. We take care to place incisions discreetly in the natural creases behind the ear to minimize visible scarring.',
+          'The surgery involves sculpting the cartilage of the ear to create a more desirable shape and pinning it back closer to the head with internal, permanent sutures. The procedure is typically performed on an outpatient basis under local anesthesia with sedation or general anesthesia, depending on the patient\'s age and the complexity of the surgery.',
+          'Recovery from otoplasty is relatively quick. A protective dressing is worn for a few days, followed by a supportive headband worn at night for several weeks to protect the ears as they heal. Most patients can return to work or school within one week, feeling renewed confidence in their appearance.'
+        ], 
+        imageBefore: '/images/otoplasty-before.png', 
+        imageAfter: '/images/otoplasty-after.png', 
+        dataAiHint: 'woman ear', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'blepharoplasty', 
+        name: 'Blepharoplasty (Eyelid Surgery)', 
+        description: [
+          'Blepharoplasty, or eyelid surgery, is a transformative procedure that rejuvenates the appearance of the eyes by addressing sagging skin, excess fat, and fine lines. It can be performed on the upper eyelids, lower eyelids, or both, effectively correcting issues like drooping upper lids that can impair vision and puffy under-eye bags that create a perpetually tired look.',
+          'Our expert surgeons perform blepharoplasty with meticulous precision to restore a brighter, more alert, and youthful appearance. For upper eyelid surgery, an incision is hidden within the natural eyelid crease. For lower eyelid surgery, the incision can often be made inside the lower eyelid (transconjunctival approach), leaving no visible scar, or just below the lash line. Excess skin and fat are removed or repositioned to create a smooth, refreshed contour.',
+          'Good candidates for eyelid surgery are healthy individuals who are bothered by the signs of aging around their eyes. The procedure can dramatically improve one\'s appearance and may even improve vision in cases where sagging upper eyelid skin obstructs the field of view.',
+          'Recovery involves some swelling and bruising, which typically subsides within 10 to 14 days. The results are long-lasting, helping you look more rested and vibrant for years to come. Our team at LUNAI ensures you are comfortable and well-informed throughout the entire process.'
+        ], 
+        imageBefore: '/images/blepharoplasty-before.png', 
+        imageAfter: '/images/blepharoplasty-after.png', 
+        dataAiHint: 'woman eyes', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'facelift', 
+        name: 'Facelift', 
+        description: [
+          'A facelift, or rhytidectomy, is the gold standard for comprehensively addressing significant signs of facial aging. This surgical procedure targets deep wrinkles, jowls, sagging skin in the mid-to-lower face, and loose skin on the neck ("turkey neck"). It provides a more dramatic and long-lasting result than non-surgical alternatives by addressing the underlying structures of the face.',
+          'At LUNAI, our approach to the facelift is to deliver transformative yet completely natural-looking results. We avoid the "windswept" look by focusing on the deeper facial tissues, tightening the underlying muscle layer (the SMAS) and repositioning facial fat pads before redraping the skin. Incisions are artfully placed within the hairline and the natural contours around the ear to be virtually unnoticeable once healed.',
+          'Ideal candidates for a facelift are typically in their 40s to 70s, are in good health, and wish to address moderate to severe facial aging. A facelift can be combined with other procedures like a brow lift, blepharoplasty, or fat grafting for a complete facial rejuvenation.',
+          'Recovery from a facelift involves about two weeks of initial downtime. While you will see a significant improvement right away, the final results will continue to refine over several months as swelling completely resolves. A well-performed facelift at LUNAI can take years off your appearance, restoring a firmer, more youthful contour that looks entirely your own.'
+        ], 
+        imageBefore: '/images/facelift-before.png', 
+        imageAfter: '/images/facelift-after.png', 
+        dataAiHint: 'woman profile', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'chin-reshaping', 
+        name: 'Chin Reshaping', 
+        description: [
+          'Chin reshaping surgery, known as genioplasty or mentoplasty, is a procedure designed to improve the proportions of the face by altering the size and shape of the chin. A well-defined chin is a cornerstone of an attractive facial profile for both men and women. This surgery can correct a recessed chin (microgenia), a protruding chin, or an asymmetric chin, bringing it into harmony with the nose, forehead, and other facial features.',
+          'Our surgeons at LUNAI offer two primary techniques for chin augmentation: the use of a custom-fit chin implant or a sliding genioplasty, which involves surgically moving the chin bone itself. Chin reduction is also possible by carefully sculpting the bone. The procedure is tailored to your unique anatomy and aesthetic goals, discussed in detail during your consultation.',
+          'Chin reshaping can have a powerful effect on the overall facial balance. It can strengthen a jawline, make a prominent nose appear smaller, and provide a more youthful neck contour. Candidates should be in good health and have finished their facial growth.',
+          'The surgery is often performed through a small incision inside the mouth or discreetly under the chin. Recovery typically takes about one to two weeks, with most swelling resolving in the first month. The result is a permanent improvement in your facial profile and harmony.'
+        ], 
+        imageBefore: '/images/chin-reshaping-before.png', 
+        imageAfter: '/images/chin-reshaping-after.png', 
+        dataAiHint: 'woman chin', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'brow-lift', 
+        name: 'Brow Lift', 
+        description: [
+          'A brow lift, also known as a forehead lift, is a surgical procedure that revitalizes the upper face by correcting a heavy, sagging brow and reducing deep horizontal forehead lines. As we age, the brow can descend, creating a tired, angry, or sad appearance and contributing to hooding of the upper eyelids. A brow lift raises the eyebrows to a more alert and youthful position.',
+          'At LUNAI, we utilize modern, minimally invasive endoscopic techniques for the brow lift whenever possible. This involves small incisions hidden within the hairline, through which we can lift and reposition the forehead tissues. This approach minimizes scarring and shortens recovery time compared to traditional methods. The result is a smoother forehead and a more open, refreshed eye area.',
+          'A brow lift is an excellent option for individuals with low or sagging brows, deep forehead furrows, or frown lines between the eyebrows. It is often performed in conjunction with a facelift or eyelid surgery for a more complete rejuvenation of the upper face.',
+          'Downtime is typically about one week, with bruising and swelling being the most common side effects. A brow lift provides long-lasting results, helping you look naturally refreshed and more approachable for many years.'
+        ], 
+        imageBefore: '/images/brow-lift-before.png', 
+        imageAfter: '/images/brow-lift-after.png', 
+        dataAiHint: 'woman forehead', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'hair-transplant', 
+        name: 'Hair Transplant', 
+        description: [
+          'Hair loss can be a distressing experience for both men and women. At LUNAI, we offer a permanent, natural-looking solution with our advanced hair transplant surgery. This procedure involves harvesting healthy, genetically resilient hair follicles from a donor area (typically the back of the scalp) and meticulously implanting them into balding or thinning areas.',
+          'We specialize in the Follicular Unit Extraction (FUE) technique, a state-of-the-art method that involves extracting individual follicular units one by one. This approach avoids the linear scar associated with older methods and allows for a faster, more comfortable recovery. Our experienced team uses artistic precision to place each graft at the correct angle and density to mimic natural hair growth patterns.',
+          'Hair transplantation is a viable solution for male and female pattern baldness, as well as for restoring hair to areas with scarring. Candidates should have a sufficient supply of healthy donor hair to achieve their desired density.',
+          'The transplanted hair will shed in the first few weeks, which is a normal part of the process. New, permanent hair will begin to grow in 3-4 months, with the final, full results visible after about 12-18 months. Reclaim a full head of hair and your confidence with a LUNAI hair transplant.'
+        ], 
+        imageBefore: '/images/hair-transplant-before.png', 
+        imageAfter: '/images/hair-transplant-after.png', 
+        dataAiHint: 'man hair', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'beard-transplant', 
+        name: 'Beard Transplant', 
+        description: [
+          'A full, well-defined beard is a symbol of masculinity and style for many men. For those struggling with patchy, thin, or non-existent facial hair, a beard transplant offers a permanent solution. This specialized procedure allows you to achieve the exact beard style you desire, from a full beard to a goatee or refined sideburns.',
+          'The process is similar to a hair transplant for the scalp. We use the FUE (Follicular Unit Extraction) technique to harvest individual hair follicles from the back of your head. These follicles are then meticulously implanted into the beard area, paying close attention to the angle and direction of growth to ensure a completely natural-looking result.',
+          'A beard transplant is ideal for men who have genetic patchiness, scarring that prevents hair growth, or who simply wish to enhance the density and shape of their existing beard. It\'s a highly personalized procedure tailored to your facial features and desired outcome.',
+          'After the transplant, the new hairs will fall out before beginning to regrow permanently after 3-4 months. The final result is a natural, dense beard that you can shave, trim, and style just like any other facial hair.'
+        ], 
+        imageBefore: '/images/beard-transplant-before.png', 
+        imageAfter: '/images/beard-transplant-after.png', 
+        dataAiHint: 'man beard', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'eyebrow-transplant', 
+        name: 'Eyebrow Transplant', 
+        description: [
+          'Eyebrows are a critical feature that frames the face and conveys expression. If you have thin, sparse, or non-existent eyebrows due to genetics, over-plucking, or medical conditions, an eyebrow transplant can permanently restore them. This procedure creates fuller, beautifully shaped eyebrows that look entirely natural.',
+          'Using the precise FUE technique, our specialists harvest single hair follicles from the scalp (usually from behind the ears where hair is finer). Each follicle is then carefully implanted one by one into the brow area, following the natural direction and angulation of eyebrow hair growth. This artistic precision is key to achieving a realistic and aesthetically pleasing result.',
+          'An eyebrow transplant is a delicate procedure that requires a high degree of skill and artistry. It is an excellent solution for anyone wanting to achieve permanently full and defined brows without the daily hassle of makeup.',
+          'Similar to other hair transplants, the transplanted hairs will shed before regrowing over the next several months. The result is a living, growing brow that you can groom and shape as you wish, perfectly framing your eyes and enhancing your facial features.'
+        ], 
+        imageBefore: '/images/eyebrow-transplant-before.png', 
+        imageAfter: '/images/eyebrow-transplant-after.png', 
+        dataAiHint: 'woman eyebrow', 
+        serviceType: 'operation' 
+      },
       // Non-Surgical
-      { id: 'non-surgical-rhinoplasty', name: 'Nose Reshaping (Non-surgical)', description: 'Instantly refine your nasal profile without downtime with a Non-Surgical Rhinoplasty, or "liquid nose job." Using precisely placed hyaluronic acid fillers, we can smooth out bumps, lift the nasal tip, and improve symmetry. This 15-minute procedure offers a safe and effective alternative to surgical rhinoplasty for subtle enhancements.', imageBefore: '/images/non-surgical-rhinoplasty-before.png', imageAfter: '/images/non-surgical-rhinoplasty-after.png', dataAiHint: 'woman nose', serviceType: 'treatment' },
-      { id: 'dark-circles-treatment', name: 'Dark Circles Treatment', description: 'Look refreshed and awake with our specialized Dark Circles Treatment. We address the root cause of under-eye shadows, whether it\'s volume loss, pigmentation, or thin skin. Our multi-modal approach may include tear trough fillers, chemical peels, or advanced skin therapies to restore brightness and vitality to your under-eye area.', imageBefore: '/images/dark-circles-treatment-before.png', imageAfter: '/images/dark-circles-treatment-after.png', dataAiHint: 'woman eyes', serviceType: 'treatment' },
-      { id: 'eyelids-plasma-arc', name: 'Eyelids (Plasma Arc)', description: 'Achieve a non-surgical eye lift with Plasma Arc treatment for eyelids. This innovative technology uses plasma energy to create a sublimating effect, tightening loose and crepey skin on the upper and lower eyelids. It\'s a highly effective way to reduce hooding and fine lines without the need for surgery.', imageBefore: '/images/eyelids-plasma-arc-before.png', imageAfter: '/images/eyelids-plasma-arc-after.png', dataAiHint: 'eyelid treatment', serviceType: 'treatment' },
-      { id: 'jawline-contouring', name: 'Jawline Contouring', description: 'Sculpt a sharp, defined profile with our non-surgical Jawline Contouring treatment. By strategically injecting dermal fillers along the mandible, we can create a stronger, more chiseled jawline, improve facial symmetry, and reduce the appearance of jowls. Achieve a powerful and youthful look in a single session.', imageBefore: '/images/jawline-contouring-before.png', imageAfter: '/images/jawline-contouring-after.png', dataAiHint: 'woman jawline', serviceType: 'treatment' },
-      { id: 'lip-reshaping', name: 'Lip Reshaping', description: 'Perfect your pout with custom Lip Reshaping and augmentation. Using premium hyaluronic acid fillers, we can enhance volume, define the Cupid\'s bow, correct asymmetry, and smooth vertical lip lines. Our approach focuses on creating beautiful, natural-looking results that are perfectly proportioned to your face.', imageBefore: '/images/lip-reshaping-before.png', imageAfter: '/images/lip-reshaping-after.png', dataAiHint: 'woman lips', serviceType: 'treatment' },
-      { id: 'microdermabrasion', name: 'Microdermabrasion', description: 'Reveal a brighter, smoother complexion with Microdermabrasion. This non-invasive treatment gently exfoliates the outermost layer of dead skin cells, helping to reduce the appearance of sun damage, fine lines, age spots, and acne scarring. It\'s a perfect "lunchtime" procedure for instantly refreshed and glowing skin.', imageBefore: '/images/microdermabrasion-before.png', imageAfter: '/images/microdermabrasion-after.png', dataAiHint: 'facial treatment', serviceType: 'treatment' },
-      { id: 'microneedling', name: 'Microneedling', description: 'Rejuvenate your skin from within with Microneedling, also known as collagen induction therapy. This treatment uses fine needles to create micro-channels in the skin, triggering the body\'s natural healing process and stimulating collagen and elastin production. It effectively improves skin texture, reduces scars, minimizes pores, and diminishes fine lines.', imageBefore: '/images/microneedling-before.png', imageAfter: '/images/microneedling-after.png', dataAiHint: 'skin texture', serviceType: 'treatment' },
-      { id: 'multivitamin-treatment', name: 'Multivitamin Treatment', description: 'Infuse your skin with life with our nourishing Multivitamin Treatment. This potent facial delivers a cocktail of essential vitamins, antioxidants, and minerals directly to the skin, helping to combat environmental damage, improve hydration, boost radiance, and restore a healthy, vibrant complexion.', imageBefore: '/images/multivitamin-treatment-before.png', imageAfter: '/images/multivitamin-treatment-after.png', dataAiHint: 'glowing skin', serviceType: 'treatment' },
-      { id: 'prp-for-hair', name: 'PRP for Hair', description: 'Combat hair thinning and stimulate new growth naturally with Platelet-Rich Plasma (PRP) for Hair. This cutting-edge treatment uses the healing and growth factors from your own blood, which are concentrated and injected into the scalp to nourish hair follicles, increase hair thickness, and promote a healthier hair growth cycle.', imageBefore: '/images/prp-for-hair-before.png', imageAfter: '/images/prp-for-hair-after.png', dataAiHint: 'hair treatment', serviceType: 'treatment' },
-      { id: 'prp-for-face', name: 'PRP for the Face', description: 'Harness your body\'s own healing power with a PRP for the Face, famously known as the "Vampire Facial." This treatment combines microneedling with the application of your own platelet-rich plasma to dramatically boost collagen production, improve skin tone and texture, reduce fine lines, and give your skin an unparalleled, youthful glow.', imageBefore: '/images/prp-for-face-before.png', imageAfter: '/images/prp-for-face-after.png', dataAiHint: 'facial plasma', serviceType: 'treatment' },
-      { id: 'radiofrequency-treatment', name: 'Radiofrequency Treatment', description: 'Tighten and firm sagging skin without surgery using Radiofrequency (RF) Treatment. This advanced technology gently heats the deeper layers of your skin, causing existing collagen fibers to contract and stimulating the production of new collagen and elastin. It\'s an excellent non-invasive solution for a firmer face, neck, and body.', imageBefore: '/images/radiofrequency-treatment-before.png', imageAfter: '/images/radiofrequency-treatment-after.png', dataAiHint: 'skin tightening', serviceType: 'treatment' },
-      { id: 'sulcus-filling', name: 'Sulcus Filling (Deep Wrinkle Filling)', description: 'Erase deep-set wrinkles and facial folds with our Sulcus Filling treatment. We use premium dermal fillers to specifically target and add volume to areas like the nasolabial folds (smile lines) and marionette lines, restoring a smoother, more youthful contour to your face instantly and effectively.', imageBefore: '/images/sulcus-filling-before.png', imageAfter: '/images/sulcus-filling-after.png', dataAiHint: 'wrinkle treatment', serviceType: 'treatment' },
-      { id: 'white-peeling', name: 'White Peeling', description: 'Achieve a brighter, more even skin tone with our White Peeling treatment. This specialized chemical peel is formulated to target hyperpigmentation, sun spots, and melasma, gently lifting away discolored cells to reveal a clearer, more luminous complexion underneath. It\'s a perfect choice for restoring skin radiance.', imageBefore: '/images/white-peeling-before.png', imageAfter: '/images/white-peeling-after.png', dataAiHint: 'skin peel', serviceType: 'treatment' },
-      { id: 'wrinkle-fillers', name: 'Wrinkle Fillers', description: 'Smooth away the signs of aging with our expertly administered Wrinkle Fillers. We use a range of high-quality dermal fillers to instantly soften fine lines and deep wrinkles across the face, including crow\'s feet, forehead lines, and smile lines. Our precise technique ensures natural-looking results for a refreshed appearance.', imageBefore: '/images/wrinkle-fillers-before.png', imageAfter: '/images/wrinkle-fillers-after.png', dataAiHint: 'woman face', serviceType: 'treatment' },
-      { id: 'xanthelasma-treatment', name: 'Xanthelasma Treatment (Plasma Arc)', description: 'Safely and effectively remove yellowish cholesterol deposits (xanthelasma) from around your eyelids with our non-surgical Plasma Arc treatment. This precise technology targets and removes the deposits layer by layer without the need for incisions or stitches, resulting in clear skin and a quick recovery.', imageBefore: '/images/xanthelasma-treatment-before.png', imageAfter: '/images/xanthelasma-treatment-after.png', dataAiHint: 'eyelid spots', serviceType: 'treatment' },
+      { 
+        id: 'non-surgical-rhinoplasty', 
+        name: 'Nose Reshaping (Non-surgical)', 
+        description: [
+          'A non-surgical rhinoplasty, often called a "liquid nose job" or "15-minute nose job," is a remarkable non-invasive alternative to traditional surgery. This procedure uses precisely injected hyaluronic acid-based dermal fillers to instantly reshape and refine the nose. It is an excellent option for making subtle yet impactful changes without downtime.',
+          'At LUNAI, our expert injectors can masterfully use fillers to smooth out bumps and humps on the nasal bridge, lift a droopy nasal tip, improve nasal symmetry, and create a more refined overall profile. The procedure is quick, typically taking less than 30 minutes, with minimal discomfort.',
+          'Ideal candidates are those looking for minor to moderate adjustments to their nose\'s appearance. It\'s a perfect way to "try out" a new nose shape before committing to surgery or for those who want to avoid a surgical procedure altogether. It is not suitable for reducing the size of the nose.',
+          'The results are immediate and can last from 9 to 18 months, depending on the type of filler used and the individual\'s metabolism. There is virtually no recovery time, allowing you to return to your daily activities right away with a newly enhanced profile.'
+        ], 
+        imageBefore: '/images/non-surgical-rhinoplasty-before.png', 
+        imageAfter: '/images/non-surgical-rhinoplasty-after.png', 
+        dataAiHint: 'woman nose', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'dark-circles-treatment', 
+        name: 'Dark Circles Treatment', 
+        description: [
+          'Dark under-eye circles can make you look tired, stressed, or older than you are. At LUNAI, we offer a multi-faceted approach to dark circle treatment, because we understand that the cause is often complex, stemming from volume loss, hyperpigmentation, thin skin, or a combination of factors.',
+          'Our most effective treatment for dark circles caused by volume loss is the use of tear trough fillers. By carefully injecting a smooth hyaluronic acid filler into the hollow area under the eyes, we can plump the skin, reduce the shadow effect, and create a seamless transition between the cheek and lower eyelid. This immediately brightens the area and gives a more rested appearance.',
+          'For dark circles caused by pigmentation, we may recommend a course of gentle chemical peels or advanced skin therapies to lighten the skin and improve its quality. Microneedling can also be effective in thickening the skin and boosting collagen to make underlying blood vessels less visible.',
+          'During your consultation, we will perform a thorough assessment to determine the primary cause of your dark circles and create a personalized treatment plan. Our goal is to provide a safe, effective solution that restores brightness and vitality to your under-eye area.'
+        ], 
+        imageBefore: '/images/dark-circles-treatment-before.png', 
+        imageAfter: '/images/dark-circles-treatment-after.png', 
+        dataAiHint: 'woman eyes', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'eyelids-plasma-arc', 
+        name: 'Eyelids (Plasma Arc)', 
+        description: [
+          'Achieve a non-surgical eye lift with our innovative Plasma Arc treatment. This revolutionary technology offers a highly effective alternative to traditional blepharoplasty for individuals with mild to moderate skin laxity around the eyes. It is particularly effective for tightening loose upper eyelid skin and reducing the appearance of "crow\'s feet" and fine lines.',
+          'The treatment uses a specialized device to create a tiny electrical arc of plasma energy. When this arc touches the skin\'s surface, it causes the targeted tissue to sublimate—turn directly from solid to gas. This process creates a pattern of tiny carbon crusts and triggers an immediate contraction and tightening of the skin fibers.',
+          'As the skin heals from this controlled treatment, the body’s natural healing response is activated, leading to the production of new collagen and elastin over the following weeks and months. This results in firmer, tighter, and smoother skin around the eyes.',
+          'The procedure is performed with topical anesthetic cream for comfort. The carbon crusts will fall off naturally within 5-7 days, revealing new, rejuvenated skin underneath. The results are long-lasting and can significantly refresh your appearance, making your eyes look more open and youthful.'
+        ], 
+        imageBefore: '/images/eyelids-plasma-arc-before.png', 
+        imageAfter: '/images/eyelids-plasma-arc-after.png', 
+        dataAiHint: 'eyelid treatment', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'jawline-contouring', 
+        name: 'Jawline Contouring', 
+        description: [
+          'A sharp, defined jawline is a key feature of a youthful and attractive face. Our non-surgical Jawline Contouring treatment uses strategically placed dermal fillers to sculpt and enhance the angle of the mandible, creating a stronger, more chiseled profile for both men and women.',
+          'This procedure is ideal for correcting a weak or underdeveloped jawline, improving facial symmetry, reducing the appearance of jowls, and creating a clearer separation between the jaw and neck. Our expert injectors use high-density hyaluronic acid fillers that mimic the feel of bone to build structure and definition.',
+          'The treatment is highly customized to your facial anatomy and aesthetic goals. For men, the goal is often to create a wider, more angular jaw. For women, the focus is typically on creating a graceful but defined line that enhances femininity. The procedure is quick, with minimal discomfort and no downtime.',
+          'Results are visible immediately and typically last for 12 to 24 months. Jawline contouring can dramatically improve your profile, boost your confidence, and restore a more youthful and powerful look in a single session.'
+        ], 
+        imageBefore: '/images/jawline-contouring-before.png', 
+        imageAfter: '/images/jawline-contouring-after.png', 
+        dataAiHint: 'woman jawline', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'lip-reshaping', 
+        name: 'Lip Reshaping', 
+        description: [
+          'Perfect your pout with our custom Lip Reshaping and augmentation services. More than just adding volume, our expert injectors use premium hyaluronic acid fillers as an artistic tool to enhance your natural beauty. We focus on creating beautiful, balanced results that are perfectly proportioned to your face.',
+          'Our lip filler treatments can be used to achieve a variety of goals: add subtle or significant volume, define the vermillion border (the edge of the lips), enhance the Cupid\'s bow, correct asymmetry between the upper and lower lips, and smooth out vertical lip lines (smoker\'s lines).',
+          'At LUNAI, we prioritize a natural look and feel. We work with you to understand your desired outcome and select the appropriate filler and technique to achieve it. The procedure is performed using a topical anesthetic for your comfort and typically takes about 30 minutes.',
+          'Results are immediate, though there may be some initial swelling. The final, beautifully enhanced lips can be enjoyed for 6 to 12 months. Whether you want a subtle enhancement or a more glamorous look, our lip reshaping treatment can help you achieve the perfect smile.'
+        ], 
+        imageBefore: '/images/lip-reshaping-before.png', 
+        imageAfter: '/images/lip-reshaping-after.png', 
+        dataAiHint: 'woman lips', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'microdermabrasion', 
+        name: 'Microdermabrasion', 
+        description: [
+          'Reveal a brighter, smoother complexion with Microdermabrasion. This popular and non-invasive treatment is a form of mechanical exfoliation that gently removes the outermost layer of dead skin cells, unclogging pores and instantly refreshing your skin\'s appearance.',
+          'The procedure uses a diamond-tipped wand to gently abrade the skin\'s surface while a vacuum suction clears away the exfoliated cells. This process helps to improve the appearance of sun damage, fine lines and wrinkles, age spots, acne scarring, and other skin concerns. It\'s a perfect "lunchtime" procedure as it requires no downtime.',
+          'Microdermabrasion is suitable for almost all skin types and colors. It enhances the absorption and efficacy of your skincare products and can be performed as a standalone treatment or as part of a comprehensive skin health plan. For optimal results, a series of treatments is often recommended.',
+          'After a session, your skin will feel softer and look more radiant. It is an excellent way to maintain healthy skin and achieve a consistent, vibrant glow.'
+        ], 
+        imageBefore: '/images/microdermabrasion-before.png', 
+        imageAfter: '/images/microdermabrasion-after.png', 
+        dataAiHint: 'facial treatment', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'microneedling', 
+        name: 'Microneedling', 
+        description: [
+          'Rejuvenate your skin from within with Microneedling, also known as collagen induction therapy. This advanced treatment uses a device with fine, sterile needles to create thousands of controlled micro-injuries in the skin. This process triggers the body\'s natural wound-healing cascade, resulting in a significant increase in collagen and elastin production.',
+          'Microneedling is a highly effective treatment for a wide range of skin concerns. It can dramatically improve skin texture, reduce the appearance of acne scars and surgical scars, minimize pore size, diminish fine lines and wrinkles, and improve the appearance of stretch marks.',
+          'At LUNAI, we can enhance the results of microneedling by combining it with the application of potent serums or even your own Platelet-Rich Plasma (PRP). The micro-channels created by the needles allow for deeper penetration and greater efficacy of these topical treatments.',
+          'A topical numbing cream is applied before the procedure to ensure comfort. The skin will appear red, similar to a sunburn, for 24-48 hours post-treatment. A series of 3-6 treatments is typically recommended for optimal, long-lasting results, revealing smoother, firmer, and more youthful-looking skin.'
+        ], 
+        imageBefore: '/images/microneedling-before.png', 
+        imageAfter: '/images/microneedling-after.png', 
+        dataAiHint: 'skin texture', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'multivitamin-treatment', 
+        name: 'Multivitamin Treatment', 
+        description: [
+          'Infuse your skin with life with our deeply nourishing Multivitamin Treatment. This potent facial is designed to deliver a cocktail of essential vitamins, antioxidants, and minerals directly into the skin, helping to combat the signs of premature aging and damage from environmental stressors.',
+          'This customized treatment addresses a variety of skin concerns, including dullness, dehydration, and uneven skin tone. It typically involves a deep cleansing, exfoliation, and the application of a powerful serum or mask rich in vitamins like A, C, and E, which are known for their restorative and protective properties.',
+          'The Multivitamin Treatment helps to boost skin radiance, improve hydration levels, stimulate collagen production for increased firmness, and restore a healthy, vibrant complexion. It is an excellent therapy for tired, stressed, or aging skin.',
+          'Suitable for all skin types, this relaxing and restorative facial will leave your skin feeling soft, supple, and glowing with health. It is a perfect monthly treatment to maintain skin vitality and protect it from the rigors of daily life.'
+        ], 
+        imageBefore: '/images/multivitamin-treatment-before.png', 
+        imageAfter: '/images/multivitamin-treatment-after.png', 
+        dataAiHint: 'glowing skin', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'prp-for-hair', 
+        name: 'PRP for Hair', 
+        description: [
+          'Combat hair thinning and stimulate new growth using the power of your own body with Platelet-Rich Plasma (PRP) for Hair. This cutting-edge, non-surgical treatment is a natural and effective option for individuals experiencing hair loss or thinning.',
+          'The procedure begins with a simple blood draw from your arm. The blood is then placed in a centrifuge to separate and concentrate the platelets and growth factors, creating the PRP. This golden plasma is then meticulously injected into the areas of the scalp where hair is thinning.',
+          'The high concentration of growth factors in PRP works to nourish hair follicles, increase blood supply to the scalp, stimulate the growth phase of the hair cycle (anagen phase), and increase the thickness and density of existing hair shafts.',
+          'PRP for Hair is a safe and minimally invasive procedure with no downtime. For optimal results, we recommend an initial series of 3-4 treatments spaced one month apart, followed by maintenance treatments every 6-12 months. It is an excellent standalone therapy or can be used to enhance the results of hair transplant surgery.'
+        ], 
+        imageBefore: '/images/prp-for-hair-before.png', 
+        imageAfter: '/images/prp-for-hair-after.png', 
+        dataAiHint: 'hair treatment', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'prp-for-face', 
+        name: 'PRP for the Face', 
+        description: [
+          'Harness your body\'s own incredible healing and regenerative power with a PRP for the Face treatment, famously known as the "Vampire Facial." This advanced therapy uses your own platelet-rich plasma to dramatically rejuvenate your skin, promoting a youthful and radiant glow.',
+          'The treatment begins by drawing a small amount of your blood, which is then centrifuged to concentrate the healing platelets and growth factors. This PRP is then applied to your face, typically in conjunction with microneedling. The microneedling creates thousands of micro-channels, allowing the PRP to penetrate deep into the dermis where it can work most effectively.',
+          'Once in the skin, the growth factors in the PRP trigger a powerful regenerative cascade, stimulating new collagen and elastin production, improving blood flow, and creating new, healthy skin cells. This results in improved skin tone and texture, reduced fine lines and wrinkles, smaller pore size, and a decrease in the appearance of acne scars.',
+          'PRP for the Face is a safe, natural, and highly effective way to achieve comprehensive facial rejuvenation with minimal downtime. A series of treatments is typically recommended for the most significant and lasting results.'
+        ], 
+        imageBefore: '/images/prp-for-face-before.png', 
+        imageAfter: '/images/prp-for-face-after.png', 
+        dataAiHint: 'facial plasma', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'radiofrequency-treatment', 
+        name: 'Radiofrequency Treatment', 
+        description: [
+          'Tighten and firm sagging skin on the face, neck, and body without surgery using our advanced Radiofrequency (RF) Treatment. This comfortable and non-invasive technology is an excellent solution for individuals seeking to address skin laxity, fine lines, and wrinkles without any downtime.',
+          'RF technology works by gently heating the deeper layers of your skin (the dermis). This controlled heating has a dual effect: it causes the existing collagen fibers to contract and tighten, providing an immediate firming effect. More importantly, it stimulates the skin\'s fibroblasts to produce new collagen and elastin over time.',
+          'This gradual process of collagen remodeling leads to progressively firmer, smoother, and more youthful-looking skin. The treatment is comfortable, often described as feeling like a warm stone massage. It can be used to tighten skin on the jowls, neck, brow area, abdomen, and arms.',
+          'For optimal results, a series of weekly or bi-weekly treatments is recommended. Radiofrequency is a safe and effective way to achieve a subtle lift and noticeable firming, helping you to maintain a youthful appearance.'
+        ], 
+        imageBefore: '/images/radiofrequency-treatment-before.png', 
+        imageAfter: '/images/radiofrequency-treatment-after.png', 
+        dataAiHint: 'skin tightening', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'sulcus-filling', 
+        name: 'Sulcus Filling (Deep Wrinkle Filling)', 
+        description: [
+          'Erase deep-set wrinkles and facial folds with our expert Sulcus Filling treatment. As we age, we lose facial volume, leading to the formation of prominent lines, such as the nasolabial folds (smile lines running from the nose to the mouth) and marionette lines (lines running from the corners of the mouth down to the chin).',
+          'This treatment uses premium hyaluronic acid-based dermal fillers to specifically target these deep grooves. By carefully injecting the filler directly into and beneath the wrinkle, we can instantly add back lost volume, lifting the skin and smoothing the fold.',
+          'Our skilled injectors have a deep understanding of facial anatomy and aging, allowing them to restore a smoother, more youthful contour to your face while maintaining a completely natural appearance. The goal is not to "freeze" your face, but to soften shadows and restore the gentle curves of a youthful face.',
+          'The procedure is quick, with minimal discomfort and no downtime. The results are immediate and can last for over a year, providing a significant yet subtle refreshment to your overall look.'
+        ], 
+        imageBefore: '/images/sulcus-filling-before.png', 
+        imageAfter: '/images/sulcus-filling-after.png', 
+        dataAiHint: 'wrinkle treatment', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'white-peeling', 
+        name: 'White Peeling', 
+        description: [
+          'Achieve a brighter, more even, and luminous skin tone with our specialized White Peeling treatment. This advanced chemical peel is specifically formulated to target various forms of hyperpigmentation, including sun spots, age spots, post-inflammatory hyperpigmentation from acne, and melasma.',
+          'The peel contains a blend of potent yet safe lightening agents that work to inhibit melanin production and gently lift away existing discolored cells from the skin\'s surface. This process accelerates cell turnover, revealing the clearer, more radiant skin underneath.',
+          'Our White Peeling treatment is a perfect choice for restoring skin clarity and tackling stubborn pigmentation that doesn\'t respond to topical creams alone. A series of peels is often recommended for the most dramatic and lasting improvement in skin tone.',
+          'During your consultation, our skincare experts will assess your skin to ensure this peel is the right choice for you and will create a customized treatment plan, including post-peel care to protect your results.'
+        ], 
+        imageBefore: '/images/white-peeling-before.png', 
+        imageAfter: '/images/white-peeling-after.png', 
+        dataAiHint: 'skin peel', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'wrinkle-fillers', 
+        name: 'Wrinkle Fillers', 
+        description: [
+          'Smooth away the signs of aging and restore youthful volume with our expertly administered Wrinkle Fillers. At LUNAI, we use a range of high-quality, FDA-approved hyaluronic acid dermal fillers to instantly soften fine lines, fill deep wrinkles, and replenish lost volume across the face.',
+          'Our skilled injectors can target various areas of concern, including crow\'s feet around the eyes, horizontal forehead lines, glabellar lines (the "11s" between the brows), and lines around the mouth. The filler is injected beneath the skin to plump it from within, effectively erasing the line or wrinkle.',
+          'The art of using fillers lies in a precise technique that ensures natural-looking results. Our goal is to refresh your appearance, not change it. We focus on subtle enhancements that leave you looking well-rested and rejuvenated.',
+          'The procedure is quick, with results visible immediately. Depending on the filler used and the area treated, results can last from 6 to 18 months. It is one of the most popular and effective non-surgical treatments for turning back the clock.'
+        ], 
+        imageBefore: '/images/wrinkle-fillers-before.png', 
+        imageAfter: '/images/wrinkle-fillers-after.png', 
+        dataAiHint: 'woman face', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'xanthelasma-treatment', 
+        name: 'Xanthelasma Treatment (Plasma Arc)', 
+        description: [
+          'Xanthelasma are yellowish, flat plaques of cholesterol deposits that appear on or around the eyelids. While they are medically harmless, they can be a cosmetic concern. Our non-surgical Plasma Arc treatment offers a safe, precise, and highly effective method for removing them without incisions or stitches.',
+          'The Plasma Arc device uses plasma energy to sublimate the targeted tissue layer by layer. This allows our practitioners to meticulously remove the xanthelasma deposits without damaging the surrounding healthy skin of the delicate eyelid area.',
+          'This procedure is a superior alternative to traditional surgical excision, which can leave scars, or chemical peels, which can lack precision. The treatment is performed with a topical anesthetic and has minimal downtime.',
+          'Following the procedure, small carbon crusts form over the treated area, which fall off within a week to reveal new, clear skin. This advanced method results in excellent cosmetic outcomes with a very low risk of recurrence.'
+        ], 
+        imageBefore: '/images/xanthelasma-treatment-before.png', 
+        imageAfter: '/images/xanthelasma-treatment-after.png', 
+        dataAiHint: 'eyelid spots', 
+        serviceType: 'treatment' 
+      },
     ],
   },
   {
@@ -60,24 +372,245 @@ export const serviceData: ServiceCategory[] = [
     icon: Activity,
     services: [
       // Surgical
-      { id: 'breast-augmentation', name: 'Breast Augmentation', description: 'Enhance your curves and confidence with Breast Augmentation surgery. Whether you choose saline or silicone implants, or a natural fat transfer, our experienced surgeons will help you achieve the size and shape you desire. We focus on creating beautiful, proportional results that complement your body frame.', imageBefore: '/images/breast-augmentation-before.png', imageAfter: '/images/breast-augmentation-after.png', dataAiHint: 'woman torso', serviceType: 'operation' },
-      { id: 'breast-lift', name: 'Breast Lift', description: 'Restore a youthful, perkier breast profile with a Breast Lift (Mastopexy). This procedure is ideal for correcting sagging due to aging, pregnancy, or weight loss. By removing excess skin and repositioning the nipple and breast tissue higher on the chest, we create a firmer and more youthful contour.', imageBefore: '/images/breast-lift-before.png', imageAfter: '/images/breast-lift-after.png', dataAiHint: 'woman chest', serviceType: 'operation' },
-      { id: 'breast-reduction', name: 'Breast Reduction', description: 'Find relief and improve your body proportions with Breast Reduction surgery. This procedure removes excess breast fat, glandular tissue, and skin to achieve a breast size more in proportion with your body. It can alleviate physical discomfort like back and neck pain while creating a more comfortable and balanced silhouette.', imageBefore: '/images/breast-reduction-before.png', imageAfter: '/images/breast-reduction-after.png', dataAiHint: 'woman back', serviceType: 'operation' },
-      { id: 'breast-reconstruction', name: 'Breast Reconstruction', description: 'Restore wholeness and confidence after a mastectomy with our compassionate Breast Reconstruction services. Our surgeons use advanced techniques, including implants or your own body tissue (flap reconstruction), to recreate a natural-looking breast mound, helping you feel like yourself again on your recovery journey.', imageBefore: '/images/breast-reconstruction-before.png', imageAfter: '/images/breast-reconstruction-after.png', dataAiHint: 'woman surgery', serviceType: 'operation' },
-      { id: 'arm-lift', name: 'Arm Lift', description: 'Achieve slender, more toned-looking arms with an Arm Lift (Brachioplasty). This surgical procedure is designed to remove loose, sagging skin from the upper arms, often referred to as "bat wings." The result is a smoother, firmer arm contour that allows you to wear sleeveless clothing with confidence.', imageBefore: '/images/arm-lift-before.png', imageAfter: '/images/arm-lift-after.png', dataAiHint: 'woman arm', serviceType: 'operation' },
-      { id: 'tummy-tuck', name: 'Tummy Tuck (Abdominoplasty)', description: 'Get a flatter, firmer abdomen with a Tummy Tuck (Abdominoplasty). This transformative procedure removes excess skin and fat from the abdominal area and repairs weakened or separated abdominal muscles. It\'s the gold standard for creating a smooth, toned midsection, especially after pregnancy or significant weight loss.', imageBefore: '/images/tummy-tuck-before.png', imageAfter: '/images/tummy-tuck-after.png', dataAiHint: 'woman abdomen', serviceType: 'operation' },
-      { id: 'liposculpture', name: 'Liposculpture', description: 'Go beyond simple fat removal with advanced Liposculpture. This procedure is a more artistic and precise form of liposuction, targeting and removing stubborn fat deposits to sculpt and define the underlying musculature. Achieve the athletic, chiseled physique you\'ve worked for but can\'t quite attain through diet and exercise alone.', imageBefore: '/images/liposculpture-before.png', imageAfter: '/images/liposculpture-after.png', dataAiHint: 'woman body', serviceType: 'operation' },
-      { id: 'brazilian-butt-lift', name: 'Brazilian Butt Lift (BBL)', description: 'Create curvier, more lifted buttocks naturally with a Brazilian Butt Lift (BBL). This two-in-one procedure involves removing unwanted fat from one area of your body (like the abdomen or thighs) via liposuction and then strategically injecting it into the buttocks to enhance volume, shape, and projection for a stunning hourglass figure.', imageBefore: '/images/brazilian-butt-lift-before.png', imageAfter: '/images/brazilian-butt-lift-after.png', dataAiHint: 'woman buttocks', serviceType: 'operation' },
-      { id: 'labiaplasty', name: 'Labiaplasty', description: 'Enhance comfort and confidence with Labiaplasty. This intimate surgical procedure is designed to reduce the size or correct the asymmetry of the labia minora or majora. It can relieve physical discomfort caused by enlarged labia during exercise or intimacy and create a more aesthetically pleasing appearance.', imageBefore: '/images/labiaplasty-before.png', imageAfter: '/images/labiaplasty-after.png', dataAiHint: 'intimate surgery', serviceType: 'operation' },
-      { id: 'thigh-lift', name: 'Thigh Lift', description: 'Achieve smoother, more contoured legs with a Thigh Lift. This procedure is perfect for addressing loose, sagging skin on the inner or outer thighs after significant weight loss or due to aging. By removing excess skin and fat, we create a firmer, more youthful, and better-proportioned thigh appearance.', imageBefore: '/images/thigh-lift-before.png', imageAfter: '/images/thigh-lift-after.png', dataAiHint: 'woman legs', serviceType: 'operation' },
-      { id: 'gynecomastia', name: 'Gynecomastia (Male Breast Reduction)', description: 'Restore a masculine chest contour with Gynecomastia surgery. This male breast reduction procedure effectively removes excess glandular tissue and/or fat from the chest, creating a flatter, firmer, and more defined pectoral area. Regain your confidence and feel comfortable in any clothing.', imageBefore: '/images/gynecomastia-before.png', imageAfter: '/images/gynecomastia-after.png', dataAiHint: 'man chest', serviceType: 'operation' },
+      { 
+        id: 'breast-augmentation', 
+        name: 'Breast Augmentation', 
+        description: [
+          'Breast augmentation is one of the most popular cosmetic surgery procedures, designed to increase breast size, improve symmetry, and enhance overall body proportions. At LUNAI, we help you achieve the beautiful, natural-looking curves you desire, boosting your confidence and helping you feel more comfortable in clothing.',
+          'We offer a range of options, including silicone and saline implants in various shapes, sizes, and profiles. We also offer fat transfer breast augmentation for those seeking a modest size increase using their own body fat. Our board-certified surgeons will guide you through the choices during your consultation, helping you select the best option to meet your aesthetic goals and complement your body frame.',
+          'The procedure involves placing the implant either behind the breast tissue or beneath the chest muscle through a discreet incision. Our focus is on creating a result that is both beautiful and proportional, ensuring your new silhouette looks natural and feels right for you.',
+          'Recovery typically involves a few days of rest, with a return to most non-strenuous activities within a week or two. The results are immediate and long-lasting, providing a significant boost to self-esteem.'
+        ], 
+        imageBefore: '/images/breast-augmentation-before.png', 
+        imageAfter: '/images/breast-augmentation-after.png', 
+        dataAiHint: 'woman torso', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'breast-lift', 
+        name: 'Breast Lift', 
+        description: [
+          'A breast lift, or mastopexy, is a surgical procedure designed to restore a youthful, perkier breast profile by correcting sagging and improving shape. The effects of gravity, pregnancy, weight fluctuations, and aging can cause breasts to lose their firmness and droop. A breast lift raises the breasts to a higher position on the chest, creating a firmer, more youthful contour.',
+          'During the procedure, our surgeons remove excess skin and skillfully reshape the internal breast tissue to create a more elevated and shapely breast mound. The nipple and areola are also repositioned higher on the breast. If volume loss is also a concern, a breast lift can be combined with implants (an augmentation-mastopexy) to restore both lift and fullness.',
+          'Ideal candidates are women who are happy with their breast size but wish to correct sagging. The procedure is highly personalized, with incision patterns chosen to best address the degree of sagging and achieve the desired aesthetic outcome.',
+          'Recovery involves about one to two weeks of downtime. The results of a breast lift are long-lasting, providing a more youthful and confident silhouette for years to come.'
+        ], 
+        imageBefore: '/images/breast-lift-before.png', 
+        imageAfter: '/images/breast-lift-after.png', 
+        dataAiHint: 'woman chest', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'breast-reduction', 
+        name: 'Breast Reduction', 
+        description: [
+          'For many women, overly large breasts (macromastia) can cause significant physical and emotional distress. Breast reduction surgery, or reduction mammaplasty, is a life-changing procedure that removes excess breast fat, glandular tissue, and skin to achieve a breast size that is more in proportion with your body.',
+          'This procedure is not just cosmetic; it provides profound functional relief. By reducing the weight of the breasts, it can alleviate chronic physical discomforts such as back, neck, and shoulder pain, skin irritation beneath the breasts, and deep, painful bra strap grooves. It also allows women to participate more comfortably in physical activities and find clothing that fits properly.',
+          'Our compassionate surgeons use advanced techniques to create smaller, lighter, and shapelier breasts while preserving sensation and ensuring the most discreet scarring possible. The areola is also reduced in size and repositioned to a more youthful height.',
+          'Breast reduction has one of the highest patient satisfaction rates of any plastic surgery procedure. Recovery typically involves a couple of weeks of downtime, but the relief from physical symptoms is often felt immediately.'
+        ], 
+        imageBefore: '/images/breast-reduction-before.png', 
+        imageAfter: '/images/breast-reduction-after.png', 
+        dataAiHint: 'woman back', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'breast-reconstruction', 
+        name: 'Breast Reconstruction', 
+        description: [
+          'Losing a breast to mastectomy can be a deeply emotional part of the cancer journey. Breast reconstruction is a series of procedures designed to restore the shape, appearance, and size of the breast, helping a woman feel whole again and move forward with confidence.',
+          'At LUNAI, our compassionate and skilled surgeons offer a range of advanced breast reconstruction options. Reconstruction can be performed at the same time as the mastectomy (immediate reconstruction) or at a later date (delayed reconstruction).',
+          'The two main approaches are implant-based reconstruction and autologous (or "flap") reconstruction, which uses your own body tissue from the abdomen, back, or thighs to create a new breast mound. The best option depends on your body type, cancer treatment plan, and personal preference. We will work closely with you and your oncology team to create a safe and effective surgical plan.',
+          'Breast reconstruction is a highly personal journey, and our goal is to support you every step of the way. We aim to create a result that not only looks natural but also helps restore your sense of self and femininity after breast cancer.'
+        ], 
+        imageBefore: '/images/breast-reconstruction-before.png', 
+        imageAfter: '/images/breast-reconstruction-after.png', 
+        dataAiHint: 'woman surgery', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'arm-lift', 
+        name: 'Arm Lift', 
+        description: [
+          'An arm lift, or brachioplasty, is a surgical procedure that reshapes the upper arms by removing loose, sagging skin and excess fat. This condition, often referred to as "bat wings," can result from significant weight loss, aging, or genetics and often does not respond to diet and exercise.',
+          'This procedure creates a smoother, firmer, and more toned arm contour, allowing you to wear sleeveless tops and dresses with renewed confidence. During the surgery, an incision is typically made on the inside or back of the arm, from the armpit to the elbow. Through this incision, our surgeon removes excess skin and fat and tightens the underlying supportive tissues.',
+          'Liposuction may be used in conjunction with an arm lift to achieve the best possible contour. Ideal candidates are individuals who are at a stable weight and are bothered by the appearance of loose skin on their upper arms.',
+          'Recovery involves wearing compression garments and limiting strenuous activity for several weeks. While there will be a scar, our surgeons take great care to place it as discreetly as possible. The results are a dramatically improved and more youthful arm shape.'
+        ], 
+        imageBefore: '/images/arm-lift-before.png', 
+        imageAfter: '/images/arm-lift-after.png', 
+        dataAiHint: 'woman arm', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'tummy-tuck', 
+        name: 'Tummy Tuck (Abdominoplasty)', 
+        description: [
+          'A tummy tuck, or abdominoplasty, is the gold standard for creating a flatter, firmer, and smoother abdominal profile. It is a transformative procedure that addresses issues that diet and exercise alone cannot fix, such as loose, excess skin after pregnancy or significant weight loss, and weakened or separated abdominal muscles (diastasis recti).',
+          'During a full tummy tuck, our surgeon makes a horizontal incision low on the abdomen, from hip to hip. The abdominal skin is lifted, the underlying muscles are repaired and tightened, and excess skin and fat are removed. The remaining skin is then redraped for a tighter, smoother contour, and the navel is repositioned.',
+          'We also offer a mini tummy tuck for patients whose concerns are primarily located below the navel. This less extensive option involves a shorter incision and a quicker recovery.',
+          'A tummy tuck provides a dramatic and long-lasting improvement to the midsection, helping patients regain their pre-pregnancy figure or celebrate the final step in their weight loss journey. Recovery typically requires two to three weeks of downtime.'
+        ], 
+        imageBefore: '/images/tummy-tuck-before.png', 
+        imageAfter: '/images/tummy-tuck-after.png', 
+        dataAiHint: 'woman abdomen', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'liposculpture', 
+        name: 'Liposculpture', 
+        description: [
+          'Liposculpture is a more advanced and artistic form of liposuction. While traditional liposuction focuses on removing large volumes of fat, liposculpture is about precision and detail. It involves removing stubborn, localized fat deposits to carefully sculpt and define the body\'s natural contours and reveal underlying muscle definition.',
+          'This technique is ideal for individuals who are already close to their ideal body weight but struggle with persistent pockets of fat that obscure their physique. Common treatment areas include the abdomen, love handles, thighs, back, and arms. It can be used to create the appearance of "six-pack" abs (abdominal etching) or to define the waistline.',
+          'At LUNAI, our surgeons use state-of-the-art liposuction technologies to gently remove fat while minimizing trauma to surrounding tissues. This allows for a smoother recovery and more refined, high-definition results.',
+          'Liposculpture is for patients seeking to achieve the final, chiseled look that they have worked for through diet and fitness but have been unable to attain. It is the art of body contouring, perfected.'
+        ], 
+        imageBefore: '/images/liposculpture-before.png', 
+        imageAfter: '/images/liposculpture-after.png', 
+        dataAiHint: 'woman body', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'brazilian-butt-lift', 
+        name: 'Brazilian Butt Lift (BBL)', 
+        description: [
+          'The Brazilian Butt Lift (BBL) is a highly popular and transformative procedure that enhances the size and shape of the buttocks using your own natural fat. It is a two-in-one body contouring surgery that creates a curvier, more lifted buttock profile and a more defined hourglass silhouette.',
+          'The procedure begins with liposuction to harvest excess fat from other areas of the body where it is unwanted, such as the abdomen, love handles, or thighs. This has the added benefit of slimming and contouring the donor sites. The harvested fat is then purified and meticulously injected in multiple layers into the buttocks to increase volume, improve shape, and create a lifted appearance.',
+          'A BBL is an excellent option for those who desire a fuller posterior but want to avoid implants. Because it uses your own fat, the results look and feel completely natural. Our surgeons are experts in the artistic placement of fat to create beautiful, proportional, and long-lasting results.',
+          'Recovery requires avoiding direct pressure on the buttocks for several weeks to ensure the optimal survival of the transferred fat cells. The final result is a permanently enhanced and more voluptuous lower body contour.'
+        ], 
+        imageBefore: '/images/brazilian-butt-lift-before.png', 
+        imageAfter: '/images/brazilian-butt-lift-after.png', 
+        dataAiHint: 'woman buttocks', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'labiaplasty', 
+        name: 'Labiaplasty', 
+        description: [
+          'Labiaplasty is an intimate surgical procedure designed to improve the comfort and appearance of the labia. Many women experience physical discomfort from enlarged or elongated labia minora, which can cause chafing, irritation, and pain during exercise, intercourse, or when wearing tight clothing. Labiaplasty can provide significant relief from these symptoms.',
+          'The procedure is also performed for cosmetic reasons, to reduce the size or correct the asymmetry of the labia minora or majora, creating a neater and more aesthetically pleasing appearance. This can lead to a significant boost in self-confidence and comfort in one\'s own body.',
+          'Our compassionate surgeons perform labiaplasty with the utmost discretion and sensitivity. Using precise techniques, they carefully trim the excess tissue and reshape the labia to achieve the patient\'s desired outcome while preserving sensation.',
+          'The procedure is typically performed on an outpatient basis and has a relatively straightforward recovery, with most patients returning to normal activities within a couple of weeks. It is a safe and effective surgery that can greatly improve a woman\'s quality of life.'
+        ], 
+        imageBefore: '/images/labiaplasty-before.png', 
+        imageAfter: '/images/labiaplasty-after.png', 
+        dataAiHint: 'intimate surgery', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'thigh-lift', 
+        name: 'Thigh Lift', 
+        description: [
+          'A thigh lift, or thighplasty, is a body contouring procedure that addresses loose, sagging skin and excess fat on the inner and/or outer thighs. This condition is a common result of massive weight loss, aging, or genetics and can cause both cosmetic dissatisfaction and physical issues like chafing and irritation.',
+          'A thigh lift creates a firmer, smoother, and more youthful thigh contour. During the procedure, an incision is made, typically in the groin crease extending down the inner thigh, through which excess skin and fat are removed. The remaining skin is then redraped and tightened, resulting in a significantly improved leg shape.',
+          'Ideal candidates are at a stable weight and are committed to maintaining a healthy lifestyle, as future weight fluctuations can compromise the results. The procedure helps clothes fit better and can dramatically improve self-confidence.',
+          'Recovery involves wearing compression garments and avoiding strenuous activity for about 4-6 weeks. While a scar will be present, our surgeons place it as discreetly as possible. The final result is beautifully contoured legs that you will be proud to show off.'
+        ], 
+        imageBefore: '/images/thigh-lift-before.png', 
+        imageAfter: '/images/thigh-lift-after.png', 
+        dataAiHint: 'woman legs', 
+        serviceType: 'operation' 
+      },
+      { 
+        id: 'gynecomastia', 
+        name: 'Gynecomastia (Male Breast Reduction)', 
+        description: [
+          'Gynecomastia is a common condition characterized by the overdevelopment of breast tissue in men, resulting in the appearance of "male breasts." It can be caused by hormonal imbalances, genetics, or certain medications and can be a significant source of self-consciousness. Male breast reduction surgery is a highly effective procedure to correct this issue.',
+          'The surgery aims to restore a flatter, firmer, and more masculine chest contour. The specific technique used depends on the cause of the gynecomastia. If it is primarily due to excess fatty tissue, liposuction alone may be sufficient. If excess glandular tissue is the cause, this tissue will be surgically excised through a small incision around the areola.',
+          'In many cases, a combination of liposuction and excision is used to achieve the best possible result. Our surgeons will perform a thorough evaluation to create a personalized surgical plan for you.',
+          'Recovery is relatively quick, with most men returning to work within a week. The results are permanent and can have a profound impact on self-esteem, allowing men to feel comfortable and confident going shirtless or wearing fitted clothing.'
+        ], 
+        imageBefore: '/images/gynecomastia-before.png', 
+        imageAfter: '/images/gynecomastia-after.png', 
+        dataAiHint: 'man chest', 
+        serviceType: 'operation' 
+      },
       // Non-Surgical
-      { id: 'carboxytherapy', name: 'Carboxytherapy', description: 'Improve skin texture and reduce imperfections with Carboxytherapy. This innovative treatment involves the therapeutic injection of medical-grade carbon dioxide gas to boost blood circulation. It is highly effective in diminishing the appearance of cellulite, fading stretch marks, and rejuvenating tired skin on the body.', imageBefore: '/images/carboxytherapy-before.png', imageAfter: '/images/carboxytherapy-after.png', dataAiHint: 'skin therapy', serviceType: 'treatment' },
-      { id: 'cellulite-treatment', name: 'Cellulite Treatment', description: 'Smooth away dimpled skin with our comprehensive Cellulite Treatment program. We combine multiple advanced, non-invasive technologies to target the structural causes of cellulite. Our personalized approach helps to break down fat deposits, release fibrous bands, and improve skin elasticity for a visibly smoother appearance.', imageBefore: '/images/cellulite-treatment-before.png', imageAfter: '/images/cellulite-treatment-after.png', dataAiHint: 'woman thigh', serviceType: 'treatment' },
-      { id: 'laser-hair-removal', name: 'Laser Hair Removal', description: 'Enjoy silky-smooth skin with our advanced Laser Hair Removal services. Using state-of-the-art laser technology, we can safely and effectively target and destroy hair follicles, leading to a permanent reduction in unwanted hair on the face, legs, underarms, bikini line, and more. Say goodbye to shaving and waxing.', imageBefore: '/images/laser-hair-removal-before.png', imageAfter: '/images/laser-hair-removal-after.png', dataAiHint: 'smooth skin', serviceType: 'treatment' },
-      { id: 'lipolysis', name: 'Lipolysis', description: 'Melt away stubborn fat pockets without surgery with injectable Lipolysis. This treatment uses a specially formulated solution that is injected into small, localized areas of fat, such as under the chin or on the body, to break down and permanently destroy fat cells. It\'s a perfect non-invasive body contouring solution.', imageBefore: '/images/lipolysis-before.png', imageAfter: '/images/lipolysis-after.png', dataAiHint: 'body contouring', serviceType: 'treatment' },
-      { id: 'plasma-arc-skin', name: 'Plasma Arc (Skin Treatments)', description: 'Rejuvenate and repair your skin with Plasma Arc treatments. This versatile, non-surgical technology is exceptional for skin tightening, removing skin tags and moles, and revising the appearance of scars on the body. It promotes natural healing and skin regeneration for a clearer, smoother surface.', imageBefore: '/images/plasma-arc-skin-before.png', imageAfter: '/images/plasma-arc-skin-after.png', dataAiHint: 'skin rejuvenation', serviceType: 'treatment' },
-      { id: 'sclerotherapy', name: 'Sclerotherapy (Spider Vein Treatment)', description: 'Achieve clear, beautiful legs with Sclerotherapy. This is the gold-standard treatment for eliminating unsightly spider veins and small varicose veins. A special solution is injected into the targeted veins, causing them to collapse and fade from view. Restore your confidence to wear shorts and skirts again.', imageBefore: '/images/sclerotherapy-before.png', imageAfter: '/images/sclerotherapy-after.png', dataAiHint: 'leg veins', serviceType: 'treatment' },
+      { 
+        id: 'carboxytherapy', 
+        name: 'Carboxytherapy', 
+        description: [
+          'Carboxytherapy is an innovative and versatile non-surgical treatment that involves the therapeutic injection of medical-grade carbon dioxide (CO2) gas into the subcutaneous tissue. This safe and minimally invasive procedure leverages a natural process in the body to rejuvenate the skin and improve its appearance.',
+          'When CO2 is injected, the body interprets it as an oxygen deficit and responds by increasing blood flow and growth factors to the treated area. This surge in oxygen and nutrients stimulates circulation, encourages lymphatic drainage, and promotes the production of new collagen.',
+          'At LUNAI, we use carboxytherapy to effectively treat a range of concerns. It is highly effective in diminishing the appearance of cellulite, fading stretch marks by rebuilding the collagen network, and improving skin laxity and texture on the body. It can also be used to treat dark under-eye circles by improving circulation.',
+          'The treatment is quick, with minimal discomfort and no downtime. A series of sessions is typically required to achieve optimal, long-lasting results for smoother, healthier-looking skin.'
+        ], 
+        imageBefore: '/images/carboxytherapy-before.png', 
+        imageAfter: '/images/carboxytherapy-after.png', 
+        dataAiHint: 'skin therapy', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'cellulite-treatment', 
+        name: 'Cellulite Treatment', 
+        description: [
+          'Cellulite, the dimpled, "orange-peel" appearance of skin, affects the vast majority of women, regardless of their size or weight. It is caused by fat deposits pushing through the connective tissue bands (septa) beneath the skin. At LUNAI, we offer a comprehensive cellulite treatment program that targets the structural causes of cellulite for a visibly smoother appearance.',
+          'We understand that a single modality is often not enough. Our personalized approach may combine several advanced, non-invasive technologies to achieve the best results. These can include radiofrequency to heat and tighten the skin, acoustic wave therapy to break down fibrous bands, and carboxytherapy to improve circulation.',
+          'Our treatment plan aims to break down stubborn fat deposits, release the fibrous septa that cause dimpling, improve lymphatic drainage to reduce fluid retention, and stimulate collagen production to improve skin elasticity and thickness.',
+          'While there is no permanent cure for cellulite, our customized programs can provide a significant and lasting improvement in skin texture, helping you feel more confident in your own skin.'
+        ], 
+        imageBefore: '/images/cellulite-treatment-before.png', 
+        imageAfter: '/images/cellulite-treatment-after.png', 
+        dataAiHint: 'woman thigh', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'laser-hair-removal', 
+        name: 'Laser Hair Removal', 
+        description: [
+          'Enjoy the freedom of silky-smooth, hair-free skin with our advanced Laser Hair Removal services. This is one of the most popular non-invasive cosmetic treatments, offering a long-term solution to unwanted hair on virtually any part of the face or body. Say goodbye to the endless cycle of shaving, waxing, and tweezing.',
+          'We use state-of-the-art laser technology that is safe and effective for a wide range of skin types. The laser works by emitting a concentrated beam of light that is absorbed by the pigment (melanin) in the hair follicle. This light energy converts to heat, which damages the follicle and inhibits its ability to regrow hair.',
+          'Because the laser targets hair in its active growth phase, a series of treatments (typically 6-8 sessions) is required to capture all hairs in their growth cycle and achieve a permanent reduction in hair.',
+          'Our experienced technicians ensure the treatment is as comfortable and effective as possible. Common treatment areas include the legs, underarms, bikini line, back, chest, and face. Start your journey to effortlessly smooth skin today.'
+        ], 
+        imageBefore: '/images/laser-hair-removal-before.png', 
+        imageAfter: '/images/laser-hair-removal-after.png', 
+        dataAiHint: 'smooth skin', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'lipolysis', 
+        name: 'Lipolysis', 
+        description: [
+          'Melt away stubborn, localized fat pockets without surgery with injectable Lipolysis. This is a targeted, non-invasive body contouring solution perfect for addressing small areas of fat that are resistant to diet and exercise.',
+          'The treatment involves injecting a specially formulated solution, often containing deoxycholic acid, directly into the fat deposit. This substance works to break down the cell membrane of fat cells. Once destroyed, these cells are naturally processed and permanently eliminated by the body\'s lymphatic system.',
+          'Injectable lipolysis is highly effective for treating areas like a double chin (submental fat), bra bulge, small pockets on the abdomen, and inner thighs. It is not a weight loss solution, but rather a tool for refining and contouring specific areas.',
+          'A series of 2-4 treatments is typically needed for optimal results. There may be some swelling and tenderness in the treated area for a few days, but there is no significant downtime. The result is a permanent reduction of fat in the treated area and an improved contour.'
+        ], 
+        imageBefore: '/images/lipolysis-before.png', 
+        imageAfter: '/images/lipolysis-after.png', 
+        dataAiHint: 'body contouring', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'plasma-arc-skin', 
+        name: 'Plasma Arc (Skin Treatments)', 
+        description: [
+          'Plasma Arc is a versatile and innovative technology that allows for a wide range of non-surgical skin treatments on the body. It offers a precise and effective way to rejuvenate and repair the skin by harnessing the power of plasma energy.',
+          'This technology is exceptional for non-surgical skin tightening, making it an excellent option for treating loose skin on the abdomen (especially after pregnancy), neck, and knees. It can also be used for scar revision, significantly improving the texture and appearance of surgical scars, acne scars, and stretch marks.',
+          'Additionally, Plasma Arc is a safe and effective method for removing benign skin lesions such as skin tags, moles, and warts. The device sublimates the targeted tissue without causing thermal damage to the surrounding area, leading to minimal scarring and rapid healing.',
+          'The treatment promotes natural healing and skin regeneration, resulting in a clearer, smoother, and tighter skin surface. It is a powerful tool for addressing multiple skin concerns on the body without the need for invasive surgery.'
+        ], 
+        imageBefore: '/images/plasma-arc-skin-before.png', 
+        imageAfter: '/images/plasma-arc-skin-after.png', 
+        dataAiHint: 'skin rejuvenation', 
+        serviceType: 'treatment' 
+      },
+      { 
+        id: 'sclerotherapy', 
+        name: 'Sclerotherapy (Spider Vein Treatment)', 
+        description: [
+          'Achieve clear, beautiful legs and restore your confidence with Sclerotherapy. This is the gold-standard medical procedure for eliminating unsightly spider veins and small varicose veins on the legs. It is a safe, effective, and minimally invasive treatment that has been trusted for decades.',
+          'The procedure involves injecting a special solution, called a sclerosant, directly into the targeted veins. This solution irritates the lining of the vein, causing it to swell, collapse, and stick together. Over time, the treated vein turns into scar tissue and fades from view as it is naturally absorbed by the body.',
+          'A single session may involve multiple injections, depending on the number of veins being treated. The procedure is quick, with minimal discomfort. There is no downtime, and patients are encouraged to walk immediately after to promote circulation.',
+          'Multiple sessions may be needed to achieve the desired level of clearance. With sclerotherapy at LUNAI, you can effectively restore an even-toned appearance to your legs and feel comfortable wearing shorts and skirts again.'
+        ], 
+        imageBefore: '/images/sclerotherapy-before.png', 
+        imageAfter: '/images/sclerotherapy-after.png', 
+        dataAiHint: 'leg veins', 
+        serviceType: 'treatment' 
+      },
     ],
   },
   {
@@ -86,29 +619,281 @@ export const serviceData: ServiceCategory[] = [
     icon: Smile,
     services: [
       // Aesthetics
-      { id: 'composite-veneers', name: 'Composite Veneers', description: 'Transform your smile in a single visit with Composite Veneers. This cosmetic dental procedure uses a tooth-colored composite resin to masterfully cover imperfections like chips, gaps, stains, and slight crookedness. It\'s a cost-effective and conservative way to achieve a stunning smile makeover.', imageBefore: '/images/composite-veneers-before.png', imageAfter: '/images/composite-veneers-after.png', dataAiHint: 'smile teeth', serviceType: 'treatment', dentalSubCategoryTitle: 'AESTHETICS' },
-      { id: 'emax-veneers', name: 'E-Max Veneers', description: 'Achieve a flawless, celebrity-caliber smile with E-Max Veneers. Crafted from high-strength, translucent porcelain, these custom-made shells are bonded to the front of your teeth to correct imperfections. E-Max veneers offer unparalleled beauty, durability, and a natural-looking luster for a complete smile transformation.', imageBefore: '/images/emax-veneers-before.png', imageAfter: '/images/emax-veneers-after.png', dataAiHint: 'perfect smile', serviceType: 'treatment', dentalSubCategoryTitle: 'AESTHETICS' },
-      { id: 'teeth-whitening', name: 'Teeth Whitening', description: 'Dramatically brighten your smile with our professional Teeth Whitening services. We offer both powerful in-office treatments for immediate results and custom take-home kits for your convenience. Our safe and effective solutions can lift years of stains from coffee, tea, and wine, revealing a brilliantly white smile.', imageBefore: '/images/teeth-whitening-before.png', imageAfter: '/images/teeth-whitening-after.png', dataAiHint: 'white teeth', serviceType: 'treatment', dentalSubCategoryTitle: 'AESTHETICS' },
+      { 
+        id: 'composite-veneers', 
+        name: 'Composite Veneers', 
+        description: [
+          'Transform your smile affordably and in a single visit with Composite Veneers. This cosmetic dental procedure, also known as dental bonding, is an excellent way to correct a variety of minor imperfections. Our skilled dentists masterfully apply a tooth-colored composite resin directly to the tooth surface to improve its appearance.',
+          'Composite veneers are ideal for concealing chips, closing small gaps between teeth, covering up stains and discoloration, and even correcting the appearance of slightly crooked or misshapen teeth. It is a conservative procedure that typically requires minimal to no removal of the natural tooth structure.',
+          'The process is both an art and a science. Our dentists carefully select a shade of resin that matches your natural teeth and then expertly sculpt and polish it to create a seamless, beautiful result. The entire procedure is usually completed in just one appointment.',
+          'While not as durable or stain-resistant as porcelain veneers, composite veneers are a cost-effective and less invasive way to achieve a stunning smile makeover and a significant boost in confidence.'
+        ], 
+        imageBefore: '/images/composite-veneers-before.png', 
+        imageAfter: '/images/composite-veneers-after.png', 
+        dataAiHint: 'smile teeth', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'AESTHETICS' 
+      },
+      { 
+        id: 'emax-veneers', 
+        name: 'E-Max Veneers', 
+        description: [
+          'Achieve a flawless, radiant, and incredibly durable smile with E-Max Veneers. Considered the pinnacle of cosmetic dentistry, E-Max veneers are crafted from a high-strength, lithium disilicate glass-ceramic. This material is renowned for its superior toughness, durability, and its stunning, translucent quality that perfectly mimics the appearance of natural tooth enamel.',
+          'E-Max veneers are custom-made, ultra-thin shells that are bonded to the front surface of your teeth. They are the ideal solution for creating a complete smile transformation, capable of correcting issues like severe staining, chips, cracks, gaps, and significant misalignment.',
+          'The process involves two visits. In the first, we prepare the teeth, take precise impressions, and fit you with temporary veneers. The impressions are sent to a master dental laboratory where your bespoke veneers are fabricated. In the second visit, we permanently bond the final veneers to your teeth.',
+          'With their exceptional beauty and resistance to staining, E-Max veneers provide a long-lasting, celebrity-caliber smile that will look spectacular for many years to come.'
+        ], 
+        imageBefore: '/images/emax-veneers-before.png', 
+        imageAfter: '/images/emax-veneers-after.png', 
+        dataAiHint: 'perfect smile', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'AESTHETICS' 
+      },
+      { 
+        id: 'teeth-whitening', 
+        name: 'Teeth Whitening', 
+        description: [
+          'Dramatically brighten your smile and boost your confidence with our professional Teeth Whitening services. Over time, teeth can become stained and yellowed from coffee, tea, red wine, smoking, and the natural aging process. Professional whitening is the safest and most effective way to lift these stains and reveal a brilliantly white smile.',
+          'At LUNAI, we offer two convenient and powerful options. Our in-office whitening treatment provides the most dramatic results in a single visit, often lightening teeth by several shades in about an hour. It is the perfect choice for those who want immediate results for a special event.',
+          'We also provide custom take-home whitening kits. We take impressions of your teeth to create custom-fitted trays that ensure the professional-strength whitening gel is applied evenly and safely. You can then whiten your teeth in the comfort of your own home over a period of one to two weeks.',
+          'Both of our whitening solutions are safe for your enamel and provide results far superior to over-the-counter products. Let us help you achieve the dazzling, white smile you\'ve always wanted.'
+        ], 
+        imageBefore: '/images/teeth-whitening-before.png', 
+        imageAfter: '/images/teeth-whitening-after.png', 
+        dataAiHint: 'white teeth', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'AESTHETICS' 
+      },
       // Prosthetics
-      { id: 'crowns', name: 'Crowns', description: 'Protect and restore a damaged tooth with a custom-made Dental Crown. A crown, or cap, encases the entire visible portion of a tooth that has been weakened by decay, fracture, or a large filling. Our crowns are crafted from high-quality materials to restore strength, function, and aesthetics.', imageBefore: '/images/crowns-before.png', imageAfter: '/images/crowns-after.png', dataAiHint: 'dental crown', serviceType: 'treatment', dentalSubCategoryTitle: 'PROSTHETICS' },
-      { id: 'dental-bridges', name: 'Dental Bridges', description: 'Fill the gap left by a missing tooth with a Dental Bridge. A bridge is a fixed prosthetic device that uses the adjacent teeth as anchors to hold a custom-made artificial tooth (pontic) in place. It restores your smile, your ability to chew properly, and prevents remaining teeth from shifting.', imageBefore: '/images/dental-bridges-before.png', imageAfter: '/images/dental-bridges-after.png', dataAiHint: 'dental bridge', serviceType: 'treatment', dentalSubCategoryTitle: 'PROSTHETICS' },
-      { id: 'dentures', name: 'Dentures', description: 'Regain your smile and chewing function with our modern, comfortable Dentures. We offer both full and partial dentures, custom-crafted to fit your mouth perfectly. Our focus is on providing a secure fit and a natural-looking appearance, so you can eat, speak, and smile with renewed confidence.', imageBefore: '/images/dentures-before.png', imageAfter: '/images/dentures-after.png', dataAiHint: 'denture smile', serviceType: 'treatment', dentalSubCategoryTitle: 'PROSTHETICS' },
+      { 
+        id: 'crowns', 
+        name: 'Crowns', 
+        description: [
+          'A dental crown, often called a "cap," is a custom-made restoration that completely encases the visible portion of a tooth. It is a highly effective way to protect and restore a tooth that has been significantly weakened by decay, fracture, a large filling, or a root canal procedure.',
+          'Crowns serve multiple purposes: they restore a tooth\'s original size, shape, and strength, and they improve its aesthetic appearance. At LUNAI, our crowns are crafted from high-quality, durable materials such as porcelain, zirconia, or porcelain-fused-to-metal, designed to blend seamlessly with your natural teeth.',
+          'The process typically involves two appointments. During the first visit, the tooth is prepared, an impression is taken for the lab, and a temporary crown is placed. At the second visit, the permanent, custom-fabricated crown is checked for a perfect fit and then cemented into place.',
+          'A well-made crown can protect a compromised tooth from further damage and provide a beautiful, functional restoration that can last for many years with proper care.'
+        ], 
+        imageBefore: '/images/crowns-before.png', 
+        imageAfter: '/images/crowns-after.png', 
+        dataAiHint: 'dental crown', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'PROSTHETICS' 
+      },
+      { 
+        id: 'dental-bridges', 
+        name: 'Dental Bridges', 
+        description: [
+          'A dental bridge is a fixed prosthetic device designed to literally "bridge the gap" created by one or more missing teeth. It is an excellent and reliable solution for restoring your smile, your ability to chew properly, and the overall integrity of your bite.',
+          'A traditional bridge consists of one or more artificial teeth (called pontics) that are held in place by dental crowns cemented onto the natural teeth on either side of the gap (called abutment teeth). This creates a strong, non-removable restoration.',
+          'By filling the space of a missing tooth, a dental bridge prevents the remaining teeth from drifting out of position, which can lead to bite problems and jaw issues. It also helps to maintain the natural shape of your face and distribute the forces in your bite evenly.',
+          'Our bridges are custom-made from high-quality materials to match the color and shape of your natural teeth, ensuring a result that is both functional and aesthetically pleasing.'
+        ], 
+        imageBefore: '/images/dental-bridges-before.png', 
+        imageAfter: '/images/dental-bridges-after.png', 
+        dataAiHint: 'dental bridge', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'PROSTHETICS' 
+      },
+      { 
+        id: 'dentures', 
+        name: 'Dentures', 
+        description: [
+          'Regain a complete, confident smile and full chewing function with our modern, comfortable dentures. Dentures are removable appliances that replace missing teeth and surrounding tissues. At LUNAI, we focus on providing dentures that not only look natural but also provide a secure and comfortable fit.',
+          'We offer several types of dentures to meet your needs. Complete (or full) dentures are used when all teeth in an arch are missing. Partial dentures are used when some natural teeth remain, and they are held in place by clasps that attach to the existing teeth.',
+          'For enhanced stability, we also offer implant-supported dentures. These dentures snap onto dental implants that have been surgically placed in the jawbone, providing a much more secure and stable fit that eliminates slipping and improves chewing power.',
+          'Our team takes meticulous care in the design and fabrication of your custom dentures, ensuring they restore your facial structure, support your lips and cheeks, and allow you to eat, speak, and smile with renewed confidence.'
+        ], 
+        imageBefore: '/images/dentures-before.png', 
+        imageAfter: '/images/dentures-after.png', 
+        dataAiHint: 'denture smile', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'PROSTHETICS' 
+      },
       // Orthodontics
-      { id: 'fixed-braces', name: 'Fixed Braces', description: 'Achieve a perfectly straight smile and a healthy bite with traditional Fixed Braces. This time-tested orthodontic treatment is highly effective for correcting complex issues like crowding, spacing, and bite misalignments in patients of all ages. Our modern braces are more comfortable and efficient than ever.', imageBefore: '/images/fixed-braces-before.png', imageAfter: '/images/fixed-braces-after.png', dataAiHint: 'teeth braces', serviceType: 'treatment', dentalSubCategoryTitle: 'ORTHODONTICS' },
-      { id: 'invisalign', name: 'Invisalign', description: 'Straighten your teeth discreetly with Invisalign clear aligners. This revolutionary system uses a series of custom-made, virtually invisible plastic trays to gradually shift your teeth into their ideal position. Invisalign is removable, comfortable, and a popular choice for adults and teens seeking a less noticeable orthodontic solution.', imageBefore: '/images/invisalign-before.png', imageAfter: '/images/invisalign-after.png', dataAiHint: 'clear aligner', serviceType: 'treatment', dentalSubCategoryTitle: 'ORTHODONTICS' },
-      { id: 'removable-appliances', name: 'Removable Appliances', description: 'Support your orthodontic journey with custom Removable Appliances. These devices, including retainers and active plates, play a crucial role in either moving teeth to correct minor issues or in maintaining their new position after brace treatment is complete, ensuring your beautiful, straight smile lasts a lifetime.', imageBefore: '/images/removable-appliances-before.png', imageAfter: '/images/removable-appliances-after.png', dataAiHint: 'dental retainer', serviceType: 'treatment', dentalSubCategoryTitle: 'ORTHODONTICS' },
+      { 
+        id: 'fixed-braces', 
+        name: 'Fixed Braces', 
+        description: [
+          'Achieve a perfectly straight smile and a healthy, functional bite with traditional fixed braces. This time-tested orthodontic treatment is highly effective for correcting a wide range of complex issues, including severe crowding, spacing, and bite misalignments such as overbites, underbites, and crossbites.',
+          'Fixed braces consist of brackets that are bonded to the front of each tooth and an archwire that connects them. By making periodic adjustments to the wire, our orthodontist can apply gentle, consistent pressure to gradually guide your teeth into their ideal alignment.',
+          'At LUNAI, our modern braces are more comfortable and aesthetically pleasing than ever before. We offer traditional metal braces as well as clear ceramic braces, which are less noticeable and a popular choice for adults and appearance-conscious teens.',
+          'Fixed braces remain one of the most reliable and precise ways to achieve a beautiful, healthy, and stable smile for patients of all ages.'
+        ], 
+        imageBefore: '/images/fixed-braces-before.png', 
+        imageAfter: '/images/fixed-braces-after.png', 
+        dataAiHint: 'teeth braces', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'ORTHODONTICS' 
+      },
+      { 
+        id: 'invisalign', 
+        name: 'Invisalign', 
+        description: [
+          'Straighten your teeth discreetly and comfortably with Invisalign clear aligners. This revolutionary orthodontic system uses a series of custom-made, virtually invisible plastic trays to gradually and gently shift your teeth into their desired position, without the need for metal brackets or wires.',
+          'The Invisalign process starts with a 3D digital scan of your teeth, from which a precise treatment plan is created. You will be able to see a virtual representation of your treatment journey and the final result before you even begin. You will wear each set of aligners for about 1-2 weeks before moving on to the next set in the series.',
+          'A key advantage of Invisalign is that the aligners are removable. This means you can take them out to eat, drink, brush, and floss, allowing for better oral hygiene and no dietary restrictions during treatment.',
+          'Invisalign is a popular and highly effective choice for adults and teens seeking to correct mild to moderate crowding, spacing, and bite issues without the look of traditional braces.'
+        ], 
+        imageBefore: '/images/invisalign-before.png', 
+        imageAfter: '/images/invisalign-after.png', 
+        dataAiHint: 'clear aligner', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'ORTHODONTICS' 
+      },
+      { 
+        id: 'removable-appliances', 
+        name: 'Removable Appliances', 
+        description: [
+          'Removable orthodontic appliances play a crucial role in both active treatment and the retention phase of orthodontics. These custom-made devices are designed to be taken in and out of the mouth by the patient and serve a variety of purposes.',
+          'Active appliances, such as expansion plates or spring aligners, can be used to achieve specific, limited tooth movements, often in younger patients during early interceptive treatment. They can help to widen the dental arch or correct minor misalignments.',
+          'The most common type of removable appliance is the retainer. After your braces or Invisalign treatment is complete, a retainer is essential for maintaining your newly straightened smile. It holds the teeth in their new positions while the surrounding bone and ligaments stabilize, preventing them from relapsing to their old positions.',
+          'At LUNAI, we provide various types of durable and comfortable removable appliances, custom-fitted to ensure they are effective and easy to wear as prescribed.'
+        ], 
+        imageBefore: '/images/removable-appliances-before.png', 
+        imageAfter: '/images/removable-appliances-after.png', 
+        dataAiHint: 'dental retainer', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'ORTHODONTICS' 
+      },
       // Therapy
-      { id: 'infected-teeth-treatment', name: 'Infected Teeth Treatment (Root Canal)', description: 'Save an infected tooth from extraction with our gentle Infected Teeth Treatment (Root Canal Therapy). This procedure carefully removes the infected or inflamed pulp from inside the tooth, cleans and disinfects the root canals, and then seals them to prevent future infection. It\'s a vital therapy for relieving dental pain and preserving your natural tooth.', imageBefore: '/images/infected-teeth-treatment-before.png', imageAfter: '/images/infected-teeth-treatment-after.png', dataAiHint: 'dental xray', serviceType: 'treatment', dentalSubCategoryTitle: 'THERAPY' },
-      { id: 'tartar-cleaning', name: 'Tartar Cleaning', description: 'Maintain optimal oral health with a professional Tartar Cleaning (Scaling). Our dental hygienists use specialized tools to gently and effectively remove hardened plaque (tartar) and soft plaque from above and below the gumline—areas that regular brushing and flossing can\'t reach. This is essential for preventing cavities and gum disease.', imageBefore: '/images/tartar-cleaning-before.png', imageAfter: '/images/tartar-cleaning-after.png', dataAiHint: 'dental cleaning', serviceType: 'treatment', dentalSubCategoryTitle: 'THERAPY' },
-      { id: 'tooth-fillings', name: 'Tooth Fillings', description: 'Restore a tooth affected by decay with our modern Tooth Fillings. We use high-quality, tooth-colored composite materials to fill cavities, providing a durable and aesthetically pleasing result. This procedure stops the progression of decay, restores the tooth\'s strength, and blends seamlessly with your natural smile.', imageBefore: '/images/tooth-fillings-before.png', imageAfter: '/images/tooth-fillings-after.png', dataAiHint: 'tooth filling', serviceType: 'treatment', dentalSubCategoryTitle: 'THERAPY' },
+      { 
+        id: 'infected-teeth-treatment', 
+        name: 'Infected Teeth Treatment (Root Canal)', 
+        description: [
+          'Save a severely infected or inflamed tooth from extraction with our gentle and effective Infected Teeth Treatment, more commonly known as root canal therapy. This crucial procedure is necessary when the soft tissue inside the tooth, called the pulp, becomes infected due to deep decay, repeated dental procedures, or a crack in the tooth.',
+          'If left untreated, an infected pulp can cause severe pain, an abscess, and eventually the loss of the tooth. Root canal therapy involves carefully removing the infected or inflamed pulp from inside the tooth and its root canals.',
+          'Once the pulp is removed, the inside of the tooth is meticulously cleaned, disinfected, and then filled and sealed with a rubber-like material called gutta-percha. The procedure is performed under local anesthesia and is typically no more uncomfortable than getting a regular filling.',
+          'After a root canal, the tooth is no longer vital, but it is still functional. It is usually recommended to place a crown on the tooth to protect it from fracture and restore it to full function. This therapy is a vital tool for relieving dental pain and preserving your natural teeth.'
+        ], 
+        imageBefore: '/images/infected-teeth-treatment-before.png', 
+        imageAfter: '/images/infected-teeth-treatment-after.png', 
+        dataAiHint: 'dental xray', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'THERAPY' 
+      },
+      { 
+        id: 'tartar-cleaning', 
+        name: 'Tartar Cleaning', 
+        description: [
+          'Maintain optimal oral health and prevent dental disease with a professional Tartar Cleaning, also known as scaling and polishing. This is a fundamental part of preventive dental care and is essential for keeping your teeth and gums healthy for a lifetime.',
+          'Even with excellent brushing and flossing at home, plaque can build up and harden into a substance called calculus, or tartar. Tartar cannot be removed with a regular toothbrush and provides a rough surface for even more plaque to accumulate, leading to cavities and gum disease (gingivitis).',
+          'During a professional cleaning, our skilled dental hygienists use specialized tools, such as ultrasonic scalers, to gently and effectively remove tartar and plaque from above and below the gumline. After scaling, the teeth are polished to remove surface stains and create a smooth surface that helps prevent future plaque buildup.',
+          'Regular tartar cleanings, typically recommended every six months, are your best defense against dental problems and are key to maintaining a fresh, healthy, and beautiful smile.'
+        ], 
+        imageBefore: '/images/tartar-cleaning-before.png', 
+        imageAfter: '/images/tartar-cleaning-after.png', 
+        dataAiHint: 'dental cleaning', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'THERAPY' 
+      },
+      { 
+        id: 'tooth-fillings', 
+        name: 'Tooth Fillings', 
+        description: [
+          'A tooth filling is one of the most common dental procedures, used to restore a tooth that has been damaged by decay. When a cavity forms, a filling stops the decay from progressing further and restores the tooth\'s strength, function, and shape.',
+          'At LUNAI, we exclusively use modern, tooth-colored composite resin for our fillings. Unlike old silver amalgam fillings, composite fillings are mercury-free and bond directly to the tooth, which provides better support and requires less removal of healthy tooth structure.',
+          'The procedure involves removing the decayed portion of the tooth, cleaning the affected area, and then filling the cavity with the composite material in layers. A special light is used to harden each layer, and the filling is then shaped and polished to match the contour of the tooth and ensure a proper bite.',
+          'Because composite fillings can be matched to the exact shade of your natural teeth, they provide a durable and aesthetically pleasing result that is virtually invisible in your smile.'
+        ], 
+        imageBefore: '/images/tooth-fillings-before.png', 
+        imageAfter: '/images/tooth-fillings-after.png', 
+        dataAiHint: 'tooth filling', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'THERAPY' 
+      },
       // Surgery
-      { id: 'apical-resection', name: 'Apical Resection', description: 'Treat persistent root infections with an Apical Resection (Apicoectomy). This specialized surgical procedure is performed when a standard root canal is not sufficient. It involves removing the tip of the tooth\'s root, along with any surrounding infected tissue, to resolve the infection and save the tooth from extraction.', imageBefore: '/images/apical-resection-before.png', imageAfter: '/images/apical-resection-after.png', dataAiHint: 'dental surgery', serviceType: 'operation', dentalSubCategoryTitle: 'SURGERY' },
-      { id: 'dental-implants', name: 'Dental Implants', description: 'Permanently replace missing teeth with Dental Implants, the gold standard in tooth replacement. An implant is a titanium post that is surgically placed into the jawbone, acting as a new root. It provides a strong, stable foundation for a custom crown, bridge, or denture, looking and feeling just like a natural tooth.', imageBefore: '/images/dental-implants-before.png', imageAfter: '/images/dental-implants-after.png', dataAiHint: 'dental implant', serviceType: 'operation', dentalSubCategoryTitle: 'SURGERY' },
-      { id: 'tooth-extraction', name: 'Tooth Extraction', description: 'When a tooth cannot be saved, our gentle Tooth Extraction service provides a safe and comfortable solution. We perform extractions for severely decayed or damaged teeth, problematic wisdom teeth, or to prepare for orthodontic treatment. Your comfort is our top priority throughout the procedure.', imageBefore: '/images/tooth-extraction-before.png', imageAfter: '/images/tooth-extraction-after.png', dataAiHint: 'tooth extraction', serviceType: 'operation', dentalSubCategoryTitle: 'SURGERY' },
+      { 
+        id: 'apical-resection', 
+        name: 'Apical Resection', 
+        description: [
+          'An apical resection, also known as an apicoectomy or root-end surgery, is a specialized surgical procedure performed to treat a persistent infection or inflammation at the very tip (apex) of a tooth\'s root. This procedure is typically recommended when a standard root canal treatment has failed to resolve the issue or is not possible.',
+          'During an apicoectomy, our dental surgeon makes a small incision in the gum tissue to expose the underlying bone and the root tip. The infected tissue around the root is removed, along with the very end of the root itself. A small filling is then placed at the end of the root to seal the canal and prevent reinfection.',
+          'This microsurgical procedure is performed under local anesthesia with great precision. It is a vital tool for saving a tooth that would otherwise need to be extracted, allowing it to function for many more years.',
+          'Apical resection is a last-resort treatment that can effectively resolve chronic infection and preserve your natural tooth structure when other options are not viable.'
+        ], 
+        imageBefore: '/images/apical-resection-before.png', 
+        imageAfter: '/images/apical-resection-after.png', 
+        dataAiHint: 'dental surgery', 
+        serviceType: 'operation', 
+        dentalSubCategoryTitle: 'SURGERY' 
+      },
+      { 
+        id: 'dental-implants', 
+        name: 'Dental Implants', 
+        description: [
+          'Permanently replace missing teeth and restore your smile to its full glory with Dental Implants. Widely considered the gold standard in tooth replacement, dental implants provide a strong, stable, and long-lasting solution that looks, feels, and functions just like a natural tooth.',
+          'An implant is a small, biocompatible titanium post that is surgically placed into the jawbone, where it acts as a new root for the missing tooth. Over a period of a few months, the implant fuses with the jawbone in a process called osseointegration, creating an incredibly strong foundation.',
+          'Once integrated, a connector piece called an abutment is attached to the implant, and a custom-made crown is placed on top. The final result is a seamless, permanent replacement that doesn\'t slip or click like dentures and doesn\'t require altering adjacent healthy teeth like a bridge.',
+          'Dental implants can be used to replace a single tooth, multiple teeth, or even to support a full arch of dentures. They help to preserve jawbone health and maintain your facial structure, making them the most advanced and beneficial tooth replacement option available.'
+        ], 
+        imageBefore: '/images/dental-implants-before.png', 
+        imageAfter: '/images/dental-implants-after.png', 
+        dataAiHint: 'dental implant', 
+        serviceType: 'operation', 
+        dentalSubCategoryTitle: 'SURGERY' 
+      },
+      { 
+        id: 'tooth-extraction', 
+        name: 'Tooth Extraction', 
+        description: [
+          'While our primary goal is always to save a natural tooth, sometimes a tooth extraction is the necessary course of action to protect your overall oral health. At LUNAI, we perform tooth extractions with the utmost care and gentleness, ensuring your comfort is our top priority throughout the procedure.',
+          'An extraction may be necessary for several reasons: a tooth may be too severely decayed or damaged to be repaired; advanced gum disease may have destroyed the supporting bone; a tooth may be impacted (like many wisdom teeth); or teeth may need to be removed to create space for orthodontic treatment.',
+          'We offer both simple extractions for teeth that are visible in the mouth and surgical extractions for teeth that are broken below the gum line or impacted. The procedure is performed under local anesthesia to completely numb the area.',
+          'Our team provides detailed post-operative instructions to ensure a smooth and speedy recovery. We can also discuss excellent tooth replacement options, such as dental implants or bridges, to restore your smile after healing.'
+        ], 
+        imageBefore: '/images/tooth-extraction-before.png', 
+        imageAfter: '/images/tooth-extraction-after.png', 
+        dataAiHint: 'tooth extraction', 
+        serviceType: 'operation', 
+        dentalSubCategoryTitle: 'SURGERY' 
+      },
       // Pedodontics
-      { id: 'milk-teeth-treatment', name: 'Milk Teeth Treatment', description: 'Ensure your child\'s oral health with our specialized Milk Teeth Treatment. We provide gentle, compassionate care for primary (baby) teeth, including tooth-colored fillings, pulp therapy (pulpotomy), and crowns. Protecting milk teeth is crucial for proper chewing, speech development, and guiding permanent teeth into place.', imageBefore: '/images/milk-teeth-treatment-before.png', imageAfter: '/images/milk-teeth-treatment-after.png', dataAiHint: 'child smile', serviceType: 'treatment', dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' },
-      { id: 'tooth-fluoridation', name: 'Tooth Fluoridation', description: 'Strengthen your child\'s teeth against cavities with professional Tooth Fluoridation. This quick and painless treatment involves applying a concentrated fluoride solution to the teeth, which helps to harden the enamel and make it more resistant to acid attacks from bacteria and sugars in the mouth.', imageBefore: '/images/tooth-fluoridation-before.png', imageAfter: '/images/tooth-fluoridation-after.png', dataAiHint: 'child dentist', serviceType: 'treatment', dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' },
-      { id: 'tooth-sealants', name: 'Tooth Sealants', description: 'Protect your child\'s smile from cavities with Dental Tooth Sealants. A sealant is a thin, plastic coating painted onto the chewing surfaces of the back teeth (molars and premolars). It acts as a protective shield, sealing the deep grooves and preventing food and bacteria from getting trapped.', imageBefore: '/images/tooth-sealants-before.png', imageAfter: '/images/tooth-sealants-after.png', dataAiHint: 'healthy teeth', serviceType: 'treatment', dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' },
+      { 
+        id: 'milk-teeth-treatment', 
+        name: 'Milk Teeth Treatment', 
+        description: [
+          'Establishing a positive foundation for a lifetime of good oral health starts with excellent care for primary (baby) teeth. Our pedodontic services at LUNAI focus on providing gentle, compassionate, and fun dental care for children in a welcoming environment.',
+          'The health of milk teeth is crucial. They play a vital role in proper chewing and nutrition, speech development, and, most importantly, they hold space for the permanent teeth to erupt into their correct positions. Untreated decay in baby teeth can lead to pain, infection, and problems with the developing adult teeth.',
+          'Our milk teeth treatments include gentle cleanings, tooth-colored fillings for cavities, pulp therapy (pulpotomy) to save an infected tooth, and stainless steel or aesthetic crowns to protect a weakened tooth. We strive to make every visit a positive experience to prevent dental anxiety.',
+          'Our team is dedicated to educating both children and parents on proper oral hygiene techniques to ensure a healthy smile for years to come.'
+        ], 
+        imageBefore: '/images/milk-teeth-treatment-before.png', 
+        imageAfter: '/images/milk-teeth-treatment-after.png', 
+        dataAiHint: 'child smile', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' 
+      },
+      { 
+        id: 'tooth-fluoridation', 
+        name: 'Tooth Fluoridation', 
+        description: [
+          'Strengthen your child\'s teeth and give them a powerful defense against cavities with professional Tooth Fluoridation. Fluoride is a naturally occurring mineral that has been proven to make tooth enamel more resistant to the acid attacks from plaque bacteria and sugars that cause tooth decay.',
+          'A professional fluoride treatment provides a much higher concentration of fluoride than what is found in toothpaste or water. The treatment is quick, painless, and safe. It involves applying a fluoride gel, foam, or varnish directly to the teeth after a cleaning.',
+          'This simple preventive measure can significantly reduce the risk of your child developing cavities, especially on the chewing surfaces of their molars, which are most prone to decay. It is a cornerstone of pediatric preventive dentistry.',
+          'We recommend fluoride treatments as part of your child\'s regular check-up and cleaning appointments to help keep their smile healthy and strong.'
+        ], 
+        imageBefore: '/images/tooth-fluoridation-before.png', 
+        imageAfter: '/images/tooth-fluoridation-after.png', 
+        dataAiHint: 'child dentist', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' 
+      },
+      { 
+        id: 'tooth-sealants', 
+        name: 'Tooth Sealants', 
+        description: [
+          'Protect your child\'s smile from cavities with Dental Tooth Sealants. This is a simple but highly effective preventive treatment that provides a protective shield for the back teeth (molars and premolars), where most childhood cavities occur.',
+          'The chewing surfaces of these back teeth have natural pits and fissures that are difficult to clean with a toothbrush. Food particles and bacteria can get trapped in these grooves, leading to decay. A sealant is a thin, plastic coating that is painted onto these chewing surfaces, effectively "sealing" out the plaque and food.',
+          'The application process is quick and painless. The tooth is cleaned and dried, and the liquid sealant material is painted on. It hardens in seconds, often with the help of a special curing light. There is no drilling or discomfort involved.',
+          'Sealants can provide protection for many years and are a key part of preventing tooth decay in children and teenagers, helping to ensure a lifetime of healthy teeth.'
+        ], 
+        imageBefore: '/images/tooth-sealants-before.png', 
+        imageAfter: '/images/tooth-sealants-after.png', 
+        dataAiHint: 'healthy teeth', 
+        serviceType: 'treatment', 
+        dentalSubCategoryTitle: 'PEDODONTICS (Children\'s Dentistry)' 
+      },
     ],
   },
 ];

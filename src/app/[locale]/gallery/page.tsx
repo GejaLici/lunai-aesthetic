@@ -31,7 +31,7 @@ export default function GalleryPage() {
             </CardHeader>
             <CardContent className="p-4">
               <CardTitle className="text-lg font-headline text-primary">{service.name}</CardTitle>
-              <CardDescription className="text-sm mt-1">{service.description}</CardDescription>
+              <CardDescription className="text-sm mt-1">{Array.isArray(service.description) ? service.description[0] : service.description}</CardDescription>
             </CardContent>
           </Card>
         ))}

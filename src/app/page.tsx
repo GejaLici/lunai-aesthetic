@@ -37,7 +37,7 @@ export default function HomePage() {
   const transformations = allServices.slice(0, 6).map(service => ({
     id: service.id,
     treatment: service.name,
-    description: service.description, 
+    description: Array.isArray(service.description) ? service.description[0] : service.description, 
     beforeImageUrl: service.imageBefore,
     afterImageUrl: service.imageAfter,
     beforeHint: `${service.dataAiHint} before`,
@@ -93,7 +93,7 @@ export default function HomePage() {
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="container mx-auto px-4 mt-8">
-        <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
+        <section className="relative min-h-[60vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
           <video
             autoPlay
             loop

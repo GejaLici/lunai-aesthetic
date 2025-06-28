@@ -49,7 +49,15 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
               <CardTitle className="font-headline text-4xl text-primary mt-1">{service.name}</CardTitle>
             </CardHeader>
             <CardContent className="p-0 flex-grow">
-              <p className="text-lg text-foreground/90">{service.description}</p>
+               <div className="space-y-4 text-lg text-foreground/90">
+                {Array.isArray(service.description) ? (
+                  service.description.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))
+                ) : (
+                  <p>{service.description}</p>
+                )}
+              </div>
             </CardContent>
              <div className="mt-8">
                 <Button asChild size="lg">
