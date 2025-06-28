@@ -1,2 +1,3 @@
-// This file is intentionally left blank to resolve a configuration conflict.
-// The correct configuration is located in src/middleware.ts.
+// This file re-exports the middleware from the /src directory.
+// It is required for the Next.js build process to find the middleware.
+export { default, config } from './src/middleware';
