@@ -1,2 +1,2 @@
-// This file is intentionally left blank.
-// I18n configuration is now managed directly in i18n.ts, middleware.ts, and navigation.ts.
+// This file is intentionally left blank to resolve a configuration conflict.
+// The configuration has been simplified and moved into the relevant files.
