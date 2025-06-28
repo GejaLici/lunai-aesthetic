@@ -1,13 +1,38 @@
-type Props = {
-  children: React.ReactNode;
-  params: {locale: string};
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
+import { Toaster } from '@/components/ui/toaster';
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: {
+    default: 'LUNAI - Expert Aesthetic Treatments',
+    template: '%s | LUNAI',
+  },
+  description: 'LUNAI offers expert aesthetic treatments and personalized care to help you achieve lasting beauty and confidence. Explore our advanced services today.',
 };
 
-// The root layout applies to all routes and is used to render the <html> and <body> tags.
-export default function RootLayout({children, params}: Props) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang={params.locale} className="smooth-scroll">
-      <body>{children}</body>
+    <html lang="en" className="smooth-scroll">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-body antialiased min-h-screen flex flex-col bg-background">
+          <SiteHeader />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <SiteFooter />
+          <Toaster />
+      </body>
     </html>
   );
 }
