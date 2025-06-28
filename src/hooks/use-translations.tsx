@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -24,20 +23,40 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [messages, setMessages] = useState<Messages>({});
 
   useEffect(() => {
-    const loadMessages = async () => {
+    const loadMessages = async (currentLocale: string) => {
+      let loadedMessages;
       try {
-        const loadedMessages = await import(`../../messages/${locale}.json`);
+        switch (currentLocale) {
+          case 'es':
+            loadedMessages = await import('../../messages/es.json');
+            break;
+          case 'fr':
+            loadedMessages = await import('../../messages/fr.json');
+            break;
+          case 'it':
+            loadedMessages = await import('../../messages/it.json');
+            break;
+          case 'sq':
+            loadedMessages = await import('../../messages/sq.json');
+            break;
+          default:
+            loadedMessages = await import('../../messages/en.json');
+            break;
+        }
         setMessages(loadedMessages.default || loadedMessages);
       } catch (error) {
-        console.error(`Could not load messages for locale: ${locale}`, error);
-        // Fallback to English if the selected locale fails
-        if (locale !== 'en') {
-          const fallbackMessages = await import(`../../messages/en.json`);
+        console.error(`Could not load messages for locale: ${currentLocale}`, error);
+        // Attempt to load English as a fallback
+        try {
+          const fallbackMessages = await import('../../messages/en.json');
           setMessages(fallbackMessages.default || fallbackMessages);
+        } catch (fallbackError) {
+          console.error(`Could not load fallback English messages.`, fallbackError);
+          setMessages({}); // Set to empty if even English fails
         }
       }
     };
-    loadMessages();
+    loadMessages(locale);
   }, [locale]);
 
   return (
@@ -60,7 +79,7 @@ export const useTranslations = (namespace?: string) => {
     throw new Error('useTranslations must be used within a LanguageProvider');
   }
 
-  return (key: string, variables?: { [key: string]: string | number }) => {
+  return (key: string, variables?: { [key:string]: string | number }) => {
     const fullKey = namespace ? `${namespace}.${key}` : key;
     const translation = get(context.messages, fullKey);
 
@@ -68,16 +87,20 @@ export const useTranslations = (namespace?: string) => {
       console.warn(`Translation not found for key: ${fullKey}`);
       return fullKey; // Return the key if translation is not found
     }
-
-    if (typeof translation === 'string' && variables) {
-      let result = translation;
-      Object.keys(variables).forEach(varKey => {
-        const regex = new RegExp(`\\{\\{\\s*${varKey}\\s*\\}\\}`, 'g');
-        result = result.replace(regex, String(variables[varKey]));
-      });
-      return result;
+    
+    if (typeof translation === 'string') {
+      if (variables) {
+        let result = translation;
+        Object.keys(variables).forEach(varKey => {
+          const regex = new RegExp(`\\{\\{\\s*${varKey}\\s*\\}\\}`, 'g');
+          result = result.replace(regex, String(variables[varKey]));
+        });
+        return result;
+      }
+      return translation;
     }
     
+    // For arrays or other types, return as is
     return translation;
   };
 };
