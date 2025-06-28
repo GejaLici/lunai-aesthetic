@@ -1,3 +1,4 @@
+"use client";
 
 import { serviceData } from '@/lib/services';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
@@ -6,12 +7,16 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Stethoscope } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from '@/hooks/use-translations';
 
 export default function ServicesPage() {
+  const t = useTranslations('ServicesPage');
+  const tServices = useTranslations('services');
+
   if (!serviceData || serviceData.length === 0) {
     return (
       <div className="container mx-auto px-4 py-8 text-center">
-        <p>Services are currently unavailable. Please check back later.</p>
+        <p>{t('unavailable')}</p>
       </div>
     );
   }
@@ -20,9 +25,9 @@ export default function ServicesPage() {
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">
         <Stethoscope className="h-16 w-16 text-accent mx-auto mb-4" />
-        <h1 className="text-5xl font-headline font-bold text-primary">Our Services</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">{t('title')}</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          Comprehensive aesthetic and dental solutions tailored for you at LUNAI.
+          {t('subtitle')}
         </p>
       </section>
 
@@ -30,7 +35,7 @@ export default function ServicesPage() {
         <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-12 mb-8">
           {serviceData.map((category) => (
             <TabsTrigger key={category.id} value={category.id} className="py-2.5 text-base">
-              {category.title}
+              {tServices(`categories.${category.id}.title`)}
             </TabsTrigger>
           ))}
         </TabsList>
@@ -43,24 +48,24 @@ export default function ServicesPage() {
                   <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
                     <Image
                       src={service.imageAfter}
-                      alt={`Image for ${service.name}`}
+                      alt={t('imageAlt', { serviceName: tServices(`items.${service.id}.name`) })}
                       fill
                       className="object-cover"
                       data-ai-hint={service.dataAiHint}
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="font-headline text-xl text-primary">{service.name}</CardTitle>
+                    <CardTitle className="font-headline text-xl text-primary">{tServices(`items.${service.id}.name`)}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <CardDescription className="text-foreground/90">
-                      {Array.isArray(service.description) ? service.description[0] : service.description}
+                      {tServices(`items.${service.id}.description.0`)}
                     </CardDescription>
                   </CardContent>
                   <CardFooter>
                     <Button asChild variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                       <Link href={`/services/${service.id}`}>
-                        Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        {t('learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardFooter>

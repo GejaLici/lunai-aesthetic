@@ -12,21 +12,23 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { virtualConsultation, type VirtualConsultationOutput } from "@/ai/flows/virtual-consultation";
 import { Loader2, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-const FormSchema = z.object({
-  concerns: z.string().min(20, {
-    message: "Please describe your concerns in at least 20 characters.",
-  }).max(2000, {
-    message: "Your description should not exceed 2000 characters.",
-  }),
-});
-
-type FormData = z.infer<typeof FormSchema>;
+import { useTranslations } from "@/hooks/use-translations";
 
 export function ConsultationForm() {
+  const t = useTranslations('ConsultationPage.form');
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<VirtualConsultationOutput | null>(null);
   const { toast } = useToast();
+  
+  const FormSchema = z.object({
+    concerns: z.string().min(20, {
+      message: t('validation.minLength'),
+    }).max(2000, {
+      message: t('validation.maxLength'),
+    }),
+  });
+  
+  type FormData = z.infer<typeof FormSchema>;
 
   const form = useForm<FormData>({
     resolver: zodResolver(FormSchema),
@@ -44,8 +46,8 @@ export function ConsultationForm() {
     } catch (error) {
       console.error(error);
       toast({
-        title: "Error",
-        description: "Failed to get suggestions. Please try again.",
+        title: t('toast.error.title'),
+        description: t('toast.error.description'),
         variant: "destructive",
       });
     } finally {
@@ -62,11 +64,11 @@ export function ConsultationForm() {
             name="concerns"
             render={({ field }) => (
               <FormItem>
-                <FormLabel htmlFor="concerns" className="text-lg">Describe your aesthetic concerns and goals</FormLabel>
+                <FormLabel htmlFor="concerns" className="text-lg">{t('label')}</FormLabel>
                 <FormControl>
                   <Textarea
                     id="concerns"
-                    placeholder="e.g., I'm concerned about fine lines around my eyes and a loss of volume in my cheeks..."
+                    placeholder={t('placeholder')}
                     className="min-h-[150px] text-base"
                     {...field}
                   />
@@ -79,12 +81,12 @@ export function ConsultationForm() {
             {isLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Analyzing...
+                {t('button.loading')}
               </>
             ) : (
               <>
                 <Sparkles className="mr-2 h-4 w-4" />
-                Get AI-Powered Suggestions
+                {t('button.default')}
               </>
             )}
           </Button>
@@ -96,7 +98,7 @@ export function ConsultationForm() {
           <CardHeader>
             <CardTitle className="font-headline text-xl text-accent flex items-center">
               <Sparkles className="mr-2 h-5 w-5" />
-              Initial Thoughts & Potential Directions
+              {t('results.title')}
             </CardTitle>
           </CardHeader>
           <CardContent>

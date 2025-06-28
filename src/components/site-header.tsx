@@ -13,15 +13,15 @@ export function SiteHeader() {
   const t = useTranslations('SiteHeader');
 
   const navLinks = [
-    { href: '/', label: t.home || 'Home' },
-    { href: '/services', label: t.services || 'Services' },
-    { href: '/gallery', label: t.gallery || 'Gallery' },
-    { href: '/consultation', label: t.consultation || 'Virtual Consultation' },
-    { href: '/blog', label: t.blog || 'Blog' },
-    { href: '/contact', label: t.contact || 'Contact' },
+    { href: '/', label: t('home') },
+    { href: '/services', label: t('services') },
+    { href: '/gallery', label: t('gallery') },
+    { href: '/consultation', label: t('consultation') },
+    { href: '/blog', label: t('blog') },
+    { href: '/contact', label: t('contact') },
   ];
 
-  const bookNowLabel = t.bookNow || 'Book Now';
+  const bookNowLabel = t('bookNow');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">

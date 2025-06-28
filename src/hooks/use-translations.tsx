@@ -25,13 +25,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const loadMessages = async () => {
       try {
-        const loadedMessages = await import(`@/messages/${locale}.json`);
+        const loadedMessages = await import(`../messages/${locale}.json`);
         setMessages(loadedMessages.default || loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${locale}`, error);
         // Fallback to English if the selected locale fails
         if (locale !== 'en') {
-          const fallbackMessages = await import(`@/messages/en.json`);
+          const fallbackMessages = await import(`../messages/en.json`);
           setMessages(fallbackMessages.default || fallbackMessages);
         }
       }
@@ -46,14 +46,38 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// Helper function to get nested properties from an object using a dot-notation string
+const get = (obj: any, path: string) => {
+  const keys = path.split('.');
+  return keys.reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
+};
+
 // Custom hook to use the translations
-export const useTranslations = (namespace: string) => {
+export const useTranslations = (namespace?: string) => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
     throw new Error('useTranslations must be used within a LanguageProvider');
   }
-  return context.messages[namespace] || {};
+
+  return (key: string, variables?: { [key: string]: string | number }) => {
+    const fullKey = namespace ? `${namespace}.${key}` : key;
+    let translation = get(context.messages, fullKey) as string | undefined;
+
+    if (translation === undefined) {
+      return fullKey; // Return the key if translation is not found
+    }
+    
+    if (variables) {
+      Object.keys(variables).forEach(varKey => {
+        const regex = new RegExp(`\\{\\{\\s*${varKey}\\s*\\}\\}`, 'g');
+        translation = translation.replace(regex, String(variables[varKey]));
+      });
+    }
+
+    return translation;
+  };
 };
+
 
 // Custom hook to access locale and setter
 export const useLocale = () => {

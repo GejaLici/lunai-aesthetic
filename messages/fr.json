@@ -1,1 +1,222 @@
-{}
+{
+  "SiteHeader": {
+    "home": "Accueil",
+    "services": "Services",
+    "gallery": "Galerie",
+    "consultation": "Consultation Virtuelle",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookNow": "Réserver"
+  },
+  "SiteFooter": {
+    "slogan": "Façonner la beauté, inspirée par la science.",
+    "quickLinks": "Liens Rapides",
+    "followUs": "Suivez-nous",
+    "copyright": "© {{year}} LUNAI. Tous droits réservés. Site web par Firebase Studio."
+  },
+  "HomePage": {
+    "hero": {
+      "title": "LUNAI : Solutions de Premier Ordre pour une Beauté et une Confiance Durables",
+      "subtitle": "Découvrez des traitements esthétiques et dentaires transformateurs avec notre équipe d'experts chez LUNAI. Découvrez des traitements personnalisés conçus pour rehausser votre beauté naturelle et renforcer votre confiance. Nos experts utilisent les dernières techniques pour des résultats optimaux. Commencez votre voyage vers un bien-être amélioré dès aujourd'hui.",
+      "buttonExplore": "Explorez Nos Services Experts",
+      "buttonConsult": "Consultation Virtuelle par IA"
+    },
+    "about": {
+      "title": "Bienvenue chez LUNAI",
+      "paragraph1": "Chez LUNAI, nous croyons que tout le monde mérite de se sentir confiant et radieux. Notre clinique de pointe offre une suite complète de traitements esthétiques et dentaires avancés, dispensés par des professionnels hautement expérimentés dédiés à l'obtention de résultats exceptionnels et d'apparence naturelle, adaptés à vous.",
+      "paragraph2": "Nous intégrons de manière transparente l'art médical avec les dernières avancées technologiques pour fournir des soins personnalisés qui correspondent à vos aspirations esthétiques uniques. Votre voyage vers une beauté et une assurance accrues commence ici chez LUNAI.",
+      "imageAlt": "Intérieur de la clinique accueillant et professionnel chez LUNAI"
+    },
+    "featuredServices": {
+      "title": "Nos Services Esthétiques et Dentaires de Premier Ordre chez LUNAI",
+      "andMore": "et d'autres traitements spécialisés...",
+      "buttonExplore": "Explorer les Traitements de {{category}}"
+    },
+    "transformations": {
+      "title": "Soyez Témoin de Résultats Transformateurs chez LUNAI",
+      "imageAlt": "Présentation des résultats pour {{treatment}} chez LUNAI",
+      "viewResult": "Voir le Résultat",
+      "buttonAll": "Découvrir Toutes les Transformations"
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi Faire Confiance à LUNAI ?",
+      "expertCare": {
+        "title": "Soins Esthétiques Experts et Personnalisés",
+        "description": "Nos professionnels hautement qualifiés fournissent des traitements esthétiques sur mesure, en se concentrant sur vos objectifs uniques pour garantir des résultats exceptionnels, d'apparence naturelle et votre plus grande satisfaction.",
+        "moreInfo": "Cela inclut une consultation complète, une planification de traitement avancée, un soutien continu et un engagement indéfectible envers votre bien-être à chaque étape de votre parcours esthétique chez LUNAI."
+      },
+      "advancedTech": {
+        "title": "Technologie de Pointe Avancée",
+        "description": "Nous utilisons les dernières avancées et les équipements de pointe en médecine esthétique pour fournir des résultats sûrs, efficaces et peu invasifs avec précision chez LUNAI.",
+        "moreInfo": "Notre investissement dans une technologie de premier plan garantit que vous bénéficiez de procédures non seulement avancées, mais qui privilégient également votre confort, votre sécurité et obtiennent des résultats supérieurs."
+      },
+      "naturalResults": {
+        "title": "Engagement envers des Résultats Naturels et Améliorants",
+        "description": "Notre philosophie fondamentale chez LUNAI est de rehausser votre beauté inhérente, en visant des améliorations subtiles mais significatives qui semblent authentiques et vous font sentir comme la meilleure version de vous-même.",
+        "moreInfo": "Nous collaborons avec vous pour créer un plan de traitement sur mesure qui respecte votre individualité, garantissant des résultats qui reflètent la meilleure version de vous-même, naturellement."
+      }
+    },
+    "experience": {
+      "title": "Découvrez la Différence LUNAI",
+      "description": "Entrez dans un sanctuaire de calme et de sophistication chez LUNAI, où la technologie esthétique avancée rencontre des soins aux patients inégalés. Notre clinique est méticuleusement conçue avec votre confort, votre vie privée et votre bien-être comme nos priorités absolues, garantissant une atmosphère sereine et accueillante à chaque visite.",
+      "image1Alt": "Zone de réception de la clinique luxueuse et accueillante chez LUNAI",
+      "image2Alt": "Salle de traitement moderne, propre et avancée chez LUNAI"
+    },
+    "testimonials": {
+      "title": "Expériences Précieuses de nos Clients chez LUNAI",
+      "items": {
+        "1": {
+          "quote": "Mon expérience chez LUNAI a été phénoménale. Les résultats ont dépassé mes attentes, et le personnel était incroyablement professionnel et attentionné.",
+          "name": "Jessica M."
+        },
+        "2": {
+          "quote": "J'étais nerveuse à propos de ma procédure, mais l'équipe de LUNAI m'a mise complètement à l'aise. Je suis ravie de mon nouveau look !",
+          "name": "David K."
+        },
+        "3": {
+          "quote": "De la consultation au suivi post-traitement, chaque étape a été gérée avec expertise. Je recommande vivement LUNAI à quiconque envisage des traitements esthétiques.",
+          "name": "Sarah L."
+        }
+      }
+    },
+    "blog": {
+      "title": "Perspectives d'Experts de Notre Blog LUNAI",
+      "readArticle": "Lire l'Article Complet",
+      "buttonAll": "Explorer Tous les Articles du Blog LUNAI"
+    },
+    "cta": {
+      "title": "Prêt(e) à Découvrir Votre Meilleur Vous avec LUNAI ?",
+      "description": "Notre consultant virtuel avancé, alimenté par l'IA, est prêt à vous guider vers votre traitement esthétique ou dentaire idéal chez LUNAI.",
+      "button": "Commencez Votre Consultation Virtuelle Experte"
+    }
+  },
+  "ServicesPage": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions esthétiques et dentaires complètes adaptées pour vous chez LUNAI.",
+    "unavailable": "Les services sont actuellement indisponibles. Veuillez réessayer plus tard.",
+    "learnMore": "En Savoir Plus",
+    "imageAlt": "Image pour {{serviceName}}"
+  },
+  "ServiceDetailsPage": {
+    "backButton": "Retour à Tous les Services",
+    "surgicalProcedure": "Procédure Chirurgicale",
+    "nonSurgicalTreatment": "Traitement Non Chirurgical",
+    "bookConsultation": "Réserver une Consultation",
+    "before": "Avant",
+    "after": "Après",
+    "beforeImageAlt": "Image avant pour {{serviceName}}",
+    "afterImageAlt": "Image après pour {{serviceName}}"
+  },
+  "GalleryPage": {
+    "title": "Transformations de Patients",
+    "subtitle": "Soyez témoin des résultats époustouflants et naturels obtenus chez LUNAI.",
+    "emptyState": "Notre galerie est actuellement vide. Veuillez revenir plus tard pour admirer les résultats époustouflants obtenus chez LUNAI.",
+    "before": "Avant",
+    "after": "Après",
+    "beforeImageAlt": "Image avant pour {{serviceName}}",
+    "afterImageAlt": "Image après pour {{serviceName}}"
+  },
+  "ConsultationPage": {
+    "title": "Consultation Virtuelle par IA",
+    "subtitle": "Obtenez des suggestions de traitements esthétiques et dentaires personnalisées de notre IA avancée. Décrivez vos préoccupations, et notre consultant virtuel vous fournira des conseils initiaux pour vous aider dans votre parcours avec LUNAI.",
+    "formCard": {
+      "title": "Votre Consultation Virtuelle",
+      "description": "Cet outil fournit des suggestions préliminaires et ne remplace pas une consultation médicale professionnelle."
+    },
+    "form": {
+      "label": "Décrivez vos préoccupations et objectifs esthétiques",
+      "placeholder": "ex., Je suis préoccupé(e) par les ridules autour de mes yeux et une perte de volume dans mes joues...",
+      "button": {
+        "default": "Obtenir des Suggestions par IA",
+        "loading": "Analyse en cours..."
+      },
+      "results": {
+        "title": "Premières Réflexions et Pistes Potentielles"
+      },
+      "validation": {
+        "minLength": "Veuillez décrire vos préoccupations en au moins 20 caractères.",
+        "maxLength": "Votre description ne doit pas dépasser 2000 caractères."
+      },
+      "toast": {
+        "error": {
+          "title": "Erreur",
+          "description": "Échec de l'obtention des suggestions. Veuillez réessayer."
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog LUNAI",
+    "subtitle": "Idées, conseils et actualités sur les traitements esthétiques et le bien-être par LUNAI.",
+    "emptyState": "Aucun article de blog disponible pour le moment. Veuillez revenir bientôt pour des idées et des nouvelles de LUNAI.",
+    "readMore": "Lire la Suite"
+  },
+  "ContactPage": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider. Contactez-nous pour toute question ou pour planifier votre consultation en personne chez LUNAI.",
+    "formCard": {
+      "title": "Envoyez-nous un Message",
+      "description": "Notre équipe vous répondra dans les plus brefs délais."
+    },
+    "infoCard": {
+      "title": "Nos Coordonnées",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone"
+    },
+    "form": {
+      "labels": {
+        "name": "Nom Complet",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone (Optionnel)",
+        "message": "Votre Message"
+      },
+      "placeholders": {
+        "name": "Jean Dupont",
+        "email": "jean.dupont@example.com",
+        "phone": "(123) 456-7890",
+        "message": "Comment pouvons-nous vous aider aujourd'hui ?"
+      },
+      "button": {
+        "default": "Envoyer le Message",
+        "loading": "Envoi en cours..."
+      },
+      "validation": {
+        "name": {
+          "minLength": "Le nom doit contenir au moins 2 caractères."
+        },
+        "email": {
+          "invalid": "Adresse e-mail non valide."
+        },
+        "message": {
+          "minLength": "Le message doit contenir au moins 10 caractères.",
+          "maxLength": "Le message ne peut pas dépasser 500 caractères."
+        }
+      },
+      "toast": {
+        "success": {
+          "title": "Message Envoyé !",
+          "description": "Merci de nous avoir contactés. Nous vous répondrons sous peu."
+        },
+        "error": {
+          "title": "Erreur lors de l'envoi du Message",
+          "default": "Une erreur inattendue est survenue."
+        }
+      }
+    }
+  },
+  "services": {
+    "categories": {
+      "face": {
+        "title": "Esthétique Faciale"
+      },
+      "body": {
+        "title": "Modelage du Corps"
+      },
+      "dentistry": {
+        "title": "Dentisterie"
+      }
+    },
+    "items": {},
+    "blogPosts": {}
+  }
+}

@@ -12,17 +12,19 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
 import { saveContactMessage, type ContactFormData } from "@/app/contact/actions";
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Invalid email address."),
-  phone: z.string().optional(),
-  message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message cannot exceed 500 characters."),
-});
+import { useTranslations } from "@/hooks/use-translations";
 
 export function ContactForm() {
+  const t = useTranslations('ContactPage.form');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  const contactFormSchema = z.object({
+    name: z.string().min(2, t('validation.name.minLength')),
+    email: z.string().email(t('validation.email.invalid')),
+    phone: z.string().optional(),
+    message: z.string().min(10, t('validation.message.minLength')).max(500, t('validation.message.maxLength')),
+  });
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -41,12 +43,12 @@ export function ContactForm() {
 
     if (result.success) {
       toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We will get back to you shortly.",
+        title: t('toast.success.title'),
+        description: t('toast.success.description'),
       });
       form.reset();
     } else {
-      let description = result.message || "An unexpected error occurred.";
+      let description = result.message || t('toast.error.default');
       if (result.errors) {
         const errorMessages = Object.values(result.errors).map(errArray => errArray?.[0]).filter(Boolean);
         if (errorMessages.length > 0) {
@@ -54,7 +56,7 @@ export function ContactForm() {
         }
       }
       toast({
-        title: "Error Sending Message",
+        title: t('toast.error.title'),
         description: description,
         variant: "destructive",
       });
@@ -71,9 +73,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor="name">Full Name</FormLabel>
+              <FormLabel htmlFor="name">{t('labels.name')}</FormLabel>
               <FormControl>
-                <Input id="name" placeholder="John Doe" {...field} />
+                <Input id="name" placeholder={t('placeholders.name')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -84,9 +86,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor="email">Email Address</FormLabel>
+              <FormLabel htmlFor="email">{t('labels.email')}</FormLabel>
               <FormControl>
-                <Input id="email" type="email" placeholder="john.doe@example.com" {...field} />
+                <Input id="email" type="email" placeholder={t('placeholders.email')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -97,9 +99,9 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor="phone">Phone Number (Optional)</FormLabel>
+              <FormLabel htmlFor="phone">{t('labels.phone')}</FormLabel>
               <FormControl>
-                <Input id="phone" type="tel" placeholder="(123) 456-7890" {...field} />
+                <Input id="phone" type="tel" placeholder={t('placeholders.phone')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -110,11 +112,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor="message">Your Message</FormLabel>
+              <FormLabel htmlFor="message">{t('labels.message')}</FormLabel>
               <FormControl>
                 <Textarea
                   id="message"
-                  placeholder="How can we help you today?"
+                  placeholder={t('placeholders.message')}
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -127,12 +129,12 @@ export function ContactForm() {
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              {t('button.loading')}
             </>
           ) : (
             <>
               <Send className="mr-2 h-4 w-4" />
-              Send Message
+              {t('button.default')}
             </>
           )}
         </Button>

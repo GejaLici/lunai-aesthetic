@@ -1,9 +1,15 @@
 
-export const placeholderPosts = [
+export interface BlogPost {
+  id: string;
+  imageUrl: string;
+  imageHint: string;
+  date: string;
+  slug: string;
+}
+
+export const placeholderPosts: BlogPost[] = [
   {
     id: "1",
-    title: "The Ultimate Guide to Skincare for a Lasting Glow",
-    excerpt: "Discover expert tips on building a skincare routine that fights aging, enhances radiance, and keeps your skin healthy and beautiful.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "skincare products",
     date: "June 20, 2024",
@@ -11,8 +17,6 @@ export const placeholderPosts = [
   },
   {
     id: "2",
-    title: "Botox vs. Fillers: What's the Right Choice for You?",
-    excerpt: "A comprehensive breakdown of two of our most popular treatments. Understand the differences and find out which is best for your aesthetic goals.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "woman face",
     date: "June 15, 2024",
@@ -20,8 +24,6 @@ export const placeholderPosts = [
   },
   {
     id: "3",
-    title: "The Road to Recovery: What to Expect After Your Procedure",
-    excerpt: "Post-treatment care is crucial for optimal results. Learn about the recovery process for our key procedures and how to ensure a smooth journey.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "calm relax",
     date: "June 10, 2024",
@@ -29,8 +31,6 @@ export const placeholderPosts = [
   },
    {
     id: "4",
-    title: "A Brighter Smile: The Benefits of Professional Teeth Whitening",
-    excerpt: "Explore how professional teeth whitening can dramatically enhance your smile and boost your confidence, and what the procedure entails.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "perfect smile",
     date: "June 5, 2024",
@@ -38,8 +38,6 @@ export const placeholderPosts = [
   },
   {
     id: "5",
-    title: "Non-Invasive Body Contouring: A Revolution in Aesthetics",
-    excerpt: "Learn about the latest non-surgical technologies that can help you achieve your desired body shape without the downtime of surgery.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "woman silhouette",
     date: "May 30, 2024",
@@ -47,8 +45,6 @@ export const placeholderPosts = [
   },
   {
     id: "6",
-    title: "Maintaining Your Results: Lifestyle Tips for Long-Term Beauty",
-    excerpt: "Your aesthetic journey doesn't end when you leave our clinic. Discover tips on diet, exercise, and lifestyle to prolong and enhance your results.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "healthy food",
     date: "May 25, 2024",
