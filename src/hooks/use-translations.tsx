@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -61,19 +62,21 @@ export const useTranslations = (namespace?: string) => {
 
   return (key: string, variables?: { [key: string]: string | number }) => {
     const fullKey = namespace ? `${namespace}.${key}` : key;
-    let translation = get(context.messages, fullKey) as string | undefined;
+    const translation = get(context.messages, fullKey);
 
     if (translation === undefined) {
       return fullKey; // Return the key if translation is not found
     }
-    
-    if (variables) {
+
+    if (typeof translation === 'string' && variables) {
+      let result = translation;
       Object.keys(variables).forEach(varKey => {
         const regex = new RegExp(`\\{\\{\\s*${varKey}\\s*\\}\\}`, 'g');
-        translation = translation.replace(regex, String(variables[varKey]));
+        result = result.replace(regex, String(variables[varKey]));
       });
+      return result;
     }
-
+    
     return translation;
   };
 };
