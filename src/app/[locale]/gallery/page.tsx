@@ -1,9 +1,22 @@
+
 import { allServices } from '@/lib/services';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { GalleryHorizontal } from 'lucide-react';
 
 export default function GalleryPage() {
+  if (!allServices || allServices.length === 0) {
+    return (
+      <div className="container mx-auto px-4 py-8 text-center">
+        <GalleryHorizontal className="h-16 w-16 text-accent mx-auto mb-4" />
+        <h1 className="text-5xl font-headline font-bold text-primary">Patient Transformations</h1>
+        <p className="text-xl text-foreground/80 mt-4">
+          Our gallery is currently empty. Please check back later to witness the stunning results achieved at LUNAI.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">

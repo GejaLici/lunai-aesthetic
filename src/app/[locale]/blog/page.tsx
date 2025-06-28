@@ -1,11 +1,24 @@
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { Newspaper } from 'lucide-react';
 import { placeholderPosts } from "@/lib/blog-posts";
 
 export default function BlogPage() {
+  if (!placeholderPosts || placeholderPosts.length === 0) {
+    return (
+      <div className="container mx-auto px-4 py-8 text-center">
+        <Newspaper className="h-16 w-16 text-accent mx-auto mb-4" />
+        <h1 className="text-5xl font-headline font-bold text-primary">LUNAI Blog</h1>
+        <p className="text-xl text-foreground/80 mt-4">
+          No blog posts available at the moment. Please check back soon for insights and news from LUNAI.
+        </p>
+      </div>
+    );
+  }
+
   const featuredPost = placeholderPosts[0];
   const regularPosts = placeholderPosts.slice(1);
 

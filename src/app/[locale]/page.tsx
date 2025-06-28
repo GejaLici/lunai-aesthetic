@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { serviceData, allServices, type ServiceCategory } from "@/lib/services";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
 import { placeholderPosts as blogPostsData } from "@/lib/blog-posts";
@@ -34,7 +34,7 @@ export default function HomePage() {
     setIsClient(true);
   }, []);
 
-  const transformations = allServices.slice(0, 6).map(service => ({
+  const transformations = (allServices || []).slice(0, 6).map(service => ({
     id: service.id,
     treatment: service.name,
     description: Array.isArray(service.description) ? service.description[0] : service.description, 
@@ -86,14 +86,14 @@ export default function HomePage() {
     },
   ];
 
-  const latestBlogPosts = blogPostsData.slice(0, 3);
+  const latestBlogPosts = (blogPostsData || []).slice(0, 3);
 
 
   return (
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="container mx-auto px-4 mt-8">
-        <section className="relative min-h-[60vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
+        <section className="relative min-h-[50vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
           <video
             autoPlay
             loop
