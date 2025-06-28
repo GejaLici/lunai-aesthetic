@@ -5,20 +5,23 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Stethoscope } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslations } from '@/hooks/use-translations';
+import { LanguageSwitcher } from './language-switcher';
 
 export function SiteHeader() {
   const pathname = usePathname();
-  
+  const t = useTranslations('SiteHeader');
+
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/consultation', label: 'Virtual Consultation' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: t.home || 'Home' },
+    { href: '/services', label: t.services || 'Services' },
+    { href: '/gallery', label: t.gallery || 'Gallery' },
+    { href: '/consultation', label: t.consultation || 'Virtual Consultation' },
+    { href: '/blog', label: t.blog || 'Blog' },
+    { href: '/contact', label: t.contact || 'Contact' },
   ];
 
-  const bookNowLabel = 'Book Now';
+  const bookNowLabel = t.bookNow || 'Book Now';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -86,7 +89,8 @@ export function SiteHeader() {
           )})}
         </nav>
         
-        <div className="flex items-center justify-end flex-1 md:flex-none">
+        <div className="flex items-center justify-end flex-1 md:flex-none gap-2">
+             <LanguageSwitcher />
              <Button asChild>
                 <Link href="/contact">{bookNowLabel}</Link>
             </Button>

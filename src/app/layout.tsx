@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import './globals.css';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {
@@ -26,12 +27,14 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased min-h-screen flex flex-col bg-background">
-          <SiteHeader />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <SiteFooter />
-          <Toaster />
+          <Providers>
+            <SiteHeader />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <SiteFooter />
+            <Toaster />
+          </Providers>
       </body>
     </html>
   );
