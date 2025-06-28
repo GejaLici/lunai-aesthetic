@@ -1,5 +1,11 @@
 {
-  "HomePage": {
-    "title": "LUNAI: Soluzioni Premier per Bellezza e Fiducia Durature"
+  "SiteHeader": {
+    "home": "Home",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "consultation": "Consultazione Virtuale",
+    "blog": "Blog",
+    "contact": "Contatto",
+    "bookNow": "Prenota Ora"
   }
 }

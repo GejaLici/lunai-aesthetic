@@ -1,3 +1,4 @@
+
 import { serviceData } from '@/lib/services';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -7,6 +8,14 @@ import { ArrowRight, Stethoscope } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ServicesPage() {
+  if (!serviceData || serviceData.length === 0) {
+    return (
+      <div className="container mx-auto px-4 py-8 text-center">
+        <p>Services are currently unavailable. Please check back later.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">

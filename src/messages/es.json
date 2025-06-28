@@ -1,5 +1,11 @@
 {
-  "HomePage": {
-    "title": "LUNAI: Soluciones de Primera para Belleza y Confianza Duraderas"
+  "SiteHeader": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "gallery": "Galería",
+    "consultation": "Consulta Virtual",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "bookNow": "Reservar Ahora"
   }
 }

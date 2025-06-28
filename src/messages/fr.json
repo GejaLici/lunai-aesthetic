@@ -1,0 +1,11 @@
+{
+  "SiteHeader": {
+    "home": "Accueil",
+    "services": "Services",
+    "gallery": "Galerie",
+    "consultation": "Consultation Virtuelle",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookNow": "Réserver"
+  }
+}
