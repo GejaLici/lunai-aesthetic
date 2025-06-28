@@ -26,13 +26,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const loadMessages = async () => {
       try {
-        const loadedMessages = await import(`../messages/${locale}.json`);
+        const loadedMessages = await import(`../../messages/${locale}.json`);
         setMessages(loadedMessages.default || loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${locale}`, error);
         // Fallback to English if the selected locale fails
         if (locale !== 'en') {
-          const fallbackMessages = await import(`../messages/en.json`);
+          const fallbackMessages = await import(`../../messages/en.json`);
           setMessages(fallbackMessages.default || fallbackMessages);
         }
       }
@@ -65,6 +65,7 @@ export const useTranslations = (namespace?: string) => {
     const translation = get(context.messages, fullKey);
 
     if (translation === undefined) {
+      console.warn(`Translation not found for key: ${fullKey}`);
       return fullKey; // Return the key if translation is not found
     }
 
