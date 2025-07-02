@@ -84,7 +84,7 @@ export default function HomePage() {
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="container mx-auto px-4 mt-8">
-        <section className="relative min-h-[50vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
+        <section className="relative min-h-[70vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
           <video
             autoPlay
             loop
