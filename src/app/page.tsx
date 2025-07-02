@@ -161,13 +161,13 @@ export default function HomePage() {
               >
                 <CardHeader className="p-6 items-center text-center">
                   {Icon && <Icon className="h-16 w-16 text-accent mb-6" />}
-                  <CardTitle className="font-headline text-2xl text-card-foreground">{tServices(`categories.${category.id}.title`)}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 pt-0 flex flex-col flex-grow">
+                  <CardTitle className="font-headline text-2xl text-card-foreground">{tServices(`categories.${category.id}.title`)}</CardTitle>
                   <CardDescription className="text-card-foreground/80 mb-6 text-sm text-center flex-grow">
                     {category.services.slice(0, 2).map(s => tServices(`items.${s.id}.name`)).join(', ')} {t('featuredServices.andMore')}
                   </CardDescription>
-                  <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200">
+                  <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200" scroll={true}>
                     <Link href={`/services#${category.id}`}>{t('featuredServices.buttonExplore', { category: tServices(`categories.${category.id}.title`) })} <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardContent>
@@ -278,7 +278,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
             <Image
-              src="https://placehold.co/800x600.png"
+              src="/images/experience-reception.png"
               alt={t('experience.image1Alt')}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -287,7 +287,7 @@ export default function HomePage() {
           </div>
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
             <Image
-              src="https://placehold.co/800x600.png"
+              src="/images/experience-room.png"
               alt={t('experience.image2Alt')}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
