@@ -43,34 +43,38 @@ export default function ServicesPage() {
         {serviceData.map((category) => (
           <TabsContent key={category.id} value={category.id}>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service) => (
-                <Card key={service.id} className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
-                  <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
-                    <Image
-                      src={service.imageAfter}
-                      alt={t('imageAlt', { serviceName: tServices(`items.${service.id}.name`) })}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={service.dataAiHint}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="font-headline text-xl text-primary">{tServices(`items.${service.id}.name`)}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <CardDescription className="text-foreground/90">
-                      {tServices(`items.${service.id}.description.0`)}
-                    </CardDescription>
-                  </CardContent>
-                  <CardFooter>
-                    <Button asChild variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                      <Link href={`/services/${service.id}`}>
-                        {t('learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
+              {category.services.map((service) => {
+                const serviceName = tServices(`items.${service.id}.name`);
+                const serviceDescription = tServices(`items.${service.id}.description`);
+                return (
+                  <Card key={service.id} className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
+                    <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
+                      <Image
+                        src={service.imageAfter}
+                        alt={t('imageAlt', { serviceName })}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={service.dataAiHint}
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="font-headline text-xl text-primary">{serviceName}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <CardDescription className="text-foreground/90">
+                        {Array.isArray(serviceDescription) ? serviceDescription[0] : serviceDescription}
+                      </CardDescription>
+                    </CardContent>
+                    <CardFooter>
+                      <Button asChild variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                        <Link href={`/services/${service.id}`}>
+                          {t('learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
             </div>
           </TabsContent>
         ))}
