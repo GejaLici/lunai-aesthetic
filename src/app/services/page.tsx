@@ -21,6 +21,11 @@ export default function ServicesPage() {
     );
   }
 
+  const truncate = (text: string, length: number) => {
+    if (text.length <= length) return text;
+    return text.substring(0, length) + '...';
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">
@@ -46,6 +51,8 @@ export default function ServicesPage() {
               {category.services.map((service) => {
                 const serviceName = tServices(`items.${service.id}.name`);
                 const serviceDescription = tServices(`items.${service.id}.description`);
+                const descriptionText = Array.isArray(serviceDescription) ? serviceDescription[0] : serviceDescription;
+
                 return (
                   <Card key={service.id} className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
                     <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
@@ -62,7 +69,7 @@ export default function ServicesPage() {
                     </CardHeader>
                     <CardContent className="flex-grow">
                       <CardDescription className="text-foreground/90">
-                        {Array.isArray(serviceDescription) ? serviceDescription[0] : serviceDescription}
+                        {truncate(descriptionText, 120)}
                       </CardDescription>
                     </CardContent>
                     <CardFooter>
