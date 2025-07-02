@@ -39,7 +39,7 @@ export function SiteHeader() {
             <SheetContent side="left" className="bg-background">
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
-                  <Image src="/images/logo1.png" alt="LUNAI Logo" width={40} height={40} />
+                  <Image src="/images/logo.png" alt="LUNAI Logo" width={40} height={40} />
                   <span className="font-headline font-bold text-xl">LUNAI</span>
                 </Link>
                 {navLinks.map((link) => {
