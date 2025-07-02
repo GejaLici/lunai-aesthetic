@@ -10,7 +10,7 @@ import { serviceData, allServices } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
 import { Cpu, Leaf, UsersRound, Star, ArrowRight, Newspaper } from "lucide-react";
-import { placeholderPosts as blogPostsData, type BlogPost } from "@/lib/blog-posts";
+import { placeholderPosts as blogPostsData } from "@/lib/blog-posts";
 import { useTranslations } from '@/hooks/use-translations';
 
 const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
@@ -31,7 +31,7 @@ export default function HomePage() {
   const bodyCategory = serviceData.find(category => category.id === 'body');
   const dentistryCategory = serviceData.find(category => category.id === 'dentistry');
 
-  const featuredServiceCategories = [faceCategory, bodyCategory, dentistryCategory].filter(Boolean);
+  const featuredServiceCategories = [faceCategory, bodyCategory, dentistryCategory].filter((c): c is NonNullable<typeof c> => c !== undefined);
   
   const [isClient, setIsClient] = useState(false);
 
@@ -151,26 +151,29 @@ export default function HomePage() {
           {t('featuredServices.title')}
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {featuredServiceCategories.map((category, index) => (
-            <Card
-              key={category.id}
-              className="flex flex-col bg-card shadow-lg hover:shadow-primary/30 transition-all duration-300 ease-out transform hover:-translate-y-2 rounded-xl overflow-hidden border border-transparent hover:border-accent animate-fadeIn"
-              style={{ animationDelay: `${0.2 * index}s` }}
-            >
-              <CardHeader className="p-6 items-center text-center">
-                {category.icon && <category.icon className="h-16 w-16 text-accent mb-6" />}
-                <CardTitle className="font-headline text-2xl text-card-foreground">{tServices(`categories.${category.id}.title`)}</CardTitle>
-              </CardHeader>
-              <CardContent className="p-6 pt-0 flex flex-col flex-grow">
-                <CardDescription className="text-card-foreground/80 mb-6 text-sm text-center flex-grow">
-                  {category.services.slice(0, 2).map(s => tServices(`items.${s.id}.name`)).join(', ')} {t('featuredServices.andMore')}
-                </CardDescription>
-                <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200" scroll={true}>
-                  <Link href={`/services#${category.id}`}>{t('featuredServices.buttonExplore', { category: tServices(`categories.${category.id}.title`) })} <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+          {featuredServiceCategories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <Card
+                key={category.id}
+                className="flex flex-col bg-card shadow-lg hover:shadow-primary/30 transition-all duration-300 ease-out transform hover:-translate-y-2 rounded-xl overflow-hidden border border-transparent hover:border-accent animate-fadeIn"
+                style={{ animationDelay: `${0.2 * index}s` }}
+              >
+                <CardHeader className="p-6 items-center text-center">
+                  {Icon && <Icon className="h-16 w-16 text-accent mb-6" />}
+                  <CardTitle className="font-headline text-2xl text-card-foreground">{tServices(`categories.${category.id}.title`)}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 flex flex-col flex-grow">
+                  <CardDescription className="text-card-foreground/80 mb-6 text-sm text-center flex-grow">
+                    {category.services.slice(0, 2).map(s => tServices(`items.${s.id}.name`)).join(', ')} {t('featuredServices.andMore')}
+                  </CardDescription>
+                  <Button asChild variant="outline" className="mt-auto w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-200">
+                    <Link href={`/services#${category.id}`}>{t('featuredServices.buttonExplore', { category: tServices(`categories.${category.id}.title`) })} <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </section>
       
@@ -238,24 +241,27 @@ export default function HomePage() {
           {t('whyChooseUs.title')}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whyChooseUsData.map((item, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card group animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
-              <CardHeader className="items-center text-center">
-                <item.icon className="h-12 w-12 text-accent mb-4" />
-                <CardTitle className="font-headline text-2xl text-card-foreground">{t(`whyChooseUs.${item.key}.title`)}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-card-foreground/80">
-                  {t(`whyChooseUs.${item.key}.description`)}
-                </p>
-                <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out mt-4">
-                  <p className="text-card-foreground/70 text-sm">
-                    {t(`whyChooseUs.${item.key}.moreInfo`)}
+          {whyChooseUsData.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card group animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
+                <CardHeader className="items-center text-center">
+                  <Icon className="h-12 w-12 text-accent mb-4" />
+                  <CardTitle className="font-headline text-2xl text-card-foreground">{t(`whyChooseUs.${item.key}.title`)}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-card-foreground/80">
+                    {t(`whyChooseUs.${item.key}.description`)}
                   </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out mt-4">
+                    <p className="text-card-foreground/70 text-sm">
+                      {t(`whyChooseUs.${item.key}.moreInfo`)}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </section>
 
