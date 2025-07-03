@@ -24,7 +24,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="LUNAI Home">
-               <Image src="/images/logo.png" alt="LUNAI Logo" width={32} height={32} />
+               <Image src="/images/logo.png?v=2" alt="LUNAI Logo" width={32} height={32} />
               <span className="font-headline text-xl font-bold">LUNAI</span>
             </Link>
             <p className="text-sm text-muted-foreground">

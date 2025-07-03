@@ -39,7 +39,7 @@ export function SiteHeader() {
             <SheetContent side="left" className="bg-background">
               <nav className="grid gap-2 text-base font-medium mt-6">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
-                  <Image src="/images/logo.png" alt="LUNAI Logo" width={40} height={40} />
+                  <Image src="/images/logo.png?v=2" alt="LUNAI Logo" width={40} height={40} />
                   <span className="font-headline font-bold text-xl">LUNAI</span>
                 </Link>
                 {navLinks.map((link) => {
@@ -65,7 +65,7 @@ export function SiteHeader() {
         
         <div className="flex items-center justify-start flex-1 md:flex-none">
             <Link href="/" className="flex items-center gap-2" aria-label="LUNAI Home">
-              <Image src="/images/logo.png" alt="LUNAI Logo" width={32} height={32} />
+              <Image src="/images/logo.png?v=2" alt="LUNAI Logo" width={32} height={32} />
               <span className="font-headline text-2xl font-bold text-foreground hidden sm:inline">
                 LUNAI
               </span>
