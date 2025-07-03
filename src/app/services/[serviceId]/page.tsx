@@ -1,3 +1,4 @@
+
 "use client";
 
 import { allServices, ServiceItem } from '@/lib/services';
@@ -67,31 +68,35 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
                 </Button>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 p-4 md:p-6 bg-secondary/30">
+          <div className="flex flex-col items-center justify-center p-6 bg-secondary/30">
+            <div className="w-full max-w-sm space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-muted-foreground mb-2 text-center">{t('before')}</h3>
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden border-2 border-card">
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden border-2 border-card shadow-lg">
                    <Image
                       src={service.imageBefore}
                       alt={t('beforeImageAlt', { serviceName })}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 640px) 90vw, 384px"
                       data-ai-hint={`${service.dataAiHint} before`}
                     />
                 </div>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-muted-foreground mb-2 text-center">{t('after')}</h3>
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden border-2 border-card">
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden border-2 border-card shadow-lg">
                     <Image
                       src={service.imageAfter}
                       alt={t('afterImageAlt', { serviceName })}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 640px) 90vw, 384px"
                       data-ai-hint={`${service.dataAiHint} after`}
                     />
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </Card>
