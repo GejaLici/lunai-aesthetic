@@ -137,6 +137,7 @@ export default function HomePage() {
                 src="/images/about-us.jpeg"
                 alt={t('about.imageAlt')}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
                 data-ai-hint="clinic interior"
               />
@@ -159,11 +160,11 @@ export default function HomePage() {
                 className="flex flex-col bg-card shadow-lg hover:shadow-primary/30 transition-all duration-300 ease-out transform hover:-translate-y-2 rounded-xl overflow-hidden border border-transparent hover:border-accent animate-fadeIn"
                 style={{ animationDelay: `${0.2 * index}s` }}
               >
-                <CardHeader className="p-6 items-center text-center">
+                <CardHeader className="p-6 items-center">
                   {Icon && <Icon className="h-16 w-16 text-accent mb-6" />}
+                  <CardTitle className="font-headline text-2xl text-card-foreground text-center">{tServices(`categories.${category.id}.title`)}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 pt-0 flex flex-col flex-grow">
-                  <CardTitle className="font-headline text-2xl text-card-foreground">{tServices(`categories.${category.id}.title`)}</CardTitle>
                   <CardDescription className="text-card-foreground/80 mb-6 text-sm text-center flex-grow">
                     {category.services.slice(0, 2).map(s => tServices(`items.${s.id}.name`)).join(', ')} {t('featuredServices.andMore')}
                   </CardDescription>
@@ -202,6 +203,7 @@ export default function HomePage() {
                         src={transform.afterImageUrl} 
                         alt={t('transformations.imageAlt', { treatment: tServices(`items.${transform.id}.name`) })}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                         className="object-cover transition-transform duration-300 group-hover:scale-110"
                         data-ai-hint={transform.afterHint}
                       />
@@ -281,6 +283,7 @@ export default function HomePage() {
               src="/images/experience-reception.png"
               alt={t('experience.image1Alt')}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="clinic reception"
             />
@@ -290,6 +293,7 @@ export default function HomePage() {
               src="/images/experience-room.png"
               alt={t('experience.image2Alt')}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint="treatment room"
             />
@@ -341,6 +345,7 @@ export default function HomePage() {
                     src={post.imageUrl}
                     alt={tBlog(`${post.id}.title`)}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                     data-ai-hint={post.imageHint}
                   />
