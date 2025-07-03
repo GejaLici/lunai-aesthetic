@@ -1,16 +1,35 @@
+
 "use client";
 
 import * as React from 'react';
+import dynamic from 'next/dynamic';
 import { useTranslations } from '@/hooks/use-translations';
 import { HeroSection } from '@/components/home/hero-section';
 import { AboutSection } from '@/components/home/about-section';
-import { FeaturedServicesSection } from '@/components/home/featured-services-section';
-import { TransformationsSection } from '@/components/home/transformations-section';
 import { WhyChooseUsSection } from '@/components/home/why-choose-us-section';
 import { ExperienceSection } from '@/components/home/experience-section';
-import { TestimonialsSection } from '@/components/home/testimonials-section';
-import { BlogSection } from '@/components/home/blog-section';
-import { CtaSection } from '@/components/home/cta-section';
+import { Skeleton } from '@/components/ui/skeleton';
+
+
+const FeaturedServicesSection = dynamic(() => import('@/components/home/featured-services-section').then(mod => mod.FeaturedServicesSection), {
+  loading: () => <Skeleton className="h-[400px] w-full" />,
+  ssr: false
+});
+const TransformationsSection = dynamic(() => import('@/components/home/transformations-section').then(mod => mod.TransformationsSection), {
+  loading: () => <Skeleton className="h-[400px] w-full" />,
+  ssr: false
+});
+const TestimonialsSection = dynamic(() => import('@/components/home/testimonials-section').then(mod => mod.TestimonialsSection), {
+  loading: () => <Skeleton className="h-[250px] w-full" />,
+  ssr: false
+});
+const BlogSection = dynamic(() => import('@/components/home/blog-section').then(mod => mod.BlogSection), {
+  loading: () => <Skeleton className="h-[400px] w-full" />,
+  ssr: false
+});
+const CtaSection = dynamic(() => import('@/components/home/cta-section').then(mod => mod.CtaSection), {
+  ssr: false
+});
 
 export default function HomePage() {
   const t = useTranslations('HomePage');

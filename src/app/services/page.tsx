@@ -46,7 +46,7 @@ export default function ServicesPage() {
         </TabsList>
 
         {serviceData.map((category) => (
-          <TabsContent key={category.id} value={category.id}>
+          <TabsContent key={category.id} value={category.id} id={category.id}>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {category.services.map((service) => {
                 const serviceName = tServices(`items.${service.id}.name`);
@@ -60,6 +60,7 @@ export default function ServicesPage() {
                         src={service.imageAfter}
                         alt={t('imageAlt', { serviceName })}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover"
                         data-ai-hint={service.dataAiHint}
                       />

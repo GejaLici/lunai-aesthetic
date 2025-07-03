@@ -35,25 +35,27 @@ export default function GalleryPage() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allServices.map((service) => {
           const serviceName = tServices(`items.${service.id}.name`);
-          const serviceDescription = tServices(`items.${service.id}.description.0`);
+          const serviceDescription = tServices(`items.${service.id}.description`);
+          const descriptionText = Array.isArray(serviceDescription) ? serviceDescription[0] : serviceDescription;
+
 
           return (
-            <Card key={service.id} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
+            <Card key={service.id} id={service.id} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
               <CardHeader className="p-0">
                 <div className="grid grid-cols-2">
                   <div className="relative aspect-square">
-                    <Image src={service.imageBefore} alt={t('beforeImageAlt', { serviceName })} fill className="object-cover" data-ai-hint={`${service.dataAiHint} before`} />
+                    <Image src={service.imageBefore} alt={t('beforeImageAlt', { serviceName })} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 17vw" className="object-cover" data-ai-hint={`${service.dataAiHint} before`} />
                     <div className="absolute bottom-0 left-0 bg-black/50 text-white text-xs px-2 py-1">{t('before')}</div>
                   </div>
                   <div className="relative aspect-square">
-                    <Image src={service.imageAfter} alt={t('afterImageAlt', { serviceName })} fill className="object-cover" data-ai-hint={`${service.dataAiHint} after`} />
+                    <Image src={service.imageAfter} alt={t('afterImageAlt', { serviceName })} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 17vw" className="object-cover" data-ai-hint={`${service.dataAiHint} after`} />
                     <div className="absolute bottom-0 right-0 bg-black/50 text-white text-xs px-2 py-1">{t('after')}</div>
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="p-4">
                 <CardTitle className="text-lg font-headline text-primary">{serviceName}</CardTitle>
-                <CardDescription className="text-sm mt-1">{serviceDescription}</CardDescription>
+                <CardDescription className="text-sm mt-1">{descriptionText}</CardDescription>
               </CardContent>
             </Card>
           );
