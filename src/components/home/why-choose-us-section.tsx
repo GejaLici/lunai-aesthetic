@@ -1,12 +1,7 @@
 'use client';
 
 import React from 'react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { Card } from '@/components/ui/card';
 import { Cpu, Leaf, UsersRound } from 'lucide-react';
 
 const whyChooseUsData = [
@@ -30,24 +25,25 @@ export const WhyChooseUsSection = React.memo(function WhyChooseUsSection({ t }: 
           const Icon = item.icon;
           return (
             <div key={item.key} className="animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
-              <Accordion type="single" collapsible className="w-full bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <AccordionItem value={item.key} className="border-b-0">
-                  <AccordionTrigger className="hover:no-underline p-6 text-left [&[data-state=open]>div>svg]:rotate-12 [&[data-state=open]>div>h3]:text-accent">
-                    <div className="flex flex-col items-center text-center w-full gap-4">
-                      <Icon className="h-12 w-12 text-accent transition-transform duration-300" />
-                      <h3 className="font-headline text-2xl text-card-foreground transition-colors">{t(`whyChooseUs.${item.key}.title`)}</h3>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6 text-center">
-                    <p className="text-card-foreground/80 mb-4">
-                      {t(`whyChooseUs.${item.key}.description`)}
-                    </p>
-                    <p className="text-card-foreground/70 text-sm">
-                      {t(`whyChooseUs.${item.key}.moreInfo`)}
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+               <Card
+                className="group relative flex h-full flex-col items-center p-8 text-center shadow-lg transition-all duration-300 ease-out hover:-translate-y-2 rounded-xl border border-border/20 bg-card"
+              >
+                <div className="flex-grow flex flex-col items-center">
+                  <div className="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-headline text-2xl text-primary mb-3">{t(`whyChooseUs.${item.key}.title`)}</h3>
+                  <p className="text-card-foreground/80 mb-6 text-sm flex-grow">
+                    {t(`whyChooseUs.${item.key}.description`)}
+                  </p>
+                </div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center rounded-xl bg-primary/95 p-6 text-primary-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <h3 className="mb-4 font-headline text-2xl">{t(`whyChooseUs.${item.key}.title`)}</h3>
+                  <p className="text-sm">
+                    {t(`whyChooseUs.${item.key}.moreInfo`)}
+                  </p>
+                </div>
+              </Card>
             </div>
           );
         })}
