@@ -28,7 +28,7 @@ export function LanguageSwitcher() {
 
   return (
     <Select value={locale} onValueChange={handleLocaleChange}>
-      <SelectTrigger className="w-auto md:gap-2 border-none bg-transparent shadow-none focus:ring-0">
+      <SelectTrigger className="w-auto md:gap-2 border-none bg-transparent shadow-none focus:ring-0 [&>svg:last-of-type]:hidden md:[&>svg:last-of-type]:inline">
         <Globe className="h-5 w-5 text-accent" />
         <SelectValue placeholder="Language" className="hidden md:inline" />
       </SelectTrigger>
