@@ -93,7 +93,7 @@ export function SiteHeader() {
         
         <div className="flex items-center justify-end flex-1 md:flex-none gap-2">
              <LanguageSwitcher />
-             <Button asChild>
+             <Button asChild className="hidden md:inline-flex">
                 <Link href="/contact">{bookNowLabel}</Link>
             </Button>
         </div>
