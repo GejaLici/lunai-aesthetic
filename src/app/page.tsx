@@ -13,7 +13,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 const FeaturedServicesSection = dynamic(() => import('@/components/home/featured-services-section').then(mod => mod.FeaturedServicesSection), {
   loading: () => <Skeleton className="h-[400px] w-full" />,
-  ssr: false
 });
 const TransformationsSection = dynamic(() => import('@/components/home/transformations-section').then(mod => mod.TransformationsSection), {
   loading: () => <Skeleton className="h-[400px] w-full" />,
@@ -21,15 +20,11 @@ const TransformationsSection = dynamic(() => import('@/components/home/transform
 });
 const TestimonialsSection = dynamic(() => import('@/components/home/testimonials-section').then(mod => mod.TestimonialsSection), {
   loading: () => <Skeleton className="h-[250px] w-full" />,
-  ssr: false
 });
 const BlogSection = dynamic(() => import('@/components/home/blog-section').then(mod => mod.BlogSection), {
   loading: () => <Skeleton className="h-[400px] w-full" />,
-  ssr: false
 });
-const CtaSection = dynamic(() => import('@/components/home/cta-section').then(mod => mod.CtaSection), {
-  ssr: false
-});
+const CtaSection = dynamic(() => import('@/components/home/cta-section').then(mod => mod.CtaSection));
 
 export default function HomePage() {
   const t = useTranslations('HomePage');

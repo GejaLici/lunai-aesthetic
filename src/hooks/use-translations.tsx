@@ -1,6 +1,7 @@
+
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
 
 // Define the shape of the translation messages
 type Messages = {
@@ -58,9 +59,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     };
     loadMessages(locale);
   }, [locale]);
+  
+  const value = useMemo(() => ({ locale, setLocale, messages }), [locale, messages]);
 
   return (
-    <LanguageContext.Provider value={{ locale, setLocale, messages }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );
