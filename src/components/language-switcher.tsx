@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useLocale } from "@/hooks/use-translations";
@@ -27,9 +28,9 @@ export function LanguageSwitcher() {
 
   return (
     <Select value={locale} onValueChange={handleLocaleChange}>
-      <SelectTrigger className="w-auto gap-2 border-none bg-transparent shadow-none focus:ring-0">
+      <SelectTrigger className="w-auto md:gap-2 border-none bg-transparent shadow-none focus:ring-0">
         <Globe className="h-5 w-5 text-accent" />
-        <SelectValue placeholder="Language" />
+        <SelectValue placeholder="Language" className="hidden md:inline" />
       </SelectTrigger>
       <SelectContent>
         {locales.map((loc) => (
