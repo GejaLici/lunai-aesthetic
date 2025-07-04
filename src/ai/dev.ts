@@ -6,7 +6,7 @@ import {firebase} from '@genkit-ai/firebase';
 import './flows/virtual-consultation';
 
 export default genkit({
-  plugins: [googleAI(), firebase()],
+  plugins: [googleAI(), firebase],
   logSinks: [],
   enableTracingAndMetrics: true,
   flowStateStore: 'firebase',
