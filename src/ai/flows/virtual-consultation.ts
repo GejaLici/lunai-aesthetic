@@ -31,40 +31,20 @@ export async function virtualConsultation(input: VirtualConsultationInput): Prom
   return virtualConsultationFlow(input);
 }
 
-// Helper to load service names from translation file
-function getServiceNames(): string[] {
-  try {
-    const messagesPath = path.join(process.cwd(), 'messages', 'en.json');
-    const messagesFile = fs.readFileSync(messagesPath, 'utf-8');
-    const serviceTranslations = JSON.parse(messagesFile);
-    
-    const serviceItems = serviceTranslations.services.items;
-    if (!serviceItems) {
-      return [];
-    }
-
-    return allServices.map(service => serviceItems[service.id]?.name).filter(Boolean);
-  } catch (error) {
-    console.error("Error loading service names for virtual consultation:", error);
-    // Return a default list or an empty list in case of an error
-    return [];
-  }
-}
-
-const serviceList = getServiceNames().join(', ');
-
-
 // Define the Genkit prompt
 const consultationPrompt = ai.definePrompt({
   name: 'virtualConsultationPrompt',
-  input: { schema: VirtualConsultationInputSchema },
+  input: { schema: z.object({
+    concerns: z.string().describe("The user's description of their aesthetic or dental concerns."),
+    serviceList: z.string().describe("A comma-separated list of available services."),
+  }) },
   output: { schema: VirtualConsultationOutputSchema },
   prompt: `You are a helpful and empathetic AI assistant for LUNAI, a premier aesthetic and dental clinic.
 Your role is to provide initial suggestions based on a user's described concerns.
 You are not a doctor and must not provide a medical diagnosis.
 
 Analyze the user's concerns below and provide a thoughtful paragraph with potential treatment ideas.
-When relevant, you should mention specific services offered by LUNAI. Here is a list of available services to choose from: ${serviceList}.
+When relevant, you should mention specific services offered by LUNAI. Here is a list of available services to choose from: {{{serviceList}}}.
 Always conclude by strongly recommending that the user book a full, in-person consultation with one of LUNAI's specialists for a proper medical evaluation and personalized treatment plan.
 
 User's Concerns: {{{concerns}}}
@@ -79,7 +59,32 @@ const virtualConsultationFlow = ai.defineFlow(
     outputSchema: VirtualConsultationOutputSchema,
   },
   async (input) => {
-    const { output } = await consultationPrompt(input);
+    // Helper to load service names from translation file
+    const getServiceNames = (): string[] => {
+      try {
+        const messagesPath = path.join(process.cwd(), 'messages', 'en.json');
+        const messagesFile = fs.readFileSync(messagesPath, 'utf-8');
+        const serviceTranslations = JSON.parse(messagesFile);
+        
+        const serviceItems = serviceTranslations.services.items;
+        if (!serviceItems) {
+          return [];
+        }
+
+        return allServices.map(service => serviceItems[service.id]?.name).filter(Boolean);
+      } catch (error) {
+        console.error("Error loading service names for virtual consultation:", error);
+        // Return a default list or an empty list in case of an error
+        return [];
+      }
+    }
+
+    const serviceList = getServiceNames().join(', ');
+
+    const { output } = await consultationPrompt({
+        concerns: input.concerns,
+        serviceList: serviceList,
+    });
     if (!output) {
       throw new Error('The AI model did not return a valid response.');
     }
