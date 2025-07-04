@@ -8,7 +8,7 @@ import { useTranslations } from '@/hooks/use-translations';
 export const CtaSection = React.memo(function CtaSection() {
   const t = useTranslations('HomePage');
   return (
-    <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
+    <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl animate-fadeIn">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-headline font-bold mb-6">{t('cta.title')}</h2>
         <p className="text-xl mb-8">
