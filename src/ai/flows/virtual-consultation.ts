@@ -10,6 +10,9 @@
 
 import { ai } from '@/ai/genkit';
 import { z } from 'zod';
+import { allServices } from '@/lib/services';
+import fs from 'fs';
+import path from 'path';
 
 // Define Zod schemas for input and output
 const VirtualConsultationInputSchema = z.object({
@@ -28,6 +31,29 @@ export async function virtualConsultation(input: VirtualConsultationInput): Prom
   return virtualConsultationFlow(input);
 }
 
+// Helper to load service names from translation file
+function getServiceNames(): string[] {
+  try {
+    const messagesPath = path.join(process.cwd(), 'messages', 'en.json');
+    const messagesFile = fs.readFileSync(messagesPath, 'utf-8');
+    const serviceTranslations = JSON.parse(messagesFile);
+    
+    const serviceItems = serviceTranslations.services.items;
+    if (!serviceItems) {
+      return [];
+    }
+
+    return allServices.map(service => serviceItems[service.id]?.name).filter(Boolean);
+  } catch (error) {
+    console.error("Error loading service names for virtual consultation:", error);
+    // Return a default list or an empty list in case of an error
+    return [];
+  }
+}
+
+const serviceList = getServiceNames().join(', ');
+
+
 // Define the Genkit prompt
 const consultationPrompt = ai.definePrompt({
   name: 'virtualConsultationPrompt',
@@ -38,7 +64,7 @@ Your role is to provide initial suggestions based on a user's described concerns
 You are not a doctor and must not provide a medical diagnosis.
 
 Analyze the user's concerns below and provide a thoughtful paragraph with potential treatment ideas.
-Mention specific services offered by LUNAI if they seem relevant (e.g., Botox, Dermal Fillers, Teeth Whitening, Veneers, Rhinoplasty, Liposuction, CoolSculpting).
+When relevant, you should mention specific services offered by LUNAI. Here is a list of available services to choose from: ${serviceList}.
 Always conclude by strongly recommending that the user book a full, in-person consultation with one of LUNAI's specialists for a proper medical evaluation and personalized treatment plan.
 
 User's Concerns: {{{concerns}}}
