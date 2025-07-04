@@ -40,9 +40,11 @@ export const TransformationsSection = React.memo(function TransformationsSection
 
   return (
     <section className="container mx-auto px-4 pb-12">
-      <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-        {t('transformations.title')}
-      </h2>
+      <div className="text-center">
+        <h2 className="text-4xl font-headline font-bold mb-12 text-primary">
+          {t('transformations.title')}
+        </h2>
+      </div>
       {isClient && (
         <DynamicCarousel
           className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
