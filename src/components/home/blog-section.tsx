@@ -18,8 +18,7 @@ export const BlogSection = React.memo(function BlogSection({ t, tBlog }: BlogSec
 
   return (
     <section className="container mx-auto px-4 pb-12">
-      <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary flex items-center justify-center">
-        <Newspaper className="h-10 w-10 text-accent mr-3" />
+      <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
         {t('blog.title')}
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

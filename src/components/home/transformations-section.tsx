@@ -47,7 +47,7 @@ export const TransformationsSection = React.memo(function TransformationsSection
       </div>
       {isClient && (
         <DynamicCarousel
-          className="w-full -mx-4 sm:mx-0 sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl sm:mx-auto"
+          className="w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl mx-auto"
           opts={{
             align: "start",
             loop: true,

@@ -39,7 +39,6 @@ export const FeaturedServicesSection = React.memo(function FeaturedServicesSecti
               style={{ animationDelay: `${0.2 * index}s` }}
             >
               <CardHeader className="p-6 items-center text-center">
-                {Icon && <Icon className="h-16 w-16 text-accent mb-6" />}
                 <CardTitle className="font-headline text-2xl text-card-foreground text-center">{tServices(`categories.${category.id}.title`)}</CardTitle>
               </CardHeader>
               <CardContent className="p-6 pt-0 flex flex-col flex-grow">
