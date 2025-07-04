@@ -21,6 +21,7 @@ export const AboutSection = React.memo(function AboutSection() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-105"
               data-ai-hint="clinic interior"
+              priority
             />
           </div>
 
