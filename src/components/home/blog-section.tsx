@@ -5,15 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { ArrowRight, Newspaper } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { placeholderPosts as blogPostsData } from '@/lib/blog-posts';
+import { useTranslations } from '@/hooks/use-translations';
 
-type BlogSectionProps = {
-  t: (key: string) => string;
-  tBlog: (key: string) => string;
-};
-
-export const BlogSection = React.memo(function BlogSection({ t, tBlog }: BlogSectionProps) {
+export const BlogSection = React.memo(function BlogSection() {
+  const t = useTranslations('HomePage');
+  const tBlog = useTranslations('blogPosts');
   const latestBlogPosts = (blogPostsData || []).slice(0, 3);
 
   return (

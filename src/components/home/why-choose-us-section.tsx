@@ -3,6 +3,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Cpu, Leaf, UsersRound } from 'lucide-react';
+import { useTranslations } from '@/hooks/use-translations';
 
 const whyChooseUsData = [
   { icon: UsersRound, key: "expertCare" },
@@ -10,11 +11,8 @@ const whyChooseUsData = [
   { icon: Leaf, key: "naturalResults" },
 ];
 
-type WhyChooseUsSectionProps = {
-  t: (key: string) => string;
-};
-
-export const WhyChooseUsSection = React.memo(function WhyChooseUsSection({ t }: WhyChooseUsSectionProps) {
+export const WhyChooseUsSection = React.memo(function WhyChooseUsSection() {
+  const t = useTranslations('HomePage');
   return (
     <section className="container mx-auto px-4 pb-12">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">

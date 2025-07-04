@@ -3,12 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from '@/hooks/use-translations';
 
-type CtaSectionProps = {
-  t: (key: string) => string;
-};
-
-export const CtaSection = React.memo(function CtaSection({ t }: CtaSectionProps) {
+export const CtaSection = React.memo(function CtaSection() {
+  const t = useTranslations('HomePage');
   return (
     <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
       <div className="container mx-auto px-4 text-center">

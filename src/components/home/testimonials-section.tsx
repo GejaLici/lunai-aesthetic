@@ -3,6 +3,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+import { useTranslations } from '@/hooks/use-translations';
 
 const testimonials = [
   { id: "1", stars: 5 },
@@ -10,11 +11,8 @@ const testimonials = [
   { id: "3", stars: 5 },
 ];
 
-type TestimonialsSectionProps = {
-  t: (key: string) => string;
-};
-
-export const TestimonialsSection = React.memo(function TestimonialsSection({ t }: TestimonialsSectionProps) {
+export const TestimonialsSection = React.memo(function TestimonialsSection() {
+  const t = useTranslations('HomePage');
   return (
     <section className="container mx-auto px-4 pb-12">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">

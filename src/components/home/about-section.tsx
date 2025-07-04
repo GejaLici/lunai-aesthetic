@@ -3,12 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/use-translations';
 
-type AboutSectionProps = {
-  t: (key: string) => string;
-};
-
-export const AboutSection = React.memo(function AboutSection({ t }: AboutSectionProps) {
+export const AboutSection = React.memo(function AboutSection() {
+  const t = useTranslations('HomePage');
   return (
     <section className="container mx-auto px-4 pb-12">
       <Card className="shadow-lg overflow-hidden bg-card">

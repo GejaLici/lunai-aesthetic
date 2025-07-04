@@ -3,7 +3,6 @@
 
 import * as React from 'react';
 import dynamic from 'next/dynamic';
-import { useTranslations } from '@/hooks/use-translations';
 import { HeroSection } from '@/components/home/hero-section';
 import { AboutSection } from '@/components/home/about-section';
 import { WhyChooseUsSection } from '@/components/home/why-choose-us-section';
@@ -27,21 +26,17 @@ const BlogSection = dynamic(() => import('@/components/home/blog-section').then(
 const CtaSection = dynamic(() => import('@/components/home/cta-section').then(mod => mod.CtaSection));
 
 export default function HomePage() {
-  const t = useTranslations('HomePage');
-  const tServices = useTranslations('services');
-  const tBlog = useTranslations('blogPosts');
-
   return (
     <div className="space-y-16">
-      <HeroSection t={t} />
-      <AboutSection t={t} />
-      <FeaturedServicesSection t={t} tServices={tServices} />
-      <TransformationsSection t={t} tServices={tServices} />
-      <WhyChooseUsSection t={t} />
-      <ExperienceSection t={t} />
-      <TestimonialsSection t={t} />
-      <BlogSection t={t} tBlog={tBlog} />
-      <CtaSection t={t} />
+      <HeroSection />
+      <AboutSection />
+      <FeaturedServicesSection />
+      <TransformationsSection />
+      <WhyChooseUsSection />
+      <ExperienceSection />
+      <TestimonialsSection />
+      <BlogSection />
+      <CtaSection />
     </div>
   );
 }

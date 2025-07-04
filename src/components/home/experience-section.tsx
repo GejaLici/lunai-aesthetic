@@ -2,12 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from '@/hooks/use-translations';
 
-type ExperienceSectionProps = {
-  t: (key: string) => string;
-};
-
-export const ExperienceSection = React.memo(function ExperienceSection({ t }: ExperienceSectionProps) {
+export const ExperienceSection = React.memo(function ExperienceSection() {
+  const t = useTranslations('HomePage');
   return (
     <section className="container mx-auto px-4 pb-12">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary animate-fadeIn" style={{ animationDelay: '0.1s' }}>

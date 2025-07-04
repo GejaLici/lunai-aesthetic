@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { allServices } from '@/lib/services';
+import { useTranslations } from '@/hooks/use-translations';
 
 const DynamicCarousel = dynamic(() => import('@/components/ui/carousel').then(mod => mod.Carousel), {
   ssr: false,
@@ -18,12 +19,9 @@ const DynamicCarouselItem = dynamic(() => import('@/components/ui/carousel').the
 const DynamicCarouselPrevious = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselPrevious), { ssr: false });
 const DynamicCarouselNext = dynamic(() => import('@/components/ui/carousel').then(mod => mod.CarouselNext), { ssr: false });
 
-type TransformationsSectionProps = {
-  t: (key: string, vars?: any) => string;
-  tServices: (key: string) => string;
-};
-
-export const TransformationsSection = React.memo(function TransformationsSection({ t, tServices }: TransformationsSectionProps) {
+export const TransformationsSection = React.memo(function TransformationsSection() {
+  const t = useTranslations('HomePage');
+  const tServices = useTranslations('services');
   const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
