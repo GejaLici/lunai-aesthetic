@@ -24,24 +24,23 @@ export const WhyChooseUsSection = React.memo(function WhyChooseUsSection({ t }: 
         {whyChooseUsData.map((item, index) => {
           const Icon = item.icon;
           return (
-            <div key={item.key} className="animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
+            <div key={item.key} className="animate-fadeIn h-full" style={{ animationDelay: `${0.2 * index}s` }}>
                <Card
-                className="group relative flex h-full flex-col items-center p-8 text-center shadow-lg transition-all duration-300 ease-out hover:-translate-y-2 rounded-xl border border-border/20 bg-card"
+                className="flex h-full flex-col p-8 text-center shadow-lg transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl rounded-xl border border-border/20 bg-card"
               >
-                <div className="flex-grow flex flex-col items-center">
-                  <div className="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                    <Icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-headline text-2xl text-primary mb-3">{t(`whyChooseUs.${item.key}.title`)}</h3>
-                  <p className="text-card-foreground/80 mb-6 text-sm flex-grow">
-                    {t(`whyChooseUs.${item.key}.description`)}
-                  </p>
+                <div className="flex-grow">
+                    <div className="w-16 h-16 mb-4 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                        <Icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="font-headline text-2xl text-primary mb-3">{t(`whyChooseUs.${item.key}.title`)}</h3>
+                    <p className="text-card-foreground/90">
+                        {t(`whyChooseUs.${item.key}.description`)}
+                    </p>
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center rounded-xl bg-primary/95 p-6 text-primary-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <h3 className="mb-4 font-headline text-2xl">{t(`whyChooseUs.${item.key}.title`)}</h3>
-                  <p className="text-sm">
-                    {t(`whyChooseUs.${item.key}.moreInfo`)}
-                  </p>
+                <div className="mt-6 pt-4 border-t border-border/40 w-full">
+                    <p className="text-sm text-muted-foreground">
+                        {t(`whyChooseUs.${item.key}.moreInfo`)}
+                    </p>
                 </div>
               </Card>
             </div>
