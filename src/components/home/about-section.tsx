@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -7,7 +8,7 @@ type AboutSectionProps = {
   t: (key: string) => string;
 };
 
-export function AboutSection({ t }: AboutSectionProps) {
+export const AboutSection = React.memo(function AboutSection({ t }: AboutSectionProps) {
   return (
     <section className="container mx-auto px-4 pb-12">
       <Card className="shadow-lg overflow-hidden bg-card">
@@ -27,7 +28,7 @@ export function AboutSection({ t }: AboutSectionProps) {
           </div>
           <div className="relative h-64 md:h-full w-full min-h-[300px] md:min-h-full transition-transform duration-300 hover:scale-105">
             <Image
-              src="/images/about-us.jpeg"
+              src="/images/about-us.png"
               alt={t('about.imageAlt')}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -39,4 +40,6 @@ export function AboutSection({ t }: AboutSectionProps) {
       </Card>
     </section>
   );
-}
+});
+
+AboutSection.displayName = 'AboutSection';

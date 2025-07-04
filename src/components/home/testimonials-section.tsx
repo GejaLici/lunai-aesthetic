@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
@@ -13,7 +14,7 @@ type TestimonialsSectionProps = {
   t: (key: string) => string;
 };
 
-export function TestimonialsSection({ t }: TestimonialsSectionProps) {
+export const TestimonialsSection = React.memo(function TestimonialsSection({ t }: TestimonialsSectionProps) {
   return (
     <section className="container mx-auto px-4 pb-12">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
@@ -43,4 +44,6 @@ export function TestimonialsSection({ t }: TestimonialsSectionProps) {
       </div>
     </section>
   );
-}
+});
+
+TestimonialsSection.displayName = 'TestimonialsSection';

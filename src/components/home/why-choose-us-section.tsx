@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Cpu, Leaf, UsersRound } from 'lucide-react';
 
@@ -13,7 +14,7 @@ type WhyChooseUsSectionProps = {
   t: (key: string) => string;
 };
 
-export function WhyChooseUsSection({ t }: WhyChooseUsSectionProps) {
+export const WhyChooseUsSection = React.memo(function WhyChooseUsSection({ t }: WhyChooseUsSectionProps) {
   return (
     <section className="container mx-auto px-4 pb-12">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
@@ -44,4 +45,6 @@ export function WhyChooseUsSection({ t }: WhyChooseUsSectionProps) {
       </div>
     </section>
   );
-}
+});
+
+WhyChooseUsSection.displayName = 'WhyChooseUsSection';

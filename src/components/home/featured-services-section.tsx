@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -17,7 +18,7 @@ type FeaturedServicesSectionProps = {
   tServices: (key: string) => string;
 };
 
-export function FeaturedServicesSection({ t, tServices }: FeaturedServicesSectionProps) {
+export const FeaturedServicesSection = React.memo(function FeaturedServicesSection({ t, tServices }: FeaturedServicesSectionProps) {
   
   const featuredServiceCategories = serviceData.filter((c) =>
     ['face', 'body', 'dentistry'].includes(c.id)
@@ -55,4 +56,6 @@ export function FeaturedServicesSection({ t, tServices }: FeaturedServicesSectio
       </div>
     </section>
   );
-}
+});
+
+FeaturedServicesSection.displayName = 'FeaturedServicesSection';

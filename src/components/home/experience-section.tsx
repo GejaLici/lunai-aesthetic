@@ -1,12 +1,13 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 
 type ExperienceSectionProps = {
   t: (key: string) => string;
 };
 
-export function ExperienceSection({ t }: ExperienceSectionProps) {
+export const ExperienceSection = React.memo(function ExperienceSection({ t }: ExperienceSectionProps) {
   return (
     <section className="container mx-auto px-4 pb-12">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary animate-fadeIn" style={{ animationDelay: '0.1s' }}>
@@ -41,4 +42,6 @@ export function ExperienceSection({ t }: ExperienceSectionProps) {
       </div>
     </section>
   );
-}
+});
+
+ExperienceSection.displayName = 'ExperienceSection';

@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,7 @@ type BlogSectionProps = {
   tBlog: (key: string) => string;
 };
 
-export function BlogSection({ t, tBlog }: BlogSectionProps) {
+export const BlogSection = React.memo(function BlogSection({ t, tBlog }: BlogSectionProps) {
   const latestBlogPosts = (blogPostsData || []).slice(0, 3);
 
   return (
@@ -58,4 +59,6 @@ export function BlogSection({ t, tBlog }: BlogSectionProps) {
       </div>
     </section>
   );
-}
+});
+
+BlogSection.displayName = 'BlogSection';

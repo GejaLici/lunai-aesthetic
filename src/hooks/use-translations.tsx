@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 
 // Define the shape of the translation messages
 type Messages = {
@@ -79,7 +79,7 @@ export const useTranslations = (namespace?: string) => {
     throw new Error('useTranslations must be used within a LanguageProvider');
   }
 
-  return (key: string, variables?: { [key:string]: string | number }) => {
+  const t = useCallback((key: string, variables?: { [key:string]: string | number }) => {
     const fullKey = namespace ? `${namespace}.${key}` : key;
     const translation = get(context.messages, fullKey);
 
@@ -102,7 +102,9 @@ export const useTranslations = (namespace?: string) => {
     
     // For arrays or other types, return as is
     return translation;
-  };
+  }, [context.messages, namespace]);
+
+  return t;
 };
 
 

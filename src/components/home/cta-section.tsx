@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -7,7 +8,7 @@ type CtaSectionProps = {
   t: (key: string) => string;
 };
 
-export function CtaSection({ t }: CtaSectionProps) {
+export const CtaSection = React.memo(function CtaSection({ t }: CtaSectionProps) {
   return (
     <section className="py-16 bg-primary text-primary-foreground rounded-lg shadow-xl">
       <div className="container mx-auto px-4 text-center">
@@ -21,4 +22,6 @@ export function CtaSection({ t }: CtaSectionProps) {
       </div>
     </section>
   );
-}
+});
+
+CtaSection.displayName = 'CtaSection';

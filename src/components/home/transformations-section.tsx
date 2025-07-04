@@ -23,7 +23,7 @@ type TransformationsSectionProps = {
   tServices: (key: string) => string;
 };
 
-export function TransformationsSection({ t, tServices }: TransformationsSectionProps) {
+export const TransformationsSection = React.memo(function TransformationsSection({ t, tServices }: TransformationsSectionProps) {
   const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
@@ -96,4 +96,6 @@ export function TransformationsSection({ t, tServices }: TransformationsSectionP
       </div>
     </section>
   );
-}
+});
+
+TransformationsSection.displayName = 'TransformationsSection';

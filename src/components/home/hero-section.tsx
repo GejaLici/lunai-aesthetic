@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -7,7 +8,7 @@ type HeroSectionProps = {
   t: (key: string) => string;
 };
 
-export function HeroSection({ t }: HeroSectionProps) {
+export const HeroSection = React.memo(function HeroSection({ t }: HeroSectionProps) {
   return (
     <div className="container mx-auto px-4 mt-8">
       <section className="relative min-h-[70vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
@@ -41,4 +42,6 @@ export function HeroSection({ t }: HeroSectionProps) {
       </section>
     </div>
   );
-}
+});
+
+HeroSection.displayName = 'HeroSection';
