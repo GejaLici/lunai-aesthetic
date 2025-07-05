@@ -38,8 +38,8 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <FeaturedServicesSection />
-      <TransformationsSection />
       <WhyChooseUsSection />
+      <TransformationsSection />
       <ExperienceSection />
       <TestimonialsSection />
       <BlogSection />
