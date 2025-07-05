@@ -4,23 +4,25 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/use-translations';
-import Image from 'next/image';
 
 export const HeroSection = React.memo(function HeroSection() {
   const t = useTranslations('HomePage');
   return (
     <div className="container mx-auto px-4 mt-8">
       <section className="relative min-h-[85vh] flex flex-col justify-center items-center text-center py-12 md:py-16 bg-neutral-900 rounded-lg shadow-xl overflow-hidden">
-        <Image
-          src="/images/experience-reception.png"
-          alt="LUNAI clinic reception"
-          fill
-          priority
-          className="absolute z-0 w-full h-full object-cover opacity-45"
-          data-ai-hint="clinic reception"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20"></div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute z-0 w-full h-full object-cover opacity-30"
+          poster="/images/experience-reception.png"
+        >
+          {/* You may need to add this video file to the /public/videos/ directory */}
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
         <div className="container mx-auto px-4 relative z-20 max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-6 animate-fadeIn max-w-3xl mx-auto" style={{ animationDelay: '0.1s' }}>
             {t('hero.title')}
