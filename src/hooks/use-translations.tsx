@@ -28,6 +28,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       let loadedMessages;
       try {
         switch (currentLocale) {
+          case 'de':
+            loadedMessages = await import('../../messages/de.json');
+            break;
           case 'es':
             loadedMessages = await import('../../messages/es.json');
             break;
