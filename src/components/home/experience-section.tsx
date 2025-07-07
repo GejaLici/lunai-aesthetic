@@ -19,7 +19,7 @@ export const ExperienceSection = React.memo(function ExperienceSection() {
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
           <Image
-            src="/images/experience-reception.png"
+            src="https://placehold.co/800x600.png"
             alt={t('experience.image1Alt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -29,7 +29,7 @@ export const ExperienceSection = React.memo(function ExperienceSection() {
         </div>
         <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
           <Image
-            src="/images/experience-room.png"
+            src="https://placehold.co/800x600.png"
             alt={t('experience.image2Alt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

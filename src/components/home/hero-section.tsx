@@ -16,7 +16,7 @@ export const HeroSection = React.memo(function HeroSection() {
           muted
           playsInline
           className="absolute z-0 w-full h-full object-cover opacity-30"
-          poster="/images/experience-reception.png"
+          poster="https://placehold.co/1280x720.png"
         >
           {/* You may need to add this video file to the /public/videos/ directory */}
           <source src="/videos/hero-background.mp4" type="video/mp4" />
