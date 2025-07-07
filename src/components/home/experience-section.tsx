@@ -8,7 +8,7 @@ import { useTranslations } from '@/hooks/use-translations';
 export const ExperienceSection = React.memo(function ExperienceSection() {
   const t = useTranslations('HomePage');
   return (
-    <section className="container mx-auto px-4 pb-12">
+    <section className="container mx-auto px-4 pb-12 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary animate-fadeIn" style={{ animationDelay: '0.1s' }}>
         {t('experience.title')}
       </h2>
@@ -20,7 +20,7 @@ export const ExperienceSection = React.memo(function ExperienceSection() {
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
           <Image
-            src="/images/home/experience-1.jpg"
+            src="/images/home/experience-1.png"
             alt={t('experience.image1Alt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -30,7 +30,7 @@ export const ExperienceSection = React.memo(function ExperienceSection() {
         </div>
         <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
           <Image
-            src="/images/home/experience-2.jpg"
+            src="/images/home/experience-2.png"
             alt={t('experience.image2Alt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
