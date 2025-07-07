@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -19,7 +20,7 @@ export const ExperienceSection = React.memo(function ExperienceSection() {
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.3s' }}>
           <Image
-            src="https://placehold.co/800x600.png"
+            src="/images/home/experience-1.jpg"
             alt={t('experience.image1Alt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -29,7 +30,7 @@ export const ExperienceSection = React.memo(function ExperienceSection() {
         </div>
         <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-xl animate-fadeIn group" style={{ animationDelay: '0.5s' }}>
           <Image
-            src="https://placehold.co/800x600.png"
+            src="/images/home/experience-2.jpg"
             alt={t('experience.image2Alt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

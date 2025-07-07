@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -15,7 +16,7 @@ export const AboutSection = React.memo(function AboutSection() {
           
           <div className="relative h-80 lg:h-[500px] w-full group animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             <Image
-              src="https://placehold.co/800x600.png"
+              src="/images/home/about.jpg"
               alt={t('imageAlt')}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
