@@ -16,7 +16,7 @@ export const AboutSection = React.memo(function AboutSection() {
           
           <div className="relative h-80 lg:h-[500px] w-full group">
             <Image
-              src="/images/home/about.png"
+              src="/images/home/about-us.jpeg"
               alt={t('imageAlt')}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
