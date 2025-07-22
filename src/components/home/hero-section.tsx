@@ -16,10 +16,9 @@ export const HeroSection = React.memo(function HeroSection() {
           loop
           muted
           playsInline
-          className="absolute z-0 w-full h-full object-cover opacity-30 animate-ken-burns"
-          poster="/images/home/hero-poster.png"
+          className="absolute z-0 w-full h-full object-cover opacity-30"
+          poster="/images/hero-poster.png"
         >
-          {/* You may need to add this video file to the /public/videos/ directory */}
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
