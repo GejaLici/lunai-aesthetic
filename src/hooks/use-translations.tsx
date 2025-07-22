@@ -91,6 +91,12 @@ export const useTranslations = (namespace?: string) => {
 
     if (translation === undefined) {
       console.warn(`Translation not found for key: ${fullKey}`);
+      // Fallback to English if the key is not found in the current locale
+      const enMessages = require('../../messages/en.json');
+      const fallbackTranslation = get(enMessages, fullKey);
+      if (fallbackTranslation !== undefined) {
+        return fallbackTranslation;
+      }
       return fullKey; // Return the key if translation is not found
     }
     
