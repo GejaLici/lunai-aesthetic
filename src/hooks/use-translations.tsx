@@ -13,10 +13,23 @@ interface LanguageContextType {
   locale: string;
   setLocale: (locale: string) => void;
   messages: Messages;
+  serviceMessages: { [key: string]: Messages };
 }
 
 // Create the context with a default value
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+// Dynamically import all service JSON files
+const importAll = (r: __WebpackModuleApi.RequireContext) => {
+    const services: { [key: string]: any } = {};
+    r.keys().forEach((key: string) => {
+        const serviceId = key.replace('./', '').replace('.json', '');
+        services[serviceId] = r(key);
+    });
+    return services;
+};
+
+const allServiceMessages = importAll(require.context('../../messages/services', false, /\.json$/));
 
 // Define the provider component
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
@@ -50,20 +63,19 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         setMessages(loadedMessages.default || loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${currentLocale}`, error);
-        // Attempt to load English as a fallback
         try {
           const fallbackMessages = await import('../../messages/en.json');
           setMessages(fallbackMessages.default || fallbackMessages);
         } catch (fallbackError) {
           console.error(`Could not load fallback English messages.`, fallbackError);
-          setMessages({}); // Set to empty if even English fails
+          setMessages({});
         }
       }
     };
     loadMessages(locale);
   }, [locale]);
   
-  const value = useMemo(() => ({ locale, setLocale, messages }), [locale, messages]);
+  const value = useMemo(() => ({ locale, setLocale, messages, serviceMessages: allServiceMessages }), [locale, messages]);
 
   return (
     <LanguageContext.Provider value={value}>
@@ -72,13 +84,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Helper function to get nested properties from an object using a dot-notation string
 const get = (obj: any, path: string) => {
   const keys = path.split('.');
   return keys.reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
 };
 
-// Custom hook to use the translations
 export const useTranslations = (namespace?: string) => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
@@ -91,13 +101,16 @@ export const useTranslations = (namespace?: string) => {
 
     if (translation === undefined) {
       console.warn(`Translation not found for key: ${fullKey}`);
-      // Fallback to English if the key is not found in the current locale
-      const enMessages = require('../../messages/en.json');
-      const fallbackTranslation = get(enMessages, fullKey);
-      if (fallbackTranslation !== undefined) {
-        return fallbackTranslation;
+      try {
+        const enMessages = require('../../messages/en.json');
+        const fallbackTranslation = get(enMessages, fullKey);
+        if (fallbackTranslation !== undefined) {
+          return fallbackTranslation;
+        }
+      } catch (e) {
+         return fullKey;
       }
-      return fullKey; // Return the key if translation is not found
+      return fullKey;
     }
     
     if (typeof translation === 'string') {
@@ -112,15 +125,29 @@ export const useTranslations = (namespace?: string) => {
       return translation;
     }
     
-    // For arrays or other types, return as is
     return translation;
   }, [context.messages, namespace]);
 
   return t;
 };
 
+export const useServiceTranslation = (serviceId: string) => {
+    const context = useContext(LanguageContext);
+    if (context === undefined) {
+        throw new Error('useServiceTranslation must be used within a LanguageProvider');
+    }
+    const { locale, serviceMessages } = context;
+    const fallbackLocale = 'en';
 
-// Custom hook to access locale and setter
+    const serviceFile = serviceMessages[serviceId];
+
+    const name = serviceFile?.[locale]?.name ?? serviceFile?.[fallbackLocale]?.name ?? serviceId;
+    const description = serviceFile?.[locale]?.description ?? serviceFile?.[fallbackLocale]?.description ?? "Description not available.";
+
+    return { name, description };
+};
+
+
 export const useLocale = () => {
     const context = useContext(LanguageContext);
     if (context === undefined) {

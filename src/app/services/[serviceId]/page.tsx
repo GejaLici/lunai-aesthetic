@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { useTranslations } from '@/hooks/use-translations';
+import { useTranslations, useServiceTranslation } from '@/hooks/use-translations';
 
 type ServiceDetailPageProps = {
   params: {
@@ -22,16 +22,13 @@ const getService = (id: string): ServiceItem | undefined => {
 
 export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   const t = useTranslations('ServiceDetailsPage');
-  const tServices = useTranslations('services');
+  const { name: serviceName, description: serviceDescription } = useServiceTranslation(params.serviceId);
 
   const service = getService(params.serviceId);
 
   if (!service) {
     notFound();
   }
-
-  const serviceName = tServices(`items.${service.id}.name`);
-  const serviceDescription = tServices(`items.${service.id}.description`);
 
   return (
     <div className="container mx-auto px-4 py-8">

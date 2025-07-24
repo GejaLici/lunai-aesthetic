@@ -62,19 +62,17 @@ const virtualConsultationFlow = ai.defineFlow(
     // Helper to load service names from translation file
     const getServiceNames = (): string[] => {
       try {
-        const messagesPath = path.join(process.cwd(), 'messages', 'en.json');
-        const messagesFile = fs.readFileSync(messagesPath, 'utf-8');
-        const serviceTranslations = JSON.parse(messagesFile);
+        const serviceNames = allServices.map(service => {
+          const messagesPath = path.join(process.cwd(), 'messages', 'services', `${service.id}.json`);
+          const messagesFile = fs.readFileSync(messagesPath, 'utf-8');
+          const serviceTranslations = JSON.parse(messagesFile);
+          return serviceTranslations.en?.name || service.id;
+        }).filter(Boolean);
         
-        const serviceItems = serviceTranslations.services.items;
-        if (!serviceItems) {
-          return [];
-        }
+        return serviceNames;
 
-        return allServices.map(service => serviceItems[service.id]?.name).filter(Boolean);
       } catch (error) {
         console.error("Error loading service names for virtual consultation:", error);
-        // Return a default list or an empty list in case of an error
         return [];
       }
     }
