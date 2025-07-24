@@ -1,4 +1,5 @@
 
+
       
 
 "use client";
@@ -23,8 +24,11 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   };
   
   let descriptionText = '';
-  if (typeof serviceDescription === 'object' && serviceDescription !== null && 'what_is' in serviceDescription) {
-    const firstSection = serviceDescription.what_is;
+  if (typeof serviceDescription === 'object' && serviceDescription !== null) {
+    // Find the first section in the content object, regardless of its key
+    const firstSectionKey = Object.keys(serviceDescription)[0];
+    const firstSection = serviceDescription[firstSectionKey];
+    
     if (firstSection && Array.isArray(firstSection.paragraphs) && firstSection.paragraphs.length > 0) {
       descriptionText = firstSection.paragraphs[0].replace(/<[^>]*>?/gm, '');
     }
