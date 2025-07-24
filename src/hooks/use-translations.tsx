@@ -144,7 +144,7 @@ export const useServiceTranslation = (serviceId: string) => {
     const currentLangData = serviceFile?.[locale] ?? serviceFile?.[fallbackLocale];
     
     const name = currentLangData?.name ?? serviceId;
-    const description = currentLangData; // This will now be the whole object
+    const description = currentLangData;
     const meta_title = currentLangData?.meta_title;
     const meta_description = currentLangData?.meta_description;
     const meta_keywords = currentLangData?.meta_keywords;
