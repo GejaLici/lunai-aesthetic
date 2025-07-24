@@ -142,7 +142,19 @@ export const useServiceTranslation = (serviceId: string) => {
     const serviceFile = serviceMessages[serviceId];
 
     const name = serviceFile?.[locale]?.name ?? serviceFile?.[fallbackLocale]?.name ?? serviceId;
-    const description = serviceFile?.[locale]?.description ?? serviceFile?.[fallbackLocale]?.description ?? "Description not available.";
+    let description = serviceFile?.[locale]?.description ?? serviceFile?.[fallbackLocale]?.description;
+
+    // Handle facelift's complex content structure
+    if (serviceId === 'facelift' && serviceFile?.[locale]) {
+        description = serviceFile[locale];
+    } else if (serviceId === 'facelift' && serviceFile?.[fallbackLocale]) {
+        description = serviceFile[fallbackLocale];
+    }
+    
+    if (!description) {
+        description = "Description not available.";
+    }
+
 
     return { name, description };
 };

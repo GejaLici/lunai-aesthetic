@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode } from 'react';
 import { allServices } from '@/lib/services';
 import { Button } from '@/components/ui/button';
@@ -18,7 +20,6 @@ export function ServicePageLayout({ serviceName, serviceId, children }: ServiceP
   
   const service = allServices.find(s => s.id === serviceId);
   if (!service) {
-    // This can happen during translation changes, but shouldn't be permanent
     return <div className="container mx-auto px-4 py-8">Service details loading...</div>
   }
 
@@ -36,8 +37,7 @@ export function ServicePageLayout({ serviceName, serviceId, children }: ServiceP
         <Badge variant={isSurgical ? 'destructive' : 'secondary'} className="mb-2">
             {isSurgical ? t('surgicalProcedure') : t('nonSurgicalTreatment')}
         </Badge>
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-          {serviceName}
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary" dangerouslySetInnerHTML={{ __html: serviceName }}>
         </h1>
       </header>
       
@@ -62,7 +62,6 @@ export function ServicePageLayout({ serviceName, serviceId, children }: ServiceP
             </Button>
         </aside>
       </div>
-
     </div>
   );
 }
