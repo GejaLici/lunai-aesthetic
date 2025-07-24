@@ -1,3 +1,4 @@
+
 {
   "SiteHeader": {
     "home": "Kreu",
@@ -7,5 +8,249 @@
     "blog": "Blog",
     "contact": "Kontakt",
     "bookNow": "Rezervo Tani"
+  },
+  "SiteFooter": {
+    "slogan": "Krijimi i bukurisë, i frymëzuar nga shkenca.",
+    "quickLinks": "Linqe të Shpejta",
+    "followUs": "Na Ndiqni",
+    "copyright": "© {{year}} LUNAI. Të gjitha të drejtat të rezervuara. Uebfaqe nga Firebase Studio."
+  },
+  "HomePage": {
+    "hero": {
+      "title": "LUNAI: Zgjidhje Premierë për Bukuri dhe Vetëbesim të Qëndrueshëm",
+      "subtitle": "Përjetoni trajtime estetike dhe dentare transformuese me ekipin tonë ekspert në LUNAI. Zbuloni trajtime të personalizuara të dizajnuara për të rritur bukurinë tuaj natyrale dhe për të forcuar vetëbesimin tuaj. Ekspertët tanë përdorin teknikat më të fundit për rezultate optimale. Filloni udhëtimin tuaj drejt një mirëqenieje më të mirë sot.",
+      "buttonExplore": "Eksploroni Shërbimet Tona Eksperte",
+      "buttonConsult": "Konsultë Virtuale me AI"
+    },
+    "about": {
+      "title": "Mirë se vini në LUNAI",
+      "paragraph1": "Në LUNAI, ne besojmë se të gjithë meritojnë të ndihen të sigurt dhe rrezatues. Klinika jonë moderne ofron një suitë të plotë të trajtimeve estetike dhe dentare të avancuara, të ofruara nga profesionistë me përvojë të lartë të dedikuar për arritjen e rezultateve të jashtëzakonshme dhe me pamje natyrale të përshtatura për ju.",
+      "paragraph2": "Ne integrojmë pa probleme artin mjekësor me përparimet më të fundit teknologjike për të ofruar kujdes të personalizuar që përputhet me aspiratat tuaja unike estetike. Udhëtimi juaj drejt bukurisë së shtuar dhe sigurisë në vetvete fillon këtu në LUNAI.",
+      "imageAlt": "Brendësia e klinikës mikpritëse dhe profesionale në LUNAI"
+    },
+    "featuredServices": {
+      "title": "Shërbimet Tona Premierë Estetike dhe Dentare në LUNAI",
+      "andMore": "dhe më shumë trajtime të specializuara...",
+      "buttonExplore": "Eksploroni Trajtimet e {{category}}"
+    },
+    "transformations": {
+      "title": "Dëshmoni Rezultate Transformuese në LUNAI",
+      "imageAlt": "Duke treguar rezultatet për {{treatment}} në LUNAI",
+      "viewResult": "Shiko Rezultatin",
+      "buttonAll": "Zbuloni të Gjitha Transformimet"
+    },
+    "whyChooseUs": {
+      "title": "Pse të Besoni te LUNAI?",
+      "expertCare": {
+        "title": "Kujdes Estetik Ekspert dhe i Personalizuar",
+        "description": "Profesionistët tanë shumë të kualifikuar ofrojnë trajtime estetike të përshtatura, duke u përqendruar në qëllimet tuaja unike për të siguruar rezultate të jashtëzakonshme, me pamje natyrale dhe kënaqësinë tuaj maksimale.",
+        "moreInfo": "Kjo përfshin një konsultë gjithëpërfshirëse, planifikim të avancuar të trajtimit, mbështetje të vazhdueshme dhe një angazhim të palëkundur për mirëqenien tuaj në çdo fazë të udhëtimit tuaj estetik në LUNAI."
+      },
+      "advancedTech": {
+        "title": "Teknologji e Avancuar Moderne",
+        "description": "Ne përdorim përparimet më të fundit dhe pajisjet më moderne në mjekësinë estetike për të ofruar rezultate të sigurta, efektive dhe minimalisht invazive me saktësi në LUNAI.",
+        "moreInfo": "Investimi ynë në teknologjinë lider siguron që ju të përfitoni nga procedurat që nuk janë vetëm të avancuara, por gjithashtu i japin përparësi komoditetit tuaj, sigurisë dhe arrijnë rezultate superiore."
+      },
+      "naturalResults": {
+        "title": "Angazhim për Rezultate Natyrale dhe Përmirësuese",
+        "description": "Filozofia jonë themelore në LUNAI përqendrohet në rritjen e bukurisë suaj të lindur, duke synuar përmirësime delikate por domethënëse që duken autentike dhe ndjehen si versioni juaj më i mirë.",
+        "moreInfo": "Ne bashkëpunojmë me ju për të krijuar një plan trajtimi të personalizuar që respekton individualitetin tuaj, duke siguruar rezultate që pasqyrojnë versionin më të mirë të vetes suaj, në mënyrë natyrale."
+      }
+    },
+    "experience": {
+      "title": "Përjetoni Dallimin LUNAI",
+      "description": "Hyni në një shenjtërore të qetësisë dhe sofistikimit në LUNAI, ku teknologjia estetike e avancuar takohet me kujdesin e pashoq ndaj pacientit. Klinika jonë është projektuar me përpikëri me komoditetin, privatësinë dhe mirëqenien tuaj si përparësitë tona kryesore, duke siguruar një atmosferë të qetë dhe mikpritëse për çdo vizitë.",
+      "image1Alt": "Zona e pritjes luksoze dhe mikpritëse e klinikës në LUNAI",
+      "image2Alt": "Dhomë trajtimi moderne, e pastër dhe e avancuar në LUNAI"
+    },
+    "testimonials": {
+      "title": "Përvojat e Vlerësuara të Klientëve në LUNAI",
+      "items": {
+        "1": {
+          "quote": "Përvoja ime në LUNAI ishte fenomenale. Rezultatet tejkaluan pritshmëritë e mia, dhe stafi ishte jashtëzakonisht profesional dhe i kujdesshëm.",
+          "name": "Jessica M."
+        },
+        "2": {
+          "quote": "Isha nervoz për procedurën time, por ekipi në LUNAI më bëri të ndihem plotësisht i qetë. Jam i entuziazmuar me pamjen time të re!",
+          "name": "David K."
+        },
+        "3": {
+          "quote": "Nga konsultimi deri pas trajtimit, çdo hap u menaxhua me ekspertizë. Unë e rekomandoj fuqimisht LUNAI për këdo që konsideron trajtime estetike.",
+          "name": "Sarah L."
+        }
+      }
+    },
+    "blog": {
+      "title": "Vështrime Eksperte nga Blogu ynë LUNAI",
+      "readArticle": "Lexo Artikullin e Plotë",
+      "buttonAll": "Eksploroni të Gjitha Postimet e Blogut LUNAI"
+    },
+    "cta": {
+      "title": "Gati të Zbuloni Veten Tuaj më të Mirë me LUNAI?",
+      "description": "Konsulenti ynë virtual i avancuar i mundësuar nga AI është gati t'ju udhëzojë drejt trajtimit tuaj ideal estetik ose dentar në LUNAI.",
+      "button": "Filloni Konsultën Tuaj Virtuale Eksperte"
+    }
+  },
+  "ServicesPage": {
+    "title": "Shërbimet Tona",
+    "subtitle": "Zgjidhje gjithëpërfshirëse estetike dhe dentare të përshtatura për ju në LUNAI.",
+    "unavailable": "Shërbimet aktualisht nuk janë të disponueshme. Ju lutemi provoni përsëri më vonë.",
+    "learnMore": "Mëso Më Shumë",
+    "imageAlt": "Imazh për {{serviceName}}"
+  },
+  "ServiceDetailsPage": {
+    "backButton": "Kthehu te të Gjitha Shërbimet",
+    "surgicalProcedure": "Procedurë Kirurgjikale",
+    "nonSurgicalTreatment": "Trajtim Jo-kirurgjikal",
+    "bookConsultation": "Rezervo një Konsultë",
+    "before": "Para",
+    "after": "Pas",
+    "beforeImageAlt": "Imazh para për {{serviceName}}",
+    "afterImageAlt": "Imazh pas për {{serviceName}}"
+  },
+  "GalleryPage": {
+    "title": "Transformimet e Pacientëve",
+    "subtitle": "Dëshmoni rezultatet mahnitëse, me pamje natyrale të arritura në LUNAI.",
+    "emptyState": "Galeria jonë është aktualisht bosh. Ju lutemi kthehuni më vonë për të dëshmuar rezultatet mahnitëse të arritura në LUNAI.",
+    "before": "Para",
+    "after": "Pas",
+    "beforeImageAlt": "Imazh para për {{serviceName}}",
+    "afterImageAlt": "Imazh pas për {{serviceName}}"
+  },
+  "ConsultationPage": {
+    "title": "Konsultë Virtuale e Mundësuar nga AI",
+    "subtitle": "Merrni sugjerime të personalizuara për trajtime estetike dhe dentare nga AI ynë i avancuar. Përshkruani shqetësimet tuaja, dhe konsulenti ynë virtual do t'ju ofrojë udhëzime fillestare për t'ju ndihmuar në udhëtimin tuaj me LUNAI.",
+    "formCard": {
+      "title": "Konsulta Juaj Virtuale",
+      "description": "Ky mjet ofron sugjerime paraprake dhe nuk zëvendëson një konsultë mjekësore profesionale."
+    },
+    "form": {
+      "label": "Përshkruani shqetësimet dhe qëllimet tuaja estetike",
+      "placeholder": "p.sh., Jam i shqetësuar për linjat e holla rreth syve dhe humbjen e vëllimit në faqet e mia...",
+      "button": {
+        "default": "Merrni Sugjerime të Mundësuara nga AI",
+        "loading": "Duke analizuar..."
+      },
+      "results": {
+        "title": "Mendime Fillestare dhe Drejtime Potenciale"
+      },
+      "validation": {
+        "minLength": "Ju lutemi përshkruani shqetësimet tuaja në të paktën 20 karaktere.",
+        "maxLength": "Përshkrimi juaj nuk duhet të kalojë 2000 karaktere."
+      },
+      "toast": {
+        "error": {
+          "title": "Gabim",
+          "description": "Dështoi marrja e sugjerimeve. Ju lutemi provoni përsëri."
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blogu i LUNAI",
+    "subtitle": "Vështrime, këshilla dhe lajme mbi trajtimet estetike dhe mirëqenien nga LUNAI.",
+    "emptyState": "Për momentin nuk ka postime në blog. Ju lutemi kontrolloni përsëri së shpejti për vështrime dhe lajme nga LUNAI.",
+    "readMore": "Lexo Më Shumë"
+  },
+  "ContactPage": {
+    "title": "Na Kontaktoni",
+    "subtitle": "Ne jemi këtu për t'ju ndihmuar. Na kontaktoni me çdo pyetje ose për të caktuar konsultën tuaj personalisht në LUNAI.",
+    "formCard": {
+      "title": "Na Dërgoni një Mesazh",
+      "description": "Ekipi ynë do t'ju kthejë përgjigje sa më shpejt të jetë e mundur."
+    },
+    "infoCard": {
+      "title": "Informacioni ynë i Kontaktit",
+      "emailLabel": "Email",
+      "phoneLabel": "Telefon"
+    },
+    "form": {
+      "labels": {
+        "name": "Emri i Plotë",
+        "email": "Adresa e Emailit",
+        "phone": "Numri i Telefonit (Opsional)",
+        "message": "Mesazhi Juaj"
+      },
+      "placeholders": {
+        "name": "Gjon Gjoni",
+        "email": "gjon.gjoni@example.com",
+        "phone": "(123) 456-7890",
+        "message": "Si mund t'ju ndihmojmë sot?"
+      },
+      "button": {
+        "default": "Dërgo Mesazhin",
+        "loading": "Duke dërguar..."
+      },
+      "validation": {
+        "name": {
+          "minLength": "Emri duhet të ketë të paktën 2 karaktere."
+        },
+        "email": {
+          "invalid": "Adresë emaili e pavlefshme."
+        },
+        "message": {
+          "minLength": "Mesazhi duhet të ketë të paktën 10 karaktere.",
+          "maxLength": "Mesazhi nuk mund të kalojë 500 karaktere."
+        }
+      },
+      "toast": {
+        "success": {
+          "title": "Mesazhi u Dërgua!",
+          "description": "Faleminderit që na kontaktuat. Do t'ju kthejmë përgjigje së shpejti."
+        },
+        "error": {
+          "title": "Gabim gjatë Dërgimit të Mesazhit",
+          "default": "Ndodhi një gabim i papritur."
+        }
+      }
+    }
+  },
+  "services": {
+    "categories": {
+      "face": {
+        "title": "Estetika e Fytyrës"
+      },
+      "body": {
+        "title": "Konturimi i Trupit"
+      },
+      "dentistry": {
+        "title": "Stomatologji"
+      }
+    },
+    "items": {}
+  },
+  "blogPosts": {
+    "1": {
+      "title": "Udhëzuesi Përfundimtar për Kujdesin e Lëkurës për një Shkëlqim të Qëndrueshëm",
+      "excerpt": "Zbuloni këshilla ekspertësh për ndërtimin e një rutine të kujdesit të lëkurës që lufton plakjen, rrit shkëlqimin dhe e mban lëkurën tuaj të shëndetshme dhe të bukur."
+    },
+    "2": {
+      "title": "Botox vs. Mbushësit: Cila është Zgjedhja e Duhur për Ju?",
+      "excerpt": "Një analizë gjithëpërfshirëse e dy prej trajtimeve tona më të njohura. Kuptoni ndryshimet dhe zbuloni se cila është më e mira për qëllimet tuaja estetike."
+    },
+    "3": {
+      "title": "Rruga drejt Rikuperimit: Çfarë të Presësh Pas Procedurës Tënde",
+      "excerpt": "Kujdesi pas trajtimit është vendimtar për rezultate optimale. Mësoni për procesin e rikuperimit për procedurat tona kyçe dhe si të siguroni një udhëtim të qetë."
+    },
+    "4": {
+      "title": "Një Buzëqeshje më e Ndritshme: Përfitimet e Zbardhimit Profesional të Dhëmbëve",
+      "excerpt": "Eksploroni se si zbardhimi profesional i dhëmbëve mund të përmirësojë në mënyrë dramatike buzëqeshjen tuaj dhe të rrisë besimin tuaj, dhe çfarë përfshin procedura."
+    },
+    "5": {
+      "title": "Konturimi Jo-Invaziv i Trupit: Një Revolucion në Estetikë",
+      "excerpt": "Mësoni për teknologjitë më të fundit jo-kirurgjikale që mund t'ju ndihmojnë të arrini formën e dëshiruar të trupit pa kohën e rikuperimit të operacionit."
+    },
+    "6": {
+      "title": "Ruajtja e Rezultateve Tuaja: Këshilla për Stilin e Jetës për Bukuri Afatgjatë",
+      "excerpt": "Udhëtimi juaj estetik nuk përfundon kur largoheni nga klinika jonë. Zbuloni këshilla për dietën, ushtrimet dhe stilin e jetës për të zgjatur dhe përmirësuar rezultatet tuaja."
+    },
+    "7": {
+      "title": "Të Kuptuarit e Kostos së Vërtetë të një Transplanti Flokësh në 2025",
+      "excerpt": "Një zhytje e thellë në kostot e transplantit të flokëve për vitin 2025, duke krahasuar teknikat, numrin e grafteve dhe çmimet ndërkombëtare në Mbretërinë e Bashkuar, Turqi dhe Shqipëri.",
+      "date": "5 Korrik 2024",
+      "content": []
+    }
   }
 }
+
+    

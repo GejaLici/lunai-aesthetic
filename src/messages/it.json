@@ -1,3 +1,4 @@
+
 {
   "SiteHeader": {
     "home": "Home",
@@ -7,5 +8,249 @@
     "blog": "Blog",
     "contact": "Contatto",
     "bookNow": "Prenota Ora"
+  },
+  "SiteFooter": {
+    "slogan": "Creare bellezza, ispirata dalla scienza.",
+    "quickLinks": "Link Rapidi",
+    "followUs": "Seguici",
+    "copyright": "© {{year}} LUNAI. Tutti i diritti riservati. Sito web realizzato da Firebase Studio."
+  },
+  "HomePage": {
+    "hero": {
+      "title": "LUNAI: Soluzioni di Eccellenza per Bellezza e Fiducia Durature",
+      "subtitle": "Sperimenta trattamenti estetici e dentistici trasformativi con il nostro team di esperti presso LUNAI. Scopri trattamenti personalizzati progettati per esaltare la tua bellezza naturale e aumentare la tua fiducia. I nostri esperti utilizzano le tecniche più recenti per risultati ottimali. Inizia oggi il tuo viaggio verso un maggiore benessere.",
+      "buttonExplore": "Esplora i Nostri Servizi Esperti",
+      "buttonConsult": "Consulto Virtuale con IA"
+    },
+    "about": {
+      "title": "Benvenuti in LUNAI",
+      "paragraph1": "In LUNAI, crediamo che tutti meritino di sentirsi sicuri e radiosi. La nostra clinica all'avanguardia offre una suite completa di trattamenti estetici e dentistici avanzati, forniti da professionisti di grande esperienza dedicati a ottenere risultati eccezionali e dall'aspetto naturale su misura per te.",
+      "paragraph2": "Integriamo perfettamente l'arte medica con i più recenti progressi tecnologici per fornire cure personalizzate che si allineano con le tue aspirazioni estetiche uniche. Il tuo viaggio verso una maggiore bellezza e sicurezza in te stesso inizia qui in LUNAI.",
+      "imageAlt": "Interno della clinica accogliente e professionale presso LUNAI"
+    },
+    "featuredServices": {
+      "title": "I Nostri Servizi Estetici e Dentistici di Eccellenza presso LUNAI",
+      "andMore": "e altri trattamenti specializzati...",
+      "buttonExplore": "Esplora i Trattamenti di {{category}}"
+    },
+    "transformations": {
+      "title": "Assisti a Risultati Trasformativi presso LUNAI",
+      "imageAlt": "Mostrando i risultati per {{treatment}} presso LUNAI",
+      "viewResult": "Vedi Risultato",
+      "buttonAll": "Scopri Tutte le Trasformazioni"
+    },
+    "whyChooseUs": {
+      "title": "Perché Affidarsi a LUNAI?",
+      "expertCare": {
+        "title": "Cura Estetica Esperta e Personalizzata",
+        "description": "I nostri professionisti altamente qualificati forniscono trattamenti estetici su misura, concentrandosi sui tuoi obiettivi unici per garantire risultati eccezionali, dall'aspetto naturale e la tua massima soddisfazione.",
+        "moreInfo": "Ciò include una consulenza completa, una pianificazione avanzata del trattamento, un supporto continuo e un impegno costante per il tuo benessere in ogni fase del tuo percorso estetico presso LUNAI."
+      },
+      "advancedTech": {
+        "title": "Tecnologia Avanzata all'Avanguardia",
+        "description": "Utilizziamo i più recenti progressi e le attrezzature all'avanguardia nella medicina estetica per fornire risultati sicuri, efficaci e minimamente invasivi con precisione presso LUNAI.",
+        "moreInfo": "Il nostro investimento in tecnologie leader garantisce che tu possa beneficiare di procedure non solo avanzate, ma che diano anche priorità al tuo comfort, alla tua sicurezza e che ottengano risultati superiori."
+      },
+      "naturalResults": {
+        "title": "Impegno per Risultati Naturali e Migliorativi",
+        "description": "La nostra filosofia centrale in LUNAI si concentra sull'esaltare la tua bellezza intrinseca, mirando a miglioramenti sottili ma significativi che appaiano autentici e ti facciano sentire la versione migliore di te stesso.",
+        "moreInfo": "Collaboriamo con te per creare un piano di trattamento su misura che rispetti la tua individualità, garantendo risultati che riflettano la migliore versione di te stesso, in modo naturale."
+      }
+    },
+    "experience": {
+      "title": "Vivi la Differenza LUNAI",
+      "description": "Entra in un santuario di calma e sofisticazione presso LUNAI, dove la tecnologia estetica avanzata incontra una cura del paziente senza pari. La nostra clinica è meticolosamente progettata con il tuo comfort, la tua privacy e il tuo benessere come nostre massime priorità, garantendo un'atmosfera serena e accogliente per ogni visita.",
+      "image1Alt": "Area reception della clinica lussuosa e accogliente presso LUNAI",
+      "image2Alt": "Sala trattamenti moderna, pulita e avanzata presso LUNAI"
+    },
+    "testimonials": {
+      "title": "Esperienze Apprezzate dei Clienti presso LUNAI",
+      "items": {
+        "1": {
+          "quote": "La mia esperienza presso LUNAI è stata fenomenale. I risultati hanno superato le mie aspettative e il personale è stato incredibilmente professionale e premuroso.",
+          "name": "Jessica M."
+        },
+        "2": {
+          "quote": "Ero nervoso per la mia procedura, ma il team di LUNAI mi ha fatto sentire completamente a mio agio. Sono entusiasta del mio nuovo look!",
+          "name": "David K."
+        },
+        "3": {
+          "quote": "Dalla consulenza al post-trattamento, ogni passo è stato gestito con competenza. Consiglio vivamente LUNAI a chiunque stia considerando trattamenti estetici.",
+          "name": "Sarah L."
+        }
+      }
+    },
+    "blog": {
+      "title": "Approfondimenti Esperti dal Nostro Blog LUNAI",
+      "readArticle": "Leggi l'Articolo Completo",
+      "buttonAll": "Esplora Tutti i Post del Blog LUNAI"
+    },
+    "cta": {
+      "title": "Pronto/a a Scoprire il Tuo Miglior Te con LUNAI?",
+      "description": "Il nostro consulente virtuale avanzato basato su IA è pronto a guidarti verso il tuo trattamento estetico o dentistico ideale presso LUNAI.",
+      "button": "Inizia il Tuo Consulto Virtuale Esperto"
+    }
+  },
+  "ServicesPage": {
+    "title": "I Nostri Servizi",
+    "subtitle": "Soluzioni estetiche e dentistiche complete su misura per te presso LUNAI.",
+    "unavailable": "I servizi non sono attualmente disponibili. Si prega di riprovare più tardi.",
+    "learnMore": "Scopri di Più",
+    "imageAlt": "Immagine per {{serviceName}}"
+  },
+  "ServiceDetailsPage": {
+    "backButton": "Torna a Tutti i Servizi",
+    "surgicalProcedure": "Procedura Chirurgica",
+    "nonSurgicalTreatment": "Trattamento Non Chirurgico",
+    "bookConsultation": "Prenota un Consulto",
+    "before": "Prima",
+    "after": "Dopo",
+    "beforeImageAlt": "Immagine prima per {{serviceName}}",
+    "afterImageAlt": "Immagine dopo per {{serviceName}}"
+  },
+  "GalleryPage": {
+    "title": "Trasformazioni dei Pazienti",
+    "subtitle": "Assisti ai risultati straordinari e dall'aspetto naturale ottenuti presso LUNAI.",
+    "emptyState": "La nostra galleria è attualmente vuota. Ti preghiamo di tornare più tardi per assistere ai risultati straordinari ottenuti presso LUNAI.",
+    "before": "Prima",
+    "after": "Dopo",
+    "beforeImageAlt": "Immagine prima per {{serviceName}}",
+    "afterImageAlt": "Immagine dopo per {{serviceName}}"
+  },
+  "ConsultationPage": {
+    "title": "Consulto Virtuale con IA",
+    "subtitle": "Ottieni suggerimenti personalizzati per trattamenti estetici e dentistici dalla nostra IA avanzata. Descrivi le tue preoccupazioni e il nostro consulente virtuale ti fornirà una guida iniziale per aiutarti nel tuo percorso con LUNAI.",
+    "formCard": {
+      "title": "Il Tuo Consulto Virtuale",
+      "description": "Questo strumento fornisce suggerimenti preliminari e non sostituisce una consulenza medica professionale."
+    },
+    "form": {
+      "label": "Descrivi le tue preoccupazioni e i tuoi obiettivi estetici",
+      "placeholder": "es., Sono preoccupato/a per le linee sottili intorno agli occhi e per la perdita di volume nelle guance...",
+      "button": {
+        "default": "Ottieni Suggerimenti con IA",
+        "loading": "Analisi in corso..."
+      },
+      "results": {
+        "title": "Pensieri Iniziali e Direzioni Potenziali"
+      },
+      "validation": {
+        "minLength": "Per favore, descrivi le tue preoccupazioni in almeno 20 caratteri.",
+        "maxLength": "La tua descrizione non deve superare i 2000 caratteri."
+      },
+      "toast": {
+        "error": {
+          "title": "Errore",
+          "description": "Impossibile ottenere suggerimenti. Si prega di riprovare."
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog LUNAI",
+    "subtitle": "Approfondimenti, consigli e notizie sui trattamenti estetici e sul benessere da LUNAI.",
+    "emptyState": "Al momento non sono disponibili post sul blog. Si prega di tornare presto per approfondimenti e notizie da LUNAI.",
+    "readMore": "Leggi di Più"
+  },
+  "ContactPage": {
+    "title": "Contattaci",
+    "subtitle": "Siamo qui per aiutare. Contattaci per qualsiasi domanda o per programmare il tuo consulto di persona presso LUNAI.",
+    "formCard": {
+      "title": "Inviaci un Messaggio",
+      "description": "Il nostro team ti risponderà il prima possibile."
+    },
+    "infoCard": {
+      "title": "Le Nostre Informazioni di Contatto",
+      "emailLabel": "Email",
+      "phoneLabel": "Telefono"
+    },
+    "form": {
+      "labels": {
+        "name": "Nome Completo",
+        "email": "Indirizzo Email",
+        "phone": "Numero di Telefono (Opzionale)",
+        "message": "Il Tuo Messaggio"
+      },
+      "placeholders": {
+        "name": "Mario Rossi",
+        "email": "mario.rossi@example.com",
+        "phone": "(123) 456-7890",
+        "message": "Come possiamo aiutarti oggi?"
+      },
+      "button": {
+        "default": "Invia Messaggio",
+        "loading": "Invio in corso..."
+      },
+      "validation": {
+        "name": {
+          "minLength": "Il nome deve contenere almeno 2 caratteri."
+        },
+        "email": {
+          "invalid": "Indirizzo email non valido."
+        },
+        "message": {
+          "minLength": "Il messaggio deve contenere almeno 10 caratteri.",
+          "maxLength": "Il messaggio non può superare i 500 caratteri."
+        }
+      },
+      "toast": {
+        "success": {
+          "title": "Messaggio Inviato!",
+          "description": "Grazie per averci contattato. Ti risponderemo al più presto."
+        },
+        "error": {
+          "title": "Errore nell'Invio del Messaggio",
+          "default": "Si è verificato un errore imprevisto."
+        }
+      }
+    }
+  },
+  "services": {
+    "categories": {
+      "face": {
+        "title": "Estetica Facciale"
+      },
+      "body": {
+        "title": "Modellamento del Corpo"
+      },
+      "dentistry": {
+        "title": "Odontoiatria"
+      }
+    },
+    "items": {}
+  },
+  "blogPosts": {
+    "1": {
+      "title": "La Guida Definitiva alla Cura della Pelle per un Bagliore Duraturo",
+      "excerpt": "Scopri i consigli degli esperti su come costruire una routine di cura della pelle che combatte l'invecchiamento, migliora la luminosità e mantiene la pelle sana e bella."
+    },
+    "2": {
+      "title": "Botox vs. Filler: Qual è la Scelta Giusta per Te?",
+      "excerpt": "Un'analisi completa di due dei nostri trattamenti più popolari. Comprendi le differenze e scopri qual è il migliore per i tuoi obiettivi estetici."
+    },
+    "3": {
+      "title": "La Strada verso il Recupero: Cosa Aspettarsi Dopo la Procedura",
+      "excerpt": "La cura post-trattamento è fondamentale per risultati ottimali. Scopri il processo di recupero per le nostre procedure chiave e come garantire un percorso senza intoppi."
+    },
+    "4": {
+      "title": "Un Sorriso più Luminoso: I Benefici dello Sbiancamento Dentale Professionale",
+      "excerpt": "Esplora come lo sbiancamento dentale professionale può migliorare drasticamente il tuo sorriso e aumentare la tua fiducia, e in cosa consiste la procedura."
+    },
+    "5": {
+      "title": "Modellamento del Corpo Non Invasivo: Una Rivoluzione nell'Estetica",
+      "excerpt": "Scopri le ultime tecnologie non chirurgiche che possono aiutarti a raggiungere la forma del corpo desiderata senza i tempi di inattività della chirurgia."
+    },
+    "6": {
+      "title": "Mantenere i Risultati: Consigli sullo Stile di Vita per una Bellezza a Lungo Termine",
+      "excerpt": "Il tuo percorso estetico non finisce quando lasci la nostra clinica. Scopri consigli su dieta, esercizio fisico e stile di vita per prolungare e migliorare i tuoi risultati."
+    },
+    "7": {
+      "title": "Comprendere il Vero Costo di un Trapianto di Capelli nel 2025",
+      "excerpt": "Un'analisi approfondita dei costi dei trapianti di capelli per il 2025, confrontando tecniche, numero di innesti e prezzi internazionali nel Regno Unito, in Turchia e in Albania.",
+      "date": "5 luglio 2024",
+      "content": []
+    }
   }
 }
+
+    

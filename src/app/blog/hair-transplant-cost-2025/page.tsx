@@ -1,10 +1,10 @@
 
 "use client";
 
-import { Newspaper } from 'lucide-react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/use-translations';
+import { cn } from '@/lib/utils';
 
 interface BlogSection {
   type: 'heading' | 'paragraph' | 'list' | 'card';
@@ -79,3 +79,5 @@ export default function HairTransplantCostPage() {
     </div>
   );
 }
+
+    
