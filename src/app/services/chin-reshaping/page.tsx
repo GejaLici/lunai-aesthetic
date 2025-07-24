@@ -1,9 +1,19 @@
+
+      
 'use client';
 
 import { useServiceTranslation } from '@/hooks/use-translations';
 import { ServicePageLayout } from '../service-page-layout';
+import type { Metadata } from 'next';
 
 const serviceId = 'chin-reshaping';
+
+export async function generateMetadata(): Promise<Metadata> {
+  // While this is a client component, metadata can be generated here.
+  // However, the hook `useServiceTranslation` cannot be used in a server-side metadata function.
+  // For simplicity, we will rely on the Head component in the layout for dynamic SEO.
+  return {};
+}
 
 interface ContentSection {
   heading: string;
@@ -11,9 +21,7 @@ interface ContentSection {
 }
 
 interface ServiceContent {
-  content_sections: {
-    [key: string]: ContentSection;
-  };
+  [key: string]: ContentSection;
 }
 
 export default function ServicePage() {
@@ -28,9 +36,9 @@ export default function ServicePage() {
         metaDescription={meta_description}
         metaKeywords={meta_keywords}
     >
-      {content && content.content_sections ? (
+      {content ? (
         <div className="space-y-6">
-          {Object.values(content.content_sections).map((section, index) => (
+          {Object.values(content).map((section, index) => (
             <section key={index}>
               <h2 className="font-headline text-2xl text-primary" dangerouslySetInnerHTML={{ __html: section.heading }} />
               <div className="space-y-4">
@@ -47,3 +55,5 @@ export default function ServicePage() {
     </ServicePageLayout>
   );
 }
+
+    

@@ -1,4 +1,5 @@
 
+      
 {
   "SiteHeader": {
     "home": "Startseite",
@@ -207,11 +208,16 @@
   },
   "services": {
     "categories": {
-      "face": "Gesichtsästhetik",
-      "body": "Körperformung",
-      "dentistry": "Zahnmedizin"
-    },
-    "items": {}
+      "face": {
+        "title": "Gesichtsästhetik"
+      },
+      "body": {
+        "title": "Körperformung"
+      },
+      "dentistry": {
+        "title": "Zahnmedizin"
+      }
+    }
   },
   "blogPosts": {
     "1": {

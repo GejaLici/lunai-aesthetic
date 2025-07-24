@@ -1,4 +1,6 @@
 
+      
+
 "use client";
 
 import { serviceData, ServiceItem } from '@/lib/services';
@@ -21,20 +23,13 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   };
   
   let descriptionText = '';
-  if (Array.isArray(serviceDescription)) {
-      descriptionText = serviceDescription[0];
+  if (typeof serviceDescription === 'object' && serviceDescription !== null && 'what_is' in serviceDescription) {
+    const firstSection = serviceDescription.what_is;
+    if (firstSection && Array.isArray(firstSection.paragraphs) && firstSection.paragraphs.length > 0) {
+      descriptionText = firstSection.paragraphs[0].replace(/<[^>]*>?/gm, '');
+    }
   } else if (typeof serviceDescription === 'string') {
-      descriptionText = serviceDescription;
-  } else if (typeof serviceDescription === 'object' && serviceDescription !== null) {
-      // Handle the complex object for facelift
-      const firstSectionKey = Object.keys(serviceDescription.content_sections || {})[0];
-      if (firstSectionKey) {
-        const firstSection = serviceDescription.content_sections[firstSectionKey];
-        if (firstSection && Array.isArray(firstSection.paragraphs) && firstSection.paragraphs.length > 0) {
-          // Remove HTML tags for a clean preview
-          descriptionText = firstSection.paragraphs[0].replace(/<[^>]*>?/gm, '');
-        }
-      }
+    descriptionText = serviceDescription;
   }
 
 
@@ -113,3 +108,5 @@ export default function ServicesPage() {
     </div>
   );
 }
+
+    
