@@ -47,13 +47,13 @@ export function ServicePageLayout({ serviceName, serviceId, children }: ServiceP
         </main>
 
         <aside className="lg:col-span-1 space-y-6">
-           <div className="grid grid-cols-2 gap-2">
+           <div className="grid grid-cols-1 gap-4">
               <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
-                <Image src={service.imageBefore} alt={t('beforeImageAlt', { serviceName })} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" data-ai-hint={`${service.dataAiHint} before`} />
+                <Image src={service.imageBefore} alt={t('beforeImageAlt', { serviceName })} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" data-ai-hint={`${service.dataAiHint} before`} />
                 <div className="absolute bottom-0 left-0 bg-black/50 text-white text-xs px-2 py-1">{t('before')}</div>
               </div>
               <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
-                <Image src={service.imageAfter} alt={t('afterImageAlt', { serviceName })} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" data-ai-hint={`${service.dataAiHint} after`} />
+                <Image src={service.imageAfter} alt={t('afterImageAlt', { serviceName })} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" data-ai-hint={`${service.dataAiHint} after`} />
                  <div className="absolute bottom-0 right-0 bg-black/50 text-white text-xs px-2 py-1">{t('after')}</div>
               </div>
             </div>
