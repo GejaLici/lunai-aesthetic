@@ -1,4 +1,3 @@
-
 'use client';
 
 import { ServicePageLayout } from '../service-page-layout';
@@ -10,7 +9,7 @@ export default function ServicePage() {
   const { name, description } = useServiceTranslation(serviceId);
 
   return (
-    <ServicePageLayout serviceName={name}>
+    <ServicePageLayout serviceName={name} serviceId={serviceId}>
       <section>
         {Array.isArray(description) ? 
             description.map((p: string, i: number) => <p key={i}>{p}</p>) : 

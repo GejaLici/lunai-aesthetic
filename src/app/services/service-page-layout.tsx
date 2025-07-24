@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 import { allServices } from '@/lib/services';
 import { Button } from '@/components/ui/button';
@@ -7,18 +6,17 @@ import { MoveLeft } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from '@/hooks/use-translations';
 import { Badge } from '@/components/ui/badge';
-import { notFound } from 'next/navigation';
 
 type ServicePageLayoutProps = {
   serviceName: string;
+  serviceId: string;
   children: ReactNode;
 };
 
-export function ServicePageLayout({ serviceName, children }: ServicePageLayoutProps) {
+export function ServicePageLayout({ serviceName, serviceId, children }: ServicePageLayoutProps) {
   const t = useTranslations('ServiceDetailsPage');
   
-  const slug = serviceName.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '');
-  const service = allServices.find(s => s.id === slug);
+  const service = allServices.find(s => s.id === serviceId);
   if (!service) {
     // This can happen during translation changes, but shouldn't be permanent
     return <div className="container mx-auto px-4 py-8">Service details loading...</div>
