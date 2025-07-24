@@ -1,7 +1,7 @@
 'use client';
 
-import { ServicePageLayout } from '../service-page-layout';
 import { useServiceTranslation } from '@/hooks/use-translations';
+import { ServicePageLayout } from '../service-page-layout';
 
 const serviceId = 'facelift';
 
@@ -17,11 +17,17 @@ interface ServiceContent {
 }
 
 export default function ServicePage() {
-  const { name, description } = useServiceTranslation(serviceId);
+  const { name, description, meta_title, meta_description, meta_keywords } = useServiceTranslation(serviceId);
   const content = description as unknown as ServiceContent;
 
   return (
-    <ServicePageLayout serviceName={name} serviceId={serviceId}>
+    <ServicePageLayout 
+        serviceName={name} 
+        serviceId={serviceId}
+        metaTitle={meta_title}
+        metaDescription={meta_description}
+        metaKeywords={meta_keywords}
+    >
       {content && content.content_sections ? (
         <div className="space-y-6">
           {Object.values(content.content_sections).map((section, index) => (

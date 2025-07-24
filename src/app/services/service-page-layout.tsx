@@ -8,14 +8,19 @@ import { MoveLeft } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from '@/hooks/use-translations';
 import { Badge } from '@/components/ui/badge';
+import Head from 'next/head';
+
 
 type ServicePageLayoutProps = {
   serviceName: string;
   serviceId: string;
   children: ReactNode;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
 };
 
-export function ServicePageLayout({ serviceName, serviceId, children }: ServicePageLayoutProps) {
+export function ServicePageLayout({ serviceName, serviceId, children, metaTitle, metaDescription, metaKeywords }: ServicePageLayoutProps) {
   const t = useTranslations('ServiceDetailsPage');
   
   const service = allServices.find(s => s.id === serviceId);
@@ -26,6 +31,13 @@ export function ServicePageLayout({ serviceName, serviceId, children }: ServiceP
   const isSurgical = service.serviceType === 'operation';
   
   return (
+    <>
+    {/* Although Next.js 13+ uses the Metadata API, placing meta tags here can be a fallback and is useful for client-side updates if needed. */}
+    <Head>
+        <title>{metaTitle || serviceName}</title>
+        <meta name="description" content={metaDescription || `Learn more about ${serviceName} at LUNAI.`} />
+        {metaKeywords && <meta name="keywords" content={metaKeywords} />}
+    </Head>
     <div className="container mx-auto px-4 py-8 max-w-5xl">
       <header className="mb-8">
         <Button asChild variant="ghost" className="mb-4">
@@ -63,5 +75,6 @@ export function ServicePageLayout({ serviceName, serviceId, children }: ServiceP
         </aside>
       </div>
     </div>
+    </>
   );
 }

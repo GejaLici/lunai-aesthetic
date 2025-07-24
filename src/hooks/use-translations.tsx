@@ -141,22 +141,15 @@ export const useServiceTranslation = (serviceId: string) => {
 
     const serviceFile = serviceMessages[serviceId];
 
-    const name = serviceFile?.[locale]?.name ?? serviceFile?.[fallbackLocale]?.name ?? serviceId;
-    let description = serviceFile?.[locale]?.description ?? serviceFile?.[fallbackLocale]?.description;
-
-    // Handle facelift's complex content structure
-    if (serviceId === 'facelift' && serviceFile?.[locale]) {
-        description = serviceFile[locale];
-    } else if (serviceId === 'facelift' && serviceFile?.[fallbackLocale]) {
-        description = serviceFile[fallbackLocale];
-    }
+    const currentLangData = serviceFile?.[locale] ?? serviceFile?.[fallbackLocale];
     
-    if (!description) {
-        description = "Description not available.";
-    }
-
-
-    return { name, description };
+    const name = currentLangData?.name ?? serviceId;
+    const description = currentLangData; // This will now be the whole object
+    const meta_title = currentLangData?.meta_title;
+    const meta_description = currentLangData?.meta_description;
+    const meta_keywords = currentLangData?.meta_keywords;
+    
+    return { name, description, meta_title, meta_description, meta_keywords };
 };
 
 
