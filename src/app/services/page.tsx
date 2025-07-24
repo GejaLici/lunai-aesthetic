@@ -15,12 +15,28 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   const { name: serviceName, description: serviceDescription } = useServiceTranslation(service.id);
   
   const truncate = (text: string, length: number) => {
-    if (!text) return '';
+    if (!text || typeof text !== 'string') return '';
     if (text.length <= length) return text;
     return text.substring(0, length) + '...';
   };
   
-  const descriptionText = Array.isArray(serviceDescription) ? serviceDescription[0] : serviceDescription;
+  let descriptionText = '';
+  if (Array.isArray(serviceDescription)) {
+      descriptionText = serviceDescription[0];
+  } else if (typeof serviceDescription === 'string') {
+      descriptionText = serviceDescription;
+  } else if (typeof serviceDescription === 'object' && serviceDescription !== null) {
+      // Handle the complex object for facelift
+      const firstSectionKey = Object.keys(serviceDescription.content_sections || {})[0];
+      if (firstSectionKey) {
+        const firstSection = serviceDescription.content_sections[firstSectionKey];
+        if (firstSection && Array.isArray(firstSection.paragraphs) && firstSection.paragraphs.length > 0) {
+          // Remove HTML tags for a clean preview
+          descriptionText = firstSection.paragraphs[0].replace(/<[^>]*>?/gm, '');
+        }
+      }
+  }
+
 
   return (
     <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
