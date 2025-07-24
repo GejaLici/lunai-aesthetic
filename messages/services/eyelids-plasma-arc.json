@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Eyelids (Plasma Arc)",
-    "description": [
-      "Achieve a non-surgical eye lift with our innovative Plasma Arc treatment. This revolutionary technology offers a highly effective alternative to traditional blepharoplasty for individuals with mild to moderate skin laxity around the eyes. It is particularly effective for tightening loose upper eyelid skin and reducing the appearance of \"crow's feet\" and fine lines.",
-      "The treatment uses a specialized device to create a tiny electrical arc of plasma energy. When this arc touches the skin's surface, it causes the targeted tissue to sublimate—turn directly from solid to gas. This process creates a pattern of tiny carbon crusts and triggers an immediate contraction and tightening of the skin fibers.",
-      "As the skin heals from this controlled treatment, the body’s natural healing response is activated, leading to the production of new collagen and elastin over the following weeks and months. This results in firmer, tighter, and smoother skin around the eyes.",
-      "The procedure is performed with topical anesthetic cream for comfort. The carbon crusts will fall off naturally within 5-7 days, revealing new, rejuvenated skin underneath. The results are long-lasting and can significantly refresh your appearance, making your eyes look more open and youthful."
-    ]
+    "name": "Non-Surgical Eye Lift (Plasma Arc)",
+    "meta_title": "Non-Surgical Eye Lift with Plasma Arc: Eyelid Tightening Treatment",
+    "meta_description": "Achieve a non-surgical eye lift with our innovative Plasma Arc treatment. This technology tightens loose upper eyelid skin and reduces crow's feet for a refreshed, more youthful appearance without surgery.",
+    "meta_keywords": "non-surgical eye lift, plasma arc, fibroblast, skin tightening, eyelid tightening, blepharoplasty alternative, crow's feet treatment",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is a Non-Surgical Eye Lift with Plasma Arc?",
+        "paragraphs": [
+          "Achieve a <strong>non-surgical eye lift</strong> with our innovative <strong>Plasma Arc</strong> treatment. This revolutionary technology offers a highly effective alternative to traditional blepharoplasty for individuals with mild to moderate skin laxity around the eyes. It is particularly effective for tightening loose upper eyelid skin and reducing the appearance of \"crow's feet\" and fine lines."
+        ]
+      },
+      "how_it_works": {
+        "heading": "How Plasma Arc Works",
+        "paragraphs": [
+          "The treatment uses a specialized device to create a tiny electrical arc of plasma energy. When this arc touches the skin's surface, it causes the targeted tissue to sublimate (turn directly from solid to gas). This process creates a pattern of tiny carbon crusts and triggers an immediate contraction and tightening of the skin fibers."
+        ]
+      },
+      "results": {
+        "heading": "Collagen Production and Long-Lasting Results",
+        "paragraphs": [
+          "As the skin heals, the body’s natural healing response is activated, leading to the production of new collagen and elastin. This results in firmer, tighter, and smoother skin around the eyes. The carbon crusts will fall off naturally within 5-7 days, revealing new, rejuvenated skin. The results are long-lasting and can significantly refresh your appearance."
+        ]
+      }
+    }
   }
 }

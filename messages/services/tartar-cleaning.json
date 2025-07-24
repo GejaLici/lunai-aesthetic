@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Tartar Cleaning",
-    "description": [
-      "Maintain optimal oral health and prevent dental disease with a professional Tartar Cleaning, also known as scaling and polishing. This is a fundamental part of preventive dental care and is essential for keeping your teeth and gums healthy for a lifetime.",
-      "Even with excellent brushing and flossing at home, plaque can build up and harden into a substance called calculus, or tartar. Tartar cannot be removed with a regular toothbrush and provides a rough surface for even more plaque to accumulate, leading to cavities and gum disease (gingivitis).",
-      "During a professional cleaning, our skilled dental hygienists use specialized tools, such as ultrasonic scalers, to gently and effectively remove tartar and plaque from above and below the gumline. After scaling, the teeth are polished to remove surface stains and create a smooth surface that helps prevent future plaque buildup.",
-      "Regular tartar cleanings, typically recommended every six months, are your best defense against dental problems and are key to maintaining a fresh, healthy, and beautiful smile."
-    ]
+    "name": "Professional Teeth & Tartar Cleaning",
+    "meta_title": "Professional Teeth Cleaning: Tartar Removal & Polishing",
+    "meta_description": "Maintain optimal oral health with a professional tartar cleaning (scaling and polishing). This essential preventive dental care removes hardened plaque (tartar) to prevent cavities and gum disease for a healthy, beautiful smile.",
+    "meta_keywords": "teeth cleaning, tartar removal, dental cleaning, scaling and polishing, preventive dentistry, oral hygiene, gum health",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is a Professional Tartar Cleaning?",
+        "paragraphs": [
+          "Maintain optimal oral health and prevent dental disease with a professional <strong>Tartar Cleaning</strong>, also known as <strong>scaling and polishing</strong>. This is a fundamental part of preventive dental care and is essential for keeping your teeth and gums healthy for a lifetime."
+        ]
+      },
+      "why_needed": {
+        "heading": "Why is it Necessary?",
+        "paragraphs": [
+          "Even with excellent brushing and flossing at home, plaque can build up and harden into a substance called calculus, or tartar. Tartar cannot be removed with a regular toothbrush and provides a rough surface for even more plaque to accumulate, leading to cavities and gum disease (gingivitis)."
+        ]
+      },
+      "procedure": {
+        "heading": "The Cleaning Process",
+        "paragraphs": [
+          "During a professional cleaning, our skilled dental hygienists use specialized tools to gently and effectively remove tartar and plaque from above and below the gumline. After scaling, the teeth are polished to remove surface stains and create a smooth surface that helps prevent future plaque buildup. Regular tartar cleanings are your best defense against dental problems."
+        ]
+      }
+    }
   }
 }

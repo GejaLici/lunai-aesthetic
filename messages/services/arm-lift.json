@@ -1,12 +1,30 @@
 
 {
   "en": {
-    "name": "Arm Lift",
-    "description": [
-      "An arm lift, or brachioplasty, is a surgical procedure that reshapes the upper arms by removing loose, sagging skin and excess fat. This condition, often referred to as \"bat wings,\" can result from significant weight loss, aging, or genetics and often does not respond to diet and exercise.",
-      "This procedure creates a smoother, firmer, and more toned arm contour, allowing you to wear sleeveless tops and dresses with renewed confidence. During the surgery, an incision is typically made on the inside or back of the arm, from the armpit to the elbow. Through this incision, our surgeon removes excess skin and fat and tightens the underlying supportive tissues.",
-      "Liposuction may be used in conjunction with an arm lift to achieve the best possible contour. Ideal candidates are individuals who are at a stable weight and are bothered by the appearance of loose skin on their upper arms.",
-      "Recovery involves wearing compression garments and limiting strenuous activity for several weeks. While there will be a scar, our surgeons take great care to place it as discreetly as possible. The results are a dramatically improved and more youthful arm shape."
-    ]
+    "name": "Arm Lift (Brachioplasty)",
+    "meta_title": "Arm Lift (Brachioplasty): Upper Arm Contouring & Sagging Skin Removal",
+    "meta_description": "Achieve slimmer, more toned upper arms with an arm lift (brachioplasty). This surgical procedure removes excess sagging skin and fat, known as 'bat wings,' for a firmer, more youthful arm contour. Learn more about the benefits and recovery.",
+    "meta_keywords": "arm lift, brachioplasty, upper arm lift, sagging skin removal, bat wings surgery, arm contouring, plastic surgery, body contouring, excess skin surgery",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is an Arm Lift? Reshaping the Upper Arms",
+        "paragraphs": [
+          "An <strong>arm lift</strong>, or <strong>brachioplasty</strong>, is a surgical procedure that reshapes the upper arms by removing loose, sagging skin and excess fat. This condition, often referred to as \"bat wings,\" can result from significant weight loss, aging, or genetics and often does not respond to diet and exercise.",
+          "This procedure creates a smoother, firmer, and more toned arm contour, allowing you to wear sleeveless tops and dresses with renewed confidence."
+        ]
+      },
+      "procedure": {
+        "heading": "The Brachioplasty Procedure",
+        "paragraphs": [
+          "During the surgery, an incision is typically made on the inside or back of the arm, from the armpit to the elbow. Through this incision, our surgeon removes excess skin and fat and tightens the underlying supportive tissues. Liposuction may be used in conjunction with an arm lift to achieve the best possible contour."
+        ]
+      },
+      "candidates_recovery": {
+        "heading": "Candidates and Recovery",
+        "paragraphs": [
+          "Ideal candidates are individuals who are at a stable weight and are bothered by the appearance of loose skin on their upper arms. Recovery involves wearing compression garments and limiting strenuous activity for several weeks. While there will be a scar, our surgeons take great care to place it as discreetly as possible. The results are a dramatically improved and more youthful arm shape."
+        ]
+      }
+    }
   }
 }

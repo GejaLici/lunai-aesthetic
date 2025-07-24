@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Crowns",
-    "description": [
-      "A dental crown, often called a \"cap,\" is a custom-made restoration that completely encases the visible portion of a tooth. It is a highly effective way to protect and restore a tooth that has been significantly weakened by decay, fracture, a large filling, or a root canal procedure.",
-      "Crowns serve multiple purposes: they restore a tooth's original size, shape, and strength, and they improve its aesthetic appearance. At LUNAI, our crowns are crafted from high-quality, durable materials such as porcelain, zirconia, or porcelain-fused-to-metal, designed to blend seamlessly with your natural teeth.",
-      "The process typically involves two appointments. During the first visit, the tooth is prepared, an impression is taken for the lab, and a temporary crown is placed. At the second visit, the permanent, custom-fabricated crown is checked for a perfect fit and then cemented into place.",
-      "A well-made crown can protect a compromised tooth from further damage and provide a beautiful, functional restoration that can last for many years with proper care."
-    ]
+    "name": "Dental Crowns",
+    "meta_title": "Dental Crowns: Restore and Protect Damaged Teeth",
+    "meta_description": "Protect and restore a weakened or damaged tooth with a custom-made dental crown. Learn how our high-quality porcelain and zirconia crowns can restore your tooth's strength, shape, and appearance for a durable, natural-looking result.",
+    "meta_keywords": "dental crown, tooth cap, porcelain crown, zirconia crown, restorative dentistry, broken tooth repair, root canal crown, cosmetic dentistry",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is a Dental Crown? Restoring Tooth Function and Appearance",
+        "paragraphs": [
+          "A <strong>dental crown</strong>, often called a \"cap,\" is a custom-made restoration that completely encases the visible portion of a tooth. It is a highly effective way to protect and restore a tooth that has been significantly weakened by decay, fracture, a large filling, or a root canal procedure."
+        ]
+      },
+      "purpose": {
+        "heading": "The Purpose of a Crown",
+        "paragraphs": [
+          "Crowns serve multiple purposes: they restore a tooth's original size, shape, and strength, and they improve its aesthetic appearance. At LUNAI, our crowns are crafted from high-quality, durable materials such as porcelain, zirconia, or porcelain-fused-to-metal, designed to blend seamlessly with your natural teeth."
+        ]
+      },
+      "procedure": {
+        "heading": "The Two-Visit Procedure",
+        "paragraphs": [
+          "The process typically involves two appointments. During the first visit, the tooth is prepared, an impression is taken for the lab, and a temporary crown is placed. At the second visit, the permanent, custom-fabricated crown is checked for a perfect fit and then cemented into place. A well-made crown can protect a compromised tooth from further damage and provide a beautiful, functional restoration that can last for many years."
+        ]
+      }
+    }
   }
 }

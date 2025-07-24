@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Jawline Contouring",
-    "description": [
-      "A sharp, defined jawline is a key feature of a youthful and attractive face. Our non-surgical Jawline Contouring treatment uses strategically placed dermal fillers to sculpt and enhance the angle of the mandible, creating a stronger, more chiseled profile for both men and women.",
-      "This procedure is ideal for correcting a weak or underdeveloped jawline, improving facial symmetry, reducing the appearance of jowls, and creating a clearer separation between the jaw and neck. Our expert injectors use high-density hyaluronic acid fillers that mimic the feel of bone to build structure and definition.",
-      "The treatment is highly customized to your facial anatomy and aesthetic goals. For men, the goal is often to create a wider, more angular jaw. For women, the focus is typically on creating a graceful but defined line that enhances femininity. The procedure is quick, with minimal discomfort and no downtime.",
-      "Results are visible immediately and typically last for 12 to 24 months. Jawline contouring can dramatically improve your profile, boost your confidence, and restore a more youthful and powerful look in a single session."
-    ]
+    "name": "Non-Surgical Jawline Contouring",
+    "meta_title": "Jawline Contouring with Dermal Fillers: Define & Sculpt Your Profile",
+    "meta_description": "Achieve a sharp, defined jawline without surgery. Our jawline contouring treatment uses dermal fillers to sculpt and enhance the jaw, correct jowls, and create a stronger, more chiseled profile instantly.",
+    "meta_keywords": "jawline contouring, jawline filler, non-surgical jawline, defined jawline, chin filler, cosmetic injections, dermal fillers",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Jawline Contouring? Sculpting a Stronger Profile",
+        "paragraphs": [
+          "A sharp, defined jawline is a key feature of a youthful and attractive face. Our non-surgical <strong>Jawline Contouring</strong> treatment uses strategically placed dermal fillers to sculpt and enhance the angle of the mandible, creating a stronger, more chiseled profile for both men and women."
+        ]
+      },
+      "applications": {
+        "heading": "What Can Jawline Contouring Achieve?",
+        "paragraphs": [
+          "This procedure is ideal for correcting a weak or underdeveloped jawline, improving facial symmetry, reducing the appearance of jowls, and creating a clearer separation between the jaw and neck. Our expert injectors use high-density hyaluronic acid fillers that mimic the feel of bone to build structure and definition."
+        ]
+      },
+      "results": {
+        "heading": "Customized, Instant Results",
+        "paragraphs": [
+          "The treatment is highly customized to your facial anatomy and aesthetic goals. The procedure is quick, with minimal discomfort and no downtime. Results are visible immediately and typically last for 12 to 24 months. Jawline contouring can dramatically improve your profile and restore a more youthful and powerful look in a single session."
+        ]
+      }
+    }
   }
 }

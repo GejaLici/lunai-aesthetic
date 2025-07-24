@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Nose Reshaping (Non-surgical)",
-    "description": [
-      "A non-surgical rhinoplasty, often called a \"liquid nose job\" or \"15-minute nose job,\" is a remarkable non-invasive alternative to traditional surgery. This procedure uses precisely injected hyaluronic acid-based dermal fillers to instantly reshape and refine the nose. It is an excellent option for making subtle yet impactful changes without downtime.",
-      "At LUNAI, our expert injectors can masterfully use fillers to smooth out bumps and humps on the nasal bridge, lift a droopy nasal tip, improve nasal symmetry, and create a more refined overall profile. The procedure is quick, typically taking less than 30 minutes, with minimal discomfort.",
-      "Ideal candidates are those looking for minor to moderate adjustments to their nose's appearance. It's a perfect way to \"try out\" a new nose shape before committing to surgery or for those who want to avoid a surgical procedure altogether. It is not suitable for reducing the size of the nose.",
-      "The results are immediate and can last from 9 to 18 months, depending on the type of filler used and the individual's metabolism. There is virtually no recovery time, allowing you to return to your daily activities right away with a newly enhanced profile."
-    ]
+    "name": "Non-Surgical Rhinoplasty (Liquid Nose Job)",
+    "meta_title": "Non-Surgical Rhinoplasty: Instant Nose Reshaping with Fillers",
+    "meta_description": "Instantly reshape your nose without surgery using a non-surgical rhinoplasty, or 'liquid nose job.' This 15-minute procedure uses dermal fillers to smooth bumps, lift the tip, and improve symmetry with no downtime.",
+    "meta_keywords": "non-surgical rhinoplasty, liquid nose job, 15-minute nose job, nose filler, rhinoplasty alternative, nose reshaping, cosmetic injections",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is a Non-Surgical Rhinoplasty? The 15-Minute Nose Job",
+        "paragraphs": [
+          "A <strong>non-surgical rhinoplasty</strong>, often called a \"liquid nose job\" or \"15-minute nose job,\" is a remarkable non-invasive alternative to traditional surgery. This procedure uses precisely injected hyaluronic acid-based dermal fillers to instantly reshape and refine the nose. It is an excellent option for making subtle yet impactful changes without downtime."
+        ]
+      },
+      "applications": {
+        "heading": "What Can It Correct?",
+        "paragraphs": [
+          "At LUNAI, our expert injectors can masterfully use fillers to smooth out bumps and humps on the nasal bridge, lift a droopy nasal tip, improve nasal symmetry, and create a more refined overall profile. The procedure is quick, typically taking less than 30 minutes, with minimal discomfort."
+        ]
+      },
+      "candidates_results": {
+        "heading": "Candidates and Immediate Results",
+        "paragraphs": [
+          "Ideal candidates are those looking for minor to moderate adjustments. It's a perfect way to \"try out\" a new nose shape before committing to surgery. It is not suitable for reducing the size of the nose. The results are immediate and can last from 9 to 18 months, with virtually no recovery time."
+        ]
+      }
+    }
   }
 }

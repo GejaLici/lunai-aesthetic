@@ -2,11 +2,28 @@
 {
   "en": {
     "name": "Breast Reconstruction",
-    "description": [
-      "Losing a breast to mastectomy can be a deeply emotional part of the cancer journey. Breast reconstruction is a series of procedures designed to restore the shape, appearance, and size of the breast, helping a woman feel whole again and move forward with confidence.",
-      "At LUNAI, our compassionate and skilled surgeons offer a range of advanced breast reconstruction options. Reconstruction can be performed at the same time as the mastectomy (immediate reconstruction) or at a later date (delayed reconstruction).",
-      "The two main approaches are implant-based reconstruction and autologous (or \"flap\") reconstruction, which uses your own body tissue from the abdomen, back, or thighs to create a new breast mound. The best option depends on your body type, cancer treatment plan, and personal preference. We will work closely with you and your oncology team to create a safe and effective surgical plan.",
-      "Breast reconstruction is a highly personal journey, and our goal is to support you every step of the way. We aim to create a result that not only looks natural but also helps restore your sense of self and femininity after breast cancer."
-    ]
+    "meta_title": "Breast Reconstruction Surgery: Restoring Shape After Mastectomy",
+    "meta_description": "Explore options for breast reconstruction surgery after a mastectomy. Learn about implant-based and autologous (flap) reconstruction to restore breast shape, appearance, and your sense of self with compassionate, expert care.",
+    "meta_keywords": "breast reconstruction, post-mastectomy reconstruction, implant reconstruction, flap reconstruction, DIEP flap, breast cancer surgery, restorative surgery",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Breast Reconstruction? Restoring Wholeness",
+        "paragraphs": [
+          "Losing a breast to mastectomy can be a deeply emotional part of the cancer journey. <strong>Breast reconstruction</strong> is a series of procedures designed to restore the shape, appearance, and size of the breast, helping a woman feel whole again and move forward with confidence."
+        ]
+      },
+      "options": {
+        "heading": "Advanced Reconstruction Options",
+        "paragraphs": [
+          "At LUNAI, our compassionate and skilled surgeons offer a range of advanced breast reconstruction options. Reconstruction can be performed at the same time as the mastectomy (immediate reconstruction) or at a later date (delayed reconstruction). The two main approaches are implant-based reconstruction and autologous (or \"flap\") reconstruction, which uses your own body tissue from the abdomen, back, or thighs to create a new breast mound. The best option depends on your body type, cancer treatment plan, and personal preference."
+        ]
+      },
+      "our_approach": {
+        "heading": "A Compassionate and Personalized Journey",
+        "paragraphs": [
+          "We will work closely with you and your oncology team to create a safe and effective surgical plan. Breast reconstruction is a highly personal journey, and our goal is to support you every step of the way. We aim to create a result that not only looks natural but also helps restore your sense of self and femininity after breast cancer."
+        ]
+      }
+    }
   }
 }

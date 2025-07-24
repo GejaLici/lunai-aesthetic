@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Composite Veneers",
-    "description": [
-      "Transform your smile affordably and in a single visit with Composite Veneers. This cosmetic dental procedure, also known as dental bonding, is an excellent way to correct a variety of minor imperfections. Our skilled dentists masterfully apply a tooth-colored composite resin directly to the tooth surface to improve its appearance.",
-      "Composite veneers are ideal for concealing chips, closing small gaps between teeth, covering up stains and discoloration, and even correcting the appearance of slightly crooked or misshapen teeth. It is a conservative procedure that typically requires minimal to no removal of the natural tooth structure.",
-      "The process is both an art and a science. Our dentists carefully select a shade of resin that matches your natural teeth and then expertly sculpt and polish it to create a seamless, beautiful result. The entire procedure is usually completed in just one appointment.",
-      "While not as durable or stain-resistant as porcelain veneers, composite veneers are a cost-effective and less invasive way to achieve a stunning smile makeover and a significant boost in confidence."
-    ]
+    "name": "Composite Veneers (Dental Bonding)",
+    "meta_title": "Composite Veneers (Dental Bonding): Affordable Same-Day Smile Makeover",
+    "meta_description": "Transform your smile in a single visit with composite veneers. This affordable cosmetic dental procedure, also known as dental bonding, corrects chips, gaps, and stains for a beautiful, seamless result.",
+    "meta_keywords": "composite veneers, dental bonding, smile makeover, cosmetic dentistry, chipped tooth repair, close gaps in teeth, affordable veneers, same-day veneers",
+    "content_sections": {
+      "what_are": {
+        "heading": "What Are Composite Veneers? An Instant Smile Enhancement",
+        "paragraphs": [
+          "Transform your smile affordably and in a single visit with <strong>Composite Veneers</strong>. This cosmetic dental procedure, also known as <strong>dental bonding</strong>, is an excellent way to correct a variety of minor imperfections. Our skilled dentists masterfully apply a tooth-colored composite resin directly to the tooth surface to improve its appearance."
+        ]
+      },
+      "applications": {
+        "heading": "What Can Composite Veneers Fix?",
+        "paragraphs": [
+          "Composite veneers are ideal for concealing chips, closing small gaps between teeth, covering up stains and discoloration, and even correcting the appearance of slightly crooked or misshapen teeth. It is a conservative procedure that typically requires minimal to no removal of the natural tooth structure."
+        ]
+      },
+      "procedure": {
+        "heading": "The Art of the Procedure",
+        "paragraphs": [
+          "The process is both an art and a science. Our dentists carefully select a shade of resin that matches your natural teeth and then expertly sculpt and polish it to create a seamless, beautiful result. The entire procedure is usually completed in just one appointment. While not as durable or stain-resistant as porcelain veneers, composite veneers are a cost-effective and less invasive way to achieve a stunning smile makeover."
+        ]
+      }
+    }
   }
 }

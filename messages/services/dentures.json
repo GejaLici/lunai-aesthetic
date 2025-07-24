@@ -2,11 +2,28 @@
 {
   "en": {
     "name": "Dentures",
-    "description": [
-      "Regain a complete, confident smile and full chewing function with our modern, comfortable dentures. Dentures are removable appliances that replace missing teeth and surrounding tissues. At LUNAI, we focus on providing dentures that not only look natural but also provide a secure and comfortable fit.",
-      "We offer several types of dentures to meet your needs. Complete (or full) dentures are used when all teeth in an arch are missing. Partial dentures are used when some natural teeth remain, and they are held in place by clasps that attach to the existing teeth.",
-      "For enhanced stability, we also offer implant-supported dentures. These dentures snap onto dental implants that have been surgically placed in the jawbone, providing a much more secure and stable fit that eliminates slipping and improves chewing power.",
-      "Our team takes meticulous care in the design and fabrication of your custom dentures, ensuring they restore your facial structure, support your lips and cheeks, and allow you to eat, speak, and smile with renewed confidence."
-    ]
+    "meta_title": "Modern Dentures: Comfortable & Natural-Looking Smile Restoration",
+    "meta_description": "Regain a complete, confident smile with our modern, comfortable dentures. We offer full, partial, and implant-supported dentures for a secure fit that restores chewing function and facial structure.",
+    "meta_keywords": "dentures, full dentures, partial dentures, implant-supported dentures, false teeth, smile restoration, removable dentures",
+    "content_sections": {
+      "what_are": {
+        "heading": "What Are Dentures? A Complete Smile Solution",
+        "paragraphs": [
+          "Regain a complete, confident smile and full chewing function with our modern, comfortable <strong>dentures</strong>. Dentures are removable appliances that replace missing teeth and surrounding tissues. At LUNAI, we focus on providing dentures that not only look natural but also provide a secure and comfortable fit."
+        ]
+      },
+      "types": {
+        "heading": "Types of Dentures to Meet Your Needs",
+        "paragraphs": [
+          "We offer several types of dentures. <strong>Complete (or full) dentures</strong> are used when all teeth in an arch are missing. <strong>Partial dentures</strong> are used when some natural teeth remain. For enhanced stability, we also offer <strong>implant-supported dentures</strong>. These dentures snap onto dental implants, providing a much more secure fit that eliminates slipping and improves chewing power."
+        ]
+      },
+      "our_approach": {
+        "heading": "Custom-Crafted for You",
+        "paragraphs": [
+          "Our team takes meticulous care in the design and fabrication of your custom dentures, ensuring they restore your facial structure, support your lips and cheeks, and allow you to eat, speak, and smile with renewed confidence."
+        ]
+      }
+    }
   }
 }

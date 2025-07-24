@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Tooth Fluoridation",
-    "description": [
-      "Strengthen your child's teeth and give them a powerful defense against cavities with professional Tooth Fluoridation. Fluoride is a naturally occurring mineral that has been proven to make tooth enamel more resistant to the acid attacks from plaque bacteria and sugars that cause tooth decay.",
-      "A professional fluoride treatment provides a much higher concentration of fluoride than what is found in toothpaste or water. The treatment is quick, painless, and safe. It involves applying a fluoride gel, foam, or varnish directly to the teeth after a cleaning.",
-      "This simple preventive measure can significantly reduce the risk of your child developing cavities, especially on the chewing surfaces of their molars, which are most prone to decay. It is a cornerstone of pediatric preventive dentistry.",
-      "We recommend fluoride treatments as part of your child's regular check-up and cleaning appointments to help keep their smile healthy and strong."
-    ]
+    "name": "Tooth Fluoridation (Children)",
+    "meta_title": "Professional Tooth Fluoridation for Children: Cavity Prevention",
+    "meta_description": "Strengthen your child's teeth and defend against cavities with a professional tooth fluoridation treatment. This quick, painless application makes tooth enamel more resistant to decay.",
+    "meta_keywords": "tooth fluoridation, fluoride treatment, children's dentistry, cavity prevention, pedodontics, strong teeth",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Tooth Fluoridation? A Powerful Defense Against Cavities",
+        "paragraphs": [
+          "Strengthen your child's teeth and give them a powerful defense against cavities with professional <strong>Tooth Fluoridation</strong>. Fluoride is a naturally occurring mineral that has been proven to make tooth enamel more resistant to the acid attacks that cause tooth decay."
+        ]
+      },
+      "procedure": {
+        "heading": "The Fluoride Treatment Process",
+        "paragraphs": [
+          "A professional fluoride treatment provides a much higher concentration of fluoride than what is found in toothpaste or water. The treatment is quick, painless, and safe. It involves applying a fluoride gel, foam, or varnish directly to the teeth after a cleaning."
+        ]
+      },
+      "benefits": {
+        "heading": "Benefits for Children's Dental Health",
+        "paragraphs": [
+          "This simple preventive measure can significantly reduce the risk of your child developing cavities, especially on the chewing surfaces of their molars. It is a cornerstone of pediatric preventive dentistry. We recommend fluoride treatments as part of your child's regular check-up and cleaning appointments."
+        ]
+      }
+    }
   }
 }

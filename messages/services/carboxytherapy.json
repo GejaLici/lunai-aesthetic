@@ -2,11 +2,28 @@
 {
   "en": {
     "name": "Carboxytherapy",
-    "description": [
-      "Carboxytherapy is an innovative and versatile non-surgical treatment that involves the therapeutic injection of medical-grade carbon dioxide (CO2) gas into the subcutaneous tissue. This safe and minimally invasive procedure leverages a natural process in the body to rejuvenate the skin and improve its appearance.",
-      "When CO2 is injected, the body interprets it as an oxygen deficit and responds by increasing blood flow and growth factors to the treated area. This surge in oxygen and nutrients stimulates circulation, encourages lymphatic drainage, and promotes the production of new collagen.",
-      "At LUNAI, we use carboxytherapy to effectively treat a range of concerns. It is highly effective in diminishing the appearance of cellulite, fading stretch marks by rebuilding the collagen network, and improving skin laxity and texture on the body. It can also be used to treat dark under-eye circles by improving circulation.",
-      "The treatment is quick, with minimal discomfort and no downtime. A series of sessions is typically required to achieve optimal, long-lasting results for smoother, healthier-looking skin."
-    ]
+    "meta_title": "Carboxytherapy: Non-Surgical Treatment for Cellulite & Stretch Marks",
+    "meta_description": "Discover carboxytherapy, an innovative, non-surgical treatment that uses CO2 injections to improve circulation, reduce cellulite, fade stretch marks, and tighten skin. Learn how this minimally invasive procedure works.",
+    "meta_keywords": "carboxytherapy, cellulite treatment, stretch mark removal, skin tightening, dark under-eye circles, non-surgical, cosmetic treatment",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Carboxytherapy? Skin Rejuvenation with CO2",
+        "paragraphs": [
+          "<strong>Carboxytherapy</strong> is an innovative and versatile non-surgical treatment that involves the therapeutic injection of medical-grade carbon dioxide (CO2) gas into the subcutaneous tissue. This safe and minimally invasive procedure leverages a natural process in the body to rejuvenate the skin and improve its appearance."
+        ]
+      },
+      "how_it_works": {
+        "heading": "How Carboxytherapy Works",
+        "paragraphs": [
+          "When CO2 is injected, the body interprets it as an oxygen deficit and responds by increasing blood flow and growth factors to the treated area. This surge in oxygen and nutrients stimulates circulation, encourages lymphatic drainage, and promotes the production of new collagen."
+        ]
+      },
+      "applications": {
+        "heading": "Applications and Benefits",
+        "paragraphs": [
+          "At LUNAI, we use carboxytherapy to effectively treat a range of concerns. It is highly effective in diminishing the appearance of cellulite, fading stretch marks by rebuilding the collagen network, and improving skin laxity. It can also be used to treat dark under-eye circles by improving circulation. The treatment is quick, with minimal discomfort and no downtime. A series of sessions is typically required to achieve optimal results."
+        ]
+      }
+    }
   }
 }

@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Sclerotherapy (Spider Vein Treatment)",
-    "description": [
-      "Achieve clear, beautiful legs and restore your confidence with Sclerotherapy. This is the gold-standard medical procedure for eliminating unsightly spider veins and small varicose veins on the legs. It is a safe, effective, and minimally invasive treatment that has been trusted for decades.",
-      "The procedure involves injecting a special solution, called a sclerosant, directly into the targeted veins. This solution irritates the lining of the vein, causing it to swell, collapse, and stick together. Over time, the treated vein turns into scar tissue and fades from view as it is naturally absorbed by the body.",
-      "A single session may involve multiple injections, depending on the number of veins being treated. The procedure is quick, with minimal discomfort. There is no downtime, and patients are encouraged to walk immediately after to promote circulation.",
-      "Multiple sessions may be needed to achieve the desired level of clearance. With sclerotherapy at LUNAI, you can effectively restore an even-toned appearance to your legs and feel comfortable wearing shorts and skirts again."
-    ]
+    "name": "Sclerotherapy for Spider Veins",
+    "meta_title": "Sclerotherapy: Effective Treatment for Spider & Varicose Veins",
+    "meta_description": "Eliminate unsightly spider veins and small varicose veins with sclerotherapy. This gold-standard, minimally invasive injection treatment causes veins to collapse and fade, restoring clear, beautiful skin on your legs.",
+    "meta_keywords": "sclerotherapy, spider vein treatment, varicose vein treatment, leg vein removal, cosmetic injections, vein therapy",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Sclerotherapy? The Gold Standard for Spider Veins",
+        "paragraphs": [
+          "Achieve clear, beautiful legs and restore your confidence with <strong>Sclerotherapy</strong>. This is the gold-standard medical procedure for eliminating unsightly spider veins and small varicose veins on the legs. It is a safe, effective, and minimally invasive treatment that has been trusted for decades."
+        ]
+      },
+      "how_it_works": {
+        "heading": "How Sclerotherapy Works",
+        "paragraphs": [
+          "The procedure involves injecting a special solution, called a sclerosant, directly into the targeted veins. This solution irritates the lining of the vein, causing it to swell, collapse, and stick together. Over time, the treated vein turns into scar tissue and fades from view as it is naturally absorbed by the body."
+        ]
+      },
+      "procedure": {
+        "heading": "A Quick and Simple Procedure",
+        "paragraphs": [
+          "A single session may involve multiple injections. The procedure is quick, with minimal discomfort. There is no downtime, and patients are encouraged to walk immediately after to promote circulation. Multiple sessions may be needed to achieve the desired level of clearance, helping you feel comfortable wearing shorts and skirts again."
+        ]
+      }
+    }
   }
 }

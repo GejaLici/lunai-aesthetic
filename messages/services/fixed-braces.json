@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Fixed Braces",
-    "description": [
-      "Achieve a perfectly straight smile and a healthy, functional bite with traditional fixed braces. This time-tested orthodontic treatment is highly effective for correcting a wide range of complex issues, including severe crowding, spacing, and bite misalignments such as overbites, underbites, and crossbites.",
-      "Fixed braces consist of brackets that are bonded to the front of each tooth and an archwire that connects them. By making periodic adjustments to the wire, our orthodontist can apply gentle, consistent pressure to gradually guide your teeth into their ideal alignment.",
-      "At LUNAI, our modern braces are more comfortable and aesthetically pleasing than ever before. We offer traditional metal braces as well as clear ceramic braces, which are less noticeable and a popular choice for adults and appearance-conscious teens.",
-      "Fixed braces remain one of the most reliable and precise ways to achieve a beautiful, healthy, and stable smile for patients of all ages."
-    ]
+    "name": "Fixed Braces (Orthodontics)",
+    "meta_title": "Fixed Braces: Effective Orthodontic Treatment for a Straight Smile",
+    "meta_description": "Achieve a perfectly straight smile and a healthy bite with traditional fixed braces. This time-tested orthodontic treatment is highly effective for correcting complex issues like crowding, spacing, and bite misalignments.",
+    "meta_keywords": "fixed braces, traditional braces, metal braces, ceramic braces, orthodontics, straight teeth, bite correction, orthodontic treatment",
+    "content_sections": {
+      "what_are": {
+        "heading": "What Are Fixed Braces? The Gold Standard in Orthodontics",
+        "paragraphs": [
+          "Achieve a perfectly straight smile and a healthy, functional bite with traditional <strong>fixed braces</strong>. This time-tested orthodontic treatment is highly effective for correcting a wide range of complex issues, including severe crowding, spacing, and bite misalignments such as overbites, underbites, and crossbites."
+        ]
+      },
+      "how_they_work": {
+        "heading": "How Fixed Braces Work",
+        "paragraphs": [
+          "Fixed braces consist of brackets that are bonded to the front of each tooth and an archwire that connects them. By making periodic adjustments to the wire, our orthodontist can apply gentle, consistent pressure to gradually guide your teeth into their ideal alignment."
+        ]
+      },
+      "options": {
+        "heading": "Modern Options for All Ages",
+        "paragraphs": [
+          "At LUNAI, our modern braces are more comfortable and aesthetically pleasing than ever. We offer traditional metal braces as well as <strong>clear ceramic braces</strong>, which are less noticeable and a popular choice for adults and appearance-conscious teens. Fixed braces remain one of the most reliable and precise ways to achieve a beautiful, healthy, and stable smile."
+        ]
+      }
+    }
   }
 }

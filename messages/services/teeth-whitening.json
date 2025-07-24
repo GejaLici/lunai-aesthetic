@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Teeth Whitening",
-    "description": [
-      "Dramatically brighten your smile and boost your confidence with our professional Teeth Whitening services. Over time, teeth can become stained and yellowed from coffee, tea, red wine, smoking, and the natural aging process. Professional whitening is the safest and most effective way to lift these stains and reveal a brilliantly white smile.",
-      "At LUNAI, we offer two convenient and powerful options. Our in-office whitening treatment provides the most dramatic results in a single visit, often lightening teeth by several shades in about an hour. It is the perfect choice for those who want to immediate results for a special event.",
-      "We also provide custom take-home whitening kits. We take impressions of your teeth to create custom-fitted trays that ensure the professional-strength whitening gel is applied evenly and safely. You can then whiten your teeth in the comfort of your own home over a period of one to two weeks.",
-      "Both of our whitening solutions are safe for your enamel and provide results far superior to over-the-counter products. Let us help you achieve the dazzling, white smile you've always wanted."
-    ]
+    "name": "Professional Teeth Whitening",
+    "meta_title": "Professional Teeth Whitening: In-Office & Take-Home Kits",
+    "meta_description": "Dramatically brighten your smile with our safe and effective professional teeth whitening services. Choose between a powerful in-office treatment for immediate results or custom take-home kits for convenience.",
+    "meta_keywords": "teeth whitening, professional teeth whitening, white smile, in-office whitening, take-home whitening kits, cosmetic dentistry",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Professional Teeth Whitening?",
+        "paragraphs": [
+          "Dramatically brighten your smile and boost your confidence with our professional <strong>Teeth Whitening</strong> services. Over time, teeth can become stained and yellowed from coffee, tea, red wine, smoking, and the natural aging process. Professional whitening is the safest and most effective way to lift these stains and reveal a brilliantly white smile."
+        ]
+      },
+      "options": {
+        "heading": "Your Whitening Options",
+        "paragraphs": [
+          "At LUNAI, we offer two convenient and powerful options. Our <strong>in-office whitening</strong> treatment provides the most dramatic results in a single visit, often lightening teeth by several shades in about an hour. We also provide custom <strong>take-home whitening kits</strong>. We create custom-fitted trays that ensure the professional-strength whitening gel is applied evenly and safely for you to use at home."
+        ]
+      },
+      "results": {
+        "heading": "Safe and Superior Results",
+        "paragraphs": [
+          "Both of our whitening solutions are safe for your enamel and provide results far superior to over-the-counter products. Let us help you achieve the dazzling, white smile you've always wanted."
+        ]
+      }
+    }
   }
 }

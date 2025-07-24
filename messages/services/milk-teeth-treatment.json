@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Milk Teeth Treatment",
-    "description": [
-      "Establishing a positive foundation for a lifetime of good oral health starts with excellent care for primary (baby) teeth. Our pedodontic services at LUNAI focus on providing gentle, compassionate, and fun dental care for children in a welcoming environment.",
-      "The health of milk teeth is crucial. They play a vital role in proper chewing and nutrition, speech development, and, most importantly, they hold space for the permanent teeth to erupt into their correct positions. Untreated decay in baby teeth can lead to pain, infection, and problems with the developing adult teeth.",
-      "Our milk teeth treatments include gentle cleanings, tooth-colored fillings for cavities, pulp therapy (pulpotomy) to save an infected tooth, and stainless steel or aesthetic crowns to protect a weakened tooth. We strive to make every visit a positive experience to prevent dental anxiety.",
-      "Our team is dedicated to educating both children and parents on proper oral hygiene techniques to ensure a healthy smile for years to come."
-    ]
+    "name": "Pedodontics (Children's Dentistry)",
+    "meta_title": "Pedodontics: Gentle & Compassionate Dental Care for Children",
+    "meta_description": "Ensure a lifetime of good oral health for your child with our pedodontic services. We focus on gentle, fun dental care, including cleanings, fillings, and preventive treatments for milk teeth in a welcoming environment.",
+    "meta_keywords": "pedodontics, children's dentistry, pediatric dentist, milk teeth treatment, baby teeth care, kids dental care, gentle dentistry",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Pedodontics? A Foundation for a Healthy Smile",
+        "paragraphs": [
+          "Establishing a positive foundation for a lifetime of good oral health starts with excellent care for primary (baby) teeth. Our <strong>pedodontic</strong> services at LUNAI focus on providing gentle, compassionate, and fun dental care for children in a welcoming environment."
+        ]
+      },
+      "importance": {
+        "heading": "The Importance of Healthy Milk Teeth",
+        "paragraphs": [
+          "The health of milk teeth is crucial. They play a vital role in proper chewing, speech development, and holding space for the permanent teeth to erupt correctly. Untreated decay in baby teeth can lead to pain, infection, and problems with the developing adult teeth."
+        ]
+      },
+      "our_services": {
+        "heading": "Our Children's Dental Services",
+        "paragraphs": [
+          "Our milk teeth treatments include gentle cleanings, tooth-colored fillings, pulp therapy (pulpotomy), and crowns to protect weakened teeth. We strive to make every visit a positive experience to prevent dental anxiety and educate families on proper oral hygiene."
+        ]
+      }
+    }
   }
 }

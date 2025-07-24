@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "PRP for Hair",
-    "description": [
-      "Combat hair thinning and stimulate new growth using the power of your own body with Platelet-Rich Plasma (PRP) for Hair. This cutting-edge, non-surgical treatment is a natural and effective option for individuals experiencing hair loss or thinning.",
-      "The procedure begins with a simple blood draw from your arm. The blood is then placed in a centrifuge to separate and concentrate the platelets and growth factors, creating the PRP. This golden plasma is then meticulously injected into the areas of the scalp where hair is thinning.",
-      "The high concentration of growth factors in PRP works to nourish hair follicles, increase blood supply to the scalp, stimulate the growth phase of the hair cycle (anagen phase), and increase the thickness and density of existing hair shafts.",
-      "PRP for Hair is a safe and minimally invasive procedure with no downtime. For optimal results, we recommend an initial series of 3-4 treatments spaced one month apart, followed by maintenance treatments every 6-12 months. It is an excellent standalone therapy or can be used to enhance the results of hair transplant surgery."
-    ]
+    "name": "PRP for Hair Loss",
+    "meta_title": "PRP for Hair Loss: Non-Surgical Hair Growth Stimulation",
+    "meta_description": "Combat hair thinning and stimulate new growth with PRP (Platelet-Rich Plasma) for Hair. This non-surgical treatment uses your own body's growth factors to nourish follicles and increase hair thickness and density.",
+    "meta_keywords": "PRP for hair, hair loss treatment, non-surgical hair restoration, platelet-rich plasma hair, hair thinning solution, hair growth treatment",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is PRP for Hair? A Natural Solution for Hair Thinning",
+        "paragraphs": [
+          "Combat hair thinning and stimulate new growth using the power of your own body with <strong>Platelet-Rich Plasma (PRP) for Hair</strong>. This cutting-edge, non-surgical treatment is a natural and effective option for individuals experiencing hair loss or thinning."
+        ]
+      },
+      "procedure": {
+        "heading": "The PRP Hair Treatment Procedure",
+        "paragraphs": [
+          "The procedure begins with a simple blood draw. The blood is then placed in a centrifuge to separate and concentrate the platelets and growth factors, creating the PRP. This golden plasma is then meticulously injected into the areas of the scalp where hair is thinning."
+        ]
+      },
+      "how_it_works": {
+        "heading": "How PRP Stimulates Hair Growth",
+        "paragraphs": [
+          "The high concentration of growth factors in PRP works to nourish hair follicles, increase blood supply to the scalp, stimulate the growth phase of the hair cycle, and increase the thickness and density of existing hair shafts. For optimal results, we recommend an initial series of 3-4 treatments, followed by maintenance treatments. It is an excellent standalone therapy or can be used to enhance the results of hair transplant surgery."
+        ]
+      }
+    }
   }
 }

@@ -2,11 +2,28 @@
 {
   "en": {
     "name": "Cellulite Treatment",
-    "description": [
-      "Cellulite, the dimpled, \"orange-peel\" appearance of skin, affects the vast majority of women, regardless of their size or weight. It is caused by fat deposits pushing through the connective tissue bands (septa) beneath the skin. At LUNAI, we offer a comprehensive cellulite treatment program that targets the structural causes of cellulite for a visibly smoother appearance.",
-      "We understand that a single modality is often not enough. Our personalized approach may combine several advanced, non-invasive technologies to achieve the best results. These can include radiofrequency to heat and tighten the skin, acoustic wave therapy to break down fibrous bands, and carboxytherapy to improve circulation.",
-      "Our treatment plan aims to break down stubborn fat deposits, release the fibrous septa that cause dimpling, improve lymphatic drainage to reduce fluid retention, and stimulate collagen production to improve skin elasticity and thickness.",
-      "While there is no permanent cure for cellulite, our customized programs can provide a significant and lasting improvement in skin texture, helping you feel more confident in your own skin."
-    ]
+    "meta_title": "Advanced Cellulite Treatment: Smooth & Reduce Dimpled Skin",
+    "meta_description": "Reduce the appearance of cellulite with our comprehensive, non-invasive treatment programs. We combine advanced technologies like radiofrequency and acoustic wave therapy to target the structural causes of cellulite for visibly smoother skin.",
+    "meta_keywords": "cellulite treatment, cellulite reduction, get rid of cellulite, smooth skin, body contouring, radiofrequency, acoustic wave therapy, non-invasive",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Cellulite and How Can We Treat It?",
+        "paragraphs": [
+          "Cellulite, the dimpled, \"orange-peel\" appearance of skin, affects the vast majority of women, regardless of their size or weight. It is caused by fat deposits pushing through the connective tissue bands (septa) beneath the skin. At LUNAI, we offer a comprehensive cellulite treatment program that targets the structural causes of cellulite for a visibly smoother appearance."
+        ]
+      },
+      "our_approach": {
+        "heading": "Our Comprehensive, Multi-Technology Approach",
+        "paragraphs": [
+          "We understand that a single modality is often not enough. Our personalized approach may combine several advanced, non-invasive technologies to achieve the best results. These can include <strong>radiofrequency</strong> to heat and tighten the skin, <strong>acoustic wave therapy</strong> to break down fibrous bands, and <strong>carboxytherapy</strong> to improve circulation."
+        ]
+      },
+      "goals_results": {
+        "heading": "Treatment Goals and Expected Results",
+        "paragraphs": [
+          "Our treatment plan aims to break down stubborn fat deposits, release the fibrous septa that cause dimpling, improve lymphatic drainage to reduce fluid retention, and stimulate collagen production to improve skin elasticity. While there is no permanent cure for cellulite, our customized programs can provide a significant and lasting improvement in skin texture, helping you feel more confident."
+        ]
+      }
+    }
   }
 }

@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Liposculpture",
-    "description": [
-      "Liposculpture is a more advanced and artistic form of liposuction. While traditional liposuction focuses on removing large volumes of fat, liposculpture is about precision and detail. It involves removing stubborn, localized fat deposits to carefully sculpt and define the body's natural contours and reveal underlying muscle definition.",
-      "This technique is ideal for individuals who are already close to their ideal body weight but struggle with persistent pockets of fat that obscure their physique. Common treatment areas include the abdomen, love handles, thighs, back, and arms. It can be used to create the appearance of \"six-pack\" abs (abdominal etching) or to define the waistline.",
-      "At LUNAI, our surgeons use state-of-the-art liposuction technologies to gently remove fat while minimizing trauma to surrounding tissues. This allows for a smoother recovery and more refined, high-definition results.",
-      "Liposculpture is for patients seeking to achieve the final, chiseled look that they have worked for through diet and fitness but have been unable to attain. It is the art of body contouring, perfected."
-    ]
+    "name": "Liposculpture (Hi-Def Lipo)",
+    "meta_title": "Liposculpture: High-Definition Body Contouring & Sculpting",
+    "meta_description": "Go beyond traditional liposuction with liposculpture. This advanced technique removes stubborn fat to precisely sculpt and define the body's natural contours, revealing underlying muscle definition for a chiseled physique.",
+    "meta_keywords": "liposculpture, high definition liposuction, hi-def lipo, body sculpting, body contouring, abdominal etching, six-pack surgery, plastic surgery",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Liposculpture? The Art of Body Contouring",
+        "paragraphs": [
+          "<strong>Liposculpture</strong> is a more advanced and artistic form of liposuction. While traditional liposuction focuses on removing large volumes of fat, liposculpture is about precision and detail. It involves removing stubborn, localized fat deposits to carefully sculpt and define the body's natural contours and reveal underlying muscle definition."
+        ]
+      },
+      "applications": {
+        "heading": "Achieving a High-Definition Physique",
+        "paragraphs": [
+          "This technique is ideal for individuals who are already close to their ideal body weight but struggle with persistent pockets of fat that obscure their physique. Common treatment areas include the abdomen, love handles, thighs, back, and arms. It can be used to create the appearance of \"six-pack\" abs (abdominal etching) or to define the waistline."
+        ]
+      },
+      "our_approach": {
+        "heading": "Our Advanced Approach",
+        "paragraphs": [
+          "At LUNAI, our surgeons use state-of-the-art liposuction technologies to gently remove fat while minimizing trauma to surrounding tissues. This allows for a smoother recovery and more refined, high-definition results. Liposculpture is the art of body contouring, perfected."
+        ]
+      }
+    }
   }
 }

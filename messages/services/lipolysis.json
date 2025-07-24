@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Lipolysis",
-    "description": [
-      "Melt away stubborn, localized fat pockets without surgery with injectable Lipolysis. This is a targeted, non-invasive body contouring solution perfect for addressing small areas of fat that are resistant to diet and exercise.",
-      "The treatment involves injecting a specially formulated solution, often containing deoxycholic acid, directly into the fat deposit. This substance works to break down the cell membrane of fat cells. Once destroyed, these cells are naturally processed and permanently eliminated by the body's lymphatic system.",
-      "Injectable lipolysis is highly effective for treating areas like a double chin (submental fat), bra bulge, small pockets on the abdomen, and inner thighs. It is not a weight loss solution, but rather a tool for refining and contouring specific areas.",
-      "A series of 2-4 treatments is typically needed for optimal results. There may be some swelling and tenderness in the treated area for a few days, but there is no significant downtime. The result is a permanent reduction of fat in the treated area and an improved contour."
-    ]
+    "name": "Injectable Lipolysis (Fat Dissolving)",
+    "meta_title": "Injectable Lipolysis: Non-Surgical Fat Dissolving Injections",
+    "meta_description": "Melt away stubborn pockets of fat without surgery using injectable lipolysis. This non-invasive treatment permanently destroys fat cells in targeted areas like a double chin or bra bulge for improved body contour.",
+    "meta_keywords": "lipolysis, fat dissolving injections, non-surgical fat reduction, double chin treatment, body contouring, deoxycholic acid",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Injectable Lipolysis? Melt Away Stubborn Fat",
+        "paragraphs": [
+          "Melt away stubborn, localized fat pockets without surgery with injectable <strong>Lipolysis</strong>. This is a targeted, non-invasive body contouring solution perfect for addressing small areas of fat that are resistant to diet and exercise."
+        ]
+      },
+      "how_it_works": {
+        "heading": "How Fat Dissolving Injections Work",
+        "paragraphs": [
+          "The treatment involves injecting a specially formulated solution, often containing deoxycholic acid, directly into the fat deposit. This substance works to break down the cell membrane of fat cells. Once destroyed, these cells are naturally processed and permanently eliminated by the body's lymphatic system."
+        ]
+      },
+      "applications": {
+        "heading": "Effective for Targeted Areas",
+        "paragraphs": [
+          "Injectable lipolysis is highly effective for treating areas like a double chin (submental fat), bra bulge, small pockets on the abdomen, and inner thighs. It is not a weight loss solution, but a tool for refining specific areas. A series of 2-4 treatments is typically needed for optimal, permanent results."
+        ]
+      }
+    }
   }
 }

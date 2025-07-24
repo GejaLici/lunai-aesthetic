@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Tooth Sealants",
-    "description": [
-      "Protect your child's smile from cavities with Dental Tooth Sealants. This is a simple but highly effective preventive treatment that provides a protective shield for the back teeth (molars and premolars), where most childhood cavities occur.",
-      "The chewing surfaces of these back teeth have natural pits and fissures that are difficult to clean with a toothbrush. Food particles and bacteria can get trapped in these grooves, leading to decay. A sealant is a thin, plastic coating that is painted onto these chewing surfaces, effectively \"sealing\" out the plaque and food.",
-      "The application process is quick and painless. The tooth is cleaned and dried, and the liquid sealant material is painted on. It hardens in seconds, often with the help of a special curing light. There is no drilling or discomfort involved.",
-      "Sealants can provide protection for many years and are a key part of preventing tooth decay in children and teenagers, helping to ensure a lifetime of healthy teeth."
-    ]
+    "name": "Dental Sealants (Children)",
+    "meta_title": "Dental Sealants for Children: Cavity Protection for Molars",
+    "meta_description": "Protect your child's smile from cavities with dental sealants. This simple, painless treatment applies a protective shield to the chewing surfaces of back teeth, sealing out plaque and food.",
+    "meta_keywords": "dental sealants, tooth sealants, cavity prevention, children's dentistry, pedodontics, fissure sealants, preventive dentistry",
+    "content_sections": {
+      "what_are": {
+        "heading": "What Are Dental Sealants? A Protective Shield",
+        "paragraphs": [
+          "Protect your child's smile from cavities with <strong>Dental Tooth Sealants</strong>. This is a simple but highly effective preventive treatment that provides a protective shield for the back teeth (molars and premolars), where most childhood cavities occur."
+        ]
+      },
+      "why_needed": {
+        "heading": "Why Are Sealants Important?",
+        "paragraphs": [
+          "The chewing surfaces of back teeth have natural pits and fissures that are difficult to clean with a toothbrush. Food particles and bacteria can get trapped in these grooves, leading to decay. A sealant is a thin, plastic coating that is painted onto these chewing surfaces, effectively \"sealing\" out the plaque and food."
+        ]
+      },
+      "procedure": {
+        "heading": "A Quick and Painless Application",
+        "paragraphs": [
+          "The application process is quick and painless. The tooth is cleaned and dried, and the liquid sealant material is painted on and hardened. There is no drilling or discomfort involved. Sealants can provide protection for many years and are a key part of preventing tooth decay in children and teenagers."
+        ]
+      }
+    }
   }
 }

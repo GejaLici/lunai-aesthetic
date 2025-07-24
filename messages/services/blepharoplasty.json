@@ -2,11 +2,28 @@
 {
   "en": {
     "name": "Blepharoplasty (Eyelid Surgery)",
-    "description": [
-      "Blepharoplasty, or eyelid surgery, is a transformative procedure that rejuvenates the appearance of the eyes by addressing sagging skin, excess fat, and fine lines. It can be performed on the upper eyelids, lower eyelids, or both, effectively correcting issues like drooping upper lids that can impair vision and puffy under-eye bags that create a perpetually tired look.",
-      "Our expert surgeons perform blepharoplasty with meticulous precision to restore a brighter, more alert, and youthful appearance. For upper eyelid surgery, an incision is hidden within the natural eyelid crease. For lower eyelid surgery, the incision can often be made inside the lower eyelid (transconjunctival approach), leaving no visible scar, or just below the lash line. Excess skin and fat are removed or repositioned to create a smooth, refreshed contour.",
-      "Good candidates for eyelid surgery are healthy individuals who are bothered by the signs of aging around their eyes. The procedure can dramatically improve one's appearance and may even improve vision in cases where sagging upper eyelid skin obstructs the field of view.",
-      "Recovery involves some swelling and bruising, which typically subsides within 10 to 14 days. The results are long-lasting, helping you look more rested and vibrant for years to come. Our team at LUNAI ensures you are comfortable and well-informed throughout the entire process."
-    ]
+    "meta_title": "Blepharoplasty (Eyelid Surgery): Upper & Lower Eyelid Rejuvenation",
+    "meta_description": "Restore a youthful, rested appearance with blepharoplasty (eyelid surgery). This procedure corrects drooping upper eyelids and puffy under-eye bags by removing excess skin and fat for brighter, more alert eyes.",
+    "meta_keywords": "blepharoplasty, eyelid surgery, under-eye bag removal, drooping eyelids, upper eyelid surgery, lower eyelid surgery, eye lift, cosmetic surgery, facial rejuvenation",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Blepharoplasty? Rejuvenating Your Eyes",
+        "paragraphs": [
+          "<strong>Blepharoplasty</strong>, or <strong>eyelid surgery</strong>, is a transformative procedure that rejuvenates the appearance of the eyes by addressing sagging skin, excess fat, and fine lines. It can be performed on the upper eyelids, lower eyelids, or both, effectively correcting issues like drooping upper lids that can impair vision and puffy under-eye bags that create a perpetually tired look."
+        ]
+      },
+      "procedure": {
+        "heading": "The Eyelid Surgery Procedure",
+        "paragraphs": [
+          "Our expert surgeons perform blepharoplasty with meticulous precision to restore a brighter, more alert, and youthful appearance. For upper eyelid surgery, an incision is hidden within the natural eyelid crease. For lower eyelid surgery, the incision can often be made inside the lower eyelid (transconjunctival approach), leaving no visible scar, or just below the lash line. Excess skin and fat are removed or repositioned to create a smooth, refreshed contour."
+        ]
+      },
+      "candidates_recovery": {
+        "heading": "Good Candidates and Recovery",
+        "paragraphs": [
+          "Good candidates for eyelid surgery are healthy individuals who are bothered by the signs of aging around their eyes. The procedure can dramatically improve one's appearance and may even improve vision in cases where sagging upper eyelid skin obstructs the field of view. Recovery involves some swelling and bruising, which typically subsides within 10 to 14 days. The results are long-lasting, helping you look more rested and vibrant for years to come."
+        ]
+      }
+    }
   }
 }

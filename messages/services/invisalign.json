@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Invisalign",
-    "description": [
-      "Straighten your teeth discreetly and comfortably with Invisalign clear aligners. This revolutionary orthodontic system uses a series of custom-made, virtually invisible plastic trays to gradually and gently shift your teeth into their desired position, without the need for metal brackets or wires.",
-      "The Invisalign process starts with a 3D digital scan of your teeth, from which a precise treatment plan is created. You will be able to see a virtual representation of your treatment journey and the final result before you even begin. You will wear each set of aligners for about 1-2 weeks before moving on to the next set in the series.",
-      "A key advantage of Invisalign is that the aligners are removable. This means you can take them out to eat, drink, brush, and floss, allowing for better oral hygiene and no dietary restrictions during treatment.",
-      "Invisalign is a popular and highly effective choice for adults and teens seeking to correct mild to moderate crowding, spacing, and bite issues without the look of traditional braces."
-    ]
+    "name": "Invisalign® Clear Aligners",
+    "meta_title": "Invisalign®: The Clear Alternative to Braces for Teeth Straightening",
+    "meta_description": "Straighten your teeth discreetly with Invisalign clear aligners. This revolutionary system uses custom-made, virtually invisible, and removable trays to comfortably correct crowding, spacing, and bite issues.",
+    "meta_keywords": "invisalign, clear aligners, invisible braces, teeth straightening, orthodontics, cosmetic dentistry, adult braces",
+    "content_sections": {
+      "what_is": {
+        "heading": "What is Invisalign? The Clear Way to a Straighter Smile",
+        "paragraphs": [
+          "Straighten your teeth discreetly and comfortably with <strong>Invisalign clear aligners</strong>. This revolutionary orthodontic system uses a series of custom-made, virtually invisible plastic trays to gradually and gently shift your teeth into their desired position, without the need for metal brackets or wires."
+        ]
+      },
+      "how_it_works": {
+        "heading": "The Invisalign Process",
+        "paragraphs": [
+          "The Invisalign process starts with a 3D digital scan of your teeth, from which a precise treatment plan is created. You will be able to see a virtual representation of your treatment journey and the final result before you even begin. You will wear each set of aligners for about 1-2 weeks before moving on to the next set in the series."
+        ]
+      },
+      "benefits": {
+        "heading": "The Benefits of Removable Aligners",
+        "paragraphs": [
+          "A key advantage of Invisalign is that the aligners are <strong>removable</strong>. This means you can take them out to eat, drink, brush, and floss, allowing for better oral hygiene and no dietary restrictions during treatment. Invisalign is a popular and highly effective choice for adults and teens seeking to correct mild to moderate crowding, spacing, and bite issues."
+        ]
+      }
+    }
   }
 }

@@ -1,12 +1,29 @@
 
 {
   "en": {
-    "name": "Tooth Fillings",
-    "description": [
-      "A tooth filling is one of the most common dental procedures, used to restore a tooth that has been damaged by decay. When a cavity forms, a filling stops the decay from progressing further and restores the tooth's strength, function, and shape.",
-      "At LUNAI, we exclusively use modern, tooth-colored composite resin for our fillings. Unlike old silver amalgam fillings, composite fillings are mercury-free and bond directly to the tooth, which provides better support and requires less removal of healthy tooth structure.",
-      "The procedure involves removing the decayed portion of the tooth, cleaning the affected area, and then filling the cavity with the composite material in layers. A special light is used to harden each layer, and the filling is then shaped and polished to match the contour of the tooth and ensure a proper bite.",
-      "Because composite fillings can be matched to the exact shade of your natural teeth, they provide a durable and aesthetically pleasing result that is virtually invisible in your smile."
-    ]
+    "name": "Tooth-Colored Fillings",
+    "meta_title": "Tooth-Colored Fillings: Aesthetic & Durable Cavity Repair",
+    "meta_description": "Restore a tooth damaged by decay with a modern, tooth-colored composite filling. Our fillings are mercury-free, bond directly to the tooth, and are virtually invisible in your smile for a durable and aesthetic result.",
+    "meta_keywords": "tooth filling, composite filling, tooth-colored filling, cavity repair, restorative dentistry, white fillings, cosmetic dentistry",
+    "content_sections": {
+      "what_is": {
+        "heading": "What Are Tooth Fillings?",
+        "paragraphs": [
+          "A <strong>tooth filling</strong> is one of the most common dental procedures, used to restore a tooth that has been damaged by decay. When a cavity forms, a filling stops the decay from progressing further and restores the tooth's strength, function, and shape."
+        ]
+      },
+      "our_approach": {
+        "heading": "Modern, Tooth-Colored Composite Fillings",
+        "paragraphs": [
+          "At LUNAI, we exclusively use modern, <strong>tooth-colored composite resin</strong> for our fillings. Unlike old silver amalgam fillings, composite fillings are mercury-free and bond directly to the tooth, which provides better support and requires less removal of healthy tooth structure."
+        ]
+      },
+      "procedure": {
+        "heading": "The Filling Procedure",
+        "paragraphs": [
+          "The procedure involves removing the decayed portion of the tooth, cleaning the affected area, and then filling the cavity with the composite material in layers. The filling is then shaped and polished to match the contour of the tooth. Because composite fillings can be matched to the exact shade of your natural teeth, they provide a durable and aesthetically pleasing result."
+        ]
+      }
+    }
   }
 }
