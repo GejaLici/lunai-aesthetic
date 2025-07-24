@@ -33,9 +33,11 @@ export default function ServicePage() {
           {Object.values(content.content_sections).map((section, index) => (
             <section key={index}>
               <h2 className="font-headline text-2xl text-primary" dangerouslySetInnerHTML={{ __html: section.heading }} />
-              {section.paragraphs.map((p, pIndex) => (
-                <p key={pIndex} dangerouslySetInnerHTML={{ __html: p }} />
-              ))}
+              <div className="space-y-4">
+                {section.paragraphs.map((p, pIndex) => (
+                  <p key={pIndex} dangerouslySetInnerHTML={{ __html: p }} />
+                ))}
+              </div>
             </section>
           ))}
         </div>
