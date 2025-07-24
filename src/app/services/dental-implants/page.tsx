@@ -28,9 +28,9 @@ export default function ServicePage() {
         metaDescription={meta_description}
         metaKeywords={meta_keywords}
     >
-      {content && content.content_sections ? (
+      {content ? (
         <div className="space-y-6">
-          {Object.values(content.content_sections).map((section, index) => (
+          {Object.values(content).map((section, index) => (
             <section key={index}>
               <h2 className="font-headline text-2xl text-primary" dangerouslySetInnerHTML={{ __html: section.heading }} />
               <div className="space-y-4">

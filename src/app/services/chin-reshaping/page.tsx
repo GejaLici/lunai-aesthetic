@@ -1,5 +1,3 @@
-
-      
 'use client';
 
 import { useServiceTranslation } from '@/hooks/use-translations';
@@ -55,5 +53,3 @@ export default function ServicePage() {
     </ServicePageLayout>
   );
 }
-
-    
