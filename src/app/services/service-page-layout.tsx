@@ -1,7 +1,8 @@
+
 'use client';
 
 import { ReactNode } from 'react';
-import { allServices } from '@/lib/services';
+import { allServices, ServiceItem } from '@/lib/services';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { MoveLeft } from 'lucide-react';
@@ -24,8 +25,13 @@ export function ServicePageLayout({ serviceName, serviceId, children, metaTitle,
   const t = useTranslations('ServiceDetailsPage');
   
   const service = allServices.find(s => s.id === serviceId);
+
   if (!service) {
-    return <div className="container mx-auto px-4 py-8">Service details loading...</div>
+    return (
+        <div className="container mx-auto px-4 py-8">
+            <p>Service not found.</p>
+        </div>
+    );
   }
 
   const isSurgical = service.serviceType === 'operation';
@@ -78,3 +84,4 @@ export function ServicePageLayout({ serviceName, serviceId, children, metaTitle,
     </>
   );
 }
+
