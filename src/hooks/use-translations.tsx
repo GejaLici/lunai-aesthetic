@@ -144,7 +144,7 @@ export const useServiceTranslation = (serviceId: string) => {
     const currentLangData = serviceFile?.[locale] ?? serviceFile?.[fallbackLocale];
     
     const name = currentLangData?.name ?? serviceId;
-    const description = currentLangData;
+    const description = currentLangData?.content_sections; // Correctly target the content_sections
     const meta_title = currentLangData?.meta_title;
     const meta_description = currentLangData?.meta_description;
     const meta_keywords = currentLangData?.meta_keywords;
