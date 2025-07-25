@@ -2,6 +2,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
+import { allServiceMessages } from '@/lib/service-translations';
 
 // Define the shape of the translation messages
 type Messages = {
@@ -18,18 +19,6 @@ interface LanguageContextType {
 
 // Create the context with a default value
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-// Dynamically import all service JSON files
-const importAll = (r: __WebpackModuleApi.RequireContext) => {
-    const services: { [key: string]: any } = {};
-    r.keys().forEach((key: string) => {
-        const serviceId = key.replace('./', '').replace('.json', '');
-        services[serviceId] = r(key);
-    });
-    return services;
-};
-
-const allServiceMessages = importAll(require.context('../../messages/services', false, /\.json$/));
 
 // Define the provider component
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
@@ -140,16 +129,19 @@ export const useServiceTranslation = (serviceId: string) => {
     const fallbackLocale = 'en';
 
     const serviceFile = serviceMessages[serviceId];
+    if (!serviceFile) {
+        return { name: serviceId, description: null, meta_title: serviceId, meta_description: '', meta_keywords: '' };
+    }
 
-    const currentLangData = serviceFile?.[locale] ?? serviceFile?.[fallbackLocale];
+    const currentLangData = serviceFile[locale] ?? serviceFile[fallbackLocale];
     
-    const name = currentLangData?.name ?? serviceId;
-    const description = currentLangData?.content_sections;
-    const meta_title = currentLangData?.meta_title;
-    const meta_description = currentLangData?.meta_description;
-    const meta_keywords = currentLangData?.meta_keywords;
-    
-    return { name, description, meta_title, meta_description, meta_keywords };
+    return {
+        name: currentLangData?.name ?? serviceId,
+        description: currentLangData?.content_sections ?? null,
+        meta_title: currentLangData?.meta_title ?? serviceId,
+        meta_description: currentLangData?.meta_description ?? `Learn more about ${currentLangData?.name || serviceId}`,
+        meta_keywords: currentLangData?.meta_keywords ?? '',
+    };
 };
 
 
