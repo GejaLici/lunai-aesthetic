@@ -22,7 +22,7 @@ const StatCard = ({ item, index }: { item: typeof statsData[0], index: number })
   return (
     <Card
       key={item.key}
-      className="text-center p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card animate-fadeIn"
+      className="text-center p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card animate-fadeIn rounded-none"
       style={{ animationDelay: `${0.1 * index}s` }}
     >
       <CardContent className="p-0 flex flex-col items-center justify-center h-full">
@@ -44,15 +44,15 @@ export const StatsSection = React.memo(function StatsSection() {
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
         {t('title')}
       </h2>
-      <div className="flex flex-col items-center gap-4 md:gap-6">
+      <div className="flex flex-col items-center">
         {/* First Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-5xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 w-full max-w-5xl">
           {firstRowStats.map((item, index) => (
             <StatCard key={item.key} item={item} index={index} />
           ))}
         </div>
         {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-4xl">
           {secondRowStats.map((item, index) => (
             <StatCard key={item.key} item={item} index={index + 4} />
           ))}
