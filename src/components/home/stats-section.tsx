@@ -52,12 +52,10 @@ export const StatsSection = React.memo(function StatsSection() {
           ))}
         </div>
         {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-4 w-full max-w-5xl">
-          <div />
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-5xl">
           {secondRowStats.map((item, index) => (
             <StatCard key={item.key} item={item} index={index + 4} />
           ))}
-          <div />
         </div>
       </div>
     </section>
