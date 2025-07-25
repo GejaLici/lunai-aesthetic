@@ -1,7 +1,4 @@
 
-
-      
-
 "use client";
 
 import { serviceData, ServiceItem } from '@/lib/services';
@@ -25,17 +22,13 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   
   let descriptionText = '';
   if (typeof serviceDescription === 'object' && serviceDescription !== null) {
-    // Find the first section in the content object, regardless of its key
     const firstSectionKey = Object.keys(serviceDescription)[0];
-    const firstSection = serviceDescription[firstSectionKey];
+    const firstSection = serviceDescription[firstSectionKey as keyof typeof serviceDescription];
     
     if (firstSection && Array.isArray(firstSection.paragraphs) && firstSection.paragraphs.length > 0) {
       descriptionText = firstSection.paragraphs[0].replace(/<[^>]*>?/gm, '');
     }
-  } else if (typeof serviceDescription === 'string') {
-    descriptionText = serviceDescription;
   }
-
 
   return (
     <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
@@ -112,5 +105,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
-    
