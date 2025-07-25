@@ -40,7 +40,7 @@ export const StatsSection = React.memo(function StatsSection() {
   const secondRowStats = statsData.slice(4);
 
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 pb-16">
       <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
         {t('title')}
       </h2>
