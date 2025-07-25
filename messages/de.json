@@ -63,6 +63,37 @@
       "image1Alt": "Luxuriöser und einladender Empfangsbereich der Klinik bei LUNAI",
       "image2Alt": "Moderner, sauberer und fortschrittlicher Behandlungsraum bei LUNAI"
     },
+    "stats": {
+      "title": "Unsere Erfolge in Zahlen",
+      "doctors": {
+        "value": "15+",
+        "label": "Fachärzte"
+      },
+      "patients": {
+        "value": "10.000+",
+        "label": "Zufriedene Patienten"
+      },
+      "reviews": {
+        "value": "5.000+",
+        "label": "Positive Bewertungen"
+      },
+      "experience": {
+        "value": "20+",
+        "label": "Jahre Erfahrung"
+      },
+      "surgeries": {
+        "value": "22.000+",
+        "label": "Erfolgreiche Eingriffe"
+      },
+      "clients": {
+        "value": "98%",
+        "label": "Glückliche Kunden"
+      },
+      "treatments": {
+        "value": "100+",
+        "label": "Spezialisierte Behandlungen"
+      }
+    },
     "testimonials": {
       "title": "Geschätzte Kundenerfahrungen bei LUNAI",
       "items": {
@@ -207,11 +238,16 @@
   },
   "services": {
     "categories": {
-      "face": "Gesichtsästhetik",
-      "body": "Körperformung",
-      "dentistry": "Zahnmedizin"
-    },
-    "items": {}
+      "face": {
+        "title": "Gesichtsästhetik"
+      },
+      "body": {
+        "title": "Körperformung"
+      },
+      "dentistry": {
+        "title": "Zahnmedizin"
+      }
+    }
   },
   "blogPosts": {
     "1": {

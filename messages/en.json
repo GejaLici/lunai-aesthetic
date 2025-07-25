@@ -63,6 +63,37 @@
       "image1Alt": "Luxurious and welcoming clinic reception area at LUNAI",
       "image2Alt": "Modern, clean, and advanced treatment room at LUNAI"
     },
+    "stats": {
+      "title": "Our Achievements in Numbers",
+      "doctors": {
+        "value": "15+",
+        "label": "Expert Doctors"
+      },
+      "patients": {
+        "value": "10,000+",
+        "label": "Satisfied Patients"
+      },
+      "reviews": {
+        "value": "5,000+",
+        "label": "Positive Reviews"
+      },
+      "experience": {
+        "value": "20+",
+        "label": "Years of Experience"
+      },
+      "surgeries": {
+        "value": "22,000+",
+        "label": "Successful Surgeries"
+      },
+      "clients": {
+        "value": "98%",
+        "label": "Happy Clients"
+      },
+      "treatments": {
+        "value": "100+",
+        "label": "Specialized Treatments"
+      }
+    },
     "testimonials": {
       "title": "Valued Client Experiences at LUNAI",
       "items": {

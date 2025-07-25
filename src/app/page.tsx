@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from 'react';
@@ -21,7 +22,9 @@ const WhyChooseUsSection = dynamic(() => import('@/components/home/why-choose-us
 const ExperienceSection = dynamic(() => import('@/components/home/experience-section').then(mod => mod.ExperienceSection), {
   loading: () => <Skeleton className="h-[400px] w-full" />,
 });
-
+const StatsSection = dynamic(() => import('@/components/home/stats-section').then(mod => mod.StatsSection), {
+  loading: () => <Skeleton className="h-[400px] w-full" />,
+});
 const TestimonialsSection = dynamic(() => import('@/components/home/testimonials-section').then(mod => mod.TestimonialsSection), {
   loading: () => <Skeleton className="h-[250px] w-full" />,
 });
@@ -41,6 +44,7 @@ export default function HomePage() {
       <WhyChooseUsSection />
       <TransformationsSection />
       <ExperienceSection />
+      <StatsSection />
       <TestimonialsSection />
       <BlogSection />
       <CtaSection />
