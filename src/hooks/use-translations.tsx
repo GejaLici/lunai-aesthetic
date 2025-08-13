@@ -119,37 +119,67 @@ export const useTranslations = (namespace?: string) => {
   return t;
 };
 
-// Simplified hook to get basic service info from the main translation file
 export const useServiceTranslation = (serviceId: string) => {
-    const t = useTranslations('services.items');
     const { locale } = useLocale();
-    const [serviceContent, setServiceContent] = useState<any>({ name: serviceId, description: {} });
+    const [serviceData, setServiceData] = useState({ 
+        name: serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        content: '<p>Loading content...</p>', 
+        meta_title: '', 
+        meta_description: '', 
+        meta_keywords: '' 
+    });
 
     useEffect(() => {
         const fetchServiceContent = async () => {
+            let finalLocale = locale;
+            let url = `/services-content/${finalLocale}/${serviceId}.html`;
+            
             try {
-                const content = await import(`../../messages/services/${locale}/${serviceId}.json`);
-                setServiceContent(content.default || content);
-            } catch (error) {
-                try {
-                    const fallbackContent = await import(`../../messages/services/en/${serviceId}.json`);
-                    setServiceContent(fallbackContent.default || fallbackContent);
-                } catch (fallbackError) {
-                    console.error(`Could not load service content for ${serviceId} in ${locale} or fallback 'en'`, fallbackError);
-                    const capitalizedId = serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                    setServiceContent({
-                        name: capitalizedId,
-                        description: {
-                          what_is: {
-                            heading: `About ${capitalizedId}`,
-                            paragraphs: [`Learn more about ${capitalizedId}. Contact us for a consultation.`]
-                          }
-                        },
-                        meta_title: capitalizedId,
-                        meta_description: `Learn more about ${capitalizedId}`,
-                        meta_keywords: serviceId.replace(/-/g, ', '),
-                    });
+                let response = await fetch(url);
+                if (!response.ok) {
+                    console.warn(`Could not load service content for ${serviceId} in ${finalLocale}, trying fallback 'en'`);
+                    finalLocale = 'en';
+                    url = `/services-content/${finalLocale}/${serviceId}.html`;
+                    response = await fetch(url);
                 }
+
+                if (!response.ok) {
+                    throw new Error(`Service content not found for ${serviceId}`);
+                }
+                
+                const htmlContent = await response.text();
+                
+                // Use a DOM parser to extract metadata and name
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlContent, 'text/html');
+                const titleTag = doc.querySelector('title');
+                const h1Tag = doc.querySelector('h1');
+                
+                const name = h1Tag ? h1Tag.innerHTML : (titleTag ? titleTag.innerText : serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()));
+                const meta_title = titleTag ? titleTag.innerText : name;
+                
+                // Remove title and h1 from the body to avoid duplication
+                titleTag?.remove();
+                h1Tag?.remove();
+
+                setServiceData({
+                    name,
+                    content: doc.body.innerHTML,
+                    meta_title,
+                    meta_description: `Learn more about ${name}`,
+                    meta_keywords: serviceId.replace(/-/g, ', '),
+                });
+
+            } catch (error) {
+                console.error(error);
+                const capitalizedId = serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                setServiceData({
+                    name: capitalizedId,
+                    content: `<p>Content for ${capitalizedId} is not available. Please contact us for more information.</p>`,
+                    meta_title: capitalizedId,
+                    meta_description: `Learn more about ${capitalizedId}`,
+                    meta_keywords: serviceId.replace(/-/g, ', '),
+                });
             }
         };
 
@@ -158,20 +188,7 @@ export const useServiceTranslation = (serviceId: string) => {
         }
     }, [serviceId, locale]);
 
-    const serviceName = serviceContent?.name || t(serviceId) || serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-
-    return {
-        name: serviceName,
-        description: serviceContent?.content_sections || {
-          what_is: {
-            heading: `About ${serviceName}`,
-            paragraphs: [`Learn more about ${serviceName}. Contact us for a consultation.`]
-          }
-        },
-        meta_title: serviceContent?.meta_title || serviceName,
-        meta_description: serviceContent?.meta_description || `Learn more about ${serviceName}`,
-        meta_keywords: serviceContent?.meta_keywords || serviceId.replace(/-/g, ', '),
-    };
+    return serviceData;
 };
 
 

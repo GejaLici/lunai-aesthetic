@@ -15,13 +15,13 @@ import Head from 'next/head';
 type ServicePageLayoutProps = {
   serviceName: string;
   serviceId: string;
-  contentSections: any;
+  content: string; // Changed from contentSections to content
   metaTitle?: string;
   metaDescription?: string;
   metaKeywords?: string;
 };
 
-export function ServicePageLayout({ serviceName, serviceId, contentSections, metaTitle, metaDescription, metaKeywords }: ServicePageLayoutProps) {
+export function ServicePageLayout({ serviceName, serviceId, content, metaTitle, metaDescription, metaKeywords }: ServicePageLayoutProps) {
   const t = useTranslations('ServiceDetailsPage');
   
   const service = allServices.find(s => s.id === serviceId);
@@ -60,23 +60,10 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
       </header>
       
       <div className="grid lg:grid-cols-3 gap-8">
-        <main className="lg:col-span-2 prose prose-lg dark:prose-invert max-w-none">
-          {contentSections ? (
-            <div className="space-y-6">
-              {Object.values(contentSections).map((section: any, index: number) => (
-                <section key={index}>
-                  <h2 className="font-headline text-2xl text-primary" dangerouslySetInnerHTML={{ __html: section.heading }} />
-                  <div className="space-y-4">
-                    {section.paragraphs.map((p: string, pIndex: number) => (
-                      <p key={pIndex} dangerouslySetInnerHTML={{ __html: p }} />
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
-          ) : (
-            <p>Content is loading or not available in the expected format.</p>
-          )}
+        <main 
+            className="lg:col-span-2 prose prose-lg dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: content }}
+        >
         </main>
 
         <aside className="lg:col-span-1 space-y-6">
