@@ -121,14 +121,12 @@ export const useTranslations = (namespace?: string) => {
 
 // Simplified hook to get basic service info from the main translation file
 export const useServiceTranslation = (serviceId: string) => {
+    const t = useTranslations('services.items');
     const context = useContext(LanguageContext);
+
     if (context === undefined) {
         throw new Error('useServiceTranslation must be used within a LanguageProvider');
     }
-    const { locale, messages } = context;
-    const fallbackLocale = 'en';
-    const t = useTranslations('services.items');
-
 
     // This is a simplified implementation. We'll get name and a basic description.
     // Full content will require a more robust solution.
