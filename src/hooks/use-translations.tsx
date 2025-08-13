@@ -128,19 +128,19 @@ export const useServiceTranslation = (serviceId: string) => {
     const { locale, serviceMessages } = context;
     const fallbackLocale = 'en';
 
-    const serviceFile = serviceMessages[serviceId];
-    if (!serviceFile) {
+    const currentLangServices = serviceMessages[locale] ?? serviceMessages[fallbackLocale];
+    const serviceData = currentLangServices ? currentLangServices[serviceId] : null;
+
+    if (!serviceData) {
         return { name: serviceId, description: null, meta_title: serviceId, meta_description: '', meta_keywords: '' };
     }
 
-    const currentLangData = serviceFile[locale] ?? serviceFile[fallbackLocale];
-    
     return {
-        name: currentLangData?.name ?? serviceId,
-        description: currentLangData?.content_sections ?? null,
-        meta_title: currentLangData?.meta_title ?? serviceId,
-        meta_description: currentLangData?.meta_description ?? `Learn more about ${currentLangData?.name || serviceId}`,
-        meta_keywords: currentLangData?.meta_keywords ?? '',
+        name: serviceData.name ?? serviceId,
+        description: serviceData.content_sections ?? null,
+        meta_title: serviceData.meta_title ?? serviceId,
+        meta_description: serviceData.meta_description ?? `Learn more about ${serviceData.name || serviceId}`,
+        meta_keywords: serviceData.meta_keywords ?? '',
     };
 };
 
