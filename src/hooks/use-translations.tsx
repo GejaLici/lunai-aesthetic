@@ -122,29 +122,55 @@ export const useTranslations = (namespace?: string) => {
 // Simplified hook to get basic service info from the main translation file
 export const useServiceTranslation = (serviceId: string) => {
     const t = useTranslations('services.items');
-    const context = useContext(LanguageContext);
+    const { locale } = useLocale();
+    const [serviceContent, setServiceContent] = useState<any>({ name: serviceId, description: {} });
 
-    if (context === undefined) {
-        throw new Error('useServiceTranslation must be used within a LanguageProvider');
-    }
+    useEffect(() => {
+        const fetchServiceContent = async () => {
+            try {
+                const content = await import(`../../messages/services/${locale}/${serviceId}.json`);
+                setServiceContent(content.default || content);
+            } catch (error) {
+                try {
+                    const fallbackContent = await import(`../../messages/services/en/${serviceId}.json`);
+                    setServiceContent(fallbackContent.default || fallbackContent);
+                } catch (fallbackError) {
+                    console.error(`Could not load service content for ${serviceId} in ${locale} or fallback 'en'`, fallbackError);
+                    const capitalizedId = serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    setServiceContent({
+                        name: capitalizedId,
+                        description: {
+                          what_is: {
+                            heading: `About ${capitalizedId}`,
+                            paragraphs: [`Learn more about ${capitalizedId}. Contact us for a consultation.`]
+                          }
+                        },
+                        meta_title: capitalizedId,
+                        meta_description: `Learn more about ${capitalizedId}`,
+                        meta_keywords: serviceId.replace(/-/g, ', '),
+                    });
+                }
+            }
+        };
 
-    // This is a simplified implementation. We'll get name and a basic description.
-    // Full content will require a more robust solution.
-    const name = t(serviceId) || serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        if (serviceId) {
+            fetchServiceContent();
+        }
+    }, [serviceId, locale]);
 
-    // NOTE: This simplified version does not support detailed content sections for services.
-    // It provides enough to prevent the app from crashing.
+    const serviceName = serviceContent?.name || t(serviceId) || serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
     return {
-        name,
-        description: {
+        name: serviceName,
+        description: serviceContent?.content_sections || {
           what_is: {
-            heading: "About This Service",
-            paragraphs: [`Learn more about ${name}. Contact us for a consultation.`]
+            heading: `About ${serviceName}`,
+            paragraphs: [`Learn more about ${serviceName}. Contact us for a consultation.`]
           }
         },
-        meta_title: name,
-        meta_description: `Learn more about ${name}`,
-        meta_keywords: serviceId.replace(/-/g, ', '),
+        meta_title: serviceContent?.meta_title || serviceName,
+        meta_description: serviceContent?.meta_description || `Learn more about ${serviceName}`,
+        meta_keywords: serviceContent?.meta_keywords || serviceId.replace(/-/g, ', '),
     };
 };
 
