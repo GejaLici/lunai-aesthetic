@@ -730,5 +730,3 @@ const serviceTranslations: Record<string, Record<string, any>> = {
 };
 
 export const allServiceMessages = serviceTranslations;
-
-    
