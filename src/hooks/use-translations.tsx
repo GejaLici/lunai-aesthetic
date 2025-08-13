@@ -2,7 +2,6 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
-import { allServiceMessages } from '@/lib/service-translations';
 
 // Define the shape of the translation messages
 type Messages = {
@@ -64,7 +63,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     loadMessages(locale);
   }, [locale]);
   
-  const value = useMemo(() => ({ locale, setLocale, messages, serviceMessages: allServiceMessages }), [locale, messages]);
+  const value = useMemo(() => ({ locale, setLocale, messages, serviceMessages: {} }), [locale, messages]);
 
   return (
     <LanguageContext.Provider value={value}>
@@ -120,27 +119,34 @@ export const useTranslations = (namespace?: string) => {
   return t;
 };
 
+// Simplified hook to get basic service info from the main translation file
 export const useServiceTranslation = (serviceId: string) => {
     const context = useContext(LanguageContext);
     if (context === undefined) {
         throw new Error('useServiceTranslation must be used within a LanguageProvider');
     }
-    const { locale, serviceMessages } = context;
+    const { locale, messages } = context;
     const fallbackLocale = 'en';
+    const t = useTranslations('services.items');
 
-    const currentLangServices = serviceMessages[locale] ?? serviceMessages[fallbackLocale];
-    const serviceData = currentLangServices ? currentLangServices[serviceId] : null;
 
-    if (!serviceData) {
-        return { name: serviceId, description: null, meta_title: serviceId, meta_description: '', meta_keywords: '' };
-    }
+    // This is a simplified implementation. We'll get name and a basic description.
+    // Full content will require a more robust solution.
+    const name = t(serviceId) || serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
+    // NOTE: This simplified version does not support detailed content sections for services.
+    // It provides enough to prevent the app from crashing.
     return {
-        name: serviceData.name ?? serviceId,
-        description: serviceData.content_sections ?? null,
-        meta_title: serviceData.meta_title ?? serviceId,
-        meta_description: serviceData.meta_description ?? `Learn more about ${serviceData.name || serviceId}`,
-        meta_keywords: serviceData.meta_keywords ?? '',
+        name,
+        description: {
+          what_is: {
+            heading: "About This Service",
+            paragraphs: [`Learn more about ${name}. Contact us for a consultation.`]
+          }
+        },
+        meta_title: name,
+        meta_description: `Learn more about ${name}`,
+        meta_keywords: serviceId.replace(/-/g, ', '),
     };
 };
 

@@ -10,9 +10,7 @@
 
 import { ai } from '@/ai/genkit';
 import { z } from 'zod';
-import { allServices } from '@/lib/services';
-import fs from 'fs';
-import path from 'path';
+import { serviceData } from '@/lib/services';
 
 // Define Zod schemas for input and output
 const VirtualConsultationInputSchema = z.object({
@@ -59,22 +57,14 @@ const virtualConsultationFlow = ai.defineFlow(
     outputSchema: VirtualConsultationOutputSchema,
   },
   async (input) => {
-    // Helper to load service names from translation file
+    // Generate a comma-separated list of service names from the serviceData object.
     const getServiceNames = (): string[] => {
-      try {
-        const serviceNames = allServices.map(service => {
-          const messagesPath = path.join(process.cwd(), 'messages', 'services', `${service.id}.json`);
-          const messagesFile = fs.readFileSync(messagesPath, 'utf-8');
-          const serviceTranslations = JSON.parse(messagesFile);
-          return serviceTranslations.en?.name || service.id;
-        }).filter(Boolean);
-        
-        return serviceNames;
-
-      } catch (error) {
-        console.error("Error loading service names for virtual consultation:", error);
-        return [];
-      }
+      // Capitalize first letter of each word in a string
+      const capitalize = (s: string) => s.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+      
+      return serviceData.flatMap(category => 
+        category.services.map(service => capitalize(service.id))
+      );
     }
 
     const serviceList = getServiceNames().join(', ');
