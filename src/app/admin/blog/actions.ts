@@ -77,19 +77,22 @@ export async function saveBlogPost(formData: BlogFormData) {
       it: data.content_it,
       sq: data.content_sq,
     },
-    updatedAt: serverTimestamp(),
   };
 
   try {
     if (id) {
       // Update existing post
       const postRef = doc(db, 'blogPosts', id);
-      await updateDoc(postRef, postData);
+      await updateDoc(postRef, {
+        ...postData,
+        updatedAt: serverTimestamp(),
+      });
     } else {
       // Create new post
       await addDoc(collection(db, 'blogPosts'), {
         ...postData,
         createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
       });
     }
 
