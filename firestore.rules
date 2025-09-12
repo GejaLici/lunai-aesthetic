@@ -1,21 +1,14 @@
-
 rules_version = '2';
-
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Allow public read/write access to blog posts for the admin UI
+    // Allow public read and write access to the blog posts collection for the admin panel
     match /blogPosts/{postId} {
       allow read, write: if true;
     }
-
-    // Allow public creation of contact messages
-    match /contactSubmissions/{messageId} {
+    
+    // Allow public write access for the contact form submissions
+    match /contactSubmissions/{submissionId} {
       allow create: if true;
-    }
-
-    // Deny all other access by default for security
-    match /{document=**} {
-      allow read, write: if false;
     }
   }
 }
