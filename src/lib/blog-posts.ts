@@ -9,6 +9,13 @@ export interface BlogPost {
 
 export const placeholderPosts: BlogPost[] = [
   {
+    id: "8",
+    imageUrl: "/images/blog/blog-8.png",
+    imageHint: "woman neck",
+    date: "July 10, 2024",
+    slug: "/blog/turkey-neck-treatment",
+  },
+  {
     id: "7",
     imageUrl: "/images/blog/blog-7.png",
     imageHint: "hair transplant",
