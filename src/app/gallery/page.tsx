@@ -9,16 +9,8 @@ import { useTranslations, useServiceTranslation } from '@/hooks/use-translations
 
 function ServiceGalleryCard({ service }: { service: ServiceItem }) {
   const t = useTranslations('GalleryPage');
-  const { name: serviceName, content: serviceDescription } = useServiceTranslation(service.id);
+  const { name: serviceName } = useServiceTranslation(service.id);
 
-  const extractFirstParagraph = (htmlString: string) => {
-    if (!htmlString) return '';
-    const match = htmlString.match(/<p>(.*?)<\/p>/);
-    return match ? match[1].replace(/<[^>]*>?/gm, '') : '';
-  };
-
-  const descriptionText = extractFirstParagraph(serviceDescription);
-  
   return (
     <Card id={service.id} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
       <CardHeader className="p-0">
@@ -35,7 +27,7 @@ function ServiceGalleryCard({ service }: { service: ServiceItem }) {
       </CardHeader>
       <CardContent className="p-4">
         <CardTitle className="text-lg font-headline text-primary" dangerouslySetInnerHTML={{ __html: serviceName }}></CardTitle>
-        <CardDescription className="text-sm mt-1">{descriptionText}</CardDescription>
+        <CardDescription className="text-sm mt-1" dangerouslySetInnerHTML={{ __html: serviceName }}></CardDescription>
       </CardContent>
     </Card>
   );

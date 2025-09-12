@@ -1,5 +1,43 @@
-
 {
     "name": "Komposit-Veneers",
-    "content_sections": {}
-}
+    "content_sections": {
+      "headline": {
+        "type": "text",
+        "content": "Strahlendes Lächeln in nur einer Sitzung: Entdecken Sie Komposit-Veneers"
+      },
+      "introduction": {
+        "type": "paragraph",
+        "content": "Komposit-Veneers sind die ideale Lösung, um Ihr Lächeln schnell und effektiv zu verschönern. Ob kleine Makel, Verfärbungen oder leichte Zahnlücken – mit dieser minimalinvasiven Methode erhalten Sie in nur einer Behandlung ein natürlich schönes Ergebnis. Erfahren Sie, wie unsere Experten Ihr Lächeln mit hochwertigem Komposit-harz individuell gestalten und perfektionieren."
+      },
+      "key_benefits": {
+        "type": "list",
+        "title": "Ihre Vorteile von Komposit-Veneers im Überblick:",
+        "items": [
+          "**Schnelle Behandlung:** Ein strahlendes Lächeln in nur einer Sitzung, ganz ohne lange Wartezeiten.",
+          "**Zahnschonend:** Es muss kaum Zahnsubstanz abgetragen werden, was die Methode besonders schonend macht.",
+          "**Kosteneffizient:** Eine erschwingliche Alternative zu traditionellen Keramik-Veneers.",
+          "**Reparabel:** Komposit-Veneers können jederzeit einfach und schnell repariert werden.",
+          "**Natürliches Aussehen:** Das Harz lässt sich farblich perfekt an Ihre natürlichen Zähne anpassen und sorgt für ein authentisches Ergebnis."
+        ]
+      },
+      "how_they_work": {
+        "type": "paragraph",
+        "title": "Wie funktioniert die Behandlung?",
+        "content": "Unsere Spezialisten reinigen und bereiten Ihre Zähne sorgfältig vor. Anschließend wird das zahnfarbene Komposit-Material Schicht für Schicht direkt auf die Zahnoberfläche aufgetragen und präzise modelliert. Sobald die gewünschte Form erreicht ist, wird das Material mit speziellem Licht ausgehärtet. Abschließend wird die Oberfläche poliert, um eine glatte und glänzende Optik zu erzielen, die sich von Ihren natürlichen Zähnen kaum unterscheidet."
+      },
+      "ideal_for": {
+        "type": "list",
+        "title": "Komposit-Veneers sind perfekt für:",
+        "items": [
+          "Verfärbte oder dunkle Zähne",
+          "Kleine Risse oder Abplatzungen",
+          "Unebenheiten und Unregelmäßigkeiten",
+          "Schließung von kleinen Zahnlücken (Diastema)"
+        ]
+      },
+      "call_to_action": {
+        "type": "text",
+        "content": "Bereit für Ihr neues Lächeln? Kontaktieren Sie uns noch heute für ein unverbindliches Beratungsgespräch und lassen Sie uns gemeinsam den Weg zu Ihren Traumzähnen planen."
+      }
+    }
+  }
