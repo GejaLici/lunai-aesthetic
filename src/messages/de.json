@@ -1,5 +1,4 @@
 
-      
 {
   "SiteHeader": {
     "home": "Startseite",
@@ -63,6 +62,37 @@
       "description": "Treten Sie ein in ein Heiligtum der Ruhe und Raffinesse bei LUNAI, wo fortschrittliche ästhetische Technologie auf unübertroffene Patientenversorgung trifft. Unsere Klinik ist sorgfältig mit Ihrem Komfort, Ihrer Privatsphäre und Ihrem Wohlbefinden als oberste Prioritäten konzipiert, um eine ruhige und einladende Atmosphäre für jeden Besuch zu gewährleisten.",
       "image1Alt": "Luxuriöser und einladender Empfangsbereich der Klinik bei LUNAI",
       "image2Alt": "Moderner, sauberer und fortschrittlicher Behandlungsraum bei LUNAI"
+    },
+    "stats": {
+      "title": "Unsere Erfolge in Zahlen",
+      "doctors": {
+        "value": "15+",
+        "label": "Fachärzte"
+      },
+      "patients": {
+        "value": "10.000+",
+        "label": "Zufriedene Patienten"
+      },
+      "reviews": {
+        "value": "5.000+",
+        "label": "Positive Bewertungen"
+      },
+      "experience": {
+        "value": "20+",
+        "label": "Jahre Erfahrung"
+      },
+      "surgeries": {
+        "value": "22.000+",
+        "label": "Erfolgreiche Eingriffe"
+      },
+      "clients": {
+        "value": "98%",
+        "label": "Glückliche Kunden"
+      },
+      "treatments": {
+        "value": "100+",
+        "label": "Spezialisierte Behandlungen"
+      }
     },
     "testimonials": {
       "title": "Geschätzte Kundenerfahrungen bei LUNAI",
@@ -219,38 +249,5 @@
       }
     }
   },
-  "blogPosts": {
-    "1": {
-      "title": "Der ultimative Leitfaden zur Hautpflege für einen dauerhaften Glanz",
-      "excerpt": "Entdecken Sie Expertentipps zum Aufbau einer Hautpflegeroutine, die das Altern bekämpft, die Ausstrahlung verbessert und Ihre Haut gesund und schön hält."
-    },
-    "2": {
-      "title": "Botox vs. Filler: Was ist die richtige Wahl für Sie?",
-      "excerpt": "Eine umfassende Aufschlüsselung von zwei unserer beliebtesten Behandlungen. Verstehen Sie die Unterschiede und finden Sie heraus, was für Ihre ästhetischen Ziele am besten ist."
-    },
-    "3": {
-      "title": "Der Weg zur Genesung: Was Sie nach Ihrem Eingriff erwartet",
-      "excerpt": "Die Nachsorge ist entscheidend für optimale Ergebnisse. Erfahren Sie mehr über den Genesungsprozess für unsere wichtigsten Verfahren und wie Sie eine reibungslose Reise gewährleisten."
-    },
-    "4": {
-      "title": "Ein strahlenderes Lächeln: Die Vorteile der professionellen Zahnaufhellung",
-      "excerpt": "Entdecken Sie, wie eine professionelle Zahnaufhellung Ihr Lächeln dramatisch verbessern und Ihr Selbstvertrauen stärken kann und was das Verfahren beinhaltet."
-    },
-    "5": {
-      "title": "Nicht-invasive Körperformung: Eine Revolution in der Ästhetik",
-      "excerpt": "Erfahren Sie mehr über die neuesten nicht-chirurgischen Technologien, die Ihnen helfen können, Ihre gewünschte Körperform ohne die Ausfallzeiten einer Operation zu erreichen."
-    },
-    "6": {
-      "title": "Ihre Ergebnisse erhalten: Lebensstil-Tipps für langfristige Schönheit",
-      "excerpt": "Ihre ästhetische Reise endet nicht, wenn Sie unsere Klinik verlassen. Entdecken Sie Tipps zu Ernährung, Bewegung und Lebensstil, um Ihre Ergebnisse zu verlängern und zu verbessern."
-    },
-    "7": {
-      "title": "Die wahren Kosten einer Haartransplantation im Jahr 2025 verstehen",
-      "excerpt": "Ein tiefer Einblick in die Kosten für Haartransplantationen im Jahr 2025, mit einem Vergleich von Techniken, Transplantatanzahlen und internationalen Preisen in Großbritannien, der Türkei und Albanien.",
-      "date": "5. Juli 2024",
-      "content": []
-    }
-  }
+  "blogPosts": {}
 }
-
-    

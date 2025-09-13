@@ -219,38 +219,5 @@
     },
     "items": {}
   },
-  "blogPosts": {
-    "1": {
-      "title": "La Guía Definitiva para el Cuidado de la Piel para un Brillo Duradero",
-      "excerpt": "Descubre consejos de expertos sobre cómo crear una rutina de cuidado de la piel que combate el envejecimiento, mejora la luminosidad y mantiene tu piel sana y hermosa."
-    },
-    "2": {
-      "title": "Botox vs. Rellenos: ¿Cuál es la Opción Correcta para Ti?",
-      "excerpt": "Un desglose completo de dos de nuestros tratamientos más populares. Comprende las diferencias y descubre cuál es el mejor para tus objetivos estéticos."
-    },
-    "3": {
-      "title": "El Camino hacia la Recuperación: Qué Esperar Después de tu Procedimiento",
-      "excerpt": "El cuidado posterior al tratamiento es crucial para obtener resultados óptimos. Aprende sobre el proceso de recuperación de nuestros procedimientos clave y cómo asegurar un viaje sin problemas."
-    },
-    "4": {
-      "title": "Una Sonrisa más Brillante: Los Beneficios del Blanqueamiento Dental Profesional",
-      "excerpt": "Explora cómo el blanqueamiento dental profesional puede mejorar drásticamente tu sonrisa y aumentar tu confianza, y en qué consiste el procedimiento."
-    },
-    "5": {
-      "title": "Contorno Corporal No Invasivo: Una Revolución en la Estética",
-      "excerpt": "Aprende sobre las últimas tecnologías no quirúrgicas que pueden ayudarte a lograr la forma corporal deseada sin el tiempo de inactividad de la cirugía."
-    },
-    "6": {
-      "title": "Manteniendo tus Resultados: Consejos de Estilo de Vida para una Belleza a Largo Plazo",
-      "excerpt": "Tu viaje estético no termina cuando sales de nuestra clínica. Descubre consejos sobre dieta, ejercicio y estilo de vida para prolongar y mejorar tus resultados."
-    },
-    "7": {
-      "title": "Entendiendo el Verdadero Costo de un Trasplante de Cabello en 2025",
-      "excerpt": "Un análisis profundo de los costos de los trasplantes de cabello para 2025, comparando técnicas, número de injertos y precios internacionales en el Reino Unido, Turquía y Albania.",
-      "date": "5 de julio de 2024",
-      "content": []
-    }
-  }
+  "blogPosts": {}
 }
-
-    

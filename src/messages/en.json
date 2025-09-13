@@ -1,5 +1,4 @@
 
-      
 {
   "SiteHeader": {
     "home": "Home",
@@ -63,6 +62,37 @@
       "description": "Step into a sanctuary of calm and sophistication at LUNAI, where advanced aesthetic technology meets unparalleled patient care. Our clinic is meticulously designed with your comfort, privacy, and well-being as our foremost priorities, ensuring a serene and welcoming atmosphere for every visit.",
       "image1Alt": "Luxurious and welcoming clinic reception area at LUNAI",
       "image2Alt": "Modern, clean, and advanced treatment room at LUNAI"
+    },
+    "stats": {
+      "title": "Our Achievements in Numbers",
+      "doctors": {
+        "value": "15+",
+        "label": "Expert Doctors"
+      },
+      "patients": {
+        "value": "10,000+",
+        "label": "Satisfied Patients"
+      },
+      "reviews": {
+        "value": "5,000+",
+        "label": "Positive Reviews"
+      },
+      "experience": {
+        "value": "20+",
+        "label": "Years of Experience"
+      },
+      "surgeries": {
+        "value": "22,000+",
+        "label": "Successful Surgeries"
+      },
+      "clients": {
+        "value": "98%",
+        "label": "Happy Clients"
+      },
+      "treatments": {
+        "value": "100+",
+        "label": "Specialized Treatments"
+      }
     },
     "testimonials": {
       "title": "Valued Client Experiences at LUNAI",
@@ -219,161 +249,5 @@
       }
     }
   },
-  "blogPosts": {
-    "1": {
-      "title": "The Ultimate Guide to Skincare for a Lasting Glow",
-      "excerpt": "Discover expert tips on building a skincare routine that fights aging, enhances radiance, and keeps your skin healthy and beautiful."
-    },
-    "2": {
-      "title": "Botox vs. Fillers: What's the Right Choice for You?",
-      "excerpt": "A comprehensive breakdown of two of our most popular treatments. Understand the differences and find out which is best for your aesthetic goals."
-    },
-    "3": {
-      "title": "The Road to Recovery: What to Expect After Your Procedure",
-      "excerpt": "Post-treatment care is crucial for optimal results. Learn about the recovery process for our key procedures and how to ensure a smooth journey."
-    },
-    "4": {
-      "title": "A Brighter Smile: The Benefits of Professional Teeth Whitening",
-      "excerpt": "Explore how professional teeth whitening can dramatically enhance your smile and boost your confidence, and what the procedure entails."
-    },
-    "5": {
-      "title": "Non-Invasive Body Contouring: A Revolution in Aesthetics",
-      "excerpt": "Learn about the latest non-surgical technologies that can help you achieve your desired body shape without the downtime of surgery."
-    },
-    "6": {
-      "title": "Maintaining Your Results: Lifestyle Tips for Long-Term Beauty",
-      "excerpt": "Your aesthetic journey doesn't end when you leave our clinic. Discover tips on diet, exercise, and lifestyle to prolong and enhance your results."
-    },
-    "7": {
-      "title": "Understanding the True Cost of a Hair Transplant in 2025",
-      "excerpt": "A deep dive into hair transplant costs for 2025, comparing techniques, graft numbers, and international prices in the UK, Turkey, and Albania.",
-      "date": "July 5, 2024",
-      "content": [
-        {
-          "type": "card",
-          "title": "Introduction from Dr. Skerdi Faria",
-          "content": [
-            "\"Hello. I'm Dr. Skerdi Faria, founder of KEIT Clinic. Considering hair restoration? Understanding the true cost of a hair transplant is your crucial first step towards regaining a natural, fuller head of hair and boosting your confidence.\"",
-            "\"In this video we reveal hair transplant costs for 2025. We cover prices by technique, number of grafts, what's really included in the price, influencing factors and a cost comparison for the UK, Turkey and Albania.”",
-            "\"My mission is to empower you with clear, reliable, and up-to-date information. Let's explore the best path forward for your hair transplant journey.\""
-          ]
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "Understanding Hair Transplants & UK Costs"
-        },
-        {
-          "type": "paragraph",
-          "content": "A hair transplant restores hair growth by moving healthy follicles to thinning areas, creating a natural, fuller appearance. Understanding UK costs for 2025 is vital, as prices fluctuate significantly by location and complexity."
-        },
-        {
-          "type": "paragraph",
-          "content": "For a standard procedure (1,500-2,000 grafts), expect £6,000 - £12,000 in London, and £5,000 - £10,000 in major cities like Birmingham and Manchester. Larger sessions (over 2,500 grafts) can exceed £12,000 - £15,000. The final price depends on graft count, technique, surgeon's experience, and clinic standards."
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "Hair Transplant Techniques & Costs"
-        },
-        {
-          "type": "paragraph",
-          "content": "Your chosen hair transplant technique significantly influences the final price and recovery. The three main methods are FUE, DHI, and FUT."
-        },
-        {
-          "type": "list",
-          "content": [
-            "FUE (Follicular Unit Extraction) yields natural results by extracting individual follicles. In the UK, FUE costs vary between £3,000 to £15,000.",
-            "DHI (Direct Hair Implantation) is a premium option for dense hairlines, offering faster recovery. DHI costs in the UK generally start from £4,000 and can exceed £18,000.",
-            "The FUT (Follicular Unit Transplantation), or 'strip method,' proves highly efficient and cost-effective for extensive balding. FUT costs in the UK typically range from £2,000 to £10,000, though it involves longer recovery."
-          ]
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "What's Really Included in the Price?"
-        },
-        {
-          "type": "paragraph",
-          "content": "Understanding what’s truly included in your hair transplant price is crucial. A comprehensive package should cover several key stages and services. Typically, you can expect these inclusions:"
-        },
-        {
-          "type": "list",
-          "content": [
-            "The surgical procedure itself.",
-            "Medical team fees.",
-            "A complete post-operative kit (medications, shampoo, pillow, dressings).",
-            "Anesthesia.",
-            "The cost of clinic facilities and the operating room.",
-            "Post-operative check-up and assisted first wash."
-          ]
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "Additional Costs to Consider"
-        },
-        {
-          "type": "paragraph",
-          "content": "When budgeting for a hair transplant, look beyond the initial quote. Additional costs can significantly impact your overall budget. These might include: initial consultation fees; diagnostic tests; medications beyond the initial kit; supplementary therapies like PRP; long-term follow-up appointments; travel and accommodation; scar treatment or revisions; ongoing hair care products; and additional clinic stay."
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "Factors Influencing The Price"
-        },
-        {
-          "type": "paragraph",
-          "content": "The final cost of a hair transplant is influenced by several key factors, reflecting the complexity and resources required for your individual case. You need to consider these main influencing factors in the price:"
-        },
-        {
-          "type": "list",
-          "content": [
-            "Number of grafts required",
-            "Hair transplant chosen technique",
-            "Surgeon's expertise",
-            "Clinic’s geographical location",
-            "Clinic facilities and technology",
-            "Hair loss complexity & hair type"
-          ]
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "Grafts, Areas & Respective Costs"
-        },
-        {
-          "type": "paragraph",
-          "content": "Hair transplant cost primarily depends on graft count and specific target area of restoration. For hairline/temple areas, 500-2,500 grafts typically cost £2,500-£8,000 in the UK. Crown or mid-scalp work, needing 1,000-3,000 grafts, ranges from £3,000-£10,000. More extensive full scalp restoration (3,000-6,000+ grafts) starts at £8,000, potentially exceeding £15,000. The extent of hair loss directly influences your total investment."
-        },
-        {
-          "type": "heading",
-          "level": 2,
-          "content": "International Comparison: UK, Turkey vs Albania"
-        },
-        {
-          "type": "paragraph",
-          "content": "Many patients look beyond the UK for more affordable hair transplant solutions. In Turkey, costs generally range between £1,000 and £5,500+. Packages often include accommodation and transfers, but always verify flight inclusions and beware of hidden costs or agency commissions."
-        },
-        {
-          "type": "paragraph",
-          "content": "Albania, specifically KEIT Clinic, has emerged as a top destination, offering exceptional value without compromising quality or safety. Hair transplant costs in Albania typically range from just £1,300 to £3,000. KEIT provides truly all-inclusive packages for maximum transparency."
-        },
-        {
-          "type": "paragraph",
-          "content": "Our procedures are executed by highly specialized Italian surgeons (over 22,000 completed procedures), backed by 11,000+ positive reviews. The patient experience is enhanced by a nearby hotel, trilingual assistance, a guarantee certificate, and installment options. A 3-hour direct UK flight and visa-free entry make Albania your seamless, safe, and smart choice."
-        },
-        {
-          "type": "card",
-          "title": "Conclusion from Dr. Faria",
-          "content": [
-            "\"Your decision for a hair transplant is significant. It's about your confidence, your well-being, and a truly transformative experience. Choosing a specialist with transparency, extensive experience, and genuine care throughout your entire journey is essential.\"",
-            "Book your free online consultation now at www.keit.al"
-          ]
-        }
-      ]
-    }
-  }
+  "blogPosts": {}
 }
-
-    

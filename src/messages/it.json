@@ -219,38 +219,5 @@
     },
     "items": {}
   },
-  "blogPosts": {
-    "1": {
-      "title": "La Guida Definitiva alla Cura della Pelle per un Bagliore Duraturo",
-      "excerpt": "Scopri i consigli degli esperti su come costruire una routine di cura della pelle che combatte l'invecchiamento, migliora la luminosità e mantiene la pelle sana e bella."
-    },
-    "2": {
-      "title": "Botox vs. Filler: Qual è la Scelta Giusta per Te?",
-      "excerpt": "Un'analisi completa di due dei nostri trattamenti più popolari. Comprendi le differenze e scopri qual è il migliore per i tuoi obiettivi estetici."
-    },
-    "3": {
-      "title": "La Strada verso il Recupero: Cosa Aspettarsi Dopo la Procedura",
-      "excerpt": "La cura post-trattamento è fondamentale per risultati ottimali. Scopri il processo di recupero per le nostre procedure chiave e come garantire un percorso senza intoppi."
-    },
-    "4": {
-      "title": "Un Sorriso più Luminoso: I Benefici dello Sbiancamento Dentale Professionale",
-      "excerpt": "Esplora come lo sbiancamento dentale professionale può migliorare drasticamente il tuo sorriso e aumentare la tua fiducia, e in cosa consiste la procedura."
-    },
-    "5": {
-      "title": "Modellamento del Corpo Non Invasivo: Una Rivoluzione nell'Estetica",
-      "excerpt": "Scopri le ultime tecnologie non chirurgiche che possono aiutarti a raggiungere la forma del corpo desiderata senza i tempi di inattività della chirurgia."
-    },
-    "6": {
-      "title": "Mantenere i Risultati: Consigli sullo Stile di Vita per una Bellezza a Lungo Termine",
-      "excerpt": "Il tuo percorso estetico non finisce quando lasci la nostra clinica. Scopri consigli su dieta, esercizio fisico e stile di vita per prolungare e migliorare i tuoi risultati."
-    },
-    "7": {
-      "title": "Comprendere il Vero Costo di un Trapianto di Capelli nel 2025",
-      "excerpt": "Un'analisi approfondita dei costi dei trapianti di capelli per il 2025, confrontando tecniche, numero di innesti e prezzi internazionali nel Regno Unito, in Turchia e in Albania.",
-      "date": "5 luglio 2024",
-      "content": []
-    }
-  }
+  "blogPosts": {}
 }
-
-    

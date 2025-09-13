@@ -102,12 +102,14 @@ export async function saveBlogPost(formData: BlogFormData) {
 
   } catch (error) {
     console.error("Error saving blog post:", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred.';
     return {
         success: false,
-        message: 'Failed to save blog post. Please try again.'
+        message: `Failed to save blog post: ${errorMessage}`
     };
   }
   
+  // This should only be called on success
   redirect('/admin/blog');
 }
 

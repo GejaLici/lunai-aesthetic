@@ -219,38 +219,5 @@
     },
     "items": {}
   },
-  "blogPosts": {
-    "1": {
-      "title": "Le Guide Ultime des Soins de la Peau pour un Éclat Durable",
-      "excerpt": "Découvrez des conseils d'experts sur la création d'une routine de soins de la peau qui combat le vieillissement, améliore l'éclat et maintient votre peau saine et belle."
-    },
-    "2": {
-      "title": "Botox vs. Produits de Comblement : Quel est le Bon Choix pour Vous ?",
-      "excerpt": "Une analyse complète de deux de nos traitements les plus populaires. Comprenez les différences et découvrez ce qui convient le mieux à vos objectifs esthétiques."
-    },
-    "3": {
-      "title": "La Voie de la Guérison : À Quoi s'Attendre Après Votre Procédure",
-      "excerpt": "Les soins post-traitement sont cruciaux pour des résultats optimaux. Découvrez le processus de récupération pour nos procédures clés et comment assurer un parcours en douceur."
-    },
-    "4": {
-      "title": "Un Sourire plus Éclatant : Les Avantages du Blanchiment Professionnel des Dents",
-      "excerpt": "Découvrez comment le blanchiment professionnel des dents peut améliorer considérablement votre sourire et renforcer votre confiance, et ce que la procédure implique."
-    },
-    "5": {
-      "title": "Le Remodelage Corporel Non Invasif : Une Révolution en Esthétique",
-      "excerpt": "Découvrez les dernières technologies non chirurgicales qui peuvent vous aider à atteindre la forme corporelle souhaitée sans le temps d'arrêt de la chirurgie."
-    },
-    "6": {
-      "title": "Maintenir Vos Résultats : Conseils de Style de Vie pour une Beauté à Long Terme",
-      "excerpt": "Votre parcours esthétique ne se termine pas lorsque vous quittez notre clinique. Découvrez des conseils sur l'alimentation, l'exercice et le mode de vie pour prolonger et améliorer vos résultats."
-    },
-    "7": {
-      "title": "Comprendre le Véritable Coût d'une Greffe de Cheveux en 2025",
-      "excerpt": "Une analyse approfondie des coûts de la greffe de cheveux pour 2025, comparant les techniques, le nombre de greffons et les prix internationaux au Royaume-Uni, en Turquie et en Albanie.",
-      "date": "5 juillet 2024",
-      "content": []
-    }
-  }
+  "blogPosts": {}
 }
-
-    
