@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from '@/hooks/use-translations';
 import { db } from '@/lib/firebase';
-import { collection, getDocs, orderBy, limit } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import type { BlogPost } from '@/lib/blog-posts';
 import { Skeleton } from '../ui/skeleton';
 
@@ -22,10 +22,10 @@ export const BlogSection = React.memo(function BlogSection() {
     const fetchPosts = async () => {
       try {
         const postsCollection = collection(db, 'blogPosts');
-        const q = await getDocs(collection(db, "blogPosts"));
-        const fetchedPosts = q.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
-        const sortedPosts = fetchedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-        setPosts(sortedPosts.slice(0, 3));
+        const q = query(postsCollection, orderBy("date", "desc"), limit(3));
+        const postsSnapshot = await getDocs(q);
+        const fetchedPosts = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
+        setPosts(fetchedPosts);
       } catch (error) {
         console.error("Error fetching latest blog posts:", error);
       } finally {

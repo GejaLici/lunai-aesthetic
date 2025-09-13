@@ -3,17 +3,19 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import Link from 'next/link';
 import { Newspaper } from 'lucide-react';
-import { useTranslations } from "@/hooks/use-translations";
 import { db } from "@/lib/firebase";
-import { collection, getDocs, orderBy } from "firebase/firestore";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import type { BlogPost } from "@/lib/blog-posts";
+
+export const revalidate = 0; // Force dynamic rendering to fetch latest posts
 
 async function getBlogPosts() {
   try {
     const postsCollection = collection(db, 'blogPosts');
-    const q = await getDocs(collection(db, "blogPosts"));
-    const posts = q.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
-    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const q = query(postsCollection, orderBy("date", "desc"));
+    const postsSnapshot = await getDocs(q);
+    const posts = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
+    return posts;
   } catch (error) {
     console.error("Error fetching blog posts:", error);
     return [];
