@@ -1,39 +1,53 @@
-"use client";
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import Link from 'next/link';
 import { Newspaper } from 'lucide-react';
-import { placeholderPosts } from "@/lib/blog-posts";
 import { useTranslations } from "@/hooks/use-translations";
+import { db } from "@/lib/firebase";
+import { collection, getDocs, orderBy } from "firebase/firestore";
+import type { BlogPost } from "@/lib/blog-posts";
 
-export default function BlogPage() {
-  const t = useTranslations('BlogPage');
-  const tBlog = useTranslations('blogPosts');
+async function getBlogPosts() {
+  try {
+    const postsCollection = collection(db, 'blogPosts');
+    const q = await getDocs(collection(db, "blogPosts"));
+    const posts = q.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  } catch (error) {
+    console.error("Error fetching blog posts:", error);
+    return [];
+  }
+}
 
-  if (!placeholderPosts || placeholderPosts.length === 0) {
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
+  // Note: We're rendering this server-side, so useTranslations is not available here.
+  // We will pass translations down or handle them differently if needed,
+  // but for now, we'll use English as the default.
+
+  if (!posts || posts.length === 0) {
     return (
       <div className="container mx-auto px-4 py-8 text-center">
         <Newspaper className="h-16 w-16 text-accent mx-auto mb-4" />
-        <h1 className="text-5xl font-headline font-bold text-primary">{t('title')}</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">LUNAI Blog</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          {t('emptyState')}
+          No blog posts available at the moment. Please check back soon for insights and news from LUNAI.
         </p>
       </div>
     );
   }
 
-  const featuredPost = placeholderPosts[0];
-  const regularPosts = placeholderPosts.slice(1);
+  const featuredPost = posts[0];
+  const regularPosts = posts.slice(1);
 
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-8">
         <Newspaper className="h-16 w-16 text-accent mx-auto mb-4" />
-        <h1 className="text-5xl font-headline font-bold text-primary">{t('title')}</h1>
+        <h1 className="text-5xl font-headline font-bold text-primary">LUNAI Blog</h1>
         <p className="text-xl text-foreground/80 mt-4">
-          {t('subtitle')}
+          Insights, tips, and news on aesthetic treatments and wellness from LUNAI.
         </p>
       </section>
 
@@ -43,7 +57,7 @@ export default function BlogPage() {
             <div className="md:w-1/2 relative min-h-[250px] md:min-h-full h-72 md:h-auto">
               <Image
                 src={featuredPost.imageUrl}
-                alt={tBlog(`${featuredPost.id}.title`)}
+                alt={featuredPost.title?.en || 'Featured Post'}
                 fill
                 className="object-cover"
                 data-ai-hint={featuredPost.imageHint}
@@ -51,17 +65,17 @@ export default function BlogPage() {
             </div>
             <div className="md:w-1/2 flex flex-col p-6">
               <CardHeader className="p-0 mb-4">
-                <CardTitle className="font-headline text-2xl lg:text-3xl text-primary mb-2">{tBlog(`${featuredPost.id}.title`)}</CardTitle>
-                <p className="text-sm text-muted-foreground">{featuredPost.date}</p>
+                <CardTitle className="font-headline text-2xl lg:text-3xl text-primary mb-2">{featuredPost.title?.en}</CardTitle>
+                <p className="text-sm text-muted-foreground">{new Date(featuredPost.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
               </CardHeader>
               <CardContent className="p-0 flex-grow">
                 <CardDescription className="text-foreground/90 text-base mb-4">
-                  {tBlog(`${featuredPost.id}.excerpt`)}
+                  {featuredPost.excerpt?.en}
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-0 mt-4">
                 <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80 text-base">
-                  <Link href={featuredPost.slug}>{t('readMore')} &rarr;</Link>
+                  <Link href={`/blog/${featuredPost.slug}`}>Read More &rarr;</Link>
                 </Button>
               </CardFooter>
             </div>
@@ -77,7 +91,7 @@ export default function BlogPage() {
                 <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
                   <Image
                     src={post.imageUrl}
-                    alt={tBlog(`${post.id}.title`)}
+                    alt={post.title?.en || 'Blog post image'}
                     fill
                     className="object-cover"
                     data-ai-hint={post.imageHint}
@@ -85,15 +99,15 @@ export default function BlogPage() {
                 </div>
               </CardHeader>
               <CardContent className="flex-grow pt-6 flex flex-col">
-                <CardTitle className="font-headline text-xl text-primary mb-2">{tBlog(`${post.id}.title`)}</CardTitle>
-                <p className="text-sm text-muted-foreground mb-3">{post.date}</p>
+                <CardTitle className="font-headline text-xl text-primary mb-2">{post.title?.en}</CardTitle>
+                <p className="text-sm text-muted-foreground mb-3">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 <CardDescription className="text-foreground/90 text-sm mb-4 flex-grow">
-                  {tBlog(`${post.id}.excerpt`)}
+                  {post.excerpt?.en}
                 </CardDescription>
               </CardContent>
               <CardFooter>
                 <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80">
-                  <Link href={post.slug}>{t('readMore')} &rarr;</Link>
+                  <Link href={`/blog/${post.slug}`}>Read More &rarr;</Link>
                 </Button>
               </CardFooter>
             </Card>

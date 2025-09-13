@@ -1,18 +1,68 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
-import { placeholderPosts as blogPostsData } from '@/lib/blog-posts';
 import { useTranslations } from '@/hooks/use-translations';
+import { db } from '@/lib/firebase';
+import { collection, getDocs, orderBy, limit } from 'firebase/firestore';
+import type { BlogPost } from '@/lib/blog-posts';
+import { Skeleton } from '../ui/skeleton';
+
 
 export const BlogSection = React.memo(function BlogSection() {
   const t = useTranslations('HomePage');
-  const tBlog = useTranslations('blogPosts');
-  const latestBlogPosts = (blogPostsData || []).slice(0, 3);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const postsCollection = collection(db, 'blogPosts');
+        const q = await getDocs(collection(db, "blogPosts"));
+        const fetchedPosts = q.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
+        const sortedPosts = fetchedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        setPosts(sortedPosts.slice(0, 3));
+      } catch (error) {
+        console.error("Error fetching latest blog posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  if (loading) {
+    return (
+       <section className="container mx-auto px-4 pb-12">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+          {t('blog.title')}
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[...Array(3)].map((_, i) => (
+                <Card key={i} className="flex flex-col shadow-lg">
+                    <CardHeader className="p-0">
+                        <Skeleton className="w-full h-48 rounded-t-lg" />
+                    </CardHeader>
+                    <CardContent className="flex-grow pt-6 flex flex-col">
+                        <Skeleton className="h-6 w-3/4 mb-2" />
+                        <Skeleton className="h-4 w-1/2 mb-3" />
+                        <Skeleton className="h-4 w-full mb-1" />
+                        <Skeleton className="h-4 w-full mb-4" />
+                    </CardContent>
+                    <CardFooter>
+                         <Skeleton className="h-6 w-24" />
+                    </CardFooter>
+                </Card>
+            ))}
+        </div>
+       </section>
+    )
+  }
 
   return (
     <section className="container mx-auto px-4 pb-12">
@@ -20,13 +70,13 @@ export const BlogSection = React.memo(function BlogSection() {
         {t('blog.title')}
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {latestBlogPosts.map((post, index) => (
+        {posts.map((post, index) => (
           <Card key={post.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card animate-fadeIn" style={{ animationDelay: `${0.2 * index}s` }}>
             <CardHeader className="p-0">
               <div className="relative w-full h-48 rounded-t-lg overflow-hidden">
                 <Image
                   src={post.imageUrl}
-                  alt={tBlog(`${post.id}.title`)}
+                  alt={post.title?.en || 'Blog post'}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
@@ -35,15 +85,15 @@ export const BlogSection = React.memo(function BlogSection() {
               </div>
             </CardHeader>
             <CardContent className="flex-grow pt-6 flex flex-col">
-              <CardTitle className="font-headline text-xl text-primary mb-2">{tBlog(`${post.id}.title`)}</CardTitle>
-              <p className="text-sm text-muted-foreground mb-3">{post.date}</p>
+              <CardTitle className="font-headline text-xl text-primary mb-2">{post.title?.en}</CardTitle>
+              <p className="text-sm text-muted-foreground mb-3">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
               <CardDescription className="text-foreground/90 text-sm mb-4 flex-grow">
-                {tBlog(`${post.id}.excerpt`)}
+                {post.excerpt?.en}
               </CardDescription>
             </CardContent>
             <CardFooter>
               <Button asChild variant="link" className="text-accent p-0 hover:text-accent/80">
-                <Link href={post.slug}>{t('blog.readArticle')} <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                <Link href={`/blog/${post.slug}`}>{t('blog.readArticle')} <ArrowRight className="ml-1 h-4 w-4" /></Link>
               </Button>
             </CardFooter>
           </Card>
