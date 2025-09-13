@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -8,7 +8,31 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from '@/hooks/use-translations';
 import { Skeleton } from '../ui/skeleton';
-import { useRecentBlogPosts } from '@/lib/blog-posts';
+import { getRecentBlogPosts, type BlogPost } from '@/lib/blog-posts';
+
+
+// A client-side hook to get recent posts for components like the homepage.
+function useRecentBlogPosts(count: number) {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const fetchedPosts = await getRecentBlogPosts(count);
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error(`Error fetching latest ${count} blog posts:`, error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, [count]);
+
+  return { posts, loading };
+}
 
 
 export const BlogSection = React.memo(function BlogSection() {

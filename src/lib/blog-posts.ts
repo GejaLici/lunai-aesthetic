@@ -1,6 +1,5 @@
 import { db } from "@/lib/firebase";
 import { collection, getDocs, query, where, orderBy, limit } from "firebase/firestore";
-import { useEffect, useState } from "react";
 
 export interface BlogPost {
   id: string;
@@ -42,29 +41,15 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     }
 }
 
-
-// A client-side hook to get recent posts for components like the homepage.
-export function useRecentBlogPosts(count: number) {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
+// A server-side function to get recent posts.
+export async function getRecentBlogPosts(count: number): Promise<BlogPost[]> {
+    try {
         const postsCollection = collection(db, 'blogPosts');
         const q = query(postsCollection, orderBy("date", "desc"), limit(count));
         const postsSnapshot = await getDocs(q);
-        const fetchedPosts = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
-        setPosts(fetchedPosts);
-      } catch (error) {
+        return postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
+    } catch (error) {
         console.error(`Error fetching latest ${count} blog posts:`, error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPosts();
-  }, [count]);
-
-  return { posts, loading };
+        return [];
+    }
 }
