@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -8,11 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { saveBlogPost, type BlogFormData, deleteBlogPost } from './actions';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Loader2, Save, Trash2 } from 'lucide-react';
 import {
@@ -60,7 +58,6 @@ type BlogFormProps = {
 
 export function BlogForm({ post }: BlogFormProps) {
   const { toast } = useToast();
-  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!post?.id;
 
@@ -94,20 +91,18 @@ export function BlogForm({ post }: BlogFormProps) {
 
   const onSubmit: SubmitHandler<BlogFormData> = async (data) => {
     setIsLoading(true);
+    
+    // The server action will redirect on success, so we only need to handle the error case
     const result = await saveBlogPost(data);
+    
     if (result && !result.success) {
       toast({
         title: 'Error saving post',
         description: result.message,
         variant: 'destructive',
       });
-    } else {
-        toast({
-            title: isEditing ? 'Post Updated!' : 'Post Created!',
-            description: 'Your blog post has been saved successfully.',
-        });
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
   
   const handleDelete = async () => {
@@ -118,6 +113,7 @@ export function BlogForm({ post }: BlogFormProps) {
             title: 'Post Deleted',
             description: 'The blog post has been successfully deleted.',
         });
+        // The server action will redirect, but we set loading to false in case it doesn't
         setIsLoading(false);
     }
   }

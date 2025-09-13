@@ -1,30 +1,12 @@
-import { db } from '@/lib/firebase';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { getPostBySlug, getAllBlogPosts, type BlogPost } from '@/lib/blog-posts';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BlogPost } from '@/lib/blog-posts';
 
 type BlogPostPageProps = {
     params: {
         slug: string;
     };
 };
-
-async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-    try {
-        const q = query(collection(db, "blogPosts"), where("slug", "==", slug));
-        const querySnapshot = await getDocs(q);
-        if (querySnapshot.empty) {
-            return null;
-        }
-        const doc = querySnapshot.docs[0];
-        return { id: doc.id, ...doc.data() } as BlogPost;
-    } catch (error) {
-        console.error("Error fetching post by slug:", error);
-        return null;
-    }
-}
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
     const post = await getPostBySlug(params.slug);
@@ -45,14 +27,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     if (!post) {
         notFound();
     }
-
-    // A simple function to render content based on a hypothetical structure
-    // For now, we'll just render the English content as a single block.
-    // A more advanced version would parse a JSON structure like the old posts had.
+    
+    // A simple function to render content. A more advanced version would parse markdown or structured content.
     const renderContent = (content: string) => {
-        // Simple paragraph splitting
-        return content.split('\\n').map((paragraph, index) => (
-            <p key={index} className="mb-4">{paragraph}</p>
+        // Replace newline characters with <br> tags for simple formatting
+        return content.split('\n').map((paragraph, index) => (
+            <p key={index} className="mb-4 last:mb-0">{paragraph}</p>
         ));
     };
 
@@ -77,7 +57,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </header>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-6 text-foreground/90">
-                    {/* Render the english content for now */}
                     {post.content?.en && renderContent(post.content.en)}
                 </div>
             </article>
@@ -85,16 +64,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     );
 }
 
-// Optional: Generate static paths for all blog posts at build time for better performance
 export async function generateStaticParams() {
     try {
-        const querySnapshot = await getDocs(collection(db, "blogPosts"));
-        const slugs = querySnapshot.docs.map(doc => ({
-            slug: doc.data().slug as string,
+        const posts = await getAllBlogPosts();
+        return posts.map(post => ({
+            slug: post.slug,
         }));
-        return slugs;
     } catch (error) {
         console.error("Error generating static params for blog posts:", error);
         return [];
     }
 }
+
+// Ensure the page is revalidated to pick up new posts, but still benefits from static generation
+export const revalidate = 60; // Revalidate every 60 seconds

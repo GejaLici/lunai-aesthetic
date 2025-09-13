@@ -1,41 +1,20 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from '@/hooks/use-translations';
-import { db } from '@/lib/firebase';
-import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
-import type { BlogPost } from '@/lib/blog-posts';
 import { Skeleton } from '../ui/skeleton';
+import { useRecentBlogPosts } from '@/lib/blog-posts';
 
 
 export const BlogSection = React.memo(function BlogSection() {
   const t = useTranslations('HomePage');
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const postsCollection = collection(db, 'blogPosts');
-        const q = query(postsCollection, orderBy("date", "desc"), limit(3));
-        const postsSnapshot = await getDocs(q);
-        const fetchedPosts = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as BlogPost));
-        setPosts(fetchedPosts);
-      } catch (error) {
-        console.error("Error fetching latest blog posts:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPosts();
-  }, []);
-
+  const { posts, loading } = useRecentBlogPosts(3);
+  
   if (loading) {
     return (
        <section className="container mx-auto px-4 pb-12">
