@@ -9,8 +9,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -53,15 +51,17 @@ export const StatsSection = React.memo(function StatsSection() {
 
 
   return (
-    <section className="container mx-auto px-4 pb-16">
-      <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
-        {t('title')}
-      </h2>
+    <section className="pb-16">
+       <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-primary">
+            {t('title')}
+        </h2>
+       </div>
       
       {isClient && (
          <Carousel
           plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
-          className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+          className="w-full"
           opts={{
             align: "start",
             loop: true,
@@ -69,13 +69,11 @@ export const StatsSection = React.memo(function StatsSection() {
         >
             <CarouselContent>
                 {statsData.map((item) => (
-                    <CarouselItem key={item.key} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <CarouselItem key={item.key} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
                         <StatCard item={item} />
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 sm:-left-4 md:-left-8" />
-            <CarouselNext className="right-2 sm:-right-4 md:-right-8" />
         </Carousel>
       )}
 
