@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useServiceTranslation } from '@/hooks/use-translations';
@@ -22,7 +21,7 @@ export function generateStaticParams() {
 export default function ServicePage({ params }: ServicePageProps) {
   const { slug } = params;
   const service = allServices.find(s => s.id === slug);
-  const { name, content, meta_title, meta_description, meta_keywords } = useServiceTranslation(slug);
+  const { name, contentSections, meta_title, meta_description, meta_keywords } = useServiceTranslation(slug);
 
   if (!service) {
     notFound();
@@ -32,7 +31,7 @@ export default function ServicePage({ params }: ServicePageProps) {
     <ServicePageLayout 
         serviceId={slug}
         serviceName={name} 
-        content={content}
+        contentSections={contentSections}
         metaTitle={meta_title}
         metaDescription={meta_description}
         metaKeywords={meta_keywords}

@@ -15,13 +15,13 @@ import Head from 'next/head';
 type ServicePageLayoutProps = {
   serviceName: string;
   serviceId: string;
-  content: string; // Changed from contentSections to content
+  contentSections: { [key: string]: { heading?: string; paragraphs: string[] } };
   metaTitle?: string;
   metaDescription?: string;
   metaKeywords?: string;
 };
 
-export function ServicePageLayout({ serviceName, serviceId, content, metaTitle, metaDescription, metaKeywords }: ServicePageLayoutProps) {
+export function ServicePageLayout({ serviceName, serviceId, contentSections, metaTitle, metaDescription, metaKeywords }: ServicePageLayoutProps) {
   const t = useTranslations('ServiceDetailsPage');
   
   const service = allServices.find(s => s.id === serviceId);
@@ -35,6 +35,20 @@ export function ServicePageLayout({ serviceName, serviceId, content, metaTitle, 
   }
 
   const isSurgical = service.serviceType === 'operation';
+  
+  const renderContent = () => {
+    if (!contentSections || Object.keys(contentSections).length === 0) {
+        return <p>Content for this service is not available yet. Please check back later.</p>
+    }
+    return Object.values(contentSections).map((section, index) => (
+        <div key={index} className="mb-6">
+            {section.heading && <h2 className="text-2xl font-bold font-headline text-primary mb-3" dangerouslySetInnerHTML={{ __html: section.heading }}></h2>}
+            {section.paragraphs.map((p, pIndex) => (
+                <p key={pIndex} className="mb-4 text-foreground/90" dangerouslySetInnerHTML={{ __html: p }}></p>
+            ))}
+        </div>
+    ));
+  }
   
   return (
     <>
@@ -60,10 +74,8 @@ export function ServicePageLayout({ serviceName, serviceId, content, metaTitle, 
       </header>
       
       <div className="grid lg:grid-cols-3 gap-8">
-        <main 
-            className="lg:col-span-2 prose prose-lg dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: content }}
-        >
+        <main className="lg:col-span-2 prose prose-lg dark:prose-invert max-w-none">
+            {renderContent()}
         </main>
 
         <aside className="lg:col-span-1 space-y-6">
