@@ -12,7 +12,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const TransformationCard = ({ service }: { service: ServiceItem }) => {
-  const { name: serviceName, meta_description } = useServiceTranslation(service.id);
+  const { name: serviceName } = useServiceTranslation(service.id);
   return (
     <Card
       className={cn(
@@ -30,7 +30,6 @@ const TransformationCard = ({ service }: { service: ServiceItem }) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       <div className="relative mt-auto p-4 z-10 text-white">
         <h3 className="text-lg font-headline font-bold mb-1">{serviceName}</h3>
-        <p className="text-xs text-white/80 line-clamp-2">{meta_description}</p>
       </div>
     </Card>
   );
@@ -56,6 +55,22 @@ export const TransformationsSection = React.memo(function TransformationsSection
     emblaApi.on('select', onSelect);
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
+
+  const renderServiceContent = (service: ServiceItem) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { content_sections } = useServiceTranslation(service.id);
+
+    if (!content_sections || Object.keys(content_sections).length === 0) {
+      return <p>More details coming soon.</p>;
+    }
+    
+    // We'll take the first paragraph of the first section as the description
+    const firstSectionKey = Object.keys(content_sections)[0];
+    const firstSection = content_sections[firstSectionKey];
+    const description = firstSection?.paragraphs?.[0] || 'Detailed information about this service is available on the service page.';
+
+    return <p className="text-lg text-foreground/80 mb-6" dangerouslySetInnerHTML={{ __html: description }}></p>
+  }
 
   return (
     <section className="container mx-auto px-4 pb-12 overflow-hidden">
@@ -102,7 +117,8 @@ export const TransformationsSection = React.memo(function TransformationsSection
         <div className="lg:col-span-2 relative min-h-[200px]">
           {transformations.map((service, index) => {
             const isActive = index === selectedIndex;
-            const { name: serviceName, meta_description } = useServiceTranslation(service.id);
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const { name: serviceName } = useServiceTranslation(service.id);
             return (
               <div
                 key={service.id}
@@ -113,9 +129,7 @@ export const TransformationsSection = React.memo(function TransformationsSection
                 aria-hidden={!isActive}
               >
                 <h3 className="font-headline text-3xl text-primary mb-4">{serviceName}</h3>
-                <p className="text-lg text-foreground/80 mb-6">
-                  {meta_description}
-                </p>
+                {renderServiceContent(service)}
                 <Button asChild>
                   <Link href={`/services/${service.id}`}>{t('viewResult')}</Link>
                 </Button>
