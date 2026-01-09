@@ -17,7 +17,7 @@ export const HeroSection = React.memo(function HeroSection() {
           muted
           playsInline
           className="absolute z-0 w-full h-full object-cover opacity-30"
-          poster="/images/hero-poster.png"
+          poster="https://picsum.photos/seed/hero/1920/1080"
         >
           <source src="/videos/hero-background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
