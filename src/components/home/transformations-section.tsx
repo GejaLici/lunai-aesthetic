@@ -5,25 +5,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
 import { allServices, type ServiceItem } from '@/lib/services';
 import { useTranslations, useServiceTranslation } from '@/hooks/use-translations';
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 import { cn } from '@/lib/utils';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
-const TransformationCard = ({ service, large = false }: { service: ServiceItem; large?: boolean }) => {
+const TransformationCard = ({ service }: { service: ServiceItem }) => {
   const { name: serviceName } = useServiceTranslation(service.id);
-  const cardHeight = large ? 'h-[450px]' : 'h-80';
-
   return (
     <Card
-      className={`relative flex flex-col ${cardHeight} bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20`}
+      className={cn(
+        'relative flex flex-col bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out h-full'
+      )}
     >
       <Image
         src={service.imageAfter}
         alt={serviceName}
         fill
-        sizes={large ? "100vw" : "(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 17vw"}
+        sizes="(max-width: 768px) 90vw, (max-width: 1280px) 40vw, 30vw"
         className="object-cover transition-transform duration-300 group-hover:scale-110"
         data-ai-hint={`${service.dataAiHint} after`}
       />
@@ -35,11 +35,15 @@ const TransformationCard = ({ service, large = false }: { service: ServiceItem; 
   );
 };
 
+
 export const TransformationsSection = React.memo(function TransformationsSection() {
   const t = useTranslations('HomePage.transformations');
-  const transformations = allServices.slice(0, 5); // Using 5 for a good carousel experience
+  const transformations = allServices.slice(0, 5);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
   const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+  const scrollPrev = React.useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = React.useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   const onSelect = React.useCallback((emblaApi: EmblaCarouselType) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -52,33 +56,29 @@ export const TransformationsSection = React.memo(function TransformationsSection
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
 
-  const activeTransformation = transformations[selectedIndex];
-  const { name: activeServiceName } = useServiceTranslation(activeTransformation?.id);
-
   return (
     <section className="container mx-auto px-4 pb-12 overflow-hidden">
       <div className="text-center">
-        <h2 className="text-4xl font-headline font-bold mb-4 text-primary">
+        <h2 className="text-4xl font-headline font-bold mb-12 text-primary">
           {t('title')}
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8 items-center min-h-[400px]">
+      <div className="grid lg:grid-cols-5 gap-8 items-center min-h-[450px]">
         {/* Carousel Side */}
-        <div className="lg:col-span-2 relative h-[400px] flex items-center justify-center">
+        <div className="lg:col-span-3 relative h-[500px] flex items-center justify-center">
           <div className="w-full">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex items-center h-full -ml-4">
                 {transformations.map((service, index) => {
                   const isActive = index === selectedIndex;
                   return (
-                    <div key={service.id} className="flex-grow-0 flex-shrink-0 basis-1/2 md:basis-1/3 pl-4 h-full flex items-center">
+                    <div key={service.id} className="flex-grow-0 flex-shrink-0 basis-full md:basis-1/2 lg:basis-2/3 pl-4 h-full flex items-center">
                       <div
-                        className="relative w-full h-[300px] transition-transform duration-500 ease-in-out cursor-pointer"
-                        style={{
-                          transform: `scale(${isActive ? 1.1 : 0.8})`,
-                          opacity: isActive ? 1 : 0.4,
-                        }}
+                        className={cn(
+                          "relative w-full transition-all duration-500 ease-in-out cursor-pointer",
+                          isActive ? 'h-[450px]' : 'h-[350px]'
+                        )}
                         onClick={() => emblaApi?.scrollTo(index)}
                       >
                         <TransformationCard service={service} />
@@ -88,11 +88,17 @@ export const TransformationsSection = React.memo(function TransformationsSection
                 })}
               </div>
             </div>
+             <Button onClick={scrollPrev} variant="outline" size="icon" className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full h-10 w-10">
+                <ArrowLeft />
+            </Button>
+            <Button onClick={scrollNext} variant="outline" size="icon" className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full h-10 w-10">
+                <ArrowRight />
+            </Button>
           </div>
         </div>
 
         {/* Content Side */}
-        <div className="relative min-h-[200px]">
+        <div className="lg:col-span-2 relative min-h-[200px]">
           {transformations.map((service, index) => {
             const isActive = index === selectedIndex;
             const { name: serviceName } = useServiceTranslation(service.id);
@@ -101,7 +107,7 @@ export const TransformationsSection = React.memo(function TransformationsSection
                 key={service.id}
                 className={cn(
                   "absolute top-0 left-0 w-full transition-opacity duration-500 ease-in-out text-center lg:text-left",
-                  isActive ? 'opacity-100' : 'opacity-0'
+                  isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 )}
                 aria-hidden={!isActive}
               >
