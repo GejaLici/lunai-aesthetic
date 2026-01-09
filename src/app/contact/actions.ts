@@ -32,9 +32,11 @@ export async function saveContactMessage(data: ContactFormData) {
     });
     return { success: true, message: 'Message saved successfully!' };
   } catch (error) {
+    console.error("Error saving contact message:", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
     return { 
         success: false, 
-        message: 'Failed to save message. Please try again.'
+        message: `Failed to save message: ${errorMessage}`
     };
   }
 }
