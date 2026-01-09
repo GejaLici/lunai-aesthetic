@@ -101,7 +101,7 @@ export const TransformationsSection = React.memo(function TransformationsSection
         <div className="lg:col-span-2 relative min-h-[200px]">
           {transformations.map((service, index) => {
             const isActive = index === selectedIndex;
-            const { name: serviceName } = useServiceTranslation(service.id);
+            const { name: serviceName, meta_description } = useServiceTranslation(service.id);
             return (
               <div
                 key={service.id}
@@ -113,7 +113,7 @@ export const TransformationsSection = React.memo(function TransformationsSection
               >
                 <h3 className="font-headline text-3xl text-primary mb-4">{serviceName}</h3>
                 <p className="text-lg text-foreground/80 mb-6">
-                  Witness the incredible, natural-looking results our expert team achieves.
+                  {meta_description}
                 </p>
                 <Button asChild>
                   <Link href={`/services/${service.id}`}>{t('viewResult')}</Link>
