@@ -29,30 +29,30 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       try {
         switch (currentLocale) {
           case 'de':
-            loadedMessages = await import('../../messages/de.json');
+            loadedMessages = (await import('@/messages/de.json')).default;
             break;
           case 'es':
-            loadedMessages = await import('../../messages/es.json');
+            loadedMessages = (await import('@/messages/es.json')).default;
             break;
           case 'fr':
-            loadedMessages = await import('../../messages/fr.json');
+            loadedMessages = (await import('@/messages/fr.json')).default;
             break;
           case 'it':
-            loadedMessages = await import('../../messages/it.json');
+            loadedMessages = (await import('@/messages/it.json')).default;
             break;
           case 'sq':
-            loadedMessages = await import('../../messages/sq.json');
+            loadedMessages = (await import('@/messages/sq.json')).default;
             break;
           default:
-            loadedMessages = await import('../../messages/en.json');
+            loadedMessages = (await import('@/messages/en.json')).default;
             break;
         }
-        setMessages(loadedMessages.default || loadedMessages);
+        setMessages(loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${currentLocale}`, error);
         try {
-          const fallbackMessages = await import('../../messages/en.json');
-          setMessages(fallbackMessages.default || fallbackMessages);
+          const fallbackMessages = (await import('@/messages/en.json')).default;
+          setMessages(fallbackMessages);
         } catch (fallbackError) {
           console.error(`Could not load fallback English messages.`, fallbackError);
           setMessages({});
