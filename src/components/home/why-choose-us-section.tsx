@@ -1,10 +1,10 @@
-
 'use client';
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Cpu, Leaf, UsersRound } from 'lucide-react';
 import { useTranslations } from '@/hooks/use-translations';
+import { cn } from '@/lib/utils';
 
 const whyChooseUsData = [
   { icon: UsersRound, key: "expertCare" },
@@ -24,20 +24,24 @@ export const WhyChooseUsSection = React.memo(function WhyChooseUsSection() {
           {whyChooseUsData.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Card key={item.key} className="text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card animate-fadeIn" style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
+              <Card key={item.key} className={cn("text-center p-6 shadow-lg bg-card animate-fadeIn group transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 h-[380px] hover:h-[480px] flex flex-col")} style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
                 <CardHeader className="p-0 mb-4">
                   <div className="w-16 h-16 mb-4 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="font-headline text-2xl text-primary">{t(`whyChooseUs.${item.key}.title`)}</CardTitle>
                 </CardHeader>
-                <CardContent className="p-0">
+                <CardContent className="p-0 transition-all duration-500 ease-in-out">
                   <p className="text-card-foreground/90 mb-4">
                     {t(`whyChooseUs.${item.key}.description`)}
                   </p>
-                  <p className="text-card-foreground/70 text-sm">
-                    {t(`whyChooseUs.${item.key}.moreInfo`)}
-                  </p>
+                  <div className="overflow-hidden">
+                      <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen transition-all duration-700 ease-in-out delay-100">
+                           <p className="text-card-foreground/70 text-sm">
+                             {t(`whyChooseUs.${item.key}.moreInfo`)}
+                           </p>
+                      </div>
+                  </div>
                 </CardContent>
               </Card>
             );
