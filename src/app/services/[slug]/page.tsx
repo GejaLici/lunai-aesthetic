@@ -11,17 +11,10 @@ type ServicePageProps = {
   };
 };
 
-// This function generates static pages for all services at build time
-export function generateStaticParams() {
-  return allServices.map((service) => ({
-    slug: service.id,
-  }));
-}
-
 export default function ServicePage({ params }: ServicePageProps) {
   const { slug } = params;
   const service = allServices.find(s => s.id === slug);
-  const { name, contentSections, meta_title, meta_description, meta_keywords } = useServiceTranslation(slug);
+  const { name, content_sections, meta_title, meta_description, meta_keywords } = useServiceTranslation(slug);
 
   if (!service) {
     notFound();
@@ -31,10 +24,16 @@ export default function ServicePage({ params }: ServicePageProps) {
     <ServicePageLayout 
         serviceId={slug}
         serviceName={name} 
-        contentSections={contentSections}
+        contentSections={content_sections}
         metaTitle={meta_title}
         metaDescription={meta_description}
         metaKeywords={meta_keywords}
     />
   );
+}
+
+export function generateStaticParams() {
+  return allServices.map((service) => ({
+    slug: service.id,
+  }));
 }

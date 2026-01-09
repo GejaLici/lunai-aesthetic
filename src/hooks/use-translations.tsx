@@ -13,7 +13,6 @@ interface LanguageContextType {
   locale: string;
   setLocale: (locale: string) => void;
   messages: Messages;
-  serviceMessages: { [key: string]: Messages };
 }
 
 // Create the context with a default value
@@ -63,7 +62,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     loadMessages(locale);
   }, [locale]);
   
-  const value = useMemo(() => ({ locale, setLocale, messages, serviceMessages: {} }), [locale, messages]);
+  const value = useMemo(() => ({ locale, setLocale, messages }), [locale, messages]);
 
   return (
     <LanguageContext.Provider value={value}>
@@ -72,10 +71,19 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-const get = (obj: any, path: string) => {
+// Utility function to safely access nested properties
+const get = (obj: any, path: string): string | undefined => {
   const keys = path.split('.');
-  return keys.reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
+  let result = obj;
+  for (const key of keys) {
+    if (result === null || typeof result !== 'object') {
+      return undefined;
+    }
+    result = result[key];
+  }
+  return result;
 };
+
 
 export const useTranslations = (namespace?: string) => {
   const context = useContext(LanguageContext);
@@ -83,22 +91,15 @@ export const useTranslations = (namespace?: string) => {
     throw new Error('useTranslations must be used within a LanguageProvider');
   }
 
+  const { messages, locale } = context;
+
   const t = useCallback((key: string, variables?: { [key:string]: string | number }) => {
     const fullKey = namespace ? `${namespace}.${key}` : key;
-    const translation = get(context.messages, fullKey);
+    let translation = get(messages, fullKey);
 
     if (translation === undefined) {
-      console.warn(`Translation not found for key: ${fullKey}`);
-      try {
-        const enMessages = require('../../messages/en.json');
-        const fallbackTranslation = get(enMessages, fullKey);
-        if (fallbackTranslation !== undefined) {
-          return fallbackTranslation;
-        }
-      } catch (e) {
-         return fullKey;
-      }
-      return fullKey;
+      console.warn(`Translation not found for key: '${fullKey}' in locale '${locale}'.`);
+      return fullKey; // Return the key as a fallback
     }
     
     if (typeof translation === 'string') {
@@ -113,39 +114,44 @@ export const useTranslations = (namespace?: string) => {
       return translation;
     }
     
-    return translation;
-  }, [context.messages, namespace]);
+    // If the key exists but the value is not a string (e.g., it's an object of nested keys),
+    // return a warning or the key itself.
+    console.warn(`Translation for key '${fullKey}' is not a string.`);
+    return fullKey;
+  }, [messages, namespace, locale]);
 
   return t;
 };
 
 export const useServiceTranslation = (serviceId: string) => {
-    const { messages } = useContext(LanguageContext)!;
+    const { messages, locale } = useContext(LanguageContext)!;
     
     const fallbackData = {
         name: serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-        contentSections: {},
+        content_sections: {},
         meta_title: '',
         meta_description: '',
         meta_keywords: '',
     };
     
     const serviceData = useMemo(() => {
-        if (!messages.services || !messages.services.items || !messages.services.items[serviceId]) {
+        const path = `services.items.${serviceId}`;
+        const service = get(messages, path);
+
+        if (!service || typeof service !== 'object') {
+             console.warn(`Service translation not found for id: '${serviceId}' in locale '${locale}'.`);
             return fallbackData;
         }
         
-        const service = messages.services.items[serviceId];
-        
         return {
             name: service.name || fallbackData.name,
-            contentSections: service.content_sections || fallbackData.contentSections,
-            meta_title: service.meta_title || '',
-            meta_description: service.meta_description || '',
+            content_sections: service.content_sections || fallbackData.content_sections,
+            meta_title: service.meta_title || fallbackData.name,
+            meta_description: service.meta_description || `Learn more about ${fallbackData.name}`,
             meta_keywords: service.meta_keywords || '',
         };
         
-    }, [messages, serviceId, fallbackData]);
+    }, [messages, serviceId, fallbackData, locale]);
 
     return serviceData;
 };

@@ -97,6 +97,4 @@ export const serviceData: ServiceCategory[] = [
   },
 ];
 
-export const allServices: ServiceItem[] = serviceData.reduce((acc, category) => {
-  return acc.concat(category.services);
-}, [] as ServiceItem[]);
+export const allServices: ServiceItem[] = serviceData.flatMap(category => category.services);

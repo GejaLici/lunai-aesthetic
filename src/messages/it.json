@@ -248,14 +248,36 @@
       }
     },
     "subcategories": {
-        "surgical": "Chirurgico",
-        "nonSurgical": "Non Chirurgico",
-        "aesthetics": "Estetica",
-        "prosthetics": "Protesi",
-        "orthodontics": "Ortodonzia",
-        "therapy": "Terapia",
-        "surgery": "Chirurgia",
-        "pedodontics": "Pedodonzia"
+      "surgical": "Chirurgico",
+      "nonSurgical": "Non Chirurgico",
+      "aesthetics": "Estetica",
+      "prosthetics": "Protesi",
+      "orthodontics": "Ortodonzia",
+      "therapy": "Terapia",
+      "surgery": "Chirurgia",
+      "pedodontics": "Pedodonzia"
+    },
+    "items": {
+      "rhinoplasty": {
+        "name": "Rinoplastica (Chirurgia del Naso)",
+        "meta_title": "Rinoplastica: Chirurgia Esperta di Rimodellamento del Naso",
+        "meta_description": "Ottieni un profilo facciale più equilibrato e armonioso con la rinoplastica. I nostri chirurghi esperti sono specializzati nel rimodellamento del naso per correggere dimensioni, forma e problemi respiratori per risultati belli e dall'aspetto naturale.",
+        "meta_keywords": "rinoplastica, chirurgia del naso, rimodellamento del naso, chirurgia estetica, setto deviato, chirurgia nasale, armonia facciale",
+        "content_sections": {
+          "what_is": {
+            "type": "paragraph",
+            "content": "La <strong>rinoplastica</strong>, comunemente nota come \"intervento al naso\", è una procedura chirurgica sofisticata progettata per migliorare l'aspetto estetico del naso e correggere problemi di respirazione funzionali. Che tu sia preoccupato per una gobba dorsale, un ponte largo o una punta indefinita, la rinoplastica può portare il tuo naso in maggiore armonia con gli altri tratti del viso."
+          },
+          "our_approach": {
+            "type": "paragraph",
+            "content": "La nostra filosofia si concentra sulla creazione di risultati che siano belli ed eccezionalmente naturali. I nostri chirurghi combinano la precisione tecnica con un occhio artistico per scolpire un naso che si adatti alla tua struttura facciale unica. Utilizziamo l'imaging avanzato per simulare i risultati potenziali, assicurandoci di essere in linea con la tua visione."
+          },
+          "candidates_recovery": {
+            "type": "paragraph",
+            "content": "I candidati ideali sono individui in buona salute generale con aspettative realistiche. L'intervento viene eseguito in anestesia generale e il recupero richiede in genere una settimana di riposo con un tutore. I risultati finali e definiti emergeranno nel corso di un anno."
+          }
+        }
+      }
     }
   }
 }

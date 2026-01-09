@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import React from 'react';
 import { allServices } from '@/lib/services';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -12,11 +12,10 @@ import Head from 'next/head';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
-
 type ServicePageLayoutProps = {
   serviceName: string;
   serviceId: string;
-  contentSections: { [key: string]: { heading?: string; paragraphs: string[] } };
+  contentSections: any; // Allow any since structure can vary
   metaTitle?: string;
   metaDescription?: string;
   metaKeywords?: string;
@@ -41,14 +40,29 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
     if (!contentSections || Object.keys(contentSections).length === 0) {
         return <p>Content for this service is not available yet. Please check back later.</p>
     }
-    return Object.values(contentSections).map((section, index) => (
-        <div key={index} className="mb-8">
-            {section.heading && <h2 className="text-3xl font-bold font-headline text-primary mb-4" dangerouslySetInnerHTML={{ __html: section.heading }}></h2>}
-            {section.paragraphs.map((p, pIndex) => (
-                <p key={pIndex} className="mb-4 text-foreground/90 leading-relaxed text-lg" dangerouslySetInnerHTML={{ __html: p }}></p>
-            ))}
-        </div>
-    ));
+    
+    return Object.values(contentSections).map((section: any, index: number) => {
+        if (!section || !section.type) return null;
+        switch (section.type) {
+            case 'text':
+                return <h2 key={index} className="text-3xl font-bold font-headline text-primary mb-4" dangerouslySetInnerHTML={{ __html: section.content }}></h2>;
+            case 'paragraph':
+                return <p key={index} className="mb-4 text-foreground/90 leading-relaxed text-lg" dangerouslySetInnerHTML={{ __html: section.content }}></p>;
+            case 'list':
+                return (
+                    <div key={index} className="mb-8">
+                        {section.title && <h3 className="text-2xl font-bold font-headline text-primary mb-3" dangerouslySetInnerHTML={{ __html: section.title }}></h3>}
+                        <ul className="list-disc list-inside space-y-2 text-lg">
+                            {section.items.map((item: string, i: number) => (
+                                <li key={i} dangerouslySetInnerHTML={{ __html: item }}></li>
+                            ))}
+                        </ul>
+                    </div>
+                );
+            default:
+                return null;
+        }
+    });
   }
   
   return (

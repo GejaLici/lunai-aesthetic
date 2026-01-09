@@ -248,14 +248,36 @@
       }
     },
     "subcategories": {
-        "surgical": "Kirurgjikale",
-        "nonSurgical": "Jo-Kirurgjikale",
-        "aesthetics": "Estetikë",
-        "prosthetics": "Protetikë",
-        "orthodontics": "Ortodonci",
-        "therapy": "Terapi",
-        "surgery": "Kirurgji",
-        "pedodontics": "Pedodonci"
+      "surgical": "Kirurgjikale",
+      "nonSurgical": "Jo-Kirurgjikale",
+      "aesthetics": "Estetikë",
+      "prosthetics": "Protetikë",
+      "orthodontics": "Ortodonci",
+      "therapy": "Terapi",
+      "surgery": "Kirurgji",
+      "pedodontics": "Pedodonci"
+    },
+    "items": {
+      "rhinoplasty": {
+        "name": "Rinoplastika (Operacioni i Hundës)",
+        "meta_title": "Rinoplastika: Kirurgji Eksperte e Rimodelimit të Hundës",
+        "meta_description": "Arrini një profil fytyre më të ekuilibruar dhe harmonik me rinoplastikën. Kirurgët tanë ekspertë specializohen në rimodelimin e hundës për të korrigjuar madhësinë, formën dhe problemet e frymëmarrjes për rezultate të bukura dhe natyrale.",
+        "meta_keywords": "rinoplastika, operacioni i hundës, rimodelimi i hundës, kirurgji estetike, devijimi i septumit, kirurgjia e hundës, harmonia e fytyrës",
+        "content_sections": {
+          "what_is": {
+            "type": "paragraph",
+            "content": "<strong>Rinoplastika</strong>, e njohur zakonisht si \"operacioni i hundës\", është një procedurë kirurgjikale e sofistikuar e krijuar për të përmirësuar pamjen estetike të hundës dhe për të korrigjuar problemet funksionale të frymëmarrjes. Pavarësisht nëse jeni të shqetësuar për një gungë dorsale, një urë të gjerë ose një majë të papërcaktuar, rinoplastika mund ta sjellë hundën tuaj në harmoni më të mirë me tiparet e tjera të fytyrës."
+          },
+          "our_approach": {
+            "type": "paragraph",
+            "content": "Filozofia jonë përqendrohet në krijimin e rezultateve që janë të bukura dhe jashtëzakonisht natyrale. Kirurgët tanë kombinojnë saktësinë teknike me një sy artistik për të skalitur një hundë që plotëson strukturën tuaj unike të fytyrës. Ne përdorim imazhe të avancuara për të simuluar rezultatet e mundshme, duke siguruar që jemi në përputhje me vizionin tuaj."
+          },
+          "candidates_recovery": {
+            "type": "paragraph",
+            "content": "Kandidatët idealë janë individë me shëndet të mirë të përgjithshëm dhe me pritshmëri realiste. Operacioni kryhet nën anestezi të përgjithshme dhe rikuperimi zakonisht përfshin një javë pushim me një allçi. Rezultatet përfundimtare dhe të rafinuara do të shfaqen gjatë një viti."
+          }
+        }
+      }
     }
   }
 }
