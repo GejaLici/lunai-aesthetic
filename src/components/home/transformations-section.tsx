@@ -1,4 +1,3 @@
-
 'use client';
 
 import * as React from 'react';
@@ -9,15 +8,21 @@ import { Card } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { allServices, type ServiceItem } from '@/lib/services';
 import { useTranslations, useServiceTranslation } from '@/hooks/use-translations';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } from "@/components/ui/carousel";
 
-const TransformationCard = ({ service, index }: { service: ServiceItem; index: number }) => {
+const TransformationCard = ({ service }: { service: ServiceItem; }) => {
   const t = useTranslations('HomePage');
   const { name: serviceName } = useServiceTranslation(service.id);
 
   return (
     <Card
-      className="relative flex flex-col h-96 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20 animate-fadeIn"
-      style={{ animationDelay: `${0.1 * index}s` }}
+      className="relative flex flex-col h-96 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20"
     >
       <Image
         src={service.imageAfter}
@@ -47,6 +52,11 @@ const TransformationCard = ({ service, index }: { service: ServiceItem; index: n
 export const TransformationsSection = React.memo(function TransformationsSection() {
   const t = useTranslations('HomePage');
   const transformations = (allServices || []).slice(0, 6);
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <section className="container mx-auto px-4 pb-12">
@@ -56,11 +66,28 @@ export const TransformationsSection = React.memo(function TransformationsSection
         </h2>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {transformations.map((service, index) => (
-            <TransformationCard key={service.id} service={service} index={index} />
-        ))}
-      </div>
+      {isClient && (
+         <Carousel
+            className="w-full max-w-xs sm:max-w-xl md:max-w-4xl lg:max-w-6xl mx-auto"
+            opts={{
+                align: "start",
+                loop: true,
+            }}
+        >
+            <CarouselContent>
+                {transformations.map((service, index) => (
+                     <CarouselItem key={service.id} className="md:basis-1/2 lg:basis-1/3">
+                        <div className="p-1 h-full">
+                            <TransformationCard service={service} />
+                        </div>
+                    </CarouselItem>
+                ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 sm:-left-4 md:-left-8" />
+            <CarouselNext className="right-2 sm:-right-4 md:-right-8" />
+        </Carousel>
+      )}
+
 
       <div className="text-center mt-12">
         <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
