@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -31,8 +32,11 @@ export const WhyChooseUsSection = React.memo(function WhyChooseUsSection() {
                   <CardTitle className="font-headline text-2xl text-primary">{t(`whyChooseUs.${item.key}.title`)}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <p className="text-card-foreground/90">
+                  <p className="text-card-foreground/90 mb-4">
                     {t(`whyChooseUs.${item.key}.description`)}
+                  </p>
+                  <p className="text-card-foreground/70 text-sm">
+                    {t(`whyChooseUs.${item.key}.moreInfo`)}
                   </p>
                 </CardContent>
               </Card>
