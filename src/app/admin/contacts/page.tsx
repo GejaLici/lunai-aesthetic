@@ -15,19 +15,23 @@ async function getContactSubmissions() {
     
     const contacts = contactsSnapshot.docs.map(doc => {
         const data = doc.data();
-        const submittedAt = data.submittedAt?.toDate();
+        // The 'submittedAt' field might be a Firestore Timestamp.
+        // We need to convert it to a JavaScript Date object before formatting.
+        const submittedAt = data.submittedAt?.toDate ? data.submittedAt.toDate() : null;
         return {
             id: doc.id,
-            name: data.name,
-            email: data.email,
+            name: data.name || 'N/A',
+            email: data.email || 'N/A',
             phone: data.phone || 'N/A',
-            message: data.message,
+            message: data.message || '',
+            // Only format the date if it's a valid Date object
             submittedAt: submittedAt ? format(submittedAt, "PPP p") : 'Date not available',
         }
     });
     return contacts;
   } catch (error) {
     console.error("Error fetching contact submissions:", error);
+    // Return an empty array in case of an error to prevent the page from crashing.
     return [];
   }
 }
@@ -49,37 +53,39 @@ export default async function ContactsAdminPage() {
           <CardDescription>You have received {submissions.length} messages.</CardDescription>
         </CardHeader>
         <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[180px]">Date</TableHead>
-                <TableHead className="w-[200px]">Name</TableHead>
-                <TableHead>Email & Phone</TableHead>
-                <TableHead>Message</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {submissions.length > 0 ? (
-                submissions.map((submission) => (
-                  <TableRow key={submission.id}>
-                    <TableCell>{submission.submittedAt}</TableCell>
-                    <TableCell className="font-medium">{submission.name}</TableCell>
-                    <TableCell>
-                        <div>{submission.email}</div>
-                        <div className="text-muted-foreground text-xs">{submission.phone}</div>
-                    </TableCell>
-                    <TableCell className="max-w-md whitespace-pre-wrap">{submission.message}</TableCell>
-                  </TableRow>
-                ))
-              ) : (
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader>
                 <TableRow>
-                  <TableCell colSpan={4} className="h-24 text-center">
-                    No messages yet.
-                  </TableCell>
+                  <TableHead className="w-[200px]">Date</TableHead>
+                  <TableHead className="w-[200px]">Name</TableHead>
+                  <TableHead>Email & Phone</TableHead>
+                  <TableHead>Message</TableHead>
                 </TableRow>
-              )}
-            </TableBody>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                {submissions.length > 0 ? (
+                  submissions.map((submission) => (
+                    <TableRow key={submission.id}>
+                      <TableCell className="whitespace-nowrap">{submission.submittedAt}</TableCell>
+                      <TableCell className="font-medium">{submission.name}</TableCell>
+                      <TableCell>
+                          <div>{submission.email}</div>
+                          <div className="text-muted-foreground text-xs">{submission.phone}</div>
+                      </TableCell>
+                      <TableCell className="min-w-[300px] whitespace-pre-wrap">{submission.message}</TableCell>
+                    </TableRow>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={4} className="h-24 text-center">
+                      No messages yet.
+                    </TableCell>
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+          </div>
         </CardContent>
       </Card>
     </div>
