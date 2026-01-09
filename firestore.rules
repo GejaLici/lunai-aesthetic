@@ -7,9 +7,10 @@ service cloud.firestore {
       allow read, write: if true;
     }
 
-    // Allow write access for contact form submissions
+    // Allow create access for contact form submissions, and read for authenticated users
     match /contactSubmissions/{submissionId} {
       allow create: if true;
+      allow read: if request.auth != null;
     }
 
     // Allow read/write access for Genkit flow and trace data
@@ -21,3 +22,4 @@ service cloud.firestore {
     }
   }
 }
+    
