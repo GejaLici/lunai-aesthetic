@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { allServices, type ServiceItem } from '@/lib/services';
@@ -10,9 +9,10 @@ import { useTranslations, useServiceTranslation } from '@/hooks/use-translations
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 import { cn } from '@/lib/utils';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const TransformationCard = ({ service }: { service: ServiceItem }) => {
-  const { name: serviceName } = useServiceTranslation(service.id);
+  const { name: serviceName, meta_description } = useServiceTranslation(service.id);
   return (
     <Card
       className={cn(
@@ -27,9 +27,10 @@ const TransformationCard = ({ service }: { service: ServiceItem }) => {
         className="object-cover transition-transform duration-300 group-hover:scale-110"
         data-ai-hint={`${service.dataAiHint} after`}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-      <div className="relative mt-auto p-4 z-10">
-        <h3 className="text-lg font-headline text-white mb-1">{serviceName}</h3>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      <div className="relative mt-auto p-4 z-10 text-white">
+        <h3 className="text-lg font-headline font-bold mb-1">{serviceName}</h3>
+        <p className="text-xs text-white/80 line-clamp-2">{meta_description}</p>
       </div>
     </Card>
   );
