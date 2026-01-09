@@ -72,7 +72,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 };
 
 // Utility function to safely access nested properties
-const get = (obj: any, path: string): string | undefined => {
+const get = (obj: any, path: string): any => {
   const keys = path.split('.');
   let result = obj;
   for (const key of keys) {
@@ -126,32 +126,31 @@ export const useTranslations = (namespace?: string) => {
 export const useServiceTranslation = (serviceId: string) => {
     const { messages, locale } = useContext(LanguageContext)!;
     
-    const fallbackData = {
+    const fallbackData = useMemo(() => ({
         name: serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
         content_sections: {},
         meta_title: '',
         meta_description: '',
         meta_keywords: '',
-    };
+    }), [serviceId]);
     
     const serviceData = useMemo(() => {
         const path = `services.items.${serviceId}`;
         const service = get(messages, path);
 
         if (!service || typeof service !== 'object') {
-             console.warn(`Service translation not found for id: '${serviceId}' in locale '${locale}'.`);
             return fallbackData;
         }
         
         return {
             name: service.name || fallbackData.name,
             content_sections: service.content_sections || fallbackData.content_sections,
-            meta_title: service.meta_title || fallbackData.name,
-            meta_description: service.meta_description || `Learn more about ${fallbackData.name}`,
+            meta_title: service.meta_title || service.name || fallbackData.name,
+            meta_description: service.meta_description || `Learn more about ${service.name || fallbackData.name}`,
             meta_keywords: service.meta_keywords || '',
         };
         
-    }, [messages, serviceId, fallbackData, locale]);
+    }, [messages, serviceId, fallbackData]);
 
     return serviceData;
 };
