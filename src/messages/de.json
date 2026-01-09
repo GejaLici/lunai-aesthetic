@@ -247,6 +247,16 @@
         "title": "Zahnmedizin"
       }
     },
+    "subcategories": {
+      "surgical": "Chirurgisch",
+      "nonSurgical": "Nicht-chirurgisch",
+      "aesthetics": "Ästhetik",
+      "prosthetics": "Prothetik",
+      "orthodontics": "Kieferorthopädie",
+      "therapy": "Therapie",
+      "surgery": "Chirurgie",
+      "pedodontics": "Kinderzahnheilkunde"
+    },
     "items": {}
   }
 }

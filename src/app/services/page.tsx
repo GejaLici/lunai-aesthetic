@@ -1,4 +1,3 @@
-
 "use client";
 
 import { serviceData, ServiceItem } from '@/lib/services';
@@ -12,7 +11,7 @@ import { useTranslations, useServiceTranslation } from '@/hooks/use-translations
 
 function ServiceCard({ service }: { service: ServiceItem }) {
   const t = useTranslations('ServicesPage');
-  const { name: serviceName, description: serviceDescription } = useServiceTranslation(service.id);
+  const { name: serviceName } = useServiceTranslation(service.id);
   
   const truncate = (text: string, length: number) => {
     if (!text || typeof text !== 'string') return '';
@@ -20,16 +19,8 @@ function ServiceCard({ service }: { service: ServiceItem }) {
     return text.substring(0, length) + '...';
   };
   
-  let descriptionText = '';
-  if (typeof serviceDescription === 'object' && serviceDescription !== null) {
-    const firstSectionKey = Object.keys(serviceDescription)[0];
-    const firstSection = serviceDescription[firstSectionKey as keyof typeof serviceDescription];
-    
-    if (firstSection && Array.isArray(firstSection.paragraphs) && firstSection.paragraphs.length > 0) {
-      descriptionText = firstSection.paragraphs[0].replace(/<[^>]*>?/gm, '');
-    }
-  }
-
+  let descriptionText = `Learn more about ${serviceName}`;
+  
   return (
     <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card">
       <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
@@ -63,7 +54,8 @@ function ServiceCard({ service }: { service: ServiceItem }) {
 
 export default function ServicesPage() {
   const t = useTranslations('ServicesPage');
-  const tServices = useTranslations('services');
+  const tCategories = useTranslations('services.categories');
+  const tSubcategories = useTranslations('services.subcategories');
 
   if (!serviceData || serviceData.length === 0) {
     return (
@@ -72,6 +64,12 @@ export default function ServicesPage() {
       </div>
     );
   }
+
+  const surgicalServices = (category: string) => serviceData.find(c => c.id === category)?.services.filter(s => s.serviceType === 'operation') || [];
+  const nonSurgicalServices = (category: string) => serviceData.find(c => c.id === category)?.services.filter(s => s.serviceType === 'treatment') || [];
+
+  const dentalSubcategories = ['aesthetics', 'prosthetics', 'orthodontics', 'therapy', 'surgery', 'pedodontics'];
+  const dentistryServices = serviceData.find(c => c.id === 'dentistry')?.services || [];
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -87,20 +85,66 @@ export default function ServicesPage() {
         <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-12 mb-8">
           {serviceData.map((category) => (
             <TabsTrigger key={category.id} value={category.id} className="py-2.5 text-base">
-              {tServices(`categories.${category.id}.title`)}
+              {tCategories(`${category.id}.title`)}
             </TabsTrigger>
           ))}
         </TabsList>
 
-        {serviceData.map((category) => (
-          <TabsContent key={category.id} value={category.id} id={category.id}>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service) => (
-                <ServiceCard key={service.id} service={service} />
-              ))}
-            </div>
-          </TabsContent>
-        ))}
+        {/* Facial Aesthetics */}
+        <TabsContent value="face">
+          <Tabs defaultValue="surgical" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="surgical">{tSubcategories('surgical')}</TabsTrigger>
+              <TabsTrigger value="non-surgical">{tSubcategories('nonSurgical')}</TabsTrigger>
+            </TabsList>
+            <TabsContent value="surgical">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {surgicalServices('face').map(service => <ServiceCard key={service.id} service={service} />)}
+              </div>
+            </TabsContent>
+            <TabsContent value="non-surgical">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {nonSurgicalServices('face').map(service => <ServiceCard key={service.id} service={service} />)}
+              </div>
+            </TabsContent>
+          </Tabs>
+        </TabsContent>
+
+        {/* Body Contouring */}
+        <TabsContent value="body">
+           <Tabs defaultValue="surgical" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="surgical">{tSubcategories('surgical')}</TabsTrigger>
+              <TabsTrigger value="non-surgical">{tSubcategories('nonSurgical')}</TabsTrigger>
+            </TabsList>
+            <TabsContent value="surgical">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {surgicalServices('body').map(service => <ServiceCard key={service.id} service={service} />)}
+              </div>
+            </TabsContent>
+            <TabsContent value="non-surgical">
+               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {nonSurgicalServices('body').map(service => <ServiceCard key={service.id} service={service} />)}
+              </div>
+            </TabsContent>
+          </Tabs>
+        </TabsContent>
+
+        {/* Dentistry */}
+        <TabsContent value="dentistry">
+           <Tabs defaultValue="aesthetics" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 h-auto mb-8">
+               {dentalSubcategories.map(sub => <TabsTrigger key={sub} value={sub}>{tSubcategories(sub)}</TabsTrigger>)}
+            </TabsList>
+            {dentalSubcategories.map(sub => (
+              <TabsContent key={sub} value={sub}>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {dentistryServices.filter(s => s.dentalCategory === sub).map(service => <ServiceCard key={service.id} service={service} />)}
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </TabsContent>
       </Tabs>
     </div>
   );

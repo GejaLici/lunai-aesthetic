@@ -52,7 +52,7 @@
       },
       "naturalResults": {
         "title": "Angazhim për Rezultate Natyrale dhe Përmirësuese",
-        "description": "Filozofia jonë themelore në LUNAI përqendrohet në rritjen e bukurisë suaj të lindur, duke synuar përmirësuese delikate por domethënëse që duken autentike dhe ndjehen si versioni juaj më i mirë.",
+        "description": "Filozofia jonë themelore në LUNAI përqendrohet në rritjen e bukurisë suaj të lindur, duke synuar përmirësime delikate por domethënëse që duken autentike dhe ndjehen si versioni juaj më i mirë.",
         "moreInfo": "Ne bashkëpunojmë me ju për të krijuar një plan trajtimi të personalizuar që respekton individualitetin tuaj, duke siguruar rezultate që pasqyrojnë versionin më të mirë të vetes suaj, në mënyrë natyrale."
       }
     },
@@ -246,6 +246,16 @@
       "dentistry": {
         "title": "Stomatologji"
       }
+    },
+    "subcategories": {
+      "surgical": "Kirurgjikale",
+      "nonSurgical": "Jo-Kirurgjikale",
+      "aesthetics": "Estetikë",
+      "prosthetics": "Protetikë",
+      "orthodontics": "Ortodonci",
+      "therapy": "Terapi",
+      "surgery": "Kirurgji",
+      "pedodontics": "Pedodonci"
     },
     "items": {}
   }
