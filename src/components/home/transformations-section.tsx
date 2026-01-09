@@ -16,19 +16,21 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel";
 
-const TransformationCard = ({ service }: { service: ServiceItem; }) => {
+const TransformationCard = ({ service, large = false }: { service: ServiceItem; large?: boolean }) => {
   const t = useTranslations('HomePage');
   const { name: serviceName } = useServiceTranslation(service.id);
+  
+  const cardHeight = large ? 'h-[450px]' : 'h-80';
 
   return (
     <Card
-      className="relative flex flex-col h-96 bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20"
+      className={`relative flex flex-col ${cardHeight} bg-card shadow-lg rounded-xl overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-primary/20`}
     >
       <Image
         src={service.imageAfter}
         alt={t('transformations.imageAlt', { treatment: serviceName })}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+        sizes={large ? "100vw" : "(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 17vw"}
         className="object-cover transition-transform duration-300 group-hover:scale-110"
         data-ai-hint={`${service.dataAiHint} after`}
       />
@@ -51,12 +53,17 @@ const TransformationCard = ({ service }: { service: ServiceItem; }) => {
 
 export const TransformationsSection = React.memo(function TransformationsSection() {
   const t = useTranslations('HomePage');
-  const transformations = (allServices || []).slice(0, 6);
+  const transformations = (allServices || []).slice(0, 9); // We need a multiple of 3
   const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
     setIsClient(true);
   }, []);
+
+  const groupedTransformations = [];
+  for (let i = 0; i < transformations.length; i += 3) {
+    groupedTransformations.push(transformations.slice(i, i + 3));
+  }
 
   return (
     <section className="container mx-auto px-4 pb-12">
@@ -70,15 +77,30 @@ export const TransformationsSection = React.memo(function TransformationsSection
          <Carousel
             className="w-full max-w-xs sm:max-w-xl md:max-w-4xl lg:max-w-6xl mx-auto"
             opts={{
-                align: "start",
                 loop: true,
             }}
         >
             <CarouselContent>
-                {transformations.map((service, index) => (
-                     <CarouselItem key={service.id} className="md:basis-1/2 lg:basis-1/3">
-                        <div className="p-1 h-full">
-                            <TransformationCard service={service} />
+                {groupedTransformations.map((group, index) => (
+                    <CarouselItem key={index}>
+                        <div className="p-1">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {group[0] && (
+                                    <div className="md:col-span-2">
+                                        <TransformationCard service={group[0]} large />
+                                    </div>
+                                )}
+                                {group[1] && (
+                                    <div>
+                                        <TransformationCard service={group[1]} />
+                                    </div>
+                                )}
+                                {group[2] && (
+                                    <div>
+                                        <TransformationCard service={group[2]} />
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </CarouselItem>
                 ))}
