@@ -248,15 +248,14 @@
       }
     },
     "subcategories": {
-      "surgical": "Quirúrgico",
-      "nonSurgical": "No Quirúrgico",
-      "aesthetics": "Estética",
-      "prosthetics": "Prótesis",
-      "orthodontics": "Ortodoncia",
-      "therapy": "Terapia",
-      "surgery": "Cirugía",
-      "pedodontics": "Odontopediatría"
-    },
-    "items": {}
+        "surgical": "Quirúrgico",
+        "nonSurgical": "No Quirúrgico",
+        "aesthetics": "Estética",
+        "prosthetics": "Prótesis",
+        "orthodontics": "Ortodoncia",
+        "therapy": "Terapia",
+        "surgery": "Cirugía",
+        "pedodontics": "Odontopediatría"
+    }
   }
 }

@@ -248,15 +248,14 @@
       }
     },
     "subcategories": {
-      "surgical": "Chirurgico",
-      "nonSurgical": "Non Chirurgico",
-      "aesthetics": "Estetica",
-      "prosthetics": "Protesi",
-      "orthodontics": "Ortodonzia",
-      "therapy": "Terapia",
-      "surgery": "Chirurgia",
-      "pedodontics": "Pedodonzia"
-    },
-    "items": {}
+        "surgical": "Chirurgico",
+        "nonSurgical": "Non Chirurgico",
+        "aesthetics": "Estetica",
+        "prosthetics": "Protesi",
+        "orthodontics": "Ortodonzia",
+        "therapy": "Terapia",
+        "surgery": "Chirurgia",
+        "pedodontics": "Pedodonzia"
+    }
   }
 }

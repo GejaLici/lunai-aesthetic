@@ -248,15 +248,14 @@
       }
     },
     "subcategories": {
-      "surgical": "Kirurgjikale",
-      "nonSurgical": "Jo-Kirurgjikale",
-      "aesthetics": "Estetikë",
-      "prosthetics": "Protetikë",
-      "orthodontics": "Ortodonci",
-      "therapy": "Terapi",
-      "surgery": "Kirurgji",
-      "pedodontics": "Pedodonci"
-    },
-    "items": {}
+        "surgical": "Kirurgjikale",
+        "nonSurgical": "Jo-Kirurgjikale",
+        "aesthetics": "Estetikë",
+        "prosthetics": "Protetikë",
+        "orthodontics": "Ortodonci",
+        "therapy": "Terapi",
+        "surgery": "Kirurgji",
+        "pedodontics": "Pedodonci"
+    }
   }
 }

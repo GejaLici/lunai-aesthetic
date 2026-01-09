@@ -248,15 +248,14 @@
       }
     },
     "subcategories": {
-      "surgical": "Surgical",
-      "nonSurgical": "Non-Surgical",
-      "aesthetics": "Aesthetics",
-      "prosthetics": "Prosthetics",
-      "orthodontics": "Orthodontics",
-      "therapy": "Therapy",
-      "surgery": "Surgery",
-      "pedodontics": "Pedodontics"
-    },
-    "items": {}
+        "surgical": "Surgical",
+        "nonSurgical": "Non-Surgical",
+        "aesthetics": "Aesthetics",
+        "prosthetics": "Prosthetics",
+        "orthodontics": "Orthodontics",
+        "therapy": "Therapy",
+        "surgery": "Surgery",
+        "pedodontics": "Pedodontics"
+    }
   }
 }
