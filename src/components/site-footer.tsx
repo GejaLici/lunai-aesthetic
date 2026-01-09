@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, UserCog } from 'lucide-react';
 import { useTranslations } from '@/hooks/use-translations';
 import Image from 'next/image';
 
@@ -50,6 +50,9 @@ export function SiteFooter() {
               </Link>
               <Link href="#" aria-label="GitHub" className="text-muted-foreground hover:text-accent transition-colors">
                 <Github size={24} />
+              </Link>
+               <Link href="/admin" aria-label="Admin Dashboard" className="text-muted-foreground hover:text-accent transition-colors">
+                <UserCog size={24} />
               </Link>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
