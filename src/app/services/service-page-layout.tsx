@@ -73,7 +73,7 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
         </h1>
       </div>
       
-      <div className="grid lg:grid-cols-5 gap-12">
+      <div className="grid lg:grid-cols-4 gap-12">
         <main className="lg:col-span-3">
             <Card className="shadow-lg">
                 <CardContent className="p-8">
@@ -82,7 +82,7 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
             </Card>
         </main>
 
-        <aside className="lg:col-span-2 space-y-8">
+        <aside className="lg:col-span-1 space-y-8">
            <Card className="shadow-lg">
                 <CardHeader>
                     <CardTitle>Results</CardTitle>
