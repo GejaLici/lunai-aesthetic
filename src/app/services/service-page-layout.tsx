@@ -11,6 +11,7 @@ import { useTranslations } from '@/hooks/use-translations';
 import { Badge } from '@/components/ui/badge';
 import Head from 'next/head';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
 
 type ServicePageLayoutProps = {
@@ -43,9 +44,9 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
     }
     return Object.values(contentSections).map((section, index) => (
         <div key={index} className="mb-8">
-            {section.heading && <h2 className="text-2xl font-bold font-headline text-primary mb-4" dangerouslySetInnerHTML={{ __html: section.heading }}></h2>}
+            {section.heading && <h2 className="text-3xl font-bold font-headline text-primary mb-4" dangerouslySetInnerHTML={{ __html: section.heading }}></h2>}
             {section.paragraphs.map((p, pIndex) => (
-                <p key={pIndex} className="mb-4 text-foreground/90 leading-relaxed" dangerouslySetInnerHTML={{ __html: p }}></p>
+                <p key={pIndex} className="mb-4 text-foreground/90 leading-relaxed text-lg" dangerouslySetInnerHTML={{ __html: p }}></p>
             ))}
         </div>
     ));
@@ -58,55 +59,68 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
         <meta name="description" content={metaDescription || `Learn more about ${serviceName} at LUNAI.`} />
         {metaKeywords && <meta name="keywords" content={metaKeywords} />}
     </Head>
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
-       <div className="mb-8">
-         <Button asChild variant="ghost" className="mb-4 text-muted-foreground hover:text-primary">
-            <Link href="/services">
-                <MoveLeft className="mr-2 h-4 w-4" />
-                {t('backButton')}
-            </Link>
-         </Button>
-         <Badge variant={isSurgical ? 'destructive' : 'secondary'} className="mb-2 text-sm py-1 px-3">
-            {isSurgical ? t('surgicalProcedure') : t('nonSurgicalTreatment')}
-        </Badge>
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mt-2" dangerouslySetInnerHTML={{ __html: serviceName }}>
-        </h1>
-      </div>
-      
-      <div className="grid lg:grid-cols-4 gap-12">
-        <main className="lg:col-span-3">
-            <Card className="shadow-lg">
-                <CardContent className="p-8">
-                     {renderContent()}
-                </CardContent>
-            </Card>
-        </main>
+    <article>
+        {/* Hero Section */}
+        <section className="relative h-[50vh] min-h-[400px] w-full flex items-center justify-center text-center text-white overflow-hidden">
+             <div className="absolute inset-0 z-0">
+                <Image
+                    src={service.imageAfter}
+                    alt={t('afterImageAlt', { serviceName })}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={`${service.dataAiHint} after`}
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+            </div>
+            <div className="relative z-10 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto">
+                    <Button asChild variant="ghost" className="mb-4 text-white/80 hover:text-white hover:bg-white/10 absolute top-8 left-4 md:left-8">
+                        <Link href="/services">
+                            <MoveLeft className="mr-2 h-4 w-4" />
+                            {t('backButton')}
+                        </Link>
+                    </Button>
+                    <Badge variant={isSurgical ? 'destructive' : 'secondary'} className="mb-4 text-sm py-1 px-3">
+                        {isSurgical ? t('surgicalProcedure') : t('nonSurgicalTreatment')}
+                    </Badge>
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold" dangerouslySetInnerHTML={{ __html: serviceName }}></h1>
+                </div>
+            </div>
+        </section>
+        
+        {/* Content Section */}
+        <section className="py-12 md:py-16">
+            <div className="container mx-auto px-4">
+                <div className="grid lg:grid-cols-5 gap-12">
+                    <main className="lg:col-span-3">
+                        {renderContent()}
+                    </main>
 
-        <aside className="lg:col-span-1 space-y-8">
-           <Card className="shadow-lg">
-                <CardHeader>
-                    <CardTitle>Results</CardTitle>
-                </CardHeader>
-                <CardContent className="grid grid-cols-2 gap-4">
-                    <div className="relative aspect-square rounded-lg overflow-hidden group">
-                        <Image src={service.imageBefore} alt={t('beforeImageAlt', { serviceName })} fill sizes="(max-width: 1024px) 50vw, 33vw" className="object-cover transition-transform duration-300 group-hover:scale-105" data-ai-hint={`${service.dataAiHint} before`} />
-                        <div className="absolute bottom-0 w-full text-center bg-black/60 text-white text-xs py-1 font-semibold">{t('before')}</div>
-                    </div>
-                    <div className="relative aspect-square rounded-lg overflow-hidden group">
-                        <Image src={service.imageAfter} alt={t('afterImageAlt', { serviceName })} fill sizes="(max-width: 1024px) 50vw, 33vw" className="object-cover transition-transform duration-300 group-hover:scale-105" data-ai-hint={`${service.dataAiHint} after`} />
-                        <div className="absolute bottom-0 w-full text-center bg-black/60 text-white text-xs py-1 font-semibold">{t('after')}</div>
-                    </div>
-                </CardContent>
-           </Card>
-           <Card className="shadow-lg bg-secondary/50 text-center p-6">
-                <CardTitle className="text-xl mb-4">Ready for Your Transformation?</CardTitle>
-                 <Button asChild size="lg" className="w-full">
-                    <Link href="/consultation">{t('bookConsultation')}</Link>
-                </Button>
-           </Card>
-        </aside>
-      </div>
-    </div>
+                    <aside className="lg:col-span-2 space-y-8 lg:sticky lg:top-24 h-max">
+                        <Card className="shadow-xl border-border/20">
+                            <CardHeader>
+                                <CardTitle className="font-headline text-2xl text-primary">Witness the Transformation</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <ReactCompareSlider
+                                    className="w-full aspect-square rounded-lg overflow-hidden border-2 border-border"
+                                    itemOne={<ReactCompareSliderImage src={service.imageBefore} alt={t('beforeImageAlt', { serviceName })} />}
+                                    itemTwo={<ReactCompareSliderImage src={service.imageAfter} alt={t('afterImageAlt', { serviceName })} />}
+                                />
+                            </CardContent>
+                       </Card>
+                       <Card className="shadow-xl bg-secondary/30 text-center p-6 border-border/10">
+                            <CardTitle className="text-2xl mb-4 font-headline text-primary">Ready for Your Transformation?</CardTitle>
+                             <Button asChild size="lg" className="w-full text-lg py-6">
+                                <Link href="/consultation">{t('bookConsultation')}</Link>
+                            </Button>
+                       </Card>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </article>
     </>
   );
 }
