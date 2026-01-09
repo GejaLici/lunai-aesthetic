@@ -3,7 +3,6 @@
 import { db } from '@/lib/firebase';
 import { collection, addDoc, doc, updateDoc, getDoc, serverTimestamp, deleteDoc } from 'firebase/firestore';
 import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
 const BlogFormSchema = z.object({
@@ -99,6 +98,8 @@ export async function saveBlogPost(formData: BlogFormData) {
     revalidatePath('/admin/blog');
     revalidatePath(`/blog/${data.slug}`);
 
+    return { success: true };
+
   } catch (error) {
     console.error("Error saving blog post:", error);
     const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred.';
@@ -107,9 +108,6 @@ export async function saveBlogPost(formData: BlogFormData) {
         message: `Failed to save blog post: ${errorMessage}`
     };
   }
-  
-  // This should only be called on success
-  redirect('/admin/blog');
 }
 
 
@@ -159,6 +157,7 @@ export async function deleteBlogPost(id: string) {
         await deleteDoc(doc(db, 'blogPosts', id));
         revalidatePath('/blog');
         revalidatePath('/admin/blog');
+        return { success: true };
     } catch (error) {
         console.error("Error deleting blog post:", error);
         return {
@@ -166,5 +165,4 @@ export async function deleteBlogPost(id: string) {
             message: 'Failed to delete blog post.'
         }
     }
-    redirect('/admin/blog');
 }

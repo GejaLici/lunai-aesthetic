@@ -13,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { saveBlogPost, type BlogFormData, deleteBlogPost } from './actions';
 import { useState } from 'react';
 import { Loader2, Save, Trash2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -59,6 +60,7 @@ type BlogFormProps = {
 export function BlogForm({ post }: BlogFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   const isEditing = !!post?.id;
 
   const form = useForm<BlogFormData>({
@@ -92,10 +94,15 @@ export function BlogForm({ post }: BlogFormProps) {
   const onSubmit: SubmitHandler<BlogFormData> = async (data) => {
     setIsLoading(true);
     
-    // The server action will redirect on success, so we only need to handle the error case
     const result = await saveBlogPost(data);
     
-    if (result && !result.success) {
+    if (result.success) {
+        toast({
+            title: `Post ${isEditing ? 'Updated' : 'Created'}`,
+            description: `The blog post has been successfully ${isEditing ? 'updated' : 'created'}.`,
+        });
+        router.push('/admin/blog');
+    } else {
       toast({
         title: 'Error saving post',
         description: result.message,
@@ -108,13 +115,21 @@ export function BlogForm({ post }: BlogFormProps) {
   const handleDelete = async () => {
     if (post?.id) {
         setIsLoading(true);
-        await deleteBlogPost(post.id);
-        toast({
-            title: 'Post Deleted',
-            description: 'The blog post has been successfully deleted.',
-        });
-        // The server action will redirect, but we set loading to false in case it doesn't
-        setIsLoading(false);
+        const result = await deleteBlogPost(post.id);
+        if (result.success) {
+            toast({
+                title: 'Post Deleted',
+                description: 'The blog post has been successfully deleted.',
+            });
+            router.push('/admin/blog');
+        } else {
+            toast({
+                title: 'Error Deleting Post',
+                description: result.message,
+                variant: 'destructive',
+            });
+            setIsLoading(false);
+        }
     }
   }
 
@@ -258,7 +273,7 @@ export function BlogForm({ post }: BlogFormProps) {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction onClick={handleDelete}>Delete</AlertDialogAction>
+                        <AlertDialogAction onClick={handleDelete} disabled={isLoading}>Delete</AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>

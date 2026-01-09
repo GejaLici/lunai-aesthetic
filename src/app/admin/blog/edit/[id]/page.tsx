@@ -17,3 +17,5 @@ export default async function EditBlogPostPage({ params }: { params: { id: strin
     </div>
   );
 }
+
+export const revalidate = 0;

@@ -1,6 +1,6 @@
 
 import { db } from '@/lib/firebase';
-import { collection, getDocs, orderBy } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { format } from 'date-fns';
@@ -15,13 +15,14 @@ async function getContactSubmissions() {
     
     const contacts = contactsSnapshot.docs.map(doc => {
         const data = doc.data();
+        const submittedAt = data.submittedAt?.toDate();
         return {
             id: doc.id,
             name: data.name,
             email: data.email,
             phone: data.phone || 'N/A',
             message: data.message,
-            submittedAt: data.submittedAt.toDate(),
+            submittedAt: submittedAt ? format(submittedAt, "PPP p") : 'Date not available',
         }
     });
     return contacts;
@@ -61,7 +62,7 @@ export default async function ContactsAdminPage() {
               {submissions.length > 0 ? (
                 submissions.map((submission) => (
                   <TableRow key={submission.id}>
-                    <TableCell>{format(submission.submittedAt, "PPP p")}</TableCell>
+                    <TableCell>{submission.submittedAt}</TableCell>
                     <TableCell className="font-medium">{submission.name}</TableCell>
                     <TableCell>
                         <div>{submission.email}</div>
