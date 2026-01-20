@@ -99,17 +99,3 @@ export default function BlogPostPage() {
         </div>
     );
 }
-
-// We keep generateStaticParams to hint Next.js about the available routes for static optimization.
-export async function generateStaticParams() {
-    try {
-        const { getAllBlogPosts } = await import('@/lib/blog-posts');
-        const posts = await getAllBlogPosts();
-        return posts.map(post => ({
-            slug: post.slug,
-        }));
-    } catch (error) {
-        console.error("Error generating static params for blog posts:", error);
-        return [];
-    }
-}
