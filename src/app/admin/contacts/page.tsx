@@ -29,20 +29,23 @@ export default function ContactsAdminPage() {
                 const q = query(contactsCollection, orderBy("submittedAt", "desc"));
                 const contactsSnapshot = await getDocs(q);
                 
-                const contacts = contactsSnapshot.docs.map(doc => {
+                const contactsData = contactsSnapshot.docs.map(doc => {
                     const data = doc.data();
                     const submittedAtTimestamp = data.submittedAt as Timestamp | undefined;
-                    
-                    let formattedDate = 'Date not available';
+
+                    let formattedDate = "Date not available";
                     if (submittedAtTimestamp && typeof submittedAtTimestamp.toDate === 'function') {
-                      try {
-                        formattedDate = format(submittedAtTimestamp.toDate(), "PPP p");
-                      } catch (e) {
-                        console.error("Error formatting date for doc " + doc.id, e);
-                        formattedDate = "Invalid Date";
-                      }
+                        try {
+                            formattedDate = format(submittedAtTimestamp.toDate(), "PPP p");
+                        } catch (error) {
+                            console.error(`Error formatting date for doc ${doc.id}:`, error);
+                            formattedDate = "Invalid Date";
+                        }
+                    } else if (data.submittedAt) {
+                        // Fallback for cases where it might not be a Timestamp object, though unlikely
+                        formattedDate = "Invalid Date Format";
                     }
-                    
+
                     return {
                         id: doc.id,
                         name: data.name || 'N/A',
@@ -50,9 +53,10 @@ export default function ContactsAdminPage() {
                         phone: data.phone || 'N/A',
                         message: data.message || '',
                         submittedAt: formattedDate,
-                    }
+                    };
                 });
-                setSubmissions(contacts);
+                
+                setSubmissions(contactsData);
             } catch (error) {
                 console.error("Error fetching contact submissions:", error);
             } finally {
