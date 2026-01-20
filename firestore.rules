@@ -1,3 +1,4 @@
+
 rules_version = '2';
 
 service cloud.firestore {
@@ -7,10 +8,10 @@ service cloud.firestore {
       allow read, write: if true;
     }
 
-    // Allow anyone to create contact form submissions, but only authenticated users to read them.
+    // Allow anyone to create contact form submissions, and allow public read for the admin panel.
     match /contactSubmissions/{submissionId} {
       allow create: if true;
-      allow read: if request.auth != null;
+      allow read: if true;
     }
 
     // Allow read/write for Genkit flow and trace data

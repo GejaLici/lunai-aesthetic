@@ -2,6 +2,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
+import enMessages from '@/messages/en.json'; // Import English messages statically
 
 // Define the shape of the translation messages
 type Messages = {
@@ -21,7 +22,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // Define the provider component
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState('en');
-  const [messages, setMessages] = useState<Messages>({});
+  const [messages, setMessages] = useState<Messages>(enMessages); // Initialize with English messages
 
   useEffect(() => {
     const loadMessages = async (currentLocale: string) => {
@@ -44,22 +45,21 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             loadedMessages = (await import('@/messages/sq.json')).default;
             break;
           default:
-            loadedMessages = (await import('@/messages/en.json')).default;
+            loadedMessages = enMessages; // Use the statically imported messages
             break;
         }
         setMessages(loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${currentLocale}`, error);
-        try {
-          const fallbackMessages = (await import('@/messages/en.json')).default;
-          setMessages(fallbackMessages);
-        } catch (fallbackError) {
-          console.error(`Could not load fallback English messages.`, fallbackError);
-          setMessages({});
-        }
+        setMessages(enMessages); // Fallback to English
       }
     };
-    loadMessages(locale);
+
+    if (locale !== 'en') {
+      loadMessages(locale);
+    } else {
+      setMessages(enMessages);
+    }
   }, [locale]);
   
   const value = useMemo(() => ({ locale, setLocale, messages }), [locale, messages]);
