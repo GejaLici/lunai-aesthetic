@@ -19,14 +19,15 @@ export default function BlogPage() {
     const fetchPosts = async () => {
       setLoading(true);
       const fetchedPosts = await getAllBlogPosts();
-      setPosts(fetchedPosts);
+      const localizedPosts = fetchedPosts.filter(post => post.title?.[locale] && post.excerpt?.[locale]);
+      setPosts(localizedPosts);
       setLoading(false);
     };
     fetchPosts();
-  }, []);
+  }, [locale]);
 
   const getLocalized = (post: BlogPost, field: 'title' | 'excerpt') => {
-      return post[field]?.[locale] || post[field]?.en;
+      return post[field]?.[locale];
   };
 
   if (loading) {

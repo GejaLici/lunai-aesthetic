@@ -37,11 +37,15 @@ function useRecentBlogPosts(count: number) {
 
 export const BlogSection = React.memo(function BlogSection() {
   const t = useTranslations('HomePage');
-  const { posts, loading } = useRecentBlogPosts(3);
+  const { posts: allRecentPosts, loading } = useRecentBlogPosts(9);
   const { locale } = useLocale();
 
+  const posts = allRecentPosts
+    .filter(post => post.title?.[locale] && post.excerpt?.[locale])
+    .slice(0, 3);
+
   const getLocalized = (post: BlogPost, field: 'title' | 'excerpt') => {
-      return post[field]?.[locale] || post[field]?.en;
+      return post[field]?.[locale];
   };
   
   if (loading) {
@@ -70,6 +74,10 @@ export const BlogSection = React.memo(function BlogSection() {
         </div>
        </section>
     )
+  }
+
+  if (posts.length === 0) {
+      return null;
   }
 
   return (

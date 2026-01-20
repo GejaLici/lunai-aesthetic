@@ -22,17 +22,24 @@ export default function BlogPostPage() {
             const fetchedPost = await getPostBySlug(slug);
             if (!fetchedPost) {
                 notFound();
+                return;
             }
+
+            if (!fetchedPost.title?.[locale] || !fetchedPost.content?.[locale]) {
+                notFound();
+                return;
+            }
+            
             setPost(fetchedPost);
             setLoading(false);
         };
 
         fetchPost();
-    }, [slug]);
+    }, [slug, locale]);
 
     useEffect(() => {
         if (post) {
-            const title = post.title?.[locale] || post.title?.en;
+            const title = post.title?.[locale];
             if (title) {
                 document.title = `${title} | LUNAI`;
             }
@@ -58,8 +65,14 @@ export default function BlogPostPage() {
         return null; // notFound() would have been called
     }
 
-    const title = post.title?.[locale] || post.title?.en;
-    const content = post.content?.[locale] || post.content?.en;
+    const title = post.title?.[locale];
+    const content = post.content?.[locale];
+
+    if (!title || !content) {
+        // This is a fallback, but the useEffect should have already called notFound()
+        notFound();
+        return null;
+    }
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -82,7 +95,7 @@ export default function BlogPostPage() {
                 </header>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-6 text-foreground/90">
-                    {content && renderContent(content)}
+                    {renderContent(content)}
                 </div>
             </article>
         </div>
