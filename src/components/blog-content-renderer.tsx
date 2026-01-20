@@ -35,7 +35,7 @@ type BlogContentRendererProps = {
 };
 
 export function BlogContentRenderer({ content }: BlogContentRendererProps) {
-  if (!content || !Array.isArray(content)) {
+  if (!content || !Array.isArray(content) || content.length === 0) {
     return (
         <p>This post has no content yet.</p>
     );

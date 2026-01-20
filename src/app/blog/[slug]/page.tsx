@@ -26,11 +26,9 @@ export default function BlogPostPage() {
                 return;
             }
 
-            // Check if there is content for the current locale.
-            // A post is considered "untranslated" if either the title or content is missing or empty.
+            // A post is considered "untranslated" if the title is missing for the current locale.
             const title = fetchedPost.title?.[locale];
-            const content = fetchedPost.content?.[locale];
-            const hasTranslation = title && Array.isArray(content) && content.length > 0;
+            const hasTranslation = !!title;
 
             if (!hasTranslation) {
                 notFound();
@@ -68,8 +66,8 @@ export default function BlogPostPage() {
     const title = post.title?.[locale];
     const content = post.content?.[locale];
 
-    if (!title || !content) {
-        // This is a fallback, but the useEffect should have already called notFound()
+    // This check is now redundant because it's handled in the useEffect, but it's a good safeguard
+    if (!title) {
         notFound();
         return null;
     }
