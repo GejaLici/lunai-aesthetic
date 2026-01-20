@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
-import { useTranslations } from '@/hooks/use-translations';
+import { useLocale, useTranslations } from '@/hooks/use-translations';
 import { Skeleton } from '../ui/skeleton';
 import { getRecentBlogPosts, type BlogPost } from '@/lib/blog-posts';
 
@@ -38,6 +38,11 @@ function useRecentBlogPosts(count: number) {
 export const BlogSection = React.memo(function BlogSection() {
   const t = useTranslations('HomePage');
   const { posts, loading } = useRecentBlogPosts(3);
+  const { locale } = useLocale();
+
+  const getLocalized = (post: BlogPost, field: 'title' | 'excerpt') => {
+      return post[field]?.[locale] || post[field]?.en;
+  };
   
   if (loading) {
     return (
@@ -79,7 +84,7 @@ export const BlogSection = React.memo(function BlogSection() {
               <div className="relative w-full h-48 rounded-t-lg overflow-hidden">
                 <Image
                   src={post.imageUrl}
-                  alt={post.title?.en || 'Blog post'}
+                  alt={getLocalized(post, 'title') || 'Blog post'}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
@@ -88,10 +93,10 @@ export const BlogSection = React.memo(function BlogSection() {
               </div>
             </CardHeader>
             <CardContent className="flex-grow pt-6 flex flex-col">
-              <CardTitle className="font-headline text-xl text-primary mb-2">{post.title?.en}</CardTitle>
-              <p className="text-sm text-muted-foreground mb-3">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <CardTitle className="font-headline text-xl text-primary mb-2">{getLocalized(post, 'title')}</CardTitle>
+              <p className="text-sm text-muted-foreground mb-3">{new Date(post.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
               <CardDescription className="text-foreground/90 text-sm mb-4 flex-grow">
-                {post.excerpt?.en}
+                {getLocalized(post, 'excerpt')}
               </CardDescription>
             </CardContent>
             <CardFooter>

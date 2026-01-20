@@ -1,34 +1,44 @@
-import { getPostBySlug, getAllBlogPosts, type BlogPost } from '@/lib/blog-posts';
-import { notFound } from 'next/navigation';
+'use client';
+
+import { getPostBySlug, type BlogPost } from '@/lib/blog-posts';
+import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useLocale } from '@/hooks/use-translations';
+import { Loader2 } from 'lucide-react';
 
-type BlogPostPageProps = {
-    params: {
-        slug: string;
-    };
-};
+export default function BlogPostPage() {
+    const params = useParams();
+    const slug = params.slug as string;
+    const { locale } = useLocale();
+    const [post, setPost] = useState<BlogPost | null>(null);
+    const [loading, setLoading] = useState(true);
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
-    const post = await getPostBySlug(params.slug);
-    if (!post) {
-        return {
-            title: 'Post Not Found'
+    useEffect(() => {
+        if (!slug) return;
+
+        const fetchPost = async () => {
+            setLoading(true);
+            const fetchedPost = await getPostBySlug(slug);
+            if (!fetchedPost) {
+                notFound();
+            }
+            setPost(fetchedPost);
+            setLoading(false);
+        };
+
+        fetchPost();
+    }, [slug]);
+
+    useEffect(() => {
+        if (post) {
+            const title = post.title?.[locale] || post.title?.en;
+            if (title) {
+                document.title = `${title} | LUNAI`;
+            }
         }
-    }
-    return {
-        title: post.title?.en,
-        description: post.excerpt?.en,
-    }
-}
+    }, [post, locale]);
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-    const post = await getPostBySlug(params.slug);
-
-    if (!post) {
-        notFound();
-    }
-    
-    // A simple function to render content. A more advanced version would parse markdown or structured content.
     const renderContent = (content: string) => {
         // Replace newline characters with <br> tags for simple formatting
         return content.split('\n').map((paragraph, index) => (
@@ -36,18 +46,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         ));
     };
 
+    if (loading) {
+      return (
+          <div className="flex h-[80vh] w-full items-center justify-center">
+              <Loader2 className="h-8 w-8 animate-spin" />
+          </div>
+      );
+    }
+    
+    if (!post) {
+        return null; // notFound() would have been called
+    }
+
+    const title = post.title?.[locale] || post.title?.en;
+    const content = post.content?.[locale] || post.content?.en;
+
     return (
         <div className="container mx-auto px-4 py-8">
             <article className="max-w-3xl mx-auto">
                 <header className="mb-8 text-center">
-                    <p className="text-sm text-muted-foreground mb-2">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                    <p className="text-sm text-muted-foreground mb-2">{new Date(post.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                     <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-                        {post.title?.en}
+                        {title}
                     </h1>
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden mt-6 shadow-lg">
                         <Image
                             src={post.imageUrl}
-                            alt={post.title?.en || 'Blog post image'}
+                            alt={title || 'Blog post image'}
                             fill
                             className="object-cover"
                             data-ai-hint={post.imageHint}
@@ -57,15 +82,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </header>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-6 text-foreground/90">
-                    {post.content?.en && renderContent(post.content.en)}
+                    {content && renderContent(content)}
                 </div>
             </article>
         </div>
     );
 }
 
+// We keep generateStaticParams to hint Next.js about the available routes for static optimization.
 export async function generateStaticParams() {
     try {
+        const { getAllBlogPosts } = await import('@/lib/blog-posts');
         const posts = await getAllBlogPosts();
         return posts.map(post => ({
             slug: post.slug,
@@ -75,6 +102,3 @@ export async function generateStaticParams() {
         return [];
     }
 }
-
-// Ensure the page is revalidated to pick up new posts, but still benefits from static generation
-export const revalidate = 60; // Revalidate every 60 seconds
