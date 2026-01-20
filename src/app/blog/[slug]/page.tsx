@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useLocale } from '@/hooks/use-translations';
 import { Loader2 } from 'lucide-react';
+import { BlogContentRenderer } from '@/components/blog-content-renderer';
 
 export default function BlogPostPage() {
     const params = useParams();
@@ -25,7 +26,13 @@ export default function BlogPostPage() {
                 return;
             }
 
-            if (!fetchedPost.title?.[locale] || !fetchedPost.content?.[locale]) {
+            // Check if there is content for the current locale.
+            // A post is considered "untranslated" if either the title or content is missing or empty.
+            const title = fetchedPost.title?.[locale];
+            const content = fetchedPost.content?.[locale];
+            const hasTranslation = title && Array.isArray(content) && content.length > 0;
+
+            if (!hasTranslation) {
                 notFound();
                 return;
             }
@@ -45,13 +52,6 @@ export default function BlogPostPage() {
             }
         }
     }, [post, locale]);
-
-    const renderContent = (content: string) => {
-        // Replace newline characters with <br> tags for simple formatting
-        return content.split('\n').map((paragraph, index) => (
-            <p key={index} className="mb-4 last:mb-0">{paragraph}</p>
-        ));
-    };
 
     if (loading) {
       return (
@@ -94,9 +94,7 @@ export default function BlogPostPage() {
                     </div>
                 </header>
 
-                <div className="prose prose-lg dark:prose-invert max-w-none mx-auto space-y-6 text-foreground/90">
-                    {renderContent(content)}
-                </div>
+                <BlogContentRenderer content={content} />
             </article>
         </div>
     );

@@ -1,3 +1,4 @@
+
 {
   "SiteHeader": {
     "home": "Inicio",
@@ -257,27 +258,97 @@
       "surgery": "Cirugía",
       "pedodontics": "Odontopediatría"
     },
-    "items": {
-      "rhinoplasty": {
-        "name": "Rinoplastia (Cirugía de Nariz)",
-        "meta_title": "Rinoplastia: Cirugía Experta de Remodelación de Nariz",
-        "meta_description": "Logre un perfil facial más equilibrado y armonioso con la rinoplastia. Nuestros cirujanos expertos se especializan en la remodelación de la nariz para corregir el tamaño, la forma y los problemas respiratorios para obtener resultados hermosos y de aspecto natural.",
-        "meta_keywords": "rinoplastia, cirugía de nariz, remodelación de nariz, cirugía estética, tabique desviado, cirugía nasal, armonía facial",
-        "content_sections": {
-          "what_is": {
-            "type": "paragraph",
-            "content": "La <strong>rinoplastia</strong>, comúnmente conocida como \"cirugía de nariz\", es un procedimiento quirúrgico sofisticado diseñado para mejorar la apariencia estética de la nariz y corregir problemas funcionales de respiración. Ya sea que le preocupe una joroba dorsal, un puente ancho o una punta indefinida, la rinoplastia puede armonizar su nariz con sus otros rasgos faciales."
-          },
-          "our_approach": {
-            "type": "paragraph",
-            "content": "Nuestra filosofía se centra en crear resultados que sean hermosos y excepcionalmente naturales. Nuestros cirujanos combinan la precisión técnica con un ojo artístico para esculpir una nariz que complemente su estructura facial única. Utilizamos imágenes avanzadas para simular posibles resultados, asegurando que nos alineamos con su visión."
-          },
-          "candidates_recovery": {
-            "type": "paragraph",
-            "content": "Los candidatos ideales son personas con buena salud general y expectativas realistas. La cirugía se realiza bajo anestesia general y la recuperación generalmente implica una semana de inactividad con una férula. Los resultados finales y refinados surgirán en el transcurso de un año."
-          }
+    "items": {}
+  },
+  "blogPosts": {
+    "1": {
+      "title": "La Guía Definitiva para el Cuidado de la Piel para un Brillo Duradero",
+      "excerpt": "Descubre consejos de expertos sobre cómo crear una rutina de cuidado de la piel que combate el envejecimiento, mejora la luminosidad y mantiene tu piel sana y hermosa."
+    },
+    "2": {
+      "title": "Botox vs. Rellenos: ¿Cuál es la Opción Correcta para Ti?",
+      "excerpt": "Un desglose completo de dos de nuestros tratamientos más populares. Comprende las diferencias y descubre cuál es el mejor para tus objetivos estéticos."
+    },
+    "3": {
+      "title": "El Camino hacia la Recuperación: Qué Esperar Después de tu Procedimiento",
+      "excerpt": "El cuidado posterior al tratamiento es crucial para obtener resultados óptimos. Aprende sobre el proceso de recuperación de nuestros procedimientos clave y cómo asegurar un viaje sin problemas."
+    },
+    "4": {
+      "title": "Una Sonrisa más Brillante: Los Beneficios del Blanqueamiento Dental Profesional",
+      "excerpt": "Explora cómo el blanqueamiento dental profesional puede mejorar drásticamente tu sonrisa y aumentar tu confianza, y en qué consiste el procedimiento."
+    },
+    "5": {
+      "title": "Contorno Corporal No Invasivo: Una Revolución en la Estética",
+      "excerpt": "Aprende sobre las últimas tecnologías no quirúrgicas que pueden ayudarte a lograr la forma corporal deseada sin el tiempo de inactividad de la cirugía."
+    },
+    "6": {
+      "title": "Manteniendo tus Resultados: Consejos de Estilo de Vida para una Belleza a Largo Plazo",
+      "excerpt": "Tu viaje estético no termina cuando sales de nuestra clínica. Descubre consejos sobre dieta, ejercicio y estilo de vida para prolongar y mejorar tus resultados."
+    },
+    "7": {
+      "title": "Entendiendo el Verdadero Costo de un Trasplante de Cabello en 2025",
+      "excerpt": "Un análisis profundo de los costos de los trasplantes de cabello para 2025, comparando técnicas, número de injertos y precios internacionales en el Reino Unido, Turquía y Albania.",
+      "date": "5 de julio de 2024",
+      "content": []
+    },
+    "8": {
+      "title": "La Verdad Sobre el 'Cuello de Pavo' y Cómo Tratarlo",
+      "excerpt": "Comprenda las causas de la flacidez del cuello, desde el envejecimiento y la genética hasta la exposición al sol, y explore los tratamientos quirúrgicos y no quirúrgicos más efectivos disponibles en LUNAI para restaurar un escote juvenil.",
+      "date": "10 de julio de 2024",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "El término 'cuello de pavo' se refiere a la piel suelta y flácida del cuello, una preocupación común que puede aparecer a medida que envejecemos. Ocurre cuando los músculos del cuello se debilitan y la piel pierde su elasticidad, lo que lleva a una apariencia arrugada y caída. Pero, ¿qué lo causa y qué se puede hacer al respecto? Vamos a profundizar."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "¿Qué Causa la Piel Flácida del Cuello?"
+        },
+        {
+            "type": "image",
+            "src": "https://picsum.photos/seed/neck-skin/800/450",
+            "alt": "Un diagrama que muestra las capas de la piel y cómo pierden elasticidad con el tiempo.",
+            "caption": "La degradación del colágeno y la elastina es una de las principales causas de la flacidez de la piel.",
+            "dataAiHint": "diagrama de envejecimiento de la piel"
+        },
+        {
+          "type": "list",
+          "content": [
+            "<strong>Envejecimiento:</strong> A medida que envejecemos, nuestra piel produce menos colágeno y elastina, las proteínas responsables de mantener la piel firme y flexible. Los músculos del cuello también comienzan a debilitarse, lo que contribuye al efecto de flacidez.",
+            "<strong>Exposición al sol:</strong> Los rayos ultravioleta (UV) del sol descomponen el colágeno y la elastina a un ritmo acelerado. El cuello es a menudo un área que olvidamos proteger con protector solar, lo que lo hace particularmente vulnerable al daño solar.",
+            "<strong>Genética:</strong> Su composición genética juega un papel importante en cómo envejece su piel. Si sus padres desarrollaron piel flácida en el cuello, es posible que esté más predispuesto a ello.",
+            "<strong>Fluctuaciones de peso:</strong> Ganar y luego perder una cantidad significativa de peso puede estirar la piel, y es posible que no tenga suficiente elasticidad para volver a su estado anterior."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "Opciones de Tratamiento Efectivas en LUNAI"
+        },
+        {
+          "type": "paragraph",
+          "content": "Afortunadamente, en LUNAI, ofrecemos una gama de tratamientos avanzados para abordar la piel flácida del cuello, desde opciones no invasivas hasta soluciones quirúrgicas para resultados más dramáticos."
+        },
+        {
+          "type": "list",
+          "content": [
+            "<strong>Lifting facial (Ritidectomía):</strong> El estándar de oro para tratar la flacidez significativa del cuello. Un lifting facial inferior o un lifting facial completo puede tensar los músculos subyacentes (platismoplastia) y eliminar el exceso de piel flácida, creando un cuello y una línea de la mandíbula más suaves y definidos. Esto proporciona los resultados más dramáticos y duraderos.",
+            "<strong>Tratamientos de Radiofrecuencia (RF):</strong> Los procedimientos no invasivos como la terapia de radiofrecuencia utilizan energía para calentar las capas profundas de la piel. Esto estimula la producción de colágeno, lo que resulta en una piel más firme y suave con el tiempo y sin tiempo de inactividad.",
+            "<strong>Microneedling:</strong> Este tratamiento crea pequeñas microlesiones en la piel para activar el proceso de curación natural del cuerpo, aumentando la producción de colágeno y elastina. Es eficaz para mejorar la textura de la piel y la flacidez leve.",
+            "<strong>Rellenos de Arrugas:</strong> Aunque no es un tratamiento directo para la flacidez, los rellenos dérmicos colocados estratégicamente pueden ayudar a suavizar la apariencia de las bandas del cuello y mejorar el contorno general de la línea de la mandíbula, reduciendo la notoriedad de un cuello de pavo."
+          ]
+        },
+        {
+            "type": "card",
+            "title": "¿Lista para Rejuvenecer tu Escote?",
+            "content": [
+              "No tienes que vivir con un 'cuello de pavo'. Nuestro equipo de expertos en LUNAI está aquí para ayudarte a comprender tus opciones y elegir el mejor camino hacia un tú más joven y seguro."
+            ],
+            "buttonText": "Reserva tu consulta hoy",
+            "buttonLink": "/contact"
         }
-      }
+      ]
     }
   }
 }

@@ -9,7 +9,7 @@ export interface BlogPost {
   slug: string;
   title?: { [key: string]: string };
   excerpt?: { [key: string]: string };
-  content?: { [key: string]: string };
+  content?: { [key: string]: any[] };
 }
 
 // Fetch all blog posts, sorted by date. For server-side rendering.

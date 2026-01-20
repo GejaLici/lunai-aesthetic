@@ -1,3 +1,4 @@
+
 {
   "SiteHeader": {
     "home": "Home",
@@ -257,28 +258,97 @@
       "surgery": "Surgery",
       "pedodontics": "Pedodontics"
     },
-    "items": {
-      "rhinoplasty": {
-        "name": "Rhinoplasty (Nose Job)",
-        "meta_title": "Rhinoplasty: Expert Nose Reshaping Surgery",
-        "meta_description": "Achieve a more balanced and harmonious facial profile with rhinoplasty. Our expert surgeons specialize in nose reshaping to correct size, shape, and breathing issues for natural-looking, beautiful results.",
-        "meta_keywords": "rhinoplasty, nose job, nose reshaping, cosmetic surgery, deviated septum, nasal surgery, facial harmony",
-        "content_sections": {
-          "what_is": {
-            "type": "paragraph",
-            "content": "<strong>Rhinoplasty</strong>, commonly known as a \"nose job,\" is a sophisticated surgical procedure designed to improve the aesthetic appearance of the nose and correct functional breathing issues. Whether you are concerned about a dorsal hump, a wide bridge, or an undefined tip, rhinoplasty can bring your nose into better harmony with your other facial features."
-          },
-          "our_approach": {
-            "type": "paragraph",
-            "content": "Our philosophy centers on creating results that are both beautiful and exceptionally natural. Our surgeons combine technical precision with an artistic eye to sculpt a nose that complements your unique facial structure. We use advanced imaging to simulate potential outcomes, ensuring we align with your vision."
-          },
-          "candidates_recovery": {
-            "type": "paragraph",
-            "content": "Ideal candidates are individuals in good general health with realistic expectations. The surgery is performed under general anesthesia, and recovery typically involves a week of downtime with a splint. The final, refined results will emerge over the course of a year."
-          }
+    "items": {}
+  },
+  "blogPosts": {
+    "1": {
+      "title": "The Ultimate Guide to Skincare for a Lasting Glow",
+      "excerpt": "Discover expert tips on building a skincare routine that fights aging, enhances radiance, and keeps your skin healthy and beautiful."
+    },
+    "2": {
+      "title": "Botox vs. Fillers: What's the Right Choice for You?",
+      "excerpt": "A comprehensive breakdown of two of our most popular treatments. Understand the differences and find out which is best for your aesthetic goals."
+    },
+    "3": {
+      "title": "The Road to Recovery: What to Expect After Your Procedure",
+      "excerpt": "Post-treatment care is crucial for optimal results. Learn about the recovery process for our key procedures and how to ensure a smooth journey."
+    },
+    "4": {
+      "title": "A Brighter Smile: The Benefits of Professional Teeth Whitening",
+      "excerpt": "Explore how professional teeth whitening can dramatically enhance your smile and boost your confidence, and what the procedure entails."
+    },
+    "5": {
+      "title": "Non-Invasive Body Contouring: A Revolution in Aesthetics",
+      "excerpt": "Learn about the latest non-surgical technologies that can help you achieve your desired body shape without the downtime of surgery."
+    },
+    "6": {
+      "title": "Maintaining Your Results: Lifestyle Tips for Long-Term Beauty",
+      "excerpt": "Your aesthetic journey doesn't end when you leave our clinic. Discover tips on diet, exercise, and lifestyle to prolong and enhance your results."
+    },
+    "7": {
+      "title": "Understanding the True Cost of a Hair Transplant in 2025",
+      "excerpt": "A deep dive into hair transplant costs for 2025, comparing techniques, graft numbers, and international prices in the UK, Turkey, and Albania.",
+      "date": "July 5, 2024",
+      "content": []
+    },
+    "8": {
+      "title": "The Truth About 'Turkey Neck' and How to Treat It",
+      "excerpt": "Understand the causes of neck sagging, from aging and genetics to sun exposure, and explore the most effective surgical and non-surgical treatments available at LUNAI to restore a youthful neckline.",
+      "date": "July 10, 2024",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "The term 'turkey neck' refers to loose, sagging skin on the neck, a common concern that can appear as we age. It happens when neck muscles weaken and the skin loses its elasticity, leading to a wrinkled, droopy appearance. But what causes it, and what can be done about it? Let's dive in."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "What Causes Sagging Neck Skin?"
+        },
+        {
+            "type": "image",
+            "src": "https://picsum.photos/seed/neck-skin/800/450",
+            "alt": "A diagram showing the layers of the skin and how they lose elasticity over time.",
+            "caption": "The breakdown of collagen and elastin is a primary cause of sagging skin.",
+            "dataAiHint": "aging skin diagram"
+        },
+        {
+          "type": "list",
+          "content": [
+            "<strong>Aging:</strong> As we get older, our skin produces less collagen and elastin, the proteins responsible for keeping skin firm and supple. The muscles in the neck also begin to weaken, contributing to the sagging effect.",
+            "<strong>Sun Exposure:</strong> Ultraviolet (UV) rays from the sun break down collagen and elastin at an accelerated rate. The neck is often an area we forget to protect with sunscreen, making it particularly vulnerable to sun damage.",
+            "<strong>Genetics:</strong> Your genetic makeup plays a significant role in how your skin ages. If your parents developed sagging neck skin, you might be more predisposed to it.",
+            "<strong>Weight Fluctuations:</strong> Gaining and then losing a significant amount of weight can stretch the skin, and it may not have enough elasticity to shrink back to its former state."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "Effective Treatment Options at LUNAI"
+        },
+        {
+          "type": "paragraph",
+          "content": "Fortunately, at LUNAI, we offer a range of advanced treatments to address sagging neck skin, from non-invasive options to surgical solutions for more dramatic results."
+        },
+        {
+          "type": "list",
+          "content": [
+            "<strong>Facelift (Rhytidectomy):</strong> The gold standard for treating significant neck sagging. A lower facelift or a full facelift can tighten the underlying muscles (platysmaplasty) and remove excess, sagging skin, creating a smoother, more defined neck and jawline. This provides the most dramatic and long-lasting results.",
+            "<strong>Radiofrequency (RF) Treatments:</strong> Non-invasive procedures like radiofrequency therapy use energy to heat the deep layers of your skin. This stimulates collagen production, resulting in tighter, smoother skin over time with no downtime.",
+            "<strong>Microneedling:</strong> This treatment creates tiny micro-injuries in the skin to trigger the body's natural healing process, boosting collagen and elastin production. It's effective for improving skin texture and mild sagging.",
+            "<strong>Wrinkle Fillers:</strong> While not a direct treatment for sagging, strategically placed dermal fillers can help to soften the appearance of neck bands and improve the overall contour of the jawline, reducing the noticeability of a turkey neck."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Ready to Rejuvenate Your Neckline?",
+          "content": [
+            "You don't have to live with a 'turkey neck'. Our team of experts at LUNAI is here to help you understand your options and choose the best path to a more youthful, confident you."
+          ],
+          "buttonText": "Book Your Consultation Today",
+          "buttonLink": "/contact"
         }
-      }
+      ]
     }
   }
 }
-    

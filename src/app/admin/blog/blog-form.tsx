@@ -7,7 +7,7 @@ import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
@@ -72,22 +72,22 @@ export function BlogForm({ post }: BlogFormProps) {
     defaultValues: post || {
       title_en: '',
       excerpt_en: '',
-      content_en: '',
+      content_en: '[]',
       title_de: '',
       excerpt_de: '',
-      content_de: '',
+      content_de: '[]',
       title_es: '',
       excerpt_es: '',
-      content_es: '',
+      content_es: '[]',
       title_fr: '',
       excerpt_fr: '',
-      content_fr: '',
+      content_fr: '[]',
       title_it: '',
       excerpt_it: '',
-      content_it: '',
+      content_it: '[]',
       title_sq: '',
       excerpt_sq: '',
-      content_sq: '',
+      content_sq: '[]',
       imageUrl: '',
       imageHint: '',
       date: new Date().toISOString().split('T')[0],
@@ -99,6 +99,24 @@ export function BlogForm({ post }: BlogFormProps) {
     setIsLoading(true);
     
     const { id, ...data } = formData;
+
+    const locales = ['en', 'de', 'es', 'fr', 'it', 'sq'];
+    const parsedContent: { [key: string]: any[] } = {};
+
+    for (const lang of locales) {
+      const contentString = data[`content_${lang}` as keyof typeof data] || '[]';
+      try {
+        parsedContent[lang] = JSON.parse(contentString);
+      } catch (e) {
+        toast({
+          title: `Invalid JSON in ${lang.toUpperCase()} Content`,
+          description: 'Please check the format. The content must be a valid JSON array.',
+          variant: 'destructive',
+        });
+        setIsLoading(false);
+        return;
+      }
+    }
   
     const postData = {
       date: data.date,
@@ -121,14 +139,7 @@ export function BlogForm({ post }: BlogFormProps) {
         it: data.excerpt_it,
         sq: data.excerpt_sq,
       },
-      content: {
-        en: data.content_en,
-        de: data.content_de,
-        es: data.content_es,
-        fr: data.content_fr,
-        it: data.content_it,
-        sq: data.content_sq,
-      },
+      content: parsedContent,
     };
 
     try {
@@ -253,7 +264,7 @@ export function BlogForm({ post }: BlogFormProps) {
         <Card>
           <CardHeader>
             <CardTitle>Content</CardTitle>
-            <CardDescription>Write your blog post content in multiple languages.</CardDescription>
+            <CardDescription>Write your blog post content in multiple languages. The content must be a valid JSON array.</CardDescription>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="en">
@@ -295,8 +306,11 @@ export function BlogForm({ post }: BlogFormProps) {
                       <FormItem>
                         <FormLabel>Content ({lang.toUpperCase()})</FormLabel>
                         <FormControl>
-                          <Textarea placeholder={`Full blog content...`} {...field} className="min-h-[200px]" />
+                          <Textarea placeholder={`[{ "type": "paragraph", "content": "Hello world!" }]`} {...field} className="min-h-[300px] font-mono text-sm" />
                         </FormControl>
+                         <FormDescription>
+                           This field accepts a JSON array of content blocks.
+                         </FormDescription>
                         <FormMessage />
                       </FormItem>
                     )}
