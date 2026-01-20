@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useContactPopup } from '@/app/providers';
 
 // Define types for content blocks
 type ContentBlock = {
@@ -35,6 +36,8 @@ type BlogContentRendererProps = {
 };
 
 export function BlogContentRenderer({ content }: BlogContentRendererProps) {
+  const { openContactPopup } = useContactPopup();
+  
   if (!content || !Array.isArray(content) || content.length === 0) {
     return (
         <p>This post has no content yet.</p>
@@ -72,6 +75,7 @@ export function BlogContentRenderer({ content }: BlogContentRendererProps) {
             );
 
           case 'card':
+            const isContactCard = block.buttonLink === '#contact';
             return (
               <div key={index} className="not-prose my-8">
                 <Card className="bg-secondary/50">
@@ -83,9 +87,15 @@ export function BlogContentRenderer({ content }: BlogContentRendererProps) {
                             <p key={i} dangerouslySetInnerHTML={{ __html: p }}></p>
                         ))}
                         {block.buttonText && block.buttonLink && (
-                            <Button asChild className="mt-4">
-                                <Link href={block.buttonLink}>{block.buttonText}</Link>
-                            </Button>
+                           isContactCard ? (
+                             <Button className="mt-4" onClick={openContactPopup}>
+                               {block.buttonText}
+                             </Button>
+                           ) : (
+                             <Button asChild className="mt-4">
+                               <Link href={block.buttonLink}>{block.buttonText}</Link>
+                             </Button>
+                           )
                         )}
                     </CardContent>
                 </Card>

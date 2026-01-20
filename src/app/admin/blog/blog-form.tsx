@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -90,12 +89,12 @@ const placeholderPost: BlogFormData = {
       },
       {
         type: 'card',
-        title: 'Ready to Build Your Perfect Routine?',
+        title: 'Have Questions? Contact Us!',
         content: [
-          "Not sure which products are right for you? Our AI-powered virtual consultant can help you identify your skin's needs and recommend the perfect LUNAI products.",
+          'Our team is ready to answer your questions and help you schedule a consultation.',
         ],
-        buttonText: 'Try Our Virtual Consultation',
-        buttonLink: '/consultation',
+        buttonText: 'Open Contact Form',
+        buttonLink: '#contact',
       },
     ],
     null,

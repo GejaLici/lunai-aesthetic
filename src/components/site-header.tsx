@@ -1,4 +1,3 @@
-
 'use client';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -9,10 +8,12 @@ import { cn } from '@/lib/utils';
 import { useTranslations } from '@/hooks/use-translations';
 import { LanguageSwitcher } from './language-switcher';
 import Image from 'next/image';
+import { useContactPopup } from '@/app/providers';
 
 export function SiteHeader() {
   const pathname = usePathname();
   const t = useTranslations('SiteHeader');
+  const { openContactPopup } = useContactPopup();
 
   const navLinks = [
     { href: '/', label: t('home') },
@@ -39,7 +40,7 @@ export function SiteHeader() {
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-background">
+              <SheetContent side="left" className="bg-background flex flex-col">
                 <nav className="grid gap-2 text-base font-medium mt-6">
                   <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 px-3">
                     <Image src="/images/logo.png?v=2" alt="LUNAI Logo" width={40} height={40} />
@@ -62,6 +63,9 @@ export function SiteHeader() {
                     </Link>
                   )})}
                 </nav>
+                <div className="mt-auto p-4">
+                   <Button className="w-full" onClick={openContactPopup}>{bookNowLabel}</Button>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
@@ -117,9 +121,7 @@ export function SiteHeader() {
           {/* Right: Controls */}
           <div className="flex items-center justify-end gap-2 ml-auto">
                <LanguageSwitcher />
-               <Button asChild>
-                  <Link href="/contact">{bookNowLabel}</Link>
-              </Button>
+               <Button onClick={openContactPopup}>{bookNowLabel}</Button>
           </div>
         </div>
       </div>

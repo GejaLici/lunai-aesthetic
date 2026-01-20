@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -14,7 +13,7 @@ import { Loader2, Send } from "lucide-react";
 import { saveContactMessage, type ContactFormData } from "@/app/contact/actions";
 import { useTranslations } from "@/hooks/use-translations";
 
-export function ContactForm() {
+export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
   const t = useTranslations('ContactPage.form');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -47,6 +46,7 @@ export function ContactForm() {
         description: t('toast.success.description'),
       });
       form.reset();
+      if (onSuccess) onSuccess();
     } else {
       let description = result.message || t('toast.error.default');
       if (result.errors) {
