@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
@@ -24,28 +25,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const loadMessages = async (currentLocale: string) => {
-      let loadedMessages;
       try {
-        switch (currentLocale) {
-          case 'de':
-            loadedMessages = (await import('@/messages/de.json')).default;
-            break;
-          case 'es':
-            loadedMessages = (await import('@/messages/es.json')).default;
-            break;
-          case 'fr':
-            loadedMessages = (await import('@/messages/fr.json')).default;
-            break;
-          case 'it':
-            loadedMessages = (await import('@/messages/it.json')).default;
-            break;
-          case 'sq':
-            loadedMessages = (await import('@/messages/sq.json')).default;
-            break;
-          default:
-            loadedMessages = (await import('@/messages/en.json')).default;
-            break;
-        }
+        const loadedMessages = (await import(`@/messages/${currentLocale}.json`)).default;
         setMessages(loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${currentLocale}`, error);

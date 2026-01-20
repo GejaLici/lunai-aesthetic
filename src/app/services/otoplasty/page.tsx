@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useServiceTranslation } from '@/hooks/use-translations';
@@ -6,7 +7,7 @@ import { ServicePageLayout } from '../service-page-layout';
 const serviceId = 'otoplasty';
 
 export default function ServicePage() {
-  const { name, description, meta_title, meta_description, meta_keywords } = useServiceTranslation(serviceId);
+  const { name, content_sections, meta_title, meta_description, meta_keywords } = useServiceTranslation(serviceId);
 
   return (
     <ServicePageLayout 
@@ -15,7 +16,7 @@ export default function ServicePage() {
         metaTitle={meta_title}
         metaDescription={meta_description}
         metaKeywords={meta_keywords}
-        contentSections={description}
+        contentSections={content_sections}
     />
   );
 }
