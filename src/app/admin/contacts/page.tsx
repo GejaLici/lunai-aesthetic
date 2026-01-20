@@ -1,44 +1,66 @@
 
+'use client';
+
 import { db } from '@/lib/firebase';
-import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query, Timestamp } from 'firebase/firestore';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { format } from 'date-fns';
+import { useEffect, useState } from 'react';
+import { Loader2 } from 'lucide-react';
 
-export const revalidate = 0; // Ensure data is fetched on every request
-
-async function getContactSubmissions() {
-  try {
-    const contactsCollection = collection(db, 'contactSubmissions');
-    const q = query(contactsCollection, orderBy("submittedAt", "desc"));
-    const contactsSnapshot = await getDocs(q);
-    
-    const contacts = contactsSnapshot.docs.map(doc => {
-        const data = doc.data();
-        // The 'submittedAt' field might be a Firestore Timestamp.
-        // We need to convert it to a JavaScript Date object before formatting.
-        const submittedAt = data.submittedAt?.toDate ? data.submittedAt.toDate() : null;
-        return {
-            id: doc.id,
-            name: data.name || 'N/A',
-            email: data.email || 'N/A',
-            phone: data.phone || 'N/A',
-            message: data.message || '',
-            // Only format the date if it's a valid Date object
-            submittedAt: submittedAt ? format(submittedAt, "PPP p") : 'Date not available',
-        }
-    });
-    return contacts;
-  } catch (error) {
-    console.error("Error fetching contact submissions:", error);
-    // Return an empty array in case of an error to prevent the page from crashing.
-    return [];
-  }
+interface Submission {
+    id: string;
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+    submittedAt: string;
 }
 
+export default function ContactsAdminPage() {
+    const [submissions, setSubmissions] = useState<Submission[]>([]);
+    const [loading, setLoading] = useState(true);
 
-export default async function ContactsAdminPage() {
-  const submissions = await getContactSubmissions();
+    useEffect(() => {
+        async function getContactSubmissions() {
+            try {
+                const contactsCollection = collection(db, 'contactSubmissions');
+                const q = query(contactsCollection, orderBy("submittedAt", "desc"));
+                const contactsSnapshot = await getDocs(q);
+                
+                const contacts = contactsSnapshot.docs.map(doc => {
+                    const data = doc.data();
+                    const submittedAtTimestamp = data.submittedAt as Timestamp | undefined;
+                    const submittedAt = submittedAtTimestamp?.toDate ? format(submittedAtTimestamp.toDate(), "PPP p") : 'Date not available';
+                    
+                    return {
+                        id: doc.id,
+                        name: data.name || 'N/A',
+                        email: data.email || 'N/A',
+                        phone: data.phone || 'N/A',
+                        message: data.message || '',
+                        submittedAt: submittedAt,
+                    }
+                });
+                setSubmissions(contacts);
+            } catch (error) {
+                console.error("Error fetching contact submissions:", error);
+            } finally {
+                setLoading(false);
+            }
+        }
+        
+        getContactSubmissions();
+    }, []);
+
+  if (loading) {
+      return (
+          <div className="flex h-[80vh] w-full items-center justify-center">
+              <Loader2 className="h-8 w-8 animate-spin" />
+          </div>
+      );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">

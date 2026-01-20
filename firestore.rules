@@ -3,15 +3,13 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Allow public read and write access for blog posts
+    // Allow read/write for authenticated users only
     match /blogPosts/{postId} {
-      allow read, write: if true;
+      allow read, write: if request.auth != null;
     }
 
-    // Allow anyone to create contact form submissions, and allow public read for the admin panel.
     match /contactSubmissions/{submissionId} {
-      allow create: if true;
-      allow read: if true;
+      allow read, write: if request.auth != null;
     }
 
     // Allow read/write for Genkit flow and trace data

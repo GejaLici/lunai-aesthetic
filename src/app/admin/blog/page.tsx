@@ -1,29 +1,48 @@
 
+'use client';
+
 import { db } from '@/lib/firebase';
-import { collection, getDocs, orderBy } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlusCircle } from 'lucide-react';
+import { Loader2, PlusCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-export const revalidate = 0; // Ensure data is fetched on every request
-
-async function getBlogPosts() {
-  try {
-    const postsCollection = collection(db, 'blogPosts');
-    const postsSnapshot = await getDocs(postsCollection);
-    const posts = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    // Assuming posts have a 'date' field in 'YYYY-MM-DD' format or similar for sorting
-    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  } catch (error) {
-    console.error("Error fetching blog posts:", error);
-    return [];
-  }
+interface Post {
+    id: string;
+    title?: { en: string };
+    date: string;
 }
 
+export default function BlogAdminPage() {
+    const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(true);
 
-export default async function BlogAdminPage() {
-  const posts = await getBlogPosts();
+    useEffect(() => {
+        async function getBlogPosts() {
+          try {
+            const postsCollection = collection(db, 'blogPosts');
+            const q = query(postsCollection, orderBy("date", "desc"));
+            const postsSnapshot = await getDocs(q);
+            const postsData = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Post[];
+            setPosts(postsData);
+          } catch (error) {
+            console.error("Error fetching blog posts:", error);
+          } finally {
+            setLoading(false);
+          }
+        }
+        getBlogPosts();
+    }, []);
+
+  if (loading) {
+    return (
+        <div className="flex h-[80vh] w-full items-center justify-center">
+            <Loader2 className="h-8 w-8 animate-spin" />
+        </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -47,7 +66,7 @@ export default async function BlogAdminPage() {
         </CardHeader>
         <CardContent>
           <div className="divide-y divide-border">
-            {posts.map((post: any) => (
+            {posts.map((post) => (
               <div key={post.id} className="py-4 flex justify-between items-center">
                 <div>
                   <h3 className="font-semibold">{post.title?.en || 'Untitled Post'}</h3>

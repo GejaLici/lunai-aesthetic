@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -10,7 +11,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
-import { saveBlogPost, type BlogFormData, deleteBlogPost } from './actions';
 import { useState } from 'react';
 import { Loader2, Save, Trash2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -25,6 +25,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import { db } from '@/lib/firebase';
+import { collection, addDoc, doc, updateDoc, serverTimestamp, deleteDoc } from 'firebase/firestore';
 
 
 const BlogFormSchema = z.object({
@@ -52,6 +54,8 @@ const BlogFormSchema = z.object({
   date: z.string().min(1, "Date is required."),
   slug: z.string().min(1, "Slug is required."),
 });
+
+export type BlogFormData = z.infer<typeof BlogFormSchema>;
 
 type BlogFormProps = {
   post?: BlogFormData | null;
@@ -91,23 +95,66 @@ export function BlogForm({ post }: BlogFormProps) {
     },
   });
 
-  const onSubmit: SubmitHandler<BlogFormData> = async (data) => {
+  const onSubmit: SubmitHandler<BlogFormData> = async (formData) => {
     setIsLoading(true);
     
-    const result = await saveBlogPost(data);
-    
-    if (result.success) {
-        toast({
-            title: `Post ${isEditing ? 'Updated' : 'Created'}`,
-            description: `The blog post has been successfully ${isEditing ? 'updated' : 'created'}.`,
-        });
-        router.push('/admin/blog');
-    } else {
+    const { id, ...data } = formData;
+  
+    const postData = {
+      date: data.date,
+      slug: data.slug,
+      imageUrl: data.imageUrl,
+      imageHint: data.imageHint,
+      title: {
+        en: data.title_en,
+        de: data.title_de,
+        es: data.title_es,
+        fr: data.title_fr,
+        it: data.title_it,
+        sq: data.title_sq,
+      },
+      excerpt: {
+        en: data.excerpt_en,
+        de: data.excerpt_de,
+        es: data.excerpt_es,
+        fr: data.excerpt_fr,
+        it: data.excerpt_it,
+        sq: data.excerpt_sq,
+      },
+      content: {
+        en: data.content_en,
+        de: data.content_de,
+        es: data.content_es,
+        fr: data.content_fr,
+        it: data.content_it,
+        sq: data.content_sq,
+      },
+    };
+
+    try {
+      if (id) {
+        const postRef = doc(db, 'blogPosts', id);
+        await updateDoc(postRef, { ...postData, updatedAt: serverTimestamp() });
+      } else {
+        await addDoc(collection(db, 'blogPosts'), { ...postData, createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
+      }
+  
+      toast({
+          title: `Post ${isEditing ? 'Updated' : 'Created'}`,
+          description: `The blog post has been successfully ${isEditing ? 'updated' : 'created'}.`,
+      });
+      router.push('/admin/blog');
+      router.refresh();
+
+    } catch (error) {
+      console.error("Error saving blog post:", error);
+      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred.';
       toast({
         title: 'Error saving post',
-        description: result.message,
+        description: errorMessage,
         variant: 'destructive',
       });
+    } finally {
       setIsLoading(false);
     }
   };
@@ -115,19 +162,23 @@ export function BlogForm({ post }: BlogFormProps) {
   const handleDelete = async () => {
     if (post?.id) {
         setIsLoading(true);
-        const result = await deleteBlogPost(post.id);
-        if (result.success) {
+        try {
+            await deleteDoc(doc(db, 'blogPosts', post.id));
             toast({
                 title: 'Post Deleted',
                 description: 'The blog post has been successfully deleted.',
             });
             router.push('/admin/blog');
-        } else {
+            router.refresh();
+        } catch (error) {
+            console.error("Error deleting blog post:", error);
+            const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred.';
             toast({
                 title: 'Error Deleting Post',
-                description: result.message,
+                description: errorMessage,
                 variant: 'destructive',
             });
+        } finally {
             setIsLoading(false);
         }
     }
