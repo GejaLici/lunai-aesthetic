@@ -9,7 +9,7 @@ import './flows/virtual-consultation';
 export const ai = genkit({
   plugins: [googleAI(), firebasePlugin()],
   logSinks: [],
-  enableTracingAndMetrics: true,
+  enableTracingAndMetrics: false,
   flowStateStore: 'firebase',
   traceStore: 'firebase',
 });
