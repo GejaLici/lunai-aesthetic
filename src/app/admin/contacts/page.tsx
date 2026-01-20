@@ -32,7 +32,16 @@ export default function ContactsAdminPage() {
                 const contacts = contactsSnapshot.docs.map(doc => {
                     const data = doc.data();
                     const submittedAtTimestamp = data.submittedAt as Timestamp | undefined;
-                    const submittedAt = submittedAtTimestamp?.toDate ? format(submittedAtTimestamp.toDate(), "PPP p") : 'Date not available';
+                    
+                    let formattedDate = 'Date not available';
+                    if (submittedAtTimestamp && typeof submittedAtTimestamp.toDate === 'function') {
+                      try {
+                        formattedDate = format(submittedAtTimestamp.toDate(), "PPP p");
+                      } catch (e) {
+                        console.error("Error formatting date for doc " + doc.id, e);
+                        formattedDate = "Invalid Date";
+                      }
+                    }
                     
                     return {
                         id: doc.id,
@@ -40,7 +49,7 @@ export default function ContactsAdminPage() {
                         email: data.email || 'N/A',
                         phone: data.phone || 'N/A',
                         message: data.message || '',
-                        submittedAt: submittedAt,
+                        submittedAt: formattedDate,
                     }
                 });
                 setSubmissions(contacts);
