@@ -17,7 +17,7 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
-      config.externals.push('@opentelemetry/instrumentation', 'handlebars');
+      config.externals.push('@opentelemetry/instrumentation', 'handlebars', '@opentelemetry/exporter-jaeger');
     }
     return config;
   },
