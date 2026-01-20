@@ -64,7 +64,25 @@ export default function BlogPostPage() {
     }
 
     const title = post.title?.[locale];
-    const content = post.content?.[locale];
+    
+    // Defensively parse the content
+    const rawContent = post.content?.[locale];
+    let content: any[] = [];
+
+    if (Array.isArray(rawContent)) {
+      content = rawContent;
+    } else if (typeof rawContent === 'string') {
+      try {
+        const parsed = JSON.parse(rawContent);
+        if (Array.isArray(parsed)) {
+          content = parsed;
+        }
+      } catch {
+        // Not valid JSON, content will remain an empty array
+        console.warn("Blog post content was a string but not valid JSON.");
+      }
+    }
+
 
     // This check is now redundant because it's handled in the useEffect, but it's a good safeguard
     if (!title) {
