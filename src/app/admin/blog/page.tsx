@@ -1,13 +1,13 @@
-
 'use client';
 
 import { db } from '@/lib/firebase';
-import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query, Timestamp } from 'firebase/firestore';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, PlusCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { format } from 'date-fns';
 
 interface Post {
     id: string;
@@ -25,7 +25,18 @@ export default function BlogAdminPage() {
             const postsCollection = collection(db, 'blogPosts');
             const q = query(postsCollection, orderBy("date", "desc"));
             const postsSnapshot = await getDocs(q);
-            const postsData = postsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Post[];
+            const postsData = postsSnapshot.docs.map(doc => {
+                const data = doc.data();
+                let formattedDate = data.date;
+                if (data.date && typeof (data.date as Timestamp).toDate === 'function') {
+                    formattedDate = format((data.date as Timestamp).toDate(), 'yyyy-MM-dd');
+                }
+                return {
+                    id: doc.id,
+                    title: data.title,
+                    date: formattedDate,
+                } as Post;
+            });
             setPosts(postsData);
           } catch (error) {
             console.error("Error fetching blog posts:", error);
