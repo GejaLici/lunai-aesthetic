@@ -3,9 +3,11 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Blog posts can only be read or written by authenticated users.
+    // Blog posts are public to read.
+    // Only authenticated users can create, update, or delete them.
     match /blogPosts/{postId} {
-      allow read, write: if request.auth != null;
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
     }
 
     // Anyone can create a contact submission.
