@@ -1,4 +1,3 @@
-
 'use server';
 
 import { z } from 'zod';
@@ -10,6 +9,7 @@ const contactFormSchema = z.object({
   email: z.string().email("Invalid email address."),
   phone: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message cannot exceed 500 characters."),
+  source: z.string().optional(),
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;

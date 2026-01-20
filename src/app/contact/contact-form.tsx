@@ -10,22 +10,27 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
-import { saveContactMessage, type ContactFormData } from "@/app/contact/actions";
+import { saveContactMessage } from "@/app/contact/actions";
 import { useTranslations } from "@/hooks/use-translations";
 
-export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
+// The form data type no longer needs the source, as it's passed separately.
+type FormData = z.infer<ReturnType<typeof makeSchema>>;
+
+const makeSchema = (t: (key: string) => string) => z.object({
+  name: z.string().min(2, t('validation.name.minLength')),
+  email: z.string().email(t('validation.email.invalid')),
+  phone: z.string().optional(),
+  message: z.string().min(10, t('validation.message.minLength')).max(500, t('validation.message.maxLength')),
+});
+
+export function ContactForm({ onSuccess, source }: { onSuccess?: () => void, source?: string }) {
   const t = useTranslations('ContactPage.form');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const contactFormSchema = z.object({
-    name: z.string().min(2, t('validation.name.minLength')),
-    email: z.string().email(t('validation.email.invalid')),
-    phone: z.string().optional(),
-    message: z.string().min(10, t('validation.message.minLength')).max(500, t('validation.message.maxLength')),
-  });
+  const contactFormSchema = makeSchema(t);
 
-  const form = useForm<ContactFormData>({
+  const form = useForm<FormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
@@ -35,10 +40,10 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
     },
   });
 
-  const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     setIsLoading(true);
     
-    const result = await saveContactMessage(data);
+    const result = await saveContactMessage({ ...data, source });
 
     if (result.success) {
       toast({

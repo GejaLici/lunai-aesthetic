@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -12,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import Head from 'next/head';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import { useContactPopup } from '@/app/providers';
 
 type ServicePageLayoutProps = {
   serviceName: string;
@@ -24,6 +24,7 @@ type ServicePageLayoutProps = {
 
 export function ServicePageLayout({ serviceName, serviceId, contentSections, metaTitle, metaDescription, metaKeywords }: ServicePageLayoutProps) {
   const t = useTranslations('ServiceDetailsPage');
+  const { openContactPopup } = useContactPopup();
   
   const service = allServices.find(s => s.id === serviceId);
 
@@ -164,8 +165,8 @@ export function ServicePageLayout({ serviceName, serviceId, contentSections, met
                        </Card>
                        <Card className="shadow-xl bg-secondary/30 text-center p-6 border-border/10">
                             <CardTitle className="text-2xl mb-4 font-headline text-primary">Ready for Your Transformation?</CardTitle>
-                             <Button asChild size="lg" className="w-full text-lg py-6">
-                                <Link href="/consultation">{t('bookConsultation')}</Link>
+                             <Button size="lg" className="w-full text-lg py-6" onClick={() => openContactPopup(`Service: ${serviceName}`)}>
+                                {t('bookConsultation')}
                             </Button>
                        </Card>
                     </aside>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { db } from '@/lib/firebase';
@@ -6,8 +5,12 @@ import { collection, getDocs, orderBy, query, Timestamp } from 'firebase/firesto
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { format } from 'date-fns';
-import { useEffect, useState } from 'react';
-import { Loader2 } from 'lucide-react';
+import { useEffect, useState, useMemo } from 'react';
+import { Loader2, X } from 'lucide-react';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 interface Submission {
     id: string;
@@ -15,12 +18,20 @@ interface Submission {
     email: string;
     phone: string;
     message: string;
-    submittedAt: string;
+    submittedAt?: Timestamp; // Keep the original timestamp for filtering
+    formattedSubmittedAt: string; // For display
+    source: string;
 }
 
 export default function ContactsAdminPage() {
     const [submissions, setSubmissions] = useState<Submission[]>([]);
     const [loading, setLoading] = useState(true);
+
+    // Filter states
+    const [nameFilter, setNameFilter] = useState('');
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+    const [sourceFilter, setSourceFilter] = useState('all');
 
     useEffect(() => {
         async function getContactSubmissions() {
@@ -42,7 +53,6 @@ export default function ContactsAdminPage() {
                             formattedDate = "Invalid Date";
                         }
                     } else if (data.submittedAt) {
-                        // Fallback for cases where it might not be a Timestamp object, though unlikely
                         formattedDate = "Invalid Date Format";
                     }
 
@@ -52,8 +62,10 @@ export default function ContactsAdminPage() {
                         email: data.email || 'N/A',
                         phone: data.phone || 'N/A',
                         message: data.message || '',
-                        submittedAt: formattedDate,
-                    };
+                        submittedAt: submittedAtTimestamp,
+                        formattedSubmittedAt: formattedDate,
+                        source: data.source || 'Unknown',
+                    } as Submission;
                 });
                 
                 setSubmissions(contactsData);
@@ -66,6 +78,44 @@ export default function ContactsAdminPage() {
         
         getContactSubmissions();
     }, []);
+
+    const uniqueSources = useMemo(() => {
+        const sources = new Set(submissions.map(s => s.source));
+        return ['all', ...Array.from(sources)];
+    }, [submissions]);
+
+    const filteredSubmissions = useMemo(() => {
+        return submissions.filter(submission => {
+            const nameMatch = nameFilter ? submission.name.toLowerCase().includes(nameFilter.toLowerCase()) : true;
+            const sourceMatch = sourceFilter !== 'all' ? submission.source === sourceFilter : true;
+            
+            let dateMatch = true;
+            if (submission.submittedAt) {
+                const submissionDate = submission.submittedAt.toDate();
+                if (startDate && new Date(submissionDate) < new Date(startDate)) {
+                    dateMatch = false;
+                }
+                if (endDate) {
+                    const end = new Date(endDate);
+                    end.setHours(23, 59, 59, 999);
+                    if (new Date(submissionDate) > end) {
+                        dateMatch = false;
+                    }
+                }
+            } else if (startDate || endDate) {
+                dateMatch = false; // Don't show items without a date if filtering by date
+            }
+
+            return nameMatch && sourceMatch && dateMatch;
+        });
+    }, [submissions, nameFilter, startDate, endDate, sourceFilter]);
+
+    const clearFilters = () => {
+        setNameFilter('');
+        setStartDate('');
+        setEndDate('');
+        setSourceFilter('all');
+    }
 
   if (loading) {
       return (
@@ -82,10 +132,48 @@ export default function ContactsAdminPage() {
         <p className="text-muted-foreground mt-2">Here are the messages submitted through your contact form.</p>
       </div>
 
+      <Card className="mb-8">
+        <CardHeader>
+            <CardTitle>Filter Submissions</CardTitle>
+        </CardHeader>
+        <CardContent className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="space-y-2">
+                <Label htmlFor="name-filter">Name</Label>
+                <Input id="name-filter" placeholder="Filter by name..." value={nameFilter} onChange={e => setNameFilter(e.target.value)} />
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="start-date">Start Date</Label>
+                <Input id="start-date" type="date" value={startDate} onChange={e => setStartDate(e.target.value)} />
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="end-date">End Date</Label>
+                <Input id="end-date" type="date" value={endDate} onChange={e => setEndDate(e.target.value)} />
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="source-filter">Source</Label>
+                <Select value={sourceFilter} onValueChange={setSourceFilter}>
+                    <SelectTrigger id="source-filter">
+                        <SelectValue placeholder="Filter by source..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                        {uniqueSources.map(source => (
+                            <SelectItem key={source} value={source}>{source === 'all' ? 'All Sources' : source}</SelectItem>
+                        ))}
+                    </SelectContent>
+                </Select>
+            </div>
+            <div className="flex items-end">
+                <Button onClick={clearFilters} variant="outline" className="w-full">
+                    <X className="mr-2 h-4 w-4" /> Clear Filters
+                </Button>
+            </div>
+        </CardContent>
+      </Card>
+
       <Card>
         <CardHeader>
           <CardTitle>Received Messages</CardTitle>
-          <CardDescription>You have received {submissions.length} messages.</CardDescription>
+          <CardDescription>Showing {filteredSubmissions.length} of {submissions.length} messages.</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -95,26 +183,28 @@ export default function ContactsAdminPage() {
                   <TableHead className="w-[200px]">Date</TableHead>
                   <TableHead className="w-[200px]">Name</TableHead>
                   <TableHead>Email & Phone</TableHead>
+                  <TableHead>Source</TableHead>
                   <TableHead>Message</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {submissions.length > 0 ? (
-                  submissions.map((submission) => (
+                {filteredSubmissions.length > 0 ? (
+                  filteredSubmissions.map((submission) => (
                     <TableRow key={submission.id}>
-                      <TableCell className="whitespace-nowrap">{submission.submittedAt}</TableCell>
+                      <TableCell className="whitespace-nowrap">{submission.formattedSubmittedAt}</TableCell>
                       <TableCell className="font-medium">{submission.name}</TableCell>
                       <TableCell>
                           <div>{submission.email}</div>
                           <div className="text-muted-foreground text-xs">{submission.phone}</div>
                       </TableCell>
+                      <TableCell>{submission.source}</TableCell>
                       <TableCell className="min-w-[300px] whitespace-pre-wrap">{submission.message}</TableCell>
                     </TableRow>
                   ))
                 ) : (
                   <TableRow>
-                    <TableCell colSpan={4} className="h-24 text-center">
-                      No messages yet.
+                    <TableCell colSpan={5} className="h-24 text-center">
+                      No messages match your filters.
                     </TableCell>
                   </TableRow>
                 )}

@@ -64,7 +64,7 @@ export function SiteHeader() {
                   )})}
                 </nav>
                 <div className="mt-auto p-4">
-                   <Button className="w-full" onClick={openContactPopup}>{bookNowLabel}</Button>
+                   <Button className="w-full" onClick={() => openContactPopup('Header Book Now (Mobile)')}>{bookNowLabel}</Button>
                 </div>
               </SheetContent>
             </Sheet>
@@ -121,7 +121,7 @@ export function SiteHeader() {
           {/* Right: Controls */}
           <div className="flex items-center justify-end gap-2 ml-auto">
                <LanguageSwitcher />
-               <Button onClick={openContactPopup}>{bookNowLabel}</Button>
+               <Button onClick={() => openContactPopup('Header Book Now')}>{bookNowLabel}</Button>
           </div>
         </div>
       </div>

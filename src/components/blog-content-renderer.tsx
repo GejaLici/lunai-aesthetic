@@ -104,7 +104,7 @@ export function BlogContentRenderer({ content }: BlogContentRendererProps) {
                         ))}
                         {block.buttonText && block.buttonLink && (
                            isContactCard ? (
-                             <Button className="mt-4" onClick={openContactPopup}>
+                             <Button className="mt-4" onClick={() => openContactPopup(`Blog Post CTA: ${document.title}`)}>
                                {block.buttonText}
                              </Button>
                            ) : (

@@ -15,7 +15,7 @@ import { useTranslations } from '@/hooks/use-translations';
 
 // Contact Popup Context
 interface ContactPopupContextType {
-  openContactPopup: () => void;
+  openContactPopup: (source?: string) => void;
 }
 
 const ContactPopupContext = createContext<ContactPopupContextType | undefined>(
@@ -32,9 +32,13 @@ export const useContactPopup = () => {
 
 function ContactPopupProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [source, setSource] = useState('Unknown');
   const tContact = useTranslations('ContactPage.formCard');
 
-  const openContactPopup = () => setIsOpen(true);
+  const openContactPopup = (popupSource: string = 'General') => {
+    setSource(popupSource);
+    setIsOpen(true);
+  };
 
   return (
     <ContactPopupContext.Provider value={{ openContactPopup }}>
@@ -46,7 +50,7 @@ function ContactPopupProvider({ children }: { children: ReactNode }) {
             <DialogDescription>{tContact('description')}</DialogDescription>
           </DialogHeader>
           <div className="py-4">
-            <ContactForm onSuccess={() => setIsOpen(false)} />
+            <ContactForm onSuccess={() => setIsOpen(false)} source={source} />
           </div>
         </DialogContent>
       </Dialog>
