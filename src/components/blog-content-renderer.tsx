@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useContactPopup } from '@/app/providers';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay";
 
 // Define types for content blocks
 type ContentBlock = {
@@ -29,7 +37,15 @@ type ContentBlock = {
   content: string[];
   buttonText?: string;
   buttonLink?: string;
-};
+} | {
+    type: 'carousel';
+    slides: {
+      src: string;
+      alt: string;
+      caption?: string;
+      dataAiHint?: string;
+    }[];
+  };
 
 type BlogContentRendererProps = {
   content: ContentBlock[];
@@ -99,6 +115,42 @@ export function BlogContentRenderer({ content }: BlogContentRendererProps) {
                         )}
                     </CardContent>
                 </Card>
+              </div>
+            );
+        
+        case 'carousel':
+            if (!block.slides || block.slides.length === 0) return null;
+            return (
+              <div key={index} className="not-prose my-8">
+                <Carousel
+                  className="w-full"
+                  plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
+                  opts={{ loop: true }}
+                >
+                  <CarouselContent>
+                    {block.slides.map((slide, i) => (
+                      <CarouselItem key={i}>
+                        <figure className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+                          <Image
+                            src={slide.src}
+                            alt={slide.alt}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 90vw, 800px"
+                            data-ai-hint={slide.dataAiHint || ''}
+                          />
+                          {slide.caption && (
+                             <figcaption className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white text-center text-sm">
+                               {slide.caption}
+                             </figcaption>
+                          )}
+                        </figure>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden sm:inline-flex" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden sm:inline-flex" />
+                </Carousel>
               </div>
             );
 

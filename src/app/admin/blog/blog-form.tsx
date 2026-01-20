@@ -88,6 +88,29 @@ const placeholderPost: BlogFormData = {
           "Your daily routine should be built around these four core pillars. A gentle cleanser removes impurities without stripping your skin's natural oils. A treatment step, with serums containing active ingredients like Vitamin C or Retinol, targets specific concerns. Moisturizer is crucial for hydration, and a broad-spectrum sunscreen with at least SPF 30 is non-negotiable to protect against sun damage, the number one cause of premature aging.",
       },
       {
+        "type": "carousel",
+        "slides": [
+          {
+            "src": "https://picsum.photos/seed/carousel1/800/450",
+            "alt": "Abstract image of colorful lights",
+            "caption": "Our state-of-the-art technology.",
+            "dataAiHint": "technology abstract"
+          },
+          {
+            "src": "https://picsum.photos/seed/carousel2/800/450",
+            "alt": "A serene spa-like environment",
+            "caption": "A relaxing and professional atmosphere.",
+            "dataAiHint": "spa environment"
+          },
+          {
+            "src": "https://picsum.photos/seed/carousel3/800/450",
+            "alt": "Close-up of a person with healthy, glowing skin",
+            "caption": "Achieve your best skin ever.",
+            "dataAiHint": "glowing skin"
+          }
+        ]
+      },
+      {
         type: 'card',
         title: 'Have Questions? Contact Us!',
         content: [
