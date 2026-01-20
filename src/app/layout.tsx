@@ -1,5 +1,3 @@
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -7,6 +5,7 @@ import { Providers } from './providers';
 import { Rubik, PT_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { PageProgressBar } from '@/components/ui/page-progress-bar';
+import { PageLayout } from '@/components/page-layout';
 
 export const metadata: Metadata = {
   title: {
@@ -41,11 +40,7 @@ export default function RootLayout({
       <body className={cn("font-body antialiased min-h-screen flex flex-col bg-background", fontRubik.variable, fontPtSans.variable)}>
           <Providers>
             <PageProgressBar />
-            <SiteHeader />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <SiteFooter />
+            <PageLayout>{children}</PageLayout>
             <Toaster />
           </Providers>
       </body>
