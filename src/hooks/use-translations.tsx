@@ -1,8 +1,6 @@
-
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
-import enMessages from '@/messages/en.json'; // Import English messages statically
 
 // Define the shape of the translation messages
 type Messages = {
@@ -22,7 +20,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // Define the provider component
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState('en');
-  const [messages, setMessages] = useState<Messages>(enMessages); // Initialize with English messages
+  const [messages, setMessages] = useState<Messages>({}); // Initialize with empty object
 
   useEffect(() => {
     const loadMessages = async (currentLocale: string) => {
@@ -45,21 +43,22 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             loadedMessages = (await import('@/messages/sq.json')).default;
             break;
           default:
-            loadedMessages = enMessages; // Use the statically imported messages
+            loadedMessages = (await import('@/messages/en.json')).default;
             break;
         }
         setMessages(loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${currentLocale}`, error);
-        setMessages(enMessages); // Fallback to English
+        try {
+            const enMessages = (await import('@/messages/en.json')).default;
+            setMessages(enMessages); // Fallback to English
+        } catch (e) {
+            console.error('Could not load fallback English messages.', e);
+        }
       }
     };
 
-    if (locale !== 'en') {
-      loadMessages(locale);
-    } else {
-      setMessages(enMessages);
-    }
+    loadMessages(locale);
   }, [locale]);
   
   const value = useMemo(() => ({ locale, setLocale, messages }), [locale, messages]);
@@ -98,7 +97,10 @@ export const useTranslations = (namespace?: string) => {
     let translation = get(messages, fullKey);
 
     if (translation === undefined) {
-      console.warn(`Translation not found for key: '${fullKey}' in locale '${locale}'.`);
+      // Don't warn in production, just return the key.
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`Translation not found for key: '${fullKey}' in locale '${locale}'.`);
+      }
       return fullKey; // Return the key as a fallback
     }
     
@@ -116,7 +118,9 @@ export const useTranslations = (namespace?: string) => {
     
     // If the key exists but the value is not a string (e.g., it's an object of nested keys),
     // return a warning or the key itself.
-    console.warn(`Translation for key '${fullKey}' is not a string.`);
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(`Translation for key '${fullKey}' is not a string.`);
+    }
     return fullKey;
   }, [messages, namespace, locale]);
 
