@@ -61,6 +61,68 @@ type BlogFormProps = {
   post?: BlogFormData | null;
 };
 
+const placeholderPost: BlogFormData = {
+  title_en: 'The Ultimate Guide to Skincare for a Lasting Glow',
+  excerpt_en: 'Discover expert tips on building a skincare routine that fights aging, enhances radiance, and keeps your skin healthy and beautiful.',
+  content_en: JSON.stringify(
+    [
+      {
+        type: 'paragraph',
+        content:
+          "Achieving a lasting, radiant glow is the holy grail of skincare. It's not just about the products you use, but also about building a consistent routine that nourishes, protects, and revitalizes your skin from the inside out. Let's explore the essential steps to build a routine that will keep your skin looking its best.",
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'The Core Four: Cleanse, Treat, Moisturize, Protect',
+      },
+      {
+        type: 'image',
+        src: 'https://picsum.photos/seed/skincare-routine/800/450',
+        alt: 'A collection of skincare products on a clean white background.',
+        caption: 'A consistent routine is the key to healthy skin.',
+        dataAiHint: 'skincare products',
+      },
+      {
+        type: 'paragraph',
+        content:
+          "Your daily routine should be built around these four core pillars. A gentle cleanser removes impurities without stripping your skin's natural oils. A treatment step, with serums containing active ingredients like Vitamin C or Retinol, targets specific concerns. Moisturizer is crucial for hydration, and a broad-spectrum sunscreen with at least SPF 30 is non-negotiable to protect against sun damage, the number one cause of premature aging.",
+      },
+      {
+        type: 'card',
+        title: 'Ready to Build Your Perfect Routine?',
+        content: [
+          "Not sure which products are right for you? Our AI-powered virtual consultant can help you identify your skin's needs and recommend the perfect LUNAI products.",
+        ],
+        buttonText: 'Try Our Virtual Consultation',
+        buttonLink: '/consultation',
+      },
+    ],
+    null,
+    2
+  ),
+  imageUrl: 'https://picsum.photos/seed/skincare-guide/1200/630',
+  imageHint: 'skincare routine',
+  date: '2024-07-12',
+  slug: 'ultimate-guide-skincare-glow',
+  title_de: '',
+  excerpt_de: '',
+  content_de: '[]',
+  title_es: '',
+  excerpt_es: '',
+  content_es: '[]',
+  title_fr: '',
+  excerpt_fr: '',
+  content_fr: '[]',
+  title_it: '',
+  excerpt_it: '',
+  content_it: '[]',
+  title_sq: '',
+  excerpt_sq: '',
+  content_sq: '[]',
+};
+
+
 export function BlogForm({ post }: BlogFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -69,30 +131,7 @@ export function BlogForm({ post }: BlogFormProps) {
 
   const form = useForm<BlogFormData>({
     resolver: zodResolver(BlogFormSchema),
-    defaultValues: post || {
-      title_en: '',
-      excerpt_en: '',
-      content_en: '[]',
-      title_de: '',
-      excerpt_de: '',
-      content_de: '[]',
-      title_es: '',
-      excerpt_es: '',
-      content_es: '[]',
-      title_fr: '',
-      excerpt_fr: '',
-      content_fr: '[]',
-      title_it: '',
-      excerpt_it: '',
-      content_it: '[]',
-      title_sq: '',
-      excerpt_sq: '',
-      content_sq: '[]',
-      imageUrl: '',
-      imageHint: '',
-      date: new Date().toISOString().split('T')[0],
-      slug: '',
-    },
+    defaultValues: post || placeholderPost,
   });
 
   const onSubmit: SubmitHandler<BlogFormData> = async (formData) => {
