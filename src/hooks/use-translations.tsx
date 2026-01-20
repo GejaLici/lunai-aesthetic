@@ -2,6 +2,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
+import enMessages from '@/messages/en.json'; // Import default messages
 
 // Define the shape of the translation messages
 type Messages = {
@@ -21,21 +22,21 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // Define the provider component
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState('en');
-  const [messages, setMessages] = useState<Messages>({}); // Initialize with empty object
+  const [messages, setMessages] = useState<Messages>(enMessages); // Initialize with English messages
 
   useEffect(() => {
+    if (locale === 'en') {
+      setMessages(enMessages);
+      return;
+    }
+
     const loadMessages = async (currentLocale: string) => {
       try {
         const loadedMessages = (await import(`@/messages/${currentLocale}.json`)).default;
         setMessages(loadedMessages);
       } catch (error) {
         console.error(`Could not load messages for locale: ${currentLocale}`, error);
-        try {
-            const enMessages = (await import('@/messages/en.json')).default;
-            setMessages(enMessages); // Fallback to English
-        } catch (e) {
-            console.error('Could not load fallback English messages.', e);
-        }
+        setMessages(enMessages); // Fallback to English
       }
     };
 
