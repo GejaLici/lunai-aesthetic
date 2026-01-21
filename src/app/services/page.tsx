@@ -66,36 +66,51 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   );
 }
 
+// Standalone ServiceLink component to comply with Rules of Hooks
+const ServiceLink = ({
+  service,
+  isActive,
+  onMouseEnter,
+}: {
+  service: ServiceItem;
+  isActive: boolean;
+  onMouseEnter: (service: ServiceItem) => void;
+}) => {
+  const { name } = useServiceTranslation(service.id);
+  return (
+    <Link
+      href={`/services/${service.id}`}
+      onMouseEnter={() => onMouseEnter(service)}
+      className={cn(
+        'block p-3 rounded-lg transition-colors text-left',
+        isActive
+          ? 'bg-primary/10 text-primary font-semibold'
+          : 'text-foreground/80 hover:bg-muted/50 hover:text-foreground'
+      )}
+    >
+      {name}
+    </Link>
+  );
+};
+
+
 // New interactive component for Face and Body categories
 const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
     const tSubcategories = useTranslations('services.subcategories');
+    const tServicesPage = useTranslations('ServicesPage');
     const [activeService, setActiveService] = useState<ServiceItem | null>(null);
 
     useEffect(() => {
-        if (services.length > 0) {
+        if (services.length > 0 && !activeService) {
             setActiveService(services[0]);
         }
-    }, [services]);
+    }, [services, activeService]);
+    
+    // Call hook at the top level
+    const { name: activeServiceName } = useServiceTranslation(activeService?.id || '');
 
     const surgicalServices = services.filter(s => s.serviceType === 'operation');
     const nonSurgicalServices = services.filter(s => s.serviceType === 'treatment');
-
-    const ServiceLink = ({ service }: { service: ServiceItem }) => {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const { name } = useServiceTranslation(service.id);
-        return (
-            <Link 
-                href={`/services/${service.id}`}
-                onMouseEnter={() => setActiveService(service)}
-                className={cn(
-                    "block p-3 rounded-lg transition-colors text-left",
-                    activeService?.id === service.id ? "bg-primary/10 text-primary font-semibold" : "text-foreground/80 hover:bg-muted/50 hover:text-foreground"
-                )}
-            >
-                {name}
-            </Link>
-        );
-    }
 
     return (
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -104,7 +119,14 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                      <div>
                         <h3 className="text-2xl font-semibold mb-4 font-headline text-muted-foreground">{tSubcategories('surgical')}</h3>
                         <div className="space-y-1">
-                            {surgicalServices.map(service => <ServiceLink key={service.id} service={service} />)}
+                            {surgicalServices.map(service => (
+                                <ServiceLink 
+                                    key={service.id} 
+                                    service={service} 
+                                    isActive={activeService?.id === service.id}
+                                    onMouseEnter={setActiveService}
+                                />
+                            ))}
                         </div>
                      </div>
                 )}
@@ -112,7 +134,14 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                      <div>
                         <h3 className="text-2xl font-semibold mb-4 font-headline text-muted-foreground">{tSubcategories('nonSurgical')}</h3>
                          <div className="space-y-1">
-                            {nonSurgicalServices.map(service => <ServiceLink key={service.id} service={service} />)}
+                            {nonSurgicalServices.map(service => (
+                                <ServiceLink 
+                                    key={service.id} 
+                                    service={service} 
+                                    isActive={activeService?.id === service.id}
+                                    onMouseEnter={setActiveService}
+                                />
+                            ))}
                         </div>
                      </div>
                 )}
@@ -123,7 +152,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                         <Image
                             key={activeService.id} // Force re-render for animation
                             src={activeService.imageAfter}
-                            alt={useServiceTranslation(activeService.id).name}
+                            alt={activeServiceName}
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover animate-fade-in"
@@ -131,10 +160,10 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                         />
                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                          <div className="absolute bottom-0 left-0 p-6 text-white">
-                            <h3 className="text-2xl font-bold font-headline">{useServiceTranslation(activeService.id).name}</h3>
+                            <h3 className="text-2xl font-bold font-headline">{activeServiceName}</h3>
                             <Button asChild variant="secondary" size="sm" className="mt-2">
                                 <Link href={`/services/${activeService.id}`}>
-                                    {useTranslations('ServicesPage')('learnMore')} <ArrowRight className="ml-2 h-4 w-4"/>
+                                    {tServicesPage('learnMore')} <ArrowRight className="ml-2 h-4 w-4"/>
                                 </Link>
                             </Button>
                          </div>
