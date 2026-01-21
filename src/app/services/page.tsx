@@ -42,14 +42,6 @@ function ServiceCard({ service }: { service: ServiceItem }) {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           data-ai-hint={service.dataAiHint}
         />
-        <Badge
-          variant={isSurgical ? 'destructive' : 'secondary'}
-          className="absolute top-2 right-2"
-        >
-          {isSurgical
-            ? tDetails('surgicalProcedure')
-            : tDetails('nonSurgicalTreatment')}
-        </Badge>
       </div>
       <CardHeader>
         <CardTitle className="font-headline text-xl text-primary h-12 flex items-center">
