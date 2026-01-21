@@ -31,7 +31,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
 
   return (
     <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card group border border-transparent hover:border-primary/30">
-      <div className="relative w-full h-48 rounded-t-lg overflow-hidden">
+      <div className="relative w-full h-60 rounded-t-lg overflow-hidden">
         <Image
           src={service.imageAfter}
           alt={t('imageAlt', { serviceName })}
@@ -47,7 +47,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="px-6 pb-4 flex-grow">
-        <p className="text-foreground/80 text-sm h-20 overflow-hidden">
+        <p className="text-foreground/80 text-sm h-28 overflow-hidden">
           {meta_description}
         </p>
       </CardContent>
@@ -149,7 +149,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                      </div>
                 )}
             </div>
-            <div className="relative aspect-[6/5] rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24 lg:col-span-3">
+            <div className="relative aspect-square rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24 lg:col-span-3">
                 {activeService && (
                     <>
                         <Image
