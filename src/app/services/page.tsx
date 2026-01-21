@@ -82,13 +82,13 @@ const ServiceLink = ({
       href={`/services/${service.id}`}
       onMouseEnter={() => onMouseEnter(service)}
       className={cn(
-        'block p-3 rounded-lg transition-colors text-left',
+        'block p-4 rounded-md transition-all duration-200 text-left border-l-4 border-transparent',
         isActive
-          ? 'bg-primary/10 text-primary font-semibold'
-          : 'text-foreground/80 hover:bg-muted/50 hover:text-foreground'
+          ? 'bg-primary/10 text-primary font-bold border-primary'
+          : 'text-foreground/70 hover:bg-secondary/70 hover:text-foreground hover:border-accent'
       )}
     >
-      {name}
+      <span className="text-lg">{name}</span>
     </Link>
   );
 };
@@ -117,7 +117,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
             <div className="space-y-8">
                 {surgicalServices.length > 0 && (
                      <div>
-                        <h3 className="text-2xl font-semibold mb-4 font-headline text-muted-foreground">{tSubcategories('surgical')}</h3>
+                        <h3 className="text-xl font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('surgical')}</h3>
                         <div className="space-y-1">
                             {surgicalServices.map(service => (
                                 <ServiceLink 
@@ -132,7 +132,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                 )}
                  {nonSurgicalServices.length > 0 && (
                      <div>
-                        <h3 className="text-2xl font-semibold mb-4 font-headline text-muted-foreground">{tSubcategories('nonSurgical')}</h3>
+                        <h3 className="text-xl font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('nonSurgical')}</h3>
                          <div className="space-y-1">
                             {nonSurgicalServices.map(service => (
                                 <ServiceLink 
