@@ -21,18 +21,14 @@ import {
   useTranslations,
   useServiceTranslation,
 } from '@/hooks/use-translations';
-import { Badge } from '@/components/ui/badge';
 import React from 'react';
 
 function ServiceCard({ service }: { service: ServiceItem }) {
   const t = useTranslations('ServicesPage');
-  const tDetails = useTranslations('ServiceDetailsPage');
-  const { name: serviceName } = useServiceTranslation(service.id);
-
-  const isSurgical = service.serviceType === 'operation';
+  const { name: serviceName, meta_description } = useServiceTranslation(service.id);
 
   return (
-    <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card group">
+    <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card group border border-transparent hover:border-primary/30">
       <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
         <Image
           src={service.imageAfter}
@@ -43,17 +39,17 @@ function ServiceCard({ service }: { service: ServiceItem }) {
           data-ai-hint={service.dataAiHint}
         />
       </div>
-      <CardHeader>
-        <CardTitle className="font-headline text-xl text-primary h-12 flex items-center">
+      <CardHeader className="p-6 pb-2">
+        <CardTitle className="font-headline text-xl text-primary h-14 flex items-start">
           {serviceName}
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow">
-        <p className="text-foreground/90 text-sm h-10">
-          {t('learnMore')} about {serviceName}.
+      <CardContent className="px-6 pb-4 flex-grow">
+        <p className="text-foreground/80 text-sm h-24 overflow-hidden">
+          {meta_description}
         </p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="p-6 pt-0">
         <Button
           asChild
           variant="outline"
@@ -154,11 +150,12 @@ export default function ServicesPage() {
   }
 
   const activeCategory = serviceData.find(c => c.id === activeTab);
+  const ActiveIcon = activeCategory?.icon || Stethoscope;
 
   return (
     <div className="container mx-auto px-4 py-8">
       <section className="text-center pt-8 pb-12">
-        <Stethoscope className="h-16 w-16 text-accent mx-auto mb-4" />
+        <ActiveIcon className="h-16 w-16 text-accent mx-auto mb-4 transition-all" />
         <h1 className="text-5xl font-headline font-bold text-primary">
           {t('title')}
         </h1>
@@ -172,12 +169,12 @@ export default function ServicesPage() {
         className="w-full"
         onValueChange={setActiveTab}
       >
-        <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-16 mb-12 bg-secondary p-2 rounded-xl">
+        <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto mb-12 gap-2">
           {serviceData.map((category) => (
             <TabsTrigger
               key={category.id}
               value={category.id}
-              className="py-3 text-lg rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md data-[state=active]:text-primary"
+              className="py-4 text-lg font-medium rounded-lg text-muted-foreground transition-all hover:bg-muted/50 data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:shadow-inner"
             >
               {tCategories(`${category.id}.title`)}
             </TabsTrigger>
