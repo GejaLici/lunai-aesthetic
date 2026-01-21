@@ -88,7 +88,11 @@ const ServiceLink = ({
           : 'text-foreground/70 hover:bg-secondary/70 hover:text-foreground hover:border-accent'
       )}
     >
-      <span className="text-lg">{name}</span>
+      <div className="flex items-center gap-4">
+        {/* Icon placeholder for future use */}
+        <div className="w-6" />
+        <span className="text-lg">{name}</span>
+      </div>
     </Link>
   );
 };
@@ -113,8 +117,8 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
     const nonSurgicalServices = services.filter(s => s.serviceType === 'treatment');
 
     return (
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-            <div className="space-y-8">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-2 space-y-8">
                 {surgicalServices.length > 0 && (
                      <div>
                         <h3 className="text-xl font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('surgical')}</h3>
@@ -146,7 +150,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                      </div>
                 )}
             </div>
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24 lg:col-span-3">
                 {activeService && (
                     <>
                         <Image
@@ -154,7 +158,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                             src={activeService.imageAfter}
                             alt={activeServiceName}
                             fill
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="(max-width: 1024px) 100vw, 60vw"
                             className="object-cover animate-fade-in"
                             data-ai-hint={activeService.dataAiHint}
                         />
