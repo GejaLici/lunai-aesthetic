@@ -258,6 +258,13 @@
       "surgery": "Chirurgie",
       "pedodontics": "Kinderzahnheilkunde"
     },
-    "items": {}
+    "items": {
+        "rhinoplasty": { "name": "Nasenkorrektur", "casualName": "Nasen-OP" },
+        "facelift": { "name": "Facelifting", "casualName": "Gesichts- & Halsstraffung" },
+        "blepharoplasty": { "name": "Blepharoplastik", "casualName": "Augenlidstraffung" },
+        "otoplasty": { "name": "Otoplastik", "casualName": "Ohrenanlegen" },
+        "breast-augmentation": { "name": "Brustvergrößerung", "casualName": "Brust-OP" },
+        "tummy-tuck": { "name": "Abdominoplastik", "casualName": "Bauchdeckenstraffung" }
+    }
   }
 }

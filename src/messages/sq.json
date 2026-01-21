@@ -258,6 +258,13 @@
       "surgery": "Kirurgji",
       "pedodontics": "Pedodonci"
     },
-    "items": {}
+    "items": {
+        "rhinoplasty": { "name": "Rinoplastika", "casualName": "Operacioni i Hundës" },
+        "facelift": { "name": "Lifting Fytyre", "casualName": "Tërheqje e Fytyrës dhe Qafës" },
+        "blepharoplasty": { "name": "Blefaroplastika", "casualName": "Operacioni i Qepallave" },
+        "otoplasty": { "name": "Otoplastika", "casualName": "Operacioni i Veshëve" },
+        "breast-augmentation": { "name": "Zmadhimi i Gjoksit", "casualName": "Operacioni i Gjoksit" },
+        "tummy-tuck": { "name": "Abdominoplastika", "casualName": "Tërheqja e Barkut" }
+    }
   }
 }

@@ -76,7 +76,7 @@ const ServiceLink = ({
   isActive: boolean;
   onMouseEnter: (service: ServiceItem) => void;
 }) => {
-  const { name } = useServiceTranslation(service.id);
+  const { name, casualName } = useServiceTranslation(service.id);
   return (
     <Link
       href={`/services/${service.id}`}
@@ -88,10 +88,9 @@ const ServiceLink = ({
           : 'text-foreground/70 hover:bg-secondary/70 hover:text-foreground hover:border-accent'
       )}
     >
-      <div className="flex items-center gap-4">
-        {/* Icon placeholder for future use */}
-        <div className="w-6" />
-        <span className="text-lg">{name}</span>
+      <div className="flex items-center justify-between gap-4">
+        <span className="text-lg">{name} {casualName && <span className="text-sm text-muted-foreground">({casualName})</span>}</span>
+        <div className="w-6" /> {/* Icon placeholder */}
       </div>
     </Link>
   );
@@ -111,7 +110,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
     }, [services, activeService]);
     
     // Call hook at the top level
-    const { name: activeServiceName } = useServiceTranslation(activeService?.id || '');
+    const { name: activeServiceName, casualName: activeServiceCasualName } = useServiceTranslation(activeService?.id || '');
 
     const surgicalServices = services.filter(s => s.serviceType === 'operation');
     const nonSurgicalServices = services.filter(s => s.serviceType === 'treatment');
@@ -164,7 +163,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                         />
                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                          <div className="absolute bottom-0 left-0 p-6 text-white">
-                            <h3 className="text-2xl font-bold font-headline">{activeServiceName}</h3>
+                            <h3 className="text-2xl font-bold font-headline">{activeServiceName} {activeServiceCasualName && <span className="text-lg font-normal text-white/80">({activeServiceCasualName})</span>}</h3>
                             <Button asChild variant="secondary" size="sm" className="mt-2">
                                 <Link href={`/services/${activeService.id}`}>
                                     {tServicesPage('learnMore')} <ArrowRight className="ml-2 h-4 w-4"/>

@@ -258,6 +258,13 @@
       "surgery": "Surgery",
       "pedodontics": "Pedodontics"
     },
-    "items": {}
+    "items": {
+      "rhinoplasty": { "name": "Rhinoplasty", "casualName": "Nose Job" },
+      "facelift": { "name": "Facelift", "casualName": "Face & Neck Lift" },
+      "blepharoplasty": { "name": "Blepharoplasty", "casualName": "Eyelid Surgery" },
+      "otoplasty": { "name": "Otoplasty", "casualName": "Ear Pinning" },
+      "breast-augmentation": { "name": "Breast Augmentation", "casualName": "Boob Job" },
+      "tummy-tuck": { "name": "Abdominoplasty", "casualName": "Tummy Tuck" }
+    }
   }
 }

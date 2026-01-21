@@ -114,6 +114,7 @@ export const useServiceTranslation = (serviceId: string) => {
     
     const fallbackData = useMemo(() => ({
         name: serviceId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        casualName: undefined,
         content_sections: {},
         meta_title: '',
         meta_description: '',
@@ -130,6 +131,7 @@ export const useServiceTranslation = (serviceId: string) => {
         
         return {
             name: service.name || fallbackData.name,
+            casualName: service.casualName,
             content_sections: service.content_sections || fallbackData.content_sections,
             meta_title: service.meta_title || service.name || fallbackData.name,
             meta_description: service.meta_description || `Learn more about ${service.name || fallbackData.name}`,

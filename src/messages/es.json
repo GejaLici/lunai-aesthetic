@@ -258,6 +258,13 @@
       "surgery": "Cirugía",
       "pedodontics": "Odontopediatría"
     },
-    "items": {}
+    "items": {
+        "rhinoplasty": { "name": "Rinoplastia", "casualName": "Operación de Nariz" },
+        "facelift": { "name": "Lifting Facial", "casualName": "Lifting de Cara y Cuello" },
+        "blepharoplasty": { "name": "Blefaroplastia", "casualName": "Cirugía de Párpados" },
+        "otoplasty": { "name": "Otoplastia", "casualName": "Cirugía de Orejas" },
+        "breast-augmentation": { "name": "Aumento de Pecho", "casualName": "Operación de Pecho" },
+        "tummy-tuck": { "name": "Abdominoplastia", "casualName": "Lipectomía Abdominal" }
+    }
   }
 }
