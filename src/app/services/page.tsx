@@ -15,14 +15,16 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Stethoscope } from 'lucide-react';
+import { ArrowRight, Stethoscope, Activity, Smile } from 'lucide-react';
 import Image from 'next/image';
 import {
   useTranslations,
   useServiceTranslation,
 } from '@/hooks/use-translations';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
+// This is the old component, kept for the dentistry tab
 function ServiceCard({ service }: { service: ServiceItem }) {
   const t = useTranslations('ServicesPage');
   const { name: serviceName, meta_description } = useServiceTranslation(service.id);
@@ -64,9 +66,97 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   );
 }
 
+// New interactive component for Face and Body categories
+const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
+    const tSubcategories = useTranslations('services.subcategories');
+    const [activeService, setActiveService] = useState<ServiceItem | null>(null);
+
+    useEffect(() => {
+        if (services.length > 0) {
+            setActiveService(services[0]);
+        }
+    }, [services]);
+
+    const surgicalServices = services.filter(s => s.serviceType === 'operation');
+    const nonSurgicalServices = services.filter(s => s.serviceType === 'treatment');
+
+    const ServiceLink = ({ service }: { service: ServiceItem }) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const { name } = useServiceTranslation(service.id);
+        return (
+            <Link 
+                href={`/services/${service.id}`}
+                onMouseEnter={() => setActiveService(service)}
+                className={cn(
+                    "block p-3 rounded-lg transition-colors text-left",
+                    activeService?.id === service.id ? "bg-primary/10 text-primary font-semibold" : "text-foreground/80 hover:bg-muted/50 hover:text-foreground"
+                )}
+            >
+                {name}
+            </Link>
+        );
+    }
+
+    return (
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+            <div className="space-y-8">
+                {surgicalServices.length > 0 && (
+                     <div>
+                        <h3 className="text-2xl font-semibold mb-4 font-headline text-muted-foreground">{tSubcategories('surgical')}</h3>
+                        <div className="space-y-1">
+                            {surgicalServices.map(service => <ServiceLink key={service.id} service={service} />)}
+                        </div>
+                     </div>
+                )}
+                 {nonSurgicalServices.length > 0 && (
+                     <div>
+                        <h3 className="text-2xl font-semibold mb-4 font-headline text-muted-foreground">{tSubcategories('nonSurgical')}</h3>
+                         <div className="space-y-1">
+                            {nonSurgicalServices.map(service => <ServiceLink key={service.id} service={service} />)}
+                        </div>
+                     </div>
+                )}
+            </div>
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24">
+                {activeService && (
+                    <>
+                        <Image
+                            key={activeService.id} // Force re-render for animation
+                            src={activeService.imageAfter}
+                            alt={useServiceTranslation(activeService.id).name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover animate-fade-in"
+                            data-ai-hint={activeService.dataAiHint}
+                        />
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                         <div className="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 className="text-2xl font-bold font-headline">{useServiceTranslation(activeService.id).name}</h3>
+                            <Button asChild variant="secondary" size="sm" className="mt-2">
+                                <Link href={`/services/${activeService.id}`}>
+                                    {useTranslations('ServicesPage')('learnMore')} <ArrowRight className="ml-2 h-4 w-4"/>
+                                </Link>
+                            </Button>
+                         </div>
+                    </>
+                )}
+                 {!activeService && (
+                    <div className="bg-muted w-full h-full animate-pulse" />
+                )}
+            </div>
+        </div>
+    )
+}
+
 function CategoryContent({ category }: { category: ServiceCategory }) {
   const tSubcategories = useTranslations('services.subcategories');
 
+  // Use new interactive view for face and body
+  if (category.id === 'face' || category.id === 'body') {
+    return <InteractiveCategoryView services={category.services} />;
+  }
+  
+  // Keep old grid view for dentistry
   if (category.id === 'dentistry') {
     const dentalSubcategories = [
       'aesthetics', 'prosthetics', 'orthodontics', 
@@ -99,41 +189,10 @@ function CategoryContent({ category }: { category: ServiceCategory }) {
     )
   }
 
-  const surgicalServices = category.services.filter(s => s.serviceType === 'operation');
-  const nonSurgicalServices = category.services.filter(s => s.serviceType === 'treatment');
-
+  // Fallback for any other category type
   return (
-    <div className="space-y-12">
-      {surgicalServices.length > 0 && (
-        <div>
-           <div className="relative my-12">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-border" />
-            </div>
-            <div className="relative flex justify-center">
-              <span className="bg-background px-4 text-2xl font-semibold text-muted-foreground">{tSubcategories('surgical')}</span>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {surgicalServices.map(service => <ServiceCard key={service.id} service={service} />)}
-          </div>
-        </div>
-      )}
-      {nonSurgicalServices.length > 0 && (
-         <div>
-          <div className="relative my-12">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-border" />
-            </div>
-            <div className="relative flex justify-center">
-              <span className="bg-background px-4 text-2xl font-semibold text-muted-foreground">{tSubcategories('nonSurgical')}</span>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {nonSurgicalServices.map(service => <ServiceCard key={service.id} service={service} />)}
-          </div>
-        </div>
-      )}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {category.services.map(service => <ServiceCard key={service.id} service={service} />)}
     </div>
   )
 }
@@ -184,7 +243,7 @@ export default function ServicesPage() {
         </TabsList>
 
         {serviceData.map((category) => (
-            <TabsContent key={category.id} value={category.id}>
+            <TabsContent key={category.id} value={category.id} className="min-h-[500px]">
                 <CategoryContent category={category} />
             </TabsContent>
         ))}
