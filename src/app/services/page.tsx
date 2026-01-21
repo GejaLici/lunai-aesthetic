@@ -31,7 +31,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
 
   return (
     <Card className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] bg-card group border border-transparent hover:border-primary/30">
-      <div className="relative w-full h-56 rounded-t-lg overflow-hidden">
+      <div className="relative w-full h-48 rounded-t-lg overflow-hidden">
         <Image
           src={service.imageAfter}
           alt={t('imageAlt', { serviceName })}
@@ -47,7 +47,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="px-6 pb-4 flex-grow">
-        <p className="text-foreground/80 text-sm h-24 overflow-hidden">
+        <p className="text-foreground/80 text-sm h-20 overflow-hidden">
           {meta_description}
         </p>
       </CardContent>
@@ -82,10 +82,10 @@ const ServiceLink = ({
       href={`/services/${service.id}`}
       onMouseEnter={() => onMouseEnter(service)}
       className={cn(
-        'block p-4 rounded-md transition-all duration-200 text-left border-l-4 border-transparent',
+        'block p-4 rounded-md transition-all duration-200 text-left border-l-4',
         isActive
           ? 'bg-primary/10 text-primary font-bold border-primary'
-          : 'text-foreground/70 hover:bg-secondary/70 hover:text-foreground hover:border-accent'
+          : 'text-foreground/70 hover:bg-secondary/70 hover:text-foreground border-transparent hover:border-accent'
       )}
     >
       <div className="flex items-center justify-between gap-4">
@@ -120,7 +120,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
             <div className="lg:col-span-2 space-y-8">
                 {surgicalServices.length > 0 && (
                      <div>
-                        <h3 className="text-xl font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('surgical')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('surgical')}</h3>
                         <div className="space-y-1">
                             {surgicalServices.map(service => (
                                 <ServiceLink 
@@ -135,7 +135,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                 )}
                  {nonSurgicalServices.length > 0 && (
                      <div>
-                        <h3 className="text-xl font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('nonSurgical')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 font-headline text-muted-foreground tracking-wider uppercase">{tSubcategories('nonSurgical')}</h3>
                          <div className="space-y-1">
                             {nonSurgicalServices.map(service => (
                                 <ServiceLink 
@@ -149,7 +149,7 @@ const InteractiveCategoryView = ({ services }: { services: ServiceItem[] }) => {
                      </div>
                 )}
             </div>
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24 lg:col-span-3">
+            <div className="relative aspect-[6/5] rounded-xl overflow-hidden shadow-2xl lg:sticky lg:top-24 lg:col-span-3">
                 {activeService && (
                     <>
                         <Image
