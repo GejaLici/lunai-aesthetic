@@ -14,7 +14,7 @@ type ServicePageProps = {
 export default function ServicePage({ params }: ServicePageProps) {
   const { slug } = params;
   const service = allServices.find(s => s.id === slug);
-  const { name, content_sections, meta_title, meta_description, meta_keywords } = useServiceTranslation(slug);
+  const { name, meta_title, meta_description, meta_keywords } = useServiceTranslation(slug);
 
   if (!service) {
     notFound();
@@ -24,7 +24,6 @@ export default function ServicePage({ params }: ServicePageProps) {
     <ServicePageLayout 
         serviceId={slug}
         serviceName={name} 
-        contentSections={content_sections}
         metaTitle={meta_title}
         metaDescription={meta_description}
         metaKeywords={meta_keywords}

@@ -7,7 +7,7 @@ import { ServicePageLayout } from '../service-page-layout';
 const serviceId = 'milk-teeth-treatment';
 
 export default function ServicePage() {
-  const { name, content_sections, meta_title, meta_description, meta_keywords } = useServiceTranslation(serviceId);
+  const { name, meta_title, meta_description, meta_keywords } = useServiceTranslation(serviceId);
 
   return (
     <ServicePageLayout 
@@ -16,7 +16,6 @@ export default function ServicePage() {
         metaTitle={meta_title}
         metaDescription={meta_description}
         metaKeywords={meta_keywords}
-        contentSections={content_sections}
     />
   );
 }

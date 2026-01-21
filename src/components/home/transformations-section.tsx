@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -58,18 +59,13 @@ export const TransformationsSection = React.memo(function TransformationsSection
 
   const renderServiceContent = (service: ServiceItem) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { content_sections } = useServiceTranslation(service.id);
+    const { meta_description } = useServiceTranslation(service.id);
 
-    if (!content_sections || Object.keys(content_sections).length === 0) {
+    if (!meta_description) {
       return <p>More details coming soon.</p>;
     }
-    
-    // We'll take the first paragraph of the first section as the description
-    const firstSectionKey = Object.keys(content_sections)[0];
-    const firstSection = content_sections[firstSectionKey];
-    const description = firstSection?.paragraphs?.[0] || 'Detailed information about this service is available on the service page.';
 
-    return <p className="text-lg text-foreground/80 mb-6" dangerouslySetInnerHTML={{ __html: description }}></p>
+    return <p className="text-lg text-foreground/80 mb-6" dangerouslySetInnerHTML={{ __html: meta_description }}></p>
   }
 
   return (
