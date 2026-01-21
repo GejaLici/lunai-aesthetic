@@ -82,15 +82,15 @@ const ServiceLink = ({
       href={`/services/${service.id}`}
       onMouseEnter={() => onMouseEnter(service)}
       className={cn(
-        'block p-4 rounded-md transition-all duration-200 text-left border-l-4',
+        'block p-4 rounded-md transition-all duration-200 text-left border-l-4 text-lg',
         isActive
           ? 'bg-primary/10 text-primary font-bold border-primary'
           : 'text-foreground/70 hover:bg-secondary/70 hover:text-foreground border-transparent hover:border-accent'
       )}
     >
       <div className="flex items-center justify-between gap-4">
-        <span className="text-lg">{name} {casualName && <span className="text-sm text-muted-foreground">({casualName})</span>}</span>
-        <div className="w-6" /> {/* Icon placeholder */}
+        <span className="flex-grow">{name} {casualName && <span className="text-sm text-muted-foreground">({casualName})</span>}</span>
+        <div className="w-6 shrink-0" /> {/* Icon placeholder */}
       </div>
     </Link>
   );
