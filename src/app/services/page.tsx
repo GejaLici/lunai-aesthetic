@@ -64,76 +64,57 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   );
 }
 
-function CategorySection({ category }: { category: ServiceCategory }) {
+function CategoryContent({ category }: { category: ServiceCategory }) {
   const tSubcategories = useTranslations('services.subcategories');
-  const surgicalServices = category.services.filter(
-    (s) => s.serviceType === 'operation'
-  );
-  const nonSurgicalServices = category.services.filter(
-    (s) => s.serviceType === 'treatment'
-  );
+
+  if (category.id === 'dentistry') {
+    const dentalSubcategories = [
+      'aesthetics', 'prosthetics', 'orthodontics', 
+      'therapy', 'surgery', 'pedodontics'
+    ];
+    
+    return (
+      <div className="space-y-12">
+        {dentalSubcategories.map(sub => {
+          const services = category.services.filter(s => s.dentalCategory === sub);
+          if (services.length === 0) return null;
+          
+          return (
+            <div key={sub}>
+              <h3 className="text-3xl font-headline font-bold text-center mb-8 text-primary/80">{tSubcategories(sub)}</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map(service => <ServiceCard key={service.id} service={service} />)}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  const surgicalServices = category.services.filter(s => s.serviceType === 'operation');
+  const nonSurgicalServices = category.services.filter(s => s.serviceType === 'treatment');
 
   return (
-    <Tabs defaultValue="surgical" className="w-full">
-      <TabsList className="grid w-full grid-cols-2 mb-8">
-        <TabsTrigger value="surgical">
-          {tSubcategories('surgical')} ({surgicalServices.length})
-        </TabsTrigger>
-        <TabsTrigger value="non-surgical">
-          {tSubcategories('nonSurgical')} ({nonSurgicalServices.length})
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value="surgical">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {surgicalServices.map((service) => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
-      </TabsContent>
-      <TabsContent value="non-surgical">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {nonSurgicalServices.map((service) => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
-      </TabsContent>
-    </Tabs>
-  );
-}
-
-function DentistrySection({ category }: { category: ServiceCategory }) {
-  const tSubcategories = useTranslations('services.subcategories');
-  const dentalSubcategories = [
-    'aesthetics',
-    'prosthetics',
-    'orthodontics',
-    'therapy',
-    'surgery',
-    'pedodontics',
-  ];
-
-  return (
-    <Tabs defaultValue="aesthetics" className="w-full">
-      <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 h-auto mb-8">
-        {dentalSubcategories.map((sub) => (
-          <TabsTrigger key={sub} value={sub}>
-            {tSubcategories(sub)}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-      {dentalSubcategories.map((sub) => (
-        <TabsContent key={sub} value={sub}>
+    <div className="space-y-12">
+      {surgicalServices.length > 0 && (
+        <div>
+          <h3 className="text-3xl font-headline font-bold text-center mb-8 text-primary/80">{tSubcategories('surgical')}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {category.services
-              .filter((s) => s.dentalCategory === sub)
-              .map((service) => (
-                <ServiceCard key={service.id} service={service} />
-              ))}
+            {surgicalServices.map(service => <ServiceCard key={service.id} service={service} />)}
           </div>
-        </TabsContent>
-      ))}
-    </Tabs>
-  );
+        </div>
+      )}
+      {nonSurgicalServices.length > 0 && (
+         <div>
+          <h3 className="text-3xl font-headline font-bold text-center mb-8 mt-12 text-primary/80">{tSubcategories('nonSurgical')}</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {nonSurgicalServices.map(service => <ServiceCard key={service.id} service={service} />)}
+          </div>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export default function ServicesPage() {
@@ -181,17 +162,11 @@ export default function ServicesPage() {
           ))}
         </TabsList>
 
-        <TabsContent value="face">
-          <CategorySection category={serviceData.find(c => c.id === 'face')!} />
-        </TabsContent>
-
-        <TabsContent value="body">
-          <CategorySection category={serviceData.find(c => c.id === 'body')!} />
-        </TabsContent>
-
-        <TabsContent value="dentistry">
-          <DentistrySection category={serviceData.find(c => c.id === 'dentistry')!} />
-        </TabsContent>
+        {serviceData.map((category) => (
+            <TabsContent key={category.id} value={category.id}>
+                <CategoryContent category={category} />
+            </TabsContent>
+        ))}
       </Tabs>
     </div>
   );
