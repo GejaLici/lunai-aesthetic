@@ -1,7 +1,7 @@
 'use client';
 
 import { LanguageProvider } from '@/hooks/use-translations';
-import { ReactNode, createContext, useContext, useState } from 'react';
+import { ReactNode, createContext, useContext, useState, lazy, Suspense } from 'react';
 import { AuthProvider } from '@/contexts/auth-context';
 import {
   Dialog,
@@ -10,8 +10,12 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { ContactForm } from '@/app/contact/contact-form';
 import { useTranslations } from '@/hooks/use-translations';
+import { Skeleton } from '@/components/ui/skeleton';
+
+// Dynamically import the ContactForm to reduce initial bundle size
+const ContactForm = lazy(() => import('@/app/contact/contact-form').then(module => ({ default: module.ContactForm })));
+
 
 // Contact Popup Context
 interface ContactPopupContextType {
@@ -39,6 +43,28 @@ function ContactPopupProvider({ children }: { children: ReactNode }) {
     setSource(popupSource);
     setIsOpen(true);
   };
+  
+  const FormSkeleton = () => (
+    <div className="space-y-6">
+        <div className="space-y-2">
+            <Skeleton className="h-4 w-20" />
+            <Skeleton className="h-10 w-full" />
+        </div>
+        <div className="space-y-2">
+            <Skeleton className="h-4 w-20" />
+            <Skeleton className="h-10 w-full" />
+        </div>
+         <div className="space-y-2">
+            <Skeleton className="h-4 w-20" />
+            <Skeleton className="h-10 w-full" />
+        </div>
+        <div className="space-y-2">
+            <Skeleton className="h-4 w-20" />
+            <Skeleton className="h-24 w-full" />
+        </div>
+        <Skeleton className="h-10 w-full" />
+    </div>
+  )
 
   return (
     <ContactPopupContext.Provider value={{ openContactPopup }}>
@@ -50,7 +76,9 @@ function ContactPopupProvider({ children }: { children: ReactNode }) {
             <DialogDescription>{tContact('description')}</DialogDescription>
           </DialogHeader>
           <div className="py-4">
-            <ContactForm onSuccess={() => setIsOpen(false)} source={source} />
+             <Suspense fallback={<FormSkeleton />}>
+                {isOpen && <ContactForm onSuccess={() => setIsOpen(false)} source={source} />}
+             </Suspense>
           </div>
         </DialogContent>
       </Dialog>
