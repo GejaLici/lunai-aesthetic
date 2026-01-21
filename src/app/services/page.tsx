@@ -81,7 +81,14 @@ function CategoryContent({ category }: { category: ServiceCategory }) {
           
           return (
             <div key={sub}>
-              <h3 className="text-3xl font-headline font-bold text-center mb-8 text-primary/80">{tSubcategories(sub)}</h3>
+               <div className="relative my-12">
+                <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                  <div className="w-full border-t border-border" />
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-background px-4 text-2xl font-semibold text-muted-foreground">{tSubcategories(sub)}</span>
+                </div>
+              </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map(service => <ServiceCard key={service.id} service={service} />)}
               </div>
@@ -99,7 +106,14 @@ function CategoryContent({ category }: { category: ServiceCategory }) {
     <div className="space-y-12">
       {surgicalServices.length > 0 && (
         <div>
-          <h3 className="text-3xl font-headline font-bold text-center mb-8 text-primary/80">{tSubcategories('surgical')}</h3>
+           <div className="relative my-12">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-border" />
+            </div>
+            <div className="relative flex justify-center">
+              <span className="bg-background px-4 text-2xl font-semibold text-muted-foreground">{tSubcategories('surgical')}</span>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {surgicalServices.map(service => <ServiceCard key={service.id} service={service} />)}
           </div>
@@ -107,7 +121,14 @@ function CategoryContent({ category }: { category: ServiceCategory }) {
       )}
       {nonSurgicalServices.length > 0 && (
          <div>
-          <h3 className="text-3xl font-headline font-bold text-center mb-8 mt-12 text-primary/80">{tSubcategories('nonSurgical')}</h3>
+          <div className="relative my-12">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-border" />
+            </div>
+            <div className="relative flex justify-center">
+              <span className="bg-background px-4 text-2xl font-semibold text-muted-foreground">{tSubcategories('nonSurgical')}</span>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {nonSurgicalServices.map(service => <ServiceCard key={service.id} service={service} />)}
           </div>
