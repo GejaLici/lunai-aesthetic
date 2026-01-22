@@ -258,7 +258,201 @@
       "surgery": "Chirurgie",
       "pedodontics": "Pédodontie"
     },
-    "items": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Rhinoplastie (Chirurgie du Nez)",
+        "meta_title": "Rhinoplastie: Chirurgie Experte de Remodelage du Nez",
+        "meta_description": "Obtenez un profil facial plus équilibré et harmonieux avec la rhinoplastie. Nos chirurgiens experts se spécialisent dans le remodelage du nez pour corriger la taille, la forme et les problèmes respiratoires pour des résultats magnifiques et naturels.",
+        "meta_keywords": "rhinoplastie, chirurgie du nez, remodelage du nez, chirurgie esthétique, déviation de la cloison nasale, chirurgie nasale, harmonie faciale"
+      },
+      "otoplasty": {
+        "name": "Chirurgie des Oreilles (Otoplastie)"
+      },
+      "blepharoplasty": {
+        "name": "Chirurgie des Paupières (Blépharoplastie)"
+      },
+      "facelift": {
+        "name": "Lifting Facial (Rhytidectomie)",
+        "meta_title": "Lifting Facial (Rhytidectomie): Rajeunissement Complet du Visage et Chirurgie Anti-Âge",
+        "meta_description": "Découvrez tout sur la chirurgie du lifting facial (rhytidectomie), une procédure anti-âge de premier ordre conçue pour réduire l'affaissement de la peau, les rides profondes et les bajoues pour une apparence faciale considérablement plus jeune et rafraîchie. Apprenez-en davantage sur les types, les avantages, la récupération et le choix d'un chirurgien esthétique expert.",
+        "meta_keywords": "lifting facial, rhytidectomie, rajeunissement facial, chirurgie anti-âge, peau affaissée, rides profondes, bajoues, lifting du cou, lifting SMAS, mini lifting, lifting deep plane, chirurgien esthétique, chirurgie plastique, apparence jeune, harmonie faciale, éliminer les rides, restaurer les contours"
+      },
+      "chin-reshaping": {
+        "name": "Génioplastie (Chirurgie du Menton)",
+        "meta_title": "Génioplastie: Augmentation et Réduction du Menton",
+        "meta_description": "Améliorez votre profil facial avec la chirurgie du menton (génioplastie). Cette procédure peut augmenter un menton fuyant ou réduire un menton proéminent, créant une meilleure harmonie et un meilleur équilibre du visage.",
+        "meta_keywords": "génioplastie, mentoplastie, chirurgie du menton, augmentation du menton, réduction du menton, implants mentonniers, génioplastie par glissement"
+      },
+      "brow-lift": {
+        "name": "Lifting des Sourcils"
+      },
+      "hair-transplant": {
+        "name": "Greffe de Cheveux"
+      },
+      "beard-transplant": {
+        "name": "Greffe de Barbe"
+      },
+      "eyebrow-transplant": {
+        "name": "Greffe de Sourcils"
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Rhinoplastie non Chirurgicale"
+      },
+      "dark-circles-treatment": {
+        "name": "Traitement des Cernes"
+      },
+      "eyelids-plasma-arc": {
+        "name": "Arc Plasma pour les Paupières"
+      },
+      "jawline-contouring": {
+        "name": "Contourage de la Mâchoire"
+      },
+      "lip-reshaping": {
+        "name": "Remodelage des Lèvres"
+      },
+      "microdermabrasion": {
+        "name": "Microdermabrasion"
+      },
+      "microneedling": {
+        "name": "Microneedling"
+      },
+      "multivitamin-treatment": {
+        "name": "Traitement Multivitaminé"
+      },
+      "prp-for-hair": {
+        "name": "PRP pour les Cheveux"
+      },
+      "prp-for-face": {
+        "name": "PRP pour le Visage"
+      },
+      "radiofrequency-treatment": {
+        "name": "Traitement par Radiofréquence"
+      },
+      "sulcus-filling": {
+        "name": "Comblement des Sillons"
+      },
+      "white-peeling": {
+        "name": "Peeling Blanc"
+      },
+      "wrinkle-fillers": {
+        "name": "Produits de Comblement des Rides"
+      },
+      "xanthelasma-treatment": {
+        "name": "Traitement du Xanthélasma"
+      },
+      "breast-augmentation": {
+        "name": "Augmentation Mammaire"
+      },
+      "breast-lift": {
+        "name": "Lifting Mammaire"
+      },
+      "breast-reduction": {
+        "name": "Réduction Mammaire"
+      },
+      "breast-reconstruction": {
+        "name": "Reconstruction Mammaire"
+      },
+      "arm-lift": {
+        "name": "Lifting des Bras (Brachioplastie)",
+        "meta_title": "Lifting des Bras (Brachioplastie): Chirurgie de Resserrement des Bras",
+        "meta_description": "Enlevez l'excès de peau relâchée des bras avec un lifting des bras (brachioplastie). Obtenez des bras plus fermes et mieux dessinés et augmentez votre confiance en vous.",
+        "meta_keywords": "lifting des bras, brachioplastie, lifting brachial, bras flasques, ailes de chauve-souris"
+      },
+      "tummy-tuck": {
+        "name": "Abdominoplastie"
+      },
+      "liposculpture": {
+        "name": "Liposculpture"
+      },
+      "brazilian-butt-lift": {
+        "name": "Lifting Brésilien des Fesses"
+      },
+      "labiaplasty": {
+        "name": "Labiaplastie"
+      },
+      "thigh-lift": {
+        "name": "Lifting des Cuisses"
+      },
+      "gynecomastia": {
+        "name": "Gynécomastie"
+      },
+      "carboxytherapy": {
+        "name": "Carboxythérapie"
+      },
+      "cellulite-treatment": {
+        "name": "Traitement de la Cellulite"
+      },
+      "laser-hair-removal": {
+        "name": "Épilation au Laser"
+      },
+      "lipolysis": {
+        "name": "Lipolyse"
+      },
+      "plasma-arc-skin": {
+        "name": "Arc Plasma pour la Peau"
+      },
+      "sclerotherapy": {
+        "name": "Sclérothérapie"
+      },
+      "composite-veneers": {
+        "name": "Facettes en Composite"
+      },
+      "emax-veneers": {
+        "name": "Facettes Emax"
+      },
+      "teeth-whitening": {
+        "name": "Blanchiment des Dents"
+      },
+      "crowns": {
+        "name": "Couronnes"
+      },
+      "dental-bridges": {
+        "name": "Ponts Dentaires"
+      },
+      "dentures": {
+        "name": "Prothèses Dentaires"
+      },
+      "fixed-braces": {
+        "name": "Appareils Dentaires Fixes"
+      },
+      "invisalign": {
+        "name": "Invisalign"
+      },
+      "removable-appliances": {
+        "name": "Appareils Amovibles"
+      },
+      "infected-teeth-treatment": {
+        "name": "Traitement des Dents Infectées"
+      },
+      "tartar-cleaning": {
+        "name": "Détartrage"
+      },
+      "tooth-fillings": {
+        "name": "Plombages Dentaires"
+      },
+      "apical-resection": {
+        "name": "Résection Apicale",
+        "casualName": "Apicectomie",
+        "meta_title": "Résection Apicale (Apicectomie) : Chirurgie Dentaire Avancée de l'Extrémité de la Racine",
+        "meta_description": "Découvrez la résection apicale, ou apicectomie, une procédure dentaire spécialisée pour traiter les infections persistantes du canal radiculaire et sauver votre dent naturelle de l'extraction.",
+        "meta_keywords": "résection apicale, apicectomie, chirurgie de l'extrémité de la racine, chirurgie dentaire, chirurgie endodontique, sauver une dent, échec du traitement de canal"
+      },
+      "dental-implants": {
+        "name": "Implants Dentaires"
+      },
+      "tooth-extraction": {
+        "name": "Extraction Dentaire"
+      },
+      "milk-teeth-treatment": {
+        "name": "Traitement des Dents de Lait"
+      },
+      "tooth-fluoridation": {
+        "name": "Fluoration Dentaire"
+      },
+      "tooth-sealants": {
+        "name": "Scellants Dentaires"
+      }
+    }
   },
   "blogPosts": {
     "1": {
@@ -344,3 +538,5 @@
     }
   }
 }
+
+  

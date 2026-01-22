@@ -258,7 +258,369 @@
       "surgery": "Kirurgji",
       "pedodontics": "Pedodonci"
     },
-    "items": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Rinoplastika",
+        "casualName": "Operacioni i Hundës",
+        "meta_title": "Rinoplastika: Kirurgji Eksperte e Rimodelimit të Hundës",
+        "meta_description": "Arrini një profil fytyre më të ekuilibruar dhe harmonik me rinoplastikën. Kirurgët tanë ekspertë specializohen në rimodelimin e hundës për të korrigjuar madhësinë, formën dhe problemet e frymëmarrjes për rezultate të bukura dhe natyrale.",
+        "meta_keywords": "rinoplastika, operacioni i hundës, rimodelimi i hundës, kirurgji estetike, devijimi i septumit, kirurgjia e hundës, harmonia e fytyrës"
+      },
+      "otoplasty": {
+        "name": "Otoplastika",
+        "casualName": "Kirurgjia e Veshëve",
+        "meta_title": "Kirurgjia e Veshëve (Otoplastika)",
+        "meta_description": "Content for Ear Surgery (Otoplasty) is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "blepharoplasty": {
+        "name": "Blefaroplastika",
+        "casualName": "Kirurgjia e Qepallave",
+        "meta_title": "Kirurgjia e Qepallave (Blefaroplastika)",
+        "meta_description": "Content for Eyelid Surgery (Blepharoplasty) is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "facelift": {
+        "name": "Lifting Fytyre",
+        "casualName": "Ritidektomi",
+        "meta_title": "Lifting Fytyre (Ritidektomi): Rinjohje Gjithëpërfshirëse e Fytyrës dhe Kirurgji Anti-plakje",
+        "meta_description": "Zbuloni gjithçka rreth kirurgjisë së liftingut të fytyrës (ritidektomi), një procedurë kryesore anti-plakje e krijuar për të reduktuar lëkurën e varur, rrudhat e thella dhe mollëzat për një pamje fytyre dukshëm më rinore dhe të freskët. Mësoni rreth llojeve, përfitimeve, shërimit dhe zgjedhjes së një kirurgu estetik ekspert.",
+        "meta_keywords": "lifting fytyre, ritidektomi, rinovim fytyre, kirurgji anti-plakje, lëkurë e varur, rrudha të thella, mollëza të varura, lifting qafe, lifting SMAS, mini lifting, deep plane facelift, kirurg estetik, kirurgji plastike, pamje rinore, harmoni fytyre, eliminoni rrudhat, rikthim konturesh"
+      },
+      "chin-reshaping": {
+        "name": "Rimodelimi i Mjekrës",
+        "casualName": "Genioplastika",
+        "meta_title": "Genioplastika: Zmadhimi dhe Zvogëlimi i Mjekrës",
+        "meta_description": "Përmirësoni profilin tuaj të fytyrës me operacionin e rimodelimit të mjekrës (genioplastika). Kjo procedurë mund të zmadhojë një mjekër të vogël ose të zvogëlojë një mjekër të spikatur, duke krijuar harmoni dhe ekuilibër më të mirë të fytyrës.",
+        "meta_keywords": "rimodelim mjekre, genioplastika, mentoplastika, zmadhim mjekre, zvogëlim mjekre, implante mjekre, genioplastika rrëshqitëse"
+      },
+      "brow-lift": {
+        "name": "Ngritja e Vetullave",
+        "meta_title": "Ngritja e Vetullave",
+        "meta_description": "Content for Brow Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "hair-transplant": {
+        "name": "Transplanti i Flokëve",
+        "meta_title": "Transplanti i Flokëve",
+        "meta_description": "Content for Hair Transplant is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "beard-transplant": {
+        "name": "Transplant i Mjekrës",
+        "meta_title": "Transplant i Mjekrës",
+        "meta_description": "Content for Beard Transplant is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "eyebrow-transplant": {
+        "name": "Transplanti i Vetullave",
+        "meta_title": "Transplanti i Vetullave",
+        "meta_description": "Content for Eyebrow Transplant is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Rinoplastika Jo-kirurgjikale",
+        "meta_title": "Rinoplastika Jo-kirurgjikale",
+        "meta_description": "Content for Non-Surgical Rhinoplasty is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "dark-circles-treatment": {
+        "name": "Trajtimi i Rrathëve të Zinj",
+        "meta_title": "Trajtimi i Rrathëve të Zinj",
+        "meta_description": "Content for Dark Circles Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "eyelids-plasma-arc": {
+        "name": "Harku Plazmatik i Qepallave",
+        "meta_title": "Harku Plazmatik i Qepallave",
+        "meta_description": "Content for Eyelids Plasma Arc is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "jawline-contouring": {
+        "name": "Konturimi i Nofullës",
+        "meta_title": "Konturimi i Nofullës",
+        "meta_description": "Content for Jawline Contouring is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "lip-reshaping": {
+        "name": "Rimodelimi i Buzëve",
+        "meta_title": "Rimodelimi i Buzëve",
+        "meta_description": "Content for Lip Reshaping is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "microdermabrasion": {
+        "name": "Mikrodermabrazioni",
+        "meta_title": "Mikrodermabrazioni",
+        "meta_description": "Content for Microdermabrasion is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "microneedling": {
+        "name": "Microneedling",
+        "meta_title": "Microneedling",
+        "meta_description": "Content for Microneedling is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "multivitamin-treatment": {
+        "name": "Trajtimi Multivitamin",
+        "meta_title": "Trajtimi Multivitamin",
+        "meta_description": "Content for Multivitamin Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "prp-for-hair": {
+        "name": "PRP për Flokët",
+        "meta_title": "PRP për Flokët",
+        "meta_description": "Content for PRP for Hair is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "prp-for-face": {
+        "name": "PRP për Fytyrën",
+        "meta_title": "PRP për Fytyrën",
+        "meta_description": "Content for PRP for Face is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "radiofrequency-treatment": {
+        "name": "Trajtimi me Radiofrekuencë",
+        "meta_title": "Trajtimi me Radiofrekuencë",
+        "meta_description": "Content for Radiofrequency Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "sulcus-filling": {
+        "name": "Mbushja e Sulkusit",
+        "meta_title": "Mbushja e Sulkusit",
+        "meta_description": "Content for Sulcus Filling is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "white-peeling": {
+        "name": "Piling i Bardhë",
+        "meta_title": "Piling i Bardhë",
+        "meta_description": "Content for White Peeling is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "wrinkle-fillers": {
+        "name": "Mbushës për Rrudhat",
+        "meta_title": "Mbushës për Rrudhat",
+        "meta_description": "Content for Wrinkle Fillers is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "xanthelasma-treatment": {
+        "name": "Trajtimi i Ksantelazmës",
+        "meta_title": "Trajtimi i Ksantelazmës",
+        "meta_description": "Content for Xanthelasma Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-augmentation": {
+        "name": "Zmadhimi i Gjoksit",
+        "meta_title": "Zmadhimi i Gjoksit",
+        "meta_description": "Content for Breast Augmentation is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-lift": {
+        "name": "Ngritja e Gjoksit",
+        "meta_title": "Ngritja e Gjoksit",
+        "meta_description": "Content for Breast Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-reduction": {
+        "name": "Zvogëlimi i Gjoksit",
+        "meta_title": "Zvogëlimi i Gjoksit",
+        "meta_description": "Content for Breast Reduction is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-reconstruction": {
+        "name": "Rindërtimi i Gjoksit",
+        "meta_title": "Rindërtimi i Gjoksit",
+        "meta_description": "Content for Breast Reconstruction is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "arm-lift": {
+        "name": "Tërheqja e Lëkurës së Krahëve",
+        "casualName": "Brakioplastika",
+        "meta_title": "Lifting i Krahëve (Brakioplastika): Kirurgjia e Tërheqjes së Lëkurës",
+        "meta_description": "Hiqni lëkurën e tepërt dhe të varur nga pjesa e sipërme e krahëve me një lifting të krahëve (brakioplastikë). Arrini krahë më të tonifikuar dhe të konturuar dhe rrisni vetëbesimin tuaj.",
+        "meta_keywords": "lifting i krahëve, brakioplastika, tërheqja e lëkurës së krahëve, krahë të varur, krahë si krahë lakuriqi"
+      },
+      "tummy-tuck": {
+        "name": "Abdominoplastika",
+        "meta_title": "Abdominoplastika",
+        "meta_description": "Content for Tummy Tuck is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "liposculpture": {
+        "name": "Liposkulptura",
+        "meta_title": "Liposkulptura",
+        "meta_description": "Content for Liposculpture is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "brazilian-butt-lift": {
+        "name": "Lifting Brazilian i Vitheve",
+        "meta_title": "Lifting Brazilian i Vitheve",
+        "meta_description": "Content for Brazilian Butt Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "labiaplasty": {
+        "name": "Labiaplastika",
+        "meta_title": "Labiaplastika",
+        "meta_description": "Content for Labiaplasty is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "thigh-lift": {
+        "name": "Lifting i Kofshëve",
+        "meta_title": "Lifting i Kofshëve",
+        "meta_description": "Content for Thigh Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "gynecomastia": {
+        "name": "Gjinekomastia",
+        "meta_title": "Gjinekomastia",
+        "meta_description": "Content for Gynecomastia is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "carboxytherapy": {
+        "name": "Karboksiterapia",
+        "meta_title": "Karboksiterapia",
+        "meta_description": "Content for Carboxytherapy is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "cellulite-treatment": {
+        "name": "Trajtimi i Celulitit",
+        "meta_title": "Trajtimi i Celulitit",
+        "meta_description": "Content for Cellulite Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "laser-hair-removal": {
+        "name": "Heqja e Qimeve me Laser",
+        "meta_title": "Heqja e Qimeve me Laser",
+        "meta_description": "Content for Laser Hair Removal is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "lipolysis": {
+        "name": "Lipoliza",
+        "meta_title": "Lipoliza",
+        "meta_description": "Content for Lipolysis is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "plasma-arc-skin": {
+        "name": "Harku Plazmatik për Lëkurën",
+        "meta_title": "Harku Plazmatik për Lëkurën",
+        "meta_description": "Content for Plasma Arc for Skin is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "sclerotherapy": {
+        "name": "Skleroterapia",
+        "meta_title": "Skleroterapia",
+        "meta_description": "Content for Sclerotherapy is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "composite-veneers": {
+        "name": "Fasetat e Kompozitit",
+        "meta_title": "Fasetat e Kompozitit",
+        "meta_description": "Content for Composite Veneers is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "emax-veneers": {
+        "name": "Fasetat Emax",
+        "meta_title": "Fasetat Emax",
+        "meta_description": "Content for Emax Veneers is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "teeth-whitening": {
+        "name": "Zbardhimi i Dhëmbëve",
+        "meta_title": "Zbardhimi i Dhëmbëve",
+        "meta_description": "Content for Teeth Whitening is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "crowns": {
+        "name": "Kurorat",
+        "meta_title": "Kurorat",
+        "meta_description": "Content for Crowns is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "dental-bridges": {
+        "name": "Urat Dentare",
+        "meta_title": "Urat Dentare",
+        "meta_description": "Content for Dental Bridges is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "dentures": {
+        "name": "Protezat",
+        "meta_title": "Protezat",
+        "meta_description": "Content for Dentures is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "fixed-braces": {
+        "name": "Aparate Fikse",
+        "meta_title": "Aparate Fikse",
+        "meta_description": "Content for Fixed Braces is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "invisalign": {
+        "name": "Invisalign",
+        "meta_title": "Invisalign",
+        "meta_description": "Content for Invisalign is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "removable-appliances": {
+        "name": "Aparate të Lëvizshme",
+        "meta_title": "Aparate të Lëvizshme",
+        "meta_description": "Content for Removable Appliances is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "infected-teeth-treatment": {
+        "name": "Trajtimi i Dhëmbëve të Infektuar",
+        "meta_title": "Trajtimi i Dhëmbëve të Infektuar",
+        "meta_description": "Content for Infected Teeth Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tartar-cleaning": {
+        "name": "Pastrimi i Gurëzave",
+        "meta_title": "Pastrimi i Gurëzave",
+        "meta_description": "Content for Tartar Cleaning is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-fillings": {
+        "name": "Mbushjet e Dhëmbëve",
+        "meta_title": "Mbushjet e Dhëmbëve",
+        "meta_description": "Content for Tooth Fillings is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "apical-resection": {
+        "name": "Reseksioni Apikal",
+        "casualName": "Apiektomia",
+        "meta_title": "Reseksioni Apikal (Apiektomia): Kirurgji Dentare e Avancuar në Majën e Rrënjës",
+        "meta_description": "Mësoni për reseksionin apikal ose apiektominë, një procedurë dentare e specializuar për të trajtuar infeksionet e vazhdueshme të kanalit të rrënjës dhe për të shpëtuar dhëmbin tuaj natyral nga heqja.",
+        "meta_keywords": "reseksion apikal, apiktomi, kirurgji e majës së rrënjës, kirurgji dentare, kirurgji endodontike, shpëtimi i dhëmbit, dështimi i kanalit të rrënjës"
+      },
+      "dental-implants": {
+        "name": "Implantet Dentare",
+        "meta_title": "Implantet Dentare",
+        "meta_description": "Content for Dental Implants is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-extraction": {
+        "name": "Heqja e Dhëmbit",
+        "meta_title": "Heqja e Dhëmbit",
+        "meta_description": "Content for Tooth Extraction is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "milk-teeth-treatment": {
+        "name": "Trajtimi i Dhëmbëve të Qumështit",
+        "meta_title": "Trajtimi i Dhëmbëve të Qumështit",
+        "meta_description": "Content for Milk Teeth Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-fluoridation": {
+        "name": "Fluorizimi i Dhëmbëve",
+        "meta_title": "Fluorizimi i Dhëmbëve",
+        "meta_description": "Content for Tooth Fluoridation is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-sealants": {
+        "name": "Sigiluesit e Dhëmbëve",
+        "meta_title": "Sigiluesit e Dhëmbëve",
+        "meta_description": "Content for Tooth Sealants is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      }
+    }
   },
   "blogPosts": {
     "1": {
@@ -344,3 +706,5 @@
     }
   }
 }
+
+  

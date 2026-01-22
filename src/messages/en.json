@@ -258,7 +258,371 @@
       "surgery": "Surgery",
       "pedodontics": "Pedodontics"
     },
-    "items": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Rhinoplasty",
+        "casualName": "Nose Job",
+        "meta_title": "Rhinoplasty (Nose Job): Expert Nose Reshaping Surgery",
+        "meta_description": "Achieve a more balanced and harmonious facial profile with rhinoplasty. Our expert surgeons specialize in nose reshaping to correct size, shape, and breathing issues for beautiful, natural-looking results.",
+        "meta_keywords": "rhinoplasty, nose job, nose reshaping, cosmetic surgery, deviated septum, nasal surgery, facial harmony"
+      },
+      "otoplasty": {
+        "name": "Otoplasty",
+        "casualName": "Ear Surgery",
+        "meta_title": "Ear Surgery (Otoplasty)",
+        "meta_description": "Content for Ear Surgery (Otoplasty) is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "blepharoplasty": {
+        "name": "Blepharoplasty",
+        "casualName": "Eyelid Surgery",
+        "meta_title": "Eyelid Surgery (Blepharoplasty)",
+        "meta_description": "Content for Eyelid Surgery (Blepharoplasty) is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "facelift": {
+        "name": "Facelift",
+        "casualName": "Rhytidectomy",
+        "meta_title": "Facelift (Rhytidectomy): Comprehensive Facial Rejuvenation & Anti-Aging Surgery",
+        "meta_description": "Discover everything about facelift surgery (rhytidectomy), a premier anti-aging procedure designed to reduce sagging skin, deep wrinkles, and jowls for a dramatically more youthful, refreshed facial appearance. Learn about types, benefits, recovery, and choosing an expert cosmetic surgeon.",
+        "meta_keywords": "facelift, rhytidectomy, facial rejuvenation, anti-aging surgery, sagging skin, deep wrinkles, jowls, neck lift, SMAS facelift, mini-facelift, deep plane facelift, cosmetic surgeon, plastic surgery, youthful appearance, facial harmony, remove wrinkles, restore contours"
+      },
+      "chin-reshaping": {
+        "name": "Chin Reshaping",
+        "casualName": "Genioplasty",
+        "meta_title": "Chin Reshaping (Genioplasty): Augmentation & Reduction Surgery",
+        "meta_description": "Enhance your facial profile with chin reshaping surgery (genioplasty). This procedure can augment a recessed chin or reduce a protruding one, creating better facial harmony and balance.",
+        "meta_keywords": "chin reshaping, genioplasty, mentoplasty, chin augmentation, chin reduction, chin implants, sliding genioplasty, facial harmony"
+      },
+      "brow-lift": {
+        "name": "Brow Lift",
+        "meta_title": "Brow Lift",
+        "meta_description": "Content for Brow Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "hair-transplant": {
+        "name": "Hair Transplant",
+        "meta_title": "Hair Transplant",
+        "meta_description": "Content for Hair Transplant is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "beard-transplant": {
+        "name": "Beard Transplant",
+        "meta_title": "Beard Transplant",
+        "meta_description": "Content for Beard Transplant is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "eyebrow-transplant": {
+        "name": "Eyebrow Transplant",
+        "meta_title": "Eyebrow Transplant",
+        "meta_description": "Content for Eyebrow Transplant is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Non-Surgical Rhinoplasty",
+        "casualName": "Liquid Nose Job",
+        "meta_title": "Non-Surgical Rhinoplasty",
+        "meta_description": "Content for Non-Surgical Rhinoplasty is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "dark-circles-treatment": {
+        "name": "Dark Circles Treatment",
+        "meta_title": "Dark Circles Treatment",
+        "meta_description": "Content for Dark Circles Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "eyelids-plasma-arc": {
+        "name": "Eyelids Plasma Arc",
+        "meta_title": "Eyelids Plasma Arc",
+        "meta_description": "Content for Eyelids Plasma Arc is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "jawline-contouring": {
+        "name": "Jawline Contouring",
+        "meta_title": "Jawline Contouring",
+        "meta_description": "Content for Jawline Contouring is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "lip-reshaping": {
+        "name": "Lip Reshaping",
+        "meta_title": "Lip Reshaping",
+        "meta_description": "Content for Lip Reshaping is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "microdermabrasion": {
+        "name": "Microdermabrasion",
+        "meta_title": "Microdermabrasion",
+        "meta_description": "Content for Microdermabrasion is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "microneedling": {
+        "name": "Microneedling",
+        "meta_title": "Microneedling",
+        "meta_description": "Content for Microneedling is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "multivitamin-treatment": {
+        "name": "Multivitamin Treatment",
+        "meta_title": "Multivitamin Treatment",
+        "meta_description": "Content for Multivitamin Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "prp-for-hair": {
+        "name": "PRP for Hair",
+        "meta_title": "PRP for Hair",
+        "meta_description": "Content for PRP for Hair is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "prp-for-face": {
+        "name": "PRP for Face",
+        "meta_title": "PRP for Face",
+        "meta_description": "Content for PRP for Face is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "radiofrequency-treatment": {
+        "name": "Radiofrequency Treatment",
+        "meta_title": "Radiofrequency Treatment",
+        "meta_description": "Content for Radiofrequency Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "sulcus-filling": {
+        "name": "Sulcus Filling",
+        "meta_title": "Sulcus Filling",
+        "meta_description": "Content for Sulcus Filling is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "white-peeling": {
+        "name": "White Peeling",
+        "meta_title": "White Peeling",
+        "meta_description": "Content for White Peeling is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "wrinkle-fillers": {
+        "name": "Wrinkle Fillers",
+        "meta_title": "Wrinkle Fillers",
+        "meta_description": "Content for Wrinkle Fillers is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "xanthelasma-treatment": {
+        "name": "Xanthelasma Treatment",
+        "meta_title": "Xanthelasma Treatment",
+        "meta_description": "Content for Xanthelasma Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-augmentation": {
+        "name": "Breast Augmentation",
+        "meta_title": "Breast Augmentation",
+        "meta_description": "Content for Breast Augmentation is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-lift": {
+        "name": "Breast Lift",
+        "meta_title": "Breast Lift",
+        "meta_description": "Content for Breast Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-reduction": {
+        "name": "Breast Reduction",
+        "meta_title": "Breast Reduction",
+        "meta_description": "Content for Breast Reduction is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "breast-reconstruction": {
+        "name": "Breast Reconstruction",
+        "meta_title": "Breast Reconstruction",
+        "meta_description": "Content for Breast Reconstruction is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "arm-lift": {
+        "name": "Arm Lift",
+        "casualName": "Brachioplasty",
+        "meta_title": "Arm Lift (Brachioplasty): Upper Arm Tightening Surgery",
+        "meta_description": "Remove excess, sagging skin from the upper arms with an arm lift (brachioplasty). Achieve firmer, more contoured arms and boost your confidence.",
+        "meta_keywords": "arm lift, brachioplasty, upper arm lift, loose arm skin, bat wings, body contouring"
+      },
+      "tummy-tuck": {
+        "name": "Tummy Tuck",
+        "meta_title": "Tummy Tuck",
+        "meta_description": "Content for Tummy Tuck is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "liposculpture": {
+        "name": "Liposculpture",
+        "meta_title": "Liposculpture",
+        "meta_description": "Content for Liposculpture is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "brazilian-butt-lift": {
+        "name": "Brazilian Butt Lift",
+        "casualName": "BBL",
+        "meta_title": "Brazilian Butt Lift",
+        "meta_description": "Content for Brazilian Butt Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "labiaplasty": {
+        "name": "Labiaplasty",
+        "meta_title": "Labiaplasty",
+        "meta_description": "Content for Labiaplasty is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "thigh-lift": {
+        "name": "Thigh Lift",
+        "meta_title": "Thigh Lift",
+        "meta_description": "Content for Thigh Lift is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "gynecomastia": {
+        "name": "Gynecomastia",
+        "meta_title": "Gynecomastia",
+        "meta_description": "Content for Gynecomastia is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "carboxytherapy": {
+        "name": "Carboxytherapy",
+        "meta_title": "Carboxytherapy",
+        "meta_description": "Content for Carboxytherapy is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "cellulite-treatment": {
+        "name": "Cellulite Treatment",
+        "meta_title": "Cellulite Treatment",
+        "meta_description": "Content for Cellulite Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "laser-hair-removal": {
+        "name": "Laser Hair Removal",
+        "meta_title": "Laser Hair Removal",
+        "meta_description": "Content for Laser Hair Removal is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "lipolysis": {
+        "name": "Lipolysis",
+        "meta_title": "Lipolysis",
+        "meta_description": "Content for Lipolysis is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "plasma-arc-skin": {
+        "name": "Plasma Arc for Skin",
+        "meta_title": "Plasma Arc for Skin",
+        "meta_description": "Content for Plasma Arc for Skin is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "sclerotherapy": {
+        "name": "Sclerotherapy",
+        "meta_title": "Sclerotherapy",
+        "meta_description": "Content for Sclerotherapy is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "composite-veneers": {
+        "name": "Composite Veneers",
+        "meta_title": "Composite Veneers",
+        "meta_description": "Content for Composite Veneers is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "emax-veneers": {
+        "name": "Emax Veneers",
+        "meta_title": "Emax Veneers",
+        "meta_description": "Content for Emax Veneers is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "teeth-whitening": {
+        "name": "Teeth Whitening",
+        "meta_title": "Teeth Whitening",
+        "meta_description": "Content for Teeth Whitening is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "crowns": {
+        "name": "Crowns",
+        "meta_title": "Crowns",
+        "meta_description": "Content for Crowns is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "dental-bridges": {
+        "name": "Dental Bridges",
+        "meta_title": "Dental Bridges",
+        "meta_description": "Content for Dental Bridges is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "dentures": {
+        "name": "Dentures",
+        "meta_title": "Dentures",
+        "meta_description": "Content for Dentures is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "fixed-braces": {
+        "name": "Fixed Braces",
+        "meta_title": "Fixed Braces",
+        "meta_description": "Content for Fixed Braces is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "invisalign": {
+        "name": "Invisalign",
+        "meta_title": "Invisalign",
+        "meta_description": "Content for Invisalign is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "removable-appliances": {
+        "name": "Removable Appliances",
+        "meta_title": "Removable Appliances",
+        "meta_description": "Content for Removable Appliances is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "infected-teeth-treatment": {
+        "name": "Infected Teeth Treatment",
+        "meta_title": "Infected Teeth Treatment",
+        "meta_description": "Content for Infected Teeth Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tartar-cleaning": {
+        "name": "Tartar Cleaning",
+        "meta_title": "Tartar Cleaning",
+        "meta_description": "Content for Tartar Cleaning is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-fillings": {
+        "name": "Tooth Fillings",
+        "meta_title": "Tooth Fillings",
+        "meta_description": "Content for Tooth Fillings is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "apical-resection": {
+        "name": "Apical Resection",
+        "casualName": "Apicoectomy",
+        "meta_title": "Apical Resection (Apicoectomy): Advanced Root-End Dental Surgery",
+        "meta_description": "An apical resection, also known as an apicoectomy or root-end surgery, is a specialized surgical procedure performed to treat a persistent infection or inflammation at the very tip (apex) of a tooth's root.",
+        "meta_keywords": "apical resection, apicoectomy, root-end surgery, dental surgery, endodontic surgery, save a tooth, root canal failure"
+      },
+      "dental-implants": {
+        "name": "Dental Implants",
+        "meta_title": "Dental Implants",
+        "meta_description": "Content for Dental Implants is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-extraction": {
+        "name": "Tooth Extraction",
+        "meta_title": "Tooth Extraction",
+        "meta_description": "Content for Tooth Extraction is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "milk-teeth-treatment": {
+        "name": "Milk Teeth Treatment",
+        "meta_title": "Milk Teeth Treatment",
+        "meta_description": "Content for Milk Teeth Treatment is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-fluoridation": {
+        "name": "Tooth Fluoridation",
+        "meta_title": "Tooth Fluoridation",
+        "meta_description": "Content for Tooth Fluoridation is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      },
+      "tooth-sealants": {
+        "name": "Tooth Sealants",
+        "meta_title": "Tooth Sealants",
+        "meta_description": "Content for Tooth Sealants is not available. Please contact us for more information.",
+        "meta_keywords": ""
+      }
+    }
   },
   "blogPosts": {
     "1": {
@@ -344,3 +708,5 @@
     }
   }
 }
+
+  

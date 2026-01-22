@@ -258,7 +258,200 @@
       "surgery": "Chirurgia",
       "pedodontics": "Pedodonzia"
     },
-    "items": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Rinoplastica (Chirurgia del Naso)",
+        "meta_title": "Rinoplastica: Chirurgia Esperta di Rimodellamento del Naso",
+        "meta_description": "Ottieni un profilo facciale più equilibrato e armonioso con la rinoplastica. I nostri chirurghi esperti sono specializzati nel rimodellamento del naso per correggere dimensioni, forma e problemi respiratori per risultati belli e dall'aspetto naturale.",
+        "meta_keywords": "rinoplastica, chirurgia del naso, rimodellamento del naso, chirurgia estetica, setto deviato, chirurgia nasale, armonia facciale"
+      },
+      "otoplasty": {
+        "name": "Chirurgia delle Orecchie (Otoplastica)"
+      },
+      "blepharoplasty": {
+        "name": "Chirurgia delle Palpebre (Blefaroplastica)"
+      },
+      "facelift": {
+        "name": "Lifting Facciale (Ritidectomia)",
+        "meta_title": "Lifting Facciale (Ritidectomia): Ringiovanimento Facciale Completo e Chirurgia Anti-Età",
+        "meta_description": "Scopri tutto sul lifting facciale (ritidectomia), una procedura anti-età di primo livello progettata per ridurre la pelle cadente, le rughe profonde e il gozzo per un aspetto facciale notevolmente più giovane e fresco. Scopri tipi, benefici, recupero e come scegliere un chirurgo estetico esperto.",
+        "meta_keywords": "lifting facciale, ritidectomia, ringiovanimento facciale, chirurgia anti-età, pelle cadente, rughe profonde, gozzo, lifting collo, lifting SMAS, mini lifting, deep plane facelift, chirurgo estetico, chirurgia plastica, aspetto giovane, armonia facciale, eliminare rughe, ripristinare contorni"
+      },
+      "chin-reshaping": {
+        "name": "Mentoplastica (Chirurgia del Mento)",
+        "meta_title": "Mentoplastica: Aumento e Riduzione del Mento",
+        "meta_description": "Migliora il tuo profilo facciale con la chirurgia di rimodellamento del mento (mentoplastica). Questa procedura può aumentare un mento sfuggente o ridurre uno prominente, creando una migliore armonia ed equilibrio del viso.",
+        "meta_keywords": "mentoplastica, genioplastica, chirurgia del mento, aumento del mento, riduzione del mento, protesi mento, mentoplastica di scivolamento"
+      },
+      "brow-lift": {
+        "name": "Lifting del Sopracciglio"
+      },
+      "hair-transplant": {
+        "name": "Trapianto di Capelli"
+      },
+      "beard-transplant": {
+        "name": "Trapianto di Barba"
+      },
+      "eyebrow-transplant": {
+        "name": "Trapianto di Sopracciglia"
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Rinoplastica non Chirurgica"
+      },
+      "dark-circles-treatment": {
+        "name": "Trattamento delle Occhiaie"
+      },
+      "eyelids-plasma-arc": {
+        "name": "Arco al Plasma per Palpebre"
+      },
+      "jawline-contouring": {
+        "name": "Contornatura della Mandibola"
+      },
+      "lip-reshaping": {
+        "name": "Rimodellamento delle Labbra"
+      },
+      "microdermabrasion": {
+        "name": "Microdermoabrasione"
+      },
+      "microneedling": {
+        "name": "Microneedling"
+      },
+      "multivitamin-treatment": {
+        "name": "Trattamento Multivitaminico"
+      },
+      "prp-for-hair": {
+        "name": "PRP per i Capelli"
+      },
+      "prp-for-face": {
+        "name": "PRP per il Viso"
+      },
+      "radiofrequency-treatment": {
+        "name": "Trattamento con Radiofrequenza"
+      },
+      "sulcus-filling": {
+        "name": "Riempimento dei Solchi"
+      },
+      "white-peeling": {
+        "name": "Peeling Bianco"
+      },
+      "wrinkle-fillers": {
+        "name": "Filler per le Rughe"
+      },
+      "xanthelasma-treatment": {
+        "name": "Trattamento dello Xantelasma"
+      },
+      "breast-augmentation": {
+        "name": "Aumento del Seno"
+      },
+      "breast-lift": {
+        "name": "Mastopessi"
+      },
+      "breast-reduction": {
+        "name": "Riduzione del Seno"
+      },
+      "breast-reconstruction": {
+        "name": "Ricostruzione del Seno"
+      },
+      "arm-lift": {
+        "name": "Lifting delle Braccia (Brachioplastica)",
+        "meta_title": "Lifting Braccia (Brachioplastica): Chirurgia per Rassodare le Braccia",
+        "meta_description": "Rimuovi la pelle in eccesso e cadente dalla parte superiore delle braccia con un lifting (brachioplastica). Ottieni braccia più toniche e modellate e aumenta la tua sicurezza.",
+        "meta_keywords": "lifting braccia, brachioplastica, lifting parte superiore braccia, pelle flaccida, braccia a tendina"
+      },
+      "tummy-tuck": {
+        "name": "Addominoplastica"
+      },
+      "liposculpture": {
+        "name": "Liposcultura"
+      },
+      "brazilian-butt-lift": {
+        "name": "Lifting Brasiliano dei Glutei"
+      },
+      "labiaplasty": {
+        "name": "Labiaplastica"
+      },
+      "thigh-lift": {
+        "name": "Lifting delle Cosce"
+      },
+      "gynecomastia": {
+        "name": "Ginecomastia"
+      },
+      "carboxytherapy": {
+        "name": "Carbossiterapia"
+      },
+      "cellulite-treatment": {
+        "name": "Trattamento della Cellulite"
+      },
+      "laser-hair-removal": {
+        "name": "Epilazione Laser"
+      },
+      "lipolysis": {
+        "name": "Lipolisi"
+      },
+      "plasma-arc-skin": {
+        "name": "Arco al Plasma per la Pelle"
+      },
+      "sclerotherapy": {
+        "name": "Scleroterapia"
+      },
+      "composite-veneers": {
+        "name": "Faccette in Composito"
+      },
+      "emax-veneers": {
+        "name": "Faccette Emax"
+      },
+      "teeth-whitening": {
+        "name": "Sbiancamento dei Denti"
+      },
+      "crowns": {
+        "name": "Corone"
+      },
+      "dental-bridges": {
+        "name": "Ponti Dentali"
+      },
+      "dentures": {
+        "name": "Dentiere"
+      },
+      "fixed-braces": {
+        "name": "Apparecchi Fissi"
+      },
+      "invisalign": {
+        "name": "Invisalign"
+      },
+      "removable-appliances": {
+        "name": "Apparecchi Rimovibili"
+      },
+      "infected-teeth-treatment": {
+        "name": "Trattamento dei Denti Infetti"
+      },
+      "tartar-cleaning": {
+        "name": "Pulizia del Tartaro"
+      },
+      "tooth-fillings": {
+        "name": "Otturazioni Dentali"
+      },
+      "apical-resection": {
+        "name": "Apicectomia",
+        "meta_title": "Apicectomia | Chirurgia Endodontica per Salvare il Dente",
+        "meta_description": "Scopri cos'è l'apicectomia (resezione apicale), come si svolge l'intervento e perché è fondamentale per curare granulomi e infezioni persistenti alla radice.",
+        "meta_keywords": "apicectomia, resezione apicale, chirurgia endodontica, salvare il dente, granuloma, cisti radicolare"
+      },
+      "dental-implants": {
+        "name": "Impianti Dentali"
+      },
+      "tooth-extraction": {
+        "name": "Estrazione del Dente"
+      },
+      "milk-teeth-treatment": {
+        "name": "Trattamento dei Denti da Latte"
+      },
+      "tooth-fluoridation": {
+        "name": "Fluorazione Dentale"
+      },
+      "tooth-sealants": {
+        "name": "Sigillanti Dentali"
+      }
+    }
   },
   "blogPosts": {
     "1": {
@@ -282,7 +475,7 @@
       "excerpt": "Scopri le ultime tecnologie non chirurgiche che possono aiutarti a raggiungere la forma del corpo desiderata senza i tempi di inattività della chirurgia."
     },
     "6": {
-      "title": "Mantenere i Risultati: Consigli sullo Stile di Vita per una Bellezza a Lungo Terme",
+      "title": "Mantenere i Risultati: Consigli sullo Stile di Vita per una Bellezza a Lungo Termine",
       "excerpt": "Il tuo percorso estetico non finisce quando lasci la nostra clinica. Scopri consigli su dieta, esercizio fisico e stile di vita per prolungare e migliorare i tuoi risultati."
     },
     "7": {
@@ -344,3 +537,5 @@
     }
   }
 }
+
+  

@@ -258,7 +258,201 @@
       "surgery": "Cirugía",
       "pedodontics": "Odontopediatría"
     },
-    "items": {}
+    "items": {
+      "rhinoplasty": {
+        "name": "Rinoplastia (Cirugía de Nariz)",
+        "meta_title": "Rinoplastia: Cirugía Experta de Remodelación de Nariz",
+        "meta_description": "Logre un perfil facial más equilibrado y armonioso con la rinoplastia. Nuestros cirujanos expertos se especializan en la remodelación de la nariz para corregir el tamaño, la forma y los problemas respiratorios para obtener resultados hermosos y de aspecto natural.",
+        "meta_keywords": "rinoplastia, cirugía de nariz, remodelación de nariz, cirugía estética, tabique desviado, cirugía nasal, armonía facial"
+      },
+      "otoplasty": {
+        "name": "Cirugía de Orejas (Otoplastia)"
+      },
+      "blepharoplasty": {
+        "name": "Cirugía de Párpados (Blefaroplastia)"
+      },
+      "facelift": {
+        "name": "Lifting Facial (Ritidectomía)",
+        "meta_title": "Lifting Facial (Ritidectomía): Rejuvenecimiento Facial Integral y Cirugía Antienvejecimiento",
+        "meta_description": "Descubra todo sobre la cirugía de lifting facial (ritidectomía), un procedimiento antienvejecimiento de primer nivel diseñado para reducir la flacidez de la piel, las arrugas profundas y las papadas para una apariencia facial dramáticamente más juvenil y fresca. Conozca los tipos, beneficios, recuperación y cómo elegir un cirujano estético experto.",
+        "meta_keywords": "lifting facial, ritidectomía, rejuvenecimiento facial, cirugía antienvejecimiento, piel flácida, arrugas profundas, papadas, lifting de cuello, lifting SMAS, mini lifting, lifting de plano profundo, cirujano estético, cirugía plástica, apariencia juvenil, armonía facial, eliminar arrugas, restaurar contornos"
+      },
+      "chin-reshaping": {
+        "name": "Mentoplastia (Cirugía de Mentón)",
+        "meta_title": "Mentoplastia: Aumento y Reducción de Mentón",
+        "meta_description": "Mejore su perfil facial con la cirugía de mentón (mentoplastia). Este procedimiento puede aumentar un mentón retraído o reducir uno prominente, creando una mejor armonía y equilibrio facial.",
+        "meta_keywords": "mentoplastia, genioplastia, cirugía de mentón, aumento de mentón, reducción de mentón, implantes de mentón, mentoplastia deslizante, armonía facial"
+      },
+      "brow-lift": {
+        "name": "Levantamiento de Cejas"
+      },
+      "hair-transplant": {
+        "name": "Trasplante de Cabello"
+      },
+      "beard-transplant": {
+        "name": "Trasplante de Barba"
+      },
+      "eyebrow-transplant": {
+        "name": "Trasplante de Cejas"
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Rinoplastia no Quirúrgica"
+      },
+      "dark-circles-treatment": {
+        "name": "Tratamiento de Ojeras"
+      },
+      "eyelids-plasma-arc": {
+        "name": "Arco de Plasma para Párpados"
+      },
+      "jawline-contouring": {
+        "name": "Contorno de la Mandíbula"
+      },
+      "lip-reshaping": {
+        "name": "Remodelación de Labios"
+      },
+      "microdermabrasion": {
+        "name": "Microdermoabrasión"
+      },
+      "microneedling": {
+        "name": "Microneedling"
+      },
+      "multivitamin-treatment": {
+        "name": "Tratamiento Multivitamínico"
+      },
+      "prp-for-hair": {
+        "name": "PRP para el Cabello"
+      },
+      "prp-for-face": {
+        "name": "PRP para el Rostro"
+      },
+      "radiofrequency-treatment": {
+        "name": "Tratamiento de Radiofrecuencia"
+      },
+      "sulcus-filling": {
+        "name": "Relleno de Surcos"
+      },
+      "white-peeling": {
+        "name": "Peeling Blanco"
+      },
+      "wrinkle-fillers": {
+        "name": "Rellenos de Arrugas"
+      },
+      "xanthelasma-treatment": {
+        "name": "Tratamiento de Xantelasma"
+      },
+      "breast-augmentation": {
+        "name": "Aumento de Senos"
+      },
+      "breast-lift": {
+        "name": "Levantamiento de Senos"
+      },
+      "breast-reduction": {
+        "name": "Reducción de Senos"
+      },
+      "breast-reconstruction": {
+        "name": "Reconstrucción de Senos"
+      },
+      "arm-lift": {
+        "name": "Lifting de Brazos (Braquioplastia)",
+        "meta_title": "Lifting de Brazos (Braquioplastia): Cirugía de Estiramiento de Brazos",
+        "meta_description": "Elimine el exceso de piel flácida de la parte superior de los brazos con un lifting de brazos (braquioplastia). Logre brazos más firmes y contorneados y aumente su confianza.",
+        "meta_keywords": "lifting de brazos, braquioplastia, estiramiento de brazos, brazos flácidos, alas de murciélago"
+      },
+      "tummy-tuck": {
+        "name": "Abdominoplastia"
+      },
+      "liposculpture": {
+        "name": "Lipoescultura"
+      },
+      "brazilian-butt-lift": {
+        "name": "Levantamiento de Glúteos Brasileño"
+      },
+      "labiaplasty": {
+        "name": "Labioplastia"
+      },
+      "thigh-lift": {
+        "name": "Lifting de Muslos"
+      },
+      "gynecomastia": {
+        "name": "Ginecomastia"
+      },
+      "carboxytherapy": {
+        "name": "Carboxiterapia"
+      },
+      "cellulite-treatment": {
+        "name": "Tratamiento de la Celulitis"
+      },
+      "laser-hair-removal": {
+        "name": "Depilación Láser"
+      },
+      "lipolysis": {
+        "name": "Lipólisis"
+      },
+      "plasma-arc-skin": {
+        "name": "Arco de Plasma para la Piel"
+      },
+      "sclerotherapy": {
+        "name": "Escleroterapia"
+      },
+      "composite-veneers": {
+        "name": "Carillas de Composite"
+      },
+      "emax-veneers": {
+        "name": "Carillas Emax"
+      },
+      "teeth-whitening": {
+        "name": "Blanqueamiento Dental"
+      },
+      "crowns": {
+        "name": "Coronas"
+      },
+      "dental-bridges": {
+        "name": "Puentes Dentales"
+      },
+      "dentures": {
+        "name": "Dentaduras"
+      },
+      "fixed-braces": {
+        "name": "Aparatos Fijos"
+      },
+      "invisalign": {
+        "name": "Invisalign"
+      },
+      "removable-appliances": {
+        "name": "Aparatos Removibles"
+      },
+      "infected-teeth-treatment": {
+        "name": "Tratamiento de Dientes Infectados"
+      },
+      "tartar-cleaning": {
+        "name": "Limpieza de Sarro"
+      },
+      "tooth-fillings": {
+        "name": "Empastes Dentales"
+      },
+      "apical-resection": {
+        "name": "Resección Apical",
+        "casualName": "Apicectomía",
+        "meta_title": "Resección Apical (Apicectomía): Cirugía Dental Avanzada del Extremo de la Raíz",
+        "meta_description": "Aprenda sobre la resección apical o apicectomía, un procedimiento dental especializado para tratar infecciones persistentes del conducto radicular y salvar su diente natural de la extracción.",
+        "meta_keywords": "resección apical, apicectomía, cirugía del extremo de la raíz, cirugía dental, cirugía endodóntica, salvar un diente, fracaso del conducto radicular"
+      },
+      "dental-implants": {
+        "name": "Implantes Dentales"
+      },
+      "tooth-extraction": {
+        "name": "Extracción de Dientes"
+      },
+      "milk-teeth-treatment": {
+        "name": "Tratamiento de Dientes de Leche"
+      },
+      "tooth-fluoridation": {
+        "name": "Fluoración Dental"
+      },
+      "tooth-sealants": {
+        "name": "Selladores Dentales"
+      }
+    }
   },
   "blogPosts": {
     "1": {
@@ -344,3 +538,5 @@
     }
   }
 }
+
+  

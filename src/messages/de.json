@@ -257,6 +257,201 @@
       "therapy": "Therapie",
       "surgery": "Chirurgie",
       "pedodontics": "Kinderzahnheilkunde"
+    },
+    "items": {
+      "rhinoplasty": {
+        "name": "Nasenkorrektur (Rhinoplastik)",
+        "meta_title": "Rhinoplastik (Nasenkorrektur): Experten-Nasen-OP",
+        "meta_description": "Erreichen Sie ein ausgewogeneres und harmonischeres Gesichtsprofil mit einer Rhinoplastik. Unsere erfahrenen Chirurgen sind auf Nasenkorrekturen spezialisiert, um Größe, Form und Atemprobleme für natürlich aussehende, schöne Ergebnisse zu korrigieren.",
+        "meta_keywords": "rhinoplastik, nasenkorrektur, nasen-op, schönheitschirurgie, nasenscheidewandverkrümmung, nasenchirurgie, gesichtsharmonie"
+      },
+      "otoplasty": {
+        "name": "Ohrenkorrektur (Otoplastik)"
+      },
+      "blepharoplasty": {
+        "name": "Augenlidstraffung (Blepharoplastik)"
+      },
+      "facelift": {
+        "name": "Facelift (Rhytidektomie)",
+        "meta_title": "Facelift (Rhytidektomie): Umfassende Gesichtsverjüngung & Anti-Aging-Chirurgie",
+        "meta_description": "Entdecken Sie alles über Facelift-Operationen (Rhytidektomie), ein erstklassiges Anti-Aging-Verfahren zur Reduzierung von Hauterschlaffung, tiefen Falten und Hängebäckchen für ein deutlich jugendlicheres und frischeres Aussehen. Erfahren Sie mehr über Arten, Vorteile, Genesung und die Wahl eines erfahrenen Schönheitschirurgen.",
+        "meta_keywords": "facelift, rhytidektomie, gesichtsverjüngung, anti-aging-chirurgie, erschlaffte haut, tiefe falten, hängebäckchen, halsstraffung, SMAS-Facelift, mini-facelift, deep plane facelift, schönheitschirurg, plastische chirurgie, jugendliches aussehen, gesichtsharmonie, falten entfernen, konturen wiederherstellen"
+      },
+      "chin-reshaping": {
+        "name": "Kinnkorrektur (Genioplastik)",
+        "meta_title": "Kinnkorrektur (Genioplastik): Kinnvergrößerung & -verkleinerung",
+        "meta_description": "Verbessern Sie Ihr Gesichtsprofil mit einer Kinnkorrektur (Genioplastik). Dieses Verfahren kann ein fliehendes Kinn vergrößern oder ein vorstehendes Kinn verkleinern, um eine bessere Gesichtsharmonie und Balance zu schaffen.",
+        "meta_keywords": "kinnkorrektur, genioplastik, mentoplastik, kinnvergrößerung, kinnverkleinerung, kinnimplantate, gleitende genioplastik, gesichtsharmonie"
+      },
+      "brow-lift": {
+        "name": "Augenbrauenlifting"
+      },
+      "hair-transplant": {
+        "name": "Haartransplantation"
+      },
+      "beard-transplant": {
+        "name": "Barttransplantation"
+      },
+      "eyebrow-transplant": {
+        "name": "Augenbrauentransplantation"
+      },
+      "non-surgical-rhinoplasty": {
+        "name": "Nicht-chirurgische Rhinoplastik"
+      },
+      "dark-circles-treatment": {
+        "name": "Behandlung von Augenringen"
+      },
+      "eyelids-plasma-arc": {
+        "name": "Augenlider Plasma-Lichtbogen"
+      },
+      "jawline-contouring": {
+        "name": "Kieferlinienkonturierung"
+      },
+      "lip-reshaping": {
+        "name": "Lippenkorrektur"
+      },
+      "microdermabrasion": {
+        "name": "Mikrodermabrasion"
+      },
+      "microneedling": {
+        "name": "Microneedling"
+      },
+      "multivitamin-treatment": {
+        "name": "Multivitamin-Behandlung"
+      },
+      "prp-for-hair": {
+        "name": "PRP für die Haare"
+      },
+      "prp-for-face": {
+        "name": "PRP für das Gesicht"
+      },
+      "radiofrequency-treatment": {
+        "name": "Radiofrequenzbehandlung"
+      },
+      "sulcus-filling": {
+        "name": "Sulcus-Füllung"
+      },
+      "white-peeling": {
+        "name": "Weißes Peeling"
+      },
+      "wrinkle-fillers": {
+        "name": "Faltenfüller"
+      },
+      "xanthelasma-treatment": {
+        "name": "Xanthelasma-Behandlung"
+      },
+      "breast-augmentation": {
+        "name": "Brustvergrößerung"
+      },
+      "breast-lift": {
+        "name": "Bruststraffung"
+      },
+      "breast-reduction": {
+        "name": "Brustverkleinerung"
+      },
+      "breast-reconstruction": {
+        "name": "Brustrekonstruktion"
+      },
+      "arm-lift": {
+        "name": "Armstraffung (Brachioplastik)",
+        "meta_title": "Armstraffung (Brachioplastik): Oberarmstraffung Chirurgie",
+        "meta_description": "Entfernen Sie überschüssige, schlaffe Haut an den Oberarmen mit einer Armstraffung (Brachioplastik). Erzielen Sie straffere, konturiertere Arme und steigern Sie Ihr Selbstvertrauen.",
+        "meta_keywords": "armstraffung, brachioplastik, oberarmstraffung, schlaffe arme, fledermausärmel, körperkonturierung"
+      },
+      "tummy-tuck": {
+        "name": "Bauchdeckenstraffung"
+      },
+      "liposculpture": {
+        "name": "Liposkulptur"
+      },
+      "brazilian-butt-lift": {
+        "name": "Brazilian Butt Lift"
+      },
+      "labiaplasty": {
+        "name": "Labiaplastik"
+      },
+      "thigh-lift": {
+        "name": "Oberschenkelstraffung"
+      },
+      "gynecomastia": {
+        "name": "Gynäkomastie"
+      },
+      "carboxytherapy": {
+        "name": "Carboxytherapie"
+      },
+      "cellulite-treatment": {
+        "name": "Cellulite-Behandlung"
+      },
+      "laser-hair-removal": {
+        "name": "Laser-Haarentfernung"
+      },
+      "lipolysis": {
+        "name": "Lipolyse"
+      },
+      "plasma-arc-skin": {
+        "name": "Plasma-Lichtbogen für die Haut"
+      },
+      "sclerotherapy": {
+        "name": "Sklerotherapie"
+      },
+      "composite-veneers": {
+        "name": "Komposit-Veneers"
+      },
+      "emax-veneers": {
+        "name": "Emax Veneers"
+      },
+      "teeth-whitening": {
+        "name": "Zahnaufhellung"
+      },
+      "crowns": {
+        "name": "Kronen"
+      },
+      "dental-bridges": {
+        "name": "Zahnbrücken"
+      },
+      "dentures": {
+        "name": "Zahnprothesen"
+      },
+      "fixed-braces": {
+        "name": "Feste Zahnspangen"
+      },
+      "invisalign": {
+        "name": "Invisalign"
+      },
+      "removable-appliances": {
+        "name": "Herausnehmbare Geräte"
+      },
+      "infected-teeth-treatment": {
+        "name": "Behandlung infizierter Zähne"
+      },
+      "tartar-cleaning": {
+        "name": "Zahnsteinreinigung"
+      },
+      "tooth-fillings": {
+        "name": "Zahnfüllungen"
+      },
+      "apical-resection": {
+        "name": "Apikale Resektion",
+        "casualName": "Apikotomie",
+        "meta_title": "Apikale Resektion (Apikotomie): Fortgeschrittene Wurzelspitzen-Zahnchirurgie",
+        "meta_description": "Lernen Sie die apikale Resektion oder Apikotomie kennen, ein spezielles zahnärztliches Verfahren zur Behandlung persistierender Wurzelkanalinfektionen und zur Rettung Ihres natürlichen Zahns vor der Extraktion.",
+        "meta_keywords": "apikale resektion, apikotomie, wurzelspitzenresektion, zahnchirurgie, endodontische chirurgie, zahnrettung, wurzelkanalfehler"
+      },
+      "dental-implants": {
+        "name": "Zahnimplantate"
+      },
+      "tooth-extraction": {
+        "name": "Zahnextraktion"
+      },
+      "milk-teeth-treatment": {
+        "name": "Behandlung von Milchzähnen"
+      },
+      "tooth-fluoridation": {
+        "name": "Zahnfluoridierung"
+      },
+      "tooth-sealants": {
+        "name": "Zahnversiegelungen"
+      }
     }
   },
   "blogPosts": {
@@ -343,3 +538,5 @@
     }
   }
 }
+
+  
