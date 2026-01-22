@@ -45,6 +45,10 @@ export default function BlogAdminPage() {
                     date: formattedDate,
                 } as Post;
             });
+            
+            // Ensure client-side sorting from latest to oldest
+            postsData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
             setPosts(postsData);
           } catch (error) {
             console.error("Error fetching blog posts:", error);

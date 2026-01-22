@@ -19,7 +19,11 @@ export default function BlogPage() {
     const fetchPosts = async () => {
       setLoading(true);
       const fetchedPosts = await getAllBlogPosts();
-      const localizedPosts = fetchedPosts.filter(post => post.title?.[locale] && post.excerpt?.[locale]);
+      
+      // Ensure client-side sorting from latest to oldest
+      const sortedPosts = fetchedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+      const localizedPosts = sortedPosts.filter(post => post.title?.[locale] && post.excerpt?.[locale]);
       setPosts(localizedPosts);
       setLoading(false);
     };

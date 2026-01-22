@@ -20,7 +20,9 @@ function useRecentBlogPosts(count: number) {
     const fetchPosts = async () => {
       try {
         const fetchedPosts = await getRecentBlogPosts(count);
-        setPosts(fetchedPosts);
+        // Ensure client-side sorting from latest to oldest
+        const sortedPosts = fetchedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        setPosts(sortedPosts);
       } catch (error) {
         console.error(`Error fetching latest ${count} blog posts:`, error);
       } finally {
