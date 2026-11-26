@@ -36,6 +36,29 @@ const TransformationCard = ({ service }: { service: ServiceItem }) => {
   );
 };
 
+const TransformationInfo = ({ service, isActive, viewResultLabel }: { service: ServiceItem, isActive: boolean, viewResultLabel: string }) => {
+  const { name: serviceName, meta_description } = useServiceTranslation(service.id);
+
+  return (
+    <div
+      className={cn(
+        "absolute top-0 left-0 w-full transition-opacity duration-500 ease-in-out text-center lg:text-left",
+        isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      )}
+      aria-hidden={!isActive}
+    >
+      <h3 className="font-headline text-3xl text-primary mb-4">{serviceName}</h3>
+      {meta_description ? (
+        <p className="text-lg text-foreground/80 mb-6" dangerouslySetInnerHTML={{ __html: meta_description }}></p>
+      ) : (
+        <p className="text-lg text-foreground/80 mb-6">More details coming soon.</p>
+      )}
+      <Button asChild>
+        <Link href={`/services/${service.id}`}>{viewResultLabel}</Link>
+      </Button>
+    </div>
+  );
+};
 
 export const TransformationsSection = React.memo(function TransformationsSection() {
   const t = useTranslations('HomePage.transformations');
@@ -57,16 +80,7 @@ export const TransformationsSection = React.memo(function TransformationsSection
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
 
-  const renderServiceContent = (service: ServiceItem) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { meta_description } = useServiceTranslation(service.id);
-
-    if (!meta_description) {
-      return <p>More details coming soon.</p>;
-    }
-
-    return <p className="text-lg text-foreground/80 mb-6" dangerouslySetInnerHTML={{ __html: meta_description }}></p>
-  }
+  const viewResultLabel = t('viewResult');
 
   return (
     <section className="container mx-auto px-4 pb-12 overflow-hidden">
@@ -111,27 +125,14 @@ export const TransformationsSection = React.memo(function TransformationsSection
 
         {/* Content Side */}
         <div className="lg:col-span-2 relative min-h-[200px]">
-          {transformations.map((service, index) => {
-            const isActive = index === selectedIndex;
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const { name: serviceName } = useServiceTranslation(service.id);
-            return (
-              <div
-                key={service.id}
-                className={cn(
-                  "absolute top-0 left-0 w-full transition-opacity duration-500 ease-in-out text-center lg:text-left",
-                  isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                )}
-                aria-hidden={!isActive}
-              >
-                <h3 className="font-headline text-3xl text-primary mb-4">{serviceName}</h3>
-                {renderServiceContent(service)}
-                <Button asChild>
-                  <Link href={`/services/${service.id}`}>{t('viewResult')}</Link>
-                </Button>
-              </div>
-            );
-          })}
+          {transformations.map((service, index) => (
+            <TransformationInfo 
+                key={service.id} 
+                service={service} 
+                isActive={index === selectedIndex} 
+                viewResultLabel={viewResultLabel}
+            />
+          ))}
         </div>
       </div>
 
