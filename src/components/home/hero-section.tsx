@@ -20,7 +20,7 @@ export const HeroSection = React.memo(function HeroSection() {
           poster="https://picsum.photos/seed/hero/1920/1080"
         >
           <source src="/videos/hero-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/videos/hero.webm" type="video/webm" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
         <div className="container mx-auto px-4 relative z-20 max-w-2xl">
